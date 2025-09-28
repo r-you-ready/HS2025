@@ -3,7 +3,7 @@ project:
 
 website:
   title: "R u Ready"
-  site-url: https://friedliaaron.github.io/ryouready.github.io/
+  site-url: https://r-you-ready.github.io/HS2025/
   sidebar:
     style: floating
     search: true
