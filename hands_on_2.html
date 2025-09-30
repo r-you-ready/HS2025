@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Hands_On_2 – R u Ready</title>
+<title>Hands On – Coding Basics (Einheiten 3 und 4) – R u Ready</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -262,10 +262,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">Inhaltsverzeichnis</h2>
    
   <ul>
-  <li><a href="#hands-on-coding-basics-einheiten-2-und-3" id="toc-hands-on-coding-basics-einheiten-2-und-3" class="nav-link active" data-scroll-target="#hands-on-coding-basics-einheiten-2-und-3"><span class="header-section-number">1</span> Hands On – Coding Basics (Einheiten 2 und 3)</a>
-  <ul class="collapse">
-  <li><a href="#lernziele-dieses-hands-on-blocks" id="toc-lernziele-dieses-hands-on-blocks" class="nav-link" data-scroll-target="#lernziele-dieses-hands-on-blocks"><span class="header-section-number">1.1</span> Lernziele dieses Hands-On-Blocks</a></li>
-  </ul></li>
+  <li><a href="#lernziele-dieses-hands-on-blocks" id="toc-lernziele-dieses-hands-on-blocks" class="nav-link active" data-scroll-target="#lernziele-dieses-hands-on-blocks"><span class="header-section-number">1</span> Lernziele dieses Hands-On-Blocks</a></li>
   <li><a href="#projekte-und-pfade" id="toc-projekte-und-pfade" class="nav-link" data-scroll-target="#projekte-und-pfade"><span class="header-section-number">2</span> Projekte und Pfade</a>
   <ul class="collapse">
   <li><a href="#was-sind-r-projekte" id="toc-was-sind-r-projekte" class="nav-link" data-scroll-target="#was-sind-r-projekte"><span class="header-section-number">2.0.1</span> Was sind R-Projekte?</a></li>
@@ -278,16 +275,28 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#einlesen-via-oberfläche" id="toc-einlesen-via-oberfläche" class="nav-link" data-scroll-target="#einlesen-via-oberfläche"><span class="header-section-number">3.1.1</span> Einlesen via Oberfläche</a></li>
   <li><a href="#einlesen-via-code" id="toc-einlesen-via-code" class="nav-link" data-scroll-target="#einlesen-via-code"><span class="header-section-number">3.1.2</span> Einlesen via Code</a></li>
   </ul></li>
-  <li><a href="#datensätze-inspizieren" id="toc-datensätze-inspizieren" class="nav-link" data-scroll-target="#datensätze-inspizieren"><span class="header-section-number">3.2</span> Datensätze inspizieren</a></li>
   </ul></li>
-  <li><a href="#datenstrukturen-vektoren-listen-matrizen-und-data-frames" id="toc-datenstrukturen-vektoren-listen-matrizen-und-data-frames" class="nav-link" data-scroll-target="#datenstrukturen-vektoren-listen-matrizen-und-data-frames"><span class="header-section-number">4</span> Datenstrukturen: Vektoren, Listen, Matrizen und Data Frames</a>
+  <li><a href="#daten-mergen" id="toc-daten-mergen" class="nav-link" data-scroll-target="#daten-mergen"><span class="header-section-number">4</span> Daten mergen</a>
   <ul class="collapse">
-  <li><a href="#listen" id="toc-listen" class="nav-link" data-scroll-target="#listen"><span class="header-section-number">4.1</span> Listen</a></li>
-  <li><a href="#matrizen" id="toc-matrizen" class="nav-link" data-scroll-target="#matrizen"><span class="header-section-number">4.2</span> Matrizen</a></li>
+  <li><a href="#aufgaben" id="toc-aufgaben" class="nav-link" data-scroll-target="#aufgaben"><span class="header-section-number">4.1</span> Aufgaben</a>
+  <ul class="collapse">
+  <li><a href="#a-füge-alle-7-datensätze-mit-cbind-zusammen-und-schaue-dir-das-ergebnis-an." id="toc-a-füge-alle-7-datensätze-mit-cbind-zusammen-und-schaue-dir-das-ergebnis-an." class="nav-link" data-scroll-target="#a-füge-alle-7-datensätze-mit-cbind-zusammen-und-schaue-dir-das-ergebnis-an."><span class="header-section-number">4.1.1</span> a) Füge alle 7 Datensätze mit <code>cbind()</code> zusammen und schaue dir das Ergebnis an.</a></li>
+  <li><a href="#b-versuche-es-nun-mit-full_join." id="toc-b-versuche-es-nun-mit-full_join." class="nav-link" data-scroll-target="#b-versuche-es-nun-mit-full_join."><span class="header-section-number">4.1.2</span> b) Versuche es nun mit <code>full_join()</code>.</a></li>
+  <li><a href="#c-inspiziere-deinen-zusammengefügten-datensatz-dat_full" id="toc-c-inspiziere-deinen-zusammengefügten-datensatz-dat_full" class="nav-link" data-scroll-target="#c-inspiziere-deinen-zusammengefügten-datensatz-dat_full"><span class="header-section-number">4.1.3</span> c) Inspiziere deinen zusammengefügten Datensatz “dat_full”</a></li>
   </ul></li>
-  <li><a href="#data-frames" id="toc-data-frames" class="nav-link" data-scroll-target="#data-frames"><span class="header-section-number">5</span> Data Frames</a></li>
-  <li><a href="#funktionen" id="toc-funktionen" class="nav-link" data-scroll-target="#funktionen"><span class="header-section-number">6</span> Funktionen</a></li>
-  <li><a href="#daten-mergen" id="toc-daten-mergen" class="nav-link" data-scroll-target="#daten-mergen"><span class="header-section-number">7</span> Daten mergen</a></li>
+  </ul></li>
+  <li><a href="#daten-speichern" id="toc-daten-speichern" class="nav-link" data-scroll-target="#daten-speichern"><span class="header-section-number">5</span> Daten speichern</a>
+  <ul class="collapse">
+  <li><a href="#a-speichere-dat_full-in-deinem-ordner-data-als-csv-datei-ab" id="toc-a-speichere-dat_full-in-deinem-ordner-data-als-csv-datei-ab" class="nav-link" data-scroll-target="#a-speichere-dat_full-in-deinem-ordner-data-als-csv-datei-ab"><span class="header-section-number">5.0.1</span> a) Speichere <code>dat_full</code> in deinem Ordner <code>"data"</code> als CSV-Datei ab</a></li>
+  </ul></li>
+  <li><a href="#coding-basics-funktionen" id="toc-coding-basics-funktionen" class="nav-link" data-scroll-target="#coding-basics-funktionen"><span class="header-section-number">6</span> Coding Basics: Funktionen</a>
+  <ul class="collapse">
+  <li><a href="#tab-completion" id="toc-tab-completion" class="nav-link" data-scroll-target="#tab-completion"><span class="header-section-number">6.1</span> Tab Completion:</a></li>
+  <li><a href="#weitere-tasten-und-tastenkürzel" id="toc-weitere-tasten-und-tastenkürzel" class="nav-link" data-scroll-target="#weitere-tasten-und-tastenkürzel"><span class="header-section-number">6.2</span> Weitere Tasten und Tastenkürzel:</a></li>
+  <li><a href="#verschachtelte-funktionen" id="toc-verschachtelte-funktionen" class="nav-link" data-scroll-target="#verschachtelte-funktionen"><span class="header-section-number">6.3</span> Verschachtelte Funktionen:</a></li>
+  </ul></li>
+  <li><a href="#style-conventions" id="toc-style-conventions" class="nav-link" data-scroll-target="#style-conventions"><span class="header-section-number">7</span> Style Conventions</a></li>
+  <li><a href="#am-ende-deiner-übungen---vergiss-nicht-dein-skript-abzuspeichern--" id="toc-am-ende-deiner-übungen---vergiss-nicht-dein-skript-abzuspeichern--" class="nav-link" data-scroll-target="#am-ende-deiner-übungen---vergiss-nicht-dein-skript-abzuspeichern--"><span class="header-section-number">8</span> Am Ende deiner Übungen - vergiss nicht dein Skript abzuspeichern! :-)</a></li>
   </ul>
 </nav>
     </div>
@@ -296,7 +305,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./Übungen.html">Übungen zu den Einheiten</a></li><li class="breadcrumb-item"><a href="./hands_on_2.html">Hands on - Block 2 (Woche 3 - 4)</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Hands_On_2</h1>
+<h1 class="title">Hands On – Coding Basics (Einheiten 3 und 4)</h1>
 </div>
 
 
@@ -313,33 +322,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<section id="hands-on-coding-basics-einheiten-2-und-3" class="level1" data-number="1">
-<h1 data-number="1"><span class="header-section-number">1</span> Hands On – Coding Basics (Einheiten 2 und 3)</h1>
 <p>Bei Bedarf findest du hier nochmals die Slides zu Einheit 3:<br>
 <iframe src="EH_3.html" width="100%" height="500px"></iframe></p>
-<section id="lernziele-dieses-hands-on-blocks" class="level2" data-number="1.1">
-<h2 data-number="1.1" class="anchored" data-anchor-id="lernziele-dieses-hands-on-blocks"><span class="header-section-number">1.1</span> Lernziele dieses Hands-On-Blocks</h2>
-<ul>
-<li><p><strong>Verstehen von Pfaden und Projekten:</strong></p>
-<ul>
-<li>Relativ vs.&nbsp;Absolut</li>
-<li>Projekte</li>
-</ul></li>
-<li><p><strong>Coding Basics:</strong></p>
-<ul>
-<li>Daten einlesen</li>
-<li>Daten exportieren</li>
-<li>Datensätze mergen (zusammenfügen)
-<ul>
-<li>Vor- und Nachteile verschiedener Funktionen kennenlernen (Wann brauche ich welche Funktion?)</li>
-</ul></li>
-</ul></li>
-<li><p>Liste und Matrizen</p>
-<ul>
-<li></li>
-</ul></li>
-</ul>
-</section>
+<section id="lernziele-dieses-hands-on-blocks" class="level1" data-number="1">
+<h1 data-number="1"><span class="header-section-number">1</span> Lernziele dieses Hands-On-Blocks</h1>
+<p>✅Projekte</p>
+<p>✅Unterschied zwischen relativen und absoluten Pfaden verstehen</p>
+<p>✅Datensätze in R importieren, inspizieren und speichern</p>
+<p>✅Datensätze mit <code>cbind()</code> und <code>full_join()</code> mergen und Vor- und Nachteile reflektieren</p>
+<p>✅Funktionen und ihre Argumente (inkl. Defaults) nutzen</p>
+<p>✅Style Conventions</p>
 </section>
 <section id="projekte-und-pfade" class="level1" data-number="2">
 <h1 data-number="2"><span class="header-section-number">2</span> Projekte und Pfade</h1>
@@ -349,7 +341,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>Ein <strong>R-Projekt</strong> ist eine Projektdatei (<code>.Rproj</code>), die du in RStudio anlegst.<br>
 Wenn du ein Projekt öffnest:</p>
 <ul>
-<li>RStudio setzt automatisch das <strong>Working Directory (Arbeitsverzeichnis)</strong> auf den Ordner, in dem die <code>.Rproj</code> liegt.<br>
+<li>RStudio setzt automatisch das <strong>Working Directory (Arbeitsverzeichnis)</strong> auf den Ordner, in dem <code>.Rproj</code> liegt.<br>
 </li>
 <li>Alle Dateien, Skripte, Daten und Ergebnisse, die du in diesem Ordner ablegst, gehören logisch zu diesem Projekt.<br>
 </li>
@@ -357,38 +349,39 @@ Wenn du ein Projekt öffnest:</p>
 </li>
 <li>Du kannst entweder ein neues Projekt erstellen oder ein bestehendes Projekt öffnen.</li>
 </ul>
-<p>👉 In RStudio siehst du oben rechts, in welchem Projekt du dich gerade befindest.</p>
+<p>👉 In RStudio siehst du oben rechts, in welchem Projekt du dich gerade befindest. In diesem Screenshot ist noch kein Projekt geöffnet.</p>
 <p><img src="images/EH3/Project.png" class="img-fluid"></p>
 <p><strong>Übung:</strong><br>
-Im Ordner <em>grinschgl2020</em> liegt bereits eine <code>.Rproj</code>-Datei. Öffne sie und überprüfe oben rechts in RStudio, ob du dich im richtigen Projekt befindest.</p>
+Im Ordner <em>Grinschgl2020</em> liegt bereits eine <code>.Rproj</code>-Datei. Öffne sie und überprüfe oben rechts in RStudio, ob du dich im richtigen Projekt befindest. Du kannst zukünftig immer auf das Projekt klicken wenn du die Analyseskripte dazu öffnen willst.</p>
+<p><strong>Projekt erstellen</strong></p>
+<p>Falls du in Zukunft ein Projekt erstellen willst (z.B. für deine Masterarbeit): 👉<a href="https://r4ds.hadley.nz/workflow-scripts.html#projects">Kapitel 6.2</a></p>
 <hr>
 </section>
 <section id="absolute-vs.-relative-pfade" class="level3" data-number="2.0.2">
 <h3 data-number="2.0.2" class="anchored" data-anchor-id="absolute-vs.-relative-pfade"><span class="header-section-number">2.0.2</span> Absolute vs.&nbsp;relative Pfade</h3>
 <ul>
-<li><strong>Absolute Pfade</strong> beschreiben den vollständigen Weg zu einer Datei, ausgehend vom Wurzelverzeichnis deines Computers.
+<li><p><strong>Absolute Pfade</strong> beschreiben den vollständigen Weg zu einer Datei, ausgehend vom Wurzelverzeichnis <em>deines</em> Computers.</p>
+<p>🔴 Nachteil: Sie sind oft sehr lang und funktionieren nur auf deinem Rechner.<br>
+</p>
 <ul>
-<li>Nachteil: Sie sind oft sehr lang und funktionieren nur auf deinem Rechner.<br>
-</li>
 <li>Beispiel (Windows):<br>
 <code>C:\Users\maxmustermann\Dokumente\r_you_ready\Grinschgl2020\data\raw\Beispieldatei.csv</code></li>
 </ul></li>
-<li><strong>Relative Pfade</strong> beschreiben den Ort einer Datei relativ zum aktuellen Working Directory.
+<li><p><strong>Relative Pfade</strong> beschreiben den Ort einer Datei relativ zum <em>aktuellen Arbeitsverzeichnis</em>.</p>
+<p>🟢 Vorteil: Sie sind kürzer und funktionieren auf jedem Rechner, solange die Projektstruktur gleich bleibt.<br>
+</p>
 <ul>
-<li><p>Vorteil: Sie sind kürzer und funktionieren auf jedem Rechner, solange die Projektstruktur gleich bleibt.<br>
-</p></li>
 <li><p>Beispiel:</p>
 <ul>
-<li>Projektordner = <em>Grinschgl2020</em><br>
-</li>
-<li>Datei liegt in <em>data/raw/Beispieldatei.csv</em><br>
-</li>
-<li>relativer Pfad:<br>
-</li>
+<li>Projektordner = <em>Grinschgl2020</em></li>
+<li>Datei liegt in <em>data/raw/Beispieldatei.csv</em></li>
+<li>relativer Pfad:</li>
 </ul>
 <pre><code>data/raw/Beispieldatei.csv</code></pre></li>
 </ul></li>
 </ul>
+<p><strong>❓Beantworte für dich selbst:</strong></p>
+<p>Um ein Skript reproduzierbar zu gestalten – was eignet sich besser: relative Pfade oder absolute Pfade? Aus welchen Gründen?</p>
 </section>
 </section>
 <section id="daten-importieren-und-exportieren" class="level1" data-number="3">
@@ -396,191 +389,244 @@ Im Ordner <em>grinschgl2020</em> liegt bereits eine <code>.Rproj</code>-Datei. �
 <section id="import" class="level2" data-number="3.1">
 <h2 data-number="3.1" class="anchored" data-anchor-id="import"><span class="header-section-number">3.1</span> Import</h2>
 <p>👉 <a href="https://methodenlehre.github.io/einfuehrung-in-R/chapters/03-data_frames.html#daten-importieren">Kapitel 3.2</a></p>
+<p><a href="https://rstudio.github.io/cheatsheets/html/data-import.html">Cheatsheat Datenimport</a> mit <code>readr</code></p>
 <section id="einlesen-via-oberfläche" class="level3" data-number="3.1.1">
 <h3 data-number="3.1.1" class="anchored" data-anchor-id="einlesen-via-oberfläche"><span class="header-section-number">3.1.1</span> Einlesen via Oberfläche</h3>
 <ul>
-<li><p>Stelle sicher, dass du das Metapaket <strong>tidyverse</strong> geladen hast (siehe Hands-On 1).<br>
-Wir verwenden Funktionen aus den Packages <strong>readr</strong> und <strong>readxl</strong>, die Teil des Tidyverse sind.</p></li>
-<li><p>Importiere die Datei <code>"data_mmq.csv"</code> über die Point-Click-Oberfläche von RStudio.</p>
+<li>Stelle sicher, dass du das Metapaket <strong>tidyverse</strong> geladen hast (<code>library(tidyverse)</code>) (siehe Hands-On 1).<br>
+Wir verwenden Funktionen aus den Packages <strong>readr</strong> und <strong>readxl</strong>, die Teil des Tidyverse sind.</li>
+</ul>
+<p>In diesem Seminar arbeiten wir mit csv und xslx Dateien. Wie werden uns meherer Arten und Weisen anschauen wie man diese einlesen kann.</p>
+<p>Beim Einlesen von Daten ist ein wichtiger Faktor, mich welchem Trennzeichen (Delimiter) die Werte von einander getrennt werden.</p>
+<p>Auszug aus Cheatsheet: Die Funktionen read_delim und read_csv:</p>
+<p><img src="images/Hands on 2/cheatsheet_auszug.png" class="img-fluid"></p>
+<p><code>read_csv()</code> ist eine Spezialisierung von <code>read_delim()</code>, die automatisch Komma als Trennzeichen verwendet, während man bei <code>read_delim()</code> das gewünschte Trennzeichen selbst angeben muss.</p>
 <ul>
-<li>Tipp: Klicke auf <strong>Environment</strong> → <strong>Import Dataset</strong> → wähle <code>"readr"</code>-Funktion.</li>
-<li>Schaue dir den Datensatz an: Mit welchem Trennzeichen sind die Daten getrennt?
+<li><p>Importiere die Datei <code>"data_mmq.csv"</code> über die Point &amp; Klick-Oberfläche von RStudio. Verwende dafür “From Text (readr)</p>
+<p><img src="images/Hands on 2/Import_Data.png" class="img-fluid"></p>
+<ul>
+<li>Tipp: Klicke auf <strong>Environment</strong> → <strong>Import Dataset</strong> → wähle die <code>"readr"</code>-Funktion.</li>
+<li>Schaue dir den Datensatz an: Mit welchem Trennzeichen sind die Daten getrennt?</li>
+<li><img src="images/clipboard-4280669528.png" class="img-fluid">
 <ul>
 <li>Stelle in der Oberfläche <code>"Delimiter"</code> auf das passende Trennzeichen. Was verändert sich?</li>
 </ul></li>
-<li>Betrachte den Code, den die Oberfläche generiert. Versuche den Pfad im Kontext von Projekten zu verstehen.</li>
-<li>Schaue dir die eingelesenen Daten mit <code>view(data_mmq)</code> an.</li>
+<li>Betrachte den Code, den die Oberfläche generiert. Versuche den Pfad im Kontext von Projekten zu verstehen.
+<ul>
+<li>Wenn du im Projekt gearbeitet hast, sollte bei dir der Code etwa so aussehen: <code>data_mmq &lt;- read_delim("data/raw/data_mmq.csv", delim = ";", escape_double = FALSE, trim_ws = TRUE)</code></li>
+<li>Wenn du nicht im Projekt gearbeite hättest, wie würde dann der Dateipfad aussehen?</li>
+</ul></li>
+<li>Wenn du den Code via Klick-Oberfläche eingelesen hast, wirst du den ausgeführten Code in der Konsole sehen. Kopiere diesen in dein Skript, so dass du ihn in Zukunft wiederverwenden und anpassen kannst.</li>
+<li>Schaue dir die eingelesenen Daten mit <code>View(data_mmq)</code> an. Wenn du alles richtig gemacht hast, ist in jeder Zelle nur ein Wert.</li>
 </ul></li>
 </ul>
 </section>
 <section id="einlesen-via-code" class="level3" data-number="3.1.2">
 <h3 data-number="3.1.2" class="anchored" data-anchor-id="einlesen-via-code"><span class="header-section-number">3.1.2</span> Einlesen via Code</h3>
-<p>XXXXX Namen updaten.</p>
+<section id="csv-dateien" class="level4" data-number="3.1.2.1">
+<h4 data-number="3.1.2.1" class="anchored" data-anchor-id="csv-dateien"><span class="header-section-number">3.1.2.1</span> .CSV Dateien</h4>
 <ul>
-<li><p>Versuche, weitere CSV-Datensätze einzulesen: <code>cbt_prop</code>, <code>cvstm_prop</code>, <code>data_pct</code>, <code>vp_prop</code>.<br>
-Suche dafür eine geeignete Funktion zum Einlesen von <code>.csv</code>.</p></li>
-<li><p>XXXXX Korrigiere diesen Code.</p></li>
-<li><p>Korrigiere diesen Code und lies damit die Datei <code>vp_prop</code> ein:</p></li>
+<li><p>Versuche, weitere CSV-Datensätze einzulesen: <code>data_cb</code>, <code>data_cvstm</code>, <code>data_pct</code>, <code>data_vp</code>.<br>
+Suche dafür eine geeignete Funktion zum Einlesen von <code>.csv</code>.</p>
+<ul>
+<li>Verwende den von R-Studio generierten Code, und passe ihn an um einen weiteren Datensatz einzulesen (z.B. indem du den Filenamen veränderst).</li>
+</ul></li>
+<li><p>Korrigiere diesen Code und lies damit die Datei <code>data_vp</code> ein (überprüfe den Pfad und den Delimiter)</p></li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>data_vp <span class="ot">&lt;-</span> <span class="fu">read_delim</span>(<span class="st">"/raw/data_vp.csv"</span>, </span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>    <span class="at">delim =</span> <span class="st">","</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="xslx-dateien" class="level4" data-number="3.1.2.2">
+<h4 data-number="3.1.2.2" class="anchored" data-anchor-id="xslx-dateien"><span class="header-section-number">3.1.2.2</span> .XSLX Dateien</h4>
+<ul>
 <li><p>Einige Dateien liegen im <code>.xlsx</code>-Format.</p>
 <ul>
-<li>Verwende dafür das Paket <strong>readxl</strong> und die Funktion <code>read_excel()</code>.</li>
-<li>Nutze die Hilfefunktion (<code>?read_excel</code>) für Infos.</li>
+<li>Verwende dafür das Paket <strong>readxl</strong> und die Funktion <code>read_excel()</code>. Tipp: Installiere und lade das Paket zunächst.</li>
+<li>Nutze die Hilfefunktion (<code>?read_excel</code>) für Infos zur Funktion oder schaue dir das <a href="https://rstudio.github.io/cheatsheets/html/data-import.html">Cheatsheet</a> an</li>
 <li>Versuche, die Datensätze <code>data_ratings</code> und <code>data_strategies</code> einzulesen.</li>
 </ul></li>
-<li><p>Am Ende solltest du <strong>7 verschiedene Datensätze</strong> in deinem Environment sehen.</p></li>
+<li><p>Am Ende solltest du die <strong>7 verschiedene Datensätze</strong> in deinem Environment sehen.</p></li>
 </ul>
-</section>
-</section>
-<section id="datensätze-inspizieren" class="level2" data-number="3.2">
-<h2 data-number="3.2" class="anchored" data-anchor-id="datensätze-inspizieren"><span class="header-section-number">3.2</span> Datensätze inspizieren</h2>
-<p>Verschaffe dir eine Übersicht über die Datensätze, verwende dabei die verschiedenen Funktionen die wir dafür bereits im Hands-on 1 kenengelernt haben:</p>
-<ul>
-<li><p><code>head()</code></p></li>
-<li><p><code>glimpse()</code></p></li>
-<li><p><code>str()</code></p></li>
-<li><p><code>data_cbt</code></p></li>
-<li><p><code>summary()</code></p></li>
-</ul>
-<p><img src="images/clipboard-558025012.png" class="img-fluid"></p>
-</section>
-</section>
-<section id="datenstrukturen-vektoren-listen-matrizen-und-data-frames" class="level1" data-number="4">
-<h1 data-number="4"><span class="header-section-number">4</span> Datenstrukturen: Vektoren, Listen, Matrizen und Data Frames</h1>
-<p>XXXX <span class="citation" data-cites="Sandra">@Sandra</span> gibt es hier ein gutes Kapitel das all das schön zusammenfasst?</p>
-<p>Bevor wir mit den Übungen starten, ein Überblick über die Unterschiede:</p>
-<table class="caption-top table">
-<colgroup>
-<col style="width: 33%">
-<col style="width: 33%">
-<col style="width: 33%">
-</colgroup>
-<thead>
-<tr class="header">
-<th>Struktur</th>
-<th>Eigenschaften</th>
-<th>Beispiel-Inhalt</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><strong>Vektor</strong></td>
-<td>- Enthält Elemente <strong>eines</strong> Datentyps<br>- Grundbaustein in R</td>
-<td><code>c(1, 2, 3)</code> oder <code>c("Anna", "Ben")</code></td>
-</tr>
-<tr class="even">
-<td><strong>Liste</strong></td>
-<td>- Kann verschiedene Datentypen enthalten<br>- Elemente können unterschiedlich lang sein</td>
-<td>Zahlenvektor, Textvektor, logischer Vektor in einer Liste</td>
-</tr>
-<tr class="odd">
-<td><strong>Matrix</strong></td>
-<td>- Enthält nur <strong>einen</strong> Datentyp<br>- Hat feste Dimensionen (Zeilen, Spalten)</td>
-<td>3x3-Matrix mit Zahlen 1–9</td>
-</tr>
-<tr class="even">
-<td><strong>Data Frame</strong></td>
-<td>- Tabellarisch aufgebaut<br>- Spalten können unterschiedliche Datentypen enthalten<br>- Jede Spalte gleich lang</td>
-<td>Tabelle mit Name (Char), Alter (Numeric), Studiert (Logical)</td>
-</tr>
-</tbody>
-</table>
-<p>👉 Merksatz:<br>
-- <strong>Vektor</strong> = einfachste Struktur, ein Datentyp<br>
-- <strong>Liste</strong> = flexibel, verschiedene Datentypen<br>
-- <strong>Matrix</strong> = „Zahlenrechteck“, ein Datentyp<br>
-- <strong>Data Frame</strong> = Tabelle, Spalten können unterschiedliche Datentypen haben</p>
-<p>Wir haben in der Hands on Übungen einige einfache Vektoren erstellt und damit operiert. NUn schauen wir uns weitere formate an.</p>
-<section id="listen" class="level2" data-number="4.1">
-<h2 data-number="4.1" class="anchored" data-anchor-id="listen"><span class="header-section-number">4.1</span> Listen</h2>
-<p>Eine <strong>Liste</strong> kann verschiedene Datentypen enthalten (z. B. Zahlen, Zeichenketten, logische Werte).</p>
-<p>👉 [Listen, Kapitel</p>
-<ul>
-<li><p><strong>Erstelle eine Liste mit drei Elementen:</strong></p>
-<ul>
-<li><p>einem Vektor mit den Zahlen 1 bis 5</p></li>
-<li><p>einem Character-Vektor mit den Namen deiner Kommiliton:innen</p></li>
-<li><p>einem logischen Vektor (TRUE, FALSE)</p></li>
-</ul></li>
-<li><p>Greife auf das zweite Element der Liste zu.</p></li>
-<li><p>Greife auf den dritten Wert des ersten Elements der Liste zu.</p></li>
-<li><p>Füge der Liste ein weiteres Element hinzu (z. B. den Mittelwert der Zahlen).</p></li>
-</ul>
-</section>
-<section id="matrizen" class="level2" data-number="4.2">
-<h2 data-number="4.2" class="anchored" data-anchor-id="matrizen"><span class="header-section-number">4.2</span> Matrizen</h2>
-<p>Eine <strong>Matrix</strong> besteht nur aus einem Datentyp (z. B. nur Zahlen).</p>
-<ul>
-<li><p>Erstelle eine 3x3-Matrix mit den Zahlen 1 bis 9.</p></li>
-<li><p>Wandle einen Vektor 1:12 in eine 3x4-Matrix um.</p></li>
-<li><p>Greife auf das Element in der 2. Zeile, 3. Spalte zu.</p></li>
-<li><p>Berechne die Spaltensummen und Zeilensummen.</p></li>
-</ul>
-</section>
-</section>
-<section id="data-frames" class="level1" data-number="5">
-<h1 data-number="5"><span class="header-section-number">5</span> Data Frames</h1>
-<p>Ein <strong>Data Frame</strong> ist eine tabellarische Struktur mit Spalten, die verschiedene Datentypen enthalten können.</p>
-<ul>
-<li><p>Erstelle einen Data Frame mit drei Spalten:</p></li>
-<li><p>name (Character)</p></li>
-<li><p>alter (Numeric)</p></li>
-<li><p>studiert (Logical: TRUE/FALSE)</p></li>
-<li><p>Greife auf die Spalte “alter” zu</p></li>
-<li><p>Filtere alle Zeilen, in denen studiert == TRUE.</p></li>
-<li><p>Füge eine neue Spalte hinzu, die alter + 10 berechnet.</p></li>
-</ul>
-</section>
-<section id="funktionen" class="level1" data-number="6">
-<h1 data-number="6"><span class="header-section-number">6</span> Funktionen</h1>
-<p>Wir haben in diesen Übungen bereits einige Funktionen verwendet (z.b <code>sum()</code> oder <code>sort()</code> ) Funktionen bestehen aus einem Namen und Argumenten. In diesem Beispiel wird die Funktion “<code>sort()</code>” aufgerufen, die Argumente die dafür benötigt werden sind <code>first_vector</code> &amp; <code>decreasing = TRUE</code> . Die meisten Funktionen haben “defaults” also argumente die eine voreinstellung haben. Wenn man diese nicht verändern möchte müssen diese auch nicht definiert werden. <code>sort()</code> hat als default <code>sdecreasing = FALSE</code> , deswegen müssen wir um die höchsten Werte des Vektors zu bestimmen diesen Default umstellen.</p>
-<p>Die Defaults der Funktionen lassen sich via Hilfefunktion nachschauen. Diese Kann entweder auf dem “Help” Tab geöffnet werden oder direkt via Konsole <code>?Funktionsname</code></p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>first_vector <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">22342</span>,<span class="dv">4</span>,<span class="dv">5</span>,<span class="dv">6</span>,<span class="dv">7</span>,<span class="dv">23234</span>, <span class="dv">342</span>, <span class="dv">342</span>)</span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>highest_values_1 <span class="ot">&lt;-</span> <span class="fu">sort</span>(first_vector)[<span class="dv">1</span><span class="sc">:</span><span class="dv">2</span>]</span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>highest_values <span class="ot">&lt;-</span> <span class="fu">sort</span>(first_vector, <span class="at">decreasing =</span><span class="cn">TRUE</span>)[<span class="dv">1</span><span class="sc">:</span><span class="dv">2</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="callout callout-style-default callout-note callout-titled" title="Vertiefung">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
 </div>
-<p>Suche mit der Hilfefunktion nach dem default von <code>?sum()</code> . Korrigiere den folgenden code so dass die Summe des Vektors berechet wird.</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>vector_with_nas <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">1</span> ,<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">5</span>,<span class="dv">6</span>,<span class="cn">NA</span>, <span class="dv">14</span>, <span class="dv">21</span>, <span class="cn">NA</span>, <span class="dv">12</span>)</span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="fu">sum</span>(vector_with_nas)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] NA</code></pre>
+<div class="callout-title-container flex-fill">
+Vertiefung
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-1" class="callout-1-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>👉Für das Einlesen anderer Arten von Datensätzen (z.B. SPSS Dateien), siehe <a href="https://methodenlehre.github.io/einfuehrung-in-R/chapters/03-data_frames.html#daten-importieren">Kapitel 3.2</a></p>
+</div>
 </div>
 </div>
 </section>
-<section id="daten-mergen" class="level1" data-number="7">
-<h1 data-number="7"><span class="header-section-number">7</span> Daten mergen</h1>
-<p><strong>Mögliche Funktionen:</strong> z.B. <code>cbind()</code> aus Base R oder <code>full_join()</code> aus dem Tidyverse.</p>
-<p>Aufgaben:</p>
-<ol type="a">
-<li><p>Füge alle 7 Datensätze mit <code>cbind()</code> zusammen und schaue dir das Ergebnis an.</p>
+</section>
+</section>
+</section>
+<section id="daten-mergen" class="level1" data-number="4">
+<h1 data-number="4"><span class="header-section-number">4</span> Daten mergen</h1>
+<p><strong><em>Wird in EH4 noch genauer erklärt!</em></strong></p>
+<p>Nun haben wir 7 verschiedene Datensätze in unserem Enviornment. Da wir jedoch mit dem kompletten Datensatz arbeiten wollen, ist es sinnvoll diese Datensätze zu einem zu verbinden. Jedoch müssen dafür mehrere Dinge beachtet werden: Sind die Daten in der gleichen Reihenfolge (z.B. geordnet nach Identifier (z.B. <code>code</code> in <code>data_mmq</code>).</p>
+<p><strong>Mögliche Funktionen:</strong> z. B. <code>cbind()</code> aus Base R oder <code>full_join()</code> aus dem Tidyverse.</p>
+<section id="aufgaben" class="level2" data-number="4.1">
+<h2 data-number="4.1" class="anchored" data-anchor-id="aufgaben"><span class="header-section-number">4.1</span> Aufgaben</h2>
+<section id="a-füge-alle-7-datensätze-mit-cbind-zusammen-und-schaue-dir-das-ergebnis-an." class="level3" data-number="4.1.1">
+<h3 data-number="4.1.1" class="anchored" data-anchor-id="a-füge-alle-7-datensätze-mit-cbind-zusammen-und-schaue-dir-das-ergebnis-an."><span class="header-section-number">4.1.1</span> a) Füge alle 7 Datensätze mit <code>cbind()</code> zusammen und schaue dir das Ergebnis an.</h3>
 <ul>
 <li>Was fällt dir auf?<br>
 </li>
-<li>Hinweis: Die Datensätze werden einfach nebeneinander „geklebt“, ohne inhaltlich abgeglichen zu werden.</li>
-<li>Reflektiere: Macht das Sinn? Was sind die Gefahren von dieser Art daten zu mergen?</li>
-</ul></li>
-<li><p>Versuche es nun mit <code>full_join()</code>.</p>
+<li>Hinweis: Die Datensätze werden einfach nebeneinander „geklebt“, ohne inhaltlich abgeglichen zu werden.<br>
+</li>
+<li>Reflektiere: Macht das Sinn? Was sind die Gefahren, Daten auf diese Art zu mergen?</li>
+</ul>
+<hr>
+</section>
+<section id="b-versuche-es-nun-mit-full_join." class="level3" data-number="4.1.2">
+<h3 data-number="4.1.2" class="anchored" data-anchor-id="b-versuche-es-nun-mit-full_join."><span class="header-section-number">4.1.2</span> b) Versuche es nun mit <code>full_join()</code>.</h3>
+<p>Full_join verbindet zwei Datensätze anhand einer Schlüsselvariable, so dass alle Zeilen aus beiden Datensätzen erhalten bleiben. Die Schlüsselvariable ist essentiell dafür dass die Datensätze richtig verbunden werden (Anordnung der Variablen), und grenzt sich dadurch von Funktionen wie <code>cbind()</code> ab.</p>
+<p><img src="images/Hands on 2/full-join.gif" class="img-fluid" width="307"></p>
 <ul>
-<li>Lege eine gemeinsame Variable als Schlüssel fest, hier: <code>by = "code"</code>.<br>
-</li>
-<li>Achtung: <code>full_join()</code> funktioniert immer nur mit 2 Datensätzen gleichzeitig → du musst es also mehrfach anwenden, um alle 7 Datensätze zusammenzuführen.<br>
-</li>
-<li>Hinweis: Im Datensatz <code>data_pct</code> heißt die Code-Variable leicht anders. Verwende deshalb <code>by = c("code_all" = "code")</code>.</li>
+<li><p>Lege eine gemeinsame Variable als Schlüssel fest, hier: <code>by = "code"</code>.</p></li>
+<li><p>Füge nun alle 7 Datensätze zu einem zusammen, nenne diesen <code>dat_full</code></p>
+<ul>
+<li><p><strong>Achtung:</strong> <code>full_join()</code> funktioniert immer nur mit 2 Datensätzen gleichzeitig 👉 du musst es also mehrfach anwenden, um alle 7 Datensätze zusammenzuführen.</p></li>
+<li><p>Hinweis: Im Datensatz <code>data_pct</code> heißt die Code-Variable leicht anders. Verwende deshalb <code>by = c("code_all" = "code")</code>.</p></li>
 </ul></li>
-<li><p>Der neu erstellte Datensatz soll <strong><code>dat_full</code></strong> heißen.</p></li>
-<li><p>Speichere <code>dat_full</code> in deinem Ordner <code>"data"</code> als CSV-Datei ab:</p></li>
-</ol>
-<p>```r write.csv(dat_full, “data/dat_full.csv”)</p>
-<p><em>xxx Weitere Möglichkeiten für Übungen (ggf ist das aber auch zu viel):</em></p>
-<p>Umgang mit Vektoren (z.b. bestimmte Elemente anzeigen lassen; runden (siehe Folien EH 3/4/5)</p>
-<p>Umgang mit Matrizen</p>
-<p><strong>ggf irgendwas zu “calling functions”: 2.4</strong> <a href="https://r4ds.hadley.nz/workflow-basics.html" class="uri">https://r4ds.hadley.nz/workflow-basics.html</a> &amp; 2.3 <a href="https://methodenlehre.github.io/einfuehrung-in-R/chapters/02-R-language.html" class="uri">https://methodenlehre.github.io/einfuehrung-in-R/chapters/02-R-language.html</a></p>
-<p><strong>vl auch: warum funktioniert dieser Code nicht?</strong> (mit einfachen Fehlern wie Typos)</p>
-<p><strong>Tab completions: 1.4.5</strong> <a href="https://methodenlehre.github.io/einfuehrung-in-R/chapters/01-workflow.html" class="uri">https://methodenlehre.github.io/einfuehrung-in-R/chapters/01-workflow.html</a></p>
-<p>-Listen und Matrizen</p>
+</ul>
+<hr>
+</section>
+<section id="c-inspiziere-deinen-zusammengefügten-datensatz-dat_full" class="level3" data-number="4.1.3">
+<h3 data-number="4.1.3" class="anchored" data-anchor-id="c-inspiziere-deinen-zusammengefügten-datensatz-dat_full"><span class="header-section-number">4.1.3</span> c) Inspiziere deinen zusammengefügten Datensatz “dat_full”</h3>
+<ul>
+<li>🔍Überprüfe: Wie viele Zeilen und Spalten hat dein Datensatz? Verwende: <code>ncol()</code> , <code>nrow()</code>, <code>dim()</code>
+<ul>
+<li>Stimmt die Anzahl der Zeilen mit der Anzahl der Versuchspersonen aus dem Paper überein?</li>
+<li>Lasse dir die variablenamen ausgeben mit <code>names()</code></li>
+</ul></li>
+<li>👀Verschaffe dir eine Überblick über deinen Datensatz:
+<ul>
+<li><code>head()</code></li>
+<li><code>glimpse()</code></li>
+<li><code>str()</code></li>
+<li><code>dat_full</code></li>
+<li><code>summary()</code></li>
+</ul></li>
+<li>Gibt es redundante oder doppelte Variablen?</li>
+</ul>
+<p><strong>Auf einzelne Werte zugreiffen:</strong></p>
+<ul>
+<li><p>Greife auf den <strong>ersten Wert der ersten Spalte</strong> zu: Verwende eckige Klammern. Der erste Wert in der Klammer steht für die Zeile, der zweite für die Spalte.</p></li>
+<li><p>Greife auf die Werte der <strong>Spalten 1–15 in der ersten Zeile</strong> zu. Verwende wieder eckige Klammern und den Bereichsoperator <code>1:15</code>.</p></li>
+<li><p>Lasse dir alle Werte der Variable <code>"mean_rl_all"</code> ausgeben. Auf Variablen greifst du mit <code>$</code> zu.</p></li>
+<li><p>Greife auf die <strong>ersten 10 Werte der Variable <code>"question1"</code></strong> zu. Verwende dazu den <code>$</code>-Operator in Kombination mit dem Bereichsoperator <code>1:10</code>.</p></li>
+</ul>
+<hr>
+</section>
+</section>
+</section>
+<section id="daten-speichern" class="level1" data-number="5">
+<h1 data-number="5"><span class="header-section-number">5</span> Daten speichern</h1>
+<section id="a-speichere-dat_full-in-deinem-ordner-data-als-csv-datei-ab" class="level3" data-number="5.0.1">
+<h3 data-number="5.0.1" class="anchored" data-anchor-id="a-speichere-dat_full-in-deinem-ordner-data-als-csv-datei-ab"><span class="header-section-number">5.0.1</span> a) Speichere <code>dat_full</code> in deinem Ordner <code>"data"</code> als CSV-Datei ab</h3>
+<p>Verwende dafür die Funktion <code>write.csv()</code>. Du musst zwei Argumente angeben: Welcher Datensatz aus deinem Environment gespeichert werden soll und unter welchem Pfad (inklusive Dateiname) er abgelegt wird. Bei Unklarheiten schaue dir das Cheatsheet oder die Hilfefunktion an. Überprüfe nach dem speichern, ob dein Datensatz im richtigen Ordner zu finden ist.</p>
+<p>👉 Für diesen Datensatz sollt ihr anschließend das <strong>Codebook</strong> erstellen.</p>
+<hr>
+</section>
+</section>
+<section id="coding-basics-funktionen" class="level1" data-number="6">
+<h1 data-number="6"><span class="header-section-number">6</span> Coding Basics: Funktionen</h1>
+<p>👉<a href="https://r4ds.hadley.nz/workflow-basics.html">Kapitel 2.4: Calling Functions</a></p>
+<p>👉<a href="https://methodenlehre.github.io/einfuehrung-in-R/chapters/02-R-language.html#funktionen-aufrufen">Kapitel 2.3: Funktionen aufrufen</a></p>
+<p>Wir haben in diesen Übungen bereits einige Funktionen verwendet (z. B. <code>sum()</code> oder <code>sort()</code>). Funktionen bestehen aus einem Namen und Argumenten. In diesem Beispiel wird die Funktion <code>sort()</code> aufgerufen. Die Argumente, die dafür benötigt werden, sind <code>first_vector</code> und <code>decreasing = TRUE</code>. Die meisten Funktionen haben <em>Defaults</em>, also Argumente mit einer Voreinstellung. Wenn man diese nicht verändern möchte, müssen sie nicht explizit angegeben werden. <code>sort()</code> hat als Default <code>decreasing = FALSE</code>. Deswegen müssen wir, um die höchsten Werte des Vektors zu bestimmen, diesen Default umstellen. Argumente ohne Defaults müssen zwingend angegben werden).</p>
+<p>Die Defaults von Funktionen lassen sich über die Hilfefunktion nachschauen. Diese kann entweder im Tab <em>Help</em> geöffnet werden oder direkt über die Konsole mit <code>?Funktionsname</code>.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>first_vector <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">22342</span>, <span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">6</span>, <span class="dv">7</span>, <span class="dv">23234</span>, <span class="dv">342</span>, <span class="dv">342</span>)</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>highest_values_1 <span class="ot">&lt;-</span> <span class="fu">sort</span>(first_vector)[<span class="dv">1</span><span class="sc">:</span><span class="dv">2</span>]</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>highest_values <span class="ot">&lt;-</span> <span class="fu">sort</span>(first_vector, <span class="at">decreasing =</span> <span class="cn">TRUE</span>)[<span class="dv">1</span><span class="sc">:</span><span class="dv">2</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Bei vielen Funktionen werden die <strong>Namen der Argumente</strong> weggelassen.</p>
+<p>Welche Argumente werden hier übergeben? Schreibe die Funktion mit den vollständigen Argumentnamen aus:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a> <span class="fu">seq</span>(<span class="sc">-</span><span class="dv">4</span>, <span class="dv">11</span>, <span class="dv">3</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] -4 -1  2  5  8 11</code></pre>
+</div>
+</div>
+<p>Wenn die Argumente nicht explizit benannt werden, ist die Reihenfolge entscheidend. Wenn du die Argumente explizit angibst, kannst du die Reihenfolge frei wählen.</p>
+<ul>
+<li>Korrigiere diesen Code: Ergänze die Argumentnamen, sodass eine Sequenz von 3 bis 12 in 2er-Schritten erstellt wird. Belasse dabei die Reihenfolge der Zahlen.</li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">seq</span>(<span class="dv">2</span>, <span class="dv">12</span>, <span class="dv">3</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>ℹ️Manche Funktionen sind in mehreren Paketen beinhaltet, sowie wie z.B. die Funktion <code>filter()</code>. Um die Funktion definitiv aus einem bestimmten Paket zu verwenden, muss man das Paket dazu schreiben: <code>dyplr::filter()</code></p>
+<section id="tab-completion" class="level2" data-number="6.1">
+<h2 data-number="6.1" class="anchored" data-anchor-id="tab-completion"><span class="header-section-number">6.1</span> Tab Completion:</h2>
+<p>Eine nützliche Funktion von RStudio ist die <strong>Tab Completion</strong>. Wenn du eine Funktion aufrufst und die Tabulator-Taste drückst, erscheint ein Menü mit den möglichen Argumenten, die du angeben kannst. Probiere es mit der Funktion <code>mean()</code>. Das funktioniert auch für Funktionen aus Packages, wenn du diese mit <code>::</code> auswählst, zum Beispiel: <code>readr::</code>.</p>
+</section>
+<section id="weitere-tasten-und-tastenkürzel" class="level2" data-number="6.2">
+<h2 data-number="6.2" class="anchored" data-anchor-id="weitere-tasten-und-tastenkürzel"><span class="header-section-number">6.2</span> Weitere Tasten und Tastenkürzel:</h2>
+<p>👉<a href="https://methodenlehre.github.io/einfuehrung-in-R/chapters/01-workflow.html#tasten">Kapitel 1.4.6</a></p>
+<p>In RStudio benötigen wir häufig Zeichen, die wir im Alltag kaum verwenden. Da wir nicht alle mit dem gleichen Betriebssystem (Mac/Windows) und auch nicht mit identischen Tastaturen arbeiten, können wir keine einheitlichen Angaben machen, wo sich diese Zeichen genau befinden. Versuche daher, die folgenden Zeichen auf deiner eigenen Tastatur zu finden:</p>
+<ul>
+<li><p><code>[ ]</code> Square brackets (eckige Klammern)</p></li>
+<li><p><code>{ }</code> Curly brackets (geschweifte Klammern)</p></li>
+<li><p><code>$</code> Dollar sign (Dollarzeichen – wird für das Auswählen von Variablen benötigt)</p></li>
+<li><p><code>#</code> Hash (Rautezeichen – für Kommentare in R-Skripten)</p></li>
+<li><p><code>~</code> Tilde (für Modellnotationen in R)</p></li>
+<li><p><code>|</code> Vertical bar (senkrechter Strich – als logischer Operator, siehe nächstes Kapitel)</p></li>
+<li><p><code>`</code> Backtick (Gravis – vor allem für Code Chunks, selten manuell einzugeben)</p></li>
+</ul>
+</section>
+<section id="verschachtelte-funktionen" class="level2" data-number="6.3">
+<h2 data-number="6.3" class="anchored" data-anchor-id="verschachtelte-funktionen"><span class="header-section-number">6.3</span> Verschachtelte Funktionen:</h2>
+<p>ℹ️Es ist zwar möglich, mehrere Funktionen ineinander zu verschachteln. Dies kann jedoch schnell zu Verwirrung führen und den Code unnötig unübersichtlich machen. Verschachtelte Funktionen werden von innen nach aussen ausgeführt.</p>
+<p>❓Stelle dir hier die Frage: Was wird genau gerundet? Die einzelnen Elemente des Vektors oder der errechnet Durchschnitt?</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(<span class="fu">mean</span>(<span class="fu">round</span>(first_vector)))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 5785.25</code></pre>
+</div>
+</div>
+<p>❗Aufgabe: Zerlege die Verschatelte Funktion in ihre Teilschritte.</p>
+</section>
+</section>
+<section id="style-conventions" class="level1" data-number="7">
+<h1 data-number="7"><span class="header-section-number">7</span> Style Conventions</h1>
+<p>Korrigiere diesen Code so dass er</p>
+<ul>
+<li><p>Läuft</p></li>
+<li><p>Leserlicher ist: Beachte dafür</p>
+<ul>
+<li><p>Naming Conventions</p></li>
+<li><p>Weitere Style Vorgaben (z.B. Leerzeichen)</p></li>
+</ul></li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>Französischschul_NotenSemesester <span class="sc">-</span><span class="er">&lt;</span>(<span class="dv">4</span>,<span class="dv">5</span>, <span class="dv">6</span>,<span class="dv">5</span>,<span class="dv">4</span>,  <span class="dv">3</span>)</span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>mean <span class="ot">&lt;-</span><span class="fu">mean</span>(Französichschul_NotenSemsester</span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>  ( mittelwert)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<ul>
+<li><p>Installiere das Package <code>styler</code> mit <code>install.packages()</code> und lade es. <code>styler</code> hat eine sogenannte “Wrapper-Funktion”, die du unter “Addins” aufrufen kannst. Verwende den Default-Style (tidyverse).</p>
+<p><img src="images/clipboard-3096355115.png" class="img-fluid" width="256"></p></li>
+<li><p>Versuche mit der <code>Styler</code> funktion diesen Code zu leserlicher zu machen (Style selection). Du musst diesen ggplot Code nicht verstehen - wir kommen dazu in einer späteren Einheit noch.</p></li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(palmerpenguins)</span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(penguins,<span class="fu">aes</span>(<span class="at">x=</span>flipper_length_mm,<span class="at">y=</span>body_mass_g,<span class="at">color=</span>species))<span class="sc">+</span><span class="fu">geom_point</span>()<span class="sc">+</span><span class="fu">labs</span>(<span class="at">x=</span><span class="st">"flipper"</span>,<span class="at">Y=</span><span class="st">"MASS"</span>)<span class="sc">+</span><span class="fu">theme_minimal</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="am-ende-deiner-übungen---vergiss-nicht-dein-skript-abzuspeichern--" class="level1" data-number="8">
+<h1 data-number="8"><span class="header-section-number">8</span> Am Ende deiner Übungen - vergiss nicht dein Skript abzuspeichern! :-)</h1>
 
 
 </section>
