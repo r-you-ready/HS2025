@@ -6,12 +6,8 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Dr.&nbsp;Sandra Grinschgl">
-<meta name="author" content="MSc. Aaron Friedli">
-<meta name="author" content="Bsc. Lars Schilling">
-<meta name="dcterms.date" content="2025-10-01">
 
-<title>Einleitung – R u Ready</title>
+<title>Hands_On_3 – R u Ready</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -34,7 +30,6 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./0_presentation.html" rel="next">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -85,7 +80,9 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./front_page.html">Einleitung</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">
+      R u Ready
+      </li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -112,7 +109,7 @@ ul.task-list li input[type="checkbox"] {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./front_page.html" class="sidebar-item-text sidebar-link active">
+  <a href="./front_page.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Einleitung</span></a>
   </div>
 </li>
@@ -231,8 +228,12 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Inhaltsverzeichnis</h2>
    
   <ul>
-  <li><a href="#hinweisboxen" id="toc-hinweisboxen" class="nav-link active" data-scroll-target="#hinweisboxen"><span class="header-section-number">1</span> Hinweisboxen</a></li>
-  <li><a href="#syllabus" id="toc-syllabus" class="nav-link" data-scroll-target="#syllabus"><span class="header-section-number">2</span> Syllabus</a></li>
+  <li><a href="#datenstrukturen-vektoren-listen-matrizen-und-data-frames-ggf-nach-mergen" id="toc-datenstrukturen-vektoren-listen-matrizen-und-data-frames-ggf-nach-mergen" class="nav-link active" data-scroll-target="#datenstrukturen-vektoren-listen-matrizen-und-data-frames-ggf-nach-mergen"><span class="header-section-number">1</span> Datenstrukturen: Vektoren, Listen, Matrizen und Data Frames <em>ggf nach mergen?</em></a>
+  <ul class="collapse">
+  <li><a href="#matrizen" id="toc-matrizen" class="nav-link" data-scroll-target="#matrizen"><span class="header-section-number">1.1</span> Matrizen</a></li>
+  <li><a href="#listen-aaron-zuerst-matrizen-ich-glaube-das-einige-der-übungen-ohne-weitere-erklärungen-zu-schwer-sind-siehe-eh5" id="toc-listen-aaron-zuerst-matrizen-ich-glaube-das-einige-der-übungen-ohne-weitere-erklärungen-zu-schwer-sind-siehe-eh5" class="nav-link" data-scroll-target="#listen-aaron-zuerst-matrizen-ich-glaube-das-einige-der-übungen-ohne-weitere-erklärungen-zu-schwer-sind-siehe-eh5"><span class="header-section-number">1.2</span> Listen <span class="citation" data-cites="Aaron">@Aaron</span> <em>zuerst Matrizen, ich glaube das einige der Übungen ohne weitere Erklärungen zu schwer sind, siehe EH5</em></a></li>
+  </ul></li>
+  <li><a href="#data-frames" id="toc-data-frames" class="nav-link" data-scroll-target="#data-frames"><span class="header-section-number">2</span> Data Frames</a></li>
   </ul>
 </nav>
     </div>
@@ -241,28 +242,14 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Einleitung</h1>
+<h1 class="title">Hands_On_3</h1>
 </div>
 
 
 
 <div class="quarto-title-meta">
 
-    <div>
-    <div class="quarto-title-meta-heading">Authors</div>
-    <div class="quarto-title-meta-contents">
-             <p>Dr.&nbsp;Sandra Grinschgl </p>
-             <p>MSc. Aaron Friedli </p>
-             <p>Bsc. Lars Schilling </p>
-          </div>
-  </div>
     
-    <div>
-    <div class="quarto-title-meta-heading">Published</div>
-    <div class="quarto-title-meta-contents">
-      <p class="date">October 1, 2025</p>
-    </div>
-  </div>
   
     
   </div>
@@ -272,80 +259,92 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>In diesem E-Book findest du alle wichtigen Informationen zum Methodenseminar “R u Ready”. Du kannst hier u. a. die wöchentlichen Folien, Hands-On R Übungen, den Leistungsnachweis, und Frequently Asked Questions einsehen. Du kannst über die Unterkapitel (links) zu den entsprechenden Inhalten navigieren, oder auch die Suchfunktion oben links verwenden, um nach einem bestimmten Begriff zu suchen.</p>
-<section id="hinweisboxen" class="level1" data-number="1">
-<h1 data-number="1"><span class="header-section-number">1</span> Hinweisboxen</h1>
-<p>Hier einen Überblick über die auf den Seiten enthaltenen Hinweisboxen:</p>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Note
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p><strong>Veriefung:</strong> Hier geht es in die Tiefe.</p>
-</div>
-</div>
-<div class="callout callout-style-default callout-important callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Important
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p><strong>Wichtig:</strong> Dies ist eine wichtige Information.</p>
-</div>
-</div>
-<div class="callout callout-style-default callout-warning callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Warning
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p><strong>Achtung:</strong> Hier ist Vorsicht geboten.</p>
-</div>
-</div>
-<div class="callout callout-style-default callout-caution callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Caution
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p><strong>Vorsicht:</strong> Diese Information ist noch in Bearbeitung.</p>
-</div>
-</div>
+<section id="datenstrukturen-vektoren-listen-matrizen-und-data-frames-ggf-nach-mergen" class="level1" data-number="1">
+<h1 data-number="1"><span class="header-section-number">1</span> Datenstrukturen: Vektoren, Listen, Matrizen und Data Frames <em>ggf nach mergen?</em></h1>
+<p>XXXX <span class="citation" data-cites="Sandra">@Sandra</span> <em>gibt es hier ein gutes Kapitel, das all das schön zusammenfasst? –&gt; 2.4 Boris, irgendwann auch factors erklären (EH 5??) –&gt; oder das alles in EH 5 verschieben?</em></p>
+<p><em>vl hier lieber Factors und Rest zu EH 5</em></p>
+<p>Bevor wir mit den Übungen starten, ein Überblick über die Unterschiede:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Struktur</th>
+<th>Eigenschaften</th>
+<th>Beispiel-Inhalt</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Vektor</strong></td>
+<td>- Enthält Elemente <strong>eines</strong> Datentyps<br>- Grundbaustein in R</td>
+<td><code>c(1, 2, 3)</code> oder <code>c("Anna", "Ben")</code></td>
+</tr>
+<tr class="even">
+<td><strong>Liste</strong></td>
+<td>- Kann verschiedene Datentypen enthalten<br>- Elemente können unterschiedlich lang sein</td>
+<td>Zahlenvektor, Textvektor, logischer Vektor in einer Liste</td>
+</tr>
+<tr class="odd">
+<td><strong>Matrix</strong></td>
+<td>- Enthält nur <strong>einen</strong> Datentyp<br>- Hat feste Dimensionen (Zeilen, Spalten)</td>
+<td>3x3-Matrix mit Zahlen 1–9</td>
+</tr>
+<tr class="even">
+<td><strong>Data Frame</strong></td>
+<td>- Tabellarisch aufgebaut<br>- Spalten können unterschiedliche Datentypen enthalten<br>- Jede Spalte gleich lang</td>
+<td>Tabelle mit Name (Character), Alter (Numeric), Studiert (Logical)</td>
+</tr>
+</tbody>
+</table>
+<p>👉 Merksatz:<br>
+- <strong>Vektor</strong> = einfachste Struktur, ein Datentyp<br>
+- <strong>Liste</strong> = flexibel, verschiedene Datentypen<br>
+- <strong>Matrix</strong> = „Zahlenrechteck“, ein Datentyp<br>
+- <strong>Data Frame</strong> = Tabelle, Spalten können unterschiedliche Datentypen haben</p>
+<p>Wir haben in den Hands-On-Übungen einige einfache Vektoren erstellt und damit operiert. Nun schauen wir uns weitere Formate an.</p>
+<section id="matrizen" class="level2" data-number="1.1">
+<h2 data-number="1.1" class="anchored" data-anchor-id="matrizen"><span class="header-section-number">1.1</span> Matrizen</h2>
+<p>Eine <strong>Matrix</strong> besteht nur aus einem Datentyp (z. B. nur Zahlen).</p>
+<ul>
+<li><p>Erstelle eine 3x3-Matrix mit den Zahlen 1 bis 9.</p></li>
+<li><p>Wandle einen Vektor 1:12 in eine 3x4-Matrix um.</p></li>
+<li><p>Greife auf das Element in der 2. Zeile, 3. Spalte zu.</p></li>
+<li><p>Berechne die Spaltensummen und Zeilensummen.</p></li>
+</ul>
 </section>
-<section id="syllabus" class="level1" data-number="2">
-<h1 data-number="2"><span class="header-section-number">2</span> Syllabus</h1>
-<div class="callout callout-style-default callout-caution callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Caution
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p><strong>Vorsicht:</strong> Der Syllabus dient als grobe Richtlinie und kann angepasst werden, falls wir in einzelnen Einheiten mehr oder weniger Zeit benötigen.</p>
-</div>
-</div>
-<iframe src="PDFs/Syllabus.pdf" width="100%" height="600px">
-</iframe>
+<section id="listen-aaron-zuerst-matrizen-ich-glaube-das-einige-der-übungen-ohne-weitere-erklärungen-zu-schwer-sind-siehe-eh5" class="level2" data-number="1.2">
+<h2 data-number="1.2" class="anchored" data-anchor-id="listen-aaron-zuerst-matrizen-ich-glaube-das-einige-der-übungen-ohne-weitere-erklärungen-zu-schwer-sind-siehe-eh5"><span class="header-section-number">1.2</span> Listen <span class="citation" data-cites="Aaron">@Aaron</span> <em>zuerst Matrizen, ich glaube das einige der Übungen ohne weitere Erklärungen zu schwer sind, siehe EH5</em></h2>
+<p>Eine <strong>Liste</strong> kann verschiedene Datentypen enthalten (z. B. Zahlen, Zeichenketten, logische Werte).</p>
+<p>👉 [Listen, Kapitel]</p>
+<ul>
+<li><p><strong>Erstelle eine Liste mit drei Elementen und der Funktion</strong> <code>list()</code><strong>:</strong></p>
+<ul>
+<li><p>einem Vektor mit den Zahlen 1 bis 5</p></li>
+<li><p>einem Character-Vektor mit den Namen deiner Kommiliton:innen</p></li>
+<li><p>einem logischen Vektor (TRUE, FALSE)</p></li>
+</ul></li>
+<li><p>Greife auf das zweite Element der Liste zu.</p></li>
+<li><p>Greife auf den dritten Wert des ersten Elements der Liste zu.</p></li>
+<li><p>Füge der Liste ein weiteres Element hinzu (z. B. den Mittelwert der Zahlen).</p></li>
+</ul>
+</section>
+</section>
+<section id="data-frames" class="level1" data-number="2">
+<h1 data-number="2"><span class="header-section-number">2</span> Data Frames</h1>
+<p>Ein <strong>Data Frame</strong> ist eine tabellarische Struktur mit Spalten, die verschiedene Datentypen enthalten können.</p>
+<ul>
+<li><p>Erstelle einen Data Frame mit drei Spalten:</p></li>
+<li><p>name (Character)</p></li>
+<li><p>alter (Numeric)</p></li>
+<li><p>studiert (Logical: TRUE/FALSE)</p></li>
+<li><p>Greife auf die Spalte “alter” zu.</p></li>
+<li><p>Filtere alle Zeilen, in denen studiert == TRUE.</p></li>
+<li><p>Füge eine neue Spalte hinzu, die alter + 10 berechnet.</p></li>
+</ul>
 
 
 </section>
@@ -768,15 +767,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
 });
 </script>
-<nav class="page-navigation">
-  <div class="nav-page nav-page-previous">
-  </div>
-  <div class="nav-page nav-page-next">
-      <a href="./0_presentation.html" class="pagination-link" aria-label="Präsentationen">
-        <span class="nav-page-text">Präsentationen</span> <i class="bi bi-arrow-right-short"></i>
-      </a>
-  </div>
-</nav>
 </div> <!-- /content -->
 <footer class="footer">
   <div class="nav-footer">

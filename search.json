@@ -279,7 +279,7 @@
     "href": "loesung_1.html",
     "title": "Lösung 1",
     "section": "",
-    "text": "Bei Bedarf finden sich hier nochmal die Slides zur EH1: \n\n\nInstalliere R und RStudio:\n\nInstallation von R – neueste Version 4.5.1: https://stat.ethz.ch/CRAN/\nInstallation von Rstudio (Version 2025.05.1): https://posit.co/download/rstudio-desktop/\n\nDu weisst nicht was mit R auf sich hat? Hier ist eine Kurzerklärung: https://methodenlehre.github.io/einfuehrung-in-R/\n\n\n\n\nRStudio öffnen & Einstellungen vornehmen: Unter «tools» –«global options» die unter 1.1. beschriebenen Einstellungen vornehmen: https://methodenlehre.github.io/einfuehrung-in-R/chapters/01-workflow.html\n\n\n\nNeues Skript öffnen & orientieren:\n\n\n\n\nIm folgenden machen wir uns vertraut mit der Oberfläche von R-Studio:\n\n\n\n\n\n\n\nSkript für Code-Eingabe sowie Kommentare\nKonsole für die Ausführung von Code -&gt; Teste einfache mathematische Operation in dieser; reproduziere diese mittels Skript\nRechts oben: Environment & History\nRechts unten: Files, Plots, Packages und Help Viewer\n\n\n\n\nTidyverse ist ein Meta-Paket, das mehrere Pakete umfasst\n\nPakete installieren (nur 1x notwendig) -&gt; führe diesen Code in der Konsole aus\n\ninstall.packages(\"tidyverse\")\n\nPaket laden (innerhalb des Skriptes, bei jedem Neustart von R notwendig)\n\nlibrary(tidyverse)\n\n── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.4     ✔ readr     2.1.5\n✔ forcats   1.0.1     ✔ stringr   1.5.2\n✔ ggplot2   4.0.0     ✔ tibble    3.3.0\n✔ lubridate 1.9.4     ✔ tidyr     1.3.1\n✔ purrr     1.1.0     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\n\n\n\nTipp: Pakete regelmässig updaten mit z.B. update.packages()\n\n\n\na. Nutze R als Taschenrechner\n\n123+456\n\n\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\n123 + 456\n\n[1] 579\n\n\n\n\n\n2.  `144*112`\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\n144*112\n\n[1] 16128\n\n\n\n\n\n3.  `10/3`\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\n10/3\n\n[1] 3.333333\n\n\n\n\n\n4.  Quadriere 420\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\n420^2\n\n[1] 176400\n\n\n\n\n\n5.  Ziehe die Quadratwurzel aus 146 mit der Funktion `sqrt()`\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\nsqrt(146)\n\n[1] 12.08305\n\n\n\n\n\n6.  Berechne den Rest der Division 10/3 mit dem Modulo Operator: `%%`\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\n10 %% 3\n\n[1] 1\n\n\n\n\n\n\n\n\n\n\nZeichen\nBedeutung\n\n\n\n\n+\nAddition\n\n\n-\nSubstraktion\n\n\n*\nMultiplikation\n\n\n/\nDivision\n\n\nsqrt(x)\nQuadratwurzel\n\n\nabs(x)\nBetrag (absoluter Wert)\n\n\nx %% y\nModulo (x mod y) 5 %% 2 = 1\n\n\n^\nPotenz\n\n\n\n\n\n\n\n\nWeise den Wert 5 der Variable x zu mit dem Operator &lt;-\n\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\nx &lt;- 5\n\n\n\n\n\nWeise eine beliebige Zahl der Variable y hinzu und dividiere dann x durch y. Speichere dieses Ergebnis in der Variable z.\n\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\ny &lt;- 10 # hier könntet ihr auch jede andere Ziffer wählen\n\nz &lt;- x / y\n\n\n\n\n\nSchaue dir das Ergebnis in deinem Environment an. Lass dir das Ergebnis auch in der Konsole ausgeben. Das Environment findest du oben rechts, die Konsole ist unter deinem Skript.\n\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\n# z (hier über das # auskommentiert, da der Befehl nicht im Skript, sondern unten in der Konsole ausgeführt werden soll)\n\n\n\n\n\nErstelle zwei Variablen: Eine mit deinem Vornamen und eine mit deinem Nachnamen. Solche “character” Variablen musst du in Anführungszeichen setzen \"\"\n\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\nvorname &lt;- \"Lars\"\nnachname &lt;- \"Schilling\"\n\n\n\n\n\nKombiniere deinen Vor- und Nachnamen zu deinem vollen Namen mittels paste . Speichere diese Variable als voller_name.\n\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\nvoller_name &lt;- paste(vorname, nachname)\n\n\n\n\n\n\n\n\nDefiniere einen Vektor «first_vector» mit den Zahlen 100, 80, 54, 73. Einen Vektor definiert man so: first_vector &lt;- c(...)\n\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\nfirst_vector &lt;- c(100, 80, 54, 73)\n\n\n\n\n\nWende den Befehl boxplot() auf deinen Vektor an\n\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\nboxplot(first_vector)\n\n\n\n\n\n\n\n\n\n\n\n\nBerechne die Summe sum()und den Mittelwert mean() von deinem Vektor\n\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\nsum(first_vector)\n\n[1] 307\n\nmean(first_vector)\n\n[1] 76.75\n\n\n\n\n\n\nMultipliziere deinen Vektor mit *2\n\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\nfirst_vector * 2\n\n[1] 200 160 108 146\n\n\n\n\n\nDie wichtigsten Operatoren und Funktionen in R: https://methodenlehre.github.io/einfuehrung-in-R/chapters/02-R-language.html\n\n\n\n\n\nFunktion\nBedeutung\n\n\n\n\nmean(x, na.rm =FALSE)\nMittelwert\n\n\nsd(x)\nStandardabweichung\n\n\nvar(x)\nVarianz\n\n\nmedian(x)\nMedian\n\n\nsum(x)\nSumme\n\n\nmin(x)\nMinimalwert\n\n\nmax(x)\nMaximalwert\n\n\nrange(x)\nMinimal - und Maximalwert\n\n\n\n\n\n\n\n\nTeste ob die Zahl 5 größer als 2 ist –&gt; TRUE or FALSE?\n\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\n5 &gt; 2\n\n[1] TRUE\n\n\nTRUE, 5 ist grösser als 2.\n\n\n\n\nTeste ob 6 ungleich 8 ist –&gt; TRUE or FALSE?\n\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\n6!=8\n\n[1] TRUE\n\n\nTRUE, 6 und 8 sind ungleich.\n\n\n\n\nSubtrahiere 80 von 50 und speichere das Ergebnis in einer Variable namens «diff_score».\n\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\ndiff_score &lt;- 80 - 50\n\n\n\n\n\nBerechne mit abs() den absoluten Wert von «diff_score» lassen dir diesen mit print(diff_score) in der Konsole ausgeben.\n\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\ndiff_score_abs &lt;- abs(diff_score)\n\n# print(diff_score_abs) (hier erneut mit # auskommentiert, da der Befehl nicht im Skript, sondern in der Console ausgeführt werden soll)\n\n\n\n\n\n\n\n\n\nZeichen\nBedeutung\n\n\n\n\n==\ngleich\n\n\n!=\nungleich\n\n\n&gt;\ngrösser\n\n\n&gt;=\ngrösser gleich\n\n\n&lt;\nkleiner\n\n\n&lt;=\nkleiner gleich\n\n\n|\nLogisches Oder\n\n\n&\nLogisches Und\n\n\n\n\n\n\n\n\n\n\nInformative Kommentare im Code sind elementar für die Nachvollziehbarkeit.\n\nSchreibe einen Kommentar indem du ein # verwendest.\n\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\n# Hier ein Beipsiel für einen Kommentar, wie auch schon weiter oben mehrmals verwendet um die Lösungen davon zu hindern ausgeführt zu werden.\n\n\n\n\n\nCode der nach einem # steht wird nicht ausgeführt. Setze ein # vor eine Codezeile und führe sie aus und beobachte was passiert.\n\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\n# 1 + 2\n\n\n\n\n\n\n\nEs gibt verschiedene Konventionen wie man Variablen bennen kann:\nhttps://methodenlehre.github.io/einfuehrung-in-R/chapters/02-R-language.html#variablennamen\n\nDefiniere eine neue Variable nach snake_case\n\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\nneue_variable &lt;- \"snake_case\"\n\n\n\n\n\nDefiniere eine zweite Variable nach CamelCase\n\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\nneueVariable &lt;- \"CamelCase\"\n\n\n\n\n\n\n\n\n\nSpeichere die beiden höchsten Werte aus «first_vector» in einer neuen Variable ab.\n\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\ntop_two &lt;- sort(first_vector, decreasing = TRUE)[1:2]\n\n\n\n\n\nErstelle einen Vektor mit Werten von 0-1000 in 10er Schritten.\n\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\nvec_seq &lt;- seq(from = 1, to = 1000, by = 10)\n\n\n\n\n\nZiehe zufällig eine Zahl aus diesem Vektor\n\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\nsample(vec_seq, 1)\n\n[1] 271\n\n\n\n\n\n\nGeneriere einen Vektor, der aus 50 Wiederholungen der Zahl 3 besteht.\n\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\nmy_vector &lt;- rep(3, times = 50)\n\n\n\n\nTipps zu diesen Aufgaben findest du bei Bedarf hier: https://methodenlehre.github.io/einfuehrung-in-R/chapters/02-R-language.html (Kapitel 2.1)\n\n\n\n\nnumeric vectors: werden in integer (ganze Zahlen) und double (reelle Zahlen) unterteilt, z.B.\nnumerical_vector &lt;- c(1, 2.5, 4)\ncharacter vectors: bestehen aus Zeichen, welche von Anführungszeichen umgeben werden, z.B.\ntext_vector &lt;- c(\"Hello\", \"World\")\nlogical vectors: Elemente dieses Typs können nur 3 Werte annehmen: TRUE, FALSE oder NA\nlog_vector &lt;- c(TRUE, FALSE, TRUE)\n\nVektoren müssen aus denselbsten Elementen bestehen, d.h. z.B. numeric und character können nicht gemischt werden. Vektoren werden meist mit c() erstellt.",
+    "text": "Bei Bedarf finden sich hier nochmal die Slides zur EH1: \n\n\nInstalliere R und RStudio:\n\nInstallation von R – neueste Version 4.5.1: https://stat.ethz.ch/CRAN/\nInstallation von Rstudio (Version 2025.05.1): https://posit.co/download/rstudio-desktop/\n\nDu weisst nicht was mit R auf sich hat? Hier ist eine Kurzerklärung: https://methodenlehre.github.io/einfuehrung-in-R/\n\n\n\n\nRStudio öffnen & Einstellungen vornehmen: Unter «tools» –«global options» die unter 1.1. beschriebenen Einstellungen vornehmen: https://methodenlehre.github.io/einfuehrung-in-R/chapters/01-workflow.html\n\n\n\nNeues Skript öffnen & orientieren:\n\n\n\n\nIm folgenden machen wir uns vertraut mit der Oberfläche von R-Studio:\n\n\n\n\n\n\n\nSkript für Code-Eingabe sowie Kommentare\nKonsole für die Ausführung von Code -&gt; Teste einfache mathematische Operation in dieser; reproduziere diese mittels Skript\nRechts oben: Environment & History\nRechts unten: Files, Plots, Packages und Help Viewer\n\n\n\n\nTidyverse ist ein Meta-Paket, das mehrere Pakete umfasst\n\nPakete installieren (nur 1x notwendig) -&gt; führe diesen Code in der Konsole aus\n\ninstall.packages(\"tidyverse\")\n\nPaket laden (innerhalb des Skriptes, bei jedem Neustart von R notwendig)\n\nlibrary(tidyverse)\n\n── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.4     ✔ readr     2.1.5\n✔ forcats   1.0.1     ✔ stringr   1.5.2\n✔ ggplot2   4.0.0     ✔ tibble    3.3.0\n✔ lubridate 1.9.4     ✔ tidyr     1.3.1\n✔ purrr     1.1.0     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\n\n\n\nTipp: Pakete regelmässig updaten mit z.B. update.packages()\n\n\n\na. Nutze R als Taschenrechner\n\n123+456\n\n\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\n123 + 456\n\n[1] 579\n\n\n\n\n\n2.  `144*112`\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\n144*112\n\n[1] 16128\n\n\n\n\n\n3.  `10/3`\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\n10/3\n\n[1] 3.333333\n\n\n\n\n\n4.  Quadriere 420\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\n420^2\n\n[1] 176400\n\n\n\n\n\n5.  Ziehe die Quadratwurzel aus 146 mit der Funktion `sqrt()`\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\nsqrt(146)\n\n[1] 12.08305\n\n\n\n\n\n6.  Berechne den Rest der Division 10/3 mit dem Modulo Operator: `%%`\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\n10 %% 3\n\n[1] 1\n\n\n\n\n\n\n\n\n\n\nZeichen\nBedeutung\n\n\n\n\n+\nAddition\n\n\n-\nSubstraktion\n\n\n*\nMultiplikation\n\n\n/\nDivision\n\n\nsqrt(x)\nQuadratwurzel\n\n\nabs(x)\nBetrag (absoluter Wert)\n\n\nx %% y\nModulo (x mod y) 5 %% 2 = 1\n\n\n^\nPotenz\n\n\n\n\n\n\n\n\nWeise den Wert 5 der Variable x zu mit dem Operator &lt;-\n\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\nx &lt;- 5\n\n\n\n\n\nWeise eine beliebige Zahl der Variable y hinzu und dividiere dann x durch y. Speichere dieses Ergebnis in der Variable z.\n\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\ny &lt;- 10 # hier könntet ihr auch jede andere Ziffer wählen\n\nz &lt;- x / y\n\n\n\n\n\nSchaue dir das Ergebnis in deinem Environment an. Lass dir das Ergebnis auch in der Konsole ausgeben. Das Environment findest du oben rechts, die Konsole ist unter deinem Skript.\n\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\n# z (hier über das # auskommentiert, da der Befehl nicht im Skript, sondern unten in der Konsole ausgeführt werden soll)\n\n\n\n\n\nErstelle zwei Variablen: Eine mit deinem Vornamen und eine mit deinem Nachnamen. Solche “character” Variablen musst du in Anführungszeichen setzen \"\"\n\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\nvorname &lt;- \"Lars\"\nnachname &lt;- \"Schilling\"\n\n\n\n\n\nKombiniere deinen Vor- und Nachnamen zu deinem vollen Namen mittels paste . Speichere diese Variable als voller_name.\n\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\nvoller_name &lt;- paste(vorname, nachname)\n\n\n\n\n\n\n\n\nDefiniere einen Vektor «first_vector» mit den Zahlen 100, 80, 54, 73. Einen Vektor definiert man so: first_vector &lt;- c(...)\n\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\nfirst_vector &lt;- c(100, 80, 54, 73)\n\n\n\n\n\nWende den Befehl boxplot() auf deinen Vektor an\n\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\nboxplot(first_vector)\n\n\n\n\n\n\n\n\n\n\n\n\nBerechne die Summe sum()und den Mittelwert mean() von deinem Vektor\n\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\nsum(first_vector)\n\n[1] 307\n\nmean(first_vector)\n\n[1] 76.75\n\n\n\n\n\n\nMultipliziere deinen Vektor mit *2\n\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\nfirst_vector * 2\n\n[1] 200 160 108 146\n\n\n\n\n\nDie wichtigsten Operatoren und Funktionen in R: https://methodenlehre.github.io/einfuehrung-in-R/chapters/02-R-language.html\n\n\n\n\n\nFunktion\nBedeutung\n\n\n\n\nmean(x, na.rm =FALSE)\nMittelwert\n\n\nsd(x)\nStandardabweichung\n\n\nvar(x)\nVarianz\n\n\nmedian(x)\nMedian\n\n\nsum(x)\nSumme\n\n\nmin(x)\nMinimalwert\n\n\nmax(x)\nMaximalwert\n\n\nrange(x)\nMinimal - und Maximalwert\n\n\n\n\n\n\n\n\nTeste ob die Zahl 5 größer als 2 ist –&gt; TRUE or FALSE?\n\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\n5 &gt; 2\n\n[1] TRUE\n\n\nTRUE, 5 ist grösser als 2.\n\n\n\n\nTeste ob 6 ungleich 8 ist –&gt; TRUE or FALSE?\n\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\n6!=8\n\n[1] TRUE\n\n\nTRUE, 6 und 8 sind ungleich.\n\n\n\n\nSubtrahiere 80 von 50 und speichere das Ergebnis in einer Variable namens «diff_score».\n\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\ndiff_score &lt;- 80 - 50\n\n\n\n\n\nBerechne mit abs() den absoluten Wert von «diff_score» lassen dir diesen mit print(diff_score) in der Konsole ausgeben.\n\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\ndiff_score_abs &lt;- abs(diff_score)\n\n# print(diff_score_abs) (hier erneut mit # auskommentiert, da der Befehl nicht im Skript, sondern in der Console ausgeführt werden soll)\n\n\n\n\n\n\n\n\n\nZeichen\nBedeutung\n\n\n\n\n==\ngleich\n\n\n!=\nungleich\n\n\n&gt;\ngrösser\n\n\n&gt;=\ngrösser gleich\n\n\n&lt;\nkleiner\n\n\n&lt;=\nkleiner gleich\n\n\n|\nLogisches Oder\n\n\n&\nLogisches Und\n\n\n\n\n\n\n\n\n\n\nInformative Kommentare im Code sind elementar für die Nachvollziehbarkeit.\n\nSchreibe einen Kommentar indem du ein # verwendest.\n\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\n# Hier ein Beipsiel für einen Kommentar, wie auch schon weiter oben mehrmals verwendet um die Lösungen davon zu hindern ausgeführt zu werden.\n\n\n\n\n\nCode der nach einem # steht wird nicht ausgeführt. Setze ein # vor eine Codezeile und führe sie aus und beobachte was passiert.\n\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\n# 1 + 2\n\n\n\n\n\n\n\nEs gibt verschiedene Konventionen wie man Variablen bennen kann:\nhttps://methodenlehre.github.io/einfuehrung-in-R/chapters/02-R-language.html#variablennamen\n\nDefiniere eine neue Variable nach snake_case\n\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\nneue_variable &lt;- \"snake_case\"\n\n\n\n\n\nDefiniere eine zweite Variable nach CamelCase\n\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\nneueVariable &lt;- \"CamelCase\"\n\n\n\n\n\n\n\n\n\nSpeichere die beiden höchsten Werte aus «first_vector» in einer neuen Variable ab.\n\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\ntop_two &lt;- sort(first_vector, decreasing = TRUE)[1:2]\n\n\n\n\n\nErstelle einen Vektor mit Werten von 0-1000 in 10er Schritten.\n\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\nvec_seq &lt;- seq(from = 1, to = 1000, by = 10)\n\n\n\n\n\nZiehe zufällig eine Zahl aus diesem Vektor\n\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\nsample(vec_seq, 1)\n\n[1] 571\n\n\n\n\n\n\nGeneriere einen Vektor, der aus 50 Wiederholungen der Zahl 3 besteht.\n\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\nmy_vector &lt;- rep(3, times = 50)\n\n\n\n\nTipps zu diesen Aufgaben findest du bei Bedarf hier: https://methodenlehre.github.io/einfuehrung-in-R/chapters/02-R-language.html (Kapitel 2.1)\n\n\n\n\nnumeric vectors: werden in integer (ganze Zahlen) und double (reelle Zahlen) unterteilt, z.B.\nnumerical_vector &lt;- c(1, 2.5, 4)\ncharacter vectors: bestehen aus Zeichen, welche von Anführungszeichen umgeben werden, z.B.\ntext_vector &lt;- c(\"Hello\", \"World\")\nlogical vectors: Elemente dieses Typs können nur 3 Werte annehmen: TRUE, FALSE oder NA\nlog_vector &lt;- c(TRUE, FALSE, TRUE)\n\nVektoren müssen aus denselbsten Elementen bestehen, d.h. z.B. numeric und character können nicht gemischt werden. Vektoren werden meist mit c() erstellt.",
     "crumbs": [
       "Übungen zu den Einheiten",
       "Hands on - Block 1 (Woche 1 - 2) - Mit Musterlösungen"
@@ -345,7 +345,7 @@
     "href": "loesung_1.html#für-fortgeschrittene-r-nutzerinnen",
     "title": "Lösung 1",
     "section": "",
-    "text": "Speichere die beiden höchsten Werte aus «first_vector» in einer neuen Variable ab.\n\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\ntop_two &lt;- sort(first_vector, decreasing = TRUE)[1:2]\n\n\n\n\n\nErstelle einen Vektor mit Werten von 0-1000 in 10er Schritten.\n\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\nvec_seq &lt;- seq(from = 1, to = 1000, by = 10)\n\n\n\n\n\nZiehe zufällig eine Zahl aus diesem Vektor\n\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\nsample(vec_seq, 1)\n\n[1] 271\n\n\n\n\n\n\nGeneriere einen Vektor, der aus 50 Wiederholungen der Zahl 3 besteht.\n\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\nmy_vector &lt;- rep(3, times = 50)\n\n\n\n\nTipps zu diesen Aufgaben findest du bei Bedarf hier: https://methodenlehre.github.io/einfuehrung-in-R/chapters/02-R-language.html (Kapitel 2.1)",
+    "text": "Speichere die beiden höchsten Werte aus «first_vector» in einer neuen Variable ab.\n\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\ntop_two &lt;- sort(first_vector, decreasing = TRUE)[1:2]\n\n\n\n\n\nErstelle einen Vektor mit Werten von 0-1000 in 10er Schritten.\n\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\nvec_seq &lt;- seq(from = 1, to = 1000, by = 10)\n\n\n\n\n\nZiehe zufällig eine Zahl aus diesem Vektor\n\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\nsample(vec_seq, 1)\n\n[1] 571\n\n\n\n\n\n\nGeneriere einen Vektor, der aus 50 Wiederholungen der Zahl 3 besteht.\n\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\nmy_vector &lt;- rep(3, times = 50)\n\n\n\n\nTipps zu diesen Aufgaben findest du bei Bedarf hier: https://methodenlehre.github.io/einfuehrung-in-R/chapters/02-R-language.html (Kapitel 2.1)",
     "crumbs": [
       "Übungen zu den Einheiten",
       "Hands on - Block 1 (Woche 1 - 2) - Mit Musterlösungen"
@@ -370,97 +370,178 @@
     "text": "In diesem E-Book findest du alle wichtigen Informationen zum Methodenseminar “R u Ready”. Du kannst hier u. a. die wöchentlichen Folien, Hands-On R Übungen, den Leistungsnachweis, und Frequently Asked Questions einsehen. Du kannst über die Unterkapitel (links) zu den entsprechenden Inhalten navigieren, oder auch die Suchfunktion oben links verwenden, um nach einem bestimmten Begriff zu suchen.\n\n1 Hinweisboxen\nHier einen Überblick über die auf den Seiten enthaltenen Hinweisboxen:\n\n\n\n\n\n\nNote\n\n\n\nVeriefung: Hier geht es in die Tiefe.\n\n\n\n\n\n\n\n\nImportant\n\n\n\nWichtig: Dies ist eine wichtige Information.\n\n\n\n\n\n\n\n\nWarning\n\n\n\nAchtung: Hier ist Vorsicht geboten.\n\n\n\n\n\n\n\n\nCaution\n\n\n\nVorsicht: Diese Information ist noch in Bearbeitung.\n\n\n\n\n2 Syllabus\n\n\n\n\n\n\nCaution\n\n\n\nVorsicht: Der Syllabus dient als grobe Richtlinie und kann angepasst werden, falls wir in einzelnen Einheiten mehr oder weniger Zeit benötigen."
   },
   {
-    "objectID": "hands_on_1.html",
-    "href": "hands_on_1.html",
-    "title": "Hands On 1",
+    "objectID": "hands_on_2.html",
+    "href": "hands_on_2.html",
+    "title": "Hands On – Coding Basics (Einheiten 3 und 4)",
     "section": "",
-    "text": "Bei Bedarf finden sich hier nochmal die Slides zur EH1: \nUnd EH2\n\n\n\n\nInstalliere R und RStudio:\n\nInstallation von R – neueste Version 4.5.1: https://stat.ethz.ch/CRAN/\nInstallation von RStudio (Version 2025.09.0): https://posit.co/download/rstudio-desktop/\n\nDu weisst nicht was mit R auf sich hat? Hier ist eine Kurzerklärung: https://methodenlehre.github.io/einfuehrung-in-R/\n\n\n\n\nRStudio öffnen & Einstellungen vornehmen: Unter «tools» –«global options» die unter 1.1. beschriebenen Einstellungen vornehmen:\nhttps://methodenlehre.github.io/einfuehrung-in-R/chapters/01-workflow.html\n\n\n\nNeues Skript öffnen & orientieren\n\n\n\n\nIm folgenden machen wir uns vertraut mit der Oberfläche von RStudio:\n\n\n\n\n\n\n\nSkript für Code-Eingabe sowie Kommentare\nKonsole für die Ausführung von Code -&gt; Teste einfache mathematische Operation in dieser; reproduziere diese mittels Skript\nRechts oben: Environment & History\nRechts unten: Files, Plots, Packages und Help Viewer\n\n\n\n\nTidyverse ist ein Meta-Paket, das mehrere Pakete umfasst\n\nPakete installieren (nur 1x notwendig) -&gt; führe diesen Code in der Konsole aus\n\ninstall.packages(\"tidyverse\")\n\nPaket laden (innerhalb des Skriptes, bei jedem Neustart von R notwendig)\n\nlibrary(tidyverse)\n\n── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.4     ✔ readr     2.1.5\n✔ forcats   1.0.1     ✔ stringr   1.5.2\n✔ ggplot2   4.0.0     ✔ tibble    3.3.0\n✔ lubridate 1.9.4     ✔ tidyr     1.3.1\n✔ purrr     1.1.0     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\n\n\n\nTipp: Pakete regelmässig updaten mit z.B. update.packages()\n\n\n\n\na. Nutze R als Taschenrechner\n\n123+456\n144*112\n10/3\nQuadriere 420\nZiehe die Quadratwurzel aus 146 mit der Funktion sqrt()\nBerechne den Rest der Division 10/3 mit dem Modulo Operator: %%\n\n\n\n\n\n\n\nZeichen\nBedeutung\n\n\n\n\n+\nAddition\n\n\n-\nSubstraktion\n\n\n*\nMultiplikation\n\n\n/\nDivision\n\n\nsqrt(x)\nQuadratwurzel\n\n\nabs(x)\nBetrag (absoluter Wert)\n\n\nx %% y\nModulo (x mod y) 5 %% 2 = 1\n\n\n^\nPotenz\n\n\n\n\n\n\n\n\nWeise den Wert 5 der Variable x zu mit dem Operator &lt;-\nWeise eine beliebige Zahl der Variable y zu und dividiere dann x durch y. Speichere dieses Ergebnis in der Variable z.\nSchaue dir das Ergebnis in deinem Environment an. Lass dir das Ergebnis auch in der Konsole ausgeben. Das Environment findest du oben rechts, die Konsole ist unter deinem Skript.\nErstelle zwei Variablen: Eine mit deinem Vornamen und eine mit deinem Nachnamen. Solche “character” Variablen musst du in Anführungszeichen setzen \"\"\nKombiniere deinen Vor- und Nachnamen zu deinem vollen Namen mittels paste . Speichere diese Variable als voller_name.\n\n\n\n\n\nDefiniere einen Vektor «first_vector» mit den Zahlen 100, 80, 54, 73. Einen Vektor definiert man so: first_vector &lt;- c(...)\nWende den Befehl boxplot() auf deinen Vektor an\nBerechne die Summe sum()und den Mittelwert mean() von deinem Vektor\nMultipliziere deinen Vektor mit *2 und schaue dir das Ergebnis an.\n\nDie wichtigsten Operatoren und Funktionen in R: https://methodenlehre.github.io/einfuehrung-in-R/chapters/02-R-language.html\n\n\n\n\n\nFunktion\nBedeutung\n\n\n\n\nmean(x, na.rm =FALSE)\nMittelwert\n\n\nsd(x)\nStandardabweichung\n\n\nvar(x)\nVarianz\n\n\nmedian(x)\nMedian\n\n\nsum(x)\nSumme\n\n\nmin(x)\nMinimalwert\n\n\nmax(x)\nMaximalwert\n\n\nrange(x)\nMinimal - und Maximalwert\n\n\n\n\n\n\n\n\nTeste ob die Zahl 5 größer als 2 ist –&gt; TRUE or FALSE?\nTeste ob 6 ungleich 8 ist –&gt; TRUE or FALSE?\nSubtrahiere 80 von 50 und speichere das Ergebnis in einer Variable namens «diff_score».\nBerechne mit abs() den absoluten Wert von «diff_score» lasse dir diesen mit print(diff_score) in der Konsole ausgeben.\n\n\n\n\n\n\nZeichen\nBedeutung\n\n\n\n\n==\ngleich\n\n\n!=\nungleich\n\n\n&gt;\ngrösser\n\n\n&gt;=\ngrösser gleich\n\n\n&lt;\nkleiner\n\n\n&lt;=\nkleiner gleich\n\n\n|\nLogisches Oder\n\n\n&\nLogisches Und\n\n\n\n\n\n\n\n\n\nInformative Kommentare im Code sind elementar für die Nachvollziehbarkeit.\n\nSchreibe einen Kommentar indem du ein # verwendest.\nCode der nach einem # steht wird nicht ausgeführt. Setze ein # vor eine Codezeile und führe sie aus und beobachte was passiert.\n\n\n\n\nEs gibt verschiedene Konventionen, wie man Variablen benennen kann.\nEinige wichtige Grundsätze dafür sind:\n\nNamen können aus Buchstaben, Zahlen sowie den Zeichen _ oder . bestehen.\nSie müssen mit einem Buchstaben beginnen und dürfen keine Leerzeichen enthalten.\nSonderzeichen und Großbuchstaben sollten vermieden werden.\nKeine Namen verwenden, die bereits für Funktionen reserviert sind (z. B. mean()).\nDer Name sollte den Inhalt der Variablen möglichst gut beschreiben → Reproduzierbarkeit; clarity instead of brevity.\nAm besten englische Bezeichnungen verwenden, um internationalen Standards zu folgen.\n\n👉 Mehr dazu\nÜbung:\n\nDefiniere eine neue Variable nach snake_case.\nDefiniere eine zweite Variable nach CamelCase.\n\nIn unserem Seminar verwenden wir den snake_case.\n\n\n\n\n\nSpeichere die beiden höchsten Werte aus «first_vector» in einer neuen Variable ab (Tipp: verwende sort() )\nErstelle einen Vektor mit Werten von 0-1000 in 10er Schritten (Tipp: suche nach der Funktion seq()\nZiehe zufällig eine Zahl aus diesem Vektor\nGeneriere einen Vektor, der aus 50 Wiederholungen der Zahl 3 besteht\n\nTipps zu diesen Aufgaben findest du bei Bedarf hier: https://methodenlehre.github.io/einfuehrung-in-R/chapters/02-R-language.html (Kapitel 2.1)\nTipp: Suche nach der Dokumentation der folgenden Funktionen: sort(), seq(), sample, rep().\nDie Dokumentation kannst du mittels ?Funktionsname aufrufen.\n\n\n\n\nnumeric vectors: werden in integer (ganze Zahlen) und double (reelle Zahlen) unterteilt, z.B.\nnumerical_vector &lt;- c(1, 2.5, 4)\ncharacter vectors: bestehen aus Zeichen, welche von Anführungszeichen umgeben werden, z.B.\ntext_vector &lt;- c(\"Hello\", \"World\")\nlogical vectors: Elemente dieses Typs können nur 3 Werte annehmen: TRUE, FALSE oder NA\nlog_vector &lt;- c(TRUE, FALSE, TRUE)\n\nVektoren müssen aus denselbsten Elementen bestehen, d.h. z.B. numeric und character können nicht gemischt werden. Vektoren werden meist mit c() erstellt."
-  },
-  {
-    "objectID": "hands_on_1.html#installation-r-und-r-studio",
-    "href": "hands_on_1.html#installation-r-und-r-studio",
-    "title": "Hands On 1",
-    "section": "",
-    "text": "Installiere R und RStudio:\n\nInstallation von R – neueste Version 4.5.1: https://stat.ethz.ch/CRAN/\nInstallation von RStudio (Version 2025.09.0): https://posit.co/download/rstudio-desktop/\n\nDu weisst nicht was mit R auf sich hat? Hier ist eine Kurzerklärung: https://methodenlehre.github.io/einfuehrung-in-R/"
-  },
-  {
-    "objectID": "hands_on_1.html#einstellungen",
-    "href": "hands_on_1.html#einstellungen",
-    "title": "Hands On 1",
-    "section": "",
-    "text": "RStudio öffnen & Einstellungen vornehmen: Unter «tools» –«global options» die unter 1.1. beschriebenen Einstellungen vornehmen:\nhttps://methodenlehre.github.io/einfuehrung-in-R/chapters/01-workflow.html\n\n\n\nNeues Skript öffnen & orientieren"
-  },
-  {
-    "objectID": "hands_on_1.html#rstudio-oberfläche",
-    "href": "hands_on_1.html#rstudio-oberfläche",
-    "title": "Hands On 1",
-    "section": "",
-    "text": "Im folgenden machen wir uns vertraut mit der Oberfläche von RStudio:\n\n\n\n\n\n\n\nSkript für Code-Eingabe sowie Kommentare\nKonsole für die Ausführung von Code -&gt; Teste einfache mathematische Operation in dieser; reproduziere diese mittels Skript\nRechts oben: Environment & History\nRechts unten: Files, Plots, Packages und Help Viewer"
-  },
-  {
-    "objectID": "hands_on_1.html#pakete-installieren-und-laden",
-    "href": "hands_on_1.html#pakete-installieren-und-laden",
-    "title": "Hands On 1",
-    "section": "",
-    "text": "Tidyverse ist ein Meta-Paket, das mehrere Pakete umfasst\n\nPakete installieren (nur 1x notwendig) -&gt; führe diesen Code in der Konsole aus\n\ninstall.packages(\"tidyverse\")\n\nPaket laden (innerhalb des Skriptes, bei jedem Neustart von R notwendig)\n\nlibrary(tidyverse)\n\n── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.4     ✔ readr     2.1.5\n✔ forcats   1.0.1     ✔ stringr   1.5.2\n✔ ggplot2   4.0.0     ✔ tibble    3.3.0\n✔ lubridate 1.9.4     ✔ tidyr     1.3.1\n✔ purrr     1.1.0     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\n\n\n\nTipp: Pakete regelmässig updaten mit z.B. update.packages()"
-  },
-  {
-    "objectID": "hands_on_1.html#operatoren-kennenlernen",
-    "href": "hands_on_1.html#operatoren-kennenlernen",
-    "title": "Hands On 1",
-    "section": "",
-    "text": "a. Nutze R als Taschenrechner\n\n123+456\n144*112\n10/3\nQuadriere 420\nZiehe die Quadratwurzel aus 146 mit der Funktion sqrt()\nBerechne den Rest der Division 10/3 mit dem Modulo Operator: %%\n\n\n\n\n\n\n\nZeichen\nBedeutung\n\n\n\n\n+\nAddition\n\n\n-\nSubstraktion\n\n\n*\nMultiplikation\n\n\n/\nDivision\n\n\nsqrt(x)\nQuadratwurzel\n\n\nabs(x)\nBetrag (absoluter Wert)\n\n\nx %% y\nModulo (x mod y) 5 %% 2 = 1\n\n\n^\nPotenz"
-  },
-  {
-    "objectID": "hands_on_1.html#erste-zuweisungenvariablen-definieren",
-    "href": "hands_on_1.html#erste-zuweisungenvariablen-definieren",
-    "title": "Hands On 1",
-    "section": "",
-    "text": "Weise den Wert 5 der Variable x zu mit dem Operator &lt;-\nWeise eine beliebige Zahl der Variable y zu und dividiere dann x durch y. Speichere dieses Ergebnis in der Variable z.\nSchaue dir das Ergebnis in deinem Environment an. Lass dir das Ergebnis auch in der Konsole ausgeben. Das Environment findest du oben rechts, die Konsole ist unter deinem Skript.\nErstelle zwei Variablen: Eine mit deinem Vornamen und eine mit deinem Nachnamen. Solche “character” Variablen musst du in Anführungszeichen setzen \"\"\nKombiniere deinen Vor- und Nachnamen zu deinem vollen Namen mittels paste . Speichere diese Variable als voller_name."
-  },
-  {
-    "objectID": "hands_on_1.html#vektoren-definieren",
-    "href": "hands_on_1.html#vektoren-definieren",
-    "title": "Hands On 1",
-    "section": "",
-    "text": "Definiere einen Vektor «first_vector» mit den Zahlen 100, 80, 54, 73. Einen Vektor definiert man so: first_vector &lt;- c(...)\nWende den Befehl boxplot() auf deinen Vektor an\nBerechne die Summe sum()und den Mittelwert mean() von deinem Vektor\nMultipliziere deinen Vektor mit *2 und schaue dir das Ergebnis an.\n\nDie wichtigsten Operatoren und Funktionen in R: https://methodenlehre.github.io/einfuehrung-in-R/chapters/02-R-language.html\n\n\n\n\n\nFunktion\nBedeutung\n\n\n\n\nmean(x, na.rm =FALSE)\nMittelwert\n\n\nsd(x)\nStandardabweichung\n\n\nvar(x)\nVarianz\n\n\nmedian(x)\nMedian\n\n\nsum(x)\nSumme\n\n\nmin(x)\nMinimalwert\n\n\nmax(x)\nMaximalwert\n\n\nrange(x)\nMinimal - und Maximalwert"
-  },
-  {
-    "objectID": "hands_on_1.html#logische-operatoren",
-    "href": "hands_on_1.html#logische-operatoren",
-    "title": "Hands On 1",
-    "section": "",
-    "text": "Teste ob die Zahl 5 größer als 2 ist –&gt; TRUE or FALSE?\nTeste ob 6 ungleich 8 ist –&gt; TRUE or FALSE?\nSubtrahiere 80 von 50 und speichere das Ergebnis in einer Variable namens «diff_score».\nBerechne mit abs() den absoluten Wert von «diff_score» lasse dir diesen mit print(diff_score) in der Konsole ausgeben.\n\n\n\n\n\n\nZeichen\nBedeutung\n\n\n\n\n==\ngleich\n\n\n!=\nungleich\n\n\n&gt;\ngrösser\n\n\n&gt;=\ngrösser gleich\n\n\n&lt;\nkleiner\n\n\n&lt;=\nkleiner gleich\n\n\n|\nLogisches Oder\n\n\n&\nLogisches Und"
-  },
-  {
-    "objectID": "hands_on_1.html#nachvollziehbarkeit-von-code",
-    "href": "hands_on_1.html#nachvollziehbarkeit-von-code",
-    "title": "Hands On 1",
-    "section": "",
-    "text": "Informative Kommentare im Code sind elementar für die Nachvollziehbarkeit.\n\nSchreibe einen Kommentar indem du ein # verwendest.\nCode der nach einem # steht wird nicht ausgeführt. Setze ein # vor eine Codezeile und führe sie aus und beobachte was passiert.\n\n\n\n\nEs gibt verschiedene Konventionen, wie man Variablen benennen kann.\nEinige wichtige Grundsätze dafür sind:\n\nNamen können aus Buchstaben, Zahlen sowie den Zeichen _ oder . bestehen.\nSie müssen mit einem Buchstaben beginnen und dürfen keine Leerzeichen enthalten.\nSonderzeichen und Großbuchstaben sollten vermieden werden.\nKeine Namen verwenden, die bereits für Funktionen reserviert sind (z. B. mean()).\nDer Name sollte den Inhalt der Variablen möglichst gut beschreiben → Reproduzierbarkeit; clarity instead of brevity.\nAm besten englische Bezeichnungen verwenden, um internationalen Standards zu folgen.\n\n👉 Mehr dazu\nÜbung:\n\nDefiniere eine neue Variable nach snake_case.\nDefiniere eine zweite Variable nach CamelCase.\n\nIn unserem Seminar verwenden wir den snake_case."
-  },
-  {
-    "objectID": "hands_on_1.html#für-fortgeschrittene-r-nutzerinnen",
-    "href": "hands_on_1.html#für-fortgeschrittene-r-nutzerinnen",
-    "title": "Hands On 1",
-    "section": "",
-    "text": "Speichere die beiden höchsten Werte aus «first_vector» in einer neuen Variable ab (Tipp: verwende sort() )\nErstelle einen Vektor mit Werten von 0-1000 in 10er Schritten (Tipp: suche nach der Funktion seq()\nZiehe zufällig eine Zahl aus diesem Vektor\nGeneriere einen Vektor, der aus 50 Wiederholungen der Zahl 3 besteht\n\nTipps zu diesen Aufgaben findest du bei Bedarf hier: https://methodenlehre.github.io/einfuehrung-in-R/chapters/02-R-language.html (Kapitel 2.1)\nTipp: Suche nach der Dokumentation der folgenden Funktionen: sort(), seq(), sample, rep().\nDie Dokumentation kannst du mittels ?Funktionsname aufrufen."
-  },
-  {
-    "objectID": "hands_on_1.html#datentypen",
-    "href": "hands_on_1.html#datentypen",
-    "title": "Hands On 1",
-    "section": "",
-    "text": "numeric vectors: werden in integer (ganze Zahlen) und double (reelle Zahlen) unterteilt, z.B.\nnumerical_vector &lt;- c(1, 2.5, 4)\ncharacter vectors: bestehen aus Zeichen, welche von Anführungszeichen umgeben werden, z.B.\ntext_vector &lt;- c(\"Hello\", \"World\")\nlogical vectors: Elemente dieses Typs können nur 3 Werte annehmen: TRUE, FALSE oder NA\nlog_vector &lt;- c(TRUE, FALSE, TRUE)\n\nVektoren müssen aus denselbsten Elementen bestehen, d.h. z.B. numeric und character können nicht gemischt werden. Vektoren werden meist mit c() erstellt."
-  },
-  {
-    "objectID": "faq.html",
-    "href": "faq.html",
-    "title": "FAQ",
-    "section": "",
-    "text": "Hier findest du häufig gestellte Fragen und Antworten. Wir updaten diese Sammlung laufend.",
+    "text": "Bei Bedarf findest du hier nochmals die Slides zu Einheit 3:",
     "crumbs": [
-      "FAQ"
+      "Übungen zu den Einheiten",
+      "Hands on - Block 2 (Woche 3 - 4)"
+    ]
+  },
+  {
+    "objectID": "hands_on_2.html#import",
+    "href": "hands_on_2.html#import",
+    "title": "Hands On – Coding Basics (Einheiten 3 und 4)",
+    "section": "3.1 Import",
+    "text": "3.1 Import\n👉 Kapitel 3.2\nCheatsheat Datenimport mit readr\n\n3.1.1 Einlesen via Oberfläche\n\nStelle sicher, dass du das Metapaket tidyverse geladen hast (library(tidyverse)) (siehe Hands-On 1).\nWir verwenden Funktionen aus den Packages readr und readxl, die Teil des Tidyverse sind.\n\nIn diesem Seminar arbeiten wir mit csv und xslx Dateien. Wie werden uns meherer Arten und Weisen anschauen wie man diese einlesen kann.\nBeim Einlesen von Daten ist ein wichtiger Faktor, mich welchem Trennzeichen (Delimiter) die Werte von einander getrennt werden.\nAuszug aus Cheatsheet: Die Funktionen read_delim und read_csv:\n\nread_csv() ist eine Spezialisierung von read_delim(), die automatisch Komma als Trennzeichen verwendet, während man bei read_delim() das gewünschte Trennzeichen selbst angeben muss.\n\nImportiere die Datei \"data_mmq.csv\" über die Point & Klick-Oberfläche von RStudio. Verwende dafür “From Text (readr)\n\n\nTipp: Klicke auf Environment → Import Dataset → wähle die \"readr\"-Funktion.\nSchaue dir den Datensatz an: Mit welchem Trennzeichen sind die Daten getrennt?\n\n\nStelle in der Oberfläche \"Delimiter\" auf das passende Trennzeichen. Was verändert sich?\n\nBetrachte den Code, den die Oberfläche generiert. Versuche den Pfad im Kontext von Projekten zu verstehen.\n\nWenn du im Projekt gearbeitet hast, sollte bei dir der Code etwa so aussehen: data_mmq &lt;- read_delim(\"data/raw/data_mmq.csv\", delim = \";\", escape_double = FALSE, trim_ws = TRUE)\nWenn du nicht im Projekt gearbeite hättest, wie würde dann der Dateipfad aussehen?\n\nWenn du den Code via Klick-Oberfläche eingelesen hast, wirst du den ausgeführten Code in der Konsole sehen. Kopiere diesen in dein Skript, so dass du ihn in Zukunft wiederverwenden und anpassen kannst.\nSchaue dir die eingelesenen Daten mit View(data_mmq) an. Wenn du alles richtig gemacht hast, ist in jeder Zelle nur ein Wert.\n\n\n\n\n3.1.2 Einlesen via Code\n\n3.1.2.1 .CSV Dateien\n\nVersuche, weitere CSV-Datensätze einzulesen: data_cb, data_cvstm, data_pct, data_vp.\nSuche dafür eine geeignete Funktion zum Einlesen von .csv.\n\nVerwende den von R-Studio generierten Code, und passe ihn an um einen weiteren Datensatz einzulesen (z.B. indem du den Filenamen veränderst).\n\nKorrigiere diesen Code und lies damit die Datei data_vp ein (überprüfe den Pfad und den Delimiter)\n\n\ndata_vp &lt;- read_delim(\"/raw/data_vp.csv\", \n    delim = \",\")\n\n\n\n3.1.2.2 .XSLX Dateien\n\nEinige Dateien liegen im .xlsx-Format.\n\nVerwende dafür das Paket readxl und die Funktion read_excel(). Tipp: Installiere und lade das Paket zunächst.\nNutze die Hilfefunktion (?read_excel) für Infos zur Funktion oder schaue dir das Cheatsheet an\nVersuche, die Datensätze data_ratings und data_strategies einzulesen.\n\nAm Ende solltest du die 7 verschiedene Datensätze in deinem Environment sehen.\n\n\n\n\n\n\n\nVertiefung\n\n\n\n\n\n👉Für das Einlesen anderer Arten von Datensätzen (z.B. SPSS Dateien), siehe Kapitel 3.2",
+    "crumbs": [
+      "Übungen zu den Einheiten",
+      "Hands on - Block 2 (Woche 3 - 4)"
+    ]
+  },
+  {
+    "objectID": "hands_on_2.html#aufgaben",
+    "href": "hands_on_2.html#aufgaben",
+    "title": "Hands On – Coding Basics (Einheiten 3 und 4)",
+    "section": "4.1 Aufgaben",
+    "text": "4.1 Aufgaben\n\n4.1.1 a) Füge alle 7 Datensätze mit cbind() zusammen und schaue dir das Ergebnis an.\n\nWas fällt dir auf?\n\nHinweis: Die Datensätze werden einfach nebeneinander „geklebt“, ohne inhaltlich abgeglichen zu werden.\n\nReflektiere: Macht das Sinn? Was sind die Gefahren, Daten auf diese Art zu mergen?\n\n\n\n\n4.1.2 b) Versuche es nun mit full_join().\nFull_join verbindet zwei Datensätze anhand einer Schlüsselvariable, so dass alle Zeilen aus beiden Datensätzen erhalten bleiben. Die Schlüsselvariable ist essentiell dafür dass die Datensätze richtig verbunden werden (Anordnung der Variablen), und grenzt sich dadurch von Funktionen wie cbind() ab.\n\n\nLege eine gemeinsame Variable als Schlüssel fest, hier: by = \"code\".\nFüge nun alle 7 Datensätze zu einem zusammen, nenne diesen dat_full\n\nAchtung: full_join() funktioniert immer nur mit 2 Datensätzen gleichzeitig 👉 du musst es also mehrfach anwenden, um alle 7 Datensätze zusammenzuführen.\nHinweis: Im Datensatz data_pct heißt die Code-Variable leicht anders. Verwende deshalb by = c(\"code_all\" = \"code\").\n\n\n\n\n\n4.1.3 c) Inspiziere deinen zusammengefügten Datensatz “dat_full”\n\n🔍Überprüfe: Wie viele Zeilen und Spalten hat dein Datensatz? Verwende: ncol() , nrow(), dim()\n\nStimmt die Anzahl der Zeilen mit der Anzahl der Versuchspersonen aus dem Paper überein?\nLasse dir die variablenamen ausgeben mit names()\n\n👀Verschaffe dir eine Überblick über deinen Datensatz:\n\nhead()\nglimpse()\nstr()\ndat_full\nsummary()\n\nGibt es redundante oder doppelte Variablen?\n\nAuf einzelne Werte zugreiffen:\n\nGreife auf den ersten Wert der ersten Spalte zu: Verwende eckige Klammern. Der erste Wert in der Klammer steht für die Zeile, der zweite für die Spalte.\nGreife auf die Werte der Spalten 1–15 in der ersten Zeile zu. Verwende wieder eckige Klammern und den Bereichsoperator 1:15.\nLasse dir alle Werte der Variable \"mean_rl_all\" ausgeben. Auf Variablen greifst du mit $ zu.\nGreife auf die ersten 10 Werte der Variable \"question1\" zu. Verwende dazu den $-Operator in Kombination mit dem Bereichsoperator 1:10.",
+    "crumbs": [
+      "Übungen zu den Einheiten",
+      "Hands on - Block 2 (Woche 3 - 4)"
+    ]
+  },
+  {
+    "objectID": "hands_on_2.html#tab-completion",
+    "href": "hands_on_2.html#tab-completion",
+    "title": "Hands On – Coding Basics (Einheiten 3 und 4)",
+    "section": "6.1 Tab Completion:",
+    "text": "6.1 Tab Completion:\nEine nützliche Funktion von RStudio ist die Tab Completion. Wenn du eine Funktion aufrufst und die Tabulator-Taste drückst, erscheint ein Menü mit den möglichen Argumenten, die du angeben kannst. Probiere es mit der Funktion mean(). Das funktioniert auch für Funktionen aus Packages, wenn du diese mit :: auswählst, zum Beispiel: readr::.",
+    "crumbs": [
+      "Übungen zu den Einheiten",
+      "Hands on - Block 2 (Woche 3 - 4)"
+    ]
+  },
+  {
+    "objectID": "hands_on_2.html#weitere-tasten-und-tastenkürzel",
+    "href": "hands_on_2.html#weitere-tasten-und-tastenkürzel",
+    "title": "Hands On – Coding Basics (Einheiten 3 und 4)",
+    "section": "6.2 Weitere Tasten und Tastenkürzel:",
+    "text": "6.2 Weitere Tasten und Tastenkürzel:\n👉Kapitel 1.4.6\nIn RStudio benötigen wir häufig Zeichen, die wir im Alltag kaum verwenden. Da wir nicht alle mit dem gleichen Betriebssystem (Mac/Windows) und auch nicht mit identischen Tastaturen arbeiten, können wir keine einheitlichen Angaben machen, wo sich diese Zeichen genau befinden. Versuche daher, die folgenden Zeichen auf deiner eigenen Tastatur zu finden:\n\n[ ] Square brackets (eckige Klammern)\n{ } Curly brackets (geschweifte Klammern)\n$ Dollar sign (Dollarzeichen – wird für das Auswählen von Variablen benötigt)\n# Hash (Rautezeichen – für Kommentare in R-Skripten)\n~ Tilde (für Modellnotationen in R)\n| Vertical bar (senkrechter Strich – als logischer Operator, siehe nächstes Kapitel)\n` Backtick (Gravis – vor allem für Code Chunks, selten manuell einzugeben)",
+    "crumbs": [
+      "Übungen zu den Einheiten",
+      "Hands on - Block 2 (Woche 3 - 4)"
+    ]
+  },
+  {
+    "objectID": "hands_on_2.html#verschachtelte-funktionen",
+    "href": "hands_on_2.html#verschachtelte-funktionen",
+    "title": "Hands On – Coding Basics (Einheiten 3 und 4)",
+    "section": "6.3 Verschachtelte Funktionen:",
+    "text": "6.3 Verschachtelte Funktionen:\nℹ️Es ist zwar möglich, mehrere Funktionen ineinander zu verschachteln. Dies kann jedoch schnell zu Verwirrung führen und den Code unnötig unübersichtlich machen. Verschachtelte Funktionen werden von innen nach aussen ausgeführt.\n❓Stelle dir hier die Frage: Was wird genau gerundet? Die einzelnen Elemente des Vektors oder der errechnet Durchschnitt?\n\nprint(mean(round(first_vector)))\n\n[1] 5785.25\n\n\n❗Aufgabe: Zerlege die Verschatelte Funktion in ihre Teilschritte.",
+    "crumbs": [
+      "Übungen zu den Einheiten",
+      "Hands on - Block 2 (Woche 3 - 4)"
+    ]
+  },
+  {
+    "objectID": "front_page.html",
+    "href": "front_page.html",
+    "title": "Einleitung",
+    "section": "",
+    "text": "In diesem E-Book findest du alle wichtigen Informationen zum Methodenseminar “R u Ready”. Du kannst hier u. a. die wöchentlichen Folien, Hands-On R Übungen, den Leistungsnachweis, und Frequently Asked Questions einsehen. Du kannst über die Unterkapitel (links) zu den entsprechenden Inhalten navigieren, oder auch die Suchfunktion oben links verwenden, um nach einem bestimmten Begriff zu suchen.\n\n1 Hinweisboxen\nHier einen Überblick über die auf den Seiten enthaltenen Hinweisboxen:\n\n\n\n\n\n\nNote\n\n\n\nVeriefung: Hier geht es in die Tiefe.\n\n\n\n\n\n\n\n\nImportant\n\n\n\nWichtig: Dies ist eine wichtige Information.\n\n\n\n\n\n\n\n\nWarning\n\n\n\nAchtung: Hier ist Vorsicht geboten.\n\n\n\n\n\n\n\n\nCaution\n\n\n\nVorsicht: Diese Information ist noch in Bearbeitung.\n\n\n\n\n2 Syllabus\n\n\n\n\n\n\nCaution\n\n\n\nVorsicht: Der Syllabus dient als grobe Richtlinie und kann angepasst werden, falls wir in einzelnen Einheiten mehr oder weniger Zeit benötigen.",
+    "crumbs": [
+      "Einleitung"
+    ]
+  },
+  {
+    "objectID": "endabgabe.html",
+    "href": "endabgabe.html",
+    "title": "5 Abschlussprojekt",
+    "section": "",
+    "text": "Note\n\n\n\nLies dir neben den folgenden Fragen auch noch mal die allgemeinen Infos zum Abschlussprojekt unter “Leistungsnachweis” durch.",
+    "crumbs": [
+      "FAQ",
+      "5  Abschlussprojekt"
+    ]
+  },
+  {
+    "objectID": "endabgabe.html#was-gibt-es-für-formatvorgaben-für-das-skript-schriftgrösse-fettmarkierungen-etc.",
+    "href": "endabgabe.html#was-gibt-es-für-formatvorgaben-für-das-skript-schriftgrösse-fettmarkierungen-etc.",
+    "title": "5 Abschlussprojekt",
+    "section": "1 Was gibt es für Formatvorgaben für das Skript (Schriftgrösse, Fettmarkierungen etc.)?",
+    "text": "1 Was gibt es für Formatvorgaben für das Skript (Schriftgrösse, Fettmarkierungen etc.)?\nEs gibt keine exakten Formatvorgaben für das Skript. Vielmehr gilt: Das Skript sollte übersichtlich sein und keine ungewöhnlichen Formatierungen enthalten. Mit den Vorgaben von APA 7 ist das Skript sicher passend formatiert.",
+    "crumbs": [
+      "FAQ",
+      "5  Abschlussprojekt"
+    ]
+  },
+  {
+    "objectID": "endabgabe.html#welche-stilvorgaben-gibt-es-bei-der-erstellung-des-skripts-zu-beachten",
+    "href": "endabgabe.html#welche-stilvorgaben-gibt-es-bei-der-erstellung-des-skripts-zu-beachten",
+    "title": "5 Abschlussprojekt",
+    "section": "2 Welche Stilvorgaben gibt es bei der Erstellung des Skripts zu beachten?",
+    "text": "2 Welche Stilvorgaben gibt es bei der Erstellung des Skripts zu beachten?\nDas Skript sollte sinnvolle Überschriften und eine sinnvolle Gliederung enthalten. Der Code sollte kommentiert sein, so dass die Auswahl von Funktionen und das Vorgehen begründet sind. Sofern LLMs oder andere externe Tools zur Hilfe herangezogen worden sind, muss dies angemerkt werden. Hierfür kann ggf. eine getrennte Kopie des Chatverlaufes eingereicht oder ein Link nach APA-Guidelines ergänzt werden.",
+    "crumbs": [
+      "FAQ",
+      "5  Abschlussprojekt"
+    ]
+  },
+  {
+    "objectID": "endabgabe.html#in-welcher-sprache-zeitform-perspektive-und-in-welchem-stil-soll-der-datenanalyseplan-geschrieben-werden",
+    "href": "endabgabe.html#in-welcher-sprache-zeitform-perspektive-und-in-welchem-stil-soll-der-datenanalyseplan-geschrieben-werden",
+    "title": "5 Abschlussprojekt",
+    "section": "3 In welcher Sprache, Zeitform, Perspektive und in welchem Stil soll der Datenanalyseplan geschrieben werden?",
+    "text": "3 In welcher Sprache, Zeitform, Perspektive und in welchem Stil soll der Datenanalyseplan geschrieben werden?\nAlle für die Abgabe relevanten Unterlagen dürfen auf Englisch oder Deutsch eingereicht werden. Wichtig ist lediglich, dass die Unterlagen untereinander einer einheitlichen Sprache folgen. Als Zeitform gilt das Präsens. Bitte schreibe in der Wir-Form und im wissenschaftlichen Stil.",
+    "crumbs": [
+      "FAQ",
+      "5  Abschlussprojekt"
+    ]
+  },
+  {
+    "objectID": "endabgabe.html#wie-umfangreich-sollen-die-kommentare-des-codes-im-skript-sein",
+    "href": "endabgabe.html#wie-umfangreich-sollen-die-kommentare-des-codes-im-skript-sein",
+    "title": "5 Abschlussprojekt",
+    "section": "4 Wie umfangreich sollen die Kommentare des Codes im Skript sein?",
+    "text": "4 Wie umfangreich sollen die Kommentare des Codes im Skript sein?\nDie Funktionsweise von üblicher Syntax (wie beispielsweise dem Pipe Operator) oder einer Funktion muss nicht kommentiert werden. Aber: Das Dokument muss für fremde Wissenschaftler:innen der Psychologie ohne weiteres nachvollziehbar sein. Bedeutet, Kommentare sollten das Vorgehen im Skript ausreichend begründen.",
+    "crumbs": [
+      "FAQ",
+      "5  Abschlussprojekt"
+    ]
+  },
+  {
+    "objectID": "endabgabe.html#sollen-im-skript-warn--undoder-fehlermeldungen-unterbunden-werden-oder-sichtbar-sein",
+    "href": "endabgabe.html#sollen-im-skript-warn--undoder-fehlermeldungen-unterbunden-werden-oder-sichtbar-sein",
+    "title": "5 Abschlussprojekt",
+    "section": "5 Sollen im Skript Warn- und/oder Fehlermeldungen unterbunden werden oder sichtbar sein?",
+    "text": "5 Sollen im Skript Warn- und/oder Fehlermeldungen unterbunden werden oder sichtbar sein?\nDamit wir die Abgabe leichter kontrollieren können sollen die Warn- und Fehlermeldungen bitte sichtbar sein und nicht ausgeschaltet sein. Auch unabhängig von der Abgabe ist zu empfehlen die Meldungen sichtbar zu lassen. Das erleichtert Unbeteiligten die Analyse nachzuvollziehen und sie auf mögliche Fehler zu untersuchen.",
+    "crumbs": [
+      "FAQ",
+      "5  Abschlussprojekt"
+    ]
+  },
+  {
+    "objectID": "endabgabe.html#darf-im-skript-auch-noch-code-von-übungsaufgaben-vorhanden-sein",
+    "href": "endabgabe.html#darf-im-skript-auch-noch-code-von-übungsaufgaben-vorhanden-sein",
+    "title": "5 Abschlussprojekt",
+    "section": "6 Darf im Skript auch noch Code von Übungsaufgaben vorhanden sein?",
+    "text": "6 Darf im Skript auch noch Code von Übungsaufgaben vorhanden sein?\nHier gilt der Grundsatz: Euer Skript, wie auch alle anderen Unterlagen, sollten für fremde Wissenschaftler:innen der Psychologie ohne weiteres nachvollziehbar sein. Code, welcher nicht im Zusammenhang mit der Endabgabe steht - und dementsprechend auch nicht im Datenanalyseplan erwähnt wird – würde nur vom wesentlichen Ablenken und soll daher nicht im Skript vorhanden sein.",
+    "crumbs": [
+      "FAQ",
+      "5  Abschlussprojekt"
+    ]
+  },
+  {
+    "objectID": "endabgabe.html#wie-exakt-sollen-die-tabellen-und-abbildungen-denen-aus-dem-paper-von-grinschgl-et-al.-2020-entsprechen",
+    "href": "endabgabe.html#wie-exakt-sollen-die-tabellen-und-abbildungen-denen-aus-dem-paper-von-grinschgl-et-al.-2020-entsprechen",
+    "title": "5 Abschlussprojekt",
+    "section": "7 Wie exakt sollen die Tabellen und Abbildungen denen aus dem Paper von Grinschgl et al. (2020) entsprechen?",
+    "text": "7 Wie exakt sollen die Tabellen und Abbildungen denen aus dem Paper von Grinschgl et al. (2020) entsprechen?\nDie Tabellen und Abbildungen aus dem Originalpaper von Grinschgl et al. (2020) müssen nicht exakt repliziert werden. Wichtig ist allerdings, dass die Aussage der Abbildung bzw. der Tabelle korrekt ist und keine wichtigen Details ausgelassen werden.",
+    "crumbs": [
+      "FAQ",
+      "5  Abschlussprojekt"
+    ]
+  },
+  {
+    "objectID": "endabgabe.html#soll-die-berechnung-von-cronbachs-alpha-aus-dem-paper-von-grinschgl-et-al.-2020-auch-durchgeführt-werden",
+    "href": "endabgabe.html#soll-die-berechnung-von-cronbachs-alpha-aus-dem-paper-von-grinschgl-et-al.-2020-auch-durchgeführt-werden",
+    "title": "5 Abschlussprojekt",
+    "section": "8 Soll die Berechnung von Cronbachs Alpha aus dem Paper von Grinschgl et al. (2020) auch durchgeführt werden?",
+    "text": "8 Soll die Berechnung von Cronbachs Alpha aus dem Paper von Grinschgl et al. (2020) auch durchgeführt werden?\nNein, die Berechnung von Cronbachs-Alpha aus dem Paper von Grinschgl et al. (2020) ist nicht Teil des Abschlussprojekts.",
+    "crumbs": [
+      "FAQ",
+      "5  Abschlussprojekt"
     ]
   },
   {
@@ -611,7 +692,7 @@
     "href": "EH_3.html#weitere-style-konventionen",
     "title": "R u Ready? HS2025 | Psychologie der Digitalisierung - Einheit 3",
     "section": "Weitere Style Konventionen:",
-    "text": "Weitere Style Konventionen:\n\nLeerzeichen:\n\nVor und nach mathematischen Operatoren: 2+2 vs 2 + 2\nVor und nach Zuweisungen: x&lt;-sum(1+2) vs x &lt;- sum(1 + 2)\nAber nicht vor und nach sich öffnenden oder schließenden Klammern oder Anführungszeichen\nNach Kommas (aber nicht davor)\nWeitere Leerzeichen erlaubt wenn die Leserlichkeit erhöht (z.B. bei Einrückungen)\n\nVerwendung des Pipe Operators (%&gt;% oder |&gt; ) –&gt; Erklärung folgt in kommenden Wochen!\nZeilenumbrüche für langen Code verwenden\n\nthis_is_a_very_long_function_name &lt;- (something = \"this\", requires = \"many\", arguments = \"long words and sentences\") #–&gt; bad\n\nthis_is_a_very_long_function_name &lt;- (something = \"this\", \n                                      requires = \"many\", \n                                      arguments = \"long words and sentences\") #–&gt; good\n\nStyler: Funktion die Code automatisch in dieses Format bringt. –&gt; Hands On!",
+    "text": "Weitere Style Konventionen:\n\nLeerzeichen:\n\nVor und nach mathematischen Operatoren: 2+2 vs 2 + 2\nVor und nach Zuweisungen: x&lt;-sum(1+2) vs x &lt;- sum(1 + 2)\nAber nicht vor und nach sich öffnenden oder schließenden Klammern oder Anführungszeichen\nNach Kommas (aber nicht davor)\nWeitere Leerzeichen erlaubt wenn die Leserlichkeit erhöht wird (z.B. bei Einrückungen)\n\nVerwendung des Pipe Operators (%&gt;% oder |&gt; ) –&gt; Erklärung folgt in kommenden Wochen!\nZeilenumbrüche für langen Code verwenden\n\nthis_is_a_very_long_function_name &lt;- (something = \"this\", requires = \"many\", arguments = \"long words and sentences\") #–&gt; bad\n\nthis_is_a_very_long_function_name &lt;- (something = \"this\", \n                                      requires = \"many\", \n                                      arguments = \"long words and sentences\") #–&gt; good\n\nStyler: Funktion die Code automatisch in dieses Format bringt. 👉 Hands On!",
     "crumbs": [
       "Präsentationen",
       "Einheit 3 - 1.10.2025"
@@ -633,7 +714,7 @@
     "href": "EH_3.html#codebook",
     "title": "R u Ready? HS2025 | Psychologie der Digitalisierung - Einheit 3",
     "section": "Codebook",
-    "text": "Codebook\n\nNaive Personen sollen Datensatz nachvollziehen können (Reproduzierbarkeit & Zusatzanalysen)\nBeinhaltet eine Liste und Beschreibung aller Variablen\n\nWie wurde die Variable erhoben (z.B. aus welchem Fragebogen)?\nWie wurde die Variable berechnet (z.B. Summenscore, Mittelwert)?\nWelche Werte kann die Variable annehmen (theoretisches Minimum und Maximum)?",
+    "text": "Codebook\n\nNaive Personen sollen Datensatz nachvollziehen können (Reproduzierbarkeit & Zusatzanalysen)\nBeinhaltet eine Liste und Beschreibung aller Variablen, z.B.\n\nWie wurde die Variable erhoben (z.B. aus welchem Fragebogen)?\nWie wurde die Variable berechnet (z.B. Summenscore, Mittelwert)?\nWelche Werte kann die Variable annehmen (theoretisches Minimum und Maximum)?",
     "crumbs": [
       "Präsentationen",
       "Einheit 3 - 1.10.2025"
@@ -655,7 +736,7 @@
     "href": "EH_3.html#codebook-vorlage",
     "title": "R u Ready? HS2025 | Psychologie der Digitalisierung - Einheit 3",
     "section": "Codebook: Vorlage",
-    "text": "Codebook: Vorlage\n\nKann in verschiedenen Formaten erstellt werden (Word, Excel, ect.)\nExcel-Vorlage für das Seminar (siehe ZIP Datei Abschlussprojekt)\nBeispiel: “Example_Codebook” - Ordner\nFür weitere Anleitungen siehe “Guideline Codebook”.\n\nSiehe auch: Pennington (2023)\n\nBuch von Pennington kann man bei Bedarf in Bib oder bei Sandra ausborgen",
+    "text": "Codebook: Vorlage\n\nKann in verschiedenen Formaten erstellt werden (Word, Excel, ect.)\nExcel-Vorlage für das Seminar (siehe ZIP Datei Abschlussprojekt)\nBeispiel: “Example_Codebook” - Ordner\nFür weitere Anleitungen siehe “Guideline Codebook”\n\nSiehe auch: Pennington (2023)\n\nBuch von Pennington kann man bei Bedarf in Bib oder bei Sandra ausborgen",
     "crumbs": [
       "Präsentationen",
       "Einheit 3 - 1.10.2025"
@@ -695,11 +776,11 @@
     ]
   },
   {
-    "objectID": "EH_3.html#reproduzierbare-auwertung-grundsätze",
-    "href": "EH_3.html#reproduzierbare-auwertung-grundsätze",
+    "objectID": "EH_3.html#reproduzierbare-auswertung-grundsätze",
+    "href": "EH_3.html#reproduzierbare-auswertung-grundsätze",
     "title": "R u Ready? HS2025 | Psychologie der Digitalisierung - Einheit 3",
-    "section": "Reproduzierbare Auwertung: Grundsätze",
-    "text": "Reproduzierbare Auwertung: Grundsätze\n\nDigitale Rohdaten\nSkript soll den gesamten Weg von den Rohdaten bis hin zu den Ergebnissen dokumentieren\nWenn man euren Code auf den Rohdaten laufen lässt, sollte man (fehlerfrei) zu den Ergebnissen kommen\nSkript ist kommentiert und sinnvoll gegliedert",
+    "section": "Reproduzierbare Auswertung: Grundsätze",
+    "text": "Reproduzierbare Auswertung: Grundsätze\n\nDigitale Rohdaten\nSkript soll den gesamten Weg von den Rohdaten bis hin zu den Ergebnissen dokumentieren\nWenn man euren Code auf den Rohdaten laufen lässt, sollte man (fehlerfrei) zu den Ergebnissen kommen\nSkript ist kommentiert und sinnvoll gegliedert",
     "crumbs": [
       "Präsentationen",
       "Einheit 3 - 1.10.2025"
@@ -710,7 +791,7 @@
     "href": "EH_3.html#hands-on",
     "title": "R u Ready? HS2025 | Psychologie der Digitalisierung - Einheit 3",
     "section": "Hands on!",
-    "text": "Hands on!\n\nProjekte\nDaten einlesen\nDaten speichern",
+    "text": "Hands on!\n\nProjekte\nDaten einlesen\nDaten speichern\nFortsetzung Coding Basics",
     "crumbs": [
       "Präsentationen",
       "Einheit 3 - 1.10.2025"
@@ -1931,179 +2012,133 @@
     "text": "Literatur:"
   },
   {
-    "objectID": "endabgabe.html",
-    "href": "endabgabe.html",
-    "title": "5 Abschlussprojekt",
+    "objectID": "EH_4.html#fragen-zum-datenanalyseplan-codebook",
+    "href": "EH_4.html#fragen-zum-datenanalyseplan-codebook",
+    "title": "R u Ready? HS2025 | Psychologie der Digitalisierung - Einheit 3",
+    "section": "Fragen zum Datenanalyseplan & Codebook:",
+    "text": "Fragen zum Datenanalyseplan & Codebook:"
+  },
+  {
+    "objectID": "EH_4.html#reproduzierbare-auswertung-quarto-woche-56-xxxx",
+    "href": "EH_4.html#reproduzierbare-auswertung-quarto-woche-56-xxxx",
+    "title": "R u Ready? HS2025 | Psychologie der Digitalisierung - Einheit 3",
+    "section": "Reproduzierbare Auswertung: Quarto –> Woche 5/6 XXXX",
+    "text": "Reproduzierbare Auswertung: Quarto –&gt; Woche 5/6 XXXX\n\nOpen Source Publishing System: Nachfolger von RMarkdown\nKombination von Text, Code und Resultaten 👉 Hohe Reproduzierbarkeit\nVorteile gegenüber Skripten: Übersichtlicher, Transparenter, Reproduziebarer\n\nXXX Sandra –&gt; Schon quarto hier einführen? oder auf EH4 verschieben? @Aaron würde das noch weglassen und erst bei EH 5 oder 6, ganze Folie noch weglassen"
+  },
+  {
+    "objectID": "faq.html",
+    "href": "faq.html",
+    "title": "FAQ",
     "section": "",
-    "text": "Note\n\n\n\nLies dir neben den folgenden Fragen auch noch mal die allgemeinen Infos zum Abschlussprojekt unter “Leistungsnachweis” durch.",
+    "text": "Hier findest du häufig gestellte Fragen und Antworten. Wir updaten diese Sammlung laufend.",
     "crumbs": [
-      "FAQ",
-      "5  Abschlussprojekt"
+      "FAQ"
     ]
   },
   {
-    "objectID": "endabgabe.html#was-gibt-es-für-formatvorgaben-für-das-skript-schriftgrösse-fettmarkierungen-etc.",
-    "href": "endabgabe.html#was-gibt-es-für-formatvorgaben-für-das-skript-schriftgrösse-fettmarkierungen-etc.",
-    "title": "5 Abschlussprojekt",
-    "section": "1 Was gibt es für Formatvorgaben für das Skript (Schriftgrösse, Fettmarkierungen etc.)?",
-    "text": "1 Was gibt es für Formatvorgaben für das Skript (Schriftgrösse, Fettmarkierungen etc.)?\nEs gibt keine exakten Formatvorgaben für das Skript. Vielmehr gilt: Das Skript sollte übersichtlich sein und keine ungewöhnlichen Formatierungen enthalten. Mit den Vorgaben von APA 7 ist das Skript sicher passend formatiert.",
-    "crumbs": [
-      "FAQ",
-      "5  Abschlussprojekt"
-    ]
-  },
-  {
-    "objectID": "endabgabe.html#welche-stilvorgaben-gibt-es-bei-der-erstellung-des-skripts-zu-beachten",
-    "href": "endabgabe.html#welche-stilvorgaben-gibt-es-bei-der-erstellung-des-skripts-zu-beachten",
-    "title": "5 Abschlussprojekt",
-    "section": "2 Welche Stilvorgaben gibt es bei der Erstellung des Skripts zu beachten?",
-    "text": "2 Welche Stilvorgaben gibt es bei der Erstellung des Skripts zu beachten?\nDas Skript sollte sinnvolle Überschriften und eine sinnvolle Gliederung enthalten. Der Code sollte kommentiert sein, so dass die Auswahl von Funktionen und das Vorgehen begründet sind. Sofern LLMs oder andere externe Tools zur Hilfe herangezogen worden sind, muss dies angemerkt werden. Hierfür kann ggf. eine getrennte Kopie des Chatverlaufes eingereicht oder ein Link nach APA-Guidelines ergänzt werden.",
-    "crumbs": [
-      "FAQ",
-      "5  Abschlussprojekt"
-    ]
-  },
-  {
-    "objectID": "endabgabe.html#in-welcher-sprache-zeitform-perspektive-und-in-welchem-stil-soll-der-datenanalyseplan-geschrieben-werden",
-    "href": "endabgabe.html#in-welcher-sprache-zeitform-perspektive-und-in-welchem-stil-soll-der-datenanalyseplan-geschrieben-werden",
-    "title": "5 Abschlussprojekt",
-    "section": "3 In welcher Sprache, Zeitform, Perspektive und in welchem Stil soll der Datenanalyseplan geschrieben werden?",
-    "text": "3 In welcher Sprache, Zeitform, Perspektive und in welchem Stil soll der Datenanalyseplan geschrieben werden?\nAlle für die Abgabe relevanten Unterlagen dürfen auf Englisch oder Deutsch eingereicht werden. Wichtig ist lediglich, dass die Unterlagen untereinander einer einheitlichen Sprache folgen. Als Zeitform gilt das Präsens. Bitte schreibe in der Wir-Form und im wissenschaftlichen Stil.",
-    "crumbs": [
-      "FAQ",
-      "5  Abschlussprojekt"
-    ]
-  },
-  {
-    "objectID": "endabgabe.html#wie-umfangreich-sollen-die-kommentare-des-codes-im-skript-sein",
-    "href": "endabgabe.html#wie-umfangreich-sollen-die-kommentare-des-codes-im-skript-sein",
-    "title": "5 Abschlussprojekt",
-    "section": "4 Wie umfangreich sollen die Kommentare des Codes im Skript sein?",
-    "text": "4 Wie umfangreich sollen die Kommentare des Codes im Skript sein?\nDie Funktionsweise von üblicher Syntax (wie beispielsweise dem Pipe Operator) oder einer Funktion muss nicht kommentiert werden. Aber: Das Dokument muss für fremde Wissenschaftler:innen der Psychologie ohne weiteres nachvollziehbar sein. Bedeutet, Kommentare sollten das Vorgehen im Skript ausreichend begründen.",
-    "crumbs": [
-      "FAQ",
-      "5  Abschlussprojekt"
-    ]
-  },
-  {
-    "objectID": "endabgabe.html#sollen-im-skript-warn--undoder-fehlermeldungen-unterbunden-werden-oder-sichtbar-sein",
-    "href": "endabgabe.html#sollen-im-skript-warn--undoder-fehlermeldungen-unterbunden-werden-oder-sichtbar-sein",
-    "title": "5 Abschlussprojekt",
-    "section": "5 Sollen im Skript Warn- und/oder Fehlermeldungen unterbunden werden oder sichtbar sein?",
-    "text": "5 Sollen im Skript Warn- und/oder Fehlermeldungen unterbunden werden oder sichtbar sein?\nDamit wir die Abgabe leichter kontrollieren können sollen die Warn- und Fehlermeldungen bitte sichtbar sein und nicht ausgeschaltet sein. Auch unabhängig von der Abgabe ist zu empfehlen die Meldungen sichtbar zu lassen. Das erleichtert Unbeteiligten die Analyse nachzuvollziehen und sie auf mögliche Fehler zu untersuchen.",
-    "crumbs": [
-      "FAQ",
-      "5  Abschlussprojekt"
-    ]
-  },
-  {
-    "objectID": "endabgabe.html#darf-im-skript-auch-noch-code-von-übungsaufgaben-vorhanden-sein",
-    "href": "endabgabe.html#darf-im-skript-auch-noch-code-von-übungsaufgaben-vorhanden-sein",
-    "title": "5 Abschlussprojekt",
-    "section": "6 Darf im Skript auch noch Code von Übungsaufgaben vorhanden sein?",
-    "text": "6 Darf im Skript auch noch Code von Übungsaufgaben vorhanden sein?\nHier gilt der Grundsatz: Euer Skript, wie auch alle anderen Unterlagen, sollten für fremde Wissenschaftler:innen der Psychologie ohne weiteres nachvollziehbar sein. Code, welcher nicht im Zusammenhang mit der Endabgabe steht - und dementsprechend auch nicht im Datenanalyseplan erwähnt wird – würde nur vom wesentlichen Ablenken und soll daher nicht im Skript vorhanden sein.",
-    "crumbs": [
-      "FAQ",
-      "5  Abschlussprojekt"
-    ]
-  },
-  {
-    "objectID": "endabgabe.html#wie-exakt-sollen-die-tabellen-und-abbildungen-denen-aus-dem-paper-von-grinschgl-et-al.-2020-entsprechen",
-    "href": "endabgabe.html#wie-exakt-sollen-die-tabellen-und-abbildungen-denen-aus-dem-paper-von-grinschgl-et-al.-2020-entsprechen",
-    "title": "5 Abschlussprojekt",
-    "section": "7 Wie exakt sollen die Tabellen und Abbildungen denen aus dem Paper von Grinschgl et al. (2020) entsprechen?",
-    "text": "7 Wie exakt sollen die Tabellen und Abbildungen denen aus dem Paper von Grinschgl et al. (2020) entsprechen?\nDie Tabellen und Abbildungen aus dem Originalpaper von Grinschgl et al. (2020) müssen nicht exakt repliziert werden. Wichtig ist allerdings, dass die Aussage der Abbildung bzw. der Tabelle korrekt ist und keine wichtigen Details ausgelassen werden.",
-    "crumbs": [
-      "FAQ",
-      "5  Abschlussprojekt"
-    ]
-  },
-  {
-    "objectID": "endabgabe.html#soll-die-berechnung-von-cronbachs-alpha-aus-dem-paper-von-grinschgl-et-al.-2020-auch-durchgeführt-werden",
-    "href": "endabgabe.html#soll-die-berechnung-von-cronbachs-alpha-aus-dem-paper-von-grinschgl-et-al.-2020-auch-durchgeführt-werden",
-    "title": "5 Abschlussprojekt",
-    "section": "8 Soll die Berechnung von Cronbachs Alpha aus dem Paper von Grinschgl et al. (2020) auch durchgeführt werden?",
-    "text": "8 Soll die Berechnung von Cronbachs Alpha aus dem Paper von Grinschgl et al. (2020) auch durchgeführt werden?\nNein, die Berechnung von Cronbachs-Alpha aus dem Paper von Grinschgl et al. (2020) ist nicht Teil des Abschlussprojekts.",
-    "crumbs": [
-      "FAQ",
-      "5  Abschlussprojekt"
-    ]
-  },
-  {
-    "objectID": "front_page.html",
-    "href": "front_page.html",
-    "title": "Einleitung",
+    "objectID": "hands_on_1.html",
+    "href": "hands_on_1.html",
+    "title": "Hands On 1",
     "section": "",
-    "text": "In diesem E-Book findest du alle wichtigen Informationen zum Methodenseminar “R u Ready”. Du kannst hier u. a. die wöchentlichen Folien, Hands-On R Übungen, den Leistungsnachweis, und Frequently Asked Questions einsehen. Du kannst über die Unterkapitel (links) zu den entsprechenden Inhalten navigieren, oder auch die Suchfunktion oben links verwenden, um nach einem bestimmten Begriff zu suchen.\n\n1 Hinweisboxen\nHier einen Überblick über die auf den Seiten enthaltenen Hinweisboxen:\n\n\n\n\n\n\nNote\n\n\n\nVeriefung: Hier geht es in die Tiefe.\n\n\n\n\n\n\n\n\nImportant\n\n\n\nWichtig: Dies ist eine wichtige Information.\n\n\n\n\n\n\n\n\nWarning\n\n\n\nAchtung: Hier ist Vorsicht geboten.\n\n\n\n\n\n\n\n\nCaution\n\n\n\nVorsicht: Diese Information ist noch in Bearbeitung.\n\n\n\n\n2 Syllabus\n\n\n\n\n\n\nCaution\n\n\n\nVorsicht: Der Syllabus dient als grobe Richtlinie und kann angepasst werden, falls wir in einzelnen Einheiten mehr oder weniger Zeit benötigen.",
-    "crumbs": [
-      "Einleitung"
-    ]
+    "text": "Bei Bedarf finden sich hier nochmal die Slides zur EH1: \nUnd EH2\n\n\n\n\nInstalliere R und RStudio:\n\nInstallation von R – neueste Version 4.5.1: https://stat.ethz.ch/CRAN/\nInstallation von RStudio (Version 2025.09.0): https://posit.co/download/rstudio-desktop/\n\nDu weisst nicht was mit R auf sich hat? Hier ist eine Kurzerklärung: https://methodenlehre.github.io/einfuehrung-in-R/\n\n\n\n\nRStudio öffnen & Einstellungen vornehmen: Unter «tools» –«global options» die unter 1.1. beschriebenen Einstellungen vornehmen:\nhttps://methodenlehre.github.io/einfuehrung-in-R/chapters/01-workflow.html\n\n\n\nNeues Skript öffnen & orientieren\n\n\n\n\nIm folgenden machen wir uns vertraut mit der Oberfläche von RStudio:\n\n\n\n\n\n\n\nSkript für Code-Eingabe sowie Kommentare\nKonsole für die Ausführung von Code -&gt; Teste einfache mathematische Operation in dieser; reproduziere diese mittels Skript\nRechts oben: Environment & History\nRechts unten: Files, Plots, Packages und Help Viewer\n\n\n\n\nTidyverse ist ein Meta-Paket, das mehrere Pakete umfasst\n\nPakete installieren (nur 1x notwendig) -&gt; führe diesen Code in der Konsole aus\n\ninstall.packages(\"tidyverse\")\n\nPaket laden (innerhalb des Skriptes, bei jedem Neustart von R notwendig)\n\nlibrary(tidyverse)\n\n── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.4     ✔ readr     2.1.5\n✔ forcats   1.0.1     ✔ stringr   1.5.2\n✔ ggplot2   4.0.0     ✔ tibble    3.3.0\n✔ lubridate 1.9.4     ✔ tidyr     1.3.1\n✔ purrr     1.1.0     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\n\n\n\nTipp: Pakete regelmässig updaten mit z.B. update.packages()\n\n\n\n\na. Nutze R als Taschenrechner\n\n123+456\n144*112\n10/3\nQuadriere 420\nZiehe die Quadratwurzel aus 146 mit der Funktion sqrt()\nBerechne den Rest der Division 10/3 mit dem Modulo Operator: %%\n\n\n\n\n\n\n\nZeichen\nBedeutung\n\n\n\n\n+\nAddition\n\n\n-\nSubstraktion\n\n\n*\nMultiplikation\n\n\n/\nDivision\n\n\nsqrt(x)\nQuadratwurzel\n\n\nabs(x)\nBetrag (absoluter Wert)\n\n\nx %% y\nModulo (x mod y) 5 %% 2 = 1\n\n\n^\nPotenz\n\n\n\n\n\n\n\n\nWeise den Wert 5 der Variable x zu mit dem Operator &lt;-\nWeise eine beliebige Zahl der Variable y zu und dividiere dann x durch y. Speichere dieses Ergebnis in der Variable z.\nSchaue dir das Ergebnis in deinem Environment an. Lass dir das Ergebnis auch in der Konsole ausgeben. Das Environment findest du oben rechts, die Konsole ist unter deinem Skript.\nErstelle zwei Variablen: Eine mit deinem Vornamen und eine mit deinem Nachnamen. Solche “character” Variablen musst du in Anführungszeichen setzen \"\"\nKombiniere deinen Vor- und Nachnamen zu deinem vollen Namen mittels paste . Speichere diese Variable als voller_name.\n\n\n\n\n\nDefiniere einen Vektor «first_vector» mit den Zahlen 100, 80, 54, 73. Einen Vektor definiert man so: first_vector &lt;- c(...)\nWende den Befehl boxplot() auf deinen Vektor an\nBerechne die Summe sum()und den Mittelwert mean() von deinem Vektor\nMultipliziere deinen Vektor mit *2 und schaue dir das Ergebnis an.\n\nDie wichtigsten Operatoren und Funktionen in R: https://methodenlehre.github.io/einfuehrung-in-R/chapters/02-R-language.html\n\n\n\n\n\nFunktion\nBedeutung\n\n\n\n\nmean(x, na.rm =FALSE)\nMittelwert\n\n\nsd(x)\nStandardabweichung\n\n\nvar(x)\nVarianz\n\n\nmedian(x)\nMedian\n\n\nsum(x)\nSumme\n\n\nmin(x)\nMinimalwert\n\n\nmax(x)\nMaximalwert\n\n\nrange(x)\nMinimal - und Maximalwert\n\n\n\n\n\n\n\n\nTeste ob die Zahl 5 größer als 2 ist –&gt; TRUE or FALSE?\nTeste ob 6 ungleich 8 ist –&gt; TRUE or FALSE?\nSubtrahiere 80 von 50 und speichere das Ergebnis in einer Variable namens «diff_score».\nBerechne mit abs() den absoluten Wert von «diff_score» lasse dir diesen mit print(diff_score) in der Konsole ausgeben.\n\n\n\n\n\n\nZeichen\nBedeutung\n\n\n\n\n==\ngleich\n\n\n!=\nungleich\n\n\n&gt;\ngrösser\n\n\n&gt;=\ngrösser gleich\n\n\n&lt;\nkleiner\n\n\n&lt;=\nkleiner gleich\n\n\n|\nLogisches Oder\n\n\n&\nLogisches Und\n\n\n\n\n\n\n\n\n\nInformative Kommentare im Code sind elementar für die Nachvollziehbarkeit.\n\nSchreibe einen Kommentar indem du ein # verwendest.\nCode der nach einem # steht wird nicht ausgeführt. Setze ein # vor eine Codezeile und führe sie aus und beobachte was passiert.\n\n\n\n\nEs gibt verschiedene Konventionen, wie man Variablen benennen kann.\nEinige wichtige Grundsätze dafür sind:\n\nNamen können aus Buchstaben, Zahlen sowie den Zeichen _ oder . bestehen.\nSie müssen mit einem Buchstaben beginnen und dürfen keine Leerzeichen enthalten.\nSonderzeichen und Großbuchstaben sollten vermieden werden.\nKeine Namen verwenden, die bereits für Funktionen reserviert sind (z. B. mean()).\nDer Name sollte den Inhalt der Variablen möglichst gut beschreiben → Reproduzierbarkeit; clarity instead of brevity.\nAm besten englische Bezeichnungen verwenden, um internationalen Standards zu folgen.\n\n👉 Mehr dazu\nÜbung:\n\nDefiniere eine neue Variable nach snake_case.\nDefiniere eine zweite Variable nach CamelCase.\n\nIn unserem Seminar verwenden wir den snake_case.\n\n\n\n\n\nSpeichere die beiden höchsten Werte aus «first_vector» in einer neuen Variable ab (Tipp: verwende sort() )\nErstelle einen Vektor mit Werten von 0-1000 in 10er Schritten (Tipp: suche nach der Funktion seq()\nZiehe zufällig eine Zahl aus diesem Vektor\nGeneriere einen Vektor, der aus 50 Wiederholungen der Zahl 3 besteht\n\nTipps zu diesen Aufgaben findest du bei Bedarf hier: https://methodenlehre.github.io/einfuehrung-in-R/chapters/02-R-language.html (Kapitel 2.1)\nTipp: Suche nach der Dokumentation der folgenden Funktionen: sort(), seq(), sample, rep().\nDie Dokumentation kannst du mittels ?Funktionsname aufrufen.\n\n\n\n\nnumeric vectors: werden in integer (ganze Zahlen) und double (reelle Zahlen) unterteilt, z.B.\nnumerical_vector &lt;- c(1, 2.5, 4)\ncharacter vectors: bestehen aus Zeichen, welche von Anführungszeichen umgeben werden, z.B.\ntext_vector &lt;- c(\"Hello\", \"World\")\nlogical vectors: Elemente dieses Typs können nur 3 Werte annehmen: TRUE, FALSE oder NA\nlog_vector &lt;- c(TRUE, FALSE, TRUE)\n\nVektoren müssen aus denselbsten Elementen bestehen, d.h. z.B. numeric und character können nicht gemischt werden. Vektoren werden meist mit c() erstellt."
   },
   {
-    "objectID": "hands_on_2.html",
-    "href": "hands_on_2.html",
-    "title": "Hands On – Coding Basics (Einheiten 3 und 4)",
+    "objectID": "hands_on_1.html#installation-r-und-r-studio",
+    "href": "hands_on_1.html#installation-r-und-r-studio",
+    "title": "Hands On 1",
     "section": "",
-    "text": "Bei Bedarf findest du hier nochmals die Slides zu Einheit 3:",
-    "crumbs": [
-      "Übungen zu den Einheiten",
-      "Hands on - Block 2 (Woche 3 - 4)"
-    ]
+    "text": "Installiere R und RStudio:\n\nInstallation von R – neueste Version 4.5.1: https://stat.ethz.ch/CRAN/\nInstallation von RStudio (Version 2025.09.0): https://posit.co/download/rstudio-desktop/\n\nDu weisst nicht was mit R auf sich hat? Hier ist eine Kurzerklärung: https://methodenlehre.github.io/einfuehrung-in-R/"
   },
   {
-    "objectID": "hands_on_2.html#import",
-    "href": "hands_on_2.html#import",
-    "title": "Hands On – Coding Basics (Einheiten 3 und 4)",
-    "section": "3.1 Import",
-    "text": "3.1 Import\n👉 Kapitel 3.2\nCheatsheat Datenimport mit readr\n\n3.1.1 Einlesen via Oberfläche\n\nStelle sicher, dass du das Metapaket tidyverse geladen hast (library(tidyverse)) (siehe Hands-On 1).\nWir verwenden Funktionen aus den Packages readr und readxl, die Teil des Tidyverse sind.\n\nIn diesem Seminar arbeiten wir mit csv und xslx Dateien. Wie werden uns meherer Arten und Weisen anschauen wie man diese einlesen kann.\nBeim Einlesen von Daten ist ein wichtiger Faktor, mich welchem Trennzeichen (Delimiter) die Werte von einander getrennt werden.\nAuszug aus Cheatsheet: Die Funktionen read_delim und read_csv:\n\nread_csv() ist eine Spezialisierung von read_delim(), die automatisch Komma als Trennzeichen verwendet, während man bei read_delim() das gewünschte Trennzeichen selbst angeben muss.\n\nImportiere die Datei \"data_mmq.csv\" über die Point & Klick-Oberfläche von RStudio. Verwende dafür “From Text (readr)\n\n\nTipp: Klicke auf Environment → Import Dataset → wähle die \"readr\"-Funktion.\nSchaue dir den Datensatz an: Mit welchem Trennzeichen sind die Daten getrennt?\n\n\nStelle in der Oberfläche \"Delimiter\" auf das passende Trennzeichen. Was verändert sich?\n\nBetrachte den Code, den die Oberfläche generiert. Versuche den Pfad im Kontext von Projekten zu verstehen.\n\nWenn du im Projekt gearbeitet hast, sollte bei dir der Code etwa so aussehen: data_mmq &lt;- read_delim(\"data/raw/data_mmq.csv\", delim = \";\", escape_double = FALSE, trim_ws = TRUE)\nWenn du nicht im Projekt gearbeite hättest, wie würde dann der Dateipfad aussehen?\n\nWenn du den Code via Klick-Oberfläche eingelesen hast, wirst du den ausgeführten Code in der Konsole sehen. Kopiere diesen in dein Skript, so dass du ihn in Zukunft wiederverwenden und anpassen kannst.\nSchaue dir die eingelesenen Daten mit View(data_mmq) an. Wenn du alles richtig gemacht hast, ist in jeder Zelle nur ein Wert.\n\n\n\n\n3.1.2 Einlesen via Code\n\n3.1.2.1 .CSV Dateien\n\nVersuche, weitere CSV-Datensätze einzulesen: data_cb, data_cvstm, data_pct, data_vp.\nSuche dafür eine geeignete Funktion zum Einlesen von .csv.\n\nVerwende den von R-Studio generierten Code, und passe ihn an um einen weiteren Datensatz einzulesen (z.B. indem du den Filenamen veränderst).\n\nKorrigiere diesen Code und lies damit die Datei data_vp ein (überprüfe den Pfad und den Delimiter)\n\n\ndata_vp &lt;- read_delim(\"/raw/data_vp.csv\", \n    delim = \",\")\n\n\n\n3.1.2.2 .XSLX Dateien\n\nEinige Dateien liegen im .xlsx-Format.\n\nVerwende dafür das Paket readxl und die Funktion read_excel(). Tipp: Installiere und lade das Paket zunächst.\nNutze die Hilfefunktion (?read_excel) für Infos zur Funktion oder schaue dir das Cheatsheet an\nVersuche, die Datensätze data_ratings und data_strategies einzulesen.\n\nAm Ende solltest du die 7 verschiedene Datensätze in deinem Environment sehen.\n\n\n\n\n\n\n\nVertiefung\n\n\n\n\n\n👉Für das Einlesen anderer Arten von Datensätzen (z.B. SPSS Dateien), siehe Kapitel 3.2",
-    "crumbs": [
-      "Übungen zu den Einheiten",
-      "Hands on - Block 2 (Woche 3 - 4)"
-    ]
+    "objectID": "hands_on_1.html#einstellungen",
+    "href": "hands_on_1.html#einstellungen",
+    "title": "Hands On 1",
+    "section": "",
+    "text": "RStudio öffnen & Einstellungen vornehmen: Unter «tools» –«global options» die unter 1.1. beschriebenen Einstellungen vornehmen:\nhttps://methodenlehre.github.io/einfuehrung-in-R/chapters/01-workflow.html\n\n\n\nNeues Skript öffnen & orientieren"
   },
   {
-    "objectID": "hands_on_2.html#aufgaben",
-    "href": "hands_on_2.html#aufgaben",
-    "title": "Hands On – Coding Basics (Einheiten 3 und 4)",
-    "section": "4.1 Aufgaben",
-    "text": "4.1 Aufgaben\n\n4.1.1 a) Füge alle 7 Datensätze mit cbind() zusammen und schaue dir das Ergebnis an.\n\nWas fällt dir auf?\n\nHinweis: Die Datensätze werden einfach nebeneinander „geklebt“, ohne inhaltlich abgeglichen zu werden.\n\nReflektiere: Macht das Sinn? Was sind die Gefahren, Daten auf diese Art zu mergen?\n\n\n\n\n4.1.2 b) Versuche es nun mit full_join().\nFull_join verbindet zwei Datensätze anhand einer Schlüsselvariable, so dass alle Zeilen aus beiden Datensätzen erhalten bleiben. Die Schlüsselvariable ist essentiell dafür dass die Datensätze richtig verbunden werden (Anordnung der Variablen), und grenzt sich dadurch von Funktionen wie cbind() ab.\n\n\nLege eine gemeinsame Variable als Schlüssel fest, hier: by = \"code\".\nFüge nun alle 7 Datensätze zu einem zusammen, nenne diesen dat_full\n\nAchtung: full_join() funktioniert immer nur mit 2 Datensätzen gleichzeitig 👉 du musst es also mehrfach anwenden, um alle 7 Datensätze zusammenzuführen.\nHinweis: Im Datensatz data_pct heißt die Code-Variable leicht anders. Verwende deshalb by = c(\"code_all\" = \"code\").\n\n\n\n\n\n4.1.3 c) Inspiziere deinen zusammengefügten Datensatz “dat_full”\n\n🔍Überprüfe: Wie viele Zeilen und Spalten hat dein Datensatz? Verwende: ncol() , nrow(), dim()\n\nStimmt die Anzahl der Zeilen mit der Anzahl der Versuchspersonen aus dem Paper überein?\nLasse dir die variablenamen ausgeben mit names()\n\n👀Verschaffe dir eine Überblick über deinen Datensatz:\n\nhead()\nglimpse()\nstr()\ndat_full\nsummary()\n\nGibt es redundante oder doppelte Variablen?\n\nAuf einzelne Werte zugreiffen:\n\nGreife auf den ersten Wert der ersten Spalte zu: Verwende eckige Klammern. Der erste Wert in der Klammer steht für die Zeile, der zweite für die Spalte.\nGreife auf die Werte der Spalten 1–15 in der ersten Zeile zu. Verwende wieder eckige Klammern und den Bereichsoperator 1:15.\nLasse dir alle Werte der Variable \"mean_rl_all\" ausgeben. Auf Variablen greifst du mit $ zu.\nGreife auf die ersten 10 Werte der Variable \"question1\" zu. Verwende dazu den $-Operator in Kombination mit dem Bereichsoperator 1:10.",
-    "crumbs": [
-      "Übungen zu den Einheiten",
-      "Hands on - Block 2 (Woche 3 - 4)"
-    ]
+    "objectID": "hands_on_1.html#rstudio-oberfläche",
+    "href": "hands_on_1.html#rstudio-oberfläche",
+    "title": "Hands On 1",
+    "section": "",
+    "text": "Im folgenden machen wir uns vertraut mit der Oberfläche von RStudio:\n\n\n\n\n\n\n\nSkript für Code-Eingabe sowie Kommentare\nKonsole für die Ausführung von Code -&gt; Teste einfache mathematische Operation in dieser; reproduziere diese mittels Skript\nRechts oben: Environment & History\nRechts unten: Files, Plots, Packages und Help Viewer"
   },
   {
-    "objectID": "hands_on_2.html#tab-completion",
-    "href": "hands_on_2.html#tab-completion",
-    "title": "Hands On – Coding Basics (Einheiten 3 und 4)",
-    "section": "6.1 Tab Completion:",
-    "text": "6.1 Tab Completion:\nEine nützliche Funktion von RStudio ist die Tab Completion. Wenn du eine Funktion aufrufst und die Tabulator-Taste drückst, erscheint ein Menü mit den möglichen Argumenten, die du angeben kannst. Probiere es mit der Funktion mean(). Das funktioniert auch für Funktionen aus Packages, wenn du diese mit :: auswählst, zum Beispiel: readr::.",
-    "crumbs": [
-      "Übungen zu den Einheiten",
-      "Hands on - Block 2 (Woche 3 - 4)"
-    ]
+    "objectID": "hands_on_1.html#pakete-installieren-und-laden",
+    "href": "hands_on_1.html#pakete-installieren-und-laden",
+    "title": "Hands On 1",
+    "section": "",
+    "text": "Tidyverse ist ein Meta-Paket, das mehrere Pakete umfasst\n\nPakete installieren (nur 1x notwendig) -&gt; führe diesen Code in der Konsole aus\n\ninstall.packages(\"tidyverse\")\n\nPaket laden (innerhalb des Skriptes, bei jedem Neustart von R notwendig)\n\nlibrary(tidyverse)\n\n── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.4     ✔ readr     2.1.5\n✔ forcats   1.0.1     ✔ stringr   1.5.2\n✔ ggplot2   4.0.0     ✔ tibble    3.3.0\n✔ lubridate 1.9.4     ✔ tidyr     1.3.1\n✔ purrr     1.1.0     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\n\n\n\nTipp: Pakete regelmässig updaten mit z.B. update.packages()"
   },
   {
-    "objectID": "hands_on_2.html#weitere-tasten-und-tastenkürzel",
-    "href": "hands_on_2.html#weitere-tasten-und-tastenkürzel",
-    "title": "Hands On – Coding Basics (Einheiten 3 und 4)",
-    "section": "6.2 Weitere Tasten und Tastenkürzel:",
-    "text": "6.2 Weitere Tasten und Tastenkürzel:\n👉Kapitel 1.4.6\nIn RStudio benötigen wir häufig Zeichen, die wir im Alltag kaum verwenden. Da wir nicht alle mit dem gleichen Betriebssystem (Mac/Windows) und auch nicht mit identischen Tastaturen arbeiten, können wir keine einheitlichen Angaben machen, wo sich diese Zeichen genau befinden. Versuche daher, die folgenden Zeichen auf deiner eigenen Tastatur zu finden:\n\n[ ] Square brackets (eckige Klammern)\n{ } Curly brackets (geschweifte Klammern)\n$ Dollar sign (Dollarzeichen – wird für das Auswählen von Variablen benötigt)\n# Hash (Rautezeichen – für Kommentare in R-Skripten)\n~ Tilde (für Modellnotationen in R)\n| Vertical bar (senkrechter Strich – als logischer Operator, siehe nächstes Kapitel)\n` Backtick (Gravis – vor allem für Code Chunks, selten manuell einzugeben)",
-    "crumbs": [
-      "Übungen zu den Einheiten",
-      "Hands on - Block 2 (Woche 3 - 4)"
-    ]
+    "objectID": "hands_on_1.html#operatoren-kennenlernen",
+    "href": "hands_on_1.html#operatoren-kennenlernen",
+    "title": "Hands On 1",
+    "section": "",
+    "text": "a. Nutze R als Taschenrechner\n\n123+456\n144*112\n10/3\nQuadriere 420\nZiehe die Quadratwurzel aus 146 mit der Funktion sqrt()\nBerechne den Rest der Division 10/3 mit dem Modulo Operator: %%\n\n\n\n\n\n\n\nZeichen\nBedeutung\n\n\n\n\n+\nAddition\n\n\n-\nSubstraktion\n\n\n*\nMultiplikation\n\n\n/\nDivision\n\n\nsqrt(x)\nQuadratwurzel\n\n\nabs(x)\nBetrag (absoluter Wert)\n\n\nx %% y\nModulo (x mod y) 5 %% 2 = 1\n\n\n^\nPotenz"
   },
   {
-    "objectID": "hands_on_2.html#verschachtelte-funktionen",
-    "href": "hands_on_2.html#verschachtelte-funktionen",
-    "title": "Hands On – Coding Basics (Einheiten 3 und 4)",
-    "section": "6.3 Verschachtelte Funktionen:",
-    "text": "6.3 Verschachtelte Funktionen:\nℹ️Es ist zwar möglich, mehrere Funktionen ineinander zu verschachteln. Dies kann jedoch schnell zu Verwirrung führen und den Code unnötig unübersichtlich machen. Verschachtelte Funktionen werden von innen nach aussen ausgeführt.\n❓Stelle dir hier die Frage: Was wird genau gerundet? Die einzelnen Elemente des Vektors oder der errechnet Durchschnitt?\n\nprint(mean(round(first_vector)))\n\n[1] 5785.25\n\n\n❗Aufgabe: Zerlege die Verschatelte Funktion in ihre Teilschritte.",
-    "crumbs": [
-      "Übungen zu den Einheiten",
-      "Hands on - Block 2 (Woche 3 - 4)"
-    ]
+    "objectID": "hands_on_1.html#erste-zuweisungenvariablen-definieren",
+    "href": "hands_on_1.html#erste-zuweisungenvariablen-definieren",
+    "title": "Hands On 1",
+    "section": "",
+    "text": "Weise den Wert 5 der Variable x zu mit dem Operator &lt;-\nWeise eine beliebige Zahl der Variable y zu und dividiere dann x durch y. Speichere dieses Ergebnis in der Variable z.\nSchaue dir das Ergebnis in deinem Environment an. Lass dir das Ergebnis auch in der Konsole ausgeben. Das Environment findest du oben rechts, die Konsole ist unter deinem Skript.\nErstelle zwei Variablen: Eine mit deinem Vornamen und eine mit deinem Nachnamen. Solche “character” Variablen musst du in Anführungszeichen setzen \"\"\nKombiniere deinen Vor- und Nachnamen zu deinem vollen Namen mittels paste . Speichere diese Variable als voller_name."
+  },
+  {
+    "objectID": "hands_on_1.html#vektoren-definieren",
+    "href": "hands_on_1.html#vektoren-definieren",
+    "title": "Hands On 1",
+    "section": "",
+    "text": "Definiere einen Vektor «first_vector» mit den Zahlen 100, 80, 54, 73. Einen Vektor definiert man so: first_vector &lt;- c(...)\nWende den Befehl boxplot() auf deinen Vektor an\nBerechne die Summe sum()und den Mittelwert mean() von deinem Vektor\nMultipliziere deinen Vektor mit *2 und schaue dir das Ergebnis an.\n\nDie wichtigsten Operatoren und Funktionen in R: https://methodenlehre.github.io/einfuehrung-in-R/chapters/02-R-language.html\n\n\n\n\n\nFunktion\nBedeutung\n\n\n\n\nmean(x, na.rm =FALSE)\nMittelwert\n\n\nsd(x)\nStandardabweichung\n\n\nvar(x)\nVarianz\n\n\nmedian(x)\nMedian\n\n\nsum(x)\nSumme\n\n\nmin(x)\nMinimalwert\n\n\nmax(x)\nMaximalwert\n\n\nrange(x)\nMinimal - und Maximalwert"
+  },
+  {
+    "objectID": "hands_on_1.html#logische-operatoren",
+    "href": "hands_on_1.html#logische-operatoren",
+    "title": "Hands On 1",
+    "section": "",
+    "text": "Teste ob die Zahl 5 größer als 2 ist –&gt; TRUE or FALSE?\nTeste ob 6 ungleich 8 ist –&gt; TRUE or FALSE?\nSubtrahiere 80 von 50 und speichere das Ergebnis in einer Variable namens «diff_score».\nBerechne mit abs() den absoluten Wert von «diff_score» lasse dir diesen mit print(diff_score) in der Konsole ausgeben.\n\n\n\n\n\n\nZeichen\nBedeutung\n\n\n\n\n==\ngleich\n\n\n!=\nungleich\n\n\n&gt;\ngrösser\n\n\n&gt;=\ngrösser gleich\n\n\n&lt;\nkleiner\n\n\n&lt;=\nkleiner gleich\n\n\n|\nLogisches Oder\n\n\n&\nLogisches Und"
+  },
+  {
+    "objectID": "hands_on_1.html#nachvollziehbarkeit-von-code",
+    "href": "hands_on_1.html#nachvollziehbarkeit-von-code",
+    "title": "Hands On 1",
+    "section": "",
+    "text": "Informative Kommentare im Code sind elementar für die Nachvollziehbarkeit.\n\nSchreibe einen Kommentar indem du ein # verwendest.\nCode der nach einem # steht wird nicht ausgeführt. Setze ein # vor eine Codezeile und führe sie aus und beobachte was passiert.\n\n\n\n\nEs gibt verschiedene Konventionen, wie man Variablen benennen kann.\nEinige wichtige Grundsätze dafür sind:\n\nNamen können aus Buchstaben, Zahlen sowie den Zeichen _ oder . bestehen.\nSie müssen mit einem Buchstaben beginnen und dürfen keine Leerzeichen enthalten.\nSonderzeichen und Großbuchstaben sollten vermieden werden.\nKeine Namen verwenden, die bereits für Funktionen reserviert sind (z. B. mean()).\nDer Name sollte den Inhalt der Variablen möglichst gut beschreiben → Reproduzierbarkeit; clarity instead of brevity.\nAm besten englische Bezeichnungen verwenden, um internationalen Standards zu folgen.\n\n👉 Mehr dazu\nÜbung:\n\nDefiniere eine neue Variable nach snake_case.\nDefiniere eine zweite Variable nach CamelCase.\n\nIn unserem Seminar verwenden wir den snake_case."
+  },
+  {
+    "objectID": "hands_on_1.html#für-fortgeschrittene-r-nutzerinnen",
+    "href": "hands_on_1.html#für-fortgeschrittene-r-nutzerinnen",
+    "title": "Hands On 1",
+    "section": "",
+    "text": "Speichere die beiden höchsten Werte aus «first_vector» in einer neuen Variable ab (Tipp: verwende sort() )\nErstelle einen Vektor mit Werten von 0-1000 in 10er Schritten (Tipp: suche nach der Funktion seq()\nZiehe zufällig eine Zahl aus diesem Vektor\nGeneriere einen Vektor, der aus 50 Wiederholungen der Zahl 3 besteht\n\nTipps zu diesen Aufgaben findest du bei Bedarf hier: https://methodenlehre.github.io/einfuehrung-in-R/chapters/02-R-language.html (Kapitel 2.1)\nTipp: Suche nach der Dokumentation der folgenden Funktionen: sort(), seq(), sample, rep().\nDie Dokumentation kannst du mittels ?Funktionsname aufrufen."
+  },
+  {
+    "objectID": "hands_on_1.html#datentypen",
+    "href": "hands_on_1.html#datentypen",
+    "title": "Hands On 1",
+    "section": "",
+    "text": "numeric vectors: werden in integer (ganze Zahlen) und double (reelle Zahlen) unterteilt, z.B.\nnumerical_vector &lt;- c(1, 2.5, 4)\ncharacter vectors: bestehen aus Zeichen, welche von Anführungszeichen umgeben werden, z.B.\ntext_vector &lt;- c(\"Hello\", \"World\")\nlogical vectors: Elemente dieses Typs können nur 3 Werte annehmen: TRUE, FALSE oder NA\nlog_vector &lt;- c(TRUE, FALSE, TRUE)\n\nVektoren müssen aus denselbsten Elementen bestehen, d.h. z.B. numeric und character können nicht gemischt werden. Vektoren werden meist mit c() erstellt."
+  },
+  {
+    "objectID": "hands_on_3.html",
+    "href": "hands_on_3.html",
+    "title": "Hands_On_3",
+    "section": "",
+    "text": "XXXX @Sandra gibt es hier ein gutes Kapitel, das all das schön zusammenfasst? –&gt; 2.4 Boris, irgendwann auch factors erklären (EH 5??) –&gt; oder das alles in EH 5 verschieben?\nvl hier lieber Factors und Rest zu EH 5\nBevor wir mit den Übungen starten, ein Überblick über die Unterschiede:\n\n\n\n\n\n\n\n\nStruktur\nEigenschaften\nBeispiel-Inhalt\n\n\n\n\nVektor\n- Enthält Elemente eines Datentyps- Grundbaustein in R\nc(1, 2, 3) oder c(\"Anna\", \"Ben\")\n\n\nListe\n- Kann verschiedene Datentypen enthalten- Elemente können unterschiedlich lang sein\nZahlenvektor, Textvektor, logischer Vektor in einer Liste\n\n\nMatrix\n- Enthält nur einen Datentyp- Hat feste Dimensionen (Zeilen, Spalten)\n3x3-Matrix mit Zahlen 1–9\n\n\nData Frame\n- Tabellarisch aufgebaut- Spalten können unterschiedliche Datentypen enthalten- Jede Spalte gleich lang\nTabelle mit Name (Character), Alter (Numeric), Studiert (Logical)\n\n\n\n👉 Merksatz:\n- Vektor = einfachste Struktur, ein Datentyp\n- Liste = flexibel, verschiedene Datentypen\n- Matrix = „Zahlenrechteck“, ein Datentyp\n- Data Frame = Tabelle, Spalten können unterschiedliche Datentypen haben\nWir haben in den Hands-On-Übungen einige einfache Vektoren erstellt und damit operiert. Nun schauen wir uns weitere Formate an.\n\n\nEine Matrix besteht nur aus einem Datentyp (z. B. nur Zahlen).\n\nErstelle eine 3x3-Matrix mit den Zahlen 1 bis 9.\nWandle einen Vektor 1:12 in eine 3x4-Matrix um.\nGreife auf das Element in der 2. Zeile, 3. Spalte zu.\nBerechne die Spaltensummen und Zeilensummen.\n\n\n\n\nEine Liste kann verschiedene Datentypen enthalten (z. B. Zahlen, Zeichenketten, logische Werte).\n👉 [Listen, Kapitel]\n\nErstelle eine Liste mit drei Elementen und der Funktion list():\n\neinem Vektor mit den Zahlen 1 bis 5\neinem Character-Vektor mit den Namen deiner Kommiliton:innen\neinem logischen Vektor (TRUE, FALSE)\n\nGreife auf das zweite Element der Liste zu.\nGreife auf den dritten Wert des ersten Elements der Liste zu.\nFüge der Liste ein weiteres Element hinzu (z. B. den Mittelwert der Zahlen)."
+  },
+  {
+    "objectID": "hands_on_3.html#matrizen",
+    "href": "hands_on_3.html#matrizen",
+    "title": "Hands_On_3",
+    "section": "",
+    "text": "Eine Matrix besteht nur aus einem Datentyp (z. B. nur Zahlen).\n\nErstelle eine 3x3-Matrix mit den Zahlen 1 bis 9.\nWandle einen Vektor 1:12 in eine 3x4-Matrix um.\nGreife auf das Element in der 2. Zeile, 3. Spalte zu.\nBerechne die Spaltensummen und Zeilensummen."
+  },
+  {
+    "objectID": "hands_on_3.html#listen-aaron-zuerst-matrizen-ich-glaube-das-einige-der-übungen-ohne-weitere-erklärungen-zu-schwer-sind-siehe-eh5",
+    "href": "hands_on_3.html#listen-aaron-zuerst-matrizen-ich-glaube-das-einige-der-übungen-ohne-weitere-erklärungen-zu-schwer-sind-siehe-eh5",
+    "title": "Hands_On_3",
+    "section": "",
+    "text": "Eine Liste kann verschiedene Datentypen enthalten (z. B. Zahlen, Zeichenketten, logische Werte).\n👉 [Listen, Kapitel]\n\nErstelle eine Liste mit drei Elementen und der Funktion list():\n\neinem Vektor mit den Zahlen 1 bis 5\neinem Character-Vektor mit den Namen deiner Kommiliton:innen\neinem logischen Vektor (TRUE, FALSE)\n\nGreife auf das zweite Element der Liste zu.\nGreife auf den dritten Wert des ersten Elements der Liste zu.\nFüge der Liste ein weiteres Element hinzu (z. B. den Mittelwert der Zahlen)."
   },
   {
     "objectID": "leistungsnachweis.html",
