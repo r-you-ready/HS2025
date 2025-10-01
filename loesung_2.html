@@ -357,6 +357,26 @@ Wenn du ein Projekt öffnest:</p>
 <p><img src="images/EH3/Project.png" class="img-fluid"></p>
 <p><strong>Übung:</strong><br>
 Im Ordner <em>Grinschgl2020</em> liegt bereits eine <code>.Rproj</code>-Datei. Öffne sie und überprüfe oben rechts in RStudio, ob du dich im richtigen Projekt befindest. Du kannst zukünftig immer auf das Projekt klicken wenn du die Analyseskripte dazu öffnen willst.</p>
+<div class="callout callout-style-default callout-note callout-titled" title="Bei Fehlermeldungen:">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Bei Fehlermeldungen:
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-1" class="callout-1-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>„Achtung! Bei Mac-Usern kann es teilweise zu Problemen mit den Berechtigungen kommen. Falls dir beim Öffnen diese Fehlermeldung angezeigt wird:“</p>
+<p><img src="images/Hands on 2/Screenshot 2025-10-01 at 12.01.56.png" class="img-fluid"></p>
+<p>Die Lösung besteht darin, die Berechtigungen für den Ordner anzupassen. Dafür gehst du auf den ‚r_you_ready‘-Ordner und öffnest das Menü mit ‚Get Info‘.</p>
+<p><img src="images/Hands on 2/Screenshot 2025-10-01 at 13.10.23.png" class="img-fluid"></p>
+<p>Die Berechtigungen passt du an, indem du auf das Schloss unten rechts klickst, dein Passwort eingibst und bei deinem Account ‚Read &amp; Write‘ auswählst. Anschliessend klickst du auf die drei Punkte im Kreis und führst ‚Apply to enclosed items…‘ aus. Danach solltest du die vollen Berechtigungen haben.</p>
+</div>
+</div>
+</div>
 <p><strong>Projekt erstellen</strong></p>
 <p>Falls du in Zukunft ein Projekt erstellen willst (z.B. für deine Masterarbeit): 👉<a href="https://r4ds.hadley.nz/workflow-scripts.html#projects">Kapitel 6.2</a></p>
 <hr>
@@ -387,7 +407,7 @@ Im Ordner <em>Grinschgl2020</em> liegt bereits eine <code>.Rproj</code>-Datei. �
 <p><strong>❓Beantworte für dich selbst:</strong></p>
 <p>Um ein Skript reproduzierbar zu gestalten – was eignet sich besser: relative Pfade oder absolute Pfade? Aus welchen Gründen?</p>
 <div class="callout callout-style-default callout-note callout-titled" title="Lösung">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -396,9 +416,9 @@ Lösung
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-1" class="callout-1-contents callout-collapse collapse">
+<div id="callout-2" class="callout-2-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>Üblicherweise eigenen isich relative Pfade besser als absolute Pfade, da diese unabhängig vom Computer funktionieren, auf dem das Skript ausgeführt wird, solange die Projektstruktur gleich bleibt.</p>
+<p>Üblicherweise eigenen sich relative Pfade besser als absolute Pfade, da diese unabhängig vom Computer funktionieren, auf dem das Skript ausgeführt wird. Dabei muss allerdings darauf geachtet werden die Projektstruktur gleich zu halten.</p>
 </div>
 </div>
 </div>
@@ -430,7 +450,7 @@ Wir verwenden Funktionen aus den Packages <strong>readr</strong> und <strong>rea
 </ul></li>
 </ul>
 <div class="callout callout-style-default callout-note callout-titled" title="Vertiefung">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -439,33 +459,14 @@ Vertiefung
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-2" class="callout-2-contents callout-collapse collapse">
+<div id="callout-3" class="callout-3-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>Ohne eine Anpassung des Trennzeichens wird als Default das Komma “,” verwendet. Dies liegt am übichen Trennzeichen des Dateityps des Datensatzes, csv (comma-separated values). In unserem Fall sind die Daten jedoch mit einem Semikolon “;” getrennt. Deswegen werden im vorliegenden Fall die Daten in dem Vorschaufenster in einer einzigen Spalte eingelesen und nicht sauber getrennt.</p>
+<p>Ohne eine Anpassung des Trennzeichens wird als Default das Komma “,” verwendet. Dies liegt am üblichen Trennzeichen des Dateityps des Datensatzes, csv (comma-separated values). In unserem Fall sind die Daten jedoch mit einem Semikolon “;” getrennt. Deswegen werden im vorliegenden Fall die Daten in dem Vorschaufenster in einer einzigen Spalte eingelesen und nicht sauber getrennt.</p>
 </div>
 </div>
 </div>
 <pre><code>-   ![](images/clipboard-4280669528.png)
     -   Stelle in der Oberfläche `"Delimiter"` auf das passende Trennzeichen. Was verändert sich?</code></pre>
-<div class="callout callout-style-default callout-note callout-titled" title="Lösung">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Lösung
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-3" class="callout-3-contents callout-collapse collapse">
-<div class="callout-body-container callout-body">
-<p>Das passende Trennzeichen ist in unserem Fall das Semikollon “;”Wenn auf dieses Trennzeichen gewechselt wird, dann werden die Daten in der Ansicht sauber in einzelne Spalten getrennt und die Daten können passend eingelesen werden.</p>
-</div>
-</div>
-</div>
-<pre><code>-   Betrachte den Code, den die Oberfläche generiert. Versuche den Pfad im Kontext von Projekten zu verstehen.
-    -   Wenn du im Projekt gearbeitet hast, sollte bei dir der Code etwa so aussehen: `data_mmq &lt;- read_delim("data/raw/data_mmq.csv", delim = ";", escape_double = FALSE, trim_ws = TRUE)`
-    -   Wenn du nicht im Projekt gearbeite hättest, wie würde dann der Dateipfad aussehen?</code></pre>
 <div class="callout callout-style-default callout-note callout-titled" title="Lösung">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
@@ -478,9 +479,28 @@ Lösung
 </div>
 <div id="callout-4" class="callout-4-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
+<p>Das passende Trennzeichen ist in unserem Fall das Semikollon “;”. Wenn auf dieses Trennzeichen gewechselt wird, dann werden die Daten in der Ansicht sauber in einzelne Spalten getrennt und die Daten können passend eingelesen werden.</p>
+</div>
+</div>
+</div>
+<pre><code>-   Betrachte den Code, den die Oberfläche generiert. Versuche den Pfad im Kontext von Projekten zu verstehen.
+    -   Wenn du im Projekt gearbeitet hast, sollte bei dir der Code etwa so aussehen: `data_mmq &lt;- read_delim("data/raw/data_mmq.csv", delim = ";", escape_double = FALSE, trim_ws = TRUE)`
+    -   Wenn du nicht im Projekt gearbeite hättest, wie würde dann der Dateipfad aussehen?</code></pre>
+<div class="callout callout-style-default callout-note callout-titled" title="Lösung">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-5-contents" aria-controls="callout-5" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Lösung
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-5" class="callout-5-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
 <p>Der Dateipfad könnte dann etwa so aussehen:</p>
 <p>“C:/Users/…/R_You_Ready/Grinschgl2020/data/raw/data_mmq.csv”</p>
-<p>Relevant ist vor allem, dass ein absoluter Dateipfad verwendet wird, der in dieserm Form auf dem eigenen Computer funktioniert. Das Einlesen der Daten wäre somit für externe nicht ohne Anpassungen replizierbar. Deswegen achtet darauf beim Einlesen der Datei relative Pfade zu verwenden!</p>
+<p>Relevant ist vor allem, dass ein absoluter Dateipfad verwendet wird, der in dieser Form auf dem eigenen Computer funktioniert. Das Einlesen der Daten wäre somit für externe nicht ohne Anpassungen replizierbar. Deswegen achtet darauf beim Einlesen der Datei relative Pfade zu verwenden!</p>
 </div>
 </div>
 </div>
@@ -496,67 +516,6 @@ Lösung
 Suche dafür eine geeignete Funktion zum Einlesen von <code>.csv</code>.</li>
 </ul>
 <div class="callout callout-style-default callout-note callout-titled" title="Lösung">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-5-contents" aria-controls="callout-5" aria-expanded="false" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Lösung
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-5" class="callout-5-contents callout-collapse collapse">
-<div class="callout-body-container callout-body">
-<p>Die Funktion <code>read_csv()</code> aus dem Paket <code>readr</code> ist eine geeignete Funktion zum Einlesen von .csv Dateien. Diese Funktion verwendet automatisch das Komma als Trennzeichen.</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"readr"</span>) <span class="co"># den Code führtst du einmalig in deinereConsole aus</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>The following package(s) will be installed:
-- readr [2.1.5]
-These packages will be installed into "~/OneDrive - Universitaet Bern/MethodenLVOneDrive/MethodensemHS25/Website/ruready/renv/library/windows/R-4.5/x86_64-w64-mingw32".
-
-# Installing packages --------------------------------------------------------
-- Installing readr ...                          OK [linked from cache]
-Successfully installed 1 package in 58 milliseconds.</code></pre>
-</div>
-<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(readr)</span>
-<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>data_cb <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"data/raw/data_cb.csv"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Rows: 159 Columns: 1
-── Column specification ────────────────────────────────────────────────────────
-Delimiter: ","
-chr (1): code;cb_sum;cb_propcorrect
-
-ℹ Use `spec()` to retrieve the full column specification for this data.
-ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.</code></pre>
-</div>
-<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>data_cvstm <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"data/raw/data_cvstm.csv"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Rows: 159 Columns: 1
-── Column specification ────────────────────────────────────────────────────────
-Delimiter: ","
-chr (1): code;csvtm_sum;cvstm_propcorrect
-
-ℹ Use `spec()` to retrieve the full column specification for this data.
-ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.</code></pre>
-</div>
-<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>data_pct <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"data/raw/data_pct.csv"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Rows: 159 Columns: 1
-── Column specification ────────────────────────────────────────────────────────
-Delimiter: ","
-chr (1): code_all;group_all;mean_rl_all;mean_e1_all;mean_d1_all;mean_d_all
-
-ℹ Use `spec()` to retrieve the full column specification for this data.
-ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.</code></pre>
-</div>
-</div>
-</div>
-</div>
-</div>
-<pre><code>-   Verwende den von R-Studio generierten Code, und passe ihn an um einen weiteren Datensatz einzulesen (z.B. indem du den Filenamen veränderst).</code></pre>
-<div class="callout callout-style-default callout-note callout-titled" title="Lösung">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-6-contents" aria-controls="callout-6" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
@@ -568,9 +527,119 @@ Lösung
 </div>
 <div id="callout-6" class="callout-6-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
+<p>Die Funktion <code>read_csv()</code> aus dem Paket <code>readr</code> ist eine geeignete Funktion zum Einlesen von .csv Dateien. Diese Funktion verwendet automatisch das Komma als Trennzeichen.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>data_mmq <span class="ot">&lt;-</span> <span class="fu">read_delim</span>(<span class="st">"data/raw/data_mmq.csv"</span>,</span>
-<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>                      <span class="at">delim =</span> <span class="st">";"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co"># install.packages("readr") # den Code führst du einmalig in deiner Console aus</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(readr)</span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>data_cb <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"data/raw/data_cb.csv"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Rows: 159 Columns: 1
+── Column specification ────────────────────────────────────────────────────────
+Delimiter: ","
+chr (1): code;cb_sum;cb_propcorrect
+
+ℹ Use `spec()` to retrieve the full column specification for this data.
+ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>data_cvstm <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"data/raw/data_cvstm.csv"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Rows: 159 Columns: 1
+── Column specification ────────────────────────────────────────────────────────
+Delimiter: ","
+chr (1): code;csvtm_sum;cvstm_propcorrect
+
+ℹ Use `spec()` to retrieve the full column specification for this data.
+ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>data_pct <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"data/raw/data_pct.csv"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Rows: 159 Columns: 1
+── Column specification ────────────────────────────────────────────────────────
+Delimiter: ","
+chr (1): code_all;group_all;mean_rl_all;mean_e1_all;mean_d1_all;mean_d_all
+
+ℹ Use `spec()` to retrieve the full column specification for this data.
+ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>data_vp <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"data/raw/data_vp.csv"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Rows: 159 Columns: 1
+── Column specification ────────────────────────────────────────────────────────
+Delimiter: ","
+chr (1): code;vp_sum;vp_propcorrect
+
+ℹ Use `spec()` to retrieve the full column specification for this data.
+ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.</code></pre>
+</div>
+</div>
+<p>Wie in der Aufgabenstellung bereits beschrieben verwendet <code>read_csv()</code> automatisch das Komma als Trennzeichen. Daher werden die Datensätze hier zwar eingelesen, sind dann allerdings nicht korrekt formatiert. Wenn die Daten mit einem anderen Trennzeichen getrennt sind, muss eine andere Funktion verwendet werden, z.B. <code>read_delim()</code>, bei der das Trennzeichen explizit angegeben werden muss.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>data_cb <span class="ot">&lt;-</span> <span class="fu">read_delim</span>(<span class="st">"data/raw/data_cb.csv"</span>,</span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>                      <span class="at">delim =</span> <span class="st">";"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Rows: 159 Columns: 3
+── Column specification ────────────────────────────────────────────────────────
+Delimiter: ";"
+dbl (3): code, cb_sum, cb_propcorrect
+
+ℹ Use `spec()` to retrieve the full column specification for this data.
+ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>data_cvstm <span class="ot">&lt;-</span> <span class="fu">read_delim</span>(<span class="st">"data/raw/data_cvstm.csv"</span>,</span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>                         <span class="at">delim =</span> <span class="st">";"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Rows: 159 Columns: 3
+── Column specification ────────────────────────────────────────────────────────
+Delimiter: ";"
+dbl (3): code, csvtm_sum, cvstm_propcorrect
+
+ℹ Use `spec()` to retrieve the full column specification for this data.
+ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>data_pct <span class="ot">&lt;-</span> <span class="fu">read_delim</span>(<span class="st">"data/raw/data_pct.csv"</span>,</span>
+<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>                       <span class="at">delim =</span> <span class="st">";"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Rows: 159 Columns: 6
+── Column specification ────────────────────────────────────────────────────────
+Delimiter: ";"
+chr (1): group_all
+dbl (5): code_all, mean_rl_all, mean_e1_all, mean_d1_all, mean_d_all
+
+ℹ Use `spec()` to retrieve the full column specification for this data.
+ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a>data_vp <span class="ot">&lt;-</span> <span class="fu">read_delim</span>(<span class="st">"data/raw/data_vp.csv"</span>,</span>
+<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a>                      <span class="at">delim =</span> <span class="st">";"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Rows: 159 Columns: 3
+── Column specification ────────────────────────────────────────────────────────
+Delimiter: ";"
+dbl (3): code, vp_sum, vp_propcorrect
+
+ℹ Use `spec()` to retrieve the full column specification for this data.
+ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<pre><code>-   Verwende den von R-Studio generierten Code, und passe ihn an um einen weiteren Datensatz einzulesen (z.B. indem du den Filenamen veränderst).</code></pre>
+<div class="callout callout-style-default callout-note callout-titled" title="Lösung">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-7-contents" aria-controls="callout-7" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Lösung
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-7" class="callout-7-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a>data_mmq <span class="ot">&lt;-</span> <span class="fu">read_delim</span>(<span class="st">"data/raw/data_mmq.csv"</span>,</span>
+<span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a>                      <span class="at">delim =</span> <span class="st">";"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stderr">
 <pre><code>Rows: 159 Columns: 19
 ── Column specification ────────────────────────────────────────────────────────
@@ -587,8 +656,12 @@ dbl (19): code, question1, question2, question3, question4, question5, quest...
 <ul>
 <li>Korrigiere diesen Code und lies damit die Datei <code>data_vp</code> ein (überprüfe den Pfad und den Delimiter)</li>
 </ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="co"># data_vp &lt;- read_delim("/raw/data_vp.csv", </span></span>
+<span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a><span class="co">#     delim = ",")</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 <div class="callout callout-style-default callout-note callout-titled" title="Lösung">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-7-contents" aria-controls="callout-7" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-8-contents" aria-controls="callout-8" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -597,19 +670,16 @@ Lösung
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-7" class="callout-7-contents callout-collapse collapse">
+<div id="callout-8" class="callout-8-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Was wir dir vorgegeben hatten:</span></span>
-<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a><span class="co"># data_vp &lt;- read_delim("/raw/data_vp.csv", </span></span>
-<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a><span class="co">#    delim = ",")</span></span>
-<span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb17-5"><a href="#cb17-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Korrigierter Code:</span></span>
-<span id="cb17-6"><a href="#cb17-6" aria-hidden="true" tabindex="-1"></a>data_vp <span class="ot">&lt;-</span> <span class="fu">read_delim</span>(<span class="st">"data/raw/data_vp.csv"</span>,</span>
-<span id="cb17-7"><a href="#cb17-7" aria-hidden="true" tabindex="-1"></a>                      <span class="at">delim =</span> <span class="st">";"</span>)</span>
-<span id="cb17-8"><a href="#cb17-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb17-9"><a href="#cb17-9" aria-hidden="true" tabindex="-1"></a><span class="co"># Äquivalent:</span></span>
-<span id="cb17-10"><a href="#cb17-10" aria-hidden="true" tabindex="-1"></a>data_vp <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"data/raw/data_vp.csv"</span>) <span class="co"># da read_csv automatisch Komma als Delimiter verwendet könnt ihr euch die Spezifikation des Delimeter sparen</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb26"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Was wir dir vorgegeben hatten:</span></span>
+<span id="cb26-2"><a href="#cb26-2" aria-hidden="true" tabindex="-1"></a><span class="co"># data_vp &lt;- read_delim("/raw/data_vp.csv", </span></span>
+<span id="cb26-3"><a href="#cb26-3" aria-hidden="true" tabindex="-1"></a><span class="co">#    delim = ",")</span></span>
+<span id="cb26-4"><a href="#cb26-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb26-5"><a href="#cb26-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Korrigierter Code:</span></span>
+<span id="cb26-6"><a href="#cb26-6" aria-hidden="true" tabindex="-1"></a>data_vp <span class="ot">&lt;-</span> <span class="fu">read_delim</span>(<span class="st">"data/raw/data_vp.csv"</span>,</span>
+<span id="cb26-7"><a href="#cb26-7" aria-hidden="true" tabindex="-1"></a>                      <span class="at">delim =</span> <span class="st">";"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
 </div>
@@ -626,7 +696,7 @@ Lösung
 </ul></li>
 </ul>
 <div class="callout callout-style-default callout-note callout-titled" title="Lösung">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-8-contents" aria-controls="callout-8" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-9-contents" aria-controls="callout-9" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -635,19 +705,19 @@ Lösung
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-8" class="callout-8-contents callout-collapse collapse">
+<div id="callout-9" class="callout-9-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="co"># install.packages("readxl") # den Code führst du einmalig in deiner Console aus</span></span>
-<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(readxl)</span>
-<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a>?<span class="fu">read_excel</span>() <span class="co"># Aufruf der Dokumentation</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb27"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="co"># install.packages("readxl") # den Code führst du einmalig in deiner Console aus</span></span>
+<span id="cb27-2"><a href="#cb27-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(readxl)</span>
+<span id="cb27-3"><a href="#cb27-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-4"><a href="#cb27-4" aria-hidden="true" tabindex="-1"></a>?<span class="fu">read_excel</span>() <span class="co"># Aufruf der Dokumentation</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stderr">
 <pre><code>starte den http Server für die Hilfe fertig</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a>data_ratings <span class="ot">&lt;-</span> <span class="fu">read_excel</span>(<span class="st">"data/raw/data_ratings.xlsx"</span>) <span class="co"># erstellt von RStudio</span></span>
-<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a>data_strategies <span class="ot">&lt;-</span> <span class="fu">read_excel</span>(<span class="st">"data/raw/data_strategies.xlsx"</span>) <span class="co"># kopiert und angepasst</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb29"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a>data_ratings <span class="ot">&lt;-</span> <span class="fu">read_excel</span>(<span class="st">"data/raw/data_ratings.xlsx"</span>) <span class="co"># erstellt von RStudio</span></span>
+<span id="cb29-2"><a href="#cb29-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-3"><a href="#cb29-3" aria-hidden="true" tabindex="-1"></a>data_strategies <span class="ot">&lt;-</span> <span class="fu">read_excel</span>(<span class="st">"data/raw/data_strategies.xlsx"</span>) <span class="co"># kopiert und angepasst</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
 </div>
@@ -656,7 +726,7 @@ Lösung
 <li>Am Ende solltest du die <strong>7 verschiedene Datensätze</strong> in deinem Environment sehen.</li>
 </ul>
 <div class="callout callout-style-default callout-note callout-titled" title="Vertiefung">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-9-contents" aria-controls="callout-9" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-10-contents" aria-controls="callout-10" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -665,7 +735,7 @@ Vertiefung
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-9" class="callout-9-contents callout-collapse collapse">
+<div id="callout-10" class="callout-10-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>👉Für das Einlesen anderer Arten von Datensätzen (z.B. SPSS Dateien), siehe <a href="https://methodenlehre.github.io/einfuehrung-in-R/chapters/03-data_frames.html#daten-importieren">Kapitel 3.2</a></p>
 </div>
@@ -684,6 +754,24 @@ Vertiefung
 <h2 data-number="4.1" class="anchored" data-anchor-id="aufgaben"><span class="header-section-number">4.1</span> Aufgaben</h2>
 <section id="füge-alle-7-datensätze-mit-cbind-zusammen-und-schaue-dir-das-ergebnis-an." class="level3" data-number="4.1.1">
 <h3 data-number="4.1.1" class="anchored" data-anchor-id="füge-alle-7-datensätze-mit-cbind-zusammen-und-schaue-dir-das-ergebnis-an."><span class="header-section-number">4.1.1</span> Füge alle 7 Datensätze mit <code>cbind()</code> zusammen und schaue dir das Ergebnis an.</h3>
+<div class="callout callout-style-default callout-note callout-titled" title="Lösung">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-11-contents" aria-controls="callout-11" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Lösung
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-11" class="callout-11-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb30"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a>dat_cbind <span class="ot">&lt;-</span> <span class="fu">cbind</span>(data_mmq, data_cb, data_cvstm, data_pct, data_vp, data_ratings, data_strategies)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+</div>
+</div>
 <ul>
 <li>Was fällt dir auf?<br>
 </li>
@@ -691,6 +779,22 @@ Vertiefung
 </li>
 <li>Reflektiere: Macht das Sinn? Was sind die Gefahren, Daten auf diese Art zu mergen?</li>
 </ul>
+<div class="callout callout-style-default callout-note callout-titled" title="Lösung">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-12-contents" aria-controls="callout-12" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Lösung
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-12" class="callout-12-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Sinn ergibt das einfache “kleben” über cbind nicht. Nur für den Fall das alle Datensätze in der entsprechenden Zeile dieselbe Versuchsperson abdecken wäre das einfache zusammenkleben überhaupt zulässig. Andernfalls würden Einträge von Versuchspersonen vermischt werden.</p>
+</div>
+</div>
+</div>
 <hr>
 </section>
 <section id="versuche-es-nun-mit-full_join." class="level3" data-number="4.1.2">
@@ -705,6 +809,59 @@ Vertiefung
 <li><p>Hinweis: Im Datensatz <code>data_pct</code> heißt die Code-Variable leicht anders. Verwende deshalb <code>by = c("code_all" = "code")</code>.</p></li>
 </ul></li>
 </ul>
+<div class="callout callout-style-default callout-note callout-titled" title="Lösung">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-13-contents" aria-controls="callout-13" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Lösung
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-13" class="callout-13-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb31"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──
+✔ dplyr     1.1.4     ✔ purrr     1.1.0
+✔ forcats   1.0.1     ✔ stringr   1.5.2
+✔ ggplot2   4.0.0     ✔ tibble    3.3.0
+✔ lubridate 1.9.4     ✔ tidyr     1.3.1
+── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──
+✖ dplyr::filter() masks stats::filter()
+✖ dplyr::lag()    masks stats::lag()
+ℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb33"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Hier werden zu Beginn die beiden Datensätze data_mmq und data_cb zusammengefügt und in dat_step_1 gespeichert (über `code` wird sichergestellt, dass die passenden Zeilen hintereinander stehen)</span></span>
+<span id="cb33-2"><a href="#cb33-2" aria-hidden="true" tabindex="-1"></a>dat_step_1 <span class="ot">&lt;-</span> <span class="fu">full_join</span>(data_mmq, data_cb, <span class="at">by =</span> <span class="st">"code"</span>)</span>
+<span id="cb33-3"><a href="#cb33-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb33-4"><a href="#cb33-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Hier wird data_cvstm an dat_step_1 angefügt und in dat_step_2 gespeichert.</span></span>
+<span id="cb33-5"><a href="#cb33-5" aria-hidden="true" tabindex="-1"></a>dat_step_2 <span class="ot">&lt;-</span> <span class="fu">full_join</span>(dat_step_1, data_cvstm, <span class="at">by =</span> <span class="st">"code"</span>)</span>
+<span id="cb33-6"><a href="#cb33-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb33-7"><a href="#cb33-7" aria-hidden="true" tabindex="-1"></a><span class="co"># ...</span></span>
+<span id="cb33-8"><a href="#cb33-8" aria-hidden="true" tabindex="-1"></a>dat_step_3 <span class="ot">&lt;-</span> <span class="fu">full_join</span>(dat_step_2, data_pct, <span class="at">by =</span> <span class="fu">c</span>(<span class="st">"code"</span> <span class="ot">=</span> <span class="st">"code_all"</span>))</span>
+<span id="cb33-9"><a href="#cb33-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb33-10"><a href="#cb33-10" aria-hidden="true" tabindex="-1"></a>dat_step_4 <span class="ot">&lt;-</span> <span class="fu">full_join</span>(dat_step_3, data_vp, <span class="at">by =</span> <span class="st">"code"</span>)</span>
+<span id="cb33-11"><a href="#cb33-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb33-12"><a href="#cb33-12" aria-hidden="true" tabindex="-1"></a>dat_step_5 <span class="ot">&lt;-</span> <span class="fu">full_join</span>(dat_step_4, data_ratings, <span class="at">by =</span> <span class="st">"code"</span>)</span>
+<span id="cb33-13"><a href="#cb33-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb33-14"><a href="#cb33-14" aria-hidden="true" tabindex="-1"></a>dat_full <span class="ot">&lt;-</span> <span class="fu">full_join</span>(dat_step_5, data_strategies, <span class="at">by =</span> <span class="st">"code"</span>)</span>
+<span id="cb33-15"><a href="#cb33-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb33-16"><a href="#cb33-16" aria-hidden="true" tabindex="-1"></a><span class="co"># Eine alternative Schreibweise (welche die Pipe verwendet die wir erst noch näher kennenlernen werden):</span></span>
+<span id="cb33-17"><a href="#cb33-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb33-18"><a href="#cb33-18" aria-hidden="true" tabindex="-1"></a>dat_full <span class="ot">&lt;-</span> data_mmq <span class="sc">%&gt;%</span></span>
+<span id="cb33-19"><a href="#cb33-19" aria-hidden="true" tabindex="-1"></a>  <span class="fu">full_join</span>(data_cb, <span class="at">by =</span> <span class="st">"code"</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb33-20"><a href="#cb33-20" aria-hidden="true" tabindex="-1"></a>  <span class="fu">full_join</span>(data_cvstm, <span class="at">by =</span> <span class="st">"code"</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb33-21"><a href="#cb33-21" aria-hidden="true" tabindex="-1"></a>  <span class="fu">full_join</span>(data_pct, <span class="at">by =</span> <span class="fu">c</span>(<span class="st">"code"</span> <span class="ot">=</span> <span class="st">"code_all"</span>)) <span class="sc">%&gt;%</span></span>
+<span id="cb33-22"><a href="#cb33-22" aria-hidden="true" tabindex="-1"></a>  <span class="fu">full_join</span>(data_vp, <span class="at">by =</span> <span class="st">"code"</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb33-23"><a href="#cb33-23" aria-hidden="true" tabindex="-1"></a>  <span class="fu">full_join</span>(data_ratings, <span class="at">by =</span> <span class="st">"code"</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb33-24"><a href="#cb33-24" aria-hidden="true" tabindex="-1"></a>  <span class="fu">full_join</span>(data_strategies, <span class="at">by =</span> <span class="st">"code"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+</div>
+</div>
 <hr>
 </section>
 <section id="inspiziere-deinen-zusammengefügten-datensatz-dat_full" class="level3" data-number="4.1.3">
@@ -712,11 +869,43 @@ Vertiefung
 <ul>
 <li>🔍Überprüfe: Wie viele Zeilen und Spalten hat dein Datensatz? Verwende: <code>ncol()</code> , <code>nrow()</code>, <code>dim()</code>
 <ul>
-<li><p>Stimmt die Anzahl der Zeilen mit der Anzahl der Versuchspersonen aus dem Paper überein?</p></li>
-<li><p>Lasse dir die Variablenamen ausgeben mit <code>names()</code></p></li>
+<li>Stimmt die Anzahl der Zeilen mit der Anzahl der Versuchspersonen aus dem Paper überein?</li>
 </ul></li>
+</ul>
+<div class="callout callout-style-default callout-note callout-titled" title="Lösung">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-14-contents" aria-controls="callout-14" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Lösung
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-14" class="callout-14-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb34"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ncol</span>(dat_full) <span class="co"># Anzahl der Spalten</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 36</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb36"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb36-1"><a href="#cb36-1" aria-hidden="true" tabindex="-1"></a><span class="fu">nrow</span>(dat_full) <span class="co"># Anzahl der Zeilen</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 159</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb38"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb38-1"><a href="#cb38-1" aria-hidden="true" tabindex="-1"></a><span class="fu">dim</span>(dat_full)  <span class="co"># Anzahl der Zeilen und Spalten</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 159  36</code></pre>
+</div>
+</div>
+<p>Der vollständige Datensatz enthält Informationen von 159 Versuchspersonen. Das entspricht der Angabe aus dem Paper von Grinschgl et al., 2020.</p>
+</div>
+</div>
+</div>
+<ul>
 <li>👀Verschaffe dir eine Überblick über deinen Datensatz mit den Funktionen, die wir schon im letzten Hands On getestet haben:
 <ul>
+<li>Lasse dir die Variablenamen ausgeben mit <code>names()</code></li>
 <li><code>head()</code></li>
 <li><code>glimpse()</code></li>
 <li><code>str()</code></li>
@@ -725,13 +914,366 @@ Vertiefung
 </ul></li>
 <li>Gibt es redundante oder doppelte Variablen?</li>
 </ul>
+<div class="callout callout-style-default callout-note callout-titled" title="Lösung">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-15-contents" aria-controls="callout-15" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Lösung
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-15" class="callout-15-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb40"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb40-1"><a href="#cb40-1" aria-hidden="true" tabindex="-1"></a><span class="fu">names</span>(dat_full)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code> [1] "code"              "question1"         "question2"        
+ [4] "question3"         "question4"         "question5"        
+ [7] "question6"         "question7"         "question8"        
+[10] "question9"         "question10"        "question11"       
+[13] "question12"        "question13"        "question14"       
+[16] "question15"        "question16"        "question17"       
+[19] "question18"        "cb_sum"            "cb_propcorrect"   
+[22] "csvtm_sum"         "cvstm_propcorrect" "group_all"        
+[25] "mean_rl_all"       "mean_e1_all"       "mean_d1_all"      
+[28] "mean_d_all"        "vp_sum"            "vp_propcorrect"   
+[31] "pre1"              "pre2"              "pre3"             
+[34] "pre4"              "post"              "strategies"       </code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb42"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb42-1"><a href="#cb42-1" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(dat_full)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 6 × 36
+   code question1 question2 question3 question4 question5 question6 question7
+  &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;
+1     1         2         3         3         3         2         3         3
+2     2         3         4         3         4         3         3         3
+3     3         2         3         2         1         2         2         2
+4     4         1         2         2         3         1         2         2
+5     5         3         4         4         2         4         4         4
+6     6         1         3         3         4         3         3         3
+# ℹ 28 more variables: question8 &lt;dbl&gt;, question9 &lt;dbl&gt;, question10 &lt;dbl&gt;,
+#   question11 &lt;dbl&gt;, question12 &lt;dbl&gt;, question13 &lt;dbl&gt;, question14 &lt;dbl&gt;,
+#   question15 &lt;dbl&gt;, question16 &lt;dbl&gt;, question17 &lt;dbl&gt;, question18 &lt;dbl&gt;,
+#   cb_sum &lt;dbl&gt;, cb_propcorrect &lt;dbl&gt;, csvtm_sum &lt;dbl&gt;,
+#   cvstm_propcorrect &lt;dbl&gt;, group_all &lt;chr&gt;, mean_rl_all &lt;dbl&gt;,
+#   mean_e1_all &lt;dbl&gt;, mean_d1_all &lt;dbl&gt;, mean_d_all &lt;dbl&gt;, vp_sum &lt;dbl&gt;,
+#   vp_propcorrect &lt;dbl&gt;, pre1 &lt;dbl&gt;, pre2 &lt;dbl&gt;, pre3 &lt;dbl&gt;, pre4 &lt;dbl&gt;, …</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb44"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb44-1"><a href="#cb44-1" aria-hidden="true" tabindex="-1"></a><span class="fu">glimpse</span>(dat_full)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Rows: 159
+Columns: 36
+$ code              &lt;dbl&gt; 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 1…
+$ question1         &lt;dbl&gt; 2, 3, 2, 1, 3, 1, 1, 1, 2, 1, 4, 2, 3, 3, 3, 0, 0, 1…
+$ question2         &lt;dbl&gt; 3, 4, 3, 2, 4, 3, 3, 2, 3, 4, 2, 3, 4, 3, 4, 1, 1, 4…
+$ question3         &lt;dbl&gt; 3, 3, 2, 2, 4, 3, 3, 3, 3, 4, 4, 3, 4, 4, 3, 2, 1, 3…
+$ question4         &lt;dbl&gt; 3, 4, 1, 3, 2, 4, 1, 3, 3, 4, 4, 2, 4, 3, 3, 1, 1, 3…
+$ question5         &lt;dbl&gt; 2, 3, 2, 1, 4, 3, 2, 2, 3, 3, 3, 2, 3, 3, 4, 0, 0, 3…
+$ question6         &lt;dbl&gt; 3, 3, 2, 2, 4, 3, 2, 1, 3, 4, 3, 1, 3, 3, 3, 1, 0, 3…
+$ question7         &lt;dbl&gt; 3, 3, 2, 2, 4, 3, 0, 2, 3, 4, 4, 1, 4, 3, 3, 1, 1, 4…
+$ question8         &lt;dbl&gt; 3, 3, 2, 0, 3, 4, 1, 3, 3, 3, 4, 3, 4, 3, 3, 0, 2, 3…
+$ question9         &lt;dbl&gt; 2, 3, 1, 2, 1, 4, 2, 1, 3, 2, 0, 0, 2, 1, 3, 3, 1, 1…
+$ question10        &lt;dbl&gt; 3, 3, 1, 3, 4, 4, 1, 2, 3, 4, 3, 1, 4, 3, 4, 0, 1, 4…
+$ question11        &lt;dbl&gt; 3, 3, 1, 1, 3, 3, 1, 1, 3, 3, 3, 1, 3, 2, 3, 1, 2, 2…
+$ question12        &lt;dbl&gt; 3, 3, 2, 1, 3, 3, 1, 2, 3, 3, 4, 1, 3, 3, 3, 1, 1, 3…
+$ question13        &lt;dbl&gt; 2, 3, 1, 3, 1, 2, 1, 1, 2, 2, 3, 0, 2, 2, 1, 3, 1, 3…
+$ question14        &lt;dbl&gt; 2, 2, 0, 2, 1, 3, 0, 1, 2, 3, 3, 0, 3, 3, 3, 2, 0, 3…
+$ question15        &lt;dbl&gt; 3, 4, 2, 2, 4, 3, 1, 4, 3, 4, 4, 3, 4, 3, 4, 1, 2, 4…
+$ question16        &lt;dbl&gt; 2, 4, 1, 1, 2, 3, 1, 1, 2, 3, 3, 0, 2, 2, 3, 1, 0, 1…
+$ question17        &lt;dbl&gt; 3, 3, 2, 1, 3, 3, 1, 1, 2, 3, 2, 2, 2, 2, 3, 0, 1, 3…
+$ question18        &lt;dbl&gt; 2, 3, 0, 0, 4, 3, 1, 1, 3, 4, 3, 1, 4, 3, 3, 0, 1, 3…
+$ cb_sum            &lt;dbl&gt; 26, 27, 30, 27, 25, 23, 28, 27, 30, 26, 29, 29, 26, …
+$ cb_propcorrect    &lt;dbl&gt; 0.7222222, 0.7500000, 0.8333333, 0.7500000, 0.694444…
+$ csvtm_sum         &lt;dbl&gt; 70, 73, 93, 83, 79, 72, 94, 85, 72, 90, 96, 91, 106,…
+$ cvstm_propcorrect &lt;dbl&gt; 0.5833333, 0.6083333, 0.7750000, 0.6916667, 0.658333…
+$ group_all         &lt;chr&gt; "above", "control", "below", "below", "above", "cont…
+$ mean_rl_all       &lt;dbl&gt; 5.95, 5.35, 4.80, 6.55, 6.15, 6.05, 5.00, 5.40, 4.50…
+$ mean_e1_all       &lt;dbl&gt; 3.05, 3.25, 3.25, 2.55, 2.50, 3.05, 3.30, 3.30, 3.45…
+$ mean_d1_all       &lt;dbl&gt; 3.900720, 16.393639, 5.576016, 4.738268, 5.529630, 8…
+$ mean_d_all        &lt;dbl&gt; 32.77313, 71.17568, 36.18764, 44.01890, 42.33930, 45…
+$ vp_sum            &lt;dbl&gt; 33, 27, 33, 31, 32, 24, 28, 27, 28, 26, 34, 18, 32, …
+$ vp_propcorrect    &lt;dbl&gt; 0.9166667, 0.7500000, 0.9166667, 0.8611111, 0.888888…
+$ pre1              &lt;dbl&gt; 6.2, 5.5, 8.7, 5.2, 8.1, 4.9, 6.8, 6.5, 5.2, 6.6, 6.…
+$ pre2              &lt;dbl&gt; 7.5, 5.5, 4.5, 0.9, 4.6, 3.3, 4.2, 1.8, 6.6, 1.5, 7.…
+$ pre3              &lt;dbl&gt; 7.4, 2.5, 2.5, 1.1, 6.7, 2.9, 7.0, 1.9, 6.3, 1.8, 6.…
+$ pre4              &lt;dbl&gt; 6.2, 4.4, 2.5, 0.6, 6.2, 2.1, 2.0, 2.3, 6.5, 2.0, 8.…
+$ post              &lt;dbl&gt; 7.0, 2.1, 3.2, 0.6, 6.3, 2.2, 5.2, 2.1, 7.0, 1.8, 7.…
+$ strategies        &lt;dbl&gt; 1, 1, 2, 2, 1, 2, 2, 2, 1, 2, 2, 2, 1, 2, 1, 2, 1, 1…</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb46"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb46-1"><a href="#cb46-1" aria-hidden="true" tabindex="-1"></a><span class="fu">str</span>(dat_full)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>spc_tbl_ [159 × 36] (S3: spec_tbl_df/tbl_df/tbl/data.frame)
+ $ code             : num [1:159] 1 2 3 4 5 6 7 8 9 10 ...
+ $ question1        : num [1:159] 2 3 2 1 3 1 1 1 2 1 ...
+ $ question2        : num [1:159] 3 4 3 2 4 3 3 2 3 4 ...
+ $ question3        : num [1:159] 3 3 2 2 4 3 3 3 3 4 ...
+ $ question4        : num [1:159] 3 4 1 3 2 4 1 3 3 4 ...
+ $ question5        : num [1:159] 2 3 2 1 4 3 2 2 3 3 ...
+ $ question6        : num [1:159] 3 3 2 2 4 3 2 1 3 4 ...
+ $ question7        : num [1:159] 3 3 2 2 4 3 0 2 3 4 ...
+ $ question8        : num [1:159] 3 3 2 0 3 4 1 3 3 3 ...
+ $ question9        : num [1:159] 2 3 1 2 1 4 2 1 3 2 ...
+ $ question10       : num [1:159] 3 3 1 3 4 4 1 2 3 4 ...
+ $ question11       : num [1:159] 3 3 1 1 3 3 1 1 3 3 ...
+ $ question12       : num [1:159] 3 3 2 1 3 3 1 2 3 3 ...
+ $ question13       : num [1:159] 2 3 1 3 1 2 1 1 2 2 ...
+ $ question14       : num [1:159] 2 2 0 2 1 3 0 1 2 3 ...
+ $ question15       : num [1:159] 3 4 2 2 4 3 1 4 3 4 ...
+ $ question16       : num [1:159] 2 4 1 1 2 3 1 1 2 3 ...
+ $ question17       : num [1:159] 3 3 2 1 3 3 1 1 2 3 ...
+ $ question18       : num [1:159] 2 3 0 0 4 3 1 1 3 4 ...
+ $ cb_sum           : num [1:159] 26 27 30 27 25 23 28 27 30 26 ...
+ $ cb_propcorrect   : num [1:159] 0.722 0.75 0.833 0.75 0.694 ...
+ $ csvtm_sum        : num [1:159] 70 73 93 83 79 72 94 85 72 90 ...
+ $ cvstm_propcorrect: num [1:159] 0.583 0.608 0.775 0.692 0.658 ...
+ $ group_all        : chr [1:159] "above" "control" "below" "below" ...
+ $ mean_rl_all      : num [1:159] 5.95 5.35 4.8 6.55 6.15 6.05 5 5.4 4.5 6 ...
+ $ mean_e1_all      : num [1:159] 3.05 3.25 3.25 2.55 2.5 3.05 3.3 3.3 3.45 2.65 ...
+ $ mean_d1_all      : num [1:159] 3.9 16.39 5.58 4.74 5.53 ...
+ $ mean_d_all       : num [1:159] 32.8 71.2 36.2 44 42.3 ...
+ $ vp_sum           : num [1:159] 33 27 33 31 32 24 28 27 28 26 ...
+ $ vp_propcorrect   : num [1:159] 0.917 0.75 0.917 0.861 0.889 ...
+ $ pre1             : num [1:159] 6.2 5.5 8.7 5.2 8.1 4.9 6.8 6.5 5.2 6.6 ...
+ $ pre2             : num [1:159] 7.5 5.5 4.5 0.9 4.6 3.3 4.2 1.8 6.6 1.5 ...
+ $ pre3             : num [1:159] 7.4 2.5 2.5 1.1 6.7 2.9 7 1.9 6.3 1.8 ...
+ $ pre4             : num [1:159] 6.2 4.4 2.5 0.6 6.2 2.1 2 2.3 6.5 2 ...
+ $ post             : num [1:159] 7 2.1 3.2 0.6 6.3 2.2 5.2 2.1 7 1.8 ...
+ $ strategies       : num [1:159] 1 1 2 2 1 2 2 2 1 2 ...
+ - attr(*, "spec")=
+  .. cols(
+  ..   code = col_double(),
+  ..   question1 = col_double(),
+  ..   question2 = col_double(),
+  ..   question3 = col_double(),
+  ..   question4 = col_double(),
+  ..   question5 = col_double(),
+  ..   question6 = col_double(),
+  ..   question7 = col_double(),
+  ..   question8 = col_double(),
+  ..   question9 = col_double(),
+  ..   question10 = col_double(),
+  ..   question11 = col_double(),
+  ..   question12 = col_double(),
+  ..   question13 = col_double(),
+  ..   question14 = col_double(),
+  ..   question15 = col_double(),
+  ..   question16 = col_double(),
+  ..   question17 = col_double(),
+  ..   question18 = col_double()
+  .. )
+ - attr(*, "problems")=&lt;externalptr&gt; </code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb48"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb48-1"><a href="#cb48-1" aria-hidden="true" tabindex="-1"></a>dat_full</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 159 × 36
+    code question1 question2 question3 question4 question5 question6 question7
+   &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;
+ 1     1         2         3         3         3         2         3         3
+ 2     2         3         4         3         4         3         3         3
+ 3     3         2         3         2         1         2         2         2
+ 4     4         1         2         2         3         1         2         2
+ 5     5         3         4         4         2         4         4         4
+ 6     6         1         3         3         4         3         3         3
+ 7     7         1         3         3         1         2         2         0
+ 8     8         1         2         3         3         2         1         2
+ 9     9         2         3         3         3         3         3         3
+10    10         1         4         4         4         3         4         4
+# ℹ 149 more rows
+# ℹ 28 more variables: question8 &lt;dbl&gt;, question9 &lt;dbl&gt;, question10 &lt;dbl&gt;,
+#   question11 &lt;dbl&gt;, question12 &lt;dbl&gt;, question13 &lt;dbl&gt;, question14 &lt;dbl&gt;,
+#   question15 &lt;dbl&gt;, question16 &lt;dbl&gt;, question17 &lt;dbl&gt;, question18 &lt;dbl&gt;,
+#   cb_sum &lt;dbl&gt;, cb_propcorrect &lt;dbl&gt;, csvtm_sum &lt;dbl&gt;,
+#   cvstm_propcorrect &lt;dbl&gt;, group_all &lt;chr&gt;, mean_rl_all &lt;dbl&gt;,
+#   mean_e1_all &lt;dbl&gt;, mean_d1_all &lt;dbl&gt;, mean_d_all &lt;dbl&gt;, vp_sum &lt;dbl&gt;, …</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb50"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb50-1"><a href="#cb50-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(dat_full)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>      code         question1       question2       question3    
+ Min.   :  1.0   Min.   :0.000   Min.   :0.000   Min.   :0.000  
+ 1st Qu.: 40.5   1st Qu.:1.500   1st Qu.:3.000   1st Qu.:3.000  
+ Median : 80.0   Median :2.000   Median :3.000   Median :3.000  
+ Mean   : 80.0   Mean   :2.195   Mean   :3.214   Mean   :3.126  
+ 3rd Qu.:119.5   3rd Qu.:3.000   3rd Qu.:4.000   3rd Qu.:4.000  
+ Max.   :159.0   Max.   :4.000   Max.   :4.000   Max.   :4.000  
+   question4       question5       question6       question7    
+ Min.   :0.000   Min.   :0.000   Min.   :0.000   Min.   :0.000  
+ 1st Qu.:2.000   1st Qu.:2.000   1st Qu.:2.000   1st Qu.:2.000  
+ Median :3.000   Median :3.000   Median :3.000   Median :3.000  
+ Mean   :2.811   Mean   :2.509   Mean   :2.491   Mean   :2.623  
+ 3rd Qu.:4.000   3rd Qu.:3.000   3rd Qu.:3.000   3rd Qu.:3.000  
+ Max.   :4.000   Max.   :4.000   Max.   :4.000   Max.   :4.000  
+   question8       question9       question10      question11   
+ Min.   :0.000   Min.   :0.000   Min.   :0.000   Min.   :0.000  
+ 1st Qu.:3.000   1st Qu.:1.000   1st Qu.:2.000   1st Qu.:2.000  
+ Median :3.000   Median :2.000   Median :3.000   Median :3.000  
+ Mean   :2.943   Mean   :1.994   Mean   :2.843   Mean   :2.692  
+ 3rd Qu.:4.000   3rd Qu.:3.000   3rd Qu.:4.000   3rd Qu.:4.000  
+ Max.   :4.000   Max.   :4.000   Max.   :4.000   Max.   :4.000  
+   question12      question13      question14      question15   
+ Min.   :0.000   Min.   :0.000   Min.   :0.000   Min.   :0.000  
+ 1st Qu.:2.000   1st Qu.:1.000   1st Qu.:1.000   1st Qu.:3.000  
+ Median :3.000   Median :2.000   Median :2.000   Median :3.000  
+ Mean   :2.516   Mean   :1.937   Mean   :1.962   Mean   :3.182  
+ 3rd Qu.:3.000   3rd Qu.:3.000   3rd Qu.:3.000   3rd Qu.:4.000  
+ Max.   :4.000   Max.   :4.000   Max.   :4.000   Max.   :4.000  
+   question16      question17      question18        cb_sum     
+ Min.   :0.000   Min.   :0.000   Min.   :0.000   Min.   :18.00  
+ 1st Qu.:1.000   1st Qu.:2.000   1st Qu.:2.000   1st Qu.:26.00  
+ Median :1.000   Median :2.000   Median :3.000   Median :27.00  
+ Mean   :1.736   Mean   :2.327   Mean   :2.748   Mean   :27.49  
+ 3rd Qu.:3.000   3rd Qu.:3.000   3rd Qu.:4.000   3rd Qu.:30.00  
+ Max.   :4.000   Max.   :4.000   Max.   :4.000   Max.   :35.00  
+ cb_propcorrect     csvtm_sum      cvstm_propcorrect  group_all        
+ Min.   :0.5000   Min.   : 70.00   Min.   :0.5833    Length:159        
+ 1st Qu.:0.7222   1st Qu.: 81.00   1st Qu.:0.6750    Class :character  
+ Median :0.7500   Median : 88.00   Median :0.7333    Mode  :character  
+ Mean   :0.7636   Mean   : 87.96   Mean   :0.7330                      
+ 3rd Qu.:0.8333   3rd Qu.: 93.00   3rd Qu.:0.7750                      
+ Max.   :0.9722   Max.   :113.00   Max.   :0.9417                      
+  mean_rl_all     mean_e1_all     mean_d1_all       mean_d_all   
+ Min.   :2.700   Min.   :1.650   Min.   : 1.903   Min.   :27.54  
+ 1st Qu.:4.475   1st Qu.:2.825   1st Qu.: 4.612   1st Qu.:35.50  
+ Median :4.950   Median :3.250   Median : 5.576   Median :39.88  
+ Mean   :5.209   Mean   :3.261   Mean   : 6.903   Mean   :42.20  
+ 3rd Qu.:5.975   3rd Qu.:3.600   3rd Qu.: 8.109   3rd Qu.:46.16  
+ Max.   :8.450   Max.   :5.550   Max.   :19.526   Max.   :77.57  
+     vp_sum      vp_propcorrect        pre1            pre2      
+ Min.   :18.00   Min.   :0.5000   Min.   :0.600   Min.   :0.500  
+ 1st Qu.:28.00   1st Qu.:0.7778   1st Qu.:4.750   1st Qu.:3.350  
+ Median :31.00   Median :0.8611   Median :5.400   Median :4.800  
+ Mean   :30.29   Mean   :0.8414   Mean   :5.441   Mean   :4.662  
+ 3rd Qu.:33.00   3rd Qu.:0.9167   3rd Qu.:6.300   3rd Qu.:5.900  
+ Max.   :36.00   Max.   :1.0000   Max.   :9.100   Max.   :8.400  
+      pre3            pre4            post         strategies   
+ Min.   :0.400   Min.   :0.500   Min.   :0.400   Min.   :1.000  
+ 1st Qu.:2.600   1st Qu.:3.150   1st Qu.:3.100   1st Qu.:1.000  
+ Median :4.600   Median :4.900   Median :5.000   Median :2.000  
+ Mean   :4.401   Mean   :4.714   Mean   :4.727   Mean   :1.717  
+ 3rd Qu.:6.000   3rd Qu.:6.200   3rd Qu.:6.200   3rd Qu.:2.000  
+ Max.   :8.800   Max.   :9.600   Max.   :9.300   Max.   :3.000  </code></pre>
+</div>
+</div>
+<p>Beim mergen der Datensätze haben sich bei dir eventuell doppelte Spalten für <code>code</code> gebildet. In diesem Fall scheint aber alles geklappt zu haben und es gibt keine doppelten Spalten bzw. Variablen.</p>
+</div>
+</div>
+</div>
 <p><strong>Auf einzelne Werte zugreiffen:</strong></p>
 <ul>
-<li><p>Greife auf den <strong>ersten Wert der ersten Spalte</strong> zu: Verwende eckige Klammern. Der erste Wert in der Klammer steht für die Zeile, der zweite für die Spalte.</p></li>
-<li><p>Greife auf die Werte der <strong>Spalten 1–15 in der ersten Zeile</strong> zu. Verwende wieder eckige Klammern und den Bereichsoperator <code>1:15</code>.</p></li>
-<li><p>Lasse dir alle Werte der Variable <code>"mean_rl_all"</code> ausgeben. Auf Variablen greifst du mit <code>$</code> zu.</p></li>
-<li><p>Greife auf die <strong>ersten 10 Werte der Variable <code>"question1"</code></strong> zu. Verwende dazu den <code>$</code>-Operator in Kombination mit dem Bereichsoperator <code>1:10</code>.</p></li>
+<li>Greife auf den <strong>ersten Wert der ersten Spalte</strong> zu: Verwende eckige Klammern. Der erste Wert in der Klammer steht für die Zeile, der zweite für die Spalte.</li>
 </ul>
+<div class="callout callout-style-default callout-note callout-titled" title="Lösung">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-16-contents" aria-controls="callout-16" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Lösung
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-16" class="callout-16-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb52"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb52-1"><a href="#cb52-1" aria-hidden="true" tabindex="-1"></a>dat_full[<span class="dv">1</span>, <span class="dv">1</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 1 × 1
+   code
+  &lt;dbl&gt;
+1     1</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<ul>
+<li>Greife auf die Werte der <strong>Spalten 1–15 in der ersten Zeile</strong> zu. Verwende wieder eckige Klammern und den Bereichsoperator <code>1:15</code>.</li>
+</ul>
+<div class="callout callout-style-default callout-note callout-titled" title="Lösung">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-17-contents" aria-controls="callout-17" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Lösung
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-17" class="callout-17-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb54"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb54-1"><a href="#cb54-1" aria-hidden="true" tabindex="-1"></a>dat_full[<span class="dv">1</span>, <span class="dv">1</span><span class="sc">:</span><span class="dv">15</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 1 × 15
+   code question1 question2 question3 question4 question5 question6 question7
+  &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;
+1     1         2         3         3         3         2         3         3
+# ℹ 7 more variables: question8 &lt;dbl&gt;, question9 &lt;dbl&gt;, question10 &lt;dbl&gt;,
+#   question11 &lt;dbl&gt;, question12 &lt;dbl&gt;, question13 &lt;dbl&gt;, question14 &lt;dbl&gt;</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<ul>
+<li>Lasse dir alle Werte der Variable <code>"mean_rl_all"</code> ausgeben. Auf Variablen greifst du mit <code>$</code> zu.</li>
+</ul>
+<div class="callout callout-style-default callout-note callout-titled" title="Lösung">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-18-contents" aria-controls="callout-18" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Lösung
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-18" class="callout-18-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb56"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb56-1"><a href="#cb56-1" aria-hidden="true" tabindex="-1"></a>dat_full<span class="sc">$</span>mean_rl_all</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>  [1] 5.95 5.35 4.80 6.55 6.15 6.05 5.00 5.40 4.50 6.00 4.65 4.60 4.50 5.05 3.95
+ [16] 3.20 3.85 3.95 5.05 4.65 4.90 5.90 6.20 3.30 5.55 6.00 4.70 4.25 8.00 3.75
+ [31] 3.85 4.60 4.65 7.65 5.45 5.70 6.75 6.45 4.90 7.30 4.45 4.15 4.95 3.75 4.15
+ [46] 4.10 4.25 5.55 8.45 6.30 4.60 4.85 5.40 4.30 4.90 6.45 3.70 3.95 4.75 2.90
+ [61] 7.50 3.55 6.35 6.60 3.70 6.15 4.00 3.45 6.15 7.35 6.80 4.70 6.70 4.75 5.90
+ [76] 4.50 4.40 3.35 4.75 5.60 5.80 7.65 6.00 4.30 4.70 4.95 5.00 5.00 3.85 5.90
+ [91] 5.80 6.10 4.65 4.85 4.40 6.10 4.40 4.90 5.90 3.60 4.95 6.75 4.85 4.05 3.20
+[106] 5.95 4.35 4.60 7.75 4.60 7.90 6.95 6.55 2.70 4.75 5.65 7.05 4.80 4.90 6.35
+[121] 4.95 6.00 5.55 7.00 5.15 5.80 5.90 5.30 4.55 5.55 5.75 4.50 5.35 4.25 4.90
+[136] 4.50 4.45 4.20 6.30 6.25 6.80 5.50 5.15 4.50 4.65 4.25 5.45 4.60 6.05 5.45
+[151] 5.10 5.90 5.05 4.45 5.80 3.45 5.30 6.75 4.20</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<ul>
+<li>Greife auf die <strong>ersten 10 Werte der Variable <code>"question1"</code></strong> zu. Verwende dazu den <code>$</code>-Operator in Kombination mit dem Bereichsoperator <code>1:10</code>.</li>
+</ul>
+<div class="callout callout-style-default callout-note callout-titled" title="Lösung">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-19-contents" aria-controls="callout-19" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Lösung
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-19" class="callout-19-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb58"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb58-1"><a href="#cb58-1" aria-hidden="true" tabindex="-1"></a>dat_full<span class="sc">$</span>question1[<span class="dv">1</span><span class="sc">:</span><span class="dv">10</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code> [1] 2 3 2 1 3 1 1 1 2 1</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
 <hr>
 </section>
 </section>
@@ -741,6 +1283,24 @@ Vertiefung
 <section id="speichere-dat_full-in-deinem-ordner-data-als-csv-datei-ab" class="level3" data-number="5.0.1">
 <h3 data-number="5.0.1" class="anchored" data-anchor-id="speichere-dat_full-in-deinem-ordner-data-als-csv-datei-ab"><span class="header-section-number">5.0.1</span> Speichere <code>dat_full</code> in deinem Ordner <code>"data"</code> als CSV-Datei ab</h3>
 <p>Verwende dafür die Funktion <code>write.csv()</code>. Du musst zwei Argumente angeben: Welcher Datensatz aus deinem Environment gespeichert werden soll und unter welchem Pfad (inklusive Dateiname) er abgelegt wird. Bei Unklarheiten schaue dir das <a href="https://rstudio.github.io/cheatsheets/html/data-import.html">Cheatsheet</a> oder die Hilfefunktion an. Überprüfe nach dem speichern, ob dein Datensatz im richtigen Ordner zu finden ist.</p>
+<div class="callout callout-style-default callout-note callout-titled" title="Lösung">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-20-contents" aria-controls="callout-20" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Lösung
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-20" class="callout-20-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb60"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb60-1"><a href="#cb60-1" aria-hidden="true" tabindex="-1"></a><span class="fu">write.csv</span>(dat_full, <span class="st">"data/processed/dat_full.csv"</span>, <span class="at">row.names =</span> <span class="cn">FALSE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+</div>
+</div>
 <p>👉 Für diesen Datensatz sollt ihr anschließend das <strong>Codebook</strong> erstellen.</p>
 <hr>
 </section>
@@ -752,16 +1312,39 @@ Vertiefung
 <p>Wir haben in diesen Übungen bereits einige Funktionen verwendet (z. B. <code>sum()</code> oder <code>sort()</code>). Funktionen bestehen aus einem Namen und Argumenten. In diesem Beispiel wird die Funktion <code>sort()</code> aufgerufen. Die Argumente, die dafür benötigt werden, sind <code>first_vector</code> und <code>decreasing = TRUE</code>. Die meisten Funktionen haben <em>Defaults</em>, also Argumente mit einer Voreinstellung. Wenn man diese nicht verändern möchte, müssen sie nicht explizit angegeben werden. <code>sort()</code> hat als Default <code>decreasing = FALSE</code>. Deswegen müssen wir, um die höchsten Werte des Vektors zu bestimmen, diesen Default umstellen. Argumente ohne Defaults müssen zwingend angegben werden).</p>
 <p>Die Defaults von Funktionen lassen sich über die Hilfefunktion nachschauen. Diese kann entweder im Tab <em>Help</em> geöffnet werden oder direkt über die Konsole mit <code>?Funktionsname</code>.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a>first_vector <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">22342</span>, <span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">6</span>, <span class="dv">7</span>, <span class="dv">23234</span>, <span class="dv">342</span>, <span class="dv">342</span>)</span>
-<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a>highest_values_1 <span class="ot">&lt;-</span> <span class="fu">sort</span>(first_vector)[<span class="dv">1</span><span class="sc">:</span><span class="dv">2</span>]</span>
-<span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a>highest_values <span class="ot">&lt;-</span> <span class="fu">sort</span>(first_vector, <span class="at">decreasing =</span> <span class="cn">TRUE</span>)[<span class="dv">1</span><span class="sc">:</span><span class="dv">2</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb61"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb61-1"><a href="#cb61-1" aria-hidden="true" tabindex="-1"></a>first_vector <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">22342</span>, <span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">6</span>, <span class="dv">7</span>, <span class="dv">23234</span>, <span class="dv">342</span>, <span class="dv">342</span>)</span>
+<span id="cb61-2"><a href="#cb61-2" aria-hidden="true" tabindex="-1"></a>highest_values_1 <span class="ot">&lt;-</span> <span class="fu">sort</span>(first_vector)[<span class="dv">1</span><span class="sc">:</span><span class="dv">2</span>]</span>
+<span id="cb61-3"><a href="#cb61-3" aria-hidden="true" tabindex="-1"></a>highest_values <span class="ot">&lt;-</span> <span class="fu">sort</span>(first_vector, <span class="at">decreasing =</span> <span class="cn">TRUE</span>)[<span class="dv">1</span><span class="sc">:</span><span class="dv">2</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Bei vielen Funktionen werden die <strong>Namen der Argumente</strong> weggelassen.</p>
 <p>Welche Argumente werden hier übergeben? Schreibe die Funktion mit den vollständigen Argumentnamen aus:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a> <span class="fu">seq</span>(<span class="sc">-</span><span class="dv">4</span>, <span class="dv">11</span>, <span class="dv">3</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb62"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb62-1"><a href="#cb62-1" aria-hidden="true" tabindex="-1"></a> <span class="fu">seq</span>(<span class="sc">-</span><span class="dv">4</span>, <span class="dv">11</span>, <span class="dv">3</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] -4 -1  2  5  8 11</code></pre>
+</div>
+</div>
+<div class="callout callout-style-default callout-note callout-titled" title="Lösung">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-21-contents" aria-controls="callout-21" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Lösung
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-21" class="callout-21-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb64"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb64-1"><a href="#cb64-1" aria-hidden="true" tabindex="-1"></a>?<span class="fu">sort</span>() <span class="co"># Aufruf der Dokumentation um die Argumente, ihre Reihenfolge und ggf. auch ihre Defaults zu sehen</span></span>
+<span id="cb64-2"><a href="#cb64-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb64-3"><a href="#cb64-3" aria-hidden="true" tabindex="-1"></a><span class="fu">seq</span>(<span class="at">from =</span> <span class="sc">-</span><span class="dv">4</span>, <span class="at">to =</span> <span class="dv">11</span>, <span class="at">by =</span> <span class="dv">3</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] -4 -1  2  5  8 11</code></pre>
+</div>
+</div>
+</div>
 </div>
 </div>
 <p>Wenn die Argumente nicht explizit benannt werden, ist die Reihenfolge entscheidend. Wenn du die Argumente explizit angibst, kannst du die Reihenfolge frei wählen.</p>
@@ -769,12 +1352,34 @@ Vertiefung
 <li>Korrigiere diesen Code: Ergänze die Argumentnamen, sodass eine Sequenz von 3 bis 12 in 2er-Schritten erstellt wird. Belasse dabei die Reihenfolge der Zahlen.</li>
 </ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="fu">seq</span>(<span class="dv">2</span>, <span class="dv">12</span>, <span class="dv">3</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb66"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb66-1"><a href="#cb66-1" aria-hidden="true" tabindex="-1"></a><span class="fu">seq</span>(<span class="dv">2</span>, <span class="dv">12</span>, <span class="dv">3</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>ℹ️Manche Funktionen sind in mehreren Paketen beinhaltet, sowie wie z.B. die Funktion <code>filter()</code>. Um die Funktion definitiv aus einem bestimmten Paket zu verwenden, muss man das Paket dazu schreiben: <code>dyplr::filter()</code></p>
 <section id="tab-completion" class="level2" data-number="6.1">
 <h2 data-number="6.1" class="anchored" data-anchor-id="tab-completion"><span class="header-section-number">6.1</span> Tab Completion:</h2>
 <p>Eine nützliche Funktion von RStudio ist die <strong>Tab Completion</strong>. Wenn du eine Funktion aufrufst und die Tabulator-Taste drückst, erscheint ein Menü mit den möglichen Argumenten, die du angeben kannst. Probiere es mit der Funktion <code>mean()</code>. Das funktioniert auch für Funktionen aus Paketen, wenn du diese mit <code>::</code> auswählst, zum Beispiel: <code>readr::</code>.</p>
+<div class="callout callout-style-default callout-note callout-titled" title="Anmerkung">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-22-contents" aria-controls="callout-22" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Anmerkung
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-22" class="callout-22-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb67"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb67-1"><a href="#cb67-1" aria-hidden="true" tabindex="-1"></a><span class="co"># readr::</span></span>
+<span id="cb67-2"><a href="#cb67-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb67-3"><a href="#cb67-3" aria-hidden="true" tabindex="-1"></a><span class="co"># mean(</span></span>
+<span id="cb67-4"><a href="#cb67-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb67-5"><a href="#cb67-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Die Lösung hierzu kann ich euch nicht darstellen, da es sich um ein Feature von RStudio handelt, welches nur "live" angezeigt wird. Ihr könnt aber den hier auskommentierten Code verwenden und es damit ausprobieren</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+</div>
+</div>
 </section>
 <section id="weitere-tasten-und-tastenkürzel" class="level2" data-number="6.2">
 <h2 data-number="6.2" class="anchored" data-anchor-id="weitere-tasten-und-tastenkürzel"><span class="header-section-number">6.2</span> Weitere Tasten und Tastenkürzel:</h2>
@@ -793,14 +1398,37 @@ Vertiefung
 <section id="verschachtelte-funktionen" class="level2" data-number="6.3">
 <h2 data-number="6.3" class="anchored" data-anchor-id="verschachtelte-funktionen"><span class="header-section-number">6.3</span> Verschachtelte Funktionen:</h2>
 <p>ℹ️Es ist zwar möglich, mehrere Funktionen ineinander zu verschachteln. Dies kann jedoch schnell zu Verwirrung führen und den Code unnötig unübersichtlich machen. Verschachtelte Funktionen werden von innen nach aussen ausgeführt.</p>
-<p>❓Stelle dir hier die Frage: Was wird genau gerundet? Die einzelnen Elemente des Vektors oder der errechnet Durchschnitt?</p>
+<p>❓Stelle dir hier die Frage: Was wird genau gerundet? Die einzelnen Elemente des Vektors oder der errechnete Durchschnitt?</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(<span class="fu">mean</span>(<span class="fu">round</span>(first_vector)))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb68"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb68-1"><a href="#cb68-1" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(<span class="fu">mean</span>(<span class="fu">round</span>(first_vector)))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 5785.25</code></pre>
 </div>
 </div>
 <p>❗Aufgabe: Zerlege die Verschatelte Funktion in ihre Teilschritte.</p>
+<div class="callout callout-style-default callout-note callout-titled" title="Lösung">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-23-contents" aria-controls="callout-23" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Lösung
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-23" class="callout-23-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb70"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb70-1"><a href="#cb70-1" aria-hidden="true" tabindex="-1"></a>rounded_values <span class="ot">&lt;-</span> <span class="fu">round</span>(first_vector)</span>
+<span id="cb70-2"><a href="#cb70-2" aria-hidden="true" tabindex="-1"></a>mittelwert <span class="ot">&lt;-</span> <span class="fu">mean</span>(rounded_values)</span>
+<span id="cb70-3"><a href="#cb70-3" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(mittelwert)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 5785.25</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
 </section>
 </section>
 <section id="style-conventions" class="level1" data-number="7">
@@ -815,20 +1443,119 @@ Vertiefung
 </ul></li>
 </ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb27"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a>Französischschul_NotenSemesester <span class="sc">-</span><span class="er">&lt;</span>(<span class="dv">4</span>,<span class="dv">5</span>, <span class="dv">6</span>,<span class="dv">5</span>,<span class="dv">4</span>,  <span class="dv">3</span>)</span>
-<span id="cb27-2"><a href="#cb27-2" aria-hidden="true" tabindex="-1"></a>mean <span class="ot">&lt;-</span><span class="fu">mean</span>(Französichschul_NotenSemsester</span>
-<span id="cb27-3"><a href="#cb27-3" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>  ( mittelwert)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb72"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb72-1"><a href="#cb72-1" aria-hidden="true" tabindex="-1"></a>Französischschul_NotenSemesester <span class="sc">-</span><span class="er">&lt;</span>(<span class="dv">4</span>,<span class="dv">5</span>, <span class="dv">6</span>,<span class="dv">5</span>,<span class="dv">4</span>,  <span class="dv">3</span>)</span>
+<span id="cb72-2"><a href="#cb72-2" aria-hidden="true" tabindex="-1"></a>mean <span class="ot">&lt;-</span><span class="fu">mean</span>(Französichschul_NotenSemsester</span>
+<span id="cb72-3"><a href="#cb72-3" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>  ( mittelwert)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="callout callout-style-default callout-note callout-titled" title="Lösung">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-24-contents" aria-controls="callout-24" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Lösung
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-24" class="callout-24-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb73"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb73-1"><a href="#cb73-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Vorgegeben:</span></span>
+<span id="cb73-2"><a href="#cb73-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Französischschul_NotenSemesester -&lt;(4,5, 6,5,4,  3)</span></span>
+<span id="cb73-3"><a href="#cb73-3" aria-hidden="true" tabindex="-1"></a><span class="co"># mean &lt;-mean(Französichschul_NotenSemsester</span></span>
+<span id="cb73-4"><a href="#cb73-4" aria-hidden="true" tabindex="-1"></a><span class="co"># print  ( mittelwert)</span></span>
+<span id="cb73-5"><a href="#cb73-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb73-6"><a href="#cb73-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Angepasst:</span></span>
+<span id="cb73-7"><a href="#cb73-7" aria-hidden="true" tabindex="-1"></a>franzoesischschul_notensemester <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="fl">4.5</span>, <span class="fl">6.5</span>, <span class="dv">4</span>, <span class="dv">3</span>)</span>
+<span id="cb73-8"><a href="#cb73-8" aria-hidden="true" tabindex="-1"></a>mean <span class="ot">&lt;-</span> <span class="fu">mean</span>(franzoesischschul_notensemester)</span>
+<span id="cb73-9"><a href="#cb73-9" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(mean)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 4.5</code></pre>
+</div>
+</div>
+</div>
+</div>
 </div>
 <ul>
-<li><p>Installiere das Package <code>styler</code> mit <code>install.packages()</code> und lade es. <code>styler</code> hat eine sogenannte “Wrapper-Funktion”, die du unter “Addins” aufrufen kannst (evtl. musst du R vor dem Laden neu starten). Verwende den Default-Style (tidyverse).</p>
-<p><img src="images/clipboard-3096355115.png" class="img-fluid" width="256"></p></li>
-<li><p>Versuche mit der <code>Styler</code> -Funktion diesen Code zu leserlicher zu machen (markiere den Code und wähle <em>Style selection</em>). (Du musst diesen ggplot Code nicht verstehen - wir kommen dazu in einer späteren Einheit noch.)</p></li>
+<li>Installiere das Package <code>styler</code> mit <code>install.packages()</code> und lade es. <code>styler</code> hat eine sogenannte “Wrapper-Funktion”, die du unter “Addins” aufrufen kannst (evtl. musst du R vor dem Laden neu starten). Verwende den Default-Style (tidyverse).</li>
+</ul>
+<div class="callout callout-style-default callout-note callout-titled" title="Lösung">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-25-contents" aria-controls="callout-25" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Lösung
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-25" class="callout-25-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb75"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb75-1"><a href="#cb75-1" aria-hidden="true" tabindex="-1"></a><span class="co"># install.packages("styler") # den Code führst du einmalig in deiner Console aus</span></span>
+<span id="cb75-2"><a href="#cb75-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(styler)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+</div>
+</div>
+<pre><code>![](images/clipboard-3096355115.png){width="256"}</code></pre>
+<ul>
+<li>Versuche mit der <code>Styler</code> -Funktion diesen Code zu leserlicher zu machen (markiere den Code und wähle <em>Style selection</em>). (Du musst diesen ggplot Code nicht verstehen - wir kommen dazu in einer späteren Einheit noch.)</li>
 </ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb28"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
-<span id="cb28-2"><a href="#cb28-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(palmerpenguins)</span>
-<span id="cb28-3"><a href="#cb28-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb28-4"><a href="#cb28-4" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(penguins,<span class="fu">aes</span>(<span class="at">x=</span>flipper_length_mm,<span class="at">y=</span>body_mass_g,<span class="at">color=</span>species))<span class="sc">+</span><span class="fu">geom_point</span>()<span class="sc">+</span><span class="fu">labs</span>(<span class="at">x=</span><span class="st">"flipper"</span>,<span class="at">Y=</span><span class="st">"MASS"</span>)<span class="sc">+</span><span class="fu">theme_minimal</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb77"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb77-1"><a href="#cb77-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb77-2"><a href="#cb77-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(palmerpenguins)</span>
+<span id="cb77-3"><a href="#cb77-3" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(penguins, <span class="fu">aes</span>(<span class="at">x =</span> flipper_length_mm, <span class="at">y =</span> body_mass_g, <span class="at">color =</span> species)) <span class="sc">+</span></span>
+<span id="cb77-4"><a href="#cb77-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
+<span id="cb77-5"><a href="#cb77-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"flipper"</span>, <span class="at">Y =</span> <span class="st">"MASS"</span>) <span class="sc">+</span></span>
+<span id="cb77-6"><a href="#cb77-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="callout callout-style-default callout-note callout-titled" title="Lösung">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-26-contents" aria-controls="callout-26" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Lösung
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-26" class="callout-26-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb78"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb78-1"><a href="#cb78-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb78-2"><a href="#cb78-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(palmerpenguins)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>
+Attache Paket: 'palmerpenguins'</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Die folgenden Objekte sind maskiert von 'package:datasets':
+
+    penguins, penguins_raw</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb81"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb81-1"><a href="#cb81-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(penguins, <span class="fu">aes</span>(<span class="at">x =</span> flipper_length_mm, <span class="at">y =</span> body_mass_g, <span class="at">color =</span> species)) <span class="sc">+</span></span>
+<span id="cb81-2"><a href="#cb81-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
+<span id="cb81-3"><a href="#cb81-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"flipper"</span>, <span class="at">Y =</span> <span class="st">"MASS"</span>) <span class="sc">+</span></span>
+<span id="cb81-4"><a href="#cb81-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Ignoring unknown labels:
+• Y : "MASS"</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: Removed 2 rows containing missing values or values outside the scale range
+(`geom_point()`).</code></pre>
+</div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="loesung_2_files/figure-html/unnamed-chunk-28-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</div>
 </div>
 </section>
 <section id="am-ende-deiner-übungen---vergiss-nicht-dein-skript-abzuspeichern--" class="level1" data-number="8">

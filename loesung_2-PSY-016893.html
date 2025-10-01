@@ -64,8 +64,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./faq.html" rel="next">
-<link href="./loesung_1.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -116,7 +114,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./Übungen.html">Übungen zu den Einheiten</a></li><li class="breadcrumb-item"><a href="./hands_on_2.html">Hands on - Block 2 (Woche 3 - 4)</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">
+      R u Ready
+      </li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -193,7 +193,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./hands_on_2.html" class="sidebar-item-text sidebar-link active">
+  <a href="./hands_on_2.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Hands on - Block 2 (Woche 3 - 4)</span></a>
   </div>
 </li>
@@ -303,7 +303,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./Übungen.html">Übungen zu den Einheiten</a></li><li class="breadcrumb-item"><a href="./hands_on_2.html">Hands on - Block 2 (Woche 3 - 4)</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
 <h1 class="title">Hands On – Coding Basics (Einheiten 3 und 4)</h1>
 </div>
@@ -322,6 +322,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>  <span class="co">#| eval: false</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  <span class="co">#| echo: true</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 <p>Bei Bedarf findest du hier nochmals die Slides zu Einheit 3:<br>
 <iframe src="EH_3.html" width="100%" height="500px"></iframe></p>
 <section id="lernziele-dieses-hands-on-blocks" class="level1" data-number="1">
@@ -402,6 +406,22 @@ Bei Fehlermeldungen:
 </ul>
 <p><strong>❓Beantworte für dich selbst:</strong></p>
 <p>Um ein Skript reproduzierbar zu gestalten – was eignet sich besser: relative Pfade oder absolute Pfade? Aus welchen Gründen?</p>
+<div class="callout callout-style-default callout-note callout-titled" title="Lösung">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Lösung
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-2" class="callout-2-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Üblicherweise eigenen sich relative Pfade besser als absolute Pfade, da diese unabhängig vom Computer funktionieren, auf dem das Skript ausgeführt wird, solange die Projektstruktur gleich bleibt.</p>
+</div>
+</div>
+</div>
 </section>
 </section>
 <section id="daten-importieren-und-exportieren" class="level1" data-number="3">
@@ -427,35 +447,193 @@ Wir verwenden Funktionen aus den Packages <strong>readr</strong> und <strong>rea
 <ul>
 <li>Tipp: Klicke auf <strong>Environment</strong> → <strong>Import Dataset</strong> → wähle die <code>"readr"</code>-Funktion.</li>
 <li>Schaue dir den Datensatz an: Mit welchem Trennzeichen sind die Daten getrennt?</li>
-<li><img src="images/clipboard-4280669528.png" class="img-fluid">
-<ul>
-<li>Stelle in der Oberfläche <code>"Delimiter"</code> auf das passende Trennzeichen. Was verändert sich?</li>
-</ul></li>
-<li>Betrachte den Code, den die Oberfläche generiert. Versuche den Pfad im Kontext von Projekten zu verstehen.
-<ul>
-<li>Wenn du im Projekt gearbeitet hast, sollte bei dir der Code etwa so aussehen: <code>data_mmq &lt;- read_delim("data/raw/data_mmq.csv", delim = ";", escape_double = FALSE, trim_ws = TRUE)</code></li>
-<li>Wenn du nicht im Projekt gearbeite hättest, wie würde dann der Dateipfad aussehen?</li>
-</ul></li>
-<li>Wenn du den Code via Klick-Oberfläche eingelesen hast, wirst du den ausgeführten Code in der Konsole sehen. Kopiere diesen in dein Skript, so dass du ihn in Zukunft wiederverwenden und anpassen kannst.</li>
-<li>Schaue dir die eingelesenen Daten mit <code>View(data_mmq)</code> an. Wenn du alles richtig gemacht hast, ist in jeder Zelle nur ein Wert.</li>
 </ul></li>
 </ul>
+<div class="callout callout-style-default callout-note callout-titled" title="Vertiefung">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Vertiefung
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-3" class="callout-3-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Ohne eine Anpassung des Trennzeichens wird als Default das Komma “,” verwendet. Dies liegt am übichen Trennzeichen des Dateityps des Datensatzes, csv (comma-separated values). In unserem Fall sind die Daten jedoch mit einem Semikolon “;” getrennt. Deswegen werden im vorliegenden Fall die Daten in dem Vorschaufenster in einer einzigen Spalte eingelesen und nicht sauber getrennt.</p>
+</div>
+</div>
+</div>
+<pre><code>-   ![](images/clipboard-4280669528.png)
+    -   Stelle in der Oberfläche `"Delimiter"` auf das passende Trennzeichen. Was verändert sich?</code></pre>
+<div class="callout callout-style-default callout-note callout-titled" title="Lösung">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Lösung
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-4" class="callout-4-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Das passende Trennzeichen ist in unserem Fall das Semikollon “;”Wenn auf dieses Trennzeichen gewechselt wird, dann werden die Daten in der Ansicht sauber in einzelne Spalten getrennt und die Daten können passend eingelesen werden.</p>
+</div>
+</div>
+</div>
+<pre><code>-   Betrachte den Code, den die Oberfläche generiert. Versuche den Pfad im Kontext von Projekten zu verstehen.
+    -   Wenn du im Projekt gearbeitet hast, sollte bei dir der Code etwa so aussehen: `data_mmq &lt;- read_delim("data/raw/data_mmq.csv", delim = ";", escape_double = FALSE, trim_ws = TRUE)`
+    -   Wenn du nicht im Projekt gearbeite hättest, wie würde dann der Dateipfad aussehen?</code></pre>
+<div class="callout callout-style-default callout-note callout-titled" title="Lösung">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-5-contents" aria-controls="callout-5" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Lösung
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-5" class="callout-5-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Der Dateipfad könnte dann etwa so aussehen:</p>
+<p>“C:/Users/…/R_You_Ready/Grinschgl2020/data/raw/data_mmq.csv”</p>
+<p>Relevant ist vor allem, dass ein absoluter Dateipfad verwendet wird, der in dieserm Form auf dem eigenen Computer funktioniert. Das Einlesen der Daten wäre somit für externe nicht ohne Anpassungen replizierbar. Deswegen achtet darauf beim Einlesen der Datei relative Pfade zu verwenden!</p>
+</div>
+</div>
+</div>
+<pre><code>-   Wenn du den Code via Klick-Oberfläche eingelesen hast, wirst du den ausgeführten Code in der Konsole sehen. Kopiere diesen in dein Skript, so dass du ihn in Zukunft wiederverwenden und anpassen kannst.
+-   Schaue dir die eingelesenen Daten mit `View(data_mmq)` an. Wenn du alles richtig gemacht hast, ist in jeder Zelle nur ein Wert.</code></pre>
 </section>
 <section id="einlesen-via-code" class="level3" data-number="3.1.2">
 <h3 data-number="3.1.2" class="anchored" data-anchor-id="einlesen-via-code"><span class="header-section-number">3.1.2</span> Einlesen via Code</h3>
 <section id="csv-dateien" class="level4" data-number="3.1.2.1">
 <h4 data-number="3.1.2.1" class="anchored" data-anchor-id="csv-dateien"><span class="header-section-number">3.1.2.1</span> .CSV Dateien</h4>
 <ul>
-<li><p>Versuche, weitere CSV-Datensätze einzulesen: <code>data_cb</code>, <code>data_cvstm</code>, <code>data_pct</code>, <code>data_vp</code>.<br>
-Suche dafür eine geeignete Funktion zum Einlesen von <code>.csv</code>.</p>
-<ul>
-<li>Verwende den von R-Studio generierten Code, und passe ihn an um einen weiteren Datensatz einzulesen (z.B. indem du den Filenamen veränderst).</li>
-</ul></li>
-<li><p>Korrigiere diesen Code und lies damit die Datei <code>data_vp</code> ein (überprüfe den Pfad und den Delimiter)</p></li>
+<li>Versuche, weitere CSV-Datensätze einzulesen: <code>data_cb</code>, <code>data_cvstm</code>, <code>data_pct</code>, <code>data_vp</code>.<br>
+Suche dafür eine geeignete Funktion zum Einlesen von <code>.csv</code>.</li>
 </ul>
+<div class="callout callout-style-default callout-note callout-titled" title="Lösung">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-6-contents" aria-controls="callout-6" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Lösung
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-6" class="callout-6-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Die Funktion <code>read_csv()</code> aus dem Paket <code>readr</code> ist eine geeignete Funktion zum Einlesen von .csv Dateien. Diese Funktion verwendet automatisch das Komma als Trennzeichen.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>data_vp <span class="ot">&lt;-</span> <span class="fu">read_delim</span>(<span class="st">"/raw/data_vp.csv"</span>, </span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>    <span class="at">delim =</span> <span class="st">","</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co"># install.packages("readr") # den Code führst du einmalig in deiner Console aus</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(readr)</span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>data_cb <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"data/raw/data_cb.csv"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Rows: 159 Columns: 1
+── Column specification ────────────────────────────────────────────────────────
+Delimiter: ","
+chr (1): code;cb_sum;cb_propcorrect
+
+ℹ Use `spec()` to retrieve the full column specification for this data.
+ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>data_cvstm <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"data/raw/data_cvstm.csv"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Rows: 159 Columns: 1
+── Column specification ────────────────────────────────────────────────────────
+Delimiter: ","
+chr (1): code;csvtm_sum;cvstm_propcorrect
+
+ℹ Use `spec()` to retrieve the full column specification for this data.
+ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>data_pct <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"data/raw/data_pct.csv"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Rows: 159 Columns: 1
+── Column specification ────────────────────────────────────────────────────────
+Delimiter: ","
+chr (1): code_all;group_all;mean_rl_all;mean_e1_all;mean_d1_all;mean_d_all
+
+ℹ Use `spec()` to retrieve the full column specification for this data.
+ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>data_vp <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"data/raw/data_vp.csv"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Rows: 159 Columns: 1
+── Column specification ────────────────────────────────────────────────────────
+Delimiter: ","
+chr (1): code;vp_sum;vp_propcorrect
+
+ℹ Use `spec()` to retrieve the full column specification for this data.
+ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<pre><code>-   Verwende den von R-Studio generierten Code, und passe ihn an um einen weiteren Datensatz einzulesen (z.B. indem du den Filenamen veränderst).</code></pre>
+<div class="callout callout-style-default callout-note callout-titled" title="Lösung">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-7-contents" aria-controls="callout-7" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Lösung
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-7" class="callout-7-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>data_mmq <span class="ot">&lt;-</span> <span class="fu">read_delim</span>(<span class="st">"data/raw/data_mmq.csv"</span>,</span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>                      <span class="at">delim =</span> <span class="st">";"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Rows: 159 Columns: 19
+── Column specification ────────────────────────────────────────────────────────
+Delimiter: ";"
+dbl (19): code, question1, question2, question3, question4, question5, quest...
+
+ℹ Use `spec()` to retrieve the full column specification for this data.
+ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<ul>
+<li>Korrigiere diesen Code und lies damit die Datei <code>data_vp</code> ein (überprüfe den Pfad und den Delimiter)</li>
+</ul>
+<div class="callout callout-style-default callout-note callout-titled" title="Lösung">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-8-contents" aria-controls="callout-8" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Lösung
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-8" class="callout-8-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Was wir dir vorgegeben hatten:</span></span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a><span class="co"># data_vp &lt;- read_delim("/raw/data_vp.csv", </span></span>
+<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a><span class="co">#    delim = ",")</span></span>
+<span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-5"><a href="#cb17-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Korrigierter Code:</span></span>
+<span id="cb17-6"><a href="#cb17-6" aria-hidden="true" tabindex="-1"></a>data_vp <span class="ot">&lt;-</span> <span class="fu">read_delim</span>(<span class="st">"data/raw/data_vp.csv"</span>,</span>
+<span id="cb17-7"><a href="#cb17-7" aria-hidden="true" tabindex="-1"></a>                      <span class="at">delim =</span> <span class="st">";"</span>)</span>
+<span id="cb17-8"><a href="#cb17-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-9"><a href="#cb17-9" aria-hidden="true" tabindex="-1"></a><span class="co"># Äquivalent:</span></span>
+<span id="cb17-10"><a href="#cb17-10" aria-hidden="true" tabindex="-1"></a>data_vp <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"data/raw/data_vp.csv"</span>) <span class="co"># da read_csv automatisch Komma als Delimiter verwendet könnt ihr euch die Spezifikation des Delimeter sparen</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+</div>
 </div>
 </section>
 <section id="xslx-dateien" class="level4" data-number="3.1.2.2">
@@ -467,10 +645,39 @@ Suche dafür eine geeignete Funktion zum Einlesen von <code>.csv</code>.</p>
 <li>Nutze die Hilfefunktion (<code>?read_excel</code>) für Infos zur Funktion oder schaue dir das <a href="https://rstudio.github.io/cheatsheets/html/data-import.html">Cheatsheet</a> an</li>
 <li>Versuche, die Datensätze <code>data_ratings</code> und <code>data_strategies</code> einzulesen.</li>
 </ul></li>
-<li><p>Am Ende solltest du die <strong>7 verschiedene Datensätze</strong> in deinem Environment sehen.</p></li>
+</ul>
+<div class="callout callout-style-default callout-note callout-titled" title="Lösung">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-9-contents" aria-controls="callout-9" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Lösung
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-9" class="callout-9-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="co"># install.packages("readxl") # den Code führst du einmalig in deiner Console aus</span></span>
+<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(readxl)</span>
+<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a>?<span class="fu">read_excel</span>() <span class="co"># Aufruf der Dokumentation</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>starte den http Server für die Hilfe fertig</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a>data_ratings <span class="ot">&lt;-</span> <span class="fu">read_excel</span>(<span class="st">"data/raw/data_ratings.xlsx"</span>) <span class="co"># erstellt von RStudio</span></span>
+<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a>data_strategies <span class="ot">&lt;-</span> <span class="fu">read_excel</span>(<span class="st">"data/raw/data_strategies.xlsx"</span>) <span class="co"># kopiert und angepasst</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+</div>
+</div>
+<ul>
+<li>Am Ende solltest du die <strong>7 verschiedene Datensätze</strong> in deinem Environment sehen.</li>
 </ul>
 <div class="callout callout-style-default callout-note callout-titled" title="Vertiefung">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-10-contents" aria-controls="callout-10" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -479,7 +686,7 @@ Vertiefung
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-2" class="callout-2-contents callout-collapse collapse">
+<div id="callout-10" class="callout-10-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>👉Für das Einlesen anderer Arten von Datensätzen (z.B. SPSS Dateien), siehe <a href="https://methodenlehre.github.io/einfuehrung-in-R/chapters/03-data_frames.html#daten-importieren">Kapitel 3.2</a></p>
 </div>
@@ -526,11 +733,11 @@ Vertiefung
 <ul>
 <li>🔍Überprüfe: Wie viele Zeilen und Spalten hat dein Datensatz? Verwende: <code>ncol()</code> , <code>nrow()</code>, <code>dim()</code>
 <ul>
-<li>Stimmt die Anzahl der Zeilen mit der Anzahl der Versuchspersonen aus dem Paper überein?</li>
+<li><p>Stimmt die Anzahl der Zeilen mit der Anzahl der Versuchspersonen aus dem Paper überein?</p></li>
+<li><p>Lasse dir die Variablenamen ausgeben mit <code>names()</code></p></li>
 </ul></li>
 <li>👀Verschaffe dir eine Überblick über deinen Datensatz mit den Funktionen, die wir schon im letzten Hands On getestet haben:
 <ul>
-<li>Lasse dir die Variablenamen ausgeben mit <code>names()</code></li>
 <li><code>head()</code></li>
 <li><code>glimpse()</code></li>
 <li><code>str()</code></li>
@@ -566,14 +773,14 @@ Vertiefung
 <p>Wir haben in diesen Übungen bereits einige Funktionen verwendet (z. B. <code>sum()</code> oder <code>sort()</code>). Funktionen bestehen aus einem Namen und Argumenten. In diesem Beispiel wird die Funktion <code>sort()</code> aufgerufen. Die Argumente, die dafür benötigt werden, sind <code>first_vector</code> und <code>decreasing = TRUE</code>. Die meisten Funktionen haben <em>Defaults</em>, also Argumente mit einer Voreinstellung. Wenn man diese nicht verändern möchte, müssen sie nicht explizit angegeben werden. <code>sort()</code> hat als Default <code>decreasing = FALSE</code>. Deswegen müssen wir, um die höchsten Werte des Vektors zu bestimmen, diesen Default umstellen. Argumente ohne Defaults müssen zwingend angegben werden).</p>
 <p>Die Defaults von Funktionen lassen sich über die Hilfefunktion nachschauen. Diese kann entweder im Tab <em>Help</em> geöffnet werden oder direkt über die Konsole mit <code>?Funktionsname</code>.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>first_vector <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">22342</span>, <span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">6</span>, <span class="dv">7</span>, <span class="dv">23234</span>, <span class="dv">342</span>, <span class="dv">342</span>)</span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>highest_values_1 <span class="ot">&lt;-</span> <span class="fu">sort</span>(first_vector)[<span class="dv">1</span><span class="sc">:</span><span class="dv">2</span>]</span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>highest_values <span class="ot">&lt;-</span> <span class="fu">sort</span>(first_vector, <span class="at">decreasing =</span> <span class="cn">TRUE</span>)[<span class="dv">1</span><span class="sc">:</span><span class="dv">2</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a>first_vector <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">22342</span>, <span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">6</span>, <span class="dv">7</span>, <span class="dv">23234</span>, <span class="dv">342</span>, <span class="dv">342</span>)</span>
+<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a>highest_values_1 <span class="ot">&lt;-</span> <span class="fu">sort</span>(first_vector)[<span class="dv">1</span><span class="sc">:</span><span class="dv">2</span>]</span>
+<span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a>highest_values <span class="ot">&lt;-</span> <span class="fu">sort</span>(first_vector, <span class="at">decreasing =</span> <span class="cn">TRUE</span>)[<span class="dv">1</span><span class="sc">:</span><span class="dv">2</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Bei vielen Funktionen werden die <strong>Namen der Argumente</strong> weggelassen.</p>
 <p>Welche Argumente werden hier übergeben? Schreibe die Funktion mit den vollständigen Argumentnamen aus:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a> <span class="fu">seq</span>(<span class="sc">-</span><span class="dv">4</span>, <span class="dv">11</span>, <span class="dv">3</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a> <span class="fu">seq</span>(<span class="sc">-</span><span class="dv">4</span>, <span class="dv">11</span>, <span class="dv">3</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] -4 -1  2  5  8 11</code></pre>
 </div>
@@ -583,7 +790,7 @@ Vertiefung
 <li>Korrigiere diesen Code: Ergänze die Argumentnamen, sodass eine Sequenz von 3 bis 12 in 2er-Schritten erstellt wird. Belasse dabei die Reihenfolge der Zahlen.</li>
 </ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">seq</span>(<span class="dv">2</span>, <span class="dv">12</span>, <span class="dv">3</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="fu">seq</span>(<span class="dv">2</span>, <span class="dv">12</span>, <span class="dv">3</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>ℹ️Manche Funktionen sind in mehreren Paketen beinhaltet, sowie wie z.B. die Funktion <code>filter()</code>. Um die Funktion definitiv aus einem bestimmten Paket zu verwenden, muss man das Paket dazu schreiben: <code>dyplr::filter()</code></p>
 <section id="tab-completion" class="level2" data-number="6.1">
@@ -609,7 +816,7 @@ Vertiefung
 <p>ℹ️Es ist zwar möglich, mehrere Funktionen ineinander zu verschachteln. Dies kann jedoch schnell zu Verwirrung führen und den Code unnötig unübersichtlich machen. Verschachtelte Funktionen werden von innen nach aussen ausgeführt.</p>
 <p>❓Stelle dir hier die Frage: Was wird genau gerundet? Die einzelnen Elemente des Vektors oder der errechnet Durchschnitt?</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(<span class="fu">mean</span>(<span class="fu">round</span>(first_vector)))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(<span class="fu">mean</span>(<span class="fu">round</span>(first_vector)))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 5785.25</code></pre>
 </div>
@@ -629,9 +836,9 @@ Vertiefung
 </ul></li>
 </ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>Französischschul_NotenSemesester <span class="sc">-</span><span class="er">&lt;</span>(<span class="dv">4</span>,<span class="dv">5</span>, <span class="dv">6</span>,<span class="dv">5</span>,<span class="dv">4</span>,  <span class="dv">3</span>)</span>
-<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>mean <span class="ot">&lt;-</span><span class="fu">mean</span>(Französichschul_NotenSemsester</span>
-<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>  ( mittelwert)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb27"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a>Französischschul_NotenSemesester <span class="sc">-</span><span class="er">&lt;</span>(<span class="dv">4</span>,<span class="dv">5</span>, <span class="dv">6</span>,<span class="dv">5</span>,<span class="dv">4</span>,  <span class="dv">3</span>)</span>
+<span id="cb27-2"><a href="#cb27-2" aria-hidden="true" tabindex="-1"></a>mean <span class="ot">&lt;-</span><span class="fu">mean</span>(Französichschul_NotenSemsester</span>
+<span id="cb27-3"><a href="#cb27-3" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>  ( mittelwert)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <ul>
 <li><p>Installiere das Package <code>styler</code> mit <code>install.packages()</code> und lade es. <code>styler</code> hat eine sogenannte “Wrapper-Funktion”, die du unter “Addins” aufrufen kannst (evtl. musst du R vor dem Laden neu starten). Verwende den Default-Style (tidyverse).</p>
@@ -639,10 +846,10 @@ Vertiefung
 <li><p>Versuche mit der <code>Styler</code> -Funktion diesen Code zu leserlicher zu machen (markiere den Code und wähle <em>Style selection</em>). (Du musst diesen ggplot Code nicht verstehen - wir kommen dazu in einer späteren Einheit noch.)</p></li>
 </ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
-<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(palmerpenguins)</span>
-<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(penguins,<span class="fu">aes</span>(<span class="at">x=</span>flipper_length_mm,<span class="at">y=</span>body_mass_g,<span class="at">color=</span>species))<span class="sc">+</span><span class="fu">geom_point</span>()<span class="sc">+</span><span class="fu">labs</span>(<span class="at">x=</span><span class="st">"flipper"</span>,<span class="at">Y=</span><span class="st">"MASS"</span>)<span class="sc">+</span><span class="fu">theme_minimal</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb28"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb28-2"><a href="#cb28-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(palmerpenguins)</span>
+<span id="cb28-3"><a href="#cb28-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-4"><a href="#cb28-4" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(penguins,<span class="fu">aes</span>(<span class="at">x=</span>flipper_length_mm,<span class="at">y=</span>body_mass_g,<span class="at">color=</span>species))<span class="sc">+</span><span class="fu">geom_point</span>()<span class="sc">+</span><span class="fu">labs</span>(<span class="at">x=</span><span class="st">"flipper"</span>,<span class="at">Y=</span><span class="st">"MASS"</span>)<span class="sc">+</span><span class="fu">theme_minimal</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="am-ende-deiner-übungen---vergiss-nicht-dein-skript-abzuspeichern--" class="level1" data-number="8">
@@ -1069,18 +1276,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
 });
 </script>
-<nav class="page-navigation">
-  <div class="nav-page nav-page-previous">
-      <a href="./loesung_1.html" class="pagination-link" aria-label="Hands on - Block 1 (Woche 1 - 2) - Mit Musterlösungen">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Hands on - Block 1 (Woche 1 - 2) - Mit Musterlösungen</span>
-      </a>          
-  </div>
-  <div class="nav-page nav-page-next">
-      <a href="./faq.html" class="pagination-link" aria-label="FAQ">
-        <span class="nav-page-text">FAQ</span> <i class="bi bi-arrow-right-short"></i>
-      </a>
-  </div>
-</nav>
 </div> <!-- /content -->
 <footer class="footer">
   <div class="nav-footer">
