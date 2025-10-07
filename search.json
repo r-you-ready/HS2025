@@ -321,7 +321,7 @@
     "href": "loesung_1.html",
     "title": "Lösung 1",
     "section": "",
-    "text": "Bei Bedarf finden sich hier nochmal die Slides zur EH1: \n\n\nInstalliere R und RStudio:\n\nInstallation von R – neueste Version 4.5.1: https://stat.ethz.ch/CRAN/\nInstallation von Rstudio (Version 2025.05.1): https://posit.co/download/rstudio-desktop/\n\nDu weisst nicht was mit R auf sich hat? Hier ist eine Kurzerklärung: https://methodenlehre.github.io/einfuehrung-in-R/\n\n\n\n\nRStudio öffnen & Einstellungen vornehmen: Unter «tools» –«global options» die unter 1.1. beschriebenen Einstellungen vornehmen: https://methodenlehre.github.io/einfuehrung-in-R/chapters/01-workflow.html\n\n\n\nNeues Skript öffnen & orientieren:\n\n\n\n\nIm folgenden machen wir uns vertraut mit der Oberfläche von R-Studio:\n\n\n\n\n\n\n\nSkript für Code-Eingabe sowie Kommentare\nKonsole für die Ausführung von Code -&gt; Teste einfache mathematische Operation in dieser; reproduziere diese mittels Skript\nRechts oben: Environment & History\nRechts unten: Files, Plots, Packages und Help Viewer\n\n\n\n\nTidyverse ist ein Meta-Paket, das mehrere Pakete umfasst\n\nPakete installieren (nur 1x notwendig) -&gt; führe diesen Code in der Konsole aus\n\ninstall.packages(\"tidyverse\")\n\nPaket laden (innerhalb des Skriptes, bei jedem Neustart von R notwendig)\n\nlibrary(tidyverse)\n\n── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.4     ✔ readr     2.1.5\n✔ forcats   1.0.1     ✔ stringr   1.5.2\n✔ ggplot2   4.0.0     ✔ tibble    3.3.0\n✔ lubridate 1.9.4     ✔ tidyr     1.3.1\n✔ purrr     1.1.0     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\n\n\n\nTipp: Pakete regelmässig updaten mit z.B. update.packages()\n\n\n\na. Nutze R als Taschenrechner\n\n123+456\n\n\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\n123 + 456\n\n[1] 579\n\n\n\n\n\n2.  `144*112`\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\n144*112\n\n[1] 16128\n\n\n\n\n\n3.  `10/3`\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\n10/3\n\n[1] 3.333333\n\n\n\n\n\n4.  Quadriere 420\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\n420^2\n\n[1] 176400\n\n\n\n\n\n5.  Ziehe die Quadratwurzel aus 146 mit der Funktion `sqrt()`\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\nsqrt(146)\n\n[1] 12.08305\n\n\n\n\n\n6.  Berechne den Rest der Division 10/3 mit dem Modulo Operator: `%%`\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\n10 %% 3\n\n[1] 1\n\n\n\n\n\n\n\n\n\n\nZeichen\nBedeutung\n\n\n\n\n+\nAddition\n\n\n-\nSubstraktion\n\n\n*\nMultiplikation\n\n\n/\nDivision\n\n\nsqrt(x)\nQuadratwurzel\n\n\nabs(x)\nBetrag (absoluter Wert)\n\n\nx %% y\nModulo (x mod y) 5 %% 2 = 1\n\n\n^\nPotenz\n\n\n\n\n\n\n\n\nWeise den Wert 5 der Variable x zu mit dem Operator &lt;-\n\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\nx &lt;- 5\n\n\n\n\n\nWeise eine beliebige Zahl der Variable y hinzu und dividiere dann x durch y. Speichere dieses Ergebnis in der Variable z.\n\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\ny &lt;- 10 # hier könntet ihr auch jede andere Ziffer wählen\n\nz &lt;- x / y\n\n\n\n\n\nSchaue dir das Ergebnis in deinem Environment an. Lass dir das Ergebnis auch in der Konsole ausgeben. Das Environment findest du oben rechts, die Konsole ist unter deinem Skript.\n\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\n# z (hier über das # auskommentiert, da der Befehl nicht im Skript, sondern unten in der Konsole ausgeführt werden soll)\n\n\n\n\n\nErstelle zwei Variablen: Eine mit deinem Vornamen und eine mit deinem Nachnamen. Solche “character” Variablen musst du in Anführungszeichen setzen \"\"\n\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\nvorname &lt;- \"Lars\"\nnachname &lt;- \"Schilling\"\n\n\n\n\n\nKombiniere deinen Vor- und Nachnamen zu deinem vollen Namen mittels paste . Speichere diese Variable als voller_name.\n\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\nvoller_name &lt;- paste(vorname, nachname)\n\n\n\n\n\n\n\n\nDefiniere einen Vektor «first_vector» mit den Zahlen 100, 80, 54, 73. Einen Vektor definiert man so: first_vector &lt;- c(...)\n\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\nfirst_vector &lt;- c(100, 80, 54, 73)\n\n\n\n\n\nWende den Befehl boxplot() auf deinen Vektor an\n\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\nboxplot(first_vector)\n\n\n\n\n\n\n\n\n\n\n\n\nBerechne die Summe sum()und den Mittelwert mean() von deinem Vektor\n\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\nsum(first_vector)\n\n[1] 307\n\nmean(first_vector)\n\n[1] 76.75\n\n\n\n\n\n\nMultipliziere deinen Vektor mit *2\n\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\nfirst_vector * 2\n\n[1] 200 160 108 146\n\n\n\n\n\nDie wichtigsten Operatoren und Funktionen in R: https://methodenlehre.github.io/einfuehrung-in-R/chapters/02-R-language.html\n\n\n\n\n\nFunktion\nBedeutung\n\n\n\n\nmean(x, na.rm =FALSE)\nMittelwert\n\n\nsd(x)\nStandardabweichung\n\n\nvar(x)\nVarianz\n\n\nmedian(x)\nMedian\n\n\nsum(x)\nSumme\n\n\nmin(x)\nMinimalwert\n\n\nmax(x)\nMaximalwert\n\n\nrange(x)\nMinimal - und Maximalwert\n\n\n\n\n\n\n\n\nTeste ob die Zahl 5 größer als 2 ist –&gt; TRUE or FALSE?\n\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\n5 &gt; 2\n\n[1] TRUE\n\n\nTRUE, 5 ist grösser als 2.\n\n\n\n\nTeste ob 6 ungleich 8 ist –&gt; TRUE or FALSE?\n\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\n6 != 8\n\n[1] TRUE\n\n\nTRUE, 6 und 8 sind ungleich.\n\n\n\n\nSubtrahiere 80 von 50 und speichere das Ergebnis in einer Variable namens «diff_score».\n\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\ndiff_score &lt;- 80 - 50\n\n\n\n\n\nBerechne mit abs() den absoluten Wert von «diff_score» lassen dir diesen mit print(diff_score) in der Konsole ausgeben.\n\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\ndiff_score_abs &lt;- abs(diff_score)\n\n# print(diff_score_abs) (hier erneut mit # auskommentiert, da der Befehl nicht im Skript, sondern in der Console ausgeführt werden soll)\n\n\n\n\n\n\n\n\n\nZeichen\nBedeutung\n\n\n\n\n==\ngleich\n\n\n!=\nungleich\n\n\n&gt;\ngrösser\n\n\n&gt;=\ngrösser gleich\n\n\n&lt;\nkleiner\n\n\n&lt;=\nkleiner gleich\n\n\n|\nLogisches Oder\n\n\n&\nLogisches Und\n\n\n\n\n\n\n\n\n\n\nInformative Kommentare im Code sind elementar für die Nachvollziehbarkeit.\n\nSchreibe einen Kommentar indem du ein # verwendest.\n\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\n# Hier ein Beipsiel für einen Kommentar, wie auch schon weiter oben mehrmals verwendet um die Lösungen davon zu hindern ausgeführt zu werden.\n\n\n\n\n\nCode der nach einem # steht wird nicht ausgeführt. Setze ein # vor eine Codezeile und führe sie aus und beobachte was passiert.\n\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\n# 1 + 2\n\n\n\n\n\n\n\nEs gibt verschiedene Konventionen wie man Variablen bennen kann:\nhttps://methodenlehre.github.io/einfuehrung-in-R/chapters/02-R-language.html#variablennamen\n\nDefiniere eine neue Variable nach snake_case\n\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\nneue_variable &lt;- \"snake_case\"\n\n\n\n\n\nDefiniere eine zweite Variable nach CamelCase\n\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\nneueVariable &lt;- \"CamelCase\"\n\n\n\n\n\n\n\n\n\nSpeichere die beiden höchsten Werte aus «first_vector» in einer neuen Variable ab.\n\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\ntop_two &lt;- sort(first_vector, decreasing = TRUE)[1:2]\n\n\n\n\n\nErstelle einen Vektor mit Werten von 0-1000 in 10er Schritten.\n\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\nvec_seq &lt;- seq(from = 1, to = 1000, by = 10)\n\n\n\n\n\nZiehe zufällig eine Zahl aus diesem Vektor\n\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\nsample(vec_seq, 1)\n\n[1] 491\n\n\n\n\n\n\nGeneriere einen Vektor, der aus 50 Wiederholungen der Zahl 3 besteht.\n\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\nmy_vector &lt;- rep(3, times = 50)\n\n\n\n\nTipps zu diesen Aufgaben findest du bei Bedarf hier: https://methodenlehre.github.io/einfuehrung-in-R/chapters/02-R-language.html (Kapitel 2.1)\n\n\n\n\nnumeric vectors: werden in integer (ganze Zahlen) und double (reelle Zahlen) unterteilt, z.B.\nnumerical_vector &lt;- c(1, 2.5, 4)\ncharacter vectors: bestehen aus Zeichen, welche von Anführungszeichen umgeben werden, z.B.\ntext_vector &lt;- c(\"Hello\", \"World\")\nlogical vectors: Elemente dieses Typs können nur 3 Werte annehmen: TRUE, FALSE oder NA\nlog_vector &lt;- c(TRUE, FALSE, TRUE)\n\nVektoren müssen aus denselbsten Elementen bestehen, d.h. z.B. numeric und character können nicht gemischt werden. Vektoren werden meist mit c() erstellt.",
+    "text": "Bei Bedarf finden sich hier nochmal die Slides zur EH1: \n\n\nInstalliere R und RStudio:\n\nInstallation von R – neueste Version 4.5.1: https://stat.ethz.ch/CRAN/\nInstallation von Rstudio (Version 2025.05.1): https://posit.co/download/rstudio-desktop/\n\nDu weisst nicht was mit R auf sich hat? Hier ist eine Kurzerklärung: https://methodenlehre.github.io/einfuehrung-in-R/\n\n\n\n\nRStudio öffnen & Einstellungen vornehmen: Unter «tools» –«global options» die unter 1.1. beschriebenen Einstellungen vornehmen: https://methodenlehre.github.io/einfuehrung-in-R/chapters/01-workflow.html\n\n\n\nNeues Skript öffnen & orientieren:\n\n\n\n\nIm folgenden machen wir uns vertraut mit der Oberfläche von R-Studio:\n\n\n\n\n\n\n\nSkript für Code-Eingabe sowie Kommentare\nKonsole für die Ausführung von Code -&gt; Teste einfache mathematische Operation in dieser; reproduziere diese mittels Skript\nRechts oben: Environment & History\nRechts unten: Files, Plots, Packages und Help Viewer\n\n\n\n\nTidyverse ist ein Meta-Paket, das mehrere Pakete umfasst\n\nPakete installieren (nur 1x notwendig) -&gt; führe diesen Code in der Konsole aus\n\ninstall.packages(\"tidyverse\")\n\nPaket laden (innerhalb des Skriptes, bei jedem Neustart von R notwendig)\n\nlibrary(tidyverse)\n\n── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.4     ✔ readr     2.1.5\n✔ forcats   1.0.1     ✔ stringr   1.5.2\n✔ ggplot2   4.0.0     ✔ tibble    3.3.0\n✔ lubridate 1.9.4     ✔ tidyr     1.3.1\n✔ purrr     1.1.0     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\n\n\n\nTipp: Pakete regelmässig updaten mit z.B. update.packages()\n\n\n\na. Nutze R als Taschenrechner\n\n123+456\n\n\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\n123 + 456\n\n[1] 579\n\n\n\n\n\n2.  `144*112`\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\n144*112\n\n[1] 16128\n\n\n\n\n\n3.  `10/3`\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\n10/3\n\n[1] 3.333333\n\n\n\n\n\n4.  Quadriere 420\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\n420^2\n\n[1] 176400\n\n\n\n\n\n5.  Ziehe die Quadratwurzel aus 146 mit der Funktion `sqrt()`\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\nsqrt(146)\n\n[1] 12.08305\n\n\n\n\n\n6.  Berechne den Rest der Division 10/3 mit dem Modulo Operator: `%%`\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\n10 %% 3\n\n[1] 1\n\n\n\n\n\n\n\n\n\n\nZeichen\nBedeutung\n\n\n\n\n+\nAddition\n\n\n-\nSubstraktion\n\n\n*\nMultiplikation\n\n\n/\nDivision\n\n\nsqrt(x)\nQuadratwurzel\n\n\nabs(x)\nBetrag (absoluter Wert)\n\n\nx %% y\nModulo (x mod y) 5 %% 2 = 1\n\n\n^\nPotenz\n\n\n\n\n\n\n\n\nWeise den Wert 5 der Variable x zu mit dem Operator &lt;-\n\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\nx &lt;- 5\n\n\n\n\n\nWeise eine beliebige Zahl der Variable y hinzu und dividiere dann x durch y. Speichere dieses Ergebnis in der Variable z.\n\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\ny &lt;- 10 # hier könntet ihr auch jede andere Ziffer wählen\n\nz &lt;- x / y\n\n\n\n\n\nSchaue dir das Ergebnis in deinem Environment an. Lass dir das Ergebnis auch in der Konsole ausgeben. Das Environment findest du oben rechts, die Konsole ist unter deinem Skript.\n\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\n# z (hier über das # auskommentiert, da der Befehl nicht im Skript, sondern unten in der Konsole ausgeführt werden soll)\n\n\n\n\n\nErstelle zwei Variablen: Eine mit deinem Vornamen und eine mit deinem Nachnamen. Solche “character” Variablen musst du in Anführungszeichen setzen \"\"\n\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\nvorname &lt;- \"Lars\"\nnachname &lt;- \"Schilling\"\n\n\n\n\n\nKombiniere deinen Vor- und Nachnamen zu deinem vollen Namen mittels paste . Speichere diese Variable als voller_name.\n\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\nvoller_name &lt;- paste(vorname, nachname)\n\n\n\n\n\n\n\n\nDefiniere einen Vektor «first_vector» mit den Zahlen 100, 80, 54, 73. Einen Vektor definiert man so: first_vector &lt;- c(...)\n\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\nfirst_vector &lt;- c(100, 80, 54, 73)\n\n\n\n\n\nWende den Befehl boxplot() auf deinen Vektor an\n\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\nboxplot(first_vector)\n\n\n\n\n\n\n\n\n\n\n\n\nBerechne die Summe sum()und den Mittelwert mean() von deinem Vektor\n\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\nsum(first_vector)\n\n[1] 307\n\nmean(first_vector)\n\n[1] 76.75\n\n\n\n\n\n\nMultipliziere deinen Vektor mit *2\n\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\nfirst_vector * 2\n\n[1] 200 160 108 146\n\n\n\n\n\nDie wichtigsten Operatoren und Funktionen in R: https://methodenlehre.github.io/einfuehrung-in-R/chapters/02-R-language.html\n\n\n\n\n\nFunktion\nBedeutung\n\n\n\n\nmean(x, na.rm =FALSE)\nMittelwert\n\n\nsd(x)\nStandardabweichung\n\n\nvar(x)\nVarianz\n\n\nmedian(x)\nMedian\n\n\nsum(x)\nSumme\n\n\nmin(x)\nMinimalwert\n\n\nmax(x)\nMaximalwert\n\n\nrange(x)\nMinimal - und Maximalwert\n\n\n\n\n\n\n\n\nTeste ob die Zahl 5 größer als 2 ist –&gt; TRUE or FALSE?\n\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\n5 &gt; 2\n\n[1] TRUE\n\n\nTRUE, 5 ist grösser als 2.\n\n\n\n\nTeste ob 6 ungleich 8 ist –&gt; TRUE or FALSE?\n\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\n6 != 8\n\n[1] TRUE\n\n\nTRUE, 6 und 8 sind ungleich.\n\n\n\n\nSubtrahiere 80 von 50 und speichere das Ergebnis in einer Variable namens «diff_score».\n\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\ndiff_score &lt;- 80 - 50\n\n\n\n\n\nBerechne mit abs() den absoluten Wert von «diff_score» lassen dir diesen mit print(diff_score) in der Konsole ausgeben.\n\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\ndiff_score_abs &lt;- abs(diff_score)\n\n# print(diff_score_abs) (hier erneut mit # auskommentiert, da der Befehl nicht im Skript, sondern in der Console ausgeführt werden soll)\n\n\n\n\n\n\n\n\n\nZeichen\nBedeutung\n\n\n\n\n==\ngleich\n\n\n!=\nungleich\n\n\n&gt;\ngrösser\n\n\n&gt;=\ngrösser gleich\n\n\n&lt;\nkleiner\n\n\n&lt;=\nkleiner gleich\n\n\n|\nLogisches Oder\n\n\n&\nLogisches Und\n\n\n\n\n\n\n\n\n\n\nInformative Kommentare im Code sind elementar für die Nachvollziehbarkeit.\n\nSchreibe einen Kommentar indem du ein # verwendest.\n\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\n# Hier ein Beipsiel für einen Kommentar, wie auch schon weiter oben mehrmals verwendet um die Lösungen davon zu hindern ausgeführt zu werden.\n\n\n\n\n\nCode der nach einem # steht wird nicht ausgeführt. Setze ein # vor eine Codezeile und führe sie aus und beobachte was passiert.\n\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\n# 1 + 2\n\n\n\n\n\n\n\nEs gibt verschiedene Konventionen wie man Variablen bennen kann:\nhttps://methodenlehre.github.io/einfuehrung-in-R/chapters/02-R-language.html#variablennamen\n\nDefiniere eine neue Variable nach snake_case\n\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\nneue_variable &lt;- \"snake_case\"\n\n\n\n\n\nDefiniere eine zweite Variable nach CamelCase\n\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\nneueVariable &lt;- \"CamelCase\"\n\n\n\n\n\n\n\n\n\nSpeichere die beiden höchsten Werte aus «first_vector» in einer neuen Variable ab.\n\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\ntop_two &lt;- sort(first_vector, decreasing = TRUE)[1:2]\n\n\n\n\n\nErstelle einen Vektor mit Werten von 0-1000 in 10er Schritten.\n\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\nvec_seq &lt;- seq(from = 1, to = 1000, by = 10)\n\n\n\n\n\nZiehe zufällig eine Zahl aus diesem Vektor\n\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\nsample(vec_seq, 1)\n\n[1] 81\n\n\n\n\n\n\nGeneriere einen Vektor, der aus 50 Wiederholungen der Zahl 3 besteht.\n\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\nmy_vector &lt;- rep(3, times = 50)\n\n\n\n\nTipps zu diesen Aufgaben findest du bei Bedarf hier: https://methodenlehre.github.io/einfuehrung-in-R/chapters/02-R-language.html (Kapitel 2.1)\n\n\n\n\nnumeric vectors: werden in integer (ganze Zahlen) und double (reelle Zahlen) unterteilt, z.B.\nnumerical_vector &lt;- c(1, 2.5, 4)\ncharacter vectors: bestehen aus Zeichen, welche von Anführungszeichen umgeben werden, z.B.\ntext_vector &lt;- c(\"Hello\", \"World\")\nlogical vectors: Elemente dieses Typs können nur 3 Werte annehmen: TRUE, FALSE oder NA\nlog_vector &lt;- c(TRUE, FALSE, TRUE)\n\nVektoren müssen aus denselbsten Elementen bestehen, d.h. z.B. numeric und character können nicht gemischt werden. Vektoren werden meist mit c() erstellt.",
     "crumbs": [
       "Übungen zu den Einheiten",
       "Hands on - Block 1 (Woche 1 - 2) - Mit Musterlösungen"
@@ -387,7 +387,7 @@
     "href": "loesung_1.html#für-fortgeschrittene-r-nutzerinnen",
     "title": "Lösung 1",
     "section": "",
-    "text": "Speichere die beiden höchsten Werte aus «first_vector» in einer neuen Variable ab.\n\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\ntop_two &lt;- sort(first_vector, decreasing = TRUE)[1:2]\n\n\n\n\n\nErstelle einen Vektor mit Werten von 0-1000 in 10er Schritten.\n\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\nvec_seq &lt;- seq(from = 1, to = 1000, by = 10)\n\n\n\n\n\nZiehe zufällig eine Zahl aus diesem Vektor\n\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\nsample(vec_seq, 1)\n\n[1] 491\n\n\n\n\n\n\nGeneriere einen Vektor, der aus 50 Wiederholungen der Zahl 3 besteht.\n\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\nmy_vector &lt;- rep(3, times = 50)\n\n\n\n\nTipps zu diesen Aufgaben findest du bei Bedarf hier: https://methodenlehre.github.io/einfuehrung-in-R/chapters/02-R-language.html (Kapitel 2.1)",
+    "text": "Speichere die beiden höchsten Werte aus «first_vector» in einer neuen Variable ab.\n\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\ntop_two &lt;- sort(first_vector, decreasing = TRUE)[1:2]\n\n\n\n\n\nErstelle einen Vektor mit Werten von 0-1000 in 10er Schritten.\n\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\nvec_seq &lt;- seq(from = 1, to = 1000, by = 10)\n\n\n\n\n\nZiehe zufällig eine Zahl aus diesem Vektor\n\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\nsample(vec_seq, 1)\n\n[1] 81\n\n\n\n\n\n\nGeneriere einen Vektor, der aus 50 Wiederholungen der Zahl 3 besteht.\n\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\nmy_vector &lt;- rep(3, times = 50)\n\n\n\n\nTipps zu diesen Aufgaben findest du bei Bedarf hier: https://methodenlehre.github.io/einfuehrung-in-R/chapters/02-R-language.html (Kapitel 2.1)",
     "crumbs": [
       "Übungen zu den Einheiten",
       "Hands on - Block 1 (Woche 1 - 2) - Mit Musterlösungen"
@@ -591,224 +591,352 @@
     "href": "EH_4.html#r-u-ready-reproduzierbare-datenaufbereitung-und--analyse-mit-r",
     "title": "R u Ready? HS2025 | Psychologie der Digitalisierung - Einheit 4",
     "section": "R u Ready? Reproduzierbare Datenaufbereitung und -analyse mit R",
-    "text": "R u Ready? Reproduzierbare Datenaufbereitung und -analyse mit R\nHS 2025 LV-Leitung: Dr. Sandra Grinschgl / MSc. Aaron Friedli Tutor: BSc. Lars Schilling4. Einheit, 8.10.2025"
+    "text": "R u Ready? Reproduzierbare Datenaufbereitung und -analyse mit R\nHS 2025 LV-Leitung: Dr. Sandra Grinschgl / MSc. Aaron Friedli Tutor: BSc. Lars Schilling4. Einheit, 8.10.2025",
+    "crumbs": [
+      "Präsentationen",
+      "Einheit 4 - 8.10.2025"
+    ]
   },
   {
     "objectID": "EH_4.html#fragen-zum-datenanalyseplan-codebook",
     "href": "EH_4.html#fragen-zum-datenanalyseplan-codebook",
     "title": "R u Ready? HS2025 | Psychologie der Digitalisierung - Einheit 4",
     "section": "Fragen zum Datenanalyseplan & Codebook:",
-    "text": "Fragen zum Datenanalyseplan & Codebook:"
+    "text": "Fragen zum Datenanalyseplan & Codebook:",
+    "crumbs": [
+      "Präsentationen",
+      "Einheit 4 - 8.10.2025"
+    ]
   },
   {
     "objectID": "EH_4.html#heute",
     "href": "EH_4.html#heute",
     "title": "R u Ready? HS2025 | Psychologie der Digitalisierung - Einheit 4",
     "section": "Heute:",
-    "text": "Heute:"
+    "text": "Heute:",
+    "crumbs": [
+      "Präsentationen",
+      "Einheit 4 - 8.10.2025"
+    ]
   },
   {
     "objectID": "EH_4.html#hands-on",
     "href": "EH_4.html#hands-on",
     "title": "R u Ready? HS2025 | Psychologie der Digitalisierung - Einheit 4",
     "section": "Hands On!",
-    "text": "Hands On!\n🎯 Ziel: Heute mindestens bis zum Daten-Mergen und Speichern kommen!\n🏃 Für alle, die schneller fertig sind: Coding Basics, Funktionen und Styler\n✈️ Für besonders Schnelle: Weiterarbeiten am Codebook / Peer-Feedback"
+    "text": "Hands On!\n🎯 Ziel: Heute mindestens bis zum Daten-Mergen und Speichern kommen!\n🏃 Für alle, die schneller fertig sind: Coding Basics, Funktionen und Styler\n✈️ Für besonders Schnelle: Weiterarbeiten am Codebook / Peer-Feedback",
+    "crumbs": [
+      "Präsentationen",
+      "Einheit 4 - 8.10.2025"
+    ]
   },
   {
     "objectID": "EH_4.html#daten-einlesen",
     "href": "EH_4.html#daten-einlesen",
     "title": "R u Ready? HS2025 | Psychologie der Digitalisierung - Einheit 4",
     "section": "Daten einlesen",
-    "text": "Daten einlesen\n\nCode immer im Skript abspeichern!\nAusführung alleine in der Konsole reicht nicht\nBei Einlesen über Environment, Code in Skript kopieren!"
+    "text": "Daten einlesen\n\nCode immer im Skript abspeichern!\nAusführung alleine in der Konsole reicht nicht\nBei Einlesen über Environment, Code in Skript kopieren!",
+    "crumbs": [
+      "Präsentationen",
+      "Einheit 4 - 8.10.2025"
+    ]
   },
   {
     "objectID": "EH_4.html#plenum-wie-funktionieren-joins",
     "href": "EH_4.html#plenum-wie-funktionieren-joins",
     "title": "R u Ready? HS2025 | Psychologie der Digitalisierung - Einheit 4",
     "section": "Plenum: Wie funktionieren Joins?",
-    "text": "Plenum: Wie funktionieren Joins?\n\nFragen wie weit man letzte Einheit gekommen ist, ggf. zuerst weiter arbeiten lassen\n\n\ncbind() vs. full_join()\ncbind() verbindet Datensätze spaltenweise – warum ist das suboptimal?\nfull_join() Nimmt alle Variablen aus beiden Datensätzen. Um die Datensätze korrekt zu verbinden musst du einen Schlüssel festlegen."
+    "text": "Plenum: Wie funktionieren Joins?\n\nFragen wie weit man letzte Einheit gekommen ist, ggf. zuerst weiter arbeiten lassen\n\n\ncbind() vs. full_join()\ncbind() verbindet Datensätze spaltenweise – warum ist das suboptimal?\nfull_join() Nimmt alle Variablen aus beiden Datensätzen. Um die Datensätze korrekt zu verbinden musst du einen Schlüssel festlegen.",
+    "crumbs": [
+      "Präsentationen",
+      "Einheit 4 - 8.10.2025"
+    ]
   },
   {
     "objectID": "EH_4.html#full_join",
     "href": "EH_4.html#full_join",
     "title": "R u Ready? HS2025 | Psychologie der Digitalisierung - Einheit 4",
     "section": "full_join()",
-    "text": "full_join()\nWas ist der Schlüssel?\nEine gemeinsame Variable die in beiden Datensätzen vorhanden ist, mit der RStudio erkennen kann welche Werte miteinander verbunden werden müssen.\n\ndata_cb &lt;- read_delim(\"data/raw/data_cb.csv\", delim = \";\")\ndata_vp &lt;- read_delim(\"data/raw/data_vp.csv\", delim = \";\")\n\ndat_full_1 &lt;- full_join(data_cb, data_vp, by = \"code\")\nhead(dat_full_1)\n\n# A tibble: 6 × 5\n   code cb_sum cb_propcorrect vp_sum vp_propcorrect\n  &lt;dbl&gt;  &lt;dbl&gt;          &lt;dbl&gt;  &lt;dbl&gt;          &lt;dbl&gt;\n1     1     26          0.722     33          0.917\n2     2     27          0.75      27          0.75 \n3     3     30          0.833     33          0.917\n4     4     27          0.75      31          0.861\n5     5     25          0.694     32          0.889\n6     6     23          0.639     24          0.667\n\n\n\nIterativer Prozess: immer für 2 Datensätze bis man dat_full mit allen 7 Datensätzen hat –&gt; dafür wird dann Codebook geschrieben"
+    "text": "full_join()\nWas ist der Schlüssel?\nEine gemeinsame Variable die in beiden Datensätzen vorhanden ist, mit der RStudio erkennen kann welche Werte miteinander verbunden werden müssen.\n\ndata_cb &lt;- read_delim(\"data/raw/data_cb.csv\", delim = \";\")\ndata_vp &lt;- read_delim(\"data/raw/data_vp.csv\", delim = \";\")\n\ndat_full_1 &lt;- full_join(data_cb, data_vp, by = \"code\")\nhead(dat_full_1)\n\n# A tibble: 6 × 5\n   code cb_sum cb_propcorrect vp_sum vp_propcorrect\n  &lt;dbl&gt;  &lt;dbl&gt;          &lt;dbl&gt;  &lt;dbl&gt;          &lt;dbl&gt;\n1     1     26          0.722     33          0.917\n2     2     27          0.75      27          0.75 \n3     3     30          0.833     33          0.917\n4     4     27          0.75      31          0.861\n5     5     25          0.694     32          0.889\n6     6     23          0.639     24          0.667\n\n\n\nIterativer Prozess: immer für 2 Datensätze bis man dat_full mit allen 7 Datensätzen hat –&gt; dafür wird dann Codebook geschrieben",
+    "crumbs": [
+      "Präsentationen",
+      "Einheit 4 - 8.10.2025"
+    ]
   },
   {
     "objectID": "EH_4.html#beispiel",
     "href": "EH_4.html#beispiel",
     "title": "R u Ready? HS2025 | Psychologie der Digitalisierung - Einheit 4",
     "section": "Beispiel",
-    "text": "Beispiel\n\ndf1 &lt;- data.frame(id = c(1, 2, 3),\n                  name = c(\"Anna\", \"Ben\", \"Chris\"))\n\ndf2 &lt;- data.frame(id = c(2, 3, 4),\n                  score = c(80, 90, 70))\n\nfull_join(df1, df2, by = \"id\")\n\n  id  name score\n1  1  Anna    NA\n2  2   Ben    80\n3  3 Chris    90\n4  4  &lt;NA&gt;    70"
+    "text": "Beispiel\n\ndf1 &lt;- data.frame(id = c(1, 2, 3),\n                  name = c(\"Anna\", \"Ben\", \"Chris\"))\n\ndf2 &lt;- data.frame(id = c(2, 3, 4),\n                  score = c(80, 90, 70))\n\nfull_join(df1, df2, by = \"id\")\n\n  id  name score\n1  1  Anna    NA\n2  2   Ben    80\n3  3 Chris    90\n4  4  &lt;NA&gt;    70",
+    "crumbs": [
+      "Präsentationen",
+      "Einheit 4 - 8.10.2025"
+    ]
   },
   {
     "objectID": "EH_4.html#unterschiede-zwischen-den-diversen-joins",
     "href": "EH_4.html#unterschiede-zwischen-den-diversen-joins",
     "title": "R u Ready? HS2025 | Psychologie der Digitalisierung - Einheit 4",
     "section": "Unterschiede zwischen den diversen Joins:",
-    "text": "Unterschiede zwischen den diversen Joins:\n\nBehält gemeinsame Zeilen bei"
+    "text": "Unterschiede zwischen den diversen Joins:\n\nBehält gemeinsame Zeilen bei",
+    "crumbs": [
+      "Präsentationen",
+      "Einheit 4 - 8.10.2025"
+    ]
   },
   {
     "objectID": "EH_4.html#unterschiede-zwischen-den-diversen-joins-1",
     "href": "EH_4.html#unterschiede-zwischen-den-diversen-joins-1",
     "title": "R u Ready? HS2025 | Psychologie der Digitalisierung - Einheit 4",
     "section": "Unterschiede zwischen den diversen Joins:",
-    "text": "Unterschiede zwischen den diversen Joins:\n\nBehält gemeinsame + Zeilen von linken Datensatz bei"
+    "text": "Unterschiede zwischen den diversen Joins:\n\nBehält gemeinsame + Zeilen von linken Datensatz bei",
+    "crumbs": [
+      "Präsentationen",
+      "Einheit 4 - 8.10.2025"
+    ]
   },
   {
     "objectID": "EH_4.html#unterschiede-zwischen-den-diversen-joins-2",
     "href": "EH_4.html#unterschiede-zwischen-den-diversen-joins-2",
     "title": "R u Ready? HS2025 | Psychologie der Digitalisierung - Einheit 4",
     "section": "Unterschiede zwischen den diversen Joins:",
-    "text": "Unterschiede zwischen den diversen Joins:\n\nBehält gemeinsame + Zeilen von rechten Datensatz bei"
+    "text": "Unterschiede zwischen den diversen Joins:\n\nBehält gemeinsame + Zeilen von rechten Datensatz bei",
+    "crumbs": [
+      "Präsentationen",
+      "Einheit 4 - 8.10.2025"
+    ]
   },
   {
     "objectID": "EH_4.html#unterschiede-zwischen-den-diversen-joins-3",
     "href": "EH_4.html#unterschiede-zwischen-den-diversen-joins-3",
     "title": "R u Ready? HS2025 | Psychologie der Digitalisierung - Einheit 4",
     "section": "Unterschiede zwischen den diversen Joins:",
-    "text": "Unterschiede zwischen den diversen Joins:\n\nBehält gemeinsame Zeilen, aber nur Inhalte von Datensatz x bei"
+    "text": "Unterschiede zwischen den diversen Joins:\n\nBehält gemeinsame Zeilen, aber nur Inhalte von Datensatz x bei",
+    "crumbs": [
+      "Präsentationen",
+      "Einheit 4 - 8.10.2025"
+    ]
   },
   {
     "objectID": "EH_4.html#check-in",
     "href": "EH_4.html#check-in",
     "title": "R u Ready? HS2025 | Psychologie der Digitalisierung - Einheit 4",
     "section": "Check-in:",
-    "text": "Check-in:\n\nNun sollte jede/r einen Datensatz dat_full haben, der alle 7 Einzeldatensätze beinhaltet mit 159 Versuchspersonen (= Zeilen) und 36 Variablen (= Spalten).\nCheckt mit euren Peer-Partner:innen/Sitznachbar:innen!\nMit diesem Datensatz werden wir die Analysen von Grinschgl et al. (2020) durchführen.\nZu diesem Datensatz sollt ihr bis zum 22.10. den ersten Entwurf für das Codebook schreiben!"
+    "text": "Check-in:\n\nNun sollte jede/r einen Datensatz dat_full haben, der alle 7 Einzeldatensätze beinhaltet mit 159 Versuchspersonen (= Zeilen) und 36 Variablen (= Spalten).\nCheckt mit euren Peer-Partner:innen/Sitznachbar:innen!\nMit diesem Datensatz werden wir die Analysen von Grinschgl et al. (2020) durchführen.\nZu diesem Datensatz sollt ihr bis zum 22.10. den ersten Entwurf für das Codebook schreiben!",
+    "crumbs": [
+      "Präsentationen",
+      "Einheit 4 - 8.10.2025"
+    ]
   },
   {
     "objectID": "EH_4.html#fehlererkennung-in-r",
     "href": "EH_4.html#fehlererkennung-in-r",
     "title": "R u Ready? HS2025 | Psychologie der Digitalisierung - Einheit 4",
     "section": "Fehlererkennung in R",
-    "text": "Fehlererkennung in R\nDer Code läuft nicht. Wie könnt ihr vorgehen um den Fehler zu identifizieren und beheben?\n\nLies die Fehlermeldung!\n\n\nÜberprüfe:\n✅Tippfehler\n✅Klammern\n✅Syntaxfehler\n✅Datentypen\n✅Pakete\nGoogeln hilft oft weiter!\n\nFehlermeldungen lassen sich einfacher googeln, wenn R auf Englisch eingestellt ist:\n\n👉Sys.setenv(LANGUAGE = \"en\")\noft es auch hilfreich, das Betriebssystem anzugeben: sessionInfo()\n\n\nXXXX Block zu KI und overreliance"
+    "text": "Fehlererkennung in R\nDer Code läuft nicht. Wie könnt ihr vorgehen um den Fehler zu identifizieren und beheben?\n\nLies die Fehlermeldung!\n\n\nÜberprüfe:\n✅Tippfehler\n✅Klammern\n✅Syntaxfehler\n✅Datentypen\n✅Pakete\nGoogeln hilft oft weiter!\n\nFehlermeldungen lassen sich einfacher googeln, wenn R auf Englisch eingestellt ist:\n\n👉Sys.setenv(LANGUAGE = \"en\")\noft es auch hilfreich, das Betriebssystem anzugeben: sessionInfo()\n\n\nXXXX Block zu KI und overreliance",
+    "crumbs": [
+      "Präsentationen",
+      "Einheit 4 - 8.10.2025"
+    ]
   },
   {
     "objectID": "EH_4.html#fehlererkennung-in-r-tipps",
     "href": "EH_4.html#fehlererkennung-in-r-tipps",
     "title": "R u Ready? HS2025 | Psychologie der Digitalisierung - Einheit 4",
     "section": "Fehlererkennung in R – Tipps",
-    "text": "Fehlererkennung in R – Tipps\n\nclass() / str() zur Objektprüfung 👉\nIn mean.default(x) : argument is not numeric or logical: returning NA\nFunktionen schrittweise testen\nArgumente weglassen → Fehlerquelle finden\nZwischenergebnisse mit print()"
+    "text": "Fehlererkennung in R – Tipps\n\nclass() / str() zur Objektprüfung 👉\nIn mean.default(x) : argument is not numeric or logical: returning NA\nFunktionen schrittweise testen\nArgumente weglassen → Fehlerquelle finden\nZwischenergebnisse mit print()",
+    "crumbs": [
+      "Präsentationen",
+      "Einheit 4 - 8.10.2025"
+    ]
   },
   {
     "objectID": "EH_4.html#code-diagnostik",
     "href": "EH_4.html#code-diagnostik",
     "title": "R u Ready? HS2025 | Psychologie der Digitalisierung - Einheit 4",
     "section": "Code Diagnostik:",
-    "text": "Code Diagnostik:"
+    "text": "Code Diagnostik:",
+    "crumbs": [
+      "Präsentationen",
+      "Einheit 4 - 8.10.2025"
+    ]
   },
   {
     "objectID": "EH_4.html#r-studio-gibt-hinweise",
     "href": "EH_4.html#r-studio-gibt-hinweise",
     "title": "R u Ready? HS2025 | Psychologie der Digitalisierung - Einheit 4",
     "section": "R-Studio gibt Hinweise!",
-    "text": "R-Studio gibt Hinweise!\n\n\nFehlermeldungen: Die Information vor dem Doppelpunkt gibt uns an, in welcher Funktion der Fehler steckt; die Information nach dem Doppelpunkt gibt Aufschluss über die Art des Fehlers. Zweiteres ist für die Fehlersuche (zumeist) von großer Bedeutung.\nWenn ein oder mehrere Zeichen überflüssig sind bzw. fehlen, dann bekommt man Unerwartete(s) ‘…’ in “…” ausgegeben. Hierbei teilt uns die Meldung mit, wo der Fehler liegt: In den Anführungszeichen “…” wird nur ein Teil des Codes ausgegeben und der Fehler ist zumeist das zuletzt ausgegebene Zeichen (oder es liegt unmittelbar davor).  z.B. daten[2]"
+    "text": "R-Studio gibt Hinweise!\n\n\nFehlermeldungen: Die Information vor dem Doppelpunkt gibt uns an, in welcher Funktion der Fehler steckt; die Information nach dem Doppelpunkt gibt Aufschluss über die Art des Fehlers. Zweiteres ist für die Fehlersuche (zumeist) von großer Bedeutung.\nWenn ein oder mehrere Zeichen überflüssig sind bzw. fehlen, dann bekommt man Unerwartete(s) ‘…’ in “…” ausgegeben. Hierbei teilt uns die Meldung mit, wo der Fehler liegt: In den Anführungszeichen “…” wird nur ein Teil des Codes ausgegeben und der Fehler ist zumeist das zuletzt ausgegebene Zeichen (oder es liegt unmittelbar davor).  z.B. daten[2]",
+    "crumbs": [
+      "Präsentationen",
+      "Einheit 4 - 8.10.2025"
+    ]
   },
   {
     "objectID": "EH_4.html#r-resourcen",
     "href": "EH_4.html#r-resourcen",
     "title": "R u Ready? HS2025 | Psychologie der Digitalisierung - Einheit 4",
     "section": "R-Resourcen",
-    "text": "R-Resourcen\n\nNewsletter zu R\nInformationen zu Paketen\nPsyteacher AI Tutor\nR for Data Science (Basics wie Import, Aufbereitung, Visualisierung)\nPsychometrics in Exercises using R and RStudio (Psychometrische Analysen wie EFA, CFA, SEM)\nLearnr Shinyapps\nCheatsheets\nStack Overflow –&gt; Q&A Forum\nDatacamp\nÜberblick über weitere Ressourcen 👉 Arslan (2025)"
+    "text": "R-Resourcen\n\nNewsletter zu R\nInformationen zu Paketen\nPsyteacher AI Tutor\nR for Data Science (Basics wie Import, Aufbereitung, Visualisierung)\nPsychometrics in Exercises using R and RStudio (Psychometrische Analysen wie EFA, CFA, SEM)\nLearnr Shinyapps\nCheatsheets\nStack Overflow –&gt; Q&A Forum\nDatacamp\nÜberblick über weitere Ressourcen 👉 Arslan (2025)",
+    "crumbs": [
+      "Präsentationen",
+      "Einheit 4 - 8.10.2025"
+    ]
   },
   {
     "objectID": "EH_4.html#large-language-models-datenanalyse",
     "href": "EH_4.html#large-language-models-datenanalyse",
     "title": "R u Ready? HS2025 | Psychologie der Digitalisierung - Einheit 4",
     "section": "Large Language Models & Datenanalyse",
-    "text": "Large Language Models & Datenanalyse\n\nModelle wie ChatGPT\nBerechnen Wahrscheinlichkeiten für Wörter und erzeugen dadurch Text, der menschlich wirkt.\nABER:\n\nVerstehen keine Bedeutung\nWissen nicht was inhaltlich korrekt ist"
+    "text": "Large Language Models & Datenanalyse\n\nModelle wie ChatGPT\nBerechnen Wahrscheinlichkeiten für Wörter und erzeugen dadurch Text, der menschlich wirkt.\nABER:\n\nVerstehen keine Bedeutung\nWissen nicht was inhaltlich korrekt ist",
+    "crumbs": [
+      "Präsentationen",
+      "Einheit 4 - 8.10.2025"
+    ]
   },
   {
     "objectID": "EH_4.html#vibe-coding",
     "href": "EH_4.html#vibe-coding",
     "title": "R u Ready? HS2025 | Psychologie der Digitalisierung - Einheit 4",
     "section": "Vibe coding",
-    "text": "Vibe coding\n\n👉KI in natürlicher Sprache prompten ohne den generierten Code zu prüfen oder zu verstehen.\n\nVibe Coding bedeutet, dass Nutzer*innen mit KI-Codegeneratoren (z. B. ChatGPT, GitHub Copilot) Programme schreiben, indem sie nur Zielbeschreibungen in natürlicher Sprache eingeben, ohne den generierten Code wirklich zu verstehen oder gründlich zu überprüfen.\n\nEs ist also intuitives, versuchsorientiertes „Codieren nach Gefühl“, bei dem Schnelligkeit vor Verständnis steht."
+    "text": "Vibe coding\n\n👉KI in natürlicher Sprache prompten ohne den generierten Code zu prüfen oder zu verstehen.\n\nVibe Coding bedeutet, dass Nutzer*innen mit KI-Codegeneratoren (z. B. ChatGPT, GitHub Copilot) Programme schreiben, indem sie nur Zielbeschreibungen in natürlicher Sprache eingeben, ohne den generierten Code wirklich zu verstehen oder gründlich zu überprüfen.\n\nEs ist also intuitives, versuchsorientiertes „Codieren nach Gefühl“, bei dem Schnelligkeit vor Verständnis steht.",
+    "crumbs": [
+      "Präsentationen",
+      "Einheit 4 - 8.10.2025"
+    ]
   },
   {
     "objectID": "EH_4.html#gefahren-von-vibe-coding",
     "href": "EH_4.html#gefahren-von-vibe-coding",
     "title": "R u Ready? HS2025 | Psychologie der Digitalisierung - Einheit 4",
     "section": "Gefahren von Vibe coding",
-    "text": "Gefahren von Vibe coding"
+    "text": "Gefahren von Vibe coding",
+    "crumbs": [
+      "Präsentationen",
+      "Einheit 4 - 8.10.2025"
+    ]
   },
   {
     "objectID": "EH_4.html#ki---llms-chatgpt-copilot-rtutor",
     "href": "EH_4.html#ki---llms-chatgpt-copilot-rtutor",
     "title": "R u Ready? HS2025 | Psychologie der Digitalisierung - Einheit 4",
     "section": "KI - LLMS (ChatGPT, Copilot, Rtutor)",
-    "text": "KI - LLMS (ChatGPT, Copilot, Rtutor)\n💚 Vorteile\n\nGenerieren schnell viel Code\nCode häufig syntaktisch korrekt\nOn-Demand-Assistenz für Fragen aller Art\nReduziert Einstiegshürden\nUnterstützung bei Debugging und Error Handling\nTutoring-Funktion –&gt; siehe Prompts"
+    "text": "KI - LLMS (ChatGPT, Copilot, Rtutor)\n💚 Vorteile\n\nGenerieren schnell viel Code\nCode häufig syntaktisch korrekt\nOn-Demand-Assistenz für Fragen aller Art\nReduziert Einstiegshürden\nUnterstützung bei Debugging und Error Handling\nTutoring-Funktion –&gt; siehe Prompts",
+    "crumbs": [
+      "Präsentationen",
+      "Einheit 4 - 8.10.2025"
+    ]
   },
   {
     "objectID": "EH_4.html#sinnvolle-nutzung-von-ki-im-datenanalyseprozess",
     "href": "EH_4.html#sinnvolle-nutzung-von-ki-im-datenanalyseprozess",
     "title": "R u Ready? HS2025 | Psychologie der Digitalisierung - Einheit 4",
     "section": "Sinnvolle Nutzung von KI im Datenanalyseprozess:",
-    "text": "Sinnvolle Nutzung von KI im Datenanalyseprozess:\n\n💚Sinnvoll: Unterstützend – nicht ersetzend\n\nKontrolle einfacher Fehler (Klammern, Typos)\nErklärung von Code und Syntax\nHilfe bei Fehlersuche (Debugging)\nKommentierung und Dokumentation\n\n💔Nicht sinnvoll: Ersatz statt Unterstützung\n\nGenerierung ganzer Analyse-Skripte\nAutomatische Auswahl von Methoden oder Tests\nInterpretation statistischer Ergebnisse durch KI\nErstellung kompletter Berichte oder Diskussionen\nHochladen sensibler Daten\nUnkritisches Übernehmen von Output"
+    "text": "Sinnvolle Nutzung von KI im Datenanalyseprozess:\n\n💚Sinnvoll: Unterstützend – nicht ersetzend\n\nKontrolle einfacher Fehler (Klammern, Typos)\nErklärung von Code und Syntax\nHilfe bei Fehlersuche (Debugging)\nKommentierung und Dokumentation\n\n💔Nicht sinnvoll: Ersatz statt Unterstützung\n\nGenerierung ganzer Analyse-Skripte\nAutomatische Auswahl von Methoden oder Tests\nInterpretation statistischer Ergebnisse durch KI\nErstellung kompletter Berichte oder Diskussionen\nHochladen sensibler Daten\nUnkritisches Übernehmen von Output",
+    "crumbs": [
+      "Präsentationen",
+      "Einheit 4 - 8.10.2025"
+    ]
   },
   {
     "objectID": "EH_4.html#github-copilot-in-r",
     "href": "EH_4.html#github-copilot-in-r",
     "title": "R u Ready? HS2025 | Psychologie der Digitalisierung - Einheit 4",
     "section": "Github CoPilot in R",
-    "text": "Github CoPilot in R\n\nVoraussetzung ist ein Account sowie ein Copilot-Abo (kostenlos für Studierende der Universität Bern) auf GitHub.\nGitHub ist ein Clouddienst von Microsoft, spezialisiert auf das Teilen und gemeinsame Bearbeiten von Code: https://github.com/\nEine Anleitung zur Einrichtung von GitHub Copilot in RStudio findet ihr hier:\nYouTube-Link (1:40–2:36)\nRechtliche Informationen für Studierende der Universität Bern findet ihr unter:\nhttps://www.unibe.ch/universitaet/campus__und__infrastruktur/rund_um_computer/soft_und_hardware/software/generative_kis/index_ger.html"
+    "text": "Github CoPilot in R\n\nVoraussetzung ist ein Account sowie ein Copilot-Abo (kostenlos für Studierende der Universität Bern) auf GitHub.\nGitHub ist ein Clouddienst von Microsoft, spezialisiert auf das Teilen und gemeinsame Bearbeiten von Code: https://github.com/\nEine Anleitung zur Einrichtung von GitHub Copilot in RStudio findet ihr hier:\nYouTube-Link (1:40–2:36)\nRechtliche Informationen für Studierende der Universität Bern findet ihr unter:\nhttps://www.unibe.ch/universitaet/campus__und__infrastruktur/rund_um_computer/soft_und_hardware/software/generative_kis/index_ger.html",
+    "crumbs": [
+      "Präsentationen",
+      "Einheit 4 - 8.10.2025"
+    ]
   },
   {
     "objectID": "EH_4.html#chatgpt-in-r",
     "href": "EH_4.html#chatgpt-in-r",
     "title": "R u Ready? HS2025 | Psychologie der Digitalisierung - Einheit 4",
     "section": "ChatGPT in R",
-    "text": "ChatGPT in R\n\nVoraussetzung ist ein Account bei OpenAI / ChatGPT (falls ihr ChatGPT bisher ohne Anmeldung genutzt habt):\nhttps://chatgpt.com/\nEine Anleitung zur Einrichtung von ChatGPT in RStudio findet ihr hier:\nYouTube-Link (2:36–5:08)\nRechtliche Informationen für Studierende der Universität Bern findet ihr unter:\nhttps://www.unibe.ch/universitaet/campus__und__infrastruktur/rund_um_computer/soft_und_hardware/software/generative_kis/index_ger.html"
+    "text": "ChatGPT in R\n\nVoraussetzung ist ein Account bei OpenAI / ChatGPT (falls ihr ChatGPT bisher ohne Anmeldung genutzt habt):\nhttps://chatgpt.com/\nEine Anleitung zur Einrichtung von ChatGPT in RStudio findet ihr hier:\nYouTube-Link (2:36–5:08)\nRechtliche Informationen für Studierende der Universität Bern findet ihr unter:\nhttps://www.unibe.ch/universitaet/campus__und__infrastruktur/rund_um_computer/soft_und_hardware/software/generative_kis/index_ger.html",
+    "crumbs": [
+      "Präsentationen",
+      "Einheit 4 - 8.10.2025"
+    ]
   },
   {
     "objectID": "EH_4.html#verwendung-von-llms",
     "href": "EH_4.html#verwendung-von-llms",
     "title": "R u Ready? HS2025 | Psychologie der Digitalisierung - Einheit 4",
     "section": "Verwendung von LLMs",
-    "text": "Verwendung von LLMs"
+    "text": "Verwendung von LLMs",
+    "crumbs": [
+      "Präsentationen",
+      "Einheit 4 - 8.10.2025"
+    ]
   },
   {
     "objectID": "EH_4.html#peer-feedback-zum-datenanalyseplan",
     "href": "EH_4.html#peer-feedback-zum-datenanalyseplan",
     "title": "R u Ready? HS2025 | Psychologie der Digitalisierung - Einheit 4",
     "section": "Peer Feedback zum Datenanalyseplan",
-    "text": "Peer Feedback zum Datenanalyseplan\n📋To Do’s:\n\nMusterlösung anschauen! (siehe Ordner Abschlussprojekt auf Ilias)\n\n\n\nDatenanalyseplan des Partners/der Partnerin bis 15.10 durchschauen und kommentieren (am besten mit Word oder PDF Kommentaren)\nUpload auf Ilias mit Kommentaren+ Weitergabe an Partner/Partnerin per Email\nAuch persönliches Feedback erwünscht 👉 selbstorganisiert\nSelbständigkeit: Wir geben kein Feedback, bei Fragen auf uns zukommen (Forum, Sprechstunde etc. nutzen)"
+    "text": "Peer Feedback zum Datenanalyseplan\n📋To Do’s:\n\nMusterlösung anschauen! (siehe Ordner Abschlussprojekt auf Ilias)\n\n\n\nDatenanalyseplan des Partners/der Partnerin bis 15.10 durchschauen und kommentieren (am besten mit Word oder PDF Kommentaren)\nUpload auf Ilias mit Kommentaren+ Weitergabe an Partner/Partnerin per Email\nAuch persönliches Feedback erwünscht 👉 selbstorganisiert\nSelbständigkeit: Wir geben kein Feedback, bei Fragen auf uns zukommen (Forum, Sprechstunde etc. nutzen)",
+    "crumbs": [
+      "Präsentationen",
+      "Einheit 4 - 8.10.2025"
+    ]
   },
   {
     "objectID": "EH_4.html#peer-feedback-zum-datenanalyseplan-1",
     "href": "EH_4.html#peer-feedback-zum-datenanalyseplan-1",
     "title": "R u Ready? HS2025 | Psychologie der Digitalisierung - Einheit 4",
     "section": "Peer Feedback zum Datenanalyseplan",
-    "text": "Peer Feedback zum Datenanalyseplan\n\nKlarheit und Verständlichkeit (z.B. sind alle Begriffe und Konzepte ausreichend erklärt? Gibt es verwirrende oder unklare Formulierungen?)\nVollständigkeit (z.B. wurden alle notwendigen Fragen ausreichend beantwortet? Fehlen Informationen?)\nReproduzierbarkeit (Ist der Plan so formuliert, dass er von einer anderen Person nachvollzogen und reproduziert werden kann?)"
+    "text": "Peer Feedback zum Datenanalyseplan\n\nKlarheit und Verständlichkeit (z.B. sind alle Begriffe und Konzepte ausreichend erklärt? Gibt es verwirrende oder unklare Formulierungen?)\nVollständigkeit (z.B. wurden alle notwendigen Fragen ausreichend beantwortet? Fehlen Informationen?)\nReproduzierbarkeit (Ist der Plan so formuliert, dass er von einer anderen Person nachvollzogen und reproduziert werden kann?)",
+    "crumbs": [
+      "Präsentationen",
+      "Einheit 4 - 8.10.2025"
+    ]
   },
   {
     "objectID": "EH_4.html#peer-feedback-regeln",
     "href": "EH_4.html#peer-feedback-regeln",
     "title": "R u Ready? HS2025 | Psychologie der Digitalisierung - Einheit 4",
     "section": "Peer Feedback Regeln",
-    "text": "Peer Feedback Regeln\n\nGib fundiertes, konstruktives und gut strukturiertes Feedback!\nFokus sollte auf inhaltlicher Qualität und Übereinstimmung mit den Anforderungen liegen, nicht auf persönlichen Präferenzen.\nVerbesserungsvorschläge sind gewünscht, kein „Schön reden“ notwendig –&gt; wir wollen dazu lernen!\nVerbesserungsvorschläge sollten möglichst konkret sein.\nBleibt aber natürlich sachlich und verwendet eine respektvolle Sprache!\nAuch Lob für besonders gute Abschnitte darf nicht fehlen. Feedback ist ein Lernprozess, auch für den Gebenden. Seit bereit, euer Feedback anzupassen, wenn die andere Person es anders versteht oder weitere Informationen liefert.\nPeer Feedback sollte nicht nur auf die aktuelle Aufgabe abzielen, sondern auch helfen, den Lernprozess der beteiligten Personen langfristig zu verbessern"
+    "text": "Peer Feedback Regeln\n\nGib fundiertes, konstruktives und gut strukturiertes Feedback!\nFokus sollte auf inhaltlicher Qualität und Übereinstimmung mit den Anforderungen liegen, nicht auf persönlichen Präferenzen.\nVerbesserungsvorschläge sind gewünscht, kein „Schön reden“ notwendig –&gt; wir wollen dazu lernen!\nVerbesserungsvorschläge sollten möglichst konkret sein.\nBleibt aber natürlich sachlich und verwendet eine respektvolle Sprache!\nAuch Lob für besonders gute Abschnitte darf nicht fehlen. Feedback ist ein Lernprozess, auch für den Gebenden. Seit bereit, euer Feedback anzupassen, wenn die andere Person es anders versteht oder weitere Informationen liefert.\nPeer Feedback sollte nicht nur auf die aktuelle Aufgabe abzielen, sondern auch helfen, den Lernprozess der beteiligten Personen langfristig zu verbessern",
+    "crumbs": [
+      "Präsentationen",
+      "Einheit 4 - 8.10.2025"
+    ]
   },
   {
     "objectID": "EH_4.html#heute-haben-wir",
     "href": "EH_4.html#heute-haben-wir",
     "title": "R u Ready? HS2025 | Psychologie der Digitalisierung - Einheit 4",
     "section": "Heute haben wir:",
-    "text": "Heute haben wir:\n\nDatensätze gemerged und diverse joins kennengelernt\nTools für die Fehlerdiagnostik in R kennengelernt\nUns mit Ressourcen und dem Umgang mit LLMS befasst"
+    "text": "Heute haben wir:\n\nDatensätze gemerged und diverse joins kennengelernt\nTools für die Fehlerdiagnostik in R kennengelernt\nUns mit Ressourcen und dem Umgang mit LLMS befasst",
+    "crumbs": [
+      "Präsentationen",
+      "Einheit 4 - 8.10.2025"
+    ]
   },
   {
     "objectID": "EH_4.html#abfrage-muddiest-points",
     "href": "EH_4.html#abfrage-muddiest-points",
     "title": "R u Ready? HS2025 | Psychologie der Digitalisierung - Einheit 4",
     "section": "Abfrage Muddiest Points",
-    "text": "Abfrage Muddiest Points\n\nDenke an die bisher besprochenen Inhalte zurück – was ist dir unklar geblieben? Was sollten wir noch einmal besprechen?\nDenke sowohl an die R Hands On Sessions als auch die theoretischen Inhalte (z.B. Open Science, Datenanalyseplan, Codebook).\nNotiere bitte max. drei konkrete Punkte. Falls du Vorschläge/Ideen zur Aufarbeitung dieser Punkte hast, gib diese auch gerne an.\nUmfrage auf ILIAS (siehe EH 4) bis Sonntag 12.10. 23:55"
+    "text": "Abfrage Muddiest Points\n\nDenke an die bisher besprochenen Inhalte zurück – was ist dir unklar geblieben? Was sollten wir noch einmal besprechen?\nDenke sowohl an die R Hands On Sessions als auch die theoretischen Inhalte (z.B. Open Science, Datenanalyseplan, Codebook).\nNotiere bitte max. drei konkrete Punkte. Falls du Vorschläge/Ideen zur Aufarbeitung dieser Punkte hast, gib diese auch gerne an.\nUmfrage auf ILIAS (siehe EH 4) bis Sonntag 12.10. 23:55",
+    "crumbs": [
+      "Präsentationen",
+      "Einheit 4 - 8.10.2025"
+    ]
   },
   {
     "objectID": "EH_4.html#referenzen",
     "href": "EH_4.html#referenzen",
     "title": "R u Ready? HS2025 | Psychologie der Digitalisierung - Einheit 4",
     "section": "Referenzen:",
-    "text": "Referenzen:\nArslan (2025, June 4). One lives only to make blunders: Resources for learning R. Retrieved from https://rubenarslan.github.io/posts/2025-06-04-resources-for-learning-r/"
+    "text": "Referenzen:\nArslan (2025, June 4). One lives only to make blunders: Resources for learning R. Retrieved from https://rubenarslan.github.io/posts/2025-06-04-resources-for-learning-r/",
+    "crumbs": [
+      "Präsentationen",
+      "Einheit 4 - 8.10.2025"
+    ]
   },
   {
     "objectID": "EH_3-PSY-017376.html#r-u-ready-reprodzierbare-datenaufbereitung-und--analyse-mit-r",
@@ -1433,7 +1561,7 @@
   {
     "objectID": "ChatGPT.html",
     "href": "ChatGPT.html",
-    "title": "ChatGPT",
+    "title": "ChatGPT in RStudio",
     "section": "",
     "text": "Damit ihr ChatGPT in RStudio einbinden könnt ist ein Account bei OpenAI / ChatGPT notwendig (falls ihr ChatGPT bisher ohne Anmeldung genutzt habt): https://chatgpt.com/\nNeben dieser Anleitung gibt es auch noch dieses YouTube-Tutorial [2:36 - 5:08] welches euch bei der Einrichtung behilflich sein könnte.\nRechtliche Informationen zum Umgang mit ChatGPT und anderen generativen KI-Anwendungen findet ihr hier.",
     "crumbs": [
@@ -1443,9 +1571,9 @@
   {
     "objectID": "ChatGPT.html#installieren-von-paketen-welche-chattr-im-hintergrund-benötigt",
     "href": "ChatGPT.html#installieren-von-paketen-welche-chattr-im-hintergrund-benötigt",
-    "title": "ChatGPT",
+    "title": "ChatGPT in RStudio",
     "section": "2.1 Installieren von Paketen, welche chattr im Hintergrund benötigt",
-    "text": "2.1 Installieren von Paketen, welche chattr im Hintergrund benötigt\nEventuell habt ihr diese schon installiert und ihr könnt diesen Schritt dann überspringen. Ansonsten müsst ihr diese Pakete, wie auch alle anderen, nur einmalig installieren.\n\ninstall.packages(\"shiny\")\n\nThe following package(s) will be installed:\n- shiny [1.11.1]\nThese packages will be installed into \"~/OneDrive - Universitaet Bern/Dateien von Grinschgl, Sandra (PSY) - MethodenLVOneDrive/MethodensemHS25/Website/ruready/renv/library/windows/R-4.4/x86_64-w64-mingw32\".\n\n# Installing packages --------------------------------------------------------\n- Installing shiny ...                          OK [linked from cache]\nSuccessfully installed 1 package in 42 milliseconds.\n\ninstall.packages(\"httr2\")\n\nThe following package(s) will be installed:\n- httr2 [1.2.1]\nThese packages will be installed into \"~/OneDrive - Universitaet Bern/Dateien von Grinschgl, Sandra (PSY) - MethodenLVOneDrive/MethodensemHS25/Website/ruready/renv/library/windows/R-4.4/x86_64-w64-mingw32\".\n\n# Installing packages --------------------------------------------------------\n- Installing httr2 ...                          OK [linked from cache]\nSuccessfully installed 1 package in 38 milliseconds.\n\ninstall.packages(\"jsonlite\")\n\nThe following package(s) will be installed:\n- jsonlite [2.0.0]\nThese packages will be installed into \"~/OneDrive - Universitaet Bern/Dateien von Grinschgl, Sandra (PSY) - MethodenLVOneDrive/MethodensemHS25/Website/ruready/renv/library/windows/R-4.4/x86_64-w64-mingw32\".\n\n# Installing packages --------------------------------------------------------\n- Installing jsonlite ...                       OK [linked from cache]\nSuccessfully installed 1 package in 37 milliseconds.",
+    "text": "2.1 Installieren von Paketen, welche chattr im Hintergrund benötigt\nEventuell habt ihr diese schon installiert und ihr könnt diesen Schritt dann überspringen. Ansonsten müsst ihr diese Pakete, wie auch alle anderen, nur einmalig installieren.\n\ninstall.packages(\"shiny\")\n\nThe following package(s) will be installed:\n- shiny [1.11.1]\nThese packages will be installed into \"~/OneDrive - Universitaet Bern/Dateien von Grinschgl, Sandra (PSY) - MethodenLVOneDrive/MethodensemHS25/Website/ruready/renv/library/windows/R-4.4/x86_64-w64-mingw32\".\n\n# Installing packages --------------------------------------------------------\n- Installing shiny ...                          OK [linked from cache]\nSuccessfully installed 1 package in 33 milliseconds.\n\ninstall.packages(\"httr2\")\n\nThe following package(s) will be installed:\n- httr2 [1.2.1]\nThese packages will be installed into \"~/OneDrive - Universitaet Bern/Dateien von Grinschgl, Sandra (PSY) - MethodenLVOneDrive/MethodensemHS25/Website/ruready/renv/library/windows/R-4.4/x86_64-w64-mingw32\".\n\n# Installing packages --------------------------------------------------------\n- Installing httr2 ...                          OK [linked from cache]\nSuccessfully installed 1 package in 29 milliseconds.\n\ninstall.packages(\"jsonlite\")\n\nThe following package(s) will be installed:\n- jsonlite [2.0.0]\nThese packages will be installed into \"~/OneDrive - Universitaet Bern/Dateien von Grinschgl, Sandra (PSY) - MethodenLVOneDrive/MethodensemHS25/Website/ruready/renv/library/windows/R-4.4/x86_64-w64-mingw32\".\n\n# Installing packages --------------------------------------------------------\n- Installing jsonlite ...                       OK [linked from cache]\nSuccessfully installed 1 package in 38 milliseconds.",
     "crumbs": [
       "ChatGPT in RStudio"
     ]
@@ -1453,9 +1581,9 @@
   {
     "objectID": "ChatGPT.html#installieren-des-chattr-pakets-von-github",
     "href": "ChatGPT.html#installieren-des-chattr-pakets-von-github",
-    "title": "ChatGPT",
+    "title": "ChatGPT in RStudio",
     "section": "2.2 Installieren des chattr-Pakets von GitHub",
-    "text": "2.2 Installieren des chattr-Pakets von GitHub\nAuch hier gilt, die Installation des Paketes müsst ihr nur einmalig vornehmen.\n\ninstall.packages(\"remotes\") # Hier werdet ihr in der Console möglicherweise gefragt, ob ihr das Paket unter dem vorgeschlagenen Dateipfad abspeichern wollt. Sofern dieser für euch passt könnt ihr einfach mit \"Y\" unten in der Console eingeben und mit Enter bestätigen.\n\nThe following package(s) will be installed:\n- remotes [2.5.0]\nThese packages will be installed into \"~/OneDrive - Universitaet Bern/Dateien von Grinschgl, Sandra (PSY) - MethodenLVOneDrive/MethodensemHS25/Website/ruready/renv/library/windows/R-4.4/x86_64-w64-mingw32\".\n\n# Installing packages --------------------------------------------------------\n- Installing remotes ...                        OK [linked from cache]\nSuccessfully installed 1 package in 34 milliseconds.\n\n\n\nremotes::install_github(\"mlverse/chattr\") # Hier werdet ihr möglicherweise gefragt, welche der betroffenen Pakete ihr updaten wollt. Es empfehlt sich, alle zu updaten. Ihr könnt dies tun, indem ihr \"1\" in der Console eingebt und mit Enter bestätigt.\n\nUsing GitHub PAT from the git credential store.\n\n\nSkipping install of 'chattr' from a github remote, the SHA1 (1e947ece) has not changed since last install.\n  Use `force = TRUE` to force installation",
+    "text": "2.2 Installieren des chattr-Pakets von GitHub\nAuch hier gilt, die Installation des Paketes müsst ihr nur einmalig vornehmen.\n\ninstall.packages(\"remotes\") # Hier werdet ihr in der Console möglicherweise gefragt, ob ihr das Paket unter dem vorgeschlagenen Dateipfad abspeichern wollt. Sofern dieser für euch passt könnt ihr einfach mit \"Y\" unten in der Console eingeben und mit Enter bestätigen.\n\nThe following package(s) will be installed:\n- remotes [2.5.0]\nThese packages will be installed into \"~/OneDrive - Universitaet Bern/Dateien von Grinschgl, Sandra (PSY) - MethodenLVOneDrive/MethodensemHS25/Website/ruready/renv/library/windows/R-4.4/x86_64-w64-mingw32\".\n\n# Installing packages --------------------------------------------------------\n- Installing remotes ...                        OK [linked from cache]\nSuccessfully installed 1 package in 77 milliseconds.\n\n\n\nremotes::install_github(\"mlverse/chattr\") # Hier werdet ihr möglicherweise gefragt, welche der betroffenen Pakete ihr updaten wollt. Es empfehlt sich, alle zu updaten. Ihr könnt dies tun, indem ihr \"1\" in der Console eingebt und mit Enter bestätigt.\n\nUsing GitHub PAT from the git credential store.\n\n\nSkipping install of 'chattr' from a github remote, the SHA1 (1e947ece) has not changed since last install.\n  Use `force = TRUE` to force installation",
     "crumbs": [
       "ChatGPT in RStudio"
     ]
@@ -1463,7 +1591,7 @@
   {
     "objectID": "ChatGPT.html#laden-von-chattr",
     "href": "ChatGPT.html#laden-von-chattr",
-    "title": "ChatGPT",
+    "title": "ChatGPT in RStudio",
     "section": "2.3 Laden von chattr",
     "text": "2.3 Laden von chattr\nDie Schritte ab hier, also das Laden des Paketes und das Starten des Chat-Interface, müsst ihr bei jedem Start von RStudio erneut durchführen.\n\nlibrary(chattr) # So wie ihr es auch bereits von anderen Paketen kennt",
     "crumbs": [
@@ -1473,7 +1601,7 @@
   {
     "objectID": "ChatGPT.html#erstellen-des-chat-interface",
     "href": "ChatGPT.html#erstellen-des-chat-interface",
-    "title": "ChatGPT",
+    "title": "ChatGPT in RStudio",
     "section": "2.4 Erstellen des Chat-Interface",
     "text": "2.4 Erstellen des Chat-Interface\n\nSys.setenv(OPENAI_API_KEY = \"Hier müsst ihr euren eigenen OpenAI API-Key einsetzen\") # Ihr erhaltet euren OpenAI API Key, indem ihr euch bei OpenAI anmeldet und unter https://platform.openai.com/account/api-keys einen neuen Key generiert.\n\nchattr_app() # Hier werdet ihr möglicherweise gefragt, welche Version von ChatGPT ihr verwenden mögt. Mit Eingabe der Nummer wählt ihr das entsprechende Modell aus. Mit Enter bestätigt ihr die Eingabe.",
     "crumbs": [
@@ -1483,7 +1611,7 @@
   {
     "objectID": "ChatGPT.html#prompt-beispiel",
     "href": "ChatGPT.html#prompt-beispiel",
-    "title": "ChatGPT",
+    "title": "ChatGPT in RStudio",
     "section": "3.1 Prompt-Beispiel",
     "text": "3.1 Prompt-Beispiel\nWofür braucht das Paket chattr im Hintergrund noch die Pakete shiny, httr2 und jsonlite?",
     "crumbs": [
