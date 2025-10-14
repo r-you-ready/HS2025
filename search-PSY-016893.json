@@ -2058,7 +2058,11 @@
     "href": "EH_4.html#fragen-zum-datenanalyseplan-codebook",
     "title": "R u Ready? HS2025 | Psychologie der Digitalisierung - Einheit 4",
     "section": "Fragen zum Datenanalyseplan & Codebook:",
-    "text": "Fragen zum Datenanalyseplan & Codebook:"
+    "text": "Fragen zum Datenanalyseplan & Codebook:",
+    "crumbs": [
+      "Präsentationen",
+      "Einheit 4 - 8.10.2025"
+    ]
   },
   {
     "objectID": "EH_4.html#reproduzierbare-auswertung-quarto-woche-56-xxxx",
@@ -2356,70 +2360,110 @@
     "href": "EH_4.html#r-u-ready-reproduzierbare-datenaufbereitung-und--analyse-mit-r",
     "title": "R u Ready? HS2025 | Psychologie der Digitalisierung - Einheit 4",
     "section": "R u Ready? Reproduzierbare Datenaufbereitung und -analyse mit R",
-    "text": "R u Ready? Reproduzierbare Datenaufbereitung und -analyse mit R\nHS 2025 LV-Leitung: Dr. Sandra Grinschgl / MSc. Aaron Friedli Tutor: BSc. Lars Schilling4. Einheit, 8.10.2025"
+    "text": "R u Ready? Reproduzierbare Datenaufbereitung und -analyse mit R\nHS 2025 LV-Leitung: Dr. Sandra Grinschgl / MSc. Aaron Friedli Tutor: BSc. Lars Schilling4. Einheit, 8.10.2025",
+    "crumbs": [
+      "Präsentationen",
+      "Einheit 4 - 8.10.2025"
+    ]
   },
   {
     "objectID": "EH_4.html#heute",
     "href": "EH_4.html#heute",
     "title": "R u Ready? HS2025 | Psychologie der Digitalisierung - Einheit 4",
     "section": "Heute:",
-    "text": "Heute:"
+    "text": "Heute:",
+    "crumbs": [
+      "Präsentationen",
+      "Einheit 4 - 8.10.2025"
+    ]
   },
   {
     "objectID": "EH_4.html#hands-on",
     "href": "EH_4.html#hands-on",
     "title": "R u Ready? HS2025 | Psychologie der Digitalisierung - Einheit 4",
     "section": "Hands On!",
-    "text": "Hands On!\n🎯 Ziel: Heute mindestens bis zum Daten-Mergen und Speichern kommen!\n🏃 Für alle, die schneller fertig sind: Coding Basics, Funktionen und Styler\n✈️ Für besonders Schnelle: Weiterarbeiten am Codebook / Peer-Feedback"
+    "text": "Hands On!\n🎯 Ziel: Heute mindestens bis zum Daten-Mergen und Speichern kommen!\n🏃 Für alle, die schneller fertig sind: Coding Basics, Funktionen und Styler\n✈️ Für besonders Schnelle: Weiterarbeiten am Codebook / Peer-Feedback",
+    "crumbs": [
+      "Präsentationen",
+      "Einheit 4 - 8.10.2025"
+    ]
   },
   {
     "objectID": "EH_4.html#plenum-wie-funktionieren-joins",
     "href": "EH_4.html#plenum-wie-funktionieren-joins",
     "title": "R u Ready? HS2025 | Psychologie der Digitalisierung - Einheit 4",
     "section": "Plenum: Wie funktionieren Joins?",
-    "text": "Plenum: Wie funktionieren Joins?\n\nFragen wie weit man letzte Einheit gekommen ist, ggf. zuerst weiter arbeiten lassen\n\n\ncbind() vs. full_join()\ncbind() verbindet Datensätze spaltenweise – warum ist das suboptimal?\nfull_join() Nimmt alle Variablen aus beiden Datensätzen. Um die Datensätze korrekt zu verbinden musst du einen Schlüssel festlegen."
+    "text": "Plenum: Wie funktionieren Joins?\n\nFragen wie weit man letzte Einheit gekommen ist, ggf. zuerst weiter arbeiten lassen\n\n\ncbind() vs. full_join()\ncbind() verbindet Datensätze spaltenweise – warum ist das suboptimal?\nfull_join() Nimmt alle Variablen aus beiden Datensätzen. Um die Datensätze korrekt zu verbinden musst du einen Schlüssel festlegen.",
+    "crumbs": [
+      "Präsentationen",
+      "Einheit 4 - 8.10.2025"
+    ]
   },
   {
     "objectID": "EH_4.html#full_join",
     "href": "EH_4.html#full_join",
     "title": "R u Ready? HS2025 | Psychologie der Digitalisierung - Einheit 4",
     "section": "full_join()",
-    "text": "full_join()\nWas ist der Schlüssel?\nEine gemeinsame Variable die in beiden Datensätzen vorhanden ist, mit der RStudio erkennen kann welche Werte miteinander verbunden werden müssen.\n\ndata_cb &lt;- read_delim(\"data/raw/data_cb.csv\", delim = \";\")\ndata_vp &lt;- read_delim(\"data/raw/data_vp.csv\", delim = \";\")\n\ndat_full_1 &lt;- full_join(data_cb, data_vp, by = \"code\")\nhead(dat_full_1)\n\n# A tibble: 6 × 5\n   code cb_sum cb_propcorrect vp_sum vp_propcorrect\n  &lt;dbl&gt;  &lt;dbl&gt;          &lt;dbl&gt;  &lt;dbl&gt;          &lt;dbl&gt;\n1     1     26          0.722     33          0.917\n2     2     27          0.75      27          0.75 \n3     3     30          0.833     33          0.917\n4     4     27          0.75      31          0.861\n5     5     25          0.694     32          0.889\n6     6     23          0.639     24          0.667\n\n\n\nIterativer Prozess: immer für 2 Datensätze bis man dat_full mit allen 7 Datensätzen hat –&gt; dafür wird dann Codebook geschrieben"
+    "text": "full_join()\nWas ist der Schlüssel?\nEine gemeinsame Variable die in beiden Datensätzen vorhanden ist, mit der RStudio erkennen kann welche Werte miteinander verbunden werden müssen.\n\ndata_cb &lt;- read_delim(\"data/raw/data_cb.csv\", delim = \";\")\ndata_vp &lt;- read_delim(\"data/raw/data_vp.csv\", delim = \";\")\n\ndat_full_1 &lt;- full_join(data_cb, data_vp, by = \"code\")\nhead(dat_full_1)\n\n# A tibble: 6 × 5\n   code cb_sum cb_propcorrect vp_sum vp_propcorrect\n  &lt;dbl&gt;  &lt;dbl&gt;          &lt;dbl&gt;  &lt;dbl&gt;          &lt;dbl&gt;\n1     1     26          0.722     33          0.917\n2     2     27          0.75      27          0.75 \n3     3     30          0.833     33          0.917\n4     4     27          0.75      31          0.861\n5     5     25          0.694     32          0.889\n6     6     23          0.639     24          0.667\n\n\n\nIterativer Prozess: immer für 2 Datensätze bis man dat_full mit allen 7 Datensätzen hat –&gt; dafür wird dann Codebook geschrieben",
+    "crumbs": [
+      "Präsentationen",
+      "Einheit 4 - 8.10.2025"
+    ]
   },
   {
     "objectID": "EH_4.html#unterschiede-zwischen-den-diversen-joins",
     "href": "EH_4.html#unterschiede-zwischen-den-diversen-joins",
     "title": "R u Ready? HS2025 | Psychologie der Digitalisierung - Einheit 4",
     "section": "Unterschiede zwischen den diversen Joins:",
-    "text": "Unterschiede zwischen den diversen Joins:\n\nBehält gemeinsame Zeilen bei"
+    "text": "Unterschiede zwischen den diversen Joins:\n\nBehält gemeinsame Zeilen bei",
+    "crumbs": [
+      "Präsentationen",
+      "Einheit 4 - 8.10.2025"
+    ]
   },
   {
     "objectID": "EH_4.html#unterschiede-zwischen-den-diversen-joins-1",
     "href": "EH_4.html#unterschiede-zwischen-den-diversen-joins-1",
     "title": "R u Ready? HS2025 | Psychologie der Digitalisierung - Einheit 4",
     "section": "Unterschiede zwischen den diversen Joins:",
-    "text": "Unterschiede zwischen den diversen Joins:\n\nBehält gemeinsame + Zeilen von linken Datensatz bei"
+    "text": "Unterschiede zwischen den diversen Joins:\n\nBehält gemeinsame + Zeilen von linken Datensatz bei",
+    "crumbs": [
+      "Präsentationen",
+      "Einheit 4 - 8.10.2025"
+    ]
   },
   {
     "objectID": "EH_4.html#unterschiede-zwischen-den-diversen-joins-2",
     "href": "EH_4.html#unterschiede-zwischen-den-diversen-joins-2",
     "title": "R u Ready? HS2025 | Psychologie der Digitalisierung - Einheit 4",
     "section": "Unterschiede zwischen den diversen Joins:",
-    "text": "Unterschiede zwischen den diversen Joins:\n\nBehält gemeinsame + Zeilen von rechten Datensatz bei"
+    "text": "Unterschiede zwischen den diversen Joins:\n\nBehält gemeinsame + Zeilen von rechten Datensatz bei",
+    "crumbs": [
+      "Präsentationen",
+      "Einheit 4 - 8.10.2025"
+    ]
   },
   {
     "objectID": "EH_4.html#unterschiede-zwischen-den-diversen-joins-3",
     "href": "EH_4.html#unterschiede-zwischen-den-diversen-joins-3",
     "title": "R u Ready? HS2025 | Psychologie der Digitalisierung - Einheit 4",
     "section": "Unterschiede zwischen den diversen Joins:",
-    "text": "Unterschiede zwischen den diversen Joins:\n\nBehält gemeinsame Zeilen, aber nur Inhalte von Datensatz x bei"
+    "text": "Unterschiede zwischen den diversen Joins:\n\nBehält gemeinsame Zeilen, aber nur Inhalte von Datensatz x bei",
+    "crumbs": [
+      "Präsentationen",
+      "Einheit 4 - 8.10.2025"
+    ]
   },
   {
     "objectID": "EH_4.html#check-in",
     "href": "EH_4.html#check-in",
     "title": "R u Ready? HS2025 | Psychologie der Digitalisierung - Einheit 4",
     "section": "Check-in:",
-    "text": "Check-in:\n\nNun sollte jede/r einen Datensatz dat_full haben, der alle 7 Einzeldatensätze beinhaltet mit 159 Versuchspersonen (= Zeilen) und 36 Variablen (= Spalten).\nCheckt mit euren Peer-Partner:innen!\nMit diesem Datensatz werden wir die Analysen von Grinschgl et al. (2020) durchführen.\nZu diesem Datensatz sollt ihr bis zum 22.10 den ersten Entwurf für das Codebook schreiben!"
+    "text": "Check-in:\n\nNun sollte jede/r einen Datensatz dat_full haben, der alle 7 Einzeldatensätze beinhaltet mit 159 Versuchspersonen (= Zeilen) und 36 Variablen (= Spalten).\nCheckt mit euren Peer-Partner:innen/Sitznachbar:innen!\nMit diesem Datensatz werden wir die Analysen von Grinschgl et al. (2020) durchführen.\nZu diesem Datensatz sollt ihr bis zum 22.10. den ersten Entwurf für das Codebook schreiben!",
+    "crumbs": [
+      "Präsentationen",
+      "Einheit 4 - 8.10.2025"
+    ]
   },
   {
     "objectID": "EH_4.html#error-detection",
@@ -2433,21 +2477,33 @@
     "href": "EH_4.html#code-diagnostik",
     "title": "R u Ready? HS2025 | Psychologie der Digitalisierung - Einheit 4",
     "section": "Code Diagnostik:",
-    "text": "Code Diagnostik:"
+    "text": "Code Diagnostik:",
+    "crumbs": [
+      "Präsentationen",
+      "Einheit 4 - 8.10.2025"
+    ]
   },
   {
     "objectID": "EH_4.html#r-studio-gibt-hinweise",
     "href": "EH_4.html#r-studio-gibt-hinweise",
     "title": "R u Ready? HS2025 | Psychologie der Digitalisierung - Einheit 4",
     "section": "R-Studio gibt Hinweise!",
-    "text": "R-Studio gibt Hinweise!"
+    "text": "R-Studio gibt Hinweise!\n\n\nFehlermeldungen: Die Information vor dem Doppelpunkt gibt uns an, in welcher Funktion der Fehler steckt; die Information nach dem Doppelpunkt gibt Aufschluss über die Art des Fehlers. Zweiteres ist für die Fehlersuche (zumeist) von großer Bedeutung.\nWenn ein oder mehrere Zeichen überflüssig sind bzw. fehlen, dann bekommt man Unerwartete(s) ‘…’ in “…” ausgegeben. Hierbei teilt uns die Meldung mit, wo der Fehler liegt: In den Anführungszeichen “…” wird nur ein Teil des Codes ausgegeben und der Fehler ist zumeist das zuletzt ausgegebene Zeichen (oder es liegt unmittelbar davor).  z.B. daten[2]",
+    "crumbs": [
+      "Präsentationen",
+      "Einheit 4 - 8.10.2025"
+    ]
   },
   {
     "objectID": "EH_4.html#fehlererkennung-in-r-tipps",
     "href": "EH_4.html#fehlererkennung-in-r-tipps",
     "title": "R u Ready? HS2025 | Psychologie der Digitalisierung - Einheit 4",
     "section": "Fehlererkennung in R – Tipps",
-    "text": "Fehlererkennung in R – Tipps\n\nclass() / str() zur Objektprüfung 👉\nIn mean.default(x) : argument is not numeric or logical: returning NA\nFunktionen schrittweise testen\nArgumente weglassen → Fehlerquelle finden\nZwischenergebnisse mit print()\ntraceback() nach Fehler\ndebug() / browser() für Schritt-für-Schritt"
+    "text": "Fehlererkennung in R – Tipps\n\nclass() / str() zur Objektprüfung 👉\nIn mean.default(x) : argument is not numeric or logical: returning NA\nFunktionen schrittweise testen\nArgumente weglassen → Fehlerquelle finden\nZwischenergebnisse mit print()",
+    "crumbs": [
+      "Präsentationen",
+      "Einheit 4 - 8.10.2025"
+    ]
   },
   {
     "objectID": "EH_4.html#r-ressourcen",
@@ -2461,77 +2517,121 @@
     "href": "EH_4.html#ki---llms-chatgpt-copilot-rtutor",
     "title": "R u Ready? HS2025 | Psychologie der Digitalisierung - Einheit 4",
     "section": "KI - LLMS (ChatGPT, Copilot, Rtutor)",
-    "text": "KI - LLMS (ChatGPT, Copilot, Rtutor)\n💚 Vorteile\n\nGenerieren schnell viel Code\nCode häufig syntaktisch korrekt\nOn-Demand-Assistenz für Fragen aller Art\nReduziert einstiegshürden\nUnterstützung bei Debugging und Error Handling\nTutoring-Funktion"
+    "text": "KI - LLMS (ChatGPT, Copilot, Rtutor)\n💚 Vorteile\n\nGenerieren schnell viel Code\nCode häufig syntaktisch korrekt\nOn-Demand-Assistenz für Fragen aller Art\nReduziert Einstiegshürden\nUnterstützung bei Debugging und Error Handling\nTutoring-Funktion –&gt; siehe Prompts",
+    "crumbs": [
+      "Präsentationen",
+      "Einheit 4 - 8.10.2025"
+    ]
   },
   {
     "objectID": "EH_4.html#verwendung-von-llms",
     "href": "EH_4.html#verwendung-von-llms",
     "title": "R u Ready? HS2025 | Psychologie der Digitalisierung - Einheit 4",
     "section": "Verwendung von LLMs",
-    "text": "Verwendung von LLMs"
+    "text": "Verwendung von LLMs",
+    "crumbs": [
+      "Präsentationen",
+      "Einheit 4 - 8.10.2025"
+    ]
   },
   {
     "objectID": "EH_4.html#peer-feedback-zum-datenanalyseplan",
     "href": "EH_4.html#peer-feedback-zum-datenanalyseplan",
     "title": "R u Ready? HS2025 | Psychologie der Digitalisierung - Einheit 4",
     "section": "Peer Feedback zum Datenanalyseplan",
-    "text": "Peer Feedback zum Datenanalyseplan\n📋To Do’s:\n\nMusterlösung anschauen! XXX@ Sandra?\n\n\n\nDatenanalyseplan des Partners/der Partnerin bis 19.03 durchschauen und kommentieren (am besten mit Word oder PDF Kommentaren)\nUpload auf Ilias mit Kommentaren+ Weitergabe an Partner/Partnerin\nAuch persönliches Feedback erwünscht 👉 selbstorganisiert\nSelbständigkeit: Wir geben kein Feedback, bei Fragen auf uns zukommen (Forum, Sprechstunde etc. nutzen)"
+    "text": "Peer Feedback zum Datenanalyseplan\n📋To Do’s:\n\nMusterlösung anschauen! (siehe Ordner Abschlussprojekt auf Ilias)\n\n\n\nDatenanalyseplan des Partners/der Partnerin bis 15.10 durchschauen und kommentieren (am besten mit Word oder PDF Kommentaren)\nUpload auf Ilias mit Kommentaren+ Weitergabe an Partner/Partnerin per Email\nAuch persönliches Feedback erwünscht 👉 selbstorganisiert\nSelbständigkeit: Wir geben kein Feedback, bei Fragen auf uns zukommen (Forum, Sprechstunde etc. nutzen)",
+    "crumbs": [
+      "Präsentationen",
+      "Einheit 4 - 8.10.2025"
+    ]
   },
   {
     "objectID": "EH_4.html#peer-feedback-zum-datenanalyseplan-1",
     "href": "EH_4.html#peer-feedback-zum-datenanalyseplan-1",
     "title": "R u Ready? HS2025 | Psychologie der Digitalisierung - Einheit 4",
     "section": "Peer Feedback zum Datenanalyseplan",
-    "text": "Peer Feedback zum Datenanalyseplan\n\nKlarheit und Verständlichkeit (z.B. sind alle Begriffe und Konzepte ausreichend erklärt? Gibt es verwirrende oder unklare Formulierungen?)\nVollständigkeit (z.B. wurden alle notwendigen Fragen ausreichend beantwortet? Fehlen Informationen?)\nReproduzierbarkeit (Ist der Plan so formuliert, dass er von einer anderen Person nachvollzogen und reproduziert werden kann?)"
+    "text": "Peer Feedback zum Datenanalyseplan\n\nKlarheit und Verständlichkeit (z.B. sind alle Begriffe und Konzepte ausreichend erklärt? Gibt es verwirrende oder unklare Formulierungen?)\nVollständigkeit (z.B. wurden alle notwendigen Fragen ausreichend beantwortet? Fehlen Informationen?)\nReproduzierbarkeit (Ist der Plan so formuliert, dass er von einer anderen Person nachvollzogen und reproduziert werden kann?)",
+    "crumbs": [
+      "Präsentationen",
+      "Einheit 4 - 8.10.2025"
+    ]
   },
   {
     "objectID": "EH_4.html#peer-feedback-regeln",
     "href": "EH_4.html#peer-feedback-regeln",
     "title": "R u Ready? HS2025 | Psychologie der Digitalisierung - Einheit 4",
     "section": "Peer Feedback Regeln",
-    "text": "Peer Feedback Regeln\n\nGib fundiertes, konstruktives und gut strukturiertes Feedback!\nFokus sollte auf inhaltlicher Qualität und Übereinstimmung mit den Anforderungen liegen, nicht auf persönlichen Präferenzen.\nVerbesserungsvorschläge sind gewünscht, kein „Schön reden“ notwendig –&gt; wir wollen dazu lernen!\nVerbesserungsvorschläge sollten möglichst konkret sein.\nBleibt aber natürlich sachlich und verwendet eine respektvolle Sprache!\nAuch Lob für besonders gute Abschnitte darf nicht fehlen. Feedback ist ein Lernprozess, auch für den Gebenden. Seit bereit, euer Feedback anzupassen, wenn die andere Person es anders versteht oder weitere Informationen liefert.\nPeer Feedback sollte nicht nur auf die aktuelle Aufgabe abzielen, sondern auch helfen, den Lernprozess der beteiligten Personen langfristig zu verbessern"
+    "text": "Peer Feedback Regeln\n\nGib fundiertes, konstruktives und gut strukturiertes Feedback!\nFokus sollte auf inhaltlicher Qualität und Übereinstimmung mit den Anforderungen liegen, nicht auf persönlichen Präferenzen.\nVerbesserungsvorschläge sind gewünscht, kein „Schön reden“ notwendig –&gt; wir wollen dazu lernen!\nVerbesserungsvorschläge sollten möglichst konkret sein.\nBleibt aber natürlich sachlich und verwendet eine respektvolle Sprache!\nAuch Lob für besonders gute Abschnitte darf nicht fehlen. Feedback ist ein Lernprozess, auch für den Gebenden. Seit bereit, euer Feedback anzupassen, wenn die andere Person es anders versteht oder weitere Informationen liefert.\nPeer Feedback sollte nicht nur auf die aktuelle Aufgabe abzielen, sondern auch helfen, den Lernprozess der beteiligten Personen langfristig zu verbessern",
+    "crumbs": [
+      "Präsentationen",
+      "Einheit 4 - 8.10.2025"
+    ]
   },
   {
     "objectID": "EH_4.html#heute-haben-wir",
     "href": "EH_4.html#heute-haben-wir",
     "title": "R u Ready? HS2025 | Psychologie der Digitalisierung - Einheit 4",
     "section": "Heute haben wir:",
-    "text": "Heute haben wir:\n\nDatensätze gemerged und diverse joins kennengelernt\nTools für die Fehlerdiagnostik in R kennengelernt\nUns mit Ressourcen und dem Umgang mit LLMS befasst"
+    "text": "Heute haben wir:\n\nDatensätze gemerged und diverse joins kennengelernt\nTools für die Fehlerdiagnostik in R kennengelernt\nUns mit Ressourcen und dem Umgang mit LLMS befasst",
+    "crumbs": [
+      "Präsentationen",
+      "Einheit 4 - 8.10.2025"
+    ]
   },
   {
     "objectID": "EH_4.html#beispiel",
     "href": "EH_4.html#beispiel",
     "title": "R u Ready? HS2025 | Psychologie der Digitalisierung - Einheit 4",
     "section": "Beispiel",
-    "text": "Beispiel\n\ndf1 &lt;- data.frame(id = c(1, 2, 3),\n                  name = c(\"Anna\", \"Ben\", \"Chris\"))\n\ndf2 &lt;- data.frame(id = c(2, 3, 4),\n                  score = c(80, 90, 70))\n\nfull_join(df1, df2, by = \"id\")\n\n  id  name score\n1  1  Anna    NA\n2  2   Ben    80\n3  3 Chris    90\n4  4  &lt;NA&gt;    70"
+    "text": "Beispiel\n\ndf1 &lt;- data.frame(id = c(1, 2, 3),\n                  name = c(\"Anna\", \"Ben\", \"Chris\"))\n\ndf2 &lt;- data.frame(id = c(2, 3, 4),\n                  score = c(80, 90, 70))\n\nfull_join(df1, df2, by = \"id\")\n\n  id  name score\n1  1  Anna    NA\n2  2   Ben    80\n3  3 Chris    90\n4  4  &lt;NA&gt;    70",
+    "crumbs": [
+      "Präsentationen",
+      "Einheit 4 - 8.10.2025"
+    ]
   },
   {
     "objectID": "EH_4.html#fehlererkennung-in-r",
     "href": "EH_4.html#fehlererkennung-in-r",
     "title": "R u Ready? HS2025 | Psychologie der Digitalisierung - Einheit 4",
     "section": "Fehlererkennung in R",
-    "text": "Fehlererkennung in R\nDer Code läuft nicht. Wie könnt ihr vorgehen um den Fehler zu identifizieren und beheben?\n\nLies die Fehlermeldung!\n\n\nÜberprüfe:\n✅Tippfehler\n✅Klammern\n✅Syntaxfehler\n✅Datentypen\n✅Pakete\nGoogeln hilft oft weiter!\n\nFehlermeldungen lassen sich einfacher googeln, wenn R auf Englisch eingestellt ist:\n\n👉Sys.setenv(LANGUAGE = \"en\")\n\n\nXXXX Block zu KI und overreliance"
+    "text": "Fehlererkennung in R\nDer Code läuft nicht. Wie könnt ihr vorgehen um den Fehler zu identifizieren und beheben?\n\nLies die Fehlermeldung!\n\n\nÜberprüfe:\n✅Tippfehler\n✅Klammern\n✅Syntaxfehler\n✅Datentypen\n✅Pakete\nGoogeln hilft oft weiter!\n\nFehlermeldungen lassen sich einfacher googeln, wenn R auf Englisch eingestellt ist:\n\n👉Sys.setenv(LANGUAGE = \"en\")\noft es auch hilfreich, das Betriebssystem anzugeben: sessionInfo()",
+    "crumbs": [
+      "Präsentationen",
+      "Einheit 4 - 8.10.2025"
+    ]
   },
   {
     "objectID": "EH_4.html#r-resourcen",
     "href": "EH_4.html#r-resourcen",
     "title": "R u Ready? HS2025 | Psychologie der Digitalisierung - Einheit 4",
     "section": "R-Resourcen",
-    "text": "R-Resourcen\n\nPsyteacher AI Tutor\nR for Data Science\nPsychometrics in Exercises using R and RStudio\nLearnr Shinyapps\nCheatsheets & Stack Overflow\nDatacamp\nÜberblick über weitere Ressourcen 👉 Arslan (2025)"
+    "text": "R-Resourcen\n\nNewsletter zu R\nInformationen zu Paketen\nPsyteacher AI Tutor\nR for Data Science (Basics wie Import, Aufbereitung, Visualisierung)\nPsychometrics in Exercises using R and RStudio (Psychometrische Analysen wie EFA, CFA, SEM)\nLearnr Shinyapps\nCheatsheets\nStack Overflow –&gt; Q&A Forum\nDatacamp\nÜberblick über weitere Ressourcen 👉 Arslan (2025)",
+    "crumbs": [
+      "Präsentationen",
+      "Einheit 4 - 8.10.2025"
+    ]
   },
   {
     "objectID": "EH_4.html#abfrage-muddiest-points",
     "href": "EH_4.html#abfrage-muddiest-points",
     "title": "R u Ready? HS2025 | Psychologie der Digitalisierung - Einheit 4",
     "section": "Abfrage Muddiest Points",
-    "text": "Abfrage Muddiest Points\n\nDenke an die bisher besprochenen Inhalte zurück – was ist dir unklar geblieben? Was sollten wir noch einmal besprechen?\nDenke sowohl an die R Hands On Sessions als auch die theoretischen Inhalte (z.B. Open Science, Datenanalyseplan, Codebook).\nNotiere bitte max. drei konkrete Punkte. Falls du Vorschläge/Ideen zur Aufarbeitung dieser Punkte hast, gib diese auch gerne an.\nUmfrage auf ILIAS (siehe EH 4) bis Sonntag 12.10. 23:55"
+    "text": "Abfrage Muddiest Points\n\nDenke an die bisher besprochenen Inhalte zurück – was ist dir unklar geblieben? Was sollten wir noch einmal besprechen?\nDenke sowohl an die R Hands On Sessions als auch die theoretischen Inhalte (z.B. Open Science, Datenanalyseplan, Codebook).\nNotiere bitte max. drei konkrete Punkte. Falls du Vorschläge/Ideen zur Aufarbeitung dieser Punkte hast, gib diese auch gerne an.\nUmfrage auf ILIAS (siehe EH 4) bis Sonntag 12.10. 23:55",
+    "crumbs": [
+      "Präsentationen",
+      "Einheit 4 - 8.10.2025"
+    ]
   },
   {
     "objectID": "EH_4.html#referenzen",
     "href": "EH_4.html#referenzen",
     "title": "R u Ready? HS2025 | Psychologie der Digitalisierung - Einheit 4",
     "section": "Referenzen:",
-    "text": "Referenzen:\nArslan (2025, June 4). One lives only to make blunders: Resources for learning R. Retrieved from https://rubenarslan.github.io/posts/2025-06-04-resources-for-learning-r/"
+    "text": "Referenzen:\nArslan (2025, June 4). One lives only to make blunders: Resources for learning R. Retrieved from https://rubenarslan.github.io/posts/2025-06-04-resources-for-learning-r/",
+    "crumbs": [
+      "Präsentationen",
+      "Einheit 4 - 8.10.2025"
+    ]
   },
   {
     "objectID": "EH_4.html#llms-und-datenanalyse",
@@ -2552,28 +2652,84 @@
     "href": "EH_4.html#gefahren-von-vibecoding",
     "title": "R u Ready? HS2025 | Psychologie der Digitalisierung - Einheit 4",
     "section": "Gefahren von Vibecoding",
-    "text": "Gefahren von Vibecoding\nMENTI"
+    "text": "Gefahren von Vibecoding\nMENTI XXX"
   },
   {
     "objectID": "EH_4.html#sinnvolle-nutzung-von-ki-im-datenanalyseprozess",
     "href": "EH_4.html#sinnvolle-nutzung-von-ki-im-datenanalyseprozess",
     "title": "R u Ready? HS2025 | Psychologie der Digitalisierung - Einheit 4",
     "section": "Sinnvolle Nutzung von KI im Datenanalyseprozess:",
-    "text": "Sinnvolle Nutzung von KI im Datenanalyseprozess:\n\n💚 Unterstützend – nicht ersetzend\n\nKontrolle einfacher Fehler (Klammern, Typos)\nErklärung von Code und Syntax\nHilfe bei Fehlersuche (Debugging)\nKommentierung und Dokumentation\n\n💔 Ersatz statt Unterstützung\n\nGenerierung ganzer Analyse-Skripte\nAutomatische Auswahl von Methoden oder Tests\nInterpretation statistischer Ergebnisse durch KI\nErstellung kompletter Berichte oder Diskussionen\nHochladen sensibler Daten\nUnkritisches Übernehmen von Output"
+    "text": "Sinnvolle Nutzung von KI im Datenanalyseprozess:\n\n💚Sinnvoll: Unterstützend – nicht ersetzend\n\nKontrolle einfacher Fehler (Klammern, Typos)\nErklärung von Code und Syntax\nHilfe bei Fehlersuche (Debugging)\nKommentierung und Dokumentation\n\n💔Nicht sinnvoll: Ersatz statt Unterstützung\n\nGenerierung ganzer Analyse-Skripte\nAutomatische Auswahl von Methoden oder Tests\nInterpretation statistischer Ergebnisse durch KI\nErstellung kompletter Berichte oder Diskussionen\nHochladen sensibler Daten\nUnkritisches Übernehmen von Output",
+    "crumbs": [
+      "Präsentationen",
+      "Einheit 4 - 8.10.2025"
+    ]
   },
   {
     "objectID": "EH_4.html#large-language-models-datenanalyse",
     "href": "EH_4.html#large-language-models-datenanalyse",
     "title": "R u Ready? HS2025 | Psychologie der Digitalisierung - Einheit 4",
     "section": "Large Language Models & Datenanalyse",
-    "text": "Large Language Models & Datenanalyse\n\nModelle wie ChatGPT\nBerechnen Wahrscheinlichkeiten für Wörter und erzeugen dadurch Text, der menschlich wirkt.\nABER:\n\nVerstehen keine Bedeutung\nWissen nicht was inhaltlich korrekt ist\n\n\nMenti:"
+    "text": "Large Language Models & Datenanalyse\n\nModelle wie ChatGPT\nBerechnen Wahrscheinlichkeiten für Wörter und erzeugen dadurch Text, der menschlich wirkt.\nABER:\n\nVerstehen keine Bedeutung\nWissen nicht was inhaltlich korrekt ist",
+    "crumbs": [
+      "Präsentationen",
+      "Einheit 4 - 8.10.2025"
+    ]
   },
   {
     "objectID": "EH_4.html#daten-einlesen",
     "href": "EH_4.html#daten-einlesen",
     "title": "R u Ready? HS2025 | Psychologie der Digitalisierung - Einheit 4",
     "section": "Daten einlesen",
-    "text": "Daten einlesen\n\nCode immer im Skript abspeichern!\nAusführung alleine in der Konsole reicht nicht\nBei Einlesen über Environment, Code in Skript kopieren!"
+    "text": "Daten einlesen\n\nCode immer im Skript abspeichern!\nAusführung alleine in der Konsole reicht nicht\nBei Einlesen über Environment, Code in Skript kopieren!",
+    "crumbs": [
+      "Präsentationen",
+      "Einheit 4 - 8.10.2025"
+    ]
+  },
+  {
+    "objectID": "EH_4.html#github-copilot-in-r",
+    "href": "EH_4.html#github-copilot-in-r",
+    "title": "R u Ready? HS2025 | Psychologie der Digitalisierung - Einheit 4",
+    "section": "Github CoPilot in R",
+    "text": "Github CoPilot in R\n\nVoraussetzung ist ein Account sowie ein Copilot-Abo (kostenlos für Studierende der Universität Bern) auf GitHub.\nGitHub ist ein Clouddienst von Microsoft, spezialisiert auf das Teilen und gemeinsame Bearbeiten von Code: https://github.com/\nEine Anleitung zur Einrichtung von GitHub Copilot in RStudio findet ihr hier:\nYouTube-Link (1:40–2:36)\nRechtliche Informationen für Studierende der Universität Bern findet ihr unter:\nhttps://www.unibe.ch/universitaet/campus__und__infrastruktur/rund_um_computer/soft_und_hardware/software/generative_kis/index_ger.html\n→ Bereich „Programmierung“",
+    "crumbs": [
+      "Präsentationen",
+      "Einheit 4 - 8.10.2025"
+    ]
+  },
+  {
+    "objectID": "EH_4.html#chatgpt-in-r",
+    "href": "EH_4.html#chatgpt-in-r",
+    "title": "R u Ready? HS2025 | Psychologie der Digitalisierung - Einheit 4",
+    "section": "ChatGPT in R",
+    "text": "ChatGPT in R\n\nVoraussetzung ist ein Account bei OpenAI / ChatGPT (falls ihr ChatGPT bisher ohne Anmeldung genutzt habt):\nhttps://chatgpt.com/\nEine Anleitung zur Einrichtung von ChatGPT in RStudio findet ihr hier:\nYouTube-Link (2:36–5:08)\nRechtliche Informationen für Studierende der Universität Bern findet ihr unter:\nhttps://www.unibe.ch/universitaet/campus__und__infrastruktur/rund_um_computer/soft_und_hardware/software/generative_kis/index_ger.html\n→ Bereich „Allrounder“",
+    "crumbs": [
+      "Präsentationen",
+      "Einheit 4 - 8.10.2025"
+    ]
+  },
+  {
+    "objectID": "EH_4.html#vibe-coding",
+    "href": "EH_4.html#vibe-coding",
+    "title": "R u Ready? HS2025 | Psychologie der Digitalisierung - Einheit 4",
+    "section": "Vibe Coding",
+    "text": "Vibe Coding\n\n👉KI in natürlicher Sprache prompten ohne den generierten Code zu prüfen oder zu verstehen.\n\nVibe Coding bedeutet, dass Nutzer*innen mit KI-Codegeneratoren (z. B. ChatGPT, GitHub Copilot) Programme schreiben, indem sie nur Zielbeschreibungen in natürlicher Sprache eingeben, ohne den generierten Code wirklich zu verstehen oder gründlich zu überprüfen.\n\nEs ist also intuitives, versuchsorientiertes „Codieren nach Gefühl“, bei dem Schnelligkeit vor Verständnis steht.",
+    "crumbs": [
+      "Präsentationen",
+      "Einheit 4 - 8.10.2025"
+    ]
+  },
+  {
+    "objectID": "EH_4.html#gefahren-von-vibe-coding",
+    "href": "EH_4.html#gefahren-von-vibe-coding",
+    "title": "R u Ready? HS2025 | Psychologie der Digitalisierung - Einheit 4",
+    "section": "Gefahren von Vibe coding",
+    "text": "Gefahren von Vibe coding",
+    "crumbs": [
+      "Präsentationen",
+      "Einheit 4 - 8.10.2025"
+    ]
   },
   {
     "objectID": "EH_5.html#r-u-ready-reproduzierbare-datenaufbereitung-und--analyse-mit-r",
@@ -2588,5 +2744,37 @@
     "title": "R u Ready? HS2025 | Psychologie der Digitalisierung - Einheit 5",
     "section": "Reproduzierbare Auswertung: Quarto –> Woche 5/6 XXXX",
     "text": "Reproduzierbare Auswertung: Quarto –&gt; Woche 5/6 XXXX\n\nOpen Source Publishing System: Nachfolger von RMarkdown\nKombination von Text, Code und Resultaten 👉 Hohe Reproduzierbarkeit\nVorteile gegenüber Skripten: Übersichtlicher, Transparenter, Reproduziebarer\n\nXXX Sandra –&gt; Schon quarto hier einführen? oder auf EH4 verschieben? @Aaron würde das noch weglassen und erst bei EH 5 oder 6, ganze Folie noch weglassen"
+  },
+  {
+    "objectID": "Übungen.html",
+    "href": "Übungen.html",
+    "title": "Übungen",
+    "section": "",
+    "text": "Hier findest du die Hands on Übungen. Die Musterlösungen werden jeweils vor Beginn des neuen Blocks hochgeladen.",
+    "crumbs": [
+      "Übungen zu den Einheiten"
+    ]
+  },
+  {
+    "objectID": "EH_4.html#gefahren-und-chancen-von-vibe-coding",
+    "href": "EH_4.html#gefahren-und-chancen-von-vibe-coding",
+    "title": "R u Ready? HS2025 | Psychologie der Digitalisierung - Einheit 4",
+    "section": "Gefahren und Chancen von “vibe coding”",
+    "text": "Gefahren und Chancen von “vibe coding”",
+    "crumbs": [
+      "Präsentationen",
+      "Einheit 4 - 8.10.2025"
+    ]
+  },
+  {
+    "objectID": "EH_4.html#aufagaben-bis-nächste-woche",
+    "href": "EH_4.html#aufagaben-bis-nächste-woche",
+    "title": "R u Ready? HS2025 | Psychologie der Digitalisierung - Einheit 4",
+    "section": "Aufagaben bis nächste Woche:",
+    "text": "Aufagaben bis nächste Woche:\n\nPeer-Feedback: Kommentiertes File hochladen und Partner:in schicken\nHands on Block 2 - fertig lösen.\nMuddiest Points Umfrage ausfüllen bis Sonntag 12.10. 23:55",
+    "crumbs": [
+      "Präsentationen",
+      "Einheit 4 - 8.10.2025"
+    ]
   }
 ]
