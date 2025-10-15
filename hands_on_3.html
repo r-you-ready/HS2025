@@ -374,21 +374,21 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <ul>
 <li>Versuche es im <strong>Visual Editor</strong>, indem du ein „/“ eingibst und im Drop-down-Menü <strong>„R-Code Chunk“</strong> auswählst</li>
 </ul></li>
-<li><p>Gib deinem Code-Chunk ein “Label” (📖 <a href="https://r4ds.hadley.nz/quarto.html#code-chunks">R4DS Kapitel 28.5.1</a>).</p></li>
-<li><p>Manchmal will man nicht alle Teile des Skripts in das gerenderte Dokument übernehmen. Erstelle einen neuen Code-Chunk und stelle <code>eval</code> und <code>include</code> auf FALSE.</p></li>
-<li><p><strong>Kreiere eine neue Variable <code>datum</code></strong> mit dem heutigen Datum. Nutze dafür <code>Sys_date()</code>.</p></li>
+<li><p>Gib deinem Code-Chunk ein “Label”. Verwende dafür “#|” in deinem Chunk um lokale Einstellungen zu setzen. (📖 <a href="https://r4ds.hadley.nz/quarto.html#code-chunks">R4DS Kapitel 28.5.1</a>).</p></li>
+<li><p>Manchmal will man nicht alle Teile des Skripts in das gerenderte Dokument übernehmen. Erstelle einen neuen Code-Chunk und stelle <code>eval</code> und <code>include</code> auf TRUE</p></li>
+<li><p><strong>Kreiere eine neue Variable <code>datum</code></strong> mit dem heutigen Datum. Nutze dafür <code>Sys.Date()</code>.</p></li>
 </ul>
 </section>
 <section id="inline-code" class="level2" data-number="2.3">
 <h2 data-number="2.3" class="anchored" data-anchor-id="inline-code"><span class="header-section-number">2.3</span> Inline Code</h2>
 <ul>
 <li><p><strong>Füge folgenden dynamischen Satz in dein Dokument ein:</strong> „<em>Dieses Dokument wurde zum letzten Mal am <code>datum</code> bearbeitet.</em>“</p></li>
-<li><p>Benutze dafür die Variable <code>datum</code> die du bereits kreiert hast. Diese kannst du hinzufügen indem du “/” benutzt und “Inline R Code” suchst.</p></li>
-<li><p><strong>Rendere dein erstes Dokument:</strong> Stelle ganz oben in deinem Dokument dafür das Format um.</p></li>
+<li><p>Benutze dafür die Variable <code>datum</code> die du bereits kreiert hast. Diese kannst du hinzufügen indem du “/” benutzt und “Inline R Code” suchst. Inline Code lässt sich auch mit diesem sonderzeichen ` kreieren wenn du danach ein “r” eingibst.</p></li>
+<li><p><strong>Rendere dein erstes Dokument:</strong> Stelle ganz oben in deinem Dokument dafür das Format auf docx um. Wenn du das Dokument als PDF rendern willst benötigst du TinyTeX. Das kannst du mit dem befehl installieren.</p></li>
 <li><p>Nutze dafür den <strong>Render-Button</strong> und schau dir das gerenderte Ergebnis an. Was ist mit deinem dynamischen Satz passiert?</p></li>
 </ul>
 <p><em>Das Resultat sollte so aussehen (mit dem aktuellen Datum):</em></p>
-<p>Dieses Dokument wurde zum letzten Mal am 2025-10-14 bearbeitet.</p>
+<p>Dieses Dokument wurde zum letzten Mal am 2025-10-15 bearbeitet.</p>
 <div class="callout callout-style-default callout-important callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -400,7 +400,7 @@ Important
 </div>
 <div class="callout-body-container callout-body">
 <p>Quarto-Dokumente lassen sich nur rendern, wenn das gesamte Skript fehlerfrei durchläuft. Tritt beim Rendern ein Fehler auf, ist es sinnvoll, das gesamte Skript auszuführen und auf Fehlermeldungen zu achten. Auf diese Weise wird die <strong>Reproduzierbarkeit</strong> sichergestellt.</p>
-<p>Möchte man das Skript trotz eines Fehlers rendern, kann man an den entsprechenden Code-Chunk <code>#| eval: false</code> schreiben - dies verhindert, dass der Code für die gerenderte Datei ausgeführt wird.</p>
+<p>Möchte man das Skript trotz eines Fehlers rendern, kann man an den entsprechenden Code-Chunk <code>#| eval: false</code> schreiben - dies verhindert, dass der Code für die gerenderte Datei ausgeführt wird</p>
 </div>
 </div>
 </section>
