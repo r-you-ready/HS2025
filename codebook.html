@@ -70,7 +70,7 @@ ul.task-list li input[type="checkbox"] {
 
 </head>
 
-<body class="nav-sidebar floating fullcontent">
+<body class="nav-sidebar floating">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -93,9 +93,9 @@ ul.task-list li input[type="checkbox"] {
 <!-- sidebar -->
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
-    <div class="sidebar-title mb-0 py-0">
-      <a href="./">R u Ready</a> 
-    </div>
+      <a href="./index.html" class="sidebar-logo-link">
+      <img src="./images/ryouready_logo.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
+      </a>
       </div>
         <div class="mt-2 flex-shrink-0 align-items-center">
         <div class="sidebar-search">
@@ -114,11 +114,11 @@ ul.task-list li input[type="checkbox"] {
       <div class="sidebar-item-container"> 
             <a href="./0_presentation.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Präsentationen</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./EH_1.html" class="sidebar-item-text sidebar-link">
@@ -155,11 +155,11 @@ ul.task-list li input[type="checkbox"] {
       <div class="sidebar-item-container"> 
             <a href="./Übungen.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Übungen zu den Einheiten</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./loesung_1.html" class="sidebar-item-text sidebar-link">
@@ -225,11 +225,11 @@ ul.task-list li input[type="checkbox"] {
       <div class="sidebar-item-container"> 
             <a href="./links_und_ressourcen.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Links und Ressourcen</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./ChatGPT.html" class="sidebar-item-text sidebar-link">
@@ -255,7 +255,22 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active" data-toc-expanded="-1">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#sollen-im-codebook-alle-variablen-eines-datensatzes-beschrieben-werden-oder-nur-diejenigen-welche-auch-im-rahmen-der-analyse-verwendet-werden" id="toc-sollen-im-codebook-alle-variablen-eines-datensatzes-beschrieben-werden-oder-nur-diejenigen-welche-auch-im-rahmen-der-analyse-verwendet-werden" class="nav-link active" data-scroll-target="#sollen-im-codebook-alle-variablen-eines-datensatzes-beschrieben-werden-oder-nur-diejenigen-welche-auch-im-rahmen-der-analyse-verwendet-werden">Sollen im Codebook alle Variablen eines Datensatzes beschrieben werden oder nur diejenigen, welche auch im Rahmen der Analyse verwendet werden?</a></li>
+  <li><a href="#sollten-unter-questionnaire-wirklich-nur-fragebögen-aufgelistet-werden-oder-kann-man-hier-auch-die-namen-möglicher-kognitiver-tests-angeben" id="toc-sollten-unter-questionnaire-wirklich-nur-fragebögen-aufgelistet-werden-oder-kann-man-hier-auch-die-namen-möglicher-kognitiver-tests-angeben" class="nav-link" data-scroll-target="#sollten-unter-questionnaire-wirklich-nur-fragebögen-aufgelistet-werden-oder-kann-man-hier-auch-die-namen-möglicher-kognitiver-tests-angeben">Sollten unter „questionnaire“ wirklich nur Fragebögen aufgelistet werden oder kann man hier auch die Namen möglicher kognitiver Tests angeben?</a></li>
+  <li><a href="#wo-liegt-der-unterschied-zwischen-description-und-composition-of-item" id="toc-wo-liegt-der-unterschied-zwischen-description-und-composition-of-item" class="nav-link" data-scroll-target="#wo-liegt-der-unterschied-zwischen-description-und-composition-of-item">Wo liegt der Unterschied zwischen „description“ und „Composition of item…“?</a></li>
+  <li><a href="#wann-sind-response_labels-zu-verwenden-und-wann-nicht" id="toc-wann-sind-response_labels-zu-verwenden-und-wann-nicht" class="nav-link" data-scroll-target="#wann-sind-response_labels-zu-verwenden-und-wann-nicht">Wann sind „response_labels“ zu verwenden und wann nicht?</a></li>
+  <li><a href="#was-ist-mit-der-spalte-dimensions-gemeint" id="toc-was-ist-mit-der-spalte-dimensions-gemeint" class="nav-link" data-scroll-target="#was-ist-mit-der-spalte-dimensions-gemeint">Was ist mit der Spalte „dimensions“ gemeint?</a></li>
+  <li><a href="#wie-soll-man-vorgehen-wenn-zu-manchen-dimensionen-der-variable-weder-im-paper-noch-in-der-präregistrierung-genaue-angaben-zu-finden-sind" id="toc-wie-soll-man-vorgehen-wenn-zu-manchen-dimensionen-der-variable-weder-im-paper-noch-in-der-präregistrierung-genaue-angaben-zu-finden-sind" class="nav-link" data-scroll-target="#wie-soll-man-vorgehen-wenn-zu-manchen-dimensionen-der-variable-weder-im-paper-noch-in-der-präregistrierung-genaue-angaben-zu-finden-sind">Wie soll man vorgehen, wenn zu manchen Dimensionen der Variable weder im Paper noch in der Präregistrierung genaue Angaben zu finden sind?</a></li>
+  <li><a href="#welche-informationen-sind-für-das-codebook-relevant-die-studie-von-grinschgl-et-al.-2020-undoder-die-präregistrierung-von-grinschgl-et-al.-2020" id="toc-welche-informationen-sind-für-das-codebook-relevant-die-studie-von-grinschgl-et-al.-2020-undoder-die-präregistrierung-von-grinschgl-et-al.-2020" class="nav-link" data-scroll-target="#welche-informationen-sind-für-das-codebook-relevant-die-studie-von-grinschgl-et-al.-2020-undoder-die-präregistrierung-von-grinschgl-et-al.-2020">Welche Informationen sind für das Codebook relevant? Die Studie von Grinschgl et al.&nbsp;(2020) und/oder die Präregistrierung von Grinschgl et al.&nbsp;(2020)?</a></li>
+  <li><a href="#sollen-alle-messwiederholungen-im-codebook-einzeln-aufgeführt-werden-oder-soll-es-eine-einzelne-variable-für-die-messwiederholung-im-codebook-geben" id="toc-sollen-alle-messwiederholungen-im-codebook-einzeln-aufgeführt-werden-oder-soll-es-eine-einzelne-variable-für-die-messwiederholung-im-codebook-geben" class="nav-link" data-scroll-target="#sollen-alle-messwiederholungen-im-codebook-einzeln-aufgeführt-werden-oder-soll-es-eine-einzelne-variable-für-die-messwiederholung-im-codebook-geben">Sollen alle Messwiederholungen im Codebook einzeln aufgeführt werden oder soll es eine einzelne Variable für die Messwiederholung im Codebook geben?</a></li>
+  </ul>
+</nav>
+    </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 

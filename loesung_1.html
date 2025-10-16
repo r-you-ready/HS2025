@@ -104,7 +104,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 </head>
 
-<body class="nav-sidebar floating fullcontent">
+<body class="nav-sidebar floating">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -127,9 +127,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <!-- sidebar -->
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
-    <div class="sidebar-title mb-0 py-0">
-      <a href="./">R u Ready</a> 
-    </div>
+      <a href="./index.html" class="sidebar-logo-link">
+      <img src="./images/ryouready_logo.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
+      </a>
       </div>
         <div class="mt-2 flex-shrink-0 align-items-center">
         <div class="sidebar-search">
@@ -148,11 +148,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <div class="sidebar-item-container"> 
             <a href="./0_presentation.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Präsentationen</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./EH_1.html" class="sidebar-item-text sidebar-link">
@@ -218,11 +218,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <div class="sidebar-item-container"> 
             <a href="./faq.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">FAQ</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./rstudio.html" class="sidebar-item-text sidebar-link">
@@ -259,11 +259,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <div class="sidebar-item-container"> 
             <a href="./links_und_ressourcen.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Links und Ressourcen</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./ChatGPT.html" class="sidebar-item-text sidebar-link">
@@ -289,7 +289,42 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active" data-toc-expanded="-1">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#lösung---codings-basics-einheiten-1-und-2" id="toc-lösung---codings-basics-einheiten-1-und-2" class="nav-link active" data-scroll-target="#lösung---codings-basics-einheiten-1-und-2">Lösung - Codings Basics (Einheiten 1 und 2)</a>
+  <ul class="collapse">
+  <li><a href="#installation-r-und-r-studio" id="toc-installation-r-und-r-studio" class="nav-link" data-scroll-target="#installation-r-und-r-studio">Installation R und R-Studio</a></li>
+  <li><a href="#einstellungen" id="toc-einstellungen" class="nav-link" data-scroll-target="#einstellungen">Einstellungen</a></li>
+  <li><a href="#hands-on-coding-basics" id="toc-hands-on-coding-basics" class="nav-link" data-scroll-target="#hands-on-coding-basics">Hands on: Coding Basics</a></li>
+  <li><a href="#pakete-installieren-und-laden" id="toc-pakete-installieren-und-laden" class="nav-link" data-scroll-target="#pakete-installieren-und-laden">Pakete installieren und laden</a>
+  <ul class="collapse">
+  <li><a href="#operatoren-kennenlernen" id="toc-operatoren-kennenlernen" class="nav-link" data-scroll-target="#operatoren-kennenlernen">Operatoren kennenlernen</a></li>
+  <li><a href="#erste-zuweisungenvariablen-definieren" id="toc-erste-zuweisungenvariablen-definieren" class="nav-link" data-scroll-target="#erste-zuweisungenvariablen-definieren">Erste Zuweisungen/Variablen definieren</a></li>
+  <li><a href="#vektoren-definieren" id="toc-vektoren-definieren" class="nav-link" data-scroll-target="#vektoren-definieren">Vektoren definieren</a></li>
+  <li><a href="#logische-operatoren" id="toc-logische-operatoren" class="nav-link" data-scroll-target="#logische-operatoren">Logische Operatoren</a></li>
+  </ul></li>
+  <li><a href="#nachvollziehbarkeit-von-code" id="toc-nachvollziehbarkeit-von-code" class="nav-link" data-scroll-target="#nachvollziehbarkeit-von-code">Nachvollziehbarkeit von Code</a>
+  <ul class="collapse">
+  <li><a href="#kommentare" id="toc-kommentare" class="nav-link" data-scroll-target="#kommentare">Kommentare</a></li>
+  <li><a href="#benennung-von-variablen" id="toc-benennung-von-variablen" class="nav-link" data-scroll-target="#benennung-von-variablen">Benennung von Variablen</a></li>
+  </ul></li>
+  <li><a href="#für-fortgeschrittene-r-nutzerinnen" id="toc-für-fortgeschrittene-r-nutzerinnen" class="nav-link" data-scroll-target="#für-fortgeschrittene-r-nutzerinnen">Für fortgeschrittene R-Nutzer:innen</a></li>
+  <li><a href="#datentypen" id="toc-datentypen" class="nav-link" data-scroll-target="#datentypen">Datentypen</a></li>
+  </ul></li>
+  <li><a href="#zusätzliche-übungen" id="toc-zusätzliche-übungen" class="nav-link" data-scroll-target="#zusätzliche-übungen">Zusätzliche Übungen:</a>
+  <ul class="collapse">
+  <li><a href="#datensatz-inspizieren" id="toc-datensatz-inspizieren" class="nav-link" data-scroll-target="#datensatz-inspizieren">Datensatz inspizieren</a></li>
+  <li><a href="#überblick-über-den-datensatz" id="toc-überblick-über-den-datensatz" class="nav-link" data-scroll-target="#überblick-über-den-datensatz">Überblick über den Datensatz</a></li>
+  <li><a href="#datentypen-überprüfen" id="toc-datentypen-überprüfen" class="nav-link" data-scroll-target="#datentypen-überprüfen">Datentypen überprüfen</a></li>
+  <li><a href="#logisches-abfragen" id="toc-logisches-abfragen" class="nav-link" data-scroll-target="#logisches-abfragen">Logisches Abfragen</a></li>
+  </ul></li>
+  <li><a href="#am-ende-deiner-übungen---vergiss-nicht-dein-skript-abzuspeichern--" id="toc-am-ende-deiner-übungen---vergiss-nicht-dein-skript-abzuspeichern--" class="nav-link" data-scroll-target="#am-ende-deiner-übungen---vergiss-nicht-dein-skript-abzuspeichern--">Am Ende deiner Übungen - vergiss nicht dein Skript abzuspeichern! :-)</a></li>
+  </ul>
+</nav>
+    </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
@@ -1123,7 +1158,7 @@ Lösung
 <div class="cell">
 <div class="sourceCode cell-code" id="cb46"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb46-1"><a href="#cb46-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sample</span>(vec_seq, <span class="dv">1</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 341</code></pre>
+<pre><code>[1] 851</code></pre>
 </div>
 </div>
 </div>

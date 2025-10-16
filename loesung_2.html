@@ -104,7 +104,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 </head>
 
-<body class="nav-sidebar floating fullcontent">
+<body class="nav-sidebar floating">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -127,9 +127,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <!-- sidebar -->
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
-    <div class="sidebar-title mb-0 py-0">
-      <a href="./">R u Ready</a> 
-    </div>
+      <a href="./index.html" class="sidebar-logo-link">
+      <img src="./images/ryouready_logo.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
+      </a>
       </div>
         <div class="mt-2 flex-shrink-0 align-items-center">
         <div class="sidebar-search">
@@ -148,11 +148,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <div class="sidebar-item-container"> 
             <a href="./0_presentation.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Präsentationen</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./EH_1.html" class="sidebar-item-text sidebar-link">
@@ -218,11 +218,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <div class="sidebar-item-container"> 
             <a href="./faq.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">FAQ</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./rstudio.html" class="sidebar-item-text sidebar-link">
@@ -259,11 +259,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <div class="sidebar-item-container"> 
             <a href="./links_und_ressourcen.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Links und Ressourcen</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./ChatGPT.html" class="sidebar-item-text sidebar-link">
@@ -289,7 +289,50 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active" data-toc-expanded="-1">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#lösung---coding-basics-einheiten-3-und-4" id="toc-lösung---coding-basics-einheiten-3-und-4" class="nav-link active" data-scroll-target="#lösung---coding-basics-einheiten-3-und-4">Lösung - Coding Basics (Einheiten 3 und 4)</a></li>
+  <li><a href="#lernziele-dieses-hands-on-blocks" id="toc-lernziele-dieses-hands-on-blocks" class="nav-link" data-scroll-target="#lernziele-dieses-hands-on-blocks">Lernziele dieses Hands-On-Blocks</a></li>
+  <li><a href="#projekte-und-pfade" id="toc-projekte-und-pfade" class="nav-link" data-scroll-target="#projekte-und-pfade">Projekte und Pfade</a>
+  <ul class="collapse">
+  <li><a href="#was-sind-r-projekte" id="toc-was-sind-r-projekte" class="nav-link" data-scroll-target="#was-sind-r-projekte">Was sind R-Projekte?</a></li>
+  <li><a href="#absolute-vs.-relative-pfade" id="toc-absolute-vs.-relative-pfade" class="nav-link" data-scroll-target="#absolute-vs.-relative-pfade">Absolute vs.&nbsp;relative Pfade</a></li>
+  </ul></li>
+  <li><a href="#daten-importieren-und-exportieren" id="toc-daten-importieren-und-exportieren" class="nav-link" data-scroll-target="#daten-importieren-und-exportieren">Daten importieren und exportieren</a>
+  <ul class="collapse">
+  <li><a href="#import" id="toc-import" class="nav-link" data-scroll-target="#import">Import</a>
+  <ul class="collapse">
+  <li><a href="#einlesen-via-oberfläche" id="toc-einlesen-via-oberfläche" class="nav-link" data-scroll-target="#einlesen-via-oberfläche">Einlesen via Oberfläche</a></li>
+  <li><a href="#einlesen-via-code" id="toc-einlesen-via-code" class="nav-link" data-scroll-target="#einlesen-via-code">Einlesen via Code</a></li>
+  </ul></li>
+  </ul></li>
+  <li><a href="#daten-mergen" id="toc-daten-mergen" class="nav-link" data-scroll-target="#daten-mergen">Daten mergen</a>
+  <ul class="collapse">
+  <li><a href="#aufgaben" id="toc-aufgaben" class="nav-link" data-scroll-target="#aufgaben">Aufgaben</a>
+  <ul class="collapse">
+  <li><a href="#füge-alle-7-datensätze-mit-cbind-zusammen-und-schaue-dir-das-ergebnis-an." id="toc-füge-alle-7-datensätze-mit-cbind-zusammen-und-schaue-dir-das-ergebnis-an." class="nav-link" data-scroll-target="#füge-alle-7-datensätze-mit-cbind-zusammen-und-schaue-dir-das-ergebnis-an.">Füge alle 7 Datensätze mit <code>cbind()</code> zusammen und schaue dir das Ergebnis an.</a></li>
+  <li><a href="#versuche-es-nun-mit-full_join." id="toc-versuche-es-nun-mit-full_join." class="nav-link" data-scroll-target="#versuche-es-nun-mit-full_join.">Versuche es nun mit <code>full_join()</code>.</a></li>
+  <li><a href="#inspiziere-deinen-zusammengefügten-datensatz-dat_full" id="toc-inspiziere-deinen-zusammengefügten-datensatz-dat_full" class="nav-link" data-scroll-target="#inspiziere-deinen-zusammengefügten-datensatz-dat_full">Inspiziere deinen zusammengefügten Datensatz “dat_full”</a></li>
+  </ul></li>
+  </ul></li>
+  <li><a href="#daten-speichern" id="toc-daten-speichern" class="nav-link" data-scroll-target="#daten-speichern">Daten speichern</a>
+  <ul class="collapse">
+  <li><a href="#speichere-dat_full-in-deinem-ordner-data-als-csv-datei-ab" id="toc-speichere-dat_full-in-deinem-ordner-data-als-csv-datei-ab" class="nav-link" data-scroll-target="#speichere-dat_full-in-deinem-ordner-data-als-csv-datei-ab">Speichere <code>dat_full</code> in deinem Ordner <code>"data"</code> als CSV-Datei ab</a></li>
+  </ul></li>
+  <li><a href="#coding-basics-funktionen" id="toc-coding-basics-funktionen" class="nav-link" data-scroll-target="#coding-basics-funktionen">Coding Basics: Funktionen</a>
+  <ul class="collapse">
+  <li><a href="#tab-completion" id="toc-tab-completion" class="nav-link" data-scroll-target="#tab-completion">Tab Completion:</a></li>
+  <li><a href="#weitere-tasten-und-tastenkürzel" id="toc-weitere-tasten-und-tastenkürzel" class="nav-link" data-scroll-target="#weitere-tasten-und-tastenkürzel">Weitere Tasten und Tastenkürzel:</a></li>
+  <li><a href="#verschachtelte-funktionen" id="toc-verschachtelte-funktionen" class="nav-link" data-scroll-target="#verschachtelte-funktionen">Verschachtelte Funktionen:</a></li>
+  </ul></li>
+  <li><a href="#style-conventions" id="toc-style-conventions" class="nav-link" data-scroll-target="#style-conventions">Style Conventions</a></li>
+  <li><a href="#am-ende-deiner-übungen---vergiss-nicht-dein-skript-abzuspeichern--" id="toc-am-ende-deiner-übungen---vergiss-nicht-dein-skript-abzuspeichern--" class="nav-link" data-scroll-target="#am-ende-deiner-übungen---vergiss-nicht-dein-skript-abzuspeichern--">Am Ende deiner Übungen - vergiss nicht dein Skript abzuspeichern! :-)</a></li>
+  </ul>
+</nav>
+    </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 

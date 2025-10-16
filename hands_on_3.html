@@ -104,7 +104,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 </head>
 
-<body class="nav-sidebar floating fullcontent">
+<body class="nav-sidebar floating">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -127,9 +127,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <!-- sidebar -->
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
-    <div class="sidebar-title mb-0 py-0">
-      <a href="./">R u Ready</a> 
-    </div>
+      <a href="./index.html" class="sidebar-logo-link">
+      <img src="./images/ryouready_logo.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
+      </a>
       </div>
         <div class="mt-2 flex-shrink-0 align-items-center">
         <div class="sidebar-search">
@@ -148,11 +148,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <div class="sidebar-item-container"> 
             <a href="./0_presentation.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Präsentationen</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./EH_1.html" class="sidebar-item-text sidebar-link">
@@ -218,11 +218,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <div class="sidebar-item-container"> 
             <a href="./faq.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">FAQ</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./rstudio.html" class="sidebar-item-text sidebar-link">
@@ -259,11 +259,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <div class="sidebar-item-container"> 
             <a href="./links_und_ressourcen.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Links und Ressourcen</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./ChatGPT.html" class="sidebar-item-text sidebar-link">
@@ -289,7 +289,34 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active" data-toc-expanded="-1">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#lernziele-des-hands-on-blocks-3" id="toc-lernziele-des-hands-on-blocks-3" class="nav-link active" data-scroll-target="#lernziele-des-hands-on-blocks-3">Lernziele des Hands-On-Blocks 3</a></li>
+  <li><a href="#reproduzierbarer-code-quarto" id="toc-reproduzierbarer-code-quarto" class="nav-link" data-scroll-target="#reproduzierbarer-code-quarto">Reproduzierbarer Code: Quarto</a>
+  <ul class="collapse">
+  <li><a href="#übungen" id="toc-übungen" class="nav-link" data-scroll-target="#übungen">Übungen:</a></li>
+  <li><a href="#code-chunks" id="toc-code-chunks" class="nav-link" data-scroll-target="#code-chunks">Code Chunks</a></li>
+  <li><a href="#inline-code" id="toc-inline-code" class="nav-link" data-scroll-target="#inline-code">Inline Code</a></li>
+  <li><a href="#quarto-header" id="toc-quarto-header" class="nav-link" data-scroll-target="#quarto-header">Quarto Header</a>
+  <ul class="collapse">
+  <li><a href="#übungen-quarto-header" id="toc-übungen-quarto-header" class="nav-link" data-scroll-target="#übungen-quarto-header">Übungen Quarto Header</a></li>
+  </ul></li>
+  </ul></li>
+  <li><a href="#faktoren-spezialtyp-eines-vektors" id="toc-faktoren-spezialtyp-eines-vektors" class="nav-link" data-scroll-target="#faktoren-spezialtyp-eines-vektors">Faktoren (Spezialtyp eines Vektors):</a></li>
+  <li><a href="#datenstrukturen-vektoren-listen-matrizen-und-data-frames" id="toc-datenstrukturen-vektoren-listen-matrizen-und-data-frames" class="nav-link" data-scroll-target="#datenstrukturen-vektoren-listen-matrizen-und-data-frames">Datenstrukturen: Vektoren, Listen, Matrizen und Data Frames</a>
+  <ul class="collapse">
+  <li><a href="#vektoren" id="toc-vektoren" class="nav-link" data-scroll-target="#vektoren">Vektoren:</a></li>
+  <li><a href="#matrizen" id="toc-matrizen" class="nav-link" data-scroll-target="#matrizen">Matrizen</a></li>
+  <li><a href="#listen" id="toc-listen" class="nav-link" data-scroll-target="#listen">Listen</a></li>
+  <li><a href="#data-frames" id="toc-data-frames" class="nav-link" data-scroll-target="#data-frames">Data Frames</a></li>
+  </ul></li>
+  <li><a href="#am-ende-deiner-übungen---vergiss-nicht-dein-skript-abzuspeichern--" id="toc-am-ende-deiner-übungen---vergiss-nicht-dein-skript-abzuspeichern--" class="nav-link" data-scroll-target="#am-ende-deiner-übungen---vergiss-nicht-dein-skript-abzuspeichern--">Am Ende deiner Übungen - vergiss nicht dein Skript abzuspeichern! :-)</a></li>
+  </ul>
+</nav>
+    </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 

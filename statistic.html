@@ -104,7 +104,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 </head>
 
-<body class="nav-sidebar floating fullcontent">
+<body class="nav-sidebar floating">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -127,9 +127,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <!-- sidebar -->
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
-    <div class="sidebar-title mb-0 py-0">
-      <a href="./">R u Ready</a> 
-    </div>
+      <a href="./index.html" class="sidebar-logo-link">
+      <img src="./images/ryouready_logo.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
+      </a>
       </div>
         <div class="mt-2 flex-shrink-0 align-items-center">
         <div class="sidebar-search">
@@ -148,11 +148,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <div class="sidebar-item-container"> 
             <a href="./0_presentation.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Präsentationen</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./EH_1.html" class="sidebar-item-text sidebar-link">
@@ -189,11 +189,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <div class="sidebar-item-container"> 
             <a href="./Übungen.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Übungen zu den Einheiten</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./loesung_1.html" class="sidebar-item-text sidebar-link">
@@ -259,11 +259,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <div class="sidebar-item-container"> 
             <a href="./links_und_ressourcen.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Links und Ressourcen</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./ChatGPT.html" class="sidebar-item-text sidebar-link">
@@ -289,7 +289,23 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active" data-toc-expanded="-1">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#was-ist-das-partielle-η²-und-wie-unterscheidet-es-sich-von-dem-generalisierten-η²" id="toc-was-ist-das-partielle-η²-und-wie-unterscheidet-es-sich-von-dem-generalisierten-η²" class="nav-link active" data-scroll-target="#was-ist-das-partielle-η²-und-wie-unterscheidet-es-sich-von-dem-generalisierten-η²">Was ist das partielle η² und wie unterscheidet es sich von dem generalisierten η²?</a></li>
+  <li><a href="#wozu-muss-sphärizität-gegeben-sein-und-wie-kann-man-diese-testen" id="toc-wozu-muss-sphärizität-gegeben-sein-und-wie-kann-man-diese-testen" class="nav-link" data-scroll-target="#wozu-muss-sphärizität-gegeben-sein-und-wie-kann-man-diese-testen">Wozu muss Sphärizität gegeben sein und wie kann man diese testen?</a></li>
+  <li><a href="#was-macht-eine-tukey-korrektur-und-was-sagt-uns-das-ergebnis" id="toc-was-macht-eine-tukey-korrektur-und-was-sagt-uns-das-ergebnis" class="nav-link" data-scroll-target="#was-macht-eine-tukey-korrektur-und-was-sagt-uns-das-ergebnis">Was macht eine Tukey-Korrektur und was sagt uns das Ergebnis?</a></li>
+  <li><a href="#wann-benötigt-die-berechnung-einer-anova-einen-wide-datensatz-und-wann-benötigt-die-berechnung-einer-anova-einen-long-datensatz" id="toc-wann-benötigt-die-berechnung-einer-anova-einen-wide-datensatz-und-wann-benötigt-die-berechnung-einer-anova-einen-long-datensatz" class="nav-link" data-scroll-target="#wann-benötigt-die-berechnung-einer-anova-einen-wide-datensatz-und-wann-benötigt-die-berechnung-einer-anova-einen-long-datensatz">Wann benötigt die Berechnung einer ANOVA einen wide-Datensatz und wann benötigt die Berechnung einer ANOVA einen long-Datensatz?</a></li>
+  <li><a href="#was-wird-bei-einem-levene-test-berechnet-bzw.-geprüft" id="toc-was-wird-bei-einem-levene-test-berechnet-bzw.-geprüft" class="nav-link" data-scroll-target="#was-wird-bei-einem-levene-test-berechnet-bzw.-geprüft">Was wird bei einem Levene-Test berechnet bzw. geprüft?</a></li>
+  <li><a href="#wird-ein-levene-test-für-den-between-faktor-berechnet-und-muss-diese-berechnung-für-jede-abhängige-variable-einzeln-gemacht-werden" id="toc-wird-ein-levene-test-für-den-between-faktor-berechnet-und-muss-diese-berechnung-für-jede-abhängige-variable-einzeln-gemacht-werden" class="nav-link" data-scroll-target="#wird-ein-levene-test-für-den-between-faktor-berechnet-und-muss-diese-berechnung-für-jede-abhängige-variable-einzeln-gemacht-werden">Wird ein Levene-Test für den between-Faktor berechnet und muss diese Berechnung für jede abhängige Variable einzeln gemacht werden?</a></li>
+  <li><a href="#ist-vor-der-berechnung-einer-anova-notwendigerweise-ein-levene-test-durchzuführen" id="toc-ist-vor-der-berechnung-einer-anova-notwendigerweise-ein-levene-test-durchzuführen" class="nav-link" data-scroll-target="#ist-vor-der-berechnung-einer-anova-notwendigerweise-ein-levene-test-durchzuführen">Ist vor der Berechnung einer ANOVA notwendigerweise ein Levene-Test durchzuführen?</a></li>
+  <li><a href="#welche-masse-für-effektstärken-werden-üblicherweise-bei-einer-anova-und-einem-post-hoc-t-test-berichtet" id="toc-welche-masse-für-effektstärken-werden-üblicherweise-bei-einer-anova-und-einem-post-hoc-t-test-berichtet" class="nav-link" data-scroll-target="#welche-masse-für-effektstärken-werden-üblicherweise-bei-einer-anova-und-einem-post-hoc-t-test-berichtet">Welche Masse für Effektstärken werden üblicherweise bei einer ANOVA und einem (post-hoc) t-Test berichtet?</a></li>
+  <li><a href="#bei-der-analyse-der-internen-konsistenz-mit-der-funktion-alpha-erscheint-die-fehlermeldung-warnung-some-items-were-negatively-correlated-with-the-first-principal-component-and-probably-should-be-reversed.-to-do-this-run-the-function-again-with-the-check.keystrue-option.-was-bedeutet-diese-warnmeldung-und-kann-man-sie-einfach-ignorieren-oder-muss-sie-weiter-berücksichtigt-werden" id="toc-bei-der-analyse-der-internen-konsistenz-mit-der-funktion-alpha-erscheint-die-fehlermeldung-warnung-some-items-were-negatively-correlated-with-the-first-principal-component-and-probably-should-be-reversed.-to-do-this-run-the-function-again-with-the-check.keystrue-option.-was-bedeutet-diese-warnmeldung-und-kann-man-sie-einfach-ignorieren-oder-muss-sie-weiter-berücksichtigt-werden" class="nav-link" data-scroll-target="#bei-der-analyse-der-internen-konsistenz-mit-der-funktion-alpha-erscheint-die-fehlermeldung-warnung-some-items-were-negatively-correlated-with-the-first-principal-component-and-probably-should-be-reversed.-to-do-this-run-the-function-again-with-the-check.keystrue-option.-was-bedeutet-diese-warnmeldung-und-kann-man-sie-einfach-ignorieren-oder-muss-sie-weiter-berücksichtigt-werden">Bei der Analyse der internen Konsistenz mit der Funktion <code>alpha()</code> erscheint die Fehlermeldung: „Warnung: Some items were negatively correlated with the first principal component and probably should be reversed. To do this, run the function again with the ‘check.keys=TRUE’ option“. Was bedeutet diese Warnmeldung und kann man sie einfach ignorieren oder muss sie weiter berücksichtigt werden?</a></li>
+  </ul>
+</nav>
+    </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 

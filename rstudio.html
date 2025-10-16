@@ -104,7 +104,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 </head>
 
-<body class="nav-sidebar floating fullcontent">
+<body class="nav-sidebar floating">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -127,9 +127,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <!-- sidebar -->
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
-    <div class="sidebar-title mb-0 py-0">
-      <a href="./">R u Ready</a> 
-    </div>
+      <a href="./index.html" class="sidebar-logo-link">
+      <img src="./images/ryouready_logo.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
+      </a>
       </div>
         <div class="mt-2 flex-shrink-0 align-items-center">
         <div class="sidebar-search">
@@ -148,11 +148,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <div class="sidebar-item-container"> 
             <a href="./0_presentation.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Präsentationen</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./EH_1.html" class="sidebar-item-text sidebar-link">
@@ -189,11 +189,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <div class="sidebar-item-container"> 
             <a href="./Übungen.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Übungen zu den Einheiten</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./loesung_1.html" class="sidebar-item-text sidebar-link">
@@ -259,11 +259,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <div class="sidebar-item-container"> 
             <a href="./links_und_ressourcen.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Links und Ressourcen</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./ChatGPT.html" class="sidebar-item-text sidebar-link">
@@ -289,7 +289,38 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active" data-toc-expanded="-1">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#was-gibt-es-alles-für-funktionen-zum-einlesen-der-daten-und-welche-davon-ist-am-besten-geeignet" id="toc-was-gibt-es-alles-für-funktionen-zum-einlesen-der-daten-und-welche-davon-ist-am-besten-geeignet" class="nav-link active" data-scroll-target="#was-gibt-es-alles-für-funktionen-zum-einlesen-der-daten-und-welche-davon-ist-am-besten-geeignet">Was gibt es alles für Funktionen zum Einlesen der Daten und welche davon ist am besten geeignet?</a></li>
+  <li><a href="#wofür-stehen-die-zusätzlichen-argumente-wie-escape_double-oder-trim_ws-beim-einlesen-von-dateien" id="toc-wofür-stehen-die-zusätzlichen-argumente-wie-escape_double-oder-trim_ws-beim-einlesen-von-dateien" class="nav-link" data-scroll-target="#wofür-stehen-die-zusätzlichen-argumente-wie-escape_double-oder-trim_ws-beim-einlesen-von-dateien">Wofür stehen die zusätzlichen Argumente wie <code>escape_double</code> oder <code>trim_ws</code> beim Einlesen von Dateien?</a></li>
+  <li><a href="#was-ist-der-unterschied-zwischen-cbind-und-den-xy_join-funktionen" id="toc-was-ist-der-unterschied-zwischen-cbind-und-den-xy_join-funktionen" class="nav-link" data-scroll-target="#was-ist-der-unterschied-zwischen-cbind-und-den-xy_join-funktionen">Was ist der Unterschied zwischen <code>cbind()</code> und den <code>xy_join()</code>-Funktionen?</a></li>
+  <li><a href="#was-ist-der-unterschied-zwischen-inner_join-left_join-right_join-full_join" id="toc-was-ist-der-unterschied-zwischen-inner_join-left_join-right_join-full_join" class="nav-link" data-scroll-target="#was-ist-der-unterschied-zwischen-inner_join-left_join-right_join-full_join">Was ist der Unterschied zwischen <code>inner_join()</code>, <code>left_join()</code>, <code>right_join()</code>, <code>full_join()</code>?</a></li>
+  <li><a href="#wann-verwendet-man-welche-der-xy_join-funktionen-und-anhand-welcher-variable-sollen-die-datensätze-zusammengefügt-werden" id="toc-wann-verwendet-man-welche-der-xy_join-funktionen-und-anhand-welcher-variable-sollen-die-datensätze-zusammengefügt-werden" class="nav-link" data-scroll-target="#wann-verwendet-man-welche-der-xy_join-funktionen-und-anhand-welcher-variable-sollen-die-datensätze-zusammengefügt-werden">Wann verwendet man welche der <code>xy_join()</code>-Funktionen und anhand welcher Variable sollen die Datensätze zusammengefügt werden?</a></li>
+  <li><a href="#wie-kann-man-ein-bereits-gesetztes-working-directory-also-den-arbeitsspeicher-des-skriptes-verschieben-idealerweise-sogar-von-ausserhalb-eines-projektes-in-ein-projekt-hinein" id="toc-wie-kann-man-ein-bereits-gesetztes-working-directory-also-den-arbeitsspeicher-des-skriptes-verschieben-idealerweise-sogar-von-ausserhalb-eines-projektes-in-ein-projekt-hinein" class="nav-link" data-scroll-target="#wie-kann-man-ein-bereits-gesetztes-working-directory-also-den-arbeitsspeicher-des-skriptes-verschieben-idealerweise-sogar-von-ausserhalb-eines-projektes-in-ein-projekt-hinein">Wie kann man ein bereits gesetztes working directory (also den Arbeitsspeicher des Skriptes) verschieben, idealerweise sogar von ausserhalb eines Projektes in ein Projekt hinein?</a></li>
+  <li><a href="#was-ist-der-unterschied-zwischen-der-funktion-mutate-und-der-funktion-summarize-wie-kombiniert-man-diese-funktionen-am-besten-mit-group_by" id="toc-was-ist-der-unterschied-zwischen-der-funktion-mutate-und-der-funktion-summarize-wie-kombiniert-man-diese-funktionen-am-besten-mit-group_by" class="nav-link" data-scroll-target="#was-ist-der-unterschied-zwischen-der-funktion-mutate-und-der-funktion-summarize-wie-kombiniert-man-diese-funktionen-am-besten-mit-group_by">Was ist der Unterschied zwischen der Funktion <code>mutate()</code> und der Funktion <code>summarize()</code>? Wie kombiniert man diese Funktionen am besten mit <code>group_by()</code>?</a></li>
+  <li><a href="#wie-funktioniert-die-umwandlung-eines-wide-datensatzes-hin-zu-einem-long-datensatz-und-welche-argumente-beinhaltet-die-hierfür-angewendete-funktion-pivot_longer" id="toc-wie-funktioniert-die-umwandlung-eines-wide-datensatzes-hin-zu-einem-long-datensatz-und-welche-argumente-beinhaltet-die-hierfür-angewendete-funktion-pivot_longer" class="nav-link" data-scroll-target="#wie-funktioniert-die-umwandlung-eines-wide-datensatzes-hin-zu-einem-long-datensatz-und-welche-argumente-beinhaltet-die-hierfür-angewendete-funktion-pivot_longer">Wie funktioniert die Umwandlung eines wide-Datensatzes hin zu einem long-Datensatz und welche Argumente beinhaltet die hierfür angewendete Funktion <code>pivot_longer()</code>?</a></li>
+  <li><a href="#wie-funktioniert-der-pipe-operator-bzw.-und-was-ist-der-unterschied-zwischen-den-beiden" id="toc-wie-funktioniert-der-pipe-operator-bzw.-und-was-ist-der-unterschied-zwischen-den-beiden" class="nav-link" data-scroll-target="#wie-funktioniert-der-pipe-operator-bzw.-und-was-ist-der-unterschied-zwischen-den-beiden">Wie funktioniert der Pipe Operator <code>|&gt;</code> bzw. <code>%&gt;%</code> und was ist der Unterschied zwischen den beiden?</a></li>
+  <li><a href="#wie-funktioniert-die-t.test-funktion" id="toc-wie-funktioniert-die-t.test-funktion" class="nav-link" data-scroll-target="#wie-funktioniert-die-t.test-funktion">Wie funktioniert die <code>t.test()</code>-Funktion?</a></li>
+  <li><a href="#was-ist-der-unterschied-zwischen-as_factor-und-as.factor" id="toc-was-ist-der-unterschied-zwischen-as_factor-und-as.factor" class="nav-link" data-scroll-target="#was-ist-der-unterschied-zwischen-as_factor-und-as.factor">Was ist der Unterschied zwischen <code>as_factor()</code> und <code>as.factor()</code>?</a></li>
+  <li><a href="#was-gibt-es-bei-ggplot-alles-für-visualisierungsmöglichkeiten" id="toc-was-gibt-es-bei-ggplot-alles-für-visualisierungsmöglichkeiten" class="nav-link" data-scroll-target="#was-gibt-es-bei-ggplot-alles-für-visualisierungsmöglichkeiten">Was gibt es bei ggplot alles für Visualisierungsmöglichkeiten?</a></li>
+  <li><a href="#wie-kann-man-sicherstellen-dass-bei-der-visualisierung-von-graphen-die-apa-guidelines-eingehalten-werden" id="toc-wie-kann-man-sicherstellen-dass-bei-der-visualisierung-von-graphen-die-apa-guidelines-eingehalten-werden" class="nav-link" data-scroll-target="#wie-kann-man-sicherstellen-dass-bei-der-visualisierung-von-graphen-die-apa-guidelines-eingehalten-werden">Wie kann man sicherstellen, dass bei der Visualisierung von Graphen die APA-Guidelines eingehalten werden?</a></li>
+  <li><a href="#wann-wird-ein-element-mit-und-wann-wird-ein-element-ohne-anführungszeichen-angesprochen" id="toc-wann-wird-ein-element-mit-und-wann-wird-ein-element-ohne-anführungszeichen-angesprochen" class="nav-link" data-scroll-target="#wann-wird-ein-element-mit-und-wann-wird-ein-element-ohne-anführungszeichen-angesprochen">Wann wird ein Element mit und wann wird ein Element ohne Anführungszeichen angesprochen?</a></li>
+  <li><a href="#wie-funktionieren-die-relativen-pfade-und-wie-stellt-man-sicher-dass-diese-auch-bei-fremden-personen-funktionieren" id="toc-wie-funktionieren-die-relativen-pfade-und-wie-stellt-man-sicher-dass-diese-auch-bei-fremden-personen-funktionieren" class="nav-link" data-scroll-target="#wie-funktionieren-die-relativen-pfade-und-wie-stellt-man-sicher-dass-diese-auch-bei-fremden-personen-funktionieren">Wie funktionieren die relativen Pfade und wie stellt man sicher, dass diese auch bei fremden Personen funktionieren?</a></li>
+  <li><a href="#wann-wird-die-tilde-und-das-dollarzeichen-verwendet" id="toc-wann-wird-die-tilde-und-das-dollarzeichen-verwendet" class="nav-link" data-scroll-target="#wann-wird-die-tilde-und-das-dollarzeichen-verwendet">Wann wird die Tilde (~) und das Dollarzeichen <code>($)</code> verwendet?</a></li>
+  <li><a href="#wann-wird-die-tilde-verwendet-und-wann-wird-ein-komma-verwendet" id="toc-wann-wird-die-tilde-verwendet-und-wann-wird-ein-komma-verwendet" class="nav-link" data-scroll-target="#wann-wird-die-tilde-verwendet-und-wann-wird-ein-komma-verwendet">Wann wird die Tilde (~) verwendet und wann wird ein Komma (<code>,</code>) verwendet?</a></li>
+  <li><a href="#wie-berechnet-man-das-generalisierte-η²" id="toc-wie-berechnet-man-das-generalisierte-η²" class="nav-link" data-scroll-target="#wie-berechnet-man-das-generalisierte-η²">Wie berechnet man das generalisierte η²?</a></li>
+  <li><a href="#wie-bereitet-man-die-daten-für-eine-mixed-anova-vor" id="toc-wie-bereitet-man-die-daten-für-eine-mixed-anova-vor" class="nav-link" data-scroll-target="#wie-bereitet-man-die-daten-für-eine-mixed-anova-vor">Wie bereitet man die Daten für eine mixed-ANOVA vor?</a></li>
+  <li><a href="#wofür-gibt-es-bei-der-funktion-aov_4-das-argument-1-personenidentifikationscode.-bzw.-das-argument-wiederholungsfaktor-personenidentifikationscode" id="toc-wofür-gibt-es-bei-der-funktion-aov_4-das-argument-1-personenidentifikationscode.-bzw.-das-argument-wiederholungsfaktor-personenidentifikationscode" class="nav-link" data-scroll-target="#wofür-gibt-es-bei-der-funktion-aov_4-das-argument-1-personenidentifikationscode.-bzw.-das-argument-wiederholungsfaktor-personenidentifikationscode">Wofür gibt es bei der Funktion <code>aov_4()</code> das Argument <code>(1 | Personenidentifikationscode)</code>. bzw. das Argument <code>(Wiederholungsfaktor | Personenidentifikationscode)</code>?</a></li>
+  <li><a href="#wie-stellt-man-ein-dass-in-markdown-oder-quarto-der-output-meines-codes-unterbunden-wird" id="toc-wie-stellt-man-ein-dass-in-markdown-oder-quarto-der-output-meines-codes-unterbunden-wird" class="nav-link" data-scroll-target="#wie-stellt-man-ein-dass-in-markdown-oder-quarto-der-output-meines-codes-unterbunden-wird">Wie stellt man ein, dass in Markdown oder Quarto der Output meines Codes unterbunden wird?</a></li>
+  <li><a href="#was-bedeutet-die-meldung-summarise-has-grouped-output-by-group.-you-can-override-using-the-.groups-argument.-und-was-muss-ich-dabei-beachten" id="toc-was-bedeutet-die-meldung-summarise-has-grouped-output-by-group.-you-can-override-using-the-.groups-argument.-und-was-muss-ich-dabei-beachten" class="nav-link" data-scroll-target="#was-bedeutet-die-meldung-summarise-has-grouped-output-by-group.-you-can-override-using-the-.groups-argument.-und-was-muss-ich-dabei-beachten">Was bedeutet die Meldung „summarise() has grouped output by ‘group’. You can override using the .groups argument.“ und was muss ich dabei beachten?</a></li>
+  <li><a href="#wann-soll-eine-neue-variable-bzw.-ein-neuer-datensatz-erstellt-werden-und-wann-soll-die-alte-variable-bzw.-der-neue-datensatz-überspeichert-werden" id="toc-wann-soll-eine-neue-variable-bzw.-ein-neuer-datensatz-erstellt-werden-und-wann-soll-die-alte-variable-bzw.-der-neue-datensatz-überspeichert-werden" class="nav-link" data-scroll-target="#wann-soll-eine-neue-variable-bzw.-ein-neuer-datensatz-erstellt-werden-und-wann-soll-die-alte-variable-bzw.-der-neue-datensatz-überspeichert-werden">Wann soll eine neue Variable bzw. ein neuer Datensatz erstellt werden und wann soll die alte Variable bzw. der neue Datensatz überspeichert werden?</a></li>
+  <li><a href="#wann-eignet-es-sich-ein-projekt-anzulegen" id="toc-wann-eignet-es-sich-ein-projekt-anzulegen" class="nav-link" data-scroll-target="#wann-eignet-es-sich-ein-projekt-anzulegen">Wann eignet es sich ein Projekt anzulegen?</a></li>
+  </ul>
+</nav>
+    </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
