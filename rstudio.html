@@ -64,8 +64,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./codebook.html" rel="next">
-<link href="./faq.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -74,7 +72,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-2f5df379a58b258e96c21c0638c20c03.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-ddd961a2510921635943dfbbd19534c4.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-d4be639c637f3db3c684c66cefad7e0c.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -104,10 +102,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 }</script>
 
 
-<link rel="stylesheet" href="styles/website_styles.css">
 </head>
 
-<body class="nav-sidebar floating">
+<body class="nav-sidebar floating fullcontent">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -258,12 +255,23 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
       </ul>
   </li>
-        <li class="sidebar-item">
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="./links_und_ressourcen.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Links und Ressourcen</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./ChatGPT.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">ChatGPT in RStudio</span></a>
   </div>
 </li>
+      </ul>
+  </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./leistungsnachweis.html" class="sidebar-item-text sidebar-link">
@@ -281,38 +289,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">Inhaltsverzeichnis</h2>
-   
-  <ul>
-  <li><a href="#was-gibt-es-alles-für-funktionen-zum-einlesen-der-daten-und-welche-davon-ist-am-besten-geeignet" id="toc-was-gibt-es-alles-für-funktionen-zum-einlesen-der-daten-und-welche-davon-ist-am-besten-geeignet" class="nav-link active" data-scroll-target="#was-gibt-es-alles-für-funktionen-zum-einlesen-der-daten-und-welche-davon-ist-am-besten-geeignet"><span class="header-section-number">1</span> Was gibt es alles für Funktionen zum Einlesen der Daten und welche davon ist am besten geeignet?</a></li>
-  <li><a href="#wofür-stehen-die-zusätzlichen-argumente-wie-escape_double-oder-trim_ws-beim-einlesen-von-dateien" id="toc-wofür-stehen-die-zusätzlichen-argumente-wie-escape_double-oder-trim_ws-beim-einlesen-von-dateien" class="nav-link" data-scroll-target="#wofür-stehen-die-zusätzlichen-argumente-wie-escape_double-oder-trim_ws-beim-einlesen-von-dateien"><span class="header-section-number">2</span> Wofür stehen die zusätzlichen Argumente wie <code>escape_double</code> oder <code>trim_ws</code> beim Einlesen von Dateien?</a></li>
-  <li><a href="#was-ist-der-unterschied-zwischen-cbind-und-den-xy_join-funktionen" id="toc-was-ist-der-unterschied-zwischen-cbind-und-den-xy_join-funktionen" class="nav-link" data-scroll-target="#was-ist-der-unterschied-zwischen-cbind-und-den-xy_join-funktionen"><span class="header-section-number">3</span> Was ist der Unterschied zwischen <code>cbind()</code> und den <code>xy_join()</code>-Funktionen?</a></li>
-  <li><a href="#was-ist-der-unterschied-zwischen-inner_join-left_join-right_join-full_join" id="toc-was-ist-der-unterschied-zwischen-inner_join-left_join-right_join-full_join" class="nav-link" data-scroll-target="#was-ist-der-unterschied-zwischen-inner_join-left_join-right_join-full_join"><span class="header-section-number">4</span> Was ist der Unterschied zwischen <code>inner_join()</code>, <code>left_join()</code>, <code>right_join()</code>, <code>full_join()</code>?</a></li>
-  <li><a href="#wann-verwendet-man-welche-der-xy_join-funktionen-und-anhand-welcher-variable-sollen-die-datensätze-zusammengefügt-werden" id="toc-wann-verwendet-man-welche-der-xy_join-funktionen-und-anhand-welcher-variable-sollen-die-datensätze-zusammengefügt-werden" class="nav-link" data-scroll-target="#wann-verwendet-man-welche-der-xy_join-funktionen-und-anhand-welcher-variable-sollen-die-datensätze-zusammengefügt-werden"><span class="header-section-number">5</span> Wann verwendet man welche der <code>xy_join()</code>-Funktionen und anhand welcher Variable sollen die Datensätze zusammengefügt werden?</a></li>
-  <li><a href="#wie-kann-man-ein-bereits-gesetztes-working-directory-also-den-arbeitsspeicher-des-skriptes-verschieben-idealerweise-sogar-von-ausserhalb-eines-projektes-in-ein-projekt-hinein" id="toc-wie-kann-man-ein-bereits-gesetztes-working-directory-also-den-arbeitsspeicher-des-skriptes-verschieben-idealerweise-sogar-von-ausserhalb-eines-projektes-in-ein-projekt-hinein" class="nav-link" data-scroll-target="#wie-kann-man-ein-bereits-gesetztes-working-directory-also-den-arbeitsspeicher-des-skriptes-verschieben-idealerweise-sogar-von-ausserhalb-eines-projektes-in-ein-projekt-hinein"><span class="header-section-number">6</span> Wie kann man ein bereits gesetztes working directory (also den Arbeitsspeicher des Skriptes) verschieben, idealerweise sogar von ausserhalb eines Projektes in ein Projekt hinein?</a></li>
-  <li><a href="#was-ist-der-unterschied-zwischen-der-funktion-mutate-und-der-funktion-summarize-wie-kombiniert-man-diese-funktionen-am-besten-mit-group_by" id="toc-was-ist-der-unterschied-zwischen-der-funktion-mutate-und-der-funktion-summarize-wie-kombiniert-man-diese-funktionen-am-besten-mit-group_by" class="nav-link" data-scroll-target="#was-ist-der-unterschied-zwischen-der-funktion-mutate-und-der-funktion-summarize-wie-kombiniert-man-diese-funktionen-am-besten-mit-group_by"><span class="header-section-number">7</span> Was ist der Unterschied zwischen der Funktion <code>mutate()</code> und der Funktion <code>summarize()</code>? Wie kombiniert man diese Funktionen am besten mit <code>group_by()</code>?</a></li>
-  <li><a href="#wie-funktioniert-die-umwandlung-eines-wide-datensatzes-hin-zu-einem-long-datensatz-und-welche-argumente-beinhaltet-die-hierfür-angewendete-funktion-pivot_longer" id="toc-wie-funktioniert-die-umwandlung-eines-wide-datensatzes-hin-zu-einem-long-datensatz-und-welche-argumente-beinhaltet-die-hierfür-angewendete-funktion-pivot_longer" class="nav-link" data-scroll-target="#wie-funktioniert-die-umwandlung-eines-wide-datensatzes-hin-zu-einem-long-datensatz-und-welche-argumente-beinhaltet-die-hierfür-angewendete-funktion-pivot_longer"><span class="header-section-number">8</span> Wie funktioniert die Umwandlung eines wide-Datensatzes hin zu einem long-Datensatz und welche Argumente beinhaltet die hierfür angewendete Funktion <code>pivot_longer()</code>?</a></li>
-  <li><a href="#wie-funktioniert-der-pipe-operator-bzw.-und-was-ist-der-unterschied-zwischen-den-beiden" id="toc-wie-funktioniert-der-pipe-operator-bzw.-und-was-ist-der-unterschied-zwischen-den-beiden" class="nav-link" data-scroll-target="#wie-funktioniert-der-pipe-operator-bzw.-und-was-ist-der-unterschied-zwischen-den-beiden"><span class="header-section-number">9</span> Wie funktioniert der Pipe Operator <code>|&gt;</code> bzw. <code>%&gt;%</code> und was ist der Unterschied zwischen den beiden?</a></li>
-  <li><a href="#wie-funktioniert-die-t.test-funktion" id="toc-wie-funktioniert-die-t.test-funktion" class="nav-link" data-scroll-target="#wie-funktioniert-die-t.test-funktion"><span class="header-section-number">10</span> Wie funktioniert die <code>t.test()</code>-Funktion?</a></li>
-  <li><a href="#was-ist-der-unterschied-zwischen-as_factor-und-as.factor" id="toc-was-ist-der-unterschied-zwischen-as_factor-und-as.factor" class="nav-link" data-scroll-target="#was-ist-der-unterschied-zwischen-as_factor-und-as.factor"><span class="header-section-number">11</span> Was ist der Unterschied zwischen <code>as_factor()</code> und <code>as.factor()</code>?</a></li>
-  <li><a href="#was-gibt-es-bei-ggplot-alles-für-visualisierungsmöglichkeiten" id="toc-was-gibt-es-bei-ggplot-alles-für-visualisierungsmöglichkeiten" class="nav-link" data-scroll-target="#was-gibt-es-bei-ggplot-alles-für-visualisierungsmöglichkeiten"><span class="header-section-number">12</span> Was gibt es bei ggplot alles für Visualisierungsmöglichkeiten?</a></li>
-  <li><a href="#wie-kann-man-sicherstellen-dass-bei-der-visualisierung-von-graphen-die-apa-guidelines-eingehalten-werden" id="toc-wie-kann-man-sicherstellen-dass-bei-der-visualisierung-von-graphen-die-apa-guidelines-eingehalten-werden" class="nav-link" data-scroll-target="#wie-kann-man-sicherstellen-dass-bei-der-visualisierung-von-graphen-die-apa-guidelines-eingehalten-werden"><span class="header-section-number">13</span> Wie kann man sicherstellen, dass bei der Visualisierung von Graphen die APA-Guidelines eingehalten werden?</a></li>
-  <li><a href="#wann-wird-ein-element-mit-und-wann-wird-ein-element-ohne-anführungszeichen-angesprochen" id="toc-wann-wird-ein-element-mit-und-wann-wird-ein-element-ohne-anführungszeichen-angesprochen" class="nav-link" data-scroll-target="#wann-wird-ein-element-mit-und-wann-wird-ein-element-ohne-anführungszeichen-angesprochen"><span class="header-section-number">14</span> Wann wird ein Element mit und wann wird ein Element ohne Anführungszeichen angesprochen?</a></li>
-  <li><a href="#wie-funktionieren-die-relativen-pfade-und-wie-stellt-man-sicher-dass-diese-auch-bei-fremden-personen-funktionieren" id="toc-wie-funktionieren-die-relativen-pfade-und-wie-stellt-man-sicher-dass-diese-auch-bei-fremden-personen-funktionieren" class="nav-link" data-scroll-target="#wie-funktionieren-die-relativen-pfade-und-wie-stellt-man-sicher-dass-diese-auch-bei-fremden-personen-funktionieren"><span class="header-section-number">15</span> Wie funktionieren die relativen Pfade und wie stellt man sicher, dass diese auch bei fremden Personen funktionieren?</a></li>
-  <li><a href="#wann-wird-die-tilde-und-das-dollarzeichen-verwendet" id="toc-wann-wird-die-tilde-und-das-dollarzeichen-verwendet" class="nav-link" data-scroll-target="#wann-wird-die-tilde-und-das-dollarzeichen-verwendet"><span class="header-section-number">16</span> Wann wird die Tilde (~) und das Dollarzeichen <code>($)</code> verwendet?</a></li>
-  <li><a href="#wann-wird-die-tilde-verwendet-und-wann-wird-ein-komma-verwendet" id="toc-wann-wird-die-tilde-verwendet-und-wann-wird-ein-komma-verwendet" class="nav-link" data-scroll-target="#wann-wird-die-tilde-verwendet-und-wann-wird-ein-komma-verwendet"><span class="header-section-number">17</span> Wann wird die Tilde (~) verwendet und wann wird ein Komma (<code>,</code>) verwendet?</a></li>
-  <li><a href="#wie-berechnet-man-das-generalisierte-η²" id="toc-wie-berechnet-man-das-generalisierte-η²" class="nav-link" data-scroll-target="#wie-berechnet-man-das-generalisierte-η²"><span class="header-section-number">18</span> Wie berechnet man das generalisierte η²?</a></li>
-  <li><a href="#wie-bereitet-man-die-daten-für-eine-mixed-anova-vor" id="toc-wie-bereitet-man-die-daten-für-eine-mixed-anova-vor" class="nav-link" data-scroll-target="#wie-bereitet-man-die-daten-für-eine-mixed-anova-vor"><span class="header-section-number">19</span> Wie bereitet man die Daten für eine mixed-ANOVA vor?</a></li>
-  <li><a href="#wofür-gibt-es-bei-der-funktion-aov_4-das-argument-1-personenidentifikationscode.-bzw.-das-argument-wiederholungsfaktor-personenidentifikationscode" id="toc-wofür-gibt-es-bei-der-funktion-aov_4-das-argument-1-personenidentifikationscode.-bzw.-das-argument-wiederholungsfaktor-personenidentifikationscode" class="nav-link" data-scroll-target="#wofür-gibt-es-bei-der-funktion-aov_4-das-argument-1-personenidentifikationscode.-bzw.-das-argument-wiederholungsfaktor-personenidentifikationscode"><span class="header-section-number">20</span> Wofür gibt es bei der Funktion <code>aov_4()</code> das Argument <code>(1 | Personenidentifikationscode)</code>. bzw. das Argument <code>(Wiederholungsfaktor | Personenidentifikationscode)</code>?</a></li>
-  <li><a href="#wie-stellt-man-ein-dass-in-markdown-oder-quarto-der-output-meines-codes-unterbunden-wird" id="toc-wie-stellt-man-ein-dass-in-markdown-oder-quarto-der-output-meines-codes-unterbunden-wird" class="nav-link" data-scroll-target="#wie-stellt-man-ein-dass-in-markdown-oder-quarto-der-output-meines-codes-unterbunden-wird"><span class="header-section-number">21</span> Wie stellt man ein, dass in Markdown oder Quarto der Output meines Codes unterbunden wird?</a></li>
-  <li><a href="#was-bedeutet-die-meldung-summarise-has-grouped-output-by-group.-you-can-override-using-the-.groups-argument.-und-was-muss-ich-dabei-beachten" id="toc-was-bedeutet-die-meldung-summarise-has-grouped-output-by-group.-you-can-override-using-the-.groups-argument.-und-was-muss-ich-dabei-beachten" class="nav-link" data-scroll-target="#was-bedeutet-die-meldung-summarise-has-grouped-output-by-group.-you-can-override-using-the-.groups-argument.-und-was-muss-ich-dabei-beachten"><span class="header-section-number">22</span> Was bedeutet die Meldung „summarise() has grouped output by ‘group’. You can override using the .groups argument.“ und was muss ich dabei beachten?</a></li>
-  <li><a href="#wann-soll-eine-neue-variable-bzw.-ein-neuer-datensatz-erstellt-werden-und-wann-soll-die-alte-variable-bzw.-der-neue-datensatz-überspeichert-werden" id="toc-wann-soll-eine-neue-variable-bzw.-ein-neuer-datensatz-erstellt-werden-und-wann-soll-die-alte-variable-bzw.-der-neue-datensatz-überspeichert-werden" class="nav-link" data-scroll-target="#wann-soll-eine-neue-variable-bzw.-ein-neuer-datensatz-erstellt-werden-und-wann-soll-die-alte-variable-bzw.-der-neue-datensatz-überspeichert-werden"><span class="header-section-number">23</span> Wann soll eine neue Variable bzw. ein neuer Datensatz erstellt werden und wann soll die alte Variable bzw. der neue Datensatz überspeichert werden?</a></li>
-  <li><a href="#wann-eignet-es-sich-ein-projekt-anzulegen" id="toc-wann-eignet-es-sich-ein-projekt-anzulegen" class="nav-link" data-scroll-target="#wann-eignet-es-sich-ein-projekt-anzulegen"><span class="header-section-number">24</span> Wann eignet es sich ein Projekt anzulegen?</a></li>
-  </ul>
-</nav>
-    </div>
+    
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
@@ -337,8 +314,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <p>Fragen zu RStudio</p>
 <p>Unabhängig von konkreten Fragen zu RStudio kannst du <a href="https://methodenlehre.github.io/einfuehrung-in-R/">hier</a> noch mal das Skript zur Einführung in R Studio von Andrew Ellis und Boris Mayer abrufen.</p>
-<section id="was-gibt-es-alles-für-funktionen-zum-einlesen-der-daten-und-welche-davon-ist-am-besten-geeignet" class="level2" data-number="1">
-<h2 data-number="1" class="anchored" data-anchor-id="was-gibt-es-alles-für-funktionen-zum-einlesen-der-daten-und-welche-davon-ist-am-besten-geeignet"><span class="header-section-number">1</span> Was gibt es alles für Funktionen zum Einlesen der Daten und welche davon ist am besten geeignet?</h2>
+<section id="was-gibt-es-alles-für-funktionen-zum-einlesen-der-daten-und-welche-davon-ist-am-besten-geeignet" class="level2">
+<h2 class="anchored" data-anchor-id="was-gibt-es-alles-für-funktionen-zum-einlesen-der-daten-und-welche-davon-ist-am-besten-geeignet">Was gibt es alles für Funktionen zum Einlesen der Daten und welche davon ist am besten geeignet?</h2>
 <p>Der einfachste Weg die Daten zu laden, geht über das Environment oben rechts in RStudio. Welche Funktion benötigt wird bzw. welche Funktion verwenden werden kann hängt vom Dateiformat der zu ladende Datei ab. Häufig verwendete Dateiformate sind <em>.xlsx</em>, <em>.csv</em> und <em>.sav</em>. Bei <em>.csv</em> handelt es sich um eine Textdatei, bei welcher die Spalten durch Kommas (csv = Comma-separated values) oder Semikolons getrennt sind. <em>.sav</em> ist die Dateiendung für eine SPSS-Datei und <em>.xlsx</em> ist die Dateiendung für eine Excel-Datei.</p>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -360,8 +337,8 @@ Note
 </figure>
 </div>
 </section>
-<section id="wofür-stehen-die-zusätzlichen-argumente-wie-escape_double-oder-trim_ws-beim-einlesen-von-dateien" class="level2" data-number="2">
-<h2 data-number="2" class="anchored" data-anchor-id="wofür-stehen-die-zusätzlichen-argumente-wie-escape_double-oder-trim_ws-beim-einlesen-von-dateien"><span class="header-section-number">2</span> Wofür stehen die zusätzlichen Argumente wie <code>escape_double</code> oder <code>trim_ws</code> beim Einlesen von Dateien?</h2>
+<section id="wofür-stehen-die-zusätzlichen-argumente-wie-escape_double-oder-trim_ws-beim-einlesen-von-dateien" class="level2">
+<h2 class="anchored" data-anchor-id="wofür-stehen-die-zusätzlichen-argumente-wie-escape_double-oder-trim_ws-beim-einlesen-von-dateien">Wofür stehen die zusätzlichen Argumente wie <code>escape_double</code> oder <code>trim_ws</code> beim Einlesen von Dateien?</h2>
 <div class="callout callout-style-default callout-important callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -382,12 +359,12 @@ Important
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>data <span class="ot">&lt;-</span> readr<span class="sc">::</span><span class="fu">read_delim</span>(<span class="st">"data.csv"</span>, <span class="at">delim =</span> <span class="st">";"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
-<section id="was-ist-der-unterschied-zwischen-cbind-und-den-xy_join-funktionen" class="level2" data-number="3">
-<h2 data-number="3" class="anchored" data-anchor-id="was-ist-der-unterschied-zwischen-cbind-und-den-xy_join-funktionen"><span class="header-section-number">3</span> Was ist der Unterschied zwischen <code>cbind()</code> und den <code>xy_join()</code>-Funktionen?</h2>
+<section id="was-ist-der-unterschied-zwischen-cbind-und-den-xy_join-funktionen" class="level2">
+<h2 class="anchored" data-anchor-id="was-ist-der-unterschied-zwischen-cbind-und-den-xy_join-funktionen">Was ist der Unterschied zwischen <code>cbind()</code> und den <code>xy_join()</code>-Funktionen?</h2>
 <p>Die Funktion <code>cbind()</code> kann man sich wie „Kleber“ vorstellen. Die Datensätze werden ohne Berücksichtigung der Reihenfolgen der Zeilen aneinandergeklebt. Hierdurch könnten im zusammengefügten Datensatz Werte derselben Zeile von verschiedenen Versuchspersonen stammen. Mit der Funktion <code>xy_join()</code> wird vor dem Zusammenfügen der beiden Datensätze die Reihenfolge der Zeilen über beide Datensätze hinweg kontrolliert und angeglichen. Hierfür wird jene Spalte verwendet, die im Argument <code>xy_join(data, by = „…“)</code> genannt wurde. Damit wird sichergestellt, dass im resultierenden Datensatz Werte derselben Zeile auch von einer einzelnen Versuchsperson stammen.</p>
 </section>
-<section id="was-ist-der-unterschied-zwischen-inner_join-left_join-right_join-full_join" class="level2" data-number="4">
-<h2 data-number="4" class="anchored" data-anchor-id="was-ist-der-unterschied-zwischen-inner_join-left_join-right_join-full_join"><span class="header-section-number">4</span> Was ist der Unterschied zwischen <code>inner_join()</code>, <code>left_join()</code>, <code>right_join()</code>, <code>full_join()</code>?</h2>
+<section id="was-ist-der-unterschied-zwischen-inner_join-left_join-right_join-full_join" class="level2">
+<h2 class="anchored" data-anchor-id="was-ist-der-unterschied-zwischen-inner_join-left_join-right_join-full_join">Was ist der Unterschied zwischen <code>inner_join()</code>, <code>left_join()</code>, <code>right_join()</code>, <code>full_join()</code>?</h2>
 <p>Die Funktionen unterscheiden sich dahingehend, was von den beiden Datensätzen nach der Zusammenfügung erhalten bleiben soll. <code>inner_join()</code> übernimmt nur Zeilen, welche in beiden Datensätzen vorhanden sind. <code>full_join()</code> übernimmt alle Zeilen, auch wenn sie nur in einen der beiden Datensätze auftaucht. Der Eintrag in der Spalte des anderen Datensatzes wird einfach mit <em>NA</em> ergänzt. Die verbleibenden beiden Funktionen “bevorzugen” sozusagen ihren entsprechenden Datensatz, übernehmen von diesem alle Zeilen und vom anderen Datensatz lediglich die damit übereinstimmenden.</p>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -403,16 +380,16 @@ Note
 </div>
 </div>
 </section>
-<section id="wann-verwendet-man-welche-der-xy_join-funktionen-und-anhand-welcher-variable-sollen-die-datensätze-zusammengefügt-werden" class="level2" data-number="5">
-<h2 data-number="5" class="anchored" data-anchor-id="wann-verwendet-man-welche-der-xy_join-funktionen-und-anhand-welcher-variable-sollen-die-datensätze-zusammengefügt-werden"><span class="header-section-number">5</span> Wann verwendet man welche der <code>xy_join()</code>-Funktionen und anhand welcher Variable sollen die Datensätze zusammengefügt werden?</h2>
+<section id="wann-verwendet-man-welche-der-xy_join-funktionen-und-anhand-welcher-variable-sollen-die-datensätze-zusammengefügt-werden" class="level2">
+<h2 class="anchored" data-anchor-id="wann-verwendet-man-welche-der-xy_join-funktionen-und-anhand-welcher-variable-sollen-die-datensätze-zusammengefügt-werden">Wann verwendet man welche der <code>xy_join()</code>-Funktionen und anhand welcher Variable sollen die Datensätze zusammengefügt werden?</h2>
 <p>Welche der <code>xy_join()</code>-Funktionen man am sinnvollsten nutzen sollte hängt von der Datenstruktur ab und was man mit den Daten im Folgenden noch machen möchte. Ein Datensatz mit <code>full_join()</code> erstellt würde beispielsweise die meisten Einträge (inkl. NAs) aufweisen, andererseits wäre dieser Datensatz aber auch vermutlich am unübersichtlichsten. Ob man <code>right_join()</code> oder <code>left_join()</code> verwendet kann beispielsweise einfach nur davon abhängen, welchen Datensatz man als links (bzw. zuerst) vorliegend oder als rechts (bzw. als zweites) vorliegend definiert. Das hängt von den Argumenten in der Funktion ab. Kurzum: Welche Funktion am passendsten ist hängt von der spezifischen Fragestellung ab und davon, in welcher Reihenfolge man die Datensätze betrachtet und der Funktion übergeben möchte. Anhand welcher Variable die Zusammenfügung der Datensätze erfolgen soll lässt sich ebenfalls nicht pauschal sagen. Jeder Datensatz kann andere Spaltennamen oder Strukturen aufweisen. In der Psychologie ist es allerdings üblich, dass man jeder Versuchsperson über Datenerhebungen hinweg einen individuellen Code zuweist. Dieser wird dann zum Zusammenfügen verwendet. Oft heisst diese Variable <em>Code</em> oder <em>ID</em> – sie kann aber auch komplett anders heissen. Unabhängig vom konkreten Namen sollte das Codebook anzeigen, ob es eine solche Variable gibt und um welche es sich handelt.</p>
 </section>
-<section id="wie-kann-man-ein-bereits-gesetztes-working-directory-also-den-arbeitsspeicher-des-skriptes-verschieben-idealerweise-sogar-von-ausserhalb-eines-projektes-in-ein-projekt-hinein" class="level2" data-number="6">
-<h2 data-number="6" class="anchored" data-anchor-id="wie-kann-man-ein-bereits-gesetztes-working-directory-also-den-arbeitsspeicher-des-skriptes-verschieben-idealerweise-sogar-von-ausserhalb-eines-projektes-in-ein-projekt-hinein"><span class="header-section-number">6</span> Wie kann man ein bereits gesetztes working directory (also den Arbeitsspeicher des Skriptes) verschieben, idealerweise sogar von ausserhalb eines Projektes in ein Projekt hinein?</h2>
+<section id="wie-kann-man-ein-bereits-gesetztes-working-directory-also-den-arbeitsspeicher-des-skriptes-verschieben-idealerweise-sogar-von-ausserhalb-eines-projektes-in-ein-projekt-hinein" class="level2">
+<h2 class="anchored" data-anchor-id="wie-kann-man-ein-bereits-gesetztes-working-directory-also-den-arbeitsspeicher-des-skriptes-verschieben-idealerweise-sogar-von-ausserhalb-eines-projektes-in-ein-projekt-hinein">Wie kann man ein bereits gesetztes working directory (also den Arbeitsspeicher des Skriptes) verschieben, idealerweise sogar von ausserhalb eines Projektes in ein Projekt hinein?</h2>
 <p>Am einfachsten schliesst man das Skript und verschiebt es innerhalb deines Ordnersystems in das Projekt. Dann öffnet man RStudio (aber nicht das Skript, sondern nur das Programm) und wählt im gestarteten RStudio über <em>File – Open File…</em> das Skript aus und speichert es ab. Das working directory sollte nun innerhalb des Projektes liegen.</p>
 </section>
-<section id="was-ist-der-unterschied-zwischen-der-funktion-mutate-und-der-funktion-summarize-wie-kombiniert-man-diese-funktionen-am-besten-mit-group_by" class="level2" data-number="7">
-<h2 data-number="7" class="anchored" data-anchor-id="was-ist-der-unterschied-zwischen-der-funktion-mutate-und-der-funktion-summarize-wie-kombiniert-man-diese-funktionen-am-besten-mit-group_by"><span class="header-section-number">7</span> Was ist der Unterschied zwischen der Funktion <code>mutate()</code> und der Funktion <code>summarize()</code>? Wie kombiniert man diese Funktionen am besten mit <code>group_by()</code>?</h2>
+<section id="was-ist-der-unterschied-zwischen-der-funktion-mutate-und-der-funktion-summarize-wie-kombiniert-man-diese-funktionen-am-besten-mit-group_by" class="level2">
+<h2 class="anchored" data-anchor-id="was-ist-der-unterschied-zwischen-der-funktion-mutate-und-der-funktion-summarize-wie-kombiniert-man-diese-funktionen-am-besten-mit-group_by">Was ist der Unterschied zwischen der Funktion <code>mutate()</code> und der Funktion <code>summarize()</code>? Wie kombiniert man diese Funktionen am besten mit <code>group_by()</code>?</h2>
 <div class="callout callout-style-default callout-important callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -441,8 +418,8 @@ Note
 </div>
 </div>
 </section>
-<section id="wie-funktioniert-die-umwandlung-eines-wide-datensatzes-hin-zu-einem-long-datensatz-und-welche-argumente-beinhaltet-die-hierfür-angewendete-funktion-pivot_longer" class="level2" data-number="8">
-<h2 data-number="8" class="anchored" data-anchor-id="wie-funktioniert-die-umwandlung-eines-wide-datensatzes-hin-zu-einem-long-datensatz-und-welche-argumente-beinhaltet-die-hierfür-angewendete-funktion-pivot_longer"><span class="header-section-number">8</span> Wie funktioniert die Umwandlung eines wide-Datensatzes hin zu einem long-Datensatz und welche Argumente beinhaltet die hierfür angewendete Funktion <code>pivot_longer()</code>?</h2>
+<section id="wie-funktioniert-die-umwandlung-eines-wide-datensatzes-hin-zu-einem-long-datensatz-und-welche-argumente-beinhaltet-die-hierfür-angewendete-funktion-pivot_longer" class="level2">
+<h2 class="anchored" data-anchor-id="wie-funktioniert-die-umwandlung-eines-wide-datensatzes-hin-zu-einem-long-datensatz-und-welche-argumente-beinhaltet-die-hierfür-angewendete-funktion-pivot_longer">Wie funktioniert die Umwandlung eines wide-Datensatzes hin zu einem long-Datensatz und welche Argumente beinhaltet die hierfür angewendete Funktion <code>pivot_longer()</code>?</h2>
 <div class="callout callout-style-default callout-important callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -479,8 +456,8 @@ Note
 </div>
 </div>
 </section>
-<section id="wie-funktioniert-der-pipe-operator-bzw.-und-was-ist-der-unterschied-zwischen-den-beiden" class="level2" data-number="9">
-<h2 data-number="9" class="anchored" data-anchor-id="wie-funktioniert-der-pipe-operator-bzw.-und-was-ist-der-unterschied-zwischen-den-beiden"><span class="header-section-number">9</span> Wie funktioniert der Pipe Operator <code>|&gt;</code> bzw. <code>%&gt;%</code> und was ist der Unterschied zwischen den beiden?</h2>
+<section id="wie-funktioniert-der-pipe-operator-bzw.-und-was-ist-der-unterschied-zwischen-den-beiden" class="level2">
+<h2 class="anchored" data-anchor-id="wie-funktioniert-der-pipe-operator-bzw.-und-was-ist-der-unterschied-zwischen-den-beiden">Wie funktioniert der Pipe Operator <code>|&gt;</code> bzw. <code>%&gt;%</code> und was ist der Unterschied zwischen den beiden?</h2>
 <p>Der Pipe Operator nimmt das Resultat von oben bzw. links und übergibt dieses Zwischenergebnis nach unten bzw. rechts. Was helfen könnte: Die Syntax erst ohne Pipe aufschreiben und dann die Klammern nach und nach auflösen und mit der Pipe ersetzen. Die folgenden Code-Snippets sind äquivalent:</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summarize</span>(</span>
@@ -511,8 +488,8 @@ Note
 </div>
 </div>
 </section>
-<section id="wie-funktioniert-die-t.test-funktion" class="level2" data-number="10">
-<h2 data-number="10" class="anchored" data-anchor-id="wie-funktioniert-die-t.test-funktion"><span class="header-section-number">10</span> Wie funktioniert die <code>t.test()</code>-Funktion?</h2>
+<section id="wie-funktioniert-die-t.test-funktion" class="level2">
+<h2 class="anchored" data-anchor-id="wie-funktioniert-die-t.test-funktion">Wie funktioniert die <code>t.test()</code>-Funktion?</h2>
 <div class="callout callout-style-default callout-important callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -536,8 +513,8 @@ Important
 <span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>       <span class="at">conf.level =</span> <span class="fl">0.95</span>) <span class="co"># Default</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
-<section id="was-ist-der-unterschied-zwischen-as_factor-und-as.factor" class="level2" data-number="11">
-<h2 data-number="11" class="anchored" data-anchor-id="was-ist-der-unterschied-zwischen-as_factor-und-as.factor"><span class="header-section-number">11</span> Was ist der Unterschied zwischen <code>as_factor()</code> und <code>as.factor()</code>?</h2>
+<section id="was-ist-der-unterschied-zwischen-as_factor-und-as.factor" class="level2">
+<h2 class="anchored" data-anchor-id="was-ist-der-unterschied-zwischen-as_factor-und-as.factor">Was ist der Unterschied zwischen <code>as_factor()</code> und <code>as.factor()</code>?</h2>
 <div class="callout callout-style-default callout-important callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -553,8 +530,8 @@ Important
 </div>
 <p>Beide Funktionen formatieren Werte einer Spalte hin zu Faktoren. <code>as.factor()</code> ist in Base R vorhanden und erstellt die Faktoren anhand des Alphabets. <code>as_factor()</code> stammt aus dem Tidyverse, kann bereits in SPSS-Dateien enthaltene Faktorisierungen auslesen und erstellt neue Faktoren anhand der Auftrittsreihenfolge im Vektor.</p>
 </section>
-<section id="was-gibt-es-bei-ggplot-alles-für-visualisierungsmöglichkeiten" class="level2" data-number="12">
-<h2 data-number="12" class="anchored" data-anchor-id="was-gibt-es-bei-ggplot-alles-für-visualisierungsmöglichkeiten"><span class="header-section-number">12</span> Was gibt es bei ggplot alles für Visualisierungsmöglichkeiten?</h2>
+<section id="was-gibt-es-bei-ggplot-alles-für-visualisierungsmöglichkeiten" class="level2">
+<h2 class="anchored" data-anchor-id="was-gibt-es-bei-ggplot-alles-für-visualisierungsmöglichkeiten">Was gibt es bei ggplot alles für Visualisierungsmöglichkeiten?</h2>
 <p>Mit ggplot kann eine ganze Reihe an Visualisierungen manuell festgelegt werden, von der Art des Graphen, mehrdimensionale Darstellungen, Formatierung wie Farben, Grössen uvm. Eine grobe Übersicht gibt es <a href="https://rstudio.github.io/cheatsheets/html/data-visualization.html">hier</a>.</p>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -570,16 +547,16 @@ Note
 </div>
 </div>
 </section>
-<section id="wie-kann-man-sicherstellen-dass-bei-der-visualisierung-von-graphen-die-apa-guidelines-eingehalten-werden" class="level2" data-number="13">
-<h2 data-number="13" class="anchored" data-anchor-id="wie-kann-man-sicherstellen-dass-bei-der-visualisierung-von-graphen-die-apa-guidelines-eingehalten-werden"><span class="header-section-number">13</span> Wie kann man sicherstellen, dass bei der Visualisierung von Graphen die APA-Guidelines eingehalten werden?</h2>
+<section id="wie-kann-man-sicherstellen-dass-bei-der-visualisierung-von-graphen-die-apa-guidelines-eingehalten-werden" class="level2">
+<h2 class="anchored" data-anchor-id="wie-kann-man-sicherstellen-dass-bei-der-visualisierung-von-graphen-die-apa-guidelines-eingehalten-werden">Wie kann man sicherstellen, dass bei der Visualisierung von Graphen die APA-Guidelines eingehalten werden?</h2>
 <p>Hierfür gibt es ein extra <code>[theme_apa()](https://rdrr.io/cran/jtools/man/theme_apa.html)</code>. Dieses nimmt einem viele der Formatierungen ab. Einzelheiten muss man trotzdem noch prüfen bzw. je nach Abbildung müssen manche Formatierungen auch noch selbst ergänzt werden. Die genaueren APA-Guidelines sind auch noch mal <a href="https://apastyle.apa.org/style-grammar-guidelines/tables-figures/figures">hier</a> zu finden.</p>
 </section>
-<section id="wann-wird-ein-element-mit-und-wann-wird-ein-element-ohne-anführungszeichen-angesprochen" class="level2" data-number="14">
-<h2 data-number="14" class="anchored" data-anchor-id="wann-wird-ein-element-mit-und-wann-wird-ein-element-ohne-anführungszeichen-angesprochen"><span class="header-section-number">14</span> Wann wird ein Element mit und wann wird ein Element ohne Anführungszeichen angesprochen?</h2>
+<section id="wann-wird-ein-element-mit-und-wann-wird-ein-element-ohne-anführungszeichen-angesprochen" class="level2">
+<h2 class="anchored" data-anchor-id="wann-wird-ein-element-mit-und-wann-wird-ein-element-ohne-anführungszeichen-angesprochen">Wann wird ein Element mit und wann wird ein Element ohne Anführungszeichen angesprochen?</h2>
 <p>Als Regel: Spricht man ein Objekt aus der Environment an, dann werden <em>keine</em> Anführungszeichen verwendet. Spricht man numerische Elemente aus einer Spalte an, dann werden ebenfalls <em>keine</em> Anführungszeichen verwendet. Spricht man Spaltenelemente an, welche als Faktor oder als Character formatiert sind, dann werden auch Anführungszeichen verwendet.</p>
 </section>
-<section id="wie-funktionieren-die-relativen-pfade-und-wie-stellt-man-sicher-dass-diese-auch-bei-fremden-personen-funktionieren" class="level2" data-number="15">
-<h2 data-number="15" class="anchored" data-anchor-id="wie-funktionieren-die-relativen-pfade-und-wie-stellt-man-sicher-dass-diese-auch-bei-fremden-personen-funktionieren"><span class="header-section-number">15</span> Wie funktionieren die relativen Pfade und wie stellt man sicher, dass diese auch bei fremden Personen funktionieren?</h2>
+<section id="wie-funktionieren-die-relativen-pfade-und-wie-stellt-man-sicher-dass-diese-auch-bei-fremden-personen-funktionieren" class="level2">
+<h2 class="anchored" data-anchor-id="wie-funktionieren-die-relativen-pfade-und-wie-stellt-man-sicher-dass-diese-auch-bei-fremden-personen-funktionieren">Wie funktionieren die relativen Pfade und wie stellt man sicher, dass diese auch bei fremden Personen funktionieren?</h2>
 <p>Relative Pfade gehen immer vom working directory (Arbeitsspeicher des Skripts) aus. Wenn man also Daten laden möchtest, dann muss man immer schauen, wo sich – ausgehend vom working directory – die Datenfiles befindet. Bei der Syntax des dann angegebenen Pfades gilt folgendes: 1. “Datensatz.Dateiendung” bildet ausnahmslos das Ende des Pfades. 2. “/” bilden den nächsten Step, also den Übergang von einem Ordner zum nächsten oder vom finalen Ordner zur Datei. 3. Soll im Ordnersystem in einen Ordner auf einer Ebene weiter oben gewechselt werden, dann kann ein “.” zusätzlich verwendet werden. Hier ein beispielhaftes Code-Snipet:</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>data <span class="ot">&lt;-</span> readr<span class="sc">::</span><span class="fu">read_csv</span>(<span class="st">"../data/Datensatz.Dateiendung"</span>) <span class="co"># Starte im working directory (deswegen der erste ".") und gehe eine Ordnerebene hoch (deswegen der zweite "."). Von dort aus gehe in den Ordner "data" und wähle dort die Datei "Datensatz" aus, welche dem Format "Dateiendung" entspricht.</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -592,8 +569,8 @@ Note
 </figure>
 </div>
 </section>
-<section id="wann-wird-die-tilde-und-das-dollarzeichen-verwendet" class="level2" data-number="16">
-<h2 data-number="16" class="anchored" data-anchor-id="wann-wird-die-tilde-und-das-dollarzeichen-verwendet"><span class="header-section-number">16</span> Wann wird die Tilde (~) und das Dollarzeichen <code>($)</code> verwendet?</h2>
+<section id="wann-wird-die-tilde-und-das-dollarzeichen-verwendet" class="level2">
+<h2 class="anchored" data-anchor-id="wann-wird-die-tilde-und-das-dollarzeichen-verwendet">Wann wird die Tilde (~) und das Dollarzeichen <code>($)</code> verwendet?</h2>
 <p>Die Tilde bedeutet, was links von ihr steht, wird von dem, was rechts von ihr steht, vorhergesagt. Beispielsweise wird die Tilde üblicherweise bei Regressionen verwendet: <code>lm(AV ~ UV).</code> Das Dollarzeichen dient vor allem, um Spalten anhand ihrer Namen anzusprechen: <code>data$Spaltenname</code>. Manche Funktionen arbeiten mit beiden Schreibweisen. Beispielsweise sind die folgenden Schreibweisen äquivalent:</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">t.test</span>(data<span class="sc">$</span>variable1, data<span class="sc">$</span>variable2)</span>
@@ -602,8 +579,8 @@ Note
 </div>
 <p>Allerdings müssen bei letzterer Schreibweise die Werte beider Gruppen zwingend im selben Datensatz vorliegen.</p>
 </section>
-<section id="wann-wird-die-tilde-verwendet-und-wann-wird-ein-komma-verwendet" class="level2" data-number="17">
-<h2 data-number="17" class="anchored" data-anchor-id="wann-wird-die-tilde-verwendet-und-wann-wird-ein-komma-verwendet"><span class="header-section-number">17</span> Wann wird die Tilde (~) verwendet und wann wird ein Komma (<code>,</code>) verwendet?</h2>
+<section id="wann-wird-die-tilde-verwendet-und-wann-wird-ein-komma-verwendet" class="level2">
+<h2 class="anchored" data-anchor-id="wann-wird-die-tilde-verwendet-und-wann-wird-ein-komma-verwendet">Wann wird die Tilde (~) verwendet und wann wird ein Komma (<code>,</code>) verwendet?</h2>
 <p>Die Tilde bedeutet, was links von ihr steht, wird von dem, was rechts von ihr steht, vorhergesagt. Beispielsweise wird die Tilde üblicherweise bei Regressionen verwendet: <code>lm(AV ~ UV)</code>. Das Komma wird verwendet, um Argumente in einer Funktion zu trennen. Beispiel:</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>result <span class="ot">&lt;-</span> <span class="fu">lm</span>(AV <span class="sc">~</span> UV, <span class="at">data =</span> datensatz)</span>
@@ -624,8 +601,8 @@ Warning
 </div>
 </div>
 </section>
-<section id="wie-berechnet-man-das-generalisierte-η²" class="level2" data-number="18">
-<h2 data-number="18" class="anchored" data-anchor-id="wie-berechnet-man-das-generalisierte-η²"><span class="header-section-number">18</span> Wie berechnet man das generalisierte η²?</h2>
+<section id="wie-berechnet-man-das-generalisierte-η²" class="level2">
+<h2 class="anchored" data-anchor-id="wie-berechnet-man-das-generalisierte-η²">Wie berechnet man das generalisierte η²?</h2>
 <p>Man erhält das generalisierte η² indem man erst eine ANOVA berechnet, abspeichert und dann über <code>summary(anova_ergebnis, es = ges)</code> ausgeben lässt.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>anova_ergebnis <span class="ot">&lt;-</span> afex<span class="sc">::</span><span class="fu">aov_car</span>(value <span class="sc">~</span> treatment, <span class="at">data =</span> example_data)</span>
@@ -633,8 +610,8 @@ Warning
 <span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(anova_ergebnis, <span class="at">es =</span> ges)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
-<section id="wie-bereitet-man-die-daten-für-eine-mixed-anova-vor" class="level2" data-number="19">
-<h2 data-number="19" class="anchored" data-anchor-id="wie-bereitet-man-die-daten-für-eine-mixed-anova-vor"><span class="header-section-number">19</span> Wie bereitet man die Daten für eine mixed-ANOVA vor?</h2>
+<section id="wie-bereitet-man-die-daten-für-eine-mixed-anova-vor" class="level2">
+<h2 class="anchored" data-anchor-id="wie-bereitet-man-die-daten-für-eine-mixed-anova-vor">Wie bereitet man die Daten für eine mixed-ANOVA vor?</h2>
 <p>Eine mixed-ANOVA besteht aus der Varianzerklärung aufgrund unterschiedlicher Gruppenzugehörigkeiten (bspw. Kontrollgruppe und Experimentalgruppe) und einer Messwiederholung (mehrerer Messwerte pro Person, unabhängig von der Gruppenzugehörigkeit). Beides muss auch bereits in den Daten erkennbar sein. Sprich, pro Versuchsperson muss anhand einer Variable codiert sein, zu welcher Gruppe diese Versuchsperson gehört. Darüber hinaus muss es für jede Versuchsperson zu jedem Messzeitpunkt einen Wert geben. Angenommen die Daten liegen ursprünglich im wide-Format vor, dann müssen diese erst ins long-Format übertragen werden (siehe auch Fragen zum long-Format). Erst dann können die entsprechenden ANOVA-Funktionen die Daten entsprechend interpretieren.</p>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -650,8 +627,8 @@ Note
 </div>
 </div>
 </section>
-<section id="wofür-gibt-es-bei-der-funktion-aov_4-das-argument-1-personenidentifikationscode.-bzw.-das-argument-wiederholungsfaktor-personenidentifikationscode" class="level2" data-number="20">
-<h2 data-number="20" class="anchored" data-anchor-id="wofür-gibt-es-bei-der-funktion-aov_4-das-argument-1-personenidentifikationscode.-bzw.-das-argument-wiederholungsfaktor-personenidentifikationscode"><span class="header-section-number">20</span> Wofür gibt es bei der Funktion <code>aov_4()</code> das Argument <code>(1 | Personenidentifikationscode)</code>. bzw. das Argument <code>(Wiederholungsfaktor | Personenidentifikationscode)</code>?</h2>
+<section id="wofür-gibt-es-bei-der-funktion-aov_4-das-argument-1-personenidentifikationscode.-bzw.-das-argument-wiederholungsfaktor-personenidentifikationscode" class="level2">
+<h2 class="anchored" data-anchor-id="wofür-gibt-es-bei-der-funktion-aov_4-das-argument-1-personenidentifikationscode.-bzw.-das-argument-wiederholungsfaktor-personenidentifikationscode">Wofür gibt es bei der Funktion <code>aov_4()</code> das Argument <code>(1 | Personenidentifikationscode)</code>. bzw. das Argument <code>(Wiederholungsfaktor | Personenidentifikationscode)</code>?</h2>
 <div class="callout callout-style-default callout-important callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -685,8 +662,8 @@ Note
 </div>
 </div>
 </section>
-<section id="wie-stellt-man-ein-dass-in-markdown-oder-quarto-der-output-meines-codes-unterbunden-wird" class="level2" data-number="21">
-<h2 data-number="21" class="anchored" data-anchor-id="wie-stellt-man-ein-dass-in-markdown-oder-quarto-der-output-meines-codes-unterbunden-wird"><span class="header-section-number">21</span> Wie stellt man ein, dass in Markdown oder Quarto der Output meines Codes unterbunden wird?</h2>
+<section id="wie-stellt-man-ein-dass-in-markdown-oder-quarto-der-output-meines-codes-unterbunden-wird" class="level2">
+<h2 class="anchored" data-anchor-id="wie-stellt-man-ein-dass-in-markdown-oder-quarto-der-output-meines-codes-unterbunden-wird">Wie stellt man ein, dass in Markdown oder Quarto der Output meines Codes unterbunden wird?</h2>
 <p>Es kann entweder im ersten Chunk des Dokuments als globale Einstellung <code>knitr::opts_chunk$set(output = FALSE)</code> oder im entsprechend gewünschten Chunk einzeln die Option <code>{r, output = FALSE}</code> gesetzt werden den Output zu unterdrücken. Mittlerweile können solche Optionen auch über die Schreibweise <code>#|</code> explizit innerhalb des Chunks geschrieben werden. Ähnliche Befehle existieren auch, wenn man stattdessen oder zusätzlich Warnmeldungen oder den Code unterbinden möchte. Stellt bei der Endabgabe aber bitte sicher, dass der Code und mögliche Warnmeldungen sichtbar sind!</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Hierdurch würde der Code zwar angezeigt, aber nicht mehr durchgeführt werden</span></span>
@@ -695,16 +672,16 @@ Note
 <span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a><span class="co"># #| echo: FALSE</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
-<section id="was-bedeutet-die-meldung-summarise-has-grouped-output-by-group.-you-can-override-using-the-.groups-argument.-und-was-muss-ich-dabei-beachten" class="level2" data-number="22">
-<h2 data-number="22" class="anchored" data-anchor-id="was-bedeutet-die-meldung-summarise-has-grouped-output-by-group.-you-can-override-using-the-.groups-argument.-und-was-muss-ich-dabei-beachten"><span class="header-section-number">22</span> Was bedeutet die Meldung „summarise() has grouped output by ‘group’. You can override using the .groups argument.“ und was muss ich dabei beachten?</h2>
+<section id="was-bedeutet-die-meldung-summarise-has-grouped-output-by-group.-you-can-override-using-the-.groups-argument.-und-was-muss-ich-dabei-beachten" class="level2">
+<h2 class="anchored" data-anchor-id="was-bedeutet-die-meldung-summarise-has-grouped-output-by-group.-you-can-override-using-the-.groups-argument.-und-was-muss-ich-dabei-beachten">Was bedeutet die Meldung „summarise() has grouped output by ‘group’. You can override using the .groups argument.“ und was muss ich dabei beachten?</h2>
 <p>Üblicherweise werden deskriptive Werte (auch) für Subgruppen der Gesamtstichprobe angegeben (beispielsweise getrennt für Männer und Frauen, für die Kontrollgruppe oder die Experimentalgruppe etc.). Um entsprechende Änderungen vorzunehmen, wird daher vor der Anwendung von <code>summarise()</code> noch die Funktion <code>group_by()</code> verwendet. Nach der Berechnung der Deskriptivstatistik wird die Gruppierung nicht aufgehoben. Sie bleibt im Hintergrund, nicht direkt sichtbar, erhalten. Die Warnmeldung weisst genau darauf hin. Möchte man die Gruppierung aufheben, dann kann entweder die Funktion <code>ungroup()</code> verwendet werden oder <code>summarise()</code> wird um das Argument <code>summarise(.group = „drop)</code> ergänzt. Gruppierungen aufzulösen kann für manche Vorgänge, wie beispielsweise das Löschen von noch gruppierten Spalten relevant sein.</p>
 </section>
-<section id="wann-soll-eine-neue-variable-bzw.-ein-neuer-datensatz-erstellt-werden-und-wann-soll-die-alte-variable-bzw.-der-neue-datensatz-überspeichert-werden" class="level2" data-number="23">
-<h2 data-number="23" class="anchored" data-anchor-id="wann-soll-eine-neue-variable-bzw.-ein-neuer-datensatz-erstellt-werden-und-wann-soll-die-alte-variable-bzw.-der-neue-datensatz-überspeichert-werden"><span class="header-section-number">23</span> Wann soll eine neue Variable bzw. ein neuer Datensatz erstellt werden und wann soll die alte Variable bzw. der neue Datensatz überspeichert werden?</h2>
+<section id="wann-soll-eine-neue-variable-bzw.-ein-neuer-datensatz-erstellt-werden-und-wann-soll-die-alte-variable-bzw.-der-neue-datensatz-überspeichert-werden" class="level2">
+<h2 class="anchored" data-anchor-id="wann-soll-eine-neue-variable-bzw.-ein-neuer-datensatz-erstellt-werden-und-wann-soll-die-alte-variable-bzw.-der-neue-datensatz-überspeichert-werden">Wann soll eine neue Variable bzw. ein neuer Datensatz erstellt werden und wann soll die alte Variable bzw. der neue Datensatz überspeichert werden?</h2>
 <p>Grundsätzlich ist es vorzuziehen neue Variablen oder Datensätze zu erstellen. Zum einen kann so bei Bedarf noch auf die ursprünglichen Variablen oder Datensätze zugegriffen werden. Zum anderen ist die Analyse so für aussenstehende leichter nachzuvollziehen. Ausnahmen sind ästhetische Änderungen oder wiederholte Berechnungen, welche für die weitere Analyse nicht weiter relevant sind.</p>
 </section>
-<section id="wann-eignet-es-sich-ein-projekt-anzulegen" class="level2" data-number="24">
-<h2 data-number="24" class="anchored" data-anchor-id="wann-eignet-es-sich-ein-projekt-anzulegen"><span class="header-section-number">24</span> Wann eignet es sich ein Projekt anzulegen?</h2>
+<section id="wann-eignet-es-sich-ein-projekt-anzulegen" class="level2">
+<h2 class="anchored" data-anchor-id="wann-eignet-es-sich-ein-projekt-anzulegen">Wann eignet es sich ein Projekt anzulegen?</h2>
 <p>Ein Projekt anzulegen, lohnt sich vor allem dann, wenn in mehreren Skripten gearbeitet wird. Dann muss nicht in jedem Skript einzeln das working directory (Arbeitsspeicher des Skripts) gesetzt werden. Wird in nur einem Skript gearbeitet, dann macht das Anlegen des Projekts keinen Unterschied.</p>
 
 
@@ -1128,33 +1105,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
 });
 </script>
-<nav class="page-navigation">
-  <div class="nav-page nav-page-previous">
-      <a href="./faq.html" class="pagination-link" aria-label="FAQ">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">FAQ</span>
-      </a>          
-  </div>
-  <div class="nav-page nav-page-next">
-      <a href="./codebook.html" class="pagination-link" aria-label="2  Codebook">
-        <span class="nav-page-text">2 Codebook</span> <i class="bi bi-arrow-right-short"></i>
-      </a>
-  </div>
-</nav>
 </div> <!-- /content -->
-<footer class="footer">
-  <div class="nav-footer">
-    <div class="nav-footer-left">
-      &nbsp;
-    </div>   
-    <div class="nav-footer-center">
-<p>Der Inhalt dieser Website ist lizenziert unter<br>
-<a href="https://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1">CC BY-SA 4.0</a> © 2025</p>
-</div>
-    <div class="nav-footer-right">
-      &nbsp;
-    </div>
-  </div>
-</footer>
 
 
 

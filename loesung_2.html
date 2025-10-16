@@ -64,8 +64,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./hands_on_3.html" rel="next">
-<link href="./loesung_1.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -74,7 +72,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-2f5df379a58b258e96c21c0638c20c03.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-ddd961a2510921635943dfbbd19534c4.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-d4be639c637f3db3c684c66cefad7e0c.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -104,10 +102,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 }</script>
 
 
-<link rel="stylesheet" href="styles/website_styles.css">
 </head>
 
-<body class="nav-sidebar floating">
+<body class="nav-sidebar floating fullcontent">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -258,12 +255,23 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
       </ul>
   </li>
-        <li class="sidebar-item">
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="./links_und_ressourcen.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Links und Ressourcen</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./ChatGPT.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">ChatGPT in RStudio</span></a>
   </div>
 </li>
+      </ul>
+  </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./leistungsnachweis.html" class="sidebar-item-text sidebar-link">
@@ -281,50 +289,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">Inhaltsverzeichnis</h2>
-   
-  <ul>
-  <li><a href="#lösung---coding-basics-einheiten-3-und-4" id="toc-lösung---coding-basics-einheiten-3-und-4" class="nav-link active" data-scroll-target="#lösung---coding-basics-einheiten-3-und-4"><span class="header-section-number">1</span> Lösung - Coding Basics (Einheiten 3 und 4)</a></li>
-  <li><a href="#lernziele-dieses-hands-on-blocks" id="toc-lernziele-dieses-hands-on-blocks" class="nav-link" data-scroll-target="#lernziele-dieses-hands-on-blocks"><span class="header-section-number">2</span> Lernziele dieses Hands-On-Blocks</a></li>
-  <li><a href="#projekte-und-pfade" id="toc-projekte-und-pfade" class="nav-link" data-scroll-target="#projekte-und-pfade"><span class="header-section-number">3</span> Projekte und Pfade</a>
-  <ul class="collapse">
-  <li><a href="#was-sind-r-projekte" id="toc-was-sind-r-projekte" class="nav-link" data-scroll-target="#was-sind-r-projekte"><span class="header-section-number">3.0.1</span> Was sind R-Projekte?</a></li>
-  <li><a href="#absolute-vs.-relative-pfade" id="toc-absolute-vs.-relative-pfade" class="nav-link" data-scroll-target="#absolute-vs.-relative-pfade"><span class="header-section-number">3.0.2</span> Absolute vs.&nbsp;relative Pfade</a></li>
-  </ul></li>
-  <li><a href="#daten-importieren-und-exportieren" id="toc-daten-importieren-und-exportieren" class="nav-link" data-scroll-target="#daten-importieren-und-exportieren"><span class="header-section-number">4</span> Daten importieren und exportieren</a>
-  <ul class="collapse">
-  <li><a href="#import" id="toc-import" class="nav-link" data-scroll-target="#import"><span class="header-section-number">4.1</span> Import</a>
-  <ul class="collapse">
-  <li><a href="#einlesen-via-oberfläche" id="toc-einlesen-via-oberfläche" class="nav-link" data-scroll-target="#einlesen-via-oberfläche"><span class="header-section-number">4.1.1</span> Einlesen via Oberfläche</a></li>
-  <li><a href="#einlesen-via-code" id="toc-einlesen-via-code" class="nav-link" data-scroll-target="#einlesen-via-code"><span class="header-section-number">4.1.2</span> Einlesen via Code</a></li>
-  </ul></li>
-  </ul></li>
-  <li><a href="#daten-mergen" id="toc-daten-mergen" class="nav-link" data-scroll-target="#daten-mergen"><span class="header-section-number">5</span> Daten mergen</a>
-  <ul class="collapse">
-  <li><a href="#aufgaben" id="toc-aufgaben" class="nav-link" data-scroll-target="#aufgaben"><span class="header-section-number">5.1</span> Aufgaben</a>
-  <ul class="collapse">
-  <li><a href="#füge-alle-7-datensätze-mit-cbind-zusammen-und-schaue-dir-das-ergebnis-an." id="toc-füge-alle-7-datensätze-mit-cbind-zusammen-und-schaue-dir-das-ergebnis-an." class="nav-link" data-scroll-target="#füge-alle-7-datensätze-mit-cbind-zusammen-und-schaue-dir-das-ergebnis-an."><span class="header-section-number">5.1.1</span> Füge alle 7 Datensätze mit <code>cbind()</code> zusammen und schaue dir das Ergebnis an.</a></li>
-  <li><a href="#versuche-es-nun-mit-full_join." id="toc-versuche-es-nun-mit-full_join." class="nav-link" data-scroll-target="#versuche-es-nun-mit-full_join."><span class="header-section-number">5.1.2</span> Versuche es nun mit <code>full_join()</code>.</a></li>
-  <li><a href="#inspiziere-deinen-zusammengefügten-datensatz-dat_full" id="toc-inspiziere-deinen-zusammengefügten-datensatz-dat_full" class="nav-link" data-scroll-target="#inspiziere-deinen-zusammengefügten-datensatz-dat_full"><span class="header-section-number">5.1.3</span> Inspiziere deinen zusammengefügten Datensatz “dat_full”</a></li>
-  </ul></li>
-  </ul></li>
-  <li><a href="#daten-speichern" id="toc-daten-speichern" class="nav-link" data-scroll-target="#daten-speichern"><span class="header-section-number">6</span> Daten speichern</a>
-  <ul class="collapse">
-  <li><a href="#speichere-dat_full-in-deinem-ordner-data-als-csv-datei-ab" id="toc-speichere-dat_full-in-deinem-ordner-data-als-csv-datei-ab" class="nav-link" data-scroll-target="#speichere-dat_full-in-deinem-ordner-data-als-csv-datei-ab"><span class="header-section-number">6.0.1</span> Speichere <code>dat_full</code> in deinem Ordner <code>"data"</code> als CSV-Datei ab</a></li>
-  </ul></li>
-  <li><a href="#coding-basics-funktionen" id="toc-coding-basics-funktionen" class="nav-link" data-scroll-target="#coding-basics-funktionen"><span class="header-section-number">7</span> Coding Basics: Funktionen</a>
-  <ul class="collapse">
-  <li><a href="#tab-completion" id="toc-tab-completion" class="nav-link" data-scroll-target="#tab-completion"><span class="header-section-number">7.1</span> Tab Completion:</a></li>
-  <li><a href="#weitere-tasten-und-tastenkürzel" id="toc-weitere-tasten-und-tastenkürzel" class="nav-link" data-scroll-target="#weitere-tasten-und-tastenkürzel"><span class="header-section-number">7.2</span> Weitere Tasten und Tastenkürzel:</a></li>
-  <li><a href="#verschachtelte-funktionen" id="toc-verschachtelte-funktionen" class="nav-link" data-scroll-target="#verschachtelte-funktionen"><span class="header-section-number">7.3</span> Verschachtelte Funktionen:</a></li>
-  </ul></li>
-  <li><a href="#style-conventions" id="toc-style-conventions" class="nav-link" data-scroll-target="#style-conventions"><span class="header-section-number">8</span> Style Conventions</a></li>
-  <li><a href="#am-ende-deiner-übungen---vergiss-nicht-dein-skript-abzuspeichern--" id="toc-am-ende-deiner-übungen---vergiss-nicht-dein-skript-abzuspeichern--" class="nav-link" data-scroll-target="#am-ende-deiner-übungen---vergiss-nicht-dein-skript-abzuspeichern--"><span class="header-section-number">9</span> Am Ende deiner Übungen - vergiss nicht dein Skript abzuspeichern! :-)</a></li>
-  </ul>
-</nav>
-    </div>
+    
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
@@ -347,13 +312,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<section id="lösung---coding-basics-einheiten-3-und-4" class="level1" data-number="1">
-<h1 data-number="1"><span class="header-section-number">1</span> Lösung - Coding Basics (Einheiten 3 und 4)</h1>
+<section id="lösung---coding-basics-einheiten-3-und-4" class="level1">
+<h1>Lösung - Coding Basics (Einheiten 3 und 4)</h1>
 <p>Bei Bedarf findest du hier nochmals die Slides zu Einheit 3:<br>
 <iframe src="EH_3.html" width="100%" height="500px"></iframe></p>
 </section>
-<section id="lernziele-dieses-hands-on-blocks" class="level1" data-number="2">
-<h1 data-number="2"><span class="header-section-number">2</span> Lernziele dieses Hands-On-Blocks</h1>
+<section id="lernziele-dieses-hands-on-blocks" class="level1">
+<h1>Lernziele dieses Hands-On-Blocks</h1>
 <p>✅Projekte</p>
 <p>✅Unterschied zwischen relativen und absoluten Pfaden verstehen</p>
 <p>✅Datensätze in R importieren, inspizieren und speichern</p>
@@ -361,10 +326,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>✅Funktionen und ihre Argumente (inkl. Defaults) nutzen</p>
 <p>✅Style Conventions</p>
 </section>
-<section id="projekte-und-pfade" class="level1" data-number="3">
-<h1 data-number="3"><span class="header-section-number">3</span> Projekte und Pfade</h1>
-<section id="was-sind-r-projekte" class="level3" data-number="3.0.1">
-<h3 data-number="3.0.1" class="anchored" data-anchor-id="was-sind-r-projekte"><span class="header-section-number">3.0.1</span> Was sind R-Projekte?</h3>
+<section id="projekte-und-pfade" class="level1">
+<h1>Projekte und Pfade</h1>
+<section id="was-sind-r-projekte" class="level3">
+<h3 class="anchored" data-anchor-id="was-sind-r-projekte">Was sind R-Projekte?</h3>
 <p>👉 <a href="https://r4ds.hadley.nz/workflow-scripts.html#projects">Kapitel 6.2 R4DS</a></p>
 <p>Ein <strong>R-Projekt</strong> ist eine Projektdatei (<code>.Rproj</code>), die du in RStudio anlegst.<br>
 Wenn du ein Projekt öffnest:</p>
@@ -405,8 +370,8 @@ Bei Fehlermeldungen:
 <p>Falls du in Zukunft ein Projekt erstellen willst (z.B. für deine Masterarbeit): 👉<a href="https://r4ds.hadley.nz/workflow-scripts.html#projects">Kapitel 6.2</a></p>
 <hr>
 </section>
-<section id="absolute-vs.-relative-pfade" class="level3" data-number="3.0.2">
-<h3 data-number="3.0.2" class="anchored" data-anchor-id="absolute-vs.-relative-pfade"><span class="header-section-number">3.0.2</span> Absolute vs.&nbsp;relative Pfade</h3>
+<section id="absolute-vs.-relative-pfade" class="level3">
+<h3 class="anchored" data-anchor-id="absolute-vs.-relative-pfade">Absolute vs.&nbsp;relative Pfade</h3>
 <ul>
 <li><p><strong>Absolute Pfade</strong> beschreiben den vollständigen Weg zu einer Datei, ausgehend vom Wurzelverzeichnis <em>deines</em> Computers.</p>
 <p>🔴 Nachteil: Sie sind oft sehr lang und funktionieren nur auf deinem Rechner.<br>
@@ -448,14 +413,14 @@ Lösung
 </div>
 </section>
 </section>
-<section id="daten-importieren-und-exportieren" class="level1" data-number="4">
-<h1 data-number="4"><span class="header-section-number">4</span> Daten importieren und exportieren</h1>
-<section id="import" class="level2" data-number="4.1">
-<h2 data-number="4.1" class="anchored" data-anchor-id="import"><span class="header-section-number">4.1</span> Import</h2>
+<section id="daten-importieren-und-exportieren" class="level1">
+<h1>Daten importieren und exportieren</h1>
+<section id="import" class="level2">
+<h2 class="anchored" data-anchor-id="import">Import</h2>
 <p>👉 <a href="https://methodenlehre.github.io/einfuehrung-in-R/chapters/03-data_frames.html#daten-importieren">Kapitel 3.2</a></p>
 <p><a href="https://rstudio.github.io/cheatsheets/html/data-import.html">Cheatsheat Datenimport</a> mit <code>readr</code></p>
-<section id="einlesen-via-oberfläche" class="level3" data-number="4.1.1">
-<h3 data-number="4.1.1" class="anchored" data-anchor-id="einlesen-via-oberfläche"><span class="header-section-number">4.1.1</span> Einlesen via Oberfläche</h3>
+<section id="einlesen-via-oberfläche" class="level3">
+<h3 class="anchored" data-anchor-id="einlesen-via-oberfläche">Einlesen via Oberfläche</h3>
 <ul>
 <li>Stelle sicher, dass du das Metapaket <strong>tidyverse</strong> geladen hast (<code>library(tidyverse)</code>) (siehe Hands-On 1).<br>
 Wir verwenden Funktionen aus den Packages <strong>readr</strong> und <strong>readxl</strong>, die Teil des Tidyverse sind.</li>
@@ -531,10 +496,10 @@ Lösung
 <pre><code>-   Wenn du den Code via Klick-Oberfläche eingelesen hast, wirst du den ausgeführten Code in der Konsole sehen. Kopiere diesen in dein Skript, so dass du ihn in Zukunft wiederverwenden und anpassen kannst.
 -   Schaue dir die eingelesenen Daten mit `View(data_mmq)` an. Wenn du alles richtig gemacht hast, ist in jeder Zelle nur ein Wert.</code></pre>
 </section>
-<section id="einlesen-via-code" class="level3" data-number="4.1.2">
-<h3 data-number="4.1.2" class="anchored" data-anchor-id="einlesen-via-code"><span class="header-section-number">4.1.2</span> Einlesen via Code</h3>
-<section id="csv-dateien" class="level4" data-number="4.1.2.1">
-<h4 data-number="4.1.2.1" class="anchored" data-anchor-id="csv-dateien"><span class="header-section-number">4.1.2.1</span> .CSV Dateien</h4>
+<section id="einlesen-via-code" class="level3">
+<h3 class="anchored" data-anchor-id="einlesen-via-code">Einlesen via Code</h3>
+<section id="csv-dateien" class="level4">
+<h4 class="anchored" data-anchor-id="csv-dateien">.CSV Dateien</h4>
 <ul>
 <li>Versuche, weitere CSV-Datensätze einzulesen: <code>data_cb</code>, <code>data_cvstm</code>, <code>data_pct</code>, <code>data_vp</code>.<br>
 Suche dafür eine geeignete Funktion zum Einlesen von <code>.csv</code>.</li>
@@ -710,8 +675,8 @@ Lösung
 </div>
 </div>
 </section>
-<section id="xslx-dateien" class="level4" data-number="4.1.2.2">
-<h4 data-number="4.1.2.2" class="anchored" data-anchor-id="xslx-dateien"><span class="header-section-number">4.1.2.2</span> .XSLX Dateien</h4>
+<section id="xslx-dateien" class="level4">
+<h4 class="anchored" data-anchor-id="xslx-dateien">.XSLX Dateien</h4>
 <ul>
 <li><p>Einige Dateien liegen im <code>.xlsx</code>-Format.</p>
 <ul>
@@ -770,15 +735,15 @@ Vertiefung
 </section>
 </section>
 </section>
-<section id="daten-mergen" class="level1" data-number="5">
-<h1 data-number="5"><span class="header-section-number">5</span> Daten mergen</h1>
+<section id="daten-mergen" class="level1">
+<h1>Daten mergen</h1>
 <p><strong><em>Wird in EH4 noch genauer erklärt - aber probiere auch gerne schon vorab!</em></strong></p>
 <p>Nun haben wir 7 verschiedene Datensätze in unserem Enviornment. Da wir jedoch mit dem kompletten Datensatz arbeiten wollen, ist es sinnvoll diese Datensätze zu einem zu verbinden. Jedoch müssen dafür mehrere Dinge beachtet werden: Sind die Daten in der gleichen Reihenfolge (z.B. geordnet nach Identifier (z.B. <code>code</code> in <code>data_mmq</code>).</p>
 <p><strong>Mögliche Funktionen:</strong> z. B. <code>cbind()</code> aus Base R oder <code>full_join()</code> aus dem Tidyverse.</p>
-<section id="aufgaben" class="level2" data-number="5.1">
-<h2 data-number="5.1" class="anchored" data-anchor-id="aufgaben"><span class="header-section-number">5.1</span> Aufgaben</h2>
-<section id="füge-alle-7-datensätze-mit-cbind-zusammen-und-schaue-dir-das-ergebnis-an." class="level3" data-number="5.1.1">
-<h3 data-number="5.1.1" class="anchored" data-anchor-id="füge-alle-7-datensätze-mit-cbind-zusammen-und-schaue-dir-das-ergebnis-an."><span class="header-section-number">5.1.1</span> Füge alle 7 Datensätze mit <code>cbind()</code> zusammen und schaue dir das Ergebnis an.</h3>
+<section id="aufgaben" class="level2">
+<h2 class="anchored" data-anchor-id="aufgaben">Aufgaben</h2>
+<section id="füge-alle-7-datensätze-mit-cbind-zusammen-und-schaue-dir-das-ergebnis-an." class="level3">
+<h3 class="anchored" data-anchor-id="füge-alle-7-datensätze-mit-cbind-zusammen-und-schaue-dir-das-ergebnis-an.">Füge alle 7 Datensätze mit <code>cbind()</code> zusammen und schaue dir das Ergebnis an.</h3>
 <div class="callout callout-style-default callout-note callout-titled" title="Lösung">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-11-contents" aria-controls="callout-11" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
@@ -822,8 +787,8 @@ Lösung
 </div>
 <hr>
 </section>
-<section id="versuche-es-nun-mit-full_join." class="level3" data-number="5.1.2">
-<h3 data-number="5.1.2" class="anchored" data-anchor-id="versuche-es-nun-mit-full_join."><span class="header-section-number">5.1.2</span> Versuche es nun mit <code>full_join()</code>.</h3>
+<section id="versuche-es-nun-mit-full_join." class="level3">
+<h3 class="anchored" data-anchor-id="versuche-es-nun-mit-full_join.">Versuche es nun mit <code>full_join()</code>.</h3>
 <p>Full_join verbindet zwei Datensätze anhand einer Schlüsselvariable, so dass alle Zeilen aus beiden Datensätzen erhalten bleiben. Die Schlüsselvariable ist essentiell dafür dass die Datensätze richtig verbunden werden (Anordnung der Variablen), und grenzt sich dadurch von Funktionen wie <code>cbind()</code> ab.</p>
 <p><img src="images/Hands on 2/full-join.gif" class="img-fluid" width="307"></p>
 <ul>
@@ -889,8 +854,8 @@ Lösung
 </div>
 <hr>
 </section>
-<section id="inspiziere-deinen-zusammengefügten-datensatz-dat_full" class="level3" data-number="5.1.3">
-<h3 data-number="5.1.3" class="anchored" data-anchor-id="inspiziere-deinen-zusammengefügten-datensatz-dat_full"><span class="header-section-number">5.1.3</span> Inspiziere deinen zusammengefügten Datensatz “dat_full”</h3>
+<section id="inspiziere-deinen-zusammengefügten-datensatz-dat_full" class="level3">
+<h3 class="anchored" data-anchor-id="inspiziere-deinen-zusammengefügten-datensatz-dat_full">Inspiziere deinen zusammengefügten Datensatz “dat_full”</h3>
 <ul>
 <li>🔍Überprüfe: Wie viele Zeilen und Spalten hat dein Datensatz? Verwende: <code>ncol()</code> , <code>nrow()</code>, <code>dim()</code>
 <ul>
@@ -1303,10 +1268,10 @@ Lösung
 </section>
 </section>
 </section>
-<section id="daten-speichern" class="level1" data-number="6">
-<h1 data-number="6"><span class="header-section-number">6</span> Daten speichern</h1>
-<section id="speichere-dat_full-in-deinem-ordner-data-als-csv-datei-ab" class="level3" data-number="6.0.1">
-<h3 data-number="6.0.1" class="anchored" data-anchor-id="speichere-dat_full-in-deinem-ordner-data-als-csv-datei-ab"><span class="header-section-number">6.0.1</span> Speichere <code>dat_full</code> in deinem Ordner <code>"data"</code> als CSV-Datei ab</h3>
+<section id="daten-speichern" class="level1">
+<h1>Daten speichern</h1>
+<section id="speichere-dat_full-in-deinem-ordner-data-als-csv-datei-ab" class="level3">
+<h3 class="anchored" data-anchor-id="speichere-dat_full-in-deinem-ordner-data-als-csv-datei-ab">Speichere <code>dat_full</code> in deinem Ordner <code>"data"</code> als CSV-Datei ab</h3>
 <p>Verwende dafür die Funktion <code>write.csv()</code>. Du musst zwei Argumente angeben: Welcher Datensatz aus deinem Environment gespeichert werden soll und unter welchem Pfad (inklusive Dateiname) er abgelegt wird. Bei Unklarheiten schaue dir das <a href="https://rstudio.github.io/cheatsheets/html/data-import.html">Cheatsheet</a> oder die Hilfefunktion an. Überprüfe nach dem speichern, ob dein Datensatz im richtigen Ordner zu finden ist.</p>
 <div class="callout callout-style-default callout-note callout-titled" title="Lösung">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-20-contents" aria-controls="callout-20" aria-expanded="false" aria-label="Toggle callout">
@@ -1330,8 +1295,8 @@ Lösung
 <hr>
 </section>
 </section>
-<section id="coding-basics-funktionen" class="level1" data-number="7">
-<h1 data-number="7"><span class="header-section-number">7</span> Coding Basics: Funktionen</h1>
+<section id="coding-basics-funktionen" class="level1">
+<h1>Coding Basics: Funktionen</h1>
 <p>👉<a href="https://r4ds.hadley.nz/workflow-basics.html">Kapitel 2.4: Calling Functions</a></p>
 <p>👉<a href="https://methodenlehre.github.io/einfuehrung-in-R/chapters/02-R-language.html#funktionen-aufrufen">Kapitel 2.3: Funktionen aufrufen</a></p>
 <p>Wir haben in diesen Übungen bereits einige Funktionen verwendet (z. B. <code>sum()</code> oder <code>sort()</code>). Funktionen bestehen aus einem Namen und Argumenten. In diesem Beispiel wird die Funktion <code>sort()</code> aufgerufen. Die Argumente, die dafür benötigt werden, sind <code>first_vector</code> und <code>decreasing = TRUE</code>. Die meisten Funktionen haben <em>Defaults</em>, also Argumente mit einer Voreinstellung. Wenn man diese nicht verändern möchte, müssen sie nicht explizit angegeben werden. <code>sort()</code> hat als Default <code>decreasing = FALSE</code>. Deswegen müssen wir, um die höchsten Werte des Vektors zu bestimmen, diesen Default umstellen. Argumente ohne Defaults müssen zwingend angegben werden).</p>
@@ -1401,8 +1366,8 @@ Lösung
 </div>
 </div>
 <p>ℹ️Manche Funktionen sind in mehreren Paketen beinhaltet, sowie wie z.B. die Funktion <code>filter()</code>. Um die Funktion definitiv aus einem bestimmten Paket zu verwenden, muss man das Paket dazu schreiben: <code>dyplr::filter()</code></p>
-<section id="tab-completion" class="level2" data-number="7.1">
-<h2 data-number="7.1" class="anchored" data-anchor-id="tab-completion"><span class="header-section-number">7.1</span> Tab Completion:</h2>
+<section id="tab-completion" class="level2">
+<h2 class="anchored" data-anchor-id="tab-completion">Tab Completion:</h2>
 <p>Eine nützliche Funktion von RStudio ist die <strong>Tab Completion</strong>. Wenn du eine Funktion aufrufst und die Tabulator-Taste drückst, erscheint ein Menü mit den möglichen Argumenten, die du angeben kannst. Probiere es mit der Funktion <code>mean()</code>. Das funktioniert auch für Funktionen aus Paketen, wenn du diese mit <code>::</code> auswählst, zum Beispiel: <code>readr::</code>.</p>
 <div class="callout callout-style-default callout-note callout-titled" title="Anmerkung">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-23-contents" aria-controls="callout-23" aria-expanded="false" aria-label="Toggle callout">
@@ -1427,8 +1392,8 @@ Anmerkung
 </div>
 </div>
 </section>
-<section id="weitere-tasten-und-tastenkürzel" class="level2" data-number="7.2">
-<h2 data-number="7.2" class="anchored" data-anchor-id="weitere-tasten-und-tastenkürzel"><span class="header-section-number">7.2</span> Weitere Tasten und Tastenkürzel:</h2>
+<section id="weitere-tasten-und-tastenkürzel" class="level2">
+<h2 class="anchored" data-anchor-id="weitere-tasten-und-tastenkürzel">Weitere Tasten und Tastenkürzel:</h2>
 <p>👉<a href="https://methodenlehre.github.io/einfuehrung-in-R/chapters/01-workflow.html#tasten">Kapitel 1.4.6</a></p>
 <p>In RStudio benötigen wir häufig Zeichen, die wir im Alltag kaum verwenden. Da wir nicht alle mit dem gleichen Betriebssystem (Mac/Windows) und auch nicht mit identischen Tastaturen arbeiten, können wir keine einheitlichen Angaben machen, wo sich diese Zeichen genau befinden. Versuche daher, die folgenden Zeichen auf deiner eigenen Tastatur zu finden:</p>
 <ul>
@@ -1441,8 +1406,8 @@ Anmerkung
 <li><p><code>`</code> Backtick (Gravis – vor allem für Code Chunks, selten manuell einzugeben)</p></li>
 </ul>
 </section>
-<section id="verschachtelte-funktionen" class="level2" data-number="7.3">
-<h2 data-number="7.3" class="anchored" data-anchor-id="verschachtelte-funktionen"><span class="header-section-number">7.3</span> Verschachtelte Funktionen:</h2>
+<section id="verschachtelte-funktionen" class="level2">
+<h2 class="anchored" data-anchor-id="verschachtelte-funktionen">Verschachtelte Funktionen:</h2>
 <p>ℹ️Es ist zwar möglich, mehrere Funktionen ineinander zu verschachteln. Dies kann jedoch schnell zu Verwirrung führen und den Code unnötig unübersichtlich machen. Verschachtelte Funktionen werden von innen nach aussen ausgeführt.</p>
 <p>❓Stelle dir hier die Frage: Was wird genau gerundet? Die einzelnen Elemente des Vektors oder der errechnete Durchschnitt?</p>
 <div class="cell">
@@ -1477,8 +1442,8 @@ Lösung
 </div>
 </section>
 </section>
-<section id="style-conventions" class="level1" data-number="8">
-<h1 data-number="8"><span class="header-section-number">8</span> Style Conventions</h1>
+<section id="style-conventions" class="level1">
+<h1>Style Conventions</h1>
 <p>Korrigiere diesen Code so dass er</p>
 <ul>
 <li><p>Fehlerfrei läuft</p></li>
@@ -1544,15 +1509,15 @@ Lösung
 </div>
 </div>
 </div>
-<pre><code>![](images/clipboard-3096355115.png){width="256"}</code></pre>
 <ul>
+<li><img src="images/Hands on 2/Styler.png" class="img-fluid"></li>
 <li>Versuche mit der <code>Styler</code> -Funktion diesen Code zu leserlicher zu machen (markiere den Code und wähle <em>Style selection</em>). (Du musst diesen ggplot Code nicht verstehen - wir kommen dazu in einer späteren Einheit noch.)</li>
 </ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb78"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb78-1"><a href="#cb78-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
-<span id="cb78-2"><a href="#cb78-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(palmerpenguins)</span>
-<span id="cb78-3"><a href="#cb78-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb78-4"><a href="#cb78-4" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(penguins,<span class="fu">aes</span>(<span class="at">x=</span>flipper_length_mm,<span class="at">y=</span>body_mass_g,<span class="at">color=</span>species))<span class="sc">+</span><span class="fu">geom_point</span>()<span class="sc">+</span><span class="fu">labs</span>(<span class="at">x=</span><span class="st">"flipper"</span>,<span class="at">Y=</span><span class="st">"MASS"</span>)<span class="sc">+</span><span class="fu">theme_minimal</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb77"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb77-1"><a href="#cb77-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb77-2"><a href="#cb77-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(palmerpenguins)</span>
+<span id="cb77-3"><a href="#cb77-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb77-4"><a href="#cb77-4" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(penguins,<span class="fu">aes</span>(<span class="at">x=</span>flipper_length_mm,<span class="at">y=</span>body_mass_g,<span class="at">color=</span>species))<span class="sc">+</span><span class="fu">geom_point</span>()<span class="sc">+</span><span class="fu">labs</span>(<span class="at">x=</span><span class="st">"flipper"</span>,<span class="at">Y=</span><span class="st">"MASS"</span>)<span class="sc">+</span><span class="fu">theme_minimal</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="callout callout-style-default callout-note callout-titled" title="Lösung">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-27-contents" aria-controls="callout-27" aria-expanded="false" aria-label="Toggle callout">
@@ -1567,8 +1532,8 @@ Lösung
 <div id="callout-27" class="callout-27-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb79"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb79-1"><a href="#cb79-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
-<span id="cb79-2"><a href="#cb79-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(palmerpenguins)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb78"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb78-1"><a href="#cb78-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb78-2"><a href="#cb78-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(palmerpenguins)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stderr">
 <pre><code>
 Attache Paket: 'palmerpenguins'</code></pre>
@@ -1578,10 +1543,10 @@ Attache Paket: 'palmerpenguins'</code></pre>
 
     penguins, penguins_raw</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb82"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb82-1"><a href="#cb82-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(penguins, <span class="fu">aes</span>(<span class="at">x =</span> flipper_length_mm, <span class="at">y =</span> body_mass_g, <span class="at">color =</span> species)) <span class="sc">+</span></span>
-<span id="cb82-2"><a href="#cb82-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
-<span id="cb82-3"><a href="#cb82-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"flipper"</span>, <span class="at">Y =</span> <span class="st">"MASS"</span>) <span class="sc">+</span></span>
-<span id="cb82-4"><a href="#cb82-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb81"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb81-1"><a href="#cb81-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(penguins, <span class="fu">aes</span>(<span class="at">x =</span> flipper_length_mm, <span class="at">y =</span> body_mass_g, <span class="at">color =</span> species)) <span class="sc">+</span></span>
+<span id="cb81-2"><a href="#cb81-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
+<span id="cb81-3"><a href="#cb81-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"flipper"</span>, <span class="at">Y =</span> <span class="st">"MASS"</span>) <span class="sc">+</span></span>
+<span id="cb81-4"><a href="#cb81-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stderr">
 <pre><code>Ignoring unknown labels:
 • Y : "MASS"</code></pre>
@@ -1602,8 +1567,8 @@ Attache Paket: 'palmerpenguins'</code></pre>
 </div>
 </div>
 </section>
-<section id="am-ende-deiner-übungen---vergiss-nicht-dein-skript-abzuspeichern--" class="level1" data-number="9">
-<h1 data-number="9"><span class="header-section-number">9</span> Am Ende deiner Übungen - vergiss nicht dein Skript abzuspeichern! :-)</h1>
+<section id="am-ende-deiner-übungen---vergiss-nicht-dein-skript-abzuspeichern--" class="level1">
+<h1>Am Ende deiner Übungen - vergiss nicht dein Skript abzuspeichern! :-)</h1>
 
 
 </section>
@@ -2026,33 +1991,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
 });
 </script>
-<nav class="page-navigation">
-  <div class="nav-page nav-page-previous">
-      <a href="./loesung_1.html" class="pagination-link" aria-label="Hands on - Block 1 (Woche 1 - 2) - Mit Musterlösungen">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Hands on - Block 1 (Woche 1 - 2) - Mit Musterlösungen</span>
-      </a>          
-  </div>
-  <div class="nav-page nav-page-next">
-      <a href="./hands_on_3.html" class="pagination-link" aria-label="Hands on - Block 3 (Woche 5 - 6)">
-        <span class="nav-page-text">Hands on - Block 3 (Woche 5 - 6)</span> <i class="bi bi-arrow-right-short"></i>
-      </a>
-  </div>
-</nav>
 </div> <!-- /content -->
-<footer class="footer">
-  <div class="nav-footer">
-    <div class="nav-footer-left">
-      &nbsp;
-    </div>   
-    <div class="nav-footer-center">
-<p>Der Inhalt dieser Website ist lizenziert unter<br>
-<a href="https://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1">CC BY-SA 4.0</a> © 2025</p>
-</div>
-    <div class="nav-footer-right">
-      &nbsp;
-    </div>
-  </div>
-</footer>
 
 
 

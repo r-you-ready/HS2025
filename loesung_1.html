@@ -64,8 +64,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./loesung_2.html" rel="next">
-<link href="./Übungen.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -74,7 +72,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-2f5df379a58b258e96c21c0638c20c03.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-ddd961a2510921635943dfbbd19534c4.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-d4be639c637f3db3c684c66cefad7e0c.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -104,10 +102,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 }</script>
 
 
-<link rel="stylesheet" href="styles/website_styles.css">
 </head>
 
-<body class="nav-sidebar floating">
+<body class="nav-sidebar floating fullcontent">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -258,12 +255,23 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
       </ul>
   </li>
-        <li class="sidebar-item">
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="./links_und_ressourcen.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Links und Ressourcen</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./ChatGPT.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">ChatGPT in RStudio</span></a>
   </div>
 </li>
+      </ul>
+  </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./leistungsnachweis.html" class="sidebar-item-text sidebar-link">
@@ -281,42 +289,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">Inhaltsverzeichnis</h2>
-   
-  <ul>
-  <li><a href="#lösung---codings-basics-einheiten-1-und-2" id="toc-lösung---codings-basics-einheiten-1-und-2" class="nav-link active" data-scroll-target="#lösung---codings-basics-einheiten-1-und-2"><span class="header-section-number">1</span> Lösung - Codings Basics (Einheiten 1 und 2)</a>
-  <ul class="collapse">
-  <li><a href="#installation-r-und-r-studio" id="toc-installation-r-und-r-studio" class="nav-link" data-scroll-target="#installation-r-und-r-studio"><span class="header-section-number">1.1</span> Installation R und R-Studio</a></li>
-  <li><a href="#einstellungen" id="toc-einstellungen" class="nav-link" data-scroll-target="#einstellungen"><span class="header-section-number">1.2</span> Einstellungen</a></li>
-  <li><a href="#hands-on-coding-basics" id="toc-hands-on-coding-basics" class="nav-link" data-scroll-target="#hands-on-coding-basics"><span class="header-section-number">1.3</span> Hands on: Coding Basics</a></li>
-  <li><a href="#pakete-installieren-und-laden" id="toc-pakete-installieren-und-laden" class="nav-link" data-scroll-target="#pakete-installieren-und-laden"><span class="header-section-number">1.4</span> Pakete installieren und laden</a>
-  <ul class="collapse">
-  <li><a href="#operatoren-kennenlernen" id="toc-operatoren-kennenlernen" class="nav-link" data-scroll-target="#operatoren-kennenlernen"><span class="header-section-number">1.4.1</span> Operatoren kennenlernen</a></li>
-  <li><a href="#erste-zuweisungenvariablen-definieren" id="toc-erste-zuweisungenvariablen-definieren" class="nav-link" data-scroll-target="#erste-zuweisungenvariablen-definieren"><span class="header-section-number">1.4.2</span> Erste Zuweisungen/Variablen definieren</a></li>
-  <li><a href="#vektoren-definieren" id="toc-vektoren-definieren" class="nav-link" data-scroll-target="#vektoren-definieren"><span class="header-section-number">1.4.3</span> Vektoren definieren</a></li>
-  <li><a href="#logische-operatoren" id="toc-logische-operatoren" class="nav-link" data-scroll-target="#logische-operatoren"><span class="header-section-number">1.4.4</span> Logische Operatoren</a></li>
-  </ul></li>
-  <li><a href="#nachvollziehbarkeit-von-code" id="toc-nachvollziehbarkeit-von-code" class="nav-link" data-scroll-target="#nachvollziehbarkeit-von-code"><span class="header-section-number">1.5</span> Nachvollziehbarkeit von Code</a>
-  <ul class="collapse">
-  <li><a href="#kommentare" id="toc-kommentare" class="nav-link" data-scroll-target="#kommentare"><span class="header-section-number">1.5.1</span> Kommentare</a></li>
-  <li><a href="#benennung-von-variablen" id="toc-benennung-von-variablen" class="nav-link" data-scroll-target="#benennung-von-variablen"><span class="header-section-number">1.5.2</span> Benennung von Variablen</a></li>
-  </ul></li>
-  <li><a href="#für-fortgeschrittene-r-nutzerinnen" id="toc-für-fortgeschrittene-r-nutzerinnen" class="nav-link" data-scroll-target="#für-fortgeschrittene-r-nutzerinnen"><span class="header-section-number">1.6</span> Für fortgeschrittene R-Nutzer:innen</a></li>
-  <li><a href="#datentypen" id="toc-datentypen" class="nav-link" data-scroll-target="#datentypen"><span class="header-section-number">1.7</span> Datentypen</a></li>
-  </ul></li>
-  <li><a href="#zusätzliche-übungen" id="toc-zusätzliche-übungen" class="nav-link" data-scroll-target="#zusätzliche-übungen"><span class="header-section-number">2</span> Zusätzliche Übungen:</a>
-  <ul class="collapse">
-  <li><a href="#datensatz-inspizieren" id="toc-datensatz-inspizieren" class="nav-link" data-scroll-target="#datensatz-inspizieren"><span class="header-section-number">2.0.1</span> Datensatz inspizieren</a></li>
-  <li><a href="#überblick-über-den-datensatz" id="toc-überblick-über-den-datensatz" class="nav-link" data-scroll-target="#überblick-über-den-datensatz"><span class="header-section-number">2.0.2</span> Überblick über den Datensatz</a></li>
-  <li><a href="#datentypen-überprüfen" id="toc-datentypen-überprüfen" class="nav-link" data-scroll-target="#datentypen-überprüfen"><span class="header-section-number">2.0.3</span> Datentypen überprüfen</a></li>
-  <li><a href="#logisches-abfragen" id="toc-logisches-abfragen" class="nav-link" data-scroll-target="#logisches-abfragen"><span class="header-section-number">2.0.4</span> Logisches Abfragen</a></li>
-  </ul></li>
-  <li><a href="#am-ende-deiner-übungen---vergiss-nicht-dein-skript-abzuspeichern--" id="toc-am-ende-deiner-übungen---vergiss-nicht-dein-skript-abzuspeichern--" class="nav-link" data-scroll-target="#am-ende-deiner-übungen---vergiss-nicht-dein-skript-abzuspeichern--"><span class="header-section-number">3</span> Am Ende deiner Übungen - vergiss nicht dein Skript abzuspeichern! :-)</a></li>
-  </ul>
-</nav>
-    </div>
+    
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
@@ -339,11 +312,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<section id="lösung---codings-basics-einheiten-1-und-2" class="level1" data-number="1">
-<h1 data-number="1"><span class="header-section-number">1</span> Lösung - Codings Basics (Einheiten 1 und 2)</h1>
+<section id="lösung---codings-basics-einheiten-1-und-2" class="level1">
+<h1>Lösung - Codings Basics (Einheiten 1 und 2)</h1>
 <p>Bei Bedarf finden sich hier nochmal die Slides zur EH1: <iframe src="EH_1.html" width="100%" height="500px"></iframe></p>
-<section id="installation-r-und-r-studio" class="level2" data-number="1.1">
-<h2 data-number="1.1" class="anchored" data-anchor-id="installation-r-und-r-studio"><span class="header-section-number">1.1</span> Installation R und R-Studio</h2>
+<section id="installation-r-und-r-studio" class="level2">
+<h2 class="anchored" data-anchor-id="installation-r-und-r-studio">Installation R und R-Studio</h2>
 <p>Installiere R und RStudio:</p>
 <ol type="1">
 <li><p>Installation von R – neueste Version 4.5.1: <a href="https://stat.ethz.ch/CRAN/" class="uri">https://stat.ethz.ch/CRAN/</a></p></li>
@@ -351,8 +324,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </ol>
 <p>Du weisst nicht was mit R auf sich hat? Hier ist eine Kurzerklärung: <a href="https://methodenlehre.github.io/einfuehrung-in-R/" class="uri">https://methodenlehre.github.io/einfuehrung-in-R/</a></p>
 </section>
-<section id="einstellungen" class="level2" data-number="1.2">
-<h2 data-number="1.2" class="anchored" data-anchor-id="einstellungen"><span class="header-section-number">1.2</span> Einstellungen</h2>
+<section id="einstellungen" class="level2">
+<h2 class="anchored" data-anchor-id="einstellungen">Einstellungen</h2>
 <ol type="1">
 <li>RStudio öffnen &amp; Einstellungen vornehmen: Unter «tools» –«global options» die <strong>unter 1.1.</strong> beschriebenen Einstellungen vornehmen: <a href="#0" class="uri">https://methodenlehre.github.io/einfuehrung-in-R/chapters/01-workflow.html</a></li>
 </ol>
@@ -361,8 +334,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>Neues Skript öffnen &amp; orientieren:</li>
 </ol>
 </section>
-<section id="hands-on-coding-basics" class="level2" data-number="1.3">
-<h2 data-number="1.3" class="anchored" data-anchor-id="hands-on-coding-basics"><span class="header-section-number">1.3</span> Hands on: Coding Basics</h2>
+<section id="hands-on-coding-basics" class="level2">
+<h2 class="anchored" data-anchor-id="hands-on-coding-basics">Hands on: Coding Basics</h2>
 <p>Im folgenden machen wir uns vertraut mit der Oberfläche von R-Studio:</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -377,8 +350,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>Rechts unten: Files, Plots, Packages und Help Viewer</li>
 </ol>
 </section>
-<section id="pakete-installieren-und-laden" class="level2" data-number="1.4">
-<h2 data-number="1.4" class="anchored" data-anchor-id="pakete-installieren-und-laden"><span class="header-section-number">1.4</span> Pakete installieren und laden</h2>
+<section id="pakete-installieren-und-laden" class="level2">
+<h2 class="anchored" data-anchor-id="pakete-installieren-und-laden">Pakete installieren und laden</h2>
 <p>Tidyverse ist ein Meta-Paket, das mehrere Pakete umfasst<a href="https://www.tidyverse.org/"><img src="images/clipboard-602781303.png" class="img-fluid" width="472" alt="https://www.tidyverse.org/"></a></p>
 <ol type="1">
 <li><p>Pakete installieren (nur 1x notwendig) -&gt; führe diesen Code in der Konsole aus</p>
@@ -403,8 +376,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div></li>
 </ol>
 <p>Tipp: Pakete regelmässig updaten mit z.B. update.packages()</p>
-<section id="operatoren-kennenlernen" class="level3" data-number="1.4.1">
-<h3 data-number="1.4.1" class="anchored" data-anchor-id="operatoren-kennenlernen"><span class="header-section-number">1.4.1</span> Operatoren kennenlernen</h3>
+<section id="operatoren-kennenlernen" class="level3">
+<h3 class="anchored" data-anchor-id="operatoren-kennenlernen">Operatoren kennenlernen</h3>
 <ol type="1">
 <li><p>a. Nutze R als Taschenrechner</p>
 <ol type="1">
@@ -542,8 +515,8 @@ Lösung
 </div>
 </div>
 </div>
-<section id="arithmetische-operatoren-und-funktionen-in-r-z.b." class="level4" data-number="1.4.1.1">
-<h4 data-number="1.4.1.1" class="anchored" data-anchor-id="arithmetische-operatoren-und-funktionen-in-r-z.b."><span class="header-section-number">1.4.1.1</span> Arithmetische Operatoren und Funktionen in R, z.B.</h4>
+<section id="arithmetische-operatoren-und-funktionen-in-r-z.b." class="level4">
+<h4 class="anchored" data-anchor-id="arithmetische-operatoren-und-funktionen-in-r-z.b.">Arithmetische Operatoren und Funktionen in R, z.B.</h4>
 <table class="caption-top table">
 <thead>
 <tr class="header">
@@ -588,8 +561,8 @@ Lösung
 </table>
 </section>
 </section>
-<section id="erste-zuweisungenvariablen-definieren" class="level3" data-number="1.4.2">
-<h3 data-number="1.4.2" class="anchored" data-anchor-id="erste-zuweisungenvariablen-definieren"><span class="header-section-number">1.4.2</span> Erste Zuweisungen/Variablen definieren</h3>
+<section id="erste-zuweisungenvariablen-definieren" class="level3">
+<h3 class="anchored" data-anchor-id="erste-zuweisungenvariablen-definieren">Erste Zuweisungen/Variablen definieren</h3>
 <ol type="1">
 <li>Weise den Wert 5 der Variable <code>x</code> zu mit dem Operator <code>&lt;-</code></li>
 </ol>
@@ -699,8 +672,8 @@ Lösung
 </div>
 </div>
 </section>
-<section id="vektoren-definieren" class="level3" data-number="1.4.3">
-<h3 data-number="1.4.3" class="anchored" data-anchor-id="vektoren-definieren"><span class="header-section-number">1.4.3</span> Vektoren definieren</h3>
+<section id="vektoren-definieren" class="level3">
+<h3 class="anchored" data-anchor-id="vektoren-definieren">Vektoren definieren</h3>
 <ol type="1">
 <li>Definiere einen Vektor «first_vector» mit den Zahlen 100, 80, 54, 73. Einen Vektor definiert man so: <code>first_vector &lt;- c(...)</code></li>
 </ol>
@@ -803,8 +776,8 @@ Lösung
 </div>
 </div>
 <p>Die wichtigsten Operatoren und Funktionen in R: <a href="https://methodenlehre.github.io/einfuehrung-in-R/chapters/02-R-language.html" class="uri">https://methodenlehre.github.io/einfuehrung-in-R/chapters/02-R-language.html</a></p>
-<section id="statistische-funktionen-die-man-auf-vektoren-anwenden-kann-z.b." class="level4" data-number="1.4.3.1">
-<h4 data-number="1.4.3.1" class="anchored" data-anchor-id="statistische-funktionen-die-man-auf-vektoren-anwenden-kann-z.b."><span class="header-section-number">1.4.3.1</span> Statistische Funktionen, die man auf Vektoren anwenden kann, z.B.</h4>
+<section id="statistische-funktionen-die-man-auf-vektoren-anwenden-kann-z.b." class="level4">
+<h4 class="anchored" data-anchor-id="statistische-funktionen-die-man-auf-vektoren-anwenden-kann-z.b.">Statistische Funktionen, die man auf Vektoren anwenden kann, z.B.</h4>
 <table class="caption-top table">
 <thead>
 <tr class="header">
@@ -849,8 +822,8 @@ Lösung
 </table>
 </section>
 </section>
-<section id="logische-operatoren" class="level3" data-number="1.4.4">
-<h3 data-number="1.4.4" class="anchored" data-anchor-id="logische-operatoren"><span class="header-section-number">1.4.4</span> Logische Operatoren</h3>
+<section id="logische-operatoren" class="level3">
+<h3 class="anchored" data-anchor-id="logische-operatoren">Logische Operatoren</h3>
 <ol type="1">
 <li>Teste ob die Zahl 5 größer als 2 ist –&gt; TRUE or FALSE?</li>
 </ol>
@@ -945,8 +918,8 @@ Lösung
 </div>
 </div>
 </div>
-<section id="logische-operatoren-z.b." class="level4" data-number="1.4.4.1">
-<h4 data-number="1.4.4.1" class="anchored" data-anchor-id="logische-operatoren-z.b."><span class="header-section-number">1.4.4.1</span> Logische Operatoren, z.B.</h4>
+<section id="logische-operatoren-z.b." class="level4">
+<h4 class="anchored" data-anchor-id="logische-operatoren-z.b.">Logische Operatoren, z.B.</h4>
 <table class="caption-top table">
 <thead>
 <tr class="header">
@@ -992,10 +965,10 @@ Lösung
 </section>
 </section>
 </section>
-<section id="nachvollziehbarkeit-von-code" class="level2" data-number="1.5">
-<h2 data-number="1.5" class="anchored" data-anchor-id="nachvollziehbarkeit-von-code"><span class="header-section-number">1.5</span> Nachvollziehbarkeit von Code</h2>
-<section id="kommentare" class="level3" data-number="1.5.1">
-<h3 data-number="1.5.1" class="anchored" data-anchor-id="kommentare"><span class="header-section-number">1.5.1</span> Kommentare</h3>
+<section id="nachvollziehbarkeit-von-code" class="level2">
+<h2 class="anchored" data-anchor-id="nachvollziehbarkeit-von-code">Nachvollziehbarkeit von Code</h2>
+<section id="kommentare" class="level3">
+<h3 class="anchored" data-anchor-id="kommentare">Kommentare</h3>
 <p>Informative Kommentare im Code sind elementar für die Nachvollziehbarkeit.</p>
 <ol type="1">
 <li>Schreibe einen Kommentar indem du ein <code>#</code> verwendest.</li>
@@ -1040,8 +1013,8 @@ Lösung
 </div>
 </div>
 </section>
-<section id="benennung-von-variablen" class="level3" data-number="1.5.2">
-<h3 data-number="1.5.2" class="anchored" data-anchor-id="benennung-von-variablen"><span class="header-section-number">1.5.2</span> Benennung von Variablen</h3>
+<section id="benennung-von-variablen" class="level3">
+<h3 class="anchored" data-anchor-id="benennung-von-variablen">Benennung von Variablen</h3>
 <p>Es gibt verschiedene Konventionen wie man Variablen bennen kann:</p>
 <p><a href="https://methodenlehre.github.io/einfuehrung-in-R/chapters/02-R-language.html#variablennamen" class="uri">https://methodenlehre.github.io/einfuehrung-in-R/chapters/02-R-language.html#variablennamen</a></p>
 <ol type="1">
@@ -1088,8 +1061,8 @@ Lösung
 </div>
 </section>
 </section>
-<section id="für-fortgeschrittene-r-nutzerinnen" class="level2" data-number="1.6">
-<h2 data-number="1.6" class="anchored" data-anchor-id="für-fortgeschrittene-r-nutzerinnen"><span class="header-section-number">1.6</span> Für fortgeschrittene R-Nutzer:innen</h2>
+<section id="für-fortgeschrittene-r-nutzerinnen" class="level2">
+<h2 class="anchored" data-anchor-id="für-fortgeschrittene-r-nutzerinnen">Für fortgeschrittene R-Nutzer:innen</h2>
 <ol type="1">
 <li>Speichere die beiden höchsten Werte aus «first_vector» in einer neuen Variable ab.</li>
 </ol>
@@ -1150,7 +1123,7 @@ Lösung
 <div class="cell">
 <div class="sourceCode cell-code" id="cb46"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb46-1"><a href="#cb46-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sample</span>(vec_seq, <span class="dv">1</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 501</code></pre>
+<pre><code>[1] 341</code></pre>
 </div>
 </div>
 </div>
@@ -1179,8 +1152,8 @@ Lösung
 </div>
 <p>Tipps zu diesen Aufgaben findest du bei Bedarf hier: <a href="https://methodenlehre.github.io/einfuehrung-in-R/chapters/02-R-language.html" class="uri">https://methodenlehre.github.io/einfuehrung-in-R/chapters/02-R-language.html</a> (Kapitel 2.1)</p>
 </section>
-<section id="datentypen" class="level2" data-number="1.7">
-<h2 data-number="1.7" class="anchored" data-anchor-id="datentypen"><span class="header-section-number">1.7</span> Datentypen</h2>
+<section id="datentypen" class="level2">
+<h2 class="anchored" data-anchor-id="datentypen">Datentypen</h2>
 <ol type="1">
 <li><p><strong>numeric vectors:</strong> werden in integer (ganze Zahlen) und double (reelle Zahlen) unterteilt, z.B.</p>
 <p><code>numerical_vector &lt;- c(1, 2.5, 4)</code></p></li>
@@ -1192,8 +1165,8 @@ Lösung
 <p>Vektoren müssen aus denselbsten Elementen bestehen, d.h. z.B. numeric und character können nicht gemischt werden. Vektoren werden meist mit <code>c()</code> erstellt.</p>
 </section>
 </section>
-<section id="zusätzliche-übungen" class="level1" data-number="2">
-<h1 data-number="2"><span class="header-section-number">2</span> Zusätzliche Übungen:</h1>
+<section id="zusätzliche-übungen" class="level1">
+<h1>Zusätzliche Übungen:</h1>
 <p>ℹ️ <strong>Hinweis:</strong> Hilfestellungen zu den Übungen findest du <a href="https://methodenlehre.github.io/einfuehrung-in-R/chapters/02-R-language.html#datentypen">hier</a>.</p>
 <p>Nicht alle benötigten Funktionen sind explizit erwähnt. Nutze bei Bedarf eine Suchmaschine, um passende Befehle zu finden.</p>
 <p><strong>Überprüfen von Datentypen – palmerpenguins</strong></p>
@@ -1247,8 +1220,8 @@ Attache Paket: 'palmerpenguins'</code></pre>
 </div>
 </div>
 </div>
-<section id="datensatz-inspizieren" class="level3" data-number="2.0.1">
-<h3 data-number="2.0.1" class="anchored" data-anchor-id="datensatz-inspizieren"><span class="header-section-number">2.0.1</span> Datensatz inspizieren</h3>
+<section id="datensatz-inspizieren" class="level3">
+<h3 class="anchored" data-anchor-id="datensatz-inspizieren">Datensatz inspizieren</h3>
 <ul>
 <li>Wie viele Variablen (Spalten) sind enthalten?</li>
 </ul>
@@ -1298,8 +1271,8 @@ Lösung
 </div>
 </div>
 </section>
-<section id="überblick-über-den-datensatz" class="level3" data-number="2.0.2">
-<h3 data-number="2.0.2" class="anchored" data-anchor-id="überblick-über-den-datensatz"><span class="header-section-number">2.0.2</span> Überblick über den Datensatz</h3>
+<section id="überblick-über-den-datensatz" class="level3">
+<h3 class="anchored" data-anchor-id="überblick-über-den-datensatz">Überblick über den Datensatz</h3>
 <p>Nutze verschiedene Befehle und vergleiche die Ergebnisse:</p>
 <p>Verwende die Hilfefunktion <code>?funktionsname</code> um dir zeigen zu lassen welche Argumente die Funktionen benötigen.</p>
 <ul>
@@ -1488,8 +1461,8 @@ Lösung
 <p>👉 Was sind die Unterschiede zwischen den Befehlen?</p>
 <p>Alle der Befehle sind dafür geeignet einen ersten schnellen Überblick über den Datensatz zu erhalten. <code>head()</code> gibt die ersten paar (Standardmässig 6) Zeilen des Datensatzes aus. <code>glimpse()</code> gibt für jede Spalte den Namen, Typ und ihren ersten Wert aus. <code>str()</code> gibt einen Überblick über die Dimensionen des Datensatzes, wie Anzahl an Spalten, Anzahl an Zeilen und über die Datentypen. <code>summary()</code> gibt eine statistische Zusammenfassung des Datensatzes, wie beispielsweise bei numerischen Variablen den minimalen Wert, maximalen Wert, Median und Mean oder bei faktoriellen Variablen die Anzahl an Faktorstufen und ihrer entsprechenden Häufigkeit. Mit <code>penguins</code> allein wird einfach das entsprechende Objekt aufgerufen (hier handelt es sich nicht um eine Funktion).</p>
 </section>
-<section id="datentypen-überprüfen" class="level3" data-number="2.0.3">
-<h3 data-number="2.0.3" class="anchored" data-anchor-id="datentypen-überprüfen"><span class="header-section-number">2.0.3</span> Datentypen überprüfen</h3>
+<section id="datentypen-überprüfen" class="level3">
+<h3 class="anchored" data-anchor-id="datentypen-überprüfen">Datentypen überprüfen</h3>
 <ul>
 <li><p>Welchen Datentyp haben diese Variablen?</p>
 <ul>
@@ -1599,8 +1572,8 @@ Vertiefung
 </div>
 </div>
 </section>
-<section id="logisches-abfragen" class="level3" data-number="2.0.4">
-<h3 data-number="2.0.4" class="anchored" data-anchor-id="logisches-abfragen"><span class="header-section-number">2.0.4</span> Logisches Abfragen</h3>
+<section id="logisches-abfragen" class="level3">
+<h3 class="anchored" data-anchor-id="logisches-abfragen">Logisches Abfragen</h3>
 <ul>
 <li>Überprüfe, ob <code>bill_depth_mm</code> ein numerischer Vektor ist.</li>
 </ul>
@@ -1672,8 +1645,8 @@ Lösung
 </div>
 </section>
 </section>
-<section id="am-ende-deiner-übungen---vergiss-nicht-dein-skript-abzuspeichern--" class="level1" data-number="3">
-<h1 data-number="3"><span class="header-section-number">3</span> Am Ende deiner Übungen - vergiss nicht dein Skript abzuspeichern! :-)</h1>
+<section id="am-ende-deiner-übungen---vergiss-nicht-dein-skript-abzuspeichern--" class="level1">
+<h1>Am Ende deiner Übungen - vergiss nicht dein Skript abzuspeichern! :-)</h1>
 <p>Gib diesem einem Namen, der Maschinen und Mensch-lesbar ist, siehe Kapitel 6.1.3 hier: <a href="https://r4ds.hadley.nz/workflow-scripts" class="uri">https://r4ds.hadley.nz/workflow-scripts</a></p>
 
 
@@ -2097,33 +2070,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
 });
 </script>
-<nav class="page-navigation">
-  <div class="nav-page nav-page-previous">
-      <a href="./Übungen.html" class="pagination-link" aria-label="Übungen zu den Einheiten">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Übungen zu den Einheiten</span>
-      </a>          
-  </div>
-  <div class="nav-page nav-page-next">
-      <a href="./loesung_2.html" class="pagination-link" aria-label="Hands on - Block 2 (Woche 3 - 4) - Mit Musterlösungen">
-        <span class="nav-page-text">Hands on - Block 2 (Woche 3 - 4) - Mit Musterlösungen</span> <i class="bi bi-arrow-right-short"></i>
-      </a>
-  </div>
-</nav>
 </div> <!-- /content -->
-<footer class="footer">
-  <div class="nav-footer">
-    <div class="nav-footer-left">
-      &nbsp;
-    </div>   
-    <div class="nav-footer-center">
-<p>Der Inhalt dieser Website ist lizenziert unter<br>
-<a href="https://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1">CC BY-SA 4.0</a> © 2025</p>
-</div>
-    <div class="nav-footer-right">
-      &nbsp;
-    </div>
-  </div>
-</footer>
 
 
 
