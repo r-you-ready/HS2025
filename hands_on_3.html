@@ -183,6 +183,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
  <span class="menu-text">Einheit 5 - 15.10.2025</span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./EH_6.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">R u Ready? HS2025 | Psychologie der Digitalisierung - Einheit 6</span></a>
+  </div>
+</li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
@@ -312,6 +318,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#matrizen" id="toc-matrizen" class="nav-link" data-scroll-target="#matrizen">Matrizen</a></li>
   <li><a href="#listen" id="toc-listen" class="nav-link" data-scroll-target="#listen">Listen</a></li>
   <li><a href="#data-frames" id="toc-data-frames" class="nav-link" data-scroll-target="#data-frames">Data Frames</a></li>
+  <li><a href="#übungen-mit-dat_full" id="toc-übungen-mit-dat_full" class="nav-link" data-scroll-target="#übungen-mit-dat_full">Übungen mit dat_full</a></li>
   </ul></li>
   <li><a href="#am-ende-deiner-übungen---vergiss-nicht-dein-skript-abzuspeichern--" id="toc-am-ende-deiner-übungen---vergiss-nicht-dein-skript-abzuspeichern--" class="nav-link" data-scroll-target="#am-ende-deiner-übungen---vergiss-nicht-dein-skript-abzuspeichern--">Am Ende deiner Übungen - vergiss nicht dein Skript abzuspeichern! :-)</a></li>
   </ul>
@@ -342,6 +349,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>Bei Bedarf findest du hier nochmals die Slides zu Einheit 5:<br>
 </p>
 <iframe src="EH_5.html" width="100%" height="500px">
+</iframe>
+<p>Und Einheit 6:</p>
+<iframe src="EH_6.html" width="100%" height="500px">
 </iframe>
 <section id="lernziele-des-hands-on-blocks-3" class="level1">
 <h1>Lernziele des Hands-On-Blocks 3</h1>
@@ -396,7 +406,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li><p>Nutze dafür den <strong>Render-Button</strong> und schau dir das gerenderte Ergebnis an. Was ist mit deinem dynamischen Satz passiert?</p></li>
 </ul>
 <p><em>Das Resultat sollte so aussehen (mit dem aktuellen Datum):</em></p>
-<p>Dieses Dokument wurde zum letzten Mal am 2025-10-16 bearbeitet.</p>
+<p>Dieses Dokument wurde zum letzten Mal am 2025-10-21 bearbeitet.</p>
 <div class="callout callout-style-default callout-important callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -578,24 +588,30 @@ Freiwillig für Fortgeschrittene:
 <li><p>Sortiere den Data Frame basierend auf “age” absteigend mit <code>arrange()</code>.</p></li>
 </ul>
 <p>Weitere Informationen zum Erstellen von Data Frames findest du hier: <a href="https://methodenlehre.github.io/einfuehrung-in-R/chapters/03-data_frames.html#datens%C3%A4tze-selber-erstellen">Einführung in R, Kapitel 3.1</a></p>
+</section>
+<section id="übungen-mit-dat_full" class="level2">
+<h2 class="anchored" data-anchor-id="übungen-mit-dat_full">Übungen mit dat_full</h2>
+<p>Nun, da wir einige Operationen mit Data Frames kennengelernt haben, wenden wir diese auf unseren Datensatz dat_full an.</p>
+<ul>
+<li><p>Lies dat_full ein. Diesen Datensatz solltest du als .csv-Datei abgespeichert haben.</p></li>
+<li><p>Sieh dir den Datensatz genau an. Die Variable <code>csvtm_sum</code> scheint einen Tippfehler zu enthalten. Korrigiere diesen zu <code>cvstm_sum</code> mit einer der oben vorgestellten Funktionen.</p></li>
+<li><p>Überlege dir: Welche Variable sollte in einen Faktor umgewandelt werden?</p></li>
+<li><p>Definiere diese Variable(n) als Faktor, z. B. mit as.factor() oder factor().</p></li>
+</ul>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Für Fortgeschrittene
+Note
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<ul>
-<li><p>Öffne den Datensatz “dat_full” und sieh dir die Datentypen an.</p></li>
-<li><p>Welche Variablen sollten Faktoren sein?</p></li>
-<li><p>Definiere diese Variablen als Faktor. Nutze dafür z. B. <code>as.factor()</code> oder <code>factor()</code>.</p></li>
-</ul>
-<p><strong>Hinweis:</strong> R speichert nicht, dass eine Variable als Faktor definiert wurde! Dieser Code muss bei jedem Neustart erneut ausgeführt werden, wenn wieder mit denselben Faktoren gearbeitet wird.</p>
+<p><strong>Hinweis:</strong> R speichert nicht automatisch, dass eine Variable als Faktor definiert wurde. Dieser Code muss daher bei jedem Neustart erneut ausgeführt werden, wenn du wieder mit denselben Faktoren arbeiten möchtest.</p>
 </div>
 </div>
+<p>.</p>
 </section>
 </section>
 <section id="am-ende-deiner-übungen---vergiss-nicht-dein-skript-abzuspeichern--" class="level1">

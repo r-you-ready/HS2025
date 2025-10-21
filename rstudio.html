@@ -183,6 +183,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
  <span class="menu-text">Einheit 5 - 15.10.2025</span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./EH_6.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">R u Ready? HS2025 | Psychologie der Digitalisierung - Einheit 6</span></a>
+  </div>
+</li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
@@ -318,6 +324,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#was-bedeutet-die-meldung-summarise-has-grouped-output-by-group.-you-can-override-using-the-.groups-argument.-und-was-muss-ich-dabei-beachten" id="toc-was-bedeutet-die-meldung-summarise-has-grouped-output-by-group.-you-can-override-using-the-.groups-argument.-und-was-muss-ich-dabei-beachten" class="nav-link" data-scroll-target="#was-bedeutet-die-meldung-summarise-has-grouped-output-by-group.-you-can-override-using-the-.groups-argument.-und-was-muss-ich-dabei-beachten">Was bedeutet die Meldung „summarise() has grouped output by ‘group’. You can override using the .groups argument.“ und was muss ich dabei beachten?</a></li>
   <li><a href="#wann-soll-eine-neue-variable-bzw.-ein-neuer-datensatz-erstellt-werden-und-wann-soll-die-alte-variable-bzw.-der-neue-datensatz-überspeichert-werden" id="toc-wann-soll-eine-neue-variable-bzw.-ein-neuer-datensatz-erstellt-werden-und-wann-soll-die-alte-variable-bzw.-der-neue-datensatz-überspeichert-werden" class="nav-link" data-scroll-target="#wann-soll-eine-neue-variable-bzw.-ein-neuer-datensatz-erstellt-werden-und-wann-soll-die-alte-variable-bzw.-der-neue-datensatz-überspeichert-werden">Wann soll eine neue Variable bzw. ein neuer Datensatz erstellt werden und wann soll die alte Variable bzw. der neue Datensatz überspeichert werden?</a></li>
   <li><a href="#wann-eignet-es-sich-ein-projekt-anzulegen" id="toc-wann-eignet-es-sich-ein-projekt-anzulegen" class="nav-link" data-scroll-target="#wann-eignet-es-sich-ein-projekt-anzulegen">Wann eignet es sich ein Projekt anzulegen?</a></li>
+  <li><a href="#wenn-ich-mein-quarto-dokument-zu-einer-pdf-datei-rendern-möchte-erhalte-ich-die-fehlermeldung-dass-latex-nicht-installiert-ist.-wie-kann-ich-latex-installieren" id="toc-wenn-ich-mein-quarto-dokument-zu-einer-pdf-datei-rendern-möchte-erhalte-ich-die-fehlermeldung-dass-latex-nicht-installiert-ist.-wie-kann-ich-latex-installieren" class="nav-link" data-scroll-target="#wenn-ich-mein-quarto-dokument-zu-einer-pdf-datei-rendern-möchte-erhalte-ich-die-fehlermeldung-dass-latex-nicht-installiert-ist.-wie-kann-ich-latex-installieren">Wenn ich mein Quarto-Dokument zu einer PDF-Datei rendern möchte, erhalte ich die Fehlermeldung, dass LaTeX nicht installiert ist. Wie kann ich LaTeX installieren?</a></li>
   </ul>
 </nav>
     </div>
@@ -360,12 +367,6 @@ Note
 <div class="callout-body-container callout-body">
 <p>Weiterführende Informationen und Beispiele können <a href="https://methodenlehre.github.io/einfuehrung-in-R/chapters/03-data_frames.html#daten-importieren">hier</a> nachgelesen werden.</p>
 </div>
-</div>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="images/screenshot_environment.png" class="img-fluid figure-img"></p>
-<figcaption>Abb. 1.: Environment</figcaption>
-</figure>
 </div>
 </section>
 <section id="wofür-stehen-die-zusätzlichen-argumente-wie-escape_double-oder-trim_ws-beim-einlesen-von-dateien" class="level2">
@@ -714,6 +715,59 @@ Note
 <section id="wann-eignet-es-sich-ein-projekt-anzulegen" class="level2">
 <h2 class="anchored" data-anchor-id="wann-eignet-es-sich-ein-projekt-anzulegen">Wann eignet es sich ein Projekt anzulegen?</h2>
 <p>Ein Projekt anzulegen, lohnt sich vor allem dann, wenn in mehreren Skripten gearbeitet wird. Dann muss nicht in jedem Skript einzeln das working directory (Arbeitsspeicher des Skripts) gesetzt werden. Wird in nur einem Skript gearbeitet, dann macht das Anlegen des Projekts keinen Unterschied.</p>
+</section>
+<section id="wenn-ich-mein-quarto-dokument-zu-einer-pdf-datei-rendern-möchte-erhalte-ich-die-fehlermeldung-dass-latex-nicht-installiert-ist.-wie-kann-ich-latex-installieren" class="level2">
+<h2 class="anchored" data-anchor-id="wenn-ich-mein-quarto-dokument-zu-einer-pdf-datei-rendern-möchte-erhalte-ich-die-fehlermeldung-dass-latex-nicht-installiert-ist.-wie-kann-ich-latex-installieren">Wenn ich mein Quarto-Dokument zu einer PDF-Datei rendern möchte, erhalte ich die Fehlermeldung, dass LaTeX nicht installiert ist. Wie kann ich LaTeX installieren?</h2>
+<p>LaTeX ist eine Software um individuelle, professionelle Formatierungen für PDFs oder andere Dateien zu erstellen. Was für unsere Zwecke bereits ausreichen sollte ist die Installation von <code>tinytex</code>. <code>tinytex</code> ist keine eigenständige Software, sondern schlichtweg um ein Paket von vielen in R.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a> <span class="co">#| eval: false</span></span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a> <span class="co">#| echo: true</span></span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"tinytex"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>The following package(s) will be installed:
+- tinytex [0.57]
+These packages will be installed into "~/OneDrive - Universitaet Bern/MethodenLVOneDrive/MethodensemHS25/Website/ruready/renv/library/windows/R-4.5/x86_64-w64-mingw32".
+
+# Installing packages --------------------------------------------------------
+- Installing tinytex ...                        OK [linked from cache]
+Successfully installed 1 package in 19 milliseconds.</code></pre>
+</div>
+</div>
+<p>Nach der Installation des Pakets ruft ihr dann folgendene Funktion auf:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>tinytex<span class="sc">::</span><span class="fu">install_tinytex</span>() </span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a><span class="co"># tinytex:: stellt sicher, dass die Funktion aus dem entsprechenden Paket aufgerufen wird</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Hierdurch wird temporär die eigentliche Software installiert, mit welcher aus eurem Quarto-Dokument eine PDF erstellt werden kann. Dies kann einige Minuten dauern. Im Anschluss sollte das Rendern hin zu einer PDF funktionieren.</p>
+<p>In der Vergangenheit gab es öfter Probleme mit der Installation von <code>tinytex</code>. Eine beispielhafte Fehlermeldung hierfür sah folgendermassen aus:</p>
+<p>processing file: skript.qmd</p>
+<p>|…………………………………. | x% [unnamed-chunk-x]</p>
+<p>Error in <code>contrib.url()</code>:</p>
+<p>! trying to use CRAN without setting a mirror</p>
+<p>Backtrace:</p>
+<pre><code>x</code></pre>
+<p>-utils::install.packages(“tinytex”) -utils::contrib.url(repos, “source”)</p>
+<p>Quitting from skript.qmd:Zeile-Zeile [unnamed-chunk-x]</p>
+<p>Execution halted</p>
+<p>Der Kern der Fehlermeldung lautet: “! trying ot use CRAN without setting a mirror”. CRAN ist die Plattform, von welcher standardmässig Pakete heruntergeladen werden. Die URL, also die Internetadressse von CRAN, ist dafür im Hintergrund in R eingestellt. Hier scheint es nun aber so, dass es unter der gesetzten URL kein Paket <code>tinytex</code> gibt. Dieses Problem lässt sich temporär (also einmalig für eure laufende Sitzung in RStudio) oder dauerhaft (also auch, wenn ihr RStudio schliesst und wieder neu startet) beheben. Um das Problem temporär zu lösen kann man einfach die URL zu CRAN explizit in der Console angeben:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a> <span class="co">#| eval: false</span></span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a> <span class="co">#| echo: true</span></span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a><span class="fu">options</span>(<span class="at">repos =</span> <span class="fu">c</span>(<span class="at">CRAN =</span> <span class="st">"https://cloud.r-project.org"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Möchte man die Einstellung dauerhaft behalten braucht es einen weiteren Schritt. Erst wird über die Console eine globale Einstellungsdatei von RStudio geöffnet:</p>
+<pre><code>
+::: {.cell}
+
+```{.r .cell-code}
+ #| eval: false
+ #| echo: true
+
+file.edit("~/.Rprofile")</code></pre>
+<p>:::</p>
+<p>In diese Datei kann dann der Befehl zur expliziten Setzung der URL platziert werden. Diese Datei abspeichern und RStudio neu starten. Jetzt sollte <code>tinytex</code> von der korrekten URL abgerufen, gefunden und schlussendlich auch erfolgreich installiert werden können.</p>
 
 
 </section>
