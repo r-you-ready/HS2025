@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>requirements – R u Ready</title>
+<title>Fehlermeldungen – R u Ready</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -113,7 +113,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">requirements</li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./faq.html">FAQ</a></li><li class="breadcrumb-item"><a href="./rstudio.html">1 RStudio</a></li><li class="breadcrumb-item"><a href="./fehlermeldungen.html">1.1 Fehlermeldungen</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -224,23 +224,23 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <div class="sidebar-item-container"> 
             <a href="./faq.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">FAQ</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#" role="navigation" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="" class="collapse list-unstyled sidebar-section depth1 ">  
+      <ul id="" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a href="./rstudio.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">1  RStudio</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#" role="navigation" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="" class="collapse list-unstyled sidebar-section depth2 ">  
+      <ul id="" class="collapse list-unstyled sidebar-section depth2 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./fehlermeldungen.html" class="sidebar-item-text sidebar-link">
+  <a href="./fehlermeldungen.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">1.1 Fehlermeldungen</span></a>
   </div>
 </li>
@@ -306,15 +306,21 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active" data-toc-expanded="-1">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#rendering-in-quarto-zu-einer-pdf-funktioniert-nicht" id="toc-rendering-in-quarto-zu-einer-pdf-funktioniert-nicht" class="nav-link active" data-scroll-target="#rendering-in-quarto-zu-einer-pdf-funktioniert-nicht">Rendering in Quarto zu einer PDF funktioniert nicht</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default">
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./faq.html">FAQ</a></li><li class="breadcrumb-item"><a href="./rstudio.html">1 RStudio</a></li><li class="breadcrumb-item"><a href="./fehlermeldungen.html">1.1 Fehlermeldungen</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">requirements</h1>
+<h1 class="title">Fehlermeldungen</h1>
 </div>
 
 
@@ -331,41 +337,36 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
+<section id="rendering-in-quarto-zu-einer-pdf-funktioniert-nicht" class="level1">
+<h1>Rendering in Quarto zu einer PDF funktioniert nicht</h1>
+<p>In der Vergangenheit gab es öfter Probleme mit der Installation von <code>tinytex</code>. Eine beispielhafte Fehlermeldung hierfür sah folgendermassen aus:</p>
+<p>processing file: skript.qmd</p>
+<p>|…………………………………. | x% [unnamed-chunk-x]</p>
+<p>Error in <code>contrib.url()</code>:</p>
+<p>! trying to use CRAN without setting a mirror</p>
+<p>Backtrace:</p>
+<pre><code>x</code></pre>
+<p>-utils::install.packages(“tinytex”) -utils::contrib.url(repos, “source”)</p>
+<p>Quitting from skript.qmd:Zeile-Zeile [unnamed-chunk-x]</p>
+<p>Execution halted</p>
+<p>Der Kern der Fehlermeldung lautet: “! trying ot use CRAN without setting a mirror”. CRAN ist die Plattform, von welcher standardmässig Pakete heruntergeladen werden. Die URL, also die Internetadressse von CRAN, ist dafür im Hintergrund in R eingestellt. Hier scheint es nun aber so, dass es unter der gesetzten URL kein Paket <code>tinytex</code> gibt. Dieses Problem lässt sich temporär (also einmalig für eure laufende Sitzung in RStudio) oder dauerhaft (also auch, wenn ihr RStudio schliesst und wieder neu startet) beheben. Um das Problem temporär zu lösen kann man einfach die URL zu CRAN explizit in der Console angeben:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># requirements.R</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Nutze das benutzerdefinierte Library-Verzeichnis, falls gesetzt</span></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> (<span class="sc">!</span><span class="fu">is.na</span>(<span class="fu">Sys.getenv</span>(<span class="st">"R_LIBS_USER"</span>, <span class="at">unset =</span> <span class="cn">NA</span>))) {</span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">.libPaths</span>(<span class="fu">Sys.getenv</span>(<span class="st">"R_LIBS_USER"</span>))</span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>install_if_missing <span class="ot">&lt;-</span> <span class="cf">function</span>(pkg) {</span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (<span class="sc">!</span>pkg <span class="sc">%in%</span> <span class="fu">rownames</span>(<span class="fu">installed.packages</span>())) {</span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>    <span class="fu">install.packages</span>(pkg, <span class="at">repos =</span> <span class="st">"https://cloud.r-project.org"</span>)</span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>  }</span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a><span class="co"># Liste der benötigten Pakete – hier kannst du jederzeit erweitern</span></span>
-<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>pkgs <span class="ot">&lt;-</span> <span class="fu">c</span>(</span>
-<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>  <span class="st">"tidyverse"</span>,</span>
-<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>  <span class="st">"knitr"</span>,</span>
-<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>  <span class="st">"rmarkdown"</span></span>
-<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a><span class="fu">sapply</span>(pkgs, install_if_missing)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>$tidyverse
-NULL
-
-$knitr
-NULL
-
-$rmarkdown
-NULL</code></pre>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a> <span class="co">#| eval: false</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a> <span class="co">#| echo: true</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="fu">options</span>(<span class="at">repos =</span> <span class="fu">c</span>(<span class="at">CRAN =</span> <span class="st">"https://cloud.r-project.org"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
+<p>Möchte man die Einstellung dauerhaft behalten braucht es einen weiteren Schritt. Erst wird über die Console eine globale Einstellungsdatei von RStudio geöffnet:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a> <span class="co">#| eval: false</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a> <span class="co">#| echo: true</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="fu">file.edit</span>(<span class="st">"~/.Rprofile"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
+<p>In diese Datei kann dann der Befehl zur expliziten Setzung der URL platziert werden. Diese Datei abspeichern und RStudio neu starten. Jetzt sollte <code>tinytex</code> von der korrekten URL abgerufen, gefunden und schlussendlich auch erfolgreich installiert werden können.</p>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

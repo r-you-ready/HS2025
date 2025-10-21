@@ -186,7 +186,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./EH_6.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">R u Ready? HS2025 | Psychologie der Digitalisierung - Einheit 6</span></a>
+ <span class="menu-text">Einheit 6 - 22.10.2025</span></a>
   </div>
 </li>
       </ul>
@@ -229,12 +229,23 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           </a> 
       </div>
       <ul id="" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="./rstudio.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">1  RStudio</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="" class="collapse list-unstyled sidebar-section depth2 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./rstudio.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">1 RStudio</span></a>
+  <a href="./fehlermeldungen.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">1.1 Fehlermeldungen</span></a>
   </div>
 </li>
+      </ul>
+  </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./codebook.html" class="sidebar-item-text sidebar-link">
@@ -727,11 +738,11 @@ Note
 <div class="cell-output cell-output-stdout">
 <pre><code>The following package(s) will be installed:
 - tinytex [0.57]
-These packages will be installed into "~/OneDrive - Universitaet Bern/MethodenLVOneDrive/MethodensemHS25/Website/ruready/renv/library/windows/R-4.5/x86_64-w64-mingw32".
+These packages will be installed into "~/OneDrive - Universitaet Bern/Dateien von Grinschgl, Sandra (PSY) - MethodenLVOneDrive/MethodensemHS25/Website/ruready/renv/library/windows/R-4.4/x86_64-w64-mingw32".
 
 # Installing packages --------------------------------------------------------
 - Installing tinytex ...                        OK [linked from cache]
-Successfully installed 1 package in 19 milliseconds.</code></pre>
+Successfully installed 1 package in 94 milliseconds.</code></pre>
 </div>
 </div>
 <p>Nach der Installation des Pakets ruft ihr dann folgendene Funktion auf:</p>
@@ -740,34 +751,6 @@ Successfully installed 1 package in 19 milliseconds.</code></pre>
 <span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a><span class="co"># tinytex:: stellt sicher, dass die Funktion aus dem entsprechenden Paket aufgerufen wird</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Hierdurch wird temporär die eigentliche Software installiert, mit welcher aus eurem Quarto-Dokument eine PDF erstellt werden kann. Dies kann einige Minuten dauern. Im Anschluss sollte das Rendern hin zu einer PDF funktionieren.</p>
-<p>In der Vergangenheit gab es öfter Probleme mit der Installation von <code>tinytex</code>. Eine beispielhafte Fehlermeldung hierfür sah folgendermassen aus:</p>
-<p>processing file: skript.qmd</p>
-<p>|…………………………………. | x% [unnamed-chunk-x]</p>
-<p>Error in <code>contrib.url()</code>:</p>
-<p>! trying to use CRAN without setting a mirror</p>
-<p>Backtrace:</p>
-<pre><code>x</code></pre>
-<p>-utils::install.packages(“tinytex”) -utils::contrib.url(repos, “source”)</p>
-<p>Quitting from skript.qmd:Zeile-Zeile [unnamed-chunk-x]</p>
-<p>Execution halted</p>
-<p>Der Kern der Fehlermeldung lautet: “! trying ot use CRAN without setting a mirror”. CRAN ist die Plattform, von welcher standardmässig Pakete heruntergeladen werden. Die URL, also die Internetadressse von CRAN, ist dafür im Hintergrund in R eingestellt. Hier scheint es nun aber so, dass es unter der gesetzten URL kein Paket <code>tinytex</code> gibt. Dieses Problem lässt sich temporär (also einmalig für eure laufende Sitzung in RStudio) oder dauerhaft (also auch, wenn ihr RStudio schliesst und wieder neu startet) beheben. Um das Problem temporär zu lösen kann man einfach die URL zu CRAN explizit in der Console angeben:</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a> <span class="co">#| eval: false</span></span>
-<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a> <span class="co">#| echo: true</span></span>
-<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a><span class="fu">options</span>(<span class="at">repos =</span> <span class="fu">c</span>(<span class="at">CRAN =</span> <span class="st">"https://cloud.r-project.org"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<p>Möchte man die Einstellung dauerhaft behalten braucht es einen weiteren Schritt. Erst wird über die Console eine globale Einstellungsdatei von RStudio geöffnet:</p>
-<pre><code>
-::: {.cell}
-
-```{.r .cell-code}
- #| eval: false
- #| echo: true
-
-file.edit("~/.Rprofile")</code></pre>
-<p>:::</p>
-<p>In diese Datei kann dann der Befehl zur expliziten Setzung der URL platziert werden. Diese Datei abspeichern und RStudio neu starten. Jetzt sollte <code>tinytex</code> von der korrekten URL abgerufen, gefunden und schlussendlich auch erfolgreich installiert werden können.</p>
 
 
 </section>
