@@ -1199,6 +1199,14 @@ display:block!important;
 <h2>Datentypen: Listen (1)</h2>
 <p>Eine Liste ist ein flexibles Datenobjekt, das Elemente <strong>unterschiedlicher Typen enthalten kann</strong> (z. B. Zahlen, Zeichen, Vektoren, Dataframes, andere Listen).</p>
 <div class="cell">
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a></a>my_list <span class="ot">&lt;-</span> <span class="fu">list</span>(</span>
+<span id="cb11-2"><a></a>  <span class="at">name =</span> <span class="st">&quot;Anna&quot;</span>,</span>
+<span id="cb11-3"><a></a>  <span class="at">age =</span> <span class="dv">27</span>,</span>
+<span id="cb11-4"><a></a>  <span class="at">scores =</span> <span class="fu">c</span>(<span class="dv">8</span>, <span class="dv">9</span>, <span class="dv">10</span>),</span>
+<span id="cb11-5"><a></a>  <span class="at">info =</span> <span class="fu">list</span>(<span class="at">city =</span> <span class="st">&quot;Bern&quot;</span>, <span class="at">student =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb11-6"><a></a>)</span>
+<span id="cb11-7"><a></a></span>
+<span id="cb11-8"><a></a>my_list</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>$name
 [1] &quot;Anna&quot;
@@ -1223,7 +1231,7 @@ $info$student
 <p><strong>Auf Listen zugreifen:</strong></p>
 <p>Mit <strong>[ ]</strong> 👉 gibt einen Element der Liste zurück</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a></a>my_list[<span class="dv">1</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a></a>my_list[<span class="dv">1</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>$name
 [1] &quot;Anna&quot;</code></pre>
@@ -1233,11 +1241,11 @@ $info$student
 <li>Mit <strong>[[ ]]</strong></li>
 </ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a></a>my_list[[<span class="dv">3</span>]]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a></a>my_list[[<span class="dv">3</span>]]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1]  8  9 10</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a></a>my_list[[<span class="dv">3</span>]][<span class="dv">2</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a></a>my_list[[<span class="dv">3</span>]][<span class="dv">2</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 9</code></pre>
 </div>
@@ -1246,7 +1254,7 @@ $info$student
 <li>Mit <strong>$</strong></li>
 </ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a></a>my_list<span class="sc">$</span>info</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a></a>my_list<span class="sc">$</span>info</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>$city
 [1] &quot;Bern&quot;
@@ -1254,7 +1262,7 @@ $info$student
 $student
 [1] TRUE</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a></a>my_list<span class="sc">$</span>info[<span class="dv">2</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a></a>my_list<span class="sc">$</span>info[<span class="dv">2</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>$student
 [1] TRUE</code></pre>
@@ -1265,8 +1273,8 @@ $student
 <h2>Datentypen: Listen (2)</h2>
 <p><strong>Listen Elemente hinzufügen</strong></p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a></a>my_list[[<span class="dv">5</span>]] <span class="ot">&lt;-</span> <span class="dv">42</span></span>
-<span id="cb22-2"><a></a>my_list</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a></a>my_list[[<span class="dv">5</span>]] <span class="ot">&lt;-</span> <span class="dv">42</span></span>
+<span id="cb23-2"><a></a>my_list</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>$name
 [1] &quot;Anna&quot;
@@ -1300,13 +1308,9 @@ $info$student
 </ul>
 <p><strong>Beispiel:</strong></p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a></a>v <span class="ot">&lt;-</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">20</span></span>
-<span id="cb24-2"><a></a><span class="fu">attributes</span>(v)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>NULL</code></pre>
-</div>
-<div class="sourceCode cell-code" id="cb26"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a></a><span class="fu">dim</span>(v) <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">2</span>, <span class="dv">10</span>) <span class="co">#Argumente: </span></span>
-<span id="cb26-2"><a></a>v</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a></a>v <span class="ot">&lt;-</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">20</span></span>
+<span id="cb25-2"><a></a><span class="fu">dim</span>(v) <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">2</span>, <span class="dv">10</span>) <span class="co">#Argumente: </span></span>
+<span id="cb25-3"><a></a>v</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>     [,1] [,2] [,3] [,4] [,5] [,6] [,7] [,8] [,9] [,10]
 [1,]    1    3    5    7    9   11   13   15   17    19
@@ -1314,7 +1318,7 @@ $info$student
 </div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb28"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb28-1"><a></a><span class="fu">attributes</span>(v)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb27"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a></a><span class="fu">attributes</span>(v)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>$dim
 [1]  2 10</code></pre>
@@ -1342,13 +1346,13 @@ display:block!important;
 <li>Matrix mit den Zahlen 1–20, 2 Zeilen und 10 Spalten, die Werte werden <strong>spaltenweise</strong> eingefügt.</li>
 </ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb30"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb30-1"><a></a>m <span class="ot">&lt;-</span> <span class="fu">matrix</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">20</span>, <span class="at">nrow =</span> <span class="dv">2</span>, <span class="at">ncol =</span> <span class="dv">10</span>, <span class="at">byrow =</span> <span class="cn">FALSE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb29"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb29-1"><a></a>m <span class="ot">&lt;-</span> <span class="fu">matrix</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">20</span>, <span class="at">nrow =</span> <span class="dv">2</span>, <span class="at">ncol =</span> <span class="dv">10</span>, <span class="at">byrow =</span> <span class="cn">FALSE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Auf einzelne Elemente einer Matrix greift man mit eckigen Klammern zu: <code>matrix_name[zeile, spalte]</code></p>
 <p><strong>Welche Werte sollten hier rauskommen?</strong></p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb31"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb31-1"><a></a>m[<span class="dv">2</span>, <span class="dv">4</span>]</span>
-<span id="cb31-2"><a></a>m[<span class="dv">2</span>, <span class="dv">1</span><span class="sc">:</span><span class="dv">5</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb30"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb30-1"><a></a>m[<span class="dv">2</span>, <span class="dv">4</span>]</span>
+<span id="cb30-2"><a></a>m[<span class="dv">2</span>, <span class="dv">1</span><span class="sc">:</span><span class="dv">5</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p><strong><em>🤔</em></strong> Ist der Datensatz <code>dat_full</code> eine <strong>Matrix?</strong></p>
 <aside class="notes">
@@ -1375,7 +1379,7 @@ display:block!important;
 <li><p>Spalten können unterschiedliche Datentypen enthalten</p></li>
 <li><p>Jede Spalte gleich lang (ggf, auffüllen mit NAs)</p></li>
 </ul>
-<p>👉 Ist meistens das Format in dem wir Daten speichern und verarbeiten</p>
+<p>👉 Ist meistens das Format in dem wir Daten speichern und verarbeiten.</p>
 <p>Wenn wir Datensätze einlesen, werden diese als Data Frames in R repräsentiert.</p>
 </section>
 <section id="datentypen-data-frames-2" class="slide level2">
@@ -1384,21 +1388,21 @@ display:block!important;
 <li><strong>Data Frame erstellen</strong></li>
 </ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb32"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb32-1"><a></a>bundesrät_innen <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
-<span id="cb32-2"><a></a>  <span class="at">vorname =</span> <span class="fu">c</span>(<span class="st">&quot;Elisabeth&quot;</span>, <span class="st">&quot;Martin&quot;</span>, <span class="st">&quot;Ignazio&quot;</span>),</span>
-<span id="cb32-3"><a></a>  <span class="at">alter =</span> <span class="fu">c</span>(<span class="dv">62</span>, <span class="dv">63</span>, <span class="dv">65</span>),</span>
-<span id="cb32-4"><a></a>  <span class="at">partei =</span> <span class="fu">c</span>(<span class="st">&quot;SP&quot;</span>, <span class="st">&quot;Mitte&quot;</span>, <span class="st">&quot;FDP&quot;</span>),</span>
-<span id="cb32-5"><a></a>  <span class="at">graue_haare =</span> <span class="fu">c</span>(<span class="cn">TRUE</span>, <span class="cn">TRUE</span>, <span class="cn">FALSE</span>)</span>
-<span id="cb32-6"><a></a>)</span>
-<span id="cb32-7"><a></a></span>
-<span id="cb32-8"><a></a><span class="fu">head</span>(bundesrät_innen)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb31"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb31-1"><a></a>bundesrät_innen <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
+<span id="cb31-2"><a></a>  <span class="at">vorname =</span> <span class="fu">c</span>(<span class="st">&quot;Elisabeth&quot;</span>, <span class="st">&quot;Martin&quot;</span>, <span class="st">&quot;Ignazio&quot;</span>),</span>
+<span id="cb31-3"><a></a>  <span class="at">alter =</span> <span class="fu">c</span>(<span class="dv">62</span>, <span class="dv">63</span>, <span class="dv">65</span>),</span>
+<span id="cb31-4"><a></a>  <span class="at">partei =</span> <span class="fu">c</span>(<span class="st">&quot;SP&quot;</span>, <span class="st">&quot;Mitte&quot;</span>, <span class="st">&quot;FDP&quot;</span>),</span>
+<span id="cb31-5"><a></a>  <span class="at">graue_haare =</span> <span class="fu">c</span>(<span class="cn">TRUE</span>, <span class="cn">TRUE</span>, <span class="cn">FALSE</span>)</span>
+<span id="cb31-6"><a></a>)</span>
+<span id="cb31-7"><a></a></span>
+<span id="cb31-8"><a></a><span class="fu">head</span>(bundesrät_innen)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>    vorname alter partei graue_haare
 1 Elisabeth    62     SP        TRUE
 2    Martin    63  Mitte        TRUE
 3   Ignazio    65    FDP       FALSE</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb34"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb34-1"><a></a>bundesrät_innen<span class="sc">$</span>graue_haare</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb33"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb33-1"><a></a>bundesrät_innen<span class="sc">$</span>graue_haare</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1]  TRUE  TRUE FALSE</code></pre>
 </div>
@@ -1410,11 +1414,11 @@ display:block!important;
 <li><strong>Auf Elemente zugreifen</strong></li>
 </ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb36"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb36-1"><a></a>bundesrät_innen[<span class="dv">3</span>,<span class="st">&quot;grauhaarig&quot;</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb35"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb35-1"><a></a>bundesrät_innen[<span class="dv">3</span>,<span class="st">&quot;grauhaarig&quot;</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>NULL</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb38"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb38-1"><a></a>bundesrät_innen<span class="sc">$</span>alter</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb37"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb37-1"><a></a>bundesrät_innen<span class="sc">$</span>alter</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 62 63 65</code></pre>
 </div>
@@ -1423,9 +1427,9 @@ display:block!important;
 <li><strong>Filtern / Auswählen</strong></li>
 </ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb40"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb40-1"><a></a><span class="fu">library</span>(tidyverse)</span>
-<span id="cb40-2"><a></a>brs_unter_63 <span class="ot">&lt;-</span> <span class="fu">filter</span>(bundesrät_innen, alter <span class="sc">&lt;</span> <span class="dv">63</span>)</span>
-<span id="cb40-3"><a></a><span class="fu">head</span>(brs_unter_63)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb39"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb39-1"><a></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb39-2"><a></a>brs_unter_63 <span class="ot">&lt;-</span> <span class="fu">filter</span>(bundesrät_innen, alter <span class="sc">&lt;</span> <span class="dv">63</span>)</span>
+<span id="cb39-3"><a></a><span class="fu">head</span>(brs_unter_63)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>    vorname alter partei graue_haare
 1 Elisabeth    62     SP        TRUE</code></pre>
@@ -1435,8 +1439,8 @@ display:block!important;
 <li><strong>Modifizieren</strong></li>
 </ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb42"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb42-1"><a></a>bundesrät_innen<span class="sc">$</span>alter_in_10_jahren <span class="ot">&lt;-</span> bundesrät_innen<span class="sc">$</span>alter <span class="sc">+</span> <span class="dv">10</span></span>
-<span id="cb42-2"><a></a><span class="fu">head</span>(bundesrät_innen)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb41"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb41-1"><a></a>bundesrät_innen<span class="sc">$</span>alter_in_10_jahren <span class="ot">&lt;-</span> bundesrät_innen<span class="sc">$</span>alter <span class="sc">+</span> <span class="dv">10</span></span>
+<span id="cb41-2"><a></a><span class="fu">head</span>(bundesrät_innen)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>    vorname alter partei graue_haare alter_in_10_jahren
 1 Elisabeth    62     SP        TRUE                 72
