@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Hausübung_1 – R u Ready</title>
+<title>Hausübung 1 – R u Ready</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -295,8 +295,9 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#aufgabe-1-datensatz-aufbereiten-und-beschreiben" id="toc-aufgabe-1-datensatz-aufbereiten-und-beschreiben" class="nav-link active" data-scroll-target="#aufgabe-1-datensatz-aufbereiten-und-beschreiben">Aufgabe 1: Datensatz aufbereiten und beschreiben</a></li>
-  <li><a href="#aufgabe-2-fehlender-werte" id="toc-aufgabe-2-fehlender-werte" class="nav-link" data-scroll-target="#aufgabe-2-fehlender-werte">Aufgabe 2: Fehlender Werte</a></li>
+  <li><a href="#aufgabenstellung" id="toc-aufgabenstellung" class="nav-link active" data-scroll-target="#aufgabenstellung">Aufgabenstellung</a></li>
+  <li><a href="#aufgabe-1-datensatz-aufbereiten-und-beschreiben" id="toc-aufgabe-1-datensatz-aufbereiten-und-beschreiben" class="nav-link" data-scroll-target="#aufgabe-1-datensatz-aufbereiten-und-beschreiben">Aufgabe 1: Datensatz aufbereiten und beschreiben</a></li>
+  <li><a href="#aufgabe-2-fehlende-werte" id="toc-aufgabe-2-fehlende-werte" class="nav-link" data-scroll-target="#aufgabe-2-fehlende-werte">Aufgabe 2: Fehlende Werte</a></li>
   <li><a href="#aufgabe-3-skalenberechnung" id="toc-aufgabe-3-skalenberechnung" class="nav-link" data-scroll-target="#aufgabe-3-skalenberechnung">Aufgabe 3: Skalenberechnung</a></li>
   </ul>
 </nav>
@@ -306,7 +307,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Hausübung_1</h1>
+<h1 class="title">Hausübung 1</h1>
 </div>
 
 
@@ -323,14 +324,20 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
+<section id="aufgabenstellung" class="level1">
+<h1>Aufgabenstellung</h1>
 <ul>
+<li><p>Abgabefrist: <strong>7.11.2025</strong></p></li>
+<li><p>Abgabe auf <strong>ILIAS</strong> und Weitergabe an Peerpartner:in</p></li>
 <li><p>Arbeite für diese Hausübung mit <strong>Quarto</strong>.</p></li>
 <li><p>Versuche beim Lösen der Aufgaben darauf zu achten, dass du sie <strong>reproduzierbar</strong> gestaltest. Am Ende der Aufgabe <strong>renderst du dein Skript</strong>.</p></li>
 <li><p>Die <strong>Abgabe</strong> besteht dann aus deinem gerenderten Skript als <strong>HTML- oder PDF-Datei</strong>.</p></li>
 </ul>
-<p><a href="fake_bfi_dataset.xlsx" download="" class="btn btn-primary"> 📥 Download fake_bfi_dataset.xlsx </a></p>
+</section>
 <section id="aufgabe-1-datensatz-aufbereiten-und-beschreiben" class="level1">
 <h1>Aufgabe 1: Datensatz aufbereiten und beschreiben</h1>
+<p>Wir arbeiten für die Übungen mit diesem Datensatz. Dieser wurde simuliert und spiegelt keine echten Daten oder Zusammenhänge wider. Der Datensatz beinhaltet demografische Variablen sowie eine Version des BFI-44-Fragebogens. In den folgenden Aufgaben werden wir diesen mit den bisher kennengelernten <strong>tidyverse</strong>-Funktionen aufbereiten und analysieren.</p>
+<p><a href="fake_bfi_dataset.csv" download="" class="btn btn-primary"> 📥 Download fake_bfi_dataset.csv </a></p>
 <p>Nutze die <strong>dplyr</strong>-Funktionen, die wir kennengelernt haben, um die folgenden Aufgaben zu bearbeiten.</p>
 <p><strong>Tipp:</strong> In einigen Variablen gibt es fehlende Werte (<em>missings</em>). Die Bearbeitung dieser Werte erfolgt erst in <strong>Aufgabe 2</strong>. Verwende, falls nötig, das Argument <code>na.rm = TRUE</code>.</p>
 <p><strong>Aufgaben</strong></p>
@@ -351,26 +358,32 @@ ul.task-list li input[type="checkbox"] {
 <li><p>Erstelle eine Rangliste der Quartiere nach durchschnittlichem Alter (vom höchsten zum niedrigsten).</p></li>
 </ul>
 </section>
-<section id="aufgabe-2-fehlender-werte" class="level1">
-<h1>Aufgabe 2: Fehlender Werte</h1>
+<section id="aufgabe-2-fehlende-werte" class="level1">
+<h1>Aufgabe 2: Fehlende Werte</h1>
 <p><a href="https://methodenlehre.github.io/einfuehrung-in-R/chapters/04-tidyverse.html#fehlende-werte-auschliessen-drop_na">📖Kapitel 4.3.3 Ellis &amp; Mayer</a></p>
 <p>Führe die folgenden Schritte durch:</p>
+<div class="cell">
+<div class="cell-output cell-output-stderr">
+<pre><code>Rows: 45 Columns: 48
+── Column specification ────────────────────────────────────────────────────────
+Delimiter: ";"
+chr (45): Gender, extra_1, agree_1_r, consc_1, neuro_1, open_1_r, extra_2, a...
+dbl  (3): Age, Ort, Ort_2
+
+ℹ Use `spec()` to retrieve the full column specification for this data.
+ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.</code></pre>
+</div>
+</div>
 <ul>
-<li><strong>Datensatz einlesen</strong></li>
-</ul>
-<ul>
-<li><strong>Fehlende Werte prüfen</strong></li>
+<li>Untersuche den Datensatz auf fehlende Werte. Wie viele fehlende Werte gibt es insgesamt, und in welchen Variablen treten sie auf</li>
 </ul>
 <ul>
 <li>Einige <strong>Personen</strong> haben keine Angabe zu ihrer Geschlechtsidentität gemacht. Ersetze diese <strong>fehlenden Werte (NAs)</strong> durch <em>“Keine Angabe”</em>. Nutze dafür die Funktion <code>mutate()</code> und <code>replace_na().</code></li>
 </ul>
 <ul>
-<li><p><strong>Zeilen mit fehlenden Werten löschen</strong><br>
+<li><strong>Zeilen mit fehlenden Werten löschen</strong><br>
 Erstelle eine <strong>Kopie</strong> des Datensatzes und verwende <code>drop_na()</code>,<br>
-um alle Zeilen mit fehlenden Werten zu entfernen.</p>
-<ul>
-<li>Wie viele Zeilen mit fehlenden Werten gab es im Datensatz?</li>
-</ul></li>
+um alle Zeilen mit fehlenden Werten zu entfernen.</li>
 </ul>
 </section>
 <section id="aufgabe-3-skalenberechnung" class="level1">

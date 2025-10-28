@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Hands On 1 – R u Ready</title>
+<title>Hausübung 1 – R u Ready</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -19,40 +19,6 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
-}
-/* CSS for syntax highlighting */
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -113,7 +79,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Hands On 1</li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./HÜ_1.html">Hausübung 1</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -234,7 +200,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./hausuebung_1.html" class="sidebar-item-text sidebar-link">
+  <a href="./HÜ_1.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Hausübung 1</span></a>
   </div>
 </li>
@@ -329,41 +295,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#hands-on---codings-basics-einheiten-1-und-2" id="toc-hands-on---codings-basics-einheiten-1-und-2" class="nav-link active" data-scroll-target="#hands-on---codings-basics-einheiten-1-und-2">Hands On - Codings Basics (Einheiten 1 und 2)</a>
-  <ul class="collapse">
-  <li><a href="#installation-r-und-r-studio" id="toc-installation-r-und-r-studio" class="nav-link" data-scroll-target="#installation-r-und-r-studio">Installation R und R-Studio</a></li>
-  <li><a href="#einstellungen" id="toc-einstellungen" class="nav-link" data-scroll-target="#einstellungen">Einstellungen</a></li>
-  <li><a href="#rstudio-oberfläche" id="toc-rstudio-oberfläche" class="nav-link" data-scroll-target="#rstudio-oberfläche">RStudio Oberfläche</a></li>
-  <li><a href="#pakete-installieren-und-laden" id="toc-pakete-installieren-und-laden" class="nav-link" data-scroll-target="#pakete-installieren-und-laden">Pakete installieren und laden</a></li>
-  <li><a href="#operatoren-kennenlernen" id="toc-operatoren-kennenlernen" class="nav-link" data-scroll-target="#operatoren-kennenlernen">Operatoren kennenlernen</a>
-  <ul class="collapse">
-  <li><a href="#arithmetische-operatoren-und-funktionen-in-r-z.b." id="toc-arithmetische-operatoren-und-funktionen-in-r-z.b." class="nav-link" data-scroll-target="#arithmetische-operatoren-und-funktionen-in-r-z.b.">Arithmetische Operatoren und Funktionen in R, z.B.</a></li>
-  </ul></li>
-  <li><a href="#erste-zuweisungenvariablen-definieren" id="toc-erste-zuweisungenvariablen-definieren" class="nav-link" data-scroll-target="#erste-zuweisungenvariablen-definieren">Erste Zuweisungen/Variablen definieren</a></li>
-  <li><a href="#vektoren-definieren" id="toc-vektoren-definieren" class="nav-link" data-scroll-target="#vektoren-definieren">Vektoren definieren</a>
-  <ul class="collapse">
-  <li><a href="#statistische-funktionen-die-man-auf-vektoren-anwenden-kann-z.b." id="toc-statistische-funktionen-die-man-auf-vektoren-anwenden-kann-z.b." class="nav-link" data-scroll-target="#statistische-funktionen-die-man-auf-vektoren-anwenden-kann-z.b.">Statistische Funktionen, die man auf Vektoren anwenden kann, z.B.</a></li>
-  </ul></li>
-  <li><a href="#logische-operatoren" id="toc-logische-operatoren" class="nav-link" data-scroll-target="#logische-operatoren">Logische Operatoren</a>
-  <ul class="collapse">
-  <li><a href="#logische-operatoren-z.b." id="toc-logische-operatoren-z.b." class="nav-link" data-scroll-target="#logische-operatoren-z.b.">Logische Operatoren, z.B.</a></li>
-  </ul></li>
-  <li><a href="#nachvollziehbarkeit-von-code" id="toc-nachvollziehbarkeit-von-code" class="nav-link" data-scroll-target="#nachvollziehbarkeit-von-code">Nachvollziehbarkeit von Code</a>
-  <ul class="collapse">
-  <li><a href="#kommentare" id="toc-kommentare" class="nav-link" data-scroll-target="#kommentare">Kommentare</a></li>
-  <li><a href="#benennung-von-variablen" id="toc-benennung-von-variablen" class="nav-link" data-scroll-target="#benennung-von-variablen">Benennung von Variablen</a></li>
-  </ul></li>
-  <li><a href="#für-fortgeschrittene-r-nutzerinnen" id="toc-für-fortgeschrittene-r-nutzerinnen" class="nav-link" data-scroll-target="#für-fortgeschrittene-r-nutzerinnen">Für fortgeschrittene R-Nutzer:innen</a></li>
-  <li><a href="#datentypen" id="toc-datentypen" class="nav-link" data-scroll-target="#datentypen">Datentypen</a></li>
-  </ul></li>
-  <li><a href="#zusätzliche-übungen" id="toc-zusätzliche-übungen" class="nav-link" data-scroll-target="#zusätzliche-übungen">Zusätzliche Übungen:</a>
-  <ul class="collapse">
-  <li><a href="#datensatz-inspizieren" id="toc-datensatz-inspizieren" class="nav-link" data-scroll-target="#datensatz-inspizieren">Datensatz inspizieren</a></li>
-  <li><a href="#überblick-über-den-datensatz" id="toc-überblick-über-den-datensatz" class="nav-link" data-scroll-target="#überblick-über-den-datensatz">Überblick über den Datensatz</a></li>
-  <li><a href="#datentypen-überprüfen" id="toc-datentypen-überprüfen" class="nav-link" data-scroll-target="#datentypen-überprüfen">Datentypen überprüfen</a></li>
-  <li><a href="#logisches-abfragen" id="toc-logisches-abfragen" class="nav-link" data-scroll-target="#logisches-abfragen">Logisches Abfragen</a></li>
-  </ul></li>
-  <li><a href="#am-ende-deiner-übungen---vergiss-nicht-dein-skript-abzuspeichern--" id="toc-am-ende-deiner-übungen---vergiss-nicht-dein-skript-abzuspeichern--" class="nav-link" data-scroll-target="#am-ende-deiner-übungen---vergiss-nicht-dein-skript-abzuspeichern--">Am Ende deiner Übungen - vergiss nicht dein Skript abzuspeichern! :-)</a></li>
+  <li><a href="#aufgabenstellung" id="toc-aufgabenstellung" class="nav-link active" data-scroll-target="#aufgabenstellung">Aufgabenstellung</a></li>
+  <li><a href="#aufgabe-1-datensatz-aufbereiten-und-beschreiben" id="toc-aufgabe-1-datensatz-aufbereiten-und-beschreiben" class="nav-link" data-scroll-target="#aufgabe-1-datensatz-aufbereiten-und-beschreiben">Aufgabe 1: Datensatz aufbereiten und beschreiben</a></li>
+  <li><a href="#aufgabe-2-fehlende-werte" id="toc-aufgabe-2-fehlende-werte" class="nav-link" data-scroll-target="#aufgabe-2-fehlende-werte">Aufgabe 2: Fehlende Werte</a></li>
+  <li><a href="#aufgabe-3-skalenberechnung" id="toc-aufgabe-3-skalenberechnung" class="nav-link" data-scroll-target="#aufgabe-3-skalenberechnung">Aufgabe 3: Skalenberechnung</a></li>
   </ul>
 </nav>
     </div>
@@ -372,7 +307,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Hands On 1</h1>
+<h1 class="title">Hausübung 1</h1>
 </div>
 
 
@@ -389,362 +324,108 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<section id="hands-on---codings-basics-einheiten-1-und-2" class="level1">
-<h1>Hands On - Codings Basics (Einheiten 1 und 2)</h1>
-<p>Bei Bedarf finden sich hier nochmal die Slides zur EH1: <iframe src="EH_1.html" width="100%" height="500px"></iframe></p>
-<p>Und EH2</p>
-<iframe src="EH_2.html" width="100%" height="500px">
-</iframe>
-<section id="installation-r-und-r-studio" class="level2">
-<h2 class="anchored" data-anchor-id="installation-r-und-r-studio">Installation R und R-Studio</h2>
-<p>Installiere R und RStudio:</p>
-<ol type="1">
-<li><p>Installation von R – neueste Version 4.5.1: <a href="https://stat.ethz.ch/CRAN/" class="uri">https://stat.ethz.ch/CRAN/</a></p></li>
-<li><p>Installation von RStudio (Version 2025.09.0): <a href="https://posit.co/download/rstudio-desktop/" class="uri">https://posit.co/download/rstudio-desktop/</a></p></li>
-</ol>
-<p>Du weisst nicht was mit R auf sich hat? Hier ist eine Kurzerklärung: <a href="https://methodenlehre.github.io/einfuehrung-in-R/" class="uri">https://methodenlehre.github.io/einfuehrung-in-R/</a></p>
+<section id="aufgabenstellung" class="level1">
+<h1>Aufgabenstellung</h1>
+<ul>
+<li><p>Abgabefrist: <strong>7.11.2025</strong></p></li>
+<li><p>Abgabe auf <strong>ILIAS</strong> und Weitergabe an Peerpartner:in</p></li>
+<li><p>Arbeite für diese Hausübung mit <strong>Quarto</strong>.</p></li>
+<li><p>Versuche beim Lösen der Aufgaben darauf zu achten, dass du sie <strong>reproduzierbar</strong> gestaltest. Am Ende der Aufgabe <strong>renderst du dein Skript</strong>.</p></li>
+<li><p>Die <strong>Abgabe</strong> besteht dann aus deinem gerenderten Skript als <strong>HTML- oder PDF-Datei</strong>.</p></li>
+</ul>
 </section>
-<section id="einstellungen" class="level2">
-<h2 class="anchored" data-anchor-id="einstellungen">Einstellungen</h2>
-<ol type="1">
-<li><p>RStudio öffnen &amp; Einstellungen vornehmen: Unter «tools» –«global options» die <strong>unter 1.1.</strong> beschriebenen Einstellungen vornehmen:</p>
-<p><a href="https://methodenlehre.github.io/einfuehrung-in-R/chapters/01-workflow.html" class="uri">https://methodenlehre.github.io/einfuehrung-in-R/chapters/01-workflow.html</a></p></li>
-</ol>
-<!-- -->
-<ol start="2" type="1">
-<li>Neues Skript öffnen &amp; orientieren</li>
-</ol>
+<section id="aufgabe-1-datensatz-aufbereiten-und-beschreiben" class="level1">
+<h1>Aufgabe 1: Datensatz aufbereiten und beschreiben</h1>
+<p>Wir arbeiten für die Übungen mit diesem Datensatz. Dieser wurde simuliert und spiegelt keine echten Daten oder Zusammenhänge wider. Der Datensatz beinhaltet demografische Variablen sowie eine Version des BFI-44-Fragebogens. In den folgenden Aufgaben werden wir diesen mit den bisher kennengelernten <strong>tidyverse</strong>-Funktionen aufbereiten und analysieren.</p>
+<p><a href="fake_bfi_dataset.csv" download="" class="btn btn-primary"> 📥 Download fake_bfi_dataset.csv </a></p>
+<p>Nutze die <strong>dplyr</strong>-Funktionen, die wir kennengelernt haben, um die folgenden Aufgaben zu bearbeiten.</p>
+<p><strong>Tipp:</strong> In einigen Variablen gibt es fehlende Werte (<em>missings</em>). Die Bearbeitung dieser Werte erfolgt erst in <strong>Aufgabe 2</strong>. Verwende, falls nötig, das Argument <code>na.rm = TRUE</code>.</p>
+<p><strong>Aufgaben</strong></p>
+<ul>
+<li><p>Benenne die Variable <em>Ort</em> in <em>Postleitzahl</em> um.</p></li>
+<li><p>Welche Spalte scheint doppelt vorhanden zu sein? Lösche sie aus dem Datensatz.</p></li>
+<li><p>Personen die nicht volljährig sind dürfen nicht an der Studie teilnehmen und müssen ausgeschlossen werden.</p></li>
+<li><p>Füge dem Datensatz die Spalte <em>Alterskohorte</em> hinzu. Wenn eine Person über 60 Jahre alt ist, gilt sie als <em>alt</em>, ansonsten als <em>jung</em>.</p></li>
+<li><p>Welche Variablen sollten Faktoren sein? Wandle sie in Faktoren um</p></li>
+<li><p>Erstelle eine Kopie des Datensatzes nur mit den demographischen Variablen.</p></li>
+</ul>
+<p><strong>Verwende die dplyr-Funktionen, um die folgenden Fragen zu beantworten:</strong></p>
+<ul>
+<li><p>Welche Quartiere machen welche prozentualen Anteile (Proportion zum Gesamtsample) aus? Füge eine neue Spalte hinzu.</p></li>
+<li><p>In welchem Quartier leben proportional am meisten Personen, die sich als weiblich beschreiben?</p></li>
+<li><p>Wie hoch ist das durschnittliche Alter pro Quartier?</p></li>
+<li><p>Wie alt sind die jüngsten Personen getrennt nach Gender?</p></li>
+<li><p>Erstelle eine Rangliste der Quartiere nach durchschnittlichem Alter (vom höchsten zum niedrigsten).</p></li>
+</ul>
 </section>
-<section id="rstudio-oberfläche" class="level2">
-<h2 class="anchored" data-anchor-id="rstudio-oberfläche">RStudio Oberfläche</h2>
-<p>Im folgenden machen wir uns vertraut mit der Oberfläche von RStudio:</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="images/R_overview.png" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
-</figure>
-</div>
-<!-- -->
-<ol type="a">
-<li>Skript für Code-Eingabe sowie Kommentare</li>
-<li>Konsole für die Ausführung von Code -&gt; Teste einfache mathematische Operation in dieser; reproduziere diese mittels Skript</li>
-<li>Rechts oben: Environment &amp; History</li>
-<li>Rechts unten: Files, Plots, Packages und Help Viewer</li>
-</ol>
-</section>
-<section id="pakete-installieren-und-laden" class="level2">
-<h2 class="anchored" data-anchor-id="pakete-installieren-und-laden">Pakete installieren und laden</h2>
-<p>Tidyverse ist ein Meta-Paket, das mehrere Pakete umfasst<a href="https://www.tidyverse.org/"><img src="images/clipboard-602781303.png" class="img-fluid" width="472" alt="https://www.tidyverse.org/"></a></p>
-<ol type="1">
-<li><p>Pakete installieren (nur 1x notwendig) -&gt; führe diesen Code in der Konsole aus</p>
+<section id="aufgabe-2-fehlende-werte" class="level1">
+<h1>Aufgabe 2: Fehlende Werte</h1>
+<p><a href="https://methodenlehre.github.io/einfuehrung-in-R/chapters/04-tidyverse.html#fehlende-werte-auschliessen-drop_na">📖Kapitel 4.3.3 Ellis &amp; Mayer</a></p>
+<p>Führe die folgenden Schritte durch:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"tidyverse"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div></li>
-<li><p>Paket laden (innerhalb des Skriptes, bei jedem Neustart von R notwendig)</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stderr">
-<pre><code>── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──
-✔ dplyr     1.1.4     ✔ readr     2.1.5
-✔ forcats   1.0.0     ✔ stringr   1.5.1
-✔ ggplot2   4.0.0     ✔ tibble    3.3.0
-✔ lubridate 1.9.4     ✔ tidyr     1.3.1
-✔ purrr     1.1.0     
-── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──
-✖ dplyr::filter() masks stats::filter()
-✖ dplyr::lag()    masks stats::lag()
-ℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors</code></pre>
+<pre><code>Rows: 45 Columns: 48
+── Column specification ────────────────────────────────────────────────────────
+Delimiter: ";"
+chr (45): Gender, extra_1, agree_1_r, consc_1, neuro_1, open_1_r, extra_2, a...
+dbl  (3): Age, Ort, Ort_2
+
+ℹ Use `spec()` to retrieve the full column specification for this data.
+ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.</code></pre>
 </div>
-</div></li>
-</ol>
-<p>Tipp: Pakete regelmässig updaten mit z.B. update.packages()</p>
-</section>
-<section id="operatoren-kennenlernen" class="level2">
-<h2 class="anchored" data-anchor-id="operatoren-kennenlernen">Operatoren kennenlernen</h2>
-<ol type="1">
-<li><p>a. Nutze R als Taschenrechner</p>
-<ol type="1">
-<li><p><code>123+456</code></p></li>
-<li><p><code>144*112</code></p></li>
-<li><p><code>10/3</code></p></li>
-<li><p>Quadriere 420</p></li>
-<li><p>Ziehe die Quadratwurzel aus 146 mit der Funktion <code>sqrt()</code></p></li>
-<li><p>Berechne den Rest der Division 10/3 mit dem Modulo Operator: <code>%%</code></p></li>
-</ol></li>
-</ol>
-<section id="arithmetische-operatoren-und-funktionen-in-r-z.b." class="level3">
-<h3 class="anchored" data-anchor-id="arithmetische-operatoren-und-funktionen-in-r-z.b.">Arithmetische Operatoren und Funktionen in R, z.B.</h3>
-<table class="caption-top table">
-<thead>
-<tr class="header">
-<th>Zeichen</th>
-<th>Bedeutung</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>+</td>
-<td>Addition</td>
-</tr>
-<tr class="even">
-<td>-</td>
-<td>Substraktion</td>
-</tr>
-<tr class="odd">
-<td>*</td>
-<td>Multiplikation</td>
-</tr>
-<tr class="even">
-<td>/</td>
-<td>Division</td>
-</tr>
-<tr class="odd">
-<td>sqrt(x)</td>
-<td>Quadratwurzel</td>
-</tr>
-<tr class="even">
-<td>abs(x)</td>
-<td>Betrag (absoluter Wert)</td>
-</tr>
-<tr class="odd">
-<td>x %% y</td>
-<td>Modulo (x mod y) 5 %% 2 = 1</td>
-</tr>
-<tr class="even">
-<td>^</td>
-<td>Potenz</td>
-</tr>
-</tbody>
-</table>
-</section>
-</section>
-<section id="erste-zuweisungenvariablen-definieren" class="level2">
-<h2 class="anchored" data-anchor-id="erste-zuweisungenvariablen-definieren">Erste Zuweisungen/Variablen definieren</h2>
-<ol type="1">
-<li><p>Weise den Wert 5 der Variable <code>x</code> zu mit dem Operator <code>&lt;-</code></p></li>
-<li><p>Weise eine beliebige Zahl der Variable <code>y</code> zu und dividiere dann <code>x</code> durch <code>y</code>. Speichere dieses Ergebnis in der Variable <code>z</code>.</p></li>
-<li><p>Schaue dir das Ergebnis in deinem Environment an. Lass dir das Ergebnis auch in der Konsole ausgeben. Das Environment findest du oben rechts, die Konsole ist unter deinem Skript.</p></li>
-<li><p>Erstelle zwei Variablen: Eine mit deinem Vornamen und eine mit deinem Nachnamen. Solche “character” Variablen musst du in Anführungszeichen setzen <code>""</code></p></li>
-<li><p>Kombiniere deinen Vor- und Nachnamen zu deinem vollen Namen mittels <code>paste</code> . Speichere diese Variable als <code>voller_name</code>.</p></li>
-</ol>
-</section>
-<section id="vektoren-definieren" class="level2">
-<h2 class="anchored" data-anchor-id="vektoren-definieren">Vektoren definieren</h2>
-<ol type="1">
-<li><p>Definiere einen Vektor «first_vector» mit den Zahlen 100, 80, 54, 73. Einen Vektor definiert man so: <code>first_vector &lt;- c(...)</code></p></li>
-<li><p>Wende den Befehl <code>boxplot()</code> auf deinen Vektor an</p></li>
-<li><p>Berechne die Summe <code>sum()</code>und den Mittelwert <code>mean()</code> von deinem Vektor</p></li>
-<li><p>Multipliziere deinen Vektor mit <code>*2</code> und schaue dir das Ergebnis an.</p></li>
-</ol>
-<p>Die wichtigsten Operatoren und Funktionen in R: <a href="https://methodenlehre.github.io/einfuehrung-in-R/chapters/02-R-language.html" class="uri">https://methodenlehre.github.io/einfuehrung-in-R/chapters/02-R-language.html</a></p>
-<section id="statistische-funktionen-die-man-auf-vektoren-anwenden-kann-z.b." class="level3">
-<h3 class="anchored" data-anchor-id="statistische-funktionen-die-man-auf-vektoren-anwenden-kann-z.b.">Statistische Funktionen, die man auf Vektoren anwenden kann, z.B.</h3>
-<table class="caption-top table">
-<thead>
-<tr class="header">
-<th>Funktion</th>
-<th>Bedeutung</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>mean(x, na.rm =FALSE)</td>
-<td>Mittelwert</td>
-</tr>
-<tr class="even">
-<td>sd(x)</td>
-<td>Standardabweichung</td>
-</tr>
-<tr class="odd">
-<td>var(x)</td>
-<td>Varianz</td>
-</tr>
-<tr class="even">
-<td>median(x)</td>
-<td>Median</td>
-</tr>
-<tr class="odd">
-<td>sum(x)</td>
-<td>Summe</td>
-</tr>
-<tr class="even">
-<td>min(x)</td>
-<td>Minimalwert</td>
-</tr>
-<tr class="odd">
-<td>max(x)</td>
-<td>Maximalwert</td>
-</tr>
-<tr class="even">
-<td>range(x)</td>
-<td>Minimal - und Maximalwert</td>
-</tr>
-</tbody>
-</table>
-</section>
-</section>
-<section id="logische-operatoren" class="level2">
-<h2 class="anchored" data-anchor-id="logische-operatoren">Logische Operatoren</h2>
-<ol type="1">
-<li><p>Teste ob die Zahl 5 größer als 2 ist –&gt; TRUE or FALSE?</p></li>
-<li><p>Teste ob 6 ungleich 8 ist –&gt; TRUE or FALSE?</p></li>
-<li><p>Subtrahiere 80 von 50 und speichere das Ergebnis in einer Variable namens «diff_score».</p></li>
-<li><p>Berechne mit <code>abs()</code> den absoluten Wert von «diff_score» lasse dir diesen mit <code>print(diff_score)</code> in der Konsole ausgeben.</p></li>
-</ol>
-<section id="logische-operatoren-z.b." class="level3">
-<h3 class="anchored" data-anchor-id="logische-operatoren-z.b.">Logische Operatoren, z.B.</h3>
-<table class="caption-top table">
-<thead>
-<tr class="header">
-<th>Zeichen</th>
-<th>Bedeutung</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>==</td>
-<td>gleich</td>
-</tr>
-<tr class="even">
-<td>!=</td>
-<td>ungleich</td>
-</tr>
-<tr class="odd">
-<td>&gt;</td>
-<td>grösser</td>
-</tr>
-<tr class="even">
-<td>&gt;=</td>
-<td>grösser gleich</td>
-</tr>
-<tr class="odd">
-<td>&lt;</td>
-<td>kleiner</td>
-</tr>
-<tr class="even">
-<td>&lt;=</td>
-<td>kleiner gleich</td>
-</tr>
-<tr class="odd">
-<td>|</td>
-<td>Logisches Oder</td>
-</tr>
-<tr class="even">
-<td>&amp;</td>
-<td>Logisches Und</td>
-</tr>
-</tbody>
-</table>
-</section>
-</section>
-<section id="nachvollziehbarkeit-von-code" class="level2">
-<h2 class="anchored" data-anchor-id="nachvollziehbarkeit-von-code">Nachvollziehbarkeit von Code</h2>
-<section id="kommentare" class="level3">
-<h3 class="anchored" data-anchor-id="kommentare">Kommentare</h3>
-<p>Informative Kommentare im Code sind elementar für die Nachvollziehbarkeit.</p>
-<ol type="1">
-<li><p>Schreibe einen Kommentar indem du ein <code>#</code> verwendest.</p></li>
-<li><p>Code der nach einem <code>#</code> steht wird nicht ausgeführt. Setze ein <code>#</code> vor eine Codezeile und führe sie aus und beobachte was passiert.</p></li>
-</ol>
-</section>
-<section id="benennung-von-variablen" class="level3">
-<h3 class="anchored" data-anchor-id="benennung-von-variablen">Benennung von Variablen</h3>
-<p>Es gibt verschiedene Konventionen, wie man Variablen benennen kann.<br>
-Einige wichtige Grundsätze dafür sind:</p>
+</div>
 <ul>
-<li><p>Namen können aus Buchstaben, Zahlen sowie den Zeichen <code>_</code> oder <code>.</code> bestehen.</p></li>
-<li><p>Sie müssen mit einem Buchstaben beginnen und dürfen keine Leerzeichen enthalten.</p></li>
-<li><p>Sonderzeichen und Großbuchstaben sollten vermieden werden.</p></li>
-<li><p>Keine Namen verwenden, die bereits für Funktionen reserviert sind (z. B. <code>mean()</code>).</p></li>
-<li><p>Der Name sollte den Inhalt der Variablen möglichst gut beschreiben → Reproduzierbarkeit; <em>clarity instead of brevity</em>.</p></li>
-<li><p>Am besten englische Bezeichnungen verwenden, um internationalen Standards zu folgen.</p></li>
+<li>Untersuche den Datensatz auf fehlende Werte. Wie viele fehlende Werte gibt es insgesamt, und in welchen Variablen treten sie auf</li>
 </ul>
-<p>👉 <a href="https://methodenlehre.github.io/einfuehrung-in-R/chapters/02-R-language.html#variablennamen">Mehr dazu</a></p>
-<p><strong>Übung:</strong></p>
 <ul>
-<li><p>Definiere eine neue Variable nach <em>snake_case</em>.</p></li>
-<li><p>Definiere eine zweite Variable nach <em>CamelCase</em>.</p></li>
+<li>Einige <strong>Personen</strong> haben keine Angabe zu ihrer Geschlechtsidentität gemacht. Ersetze diese <strong>fehlenden Werte (NAs)</strong> durch <em>“Keine Angabe”</em>. Nutze dafür die Funktion <code>mutate()</code> und <code>replace_na().</code></li>
 </ul>
-<p>In unserem Seminar verwenden wir den <em>snake_case</em>.</p>
-</section>
-</section>
-<section id="für-fortgeschrittene-r-nutzerinnen" class="level2">
-<h2 class="anchored" data-anchor-id="für-fortgeschrittene-r-nutzerinnen">Für fortgeschrittene R-Nutzer:innen</h2>
-<ol type="1">
-<li><p>Speichere die beiden höchsten Werte aus «first_vector» in einer neuen Variable ab (Tipp: verwende <code>sort()</code> )</p></li>
-<li><p>Erstelle einen Vektor mit Werten von 0-1000 in 10er Schritten (Tipp: suche nach der Funktion <code>seq()</code></p></li>
-<li><p>Ziehe zufällig eine Zahl aus diesem Vektor</p></li>
-<li><p>Generiere einen Vektor, der aus 50 Wiederholungen der Zahl 3 besteht</p></li>
-</ol>
-<p>Tipps zu diesen Aufgaben findest du bei Bedarf hier: <a href="https://methodenlehre.github.io/einfuehrung-in-R/chapters/02-R-language.html" class="uri">https://methodenlehre.github.io/einfuehrung-in-R/chapters/02-R-language.html</a> (Kapitel 2.1)</p>
-<p>Tipp: Suche nach der Dokumentation der folgenden Funktionen: <code>sort(), seq(), sample, rep().</code></p>
-<p>Die Dokumentation kannst du mittels <code>?Funktionsname</code> aufrufen.</p>
-</section>
-<section id="datentypen" class="level2">
-<h2 class="anchored" data-anchor-id="datentypen">Datentypen</h2>
-<ol type="1">
-<li><p><strong>numeric vectors:</strong> werden in integer (ganze Zahlen) und double (reelle Zahlen) unterteilt, z.B.</p>
-<p><code>numerical_vector &lt;- c(1, 2.5, 4)</code></p></li>
-<li><p><strong>character vectors:</strong> bestehen aus Zeichen, welche von Anführungszeichen umgeben werden, z.B.</p>
-<p><code>text_vector &lt;- c("Hello", "World")</code></p></li>
-<li><p><strong>logical vectors:</strong> Elemente dieses Typs können nur 3 Werte annehmen: TRUE, FALSE oder NA</p>
-<p><code>log_vector &lt;- c(TRUE, FALSE, TRUE)</code></p></li>
-</ol>
-<p>Vektoren müssen aus denselbsten Elementen bestehen, d.h. z.B. numeric und character können nicht gemischt werden. Vektoren werden meist mit <code>c()</code> erstellt.</p>
-</section>
-</section>
-<section id="zusätzliche-übungen" class="level1">
-<h1>Zusätzliche Übungen:</h1>
-<p>ℹ️ <strong>Hinweis:</strong> Hilfestellungen zu den Übungen findest du <a href="https://methodenlehre.github.io/einfuehrung-in-R/chapters/02-R-language.html#datentypen">hier</a>.</p>
-<p>Nicht alle benötigten Funktionen sind explizit erwähnt. Nutze bei Bedarf eine Suchmaschine, um passende Befehle zu finden.</p>
-<p><strong>Überprüfen von Datentypen – palmerpenguins</strong></p>
-<p>Lade den öffentlich in R verfügbaren Datensatz <em>palmerpenguins</em> mit den folgenden Befehlen:</p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"palmerpenguins"</span>)   <span class="co"># nur einmal nötig </span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="sourceCode" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(palmerpenguins) </span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>my_penguins <span class="ot">&lt;-</span> penguins </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<section id="datensatz-inspizieren" class="level3">
-<h3 class="anchored" data-anchor-id="datensatz-inspizieren">Datensatz inspizieren</h3>
 <ul>
-<li><p>Wie viele Variablen (Spalten) sind enthalten?</p></li>
-<li><p>Wie viele Beobachtungen (Zeilen)?</p></li>
+<li><strong>Zeilen mit fehlenden Werten löschen</strong><br>
+Erstelle eine <strong>Kopie</strong> des Datensatzes und verwende <code>drop_na()</code>,<br>
+um alle Zeilen mit fehlenden Werten zu entfernen.</li>
 </ul>
 </section>
-<section id="überblick-über-den-datensatz" class="level3">
-<h3 class="anchored" data-anchor-id="überblick-über-den-datensatz">Überblick über den Datensatz</h3>
-<p>Nutze verschiedene Befehle und vergleiche die Ergebnisse:</p>
-<p>Verwende die Hilfefunktion <code>?funktionsname</code> um dir zeigen zu lassen welche Argumente die Funktionen benötigen.</p>
+<section id="aufgabe-3-skalenberechnung" class="level1">
+<h1>Aufgabe 3: Skalenberechnung</h1>
+<p><a href="https://methodenlehre.github.io/einfuehrung-in-R/chapters/04-tidyverse.html">📖Kapitel 4.4. Ellis &amp; Mayer</a></p>
+<p><strong>Aufgaben:</strong></p>
 <ul>
-<li><p><code>head()</code></p></li>
-<li><p><code>glimpse()</code></p></li>
-<li><p><code>str()</code></p></li>
-<li><p><code>penguins</code></p></li>
-<li><p><code>summary()</code></p></li>
-</ul>
-<p>👉 Was sind die Unterschiede zwischen den Befehlen?</p>
-</section>
-<section id="datentypen-überprüfen" class="level3">
-<h3 class="anchored" data-anchor-id="datentypen-überprüfen">Datentypen überprüfen</h3>
+<li><p><strong>Umwandlung der BFI-Items in numerische Werte.</strong></p>
 <ul>
-<li><p>Welchen Datentyp haben diese Variablen?</p>
+<li><p>„Stimme gar nicht zu“ → <strong>1</strong></p></li>
+<li><p>„Stimme voll und ganz zu“ → <strong>5</strong></p></li>
+</ul></li>
+</ul>
+<p>Verwende dafür eine Kombination aus <code>mutate()</code>, <code>across()</code> und <code>case_when()</code> oder <code>recode()</code>.</p>
 <ul>
-<li><p><code>island</code></p></li>
-<li><p><code>body_mass_g</code></p></li>
-<li><p><code>species</code></p></li>
+<li><strong>Umpolen der negativ formulierten Items</strong></li>
 </ul>
-<p>Tipp: Googeln</p></li>
-</ul>
-</section>
-<section id="logisches-abfragen" class="level3">
-<h3 class="anchored" data-anchor-id="logisches-abfragen">Logisches Abfragen</h3>
+<p>Die negativ formulierten Items enden alle mit <code>_r</code> (für reverse). Poole diese Items um.</p>
+<p>Suche dir eine dplyr Funktion, welche helfen kann alle Variablen auszuwählen welche mit <code>_r</code> aufhören.</p>
+<p>💡<strong><em>Tipp: Ähnlich wie starts_with</em></strong></p>
 <ul>
-<li><p>Überprüfe, ob <code>bill_depth_mm</code> ein numerischer Vektor ist.</p></li>
-<li><p>Gib die Antwort als logischen Wert aus (<code>TRUE</code> oder <code>FALSE</code>) und speichere sie in einer neuen Variable.</p></li>
-<li><p>Prüfe anschließend, ob diese neue Variable selbst ein logischer Vektor ist.</p></li>
+<li><p><strong>Berechnung der Big-Five-Skalen</strong></p>
+<ul>
+<li>Erstelle neue Variablen, die den <strong>Mittelwert jedes Big-Five-Faktors</strong> pro Person enthalten.</li>
+<li>Mit welcher Funktion kannst du dir ersparen alle Variablen auszuschreiben?</li>
+</ul></li>
 </ul>
-</section>
-</section>
-<section id="am-ende-deiner-übungen---vergiss-nicht-dein-skript-abzuspeichern--" class="level1">
-<h1>Am Ende deiner Übungen - vergiss nicht dein Skript abzuspeichern! :-)</h1>
-<p>Gib diesem einem Namen, der Maschinen und Mensch-lesbar ist, siehe Kapitel 6.1.3 hier: <a href="https://r4ds.hadley.nz/workflow-scripts" class="uri">https://r4ds.hadley.nz/workflow-scripts</a></p>
+<ul>
+<li><p><strong>Zusammenhänge zwischen Skalen testen</strong></p>
+<ul>
+<li>Teste mit <code>cor.test()</code> die <strong>Korrelation</strong> zwischen zwei Big-Five-Faktoren,<br>
+zum Beispiel zwischen <strong>Extraversion</strong> und <strong>Offenheit</strong>.</li>
+</ul></li>
+</ul>
+<!-- -->
+<ul>
+<li>Berechne die <strong>Durchschnittswerte</strong>, <strong>Standardabweichungen</strong> und <strong>Mediane</strong> der fünf Big-Five-Faktoren Extraversion und Offenheit, unterteilt nach der <strong>Geschlechtsangabe</strong>.</li>
+</ul>
+<ul>
+<li>Rendere dein Skript!</li>
+</ul>
+<p><strong>Gib dein Skript und deine gerenderte Datei als ZIP (Dateinaname: vorname_nachname_hausübung_1.ZIP) datei auf ILIAS ab und leite es deinem oder deiner Peerpartner:in weiter.</strong></p>
 
 
 </section>
