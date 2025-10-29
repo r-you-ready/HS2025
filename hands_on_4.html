@@ -574,16 +574,6 @@ Um die Daten des MMQ zu analysieren, füge eine Spalte hinzu, die den Durchschni
 <section id="multiplizieren-von-pre-ratings" class="level2">
 <h2 class="anchored" data-anchor-id="multiplizieren-von-pre-ratings">Multiplizieren von Pre Ratings</h2>
 <p>Die Variablen <em>pre1</em>–<em>pre4</em> und <em>post</em> stellen in der Studie die Leistungseinschätzungen auf einer Skala von 1 bis 100 dar. In unserem Datensatz sind sie jedoch nur auf einer Skala von 1 bis 10 abgebildet. Verwende die Funktion <code>mutate</code>, um die Variablen mit 10 zu multiplizieren und so die richtigen Werte zu erhalten.</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>dat_full <span class="ot">&lt;-</span> dat_full <span class="sc">%&gt;%</span></span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(</span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>    <span class="at">pre1 =</span> pre1 <span class="sc">*</span> <span class="dv">10</span>,</span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>    <span class="at">pre2 =</span> pre2 <span class="sc">*</span> <span class="dv">10</span>,</span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">pre3 =</span> pre3 <span class="sc">*</span> <span class="dv">10</span>,</span>
-<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>    <span class="at">pre4 =</span> pre4 <span class="sc">*</span> <span class="dv">10</span>,</span>
-<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>    <span class="at">post =</span> post <span class="sc">*</span> <span class="dv">10</span></span>
-<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
 <p>Weitere Informationen zu dplyr findest du auch hier: <a href="https://methodenlehre.github.io/einfuehrung-in-R/chapters/04-tidyverse.html#data-wrangling-dplyr">📖Kapitel 4.4 Ellis &amp; Mayer</a></p>
 </section>
 </section>
@@ -660,16 +650,16 @@ In diesem Fragebogen sind einige <strong>invertiert (reverse) kodierte Items</st
 <li>Nötige Argumente: Datensatz, Variablen, Rekodierungsschema.</li>
 </ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>data_bfi_recoded <span class="ot">&lt;-</span> XXXXX <span class="sc">|&gt;</span> </span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(</span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">across</span>(</span>
-<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>      <span class="fu">c</span>(XXXXXX),</span>
-<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>      <span class="sc">~</span> <span class="fu">case_when</span>(</span>
-<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>        . <span class="sc">==</span> <span class="dv">1</span> <span class="sc">~</span> <span class="dv">5</span>,</span>
-<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>        XXXXXXXXXX</span>
-<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>      )</span>
-<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>    )</span>
-<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>data_bfi_recoded <span class="ot">&lt;-</span> XXXXX <span class="sc">|&gt;</span> </span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">across</span>(</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>      <span class="fu">c</span>(XXXXXX),</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>      <span class="sc">~</span> <span class="fu">case_when</span>(</span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>        . <span class="sc">==</span> <span class="dv">1</span> <span class="sc">~</span> <span class="dv">5</span>,</span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>        XXXXXXXXXX</span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>      )</span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Erklärungen zu diesem Code findest du hier: <a href="https://methodenlehre.github.io/einfuehrung-in-R/chapters/04-tidyverse.html#neue-variablen-erstellen-mit-mutate">Kapitel 4.4.6 Ellis &amp; Mayer</a> und hier: <a href="https://methodenlehre.github.io/einfuehrung-in-R/chapters/04-tidyverse.html#variablen-rekodieren-mit-case_when">Kapitel 4.4.7 Ellis &amp; Mayer</a></p>
 </section>
