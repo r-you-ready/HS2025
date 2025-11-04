@@ -1077,7 +1077,7 @@ Sandra Grinschgl, Aaron Friedli, Lars Schilling
 <li><p>Metadata</p></li>
 <li><p>Response Labels</p></li>
 </ul>
-<p>Stellt sicher dass diese Punkte auch ausgefüllt sind für die Schlussabgabe.</p>
+<p><strong><em>Stellt sicher dass diese Punkte auch ausgefüllt sind für die Schlussabgabe.</em></strong></p>
 </section>
 <section id="nachtrag-row.names-false" class="slide level2">
 <h2>Nachtrag: row.names = FALSE</h2>
@@ -1131,8 +1131,8 @@ Sandra Grinschgl, Aaron Friedli, Lars Schilling
 </div>
 </div>
 </section>
-<section id="kombination-merge-und-full_join---beispiel" class="slide level2">
-<h2>Kombination merge() und full_join() - Beispiel</h2>
+<section id="kombination-select-und-full_join---beispiel" class="slide level2">
+<h2>Kombination select() und full_join() - Beispiel</h2>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a></a>penguins <span class="ot">&lt;-</span> palmerpenguins<span class="sc">::</span>penguins</span>
 <span id="cb7-2"><a></a>penguins <span class="ot">&lt;-</span> penguins <span class="sc">|&gt;</span></span>
@@ -1156,6 +1156,8 @@ Sandra Grinschgl, Aaron Friedli, Lars Schilling
 <p><strong>Nützlich, um höchste und niedrigste Werte einzusehen – zum Beispiel, um eine Rangliste zu erstellen.</strong></p>
 <p><br><br></p>
 <div class="cell">
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a></a>penguins <span class="sc">|&gt;</span> </span>
+<span id="cb9-2"><a></a>  <span class="fu">arrange</span>(bill_depth_mm)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 344 × 9
    species island bill_length_mm bill_depth_mm flipper_length_mm body_mass_g
@@ -1180,6 +1182,7 @@ Sandra Grinschgl, Aaron Friedli, Lars Schilling
 <p><strong>Wird genutzt, um Spalten zu verschieben – nützlich, um den Datensatz übersichtlicher zu gestalten, etwa indem man wichtige Variablen (z. B. ID, Gruppe) an den Anfang stellt.</strong></p>
 <p><br><br></p>
 <div class="cell">
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a></a>penguins <span class="sc">|&gt;</span> <span class="fu">relocate</span>(bill_depth_mm, <span class="at">.before =</span> island)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 344 × 9
    species bill_depth_mm island    bill_length_mm flipper_length_mm body_mass_g
@@ -1224,10 +1227,10 @@ Sandra Grinschgl, Aaron Friedli, Lars Schilling
 </ul>
 </section>
 <section id="finden-und-identifizieren-von-fehlenden-werten" class="slide level2">
-<h2>Finden und Identifizieren von fehlenden Werten</h2>
+<h2>Finden und identifizieren von fehlenden Werten</h2>
 <p>Diverse Ansätze - Konkrete Übungen in den Hands On Übungen.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a></a><span class="fu">table</span>(<span class="fu">is.na</span>(penguins))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a></a><span class="fu">table</span>(<span class="fu">is.na</span>(penguins))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>
 FALSE  TRUE 
@@ -1236,7 +1239,7 @@ FALSE  TRUE
 </div>
 <p><br><br></p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a></a><span class="fu">colSums</span>(<span class="fu">is.na</span>(penguins))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a></a><span class="fu">colSums</span>(<span class="fu">is.na</span>(penguins))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>          species            island    bill_length_mm     bill_depth_mm 
                 0                 0                 2                 2 
@@ -1286,13 +1289,13 @@ Das bedeutet, fehlende Werte <strong>durch geschätzte Werte zu ersetzen</strong
 <section id="fehlende-werte-bei-berechnungen-beachten" class="slide level2">
 <h2>Fehlende Werte bei Berechnungen beachten</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a></a>x <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="cn">NA</span>)</span>
-<span id="cb15-2"><a></a></span>
-<span id="cb15-3"><a></a><span class="fu">mean</span>(x, <span class="at">na.rm =</span> <span class="cn">FALSE</span>)   <span class="co"># fehlende Werte werden in Berechnung  miteinbezogen, ergibt NA als Mittelwert; default Einstellung</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a></a>x <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="cn">NA</span>)</span>
+<span id="cb17-2"><a></a></span>
+<span id="cb17-3"><a></a><span class="fu">mean</span>(x, <span class="at">na.rm =</span> <span class="cn">FALSE</span>)   <span class="co"># fehlende Werte werden in Berechnung  miteinbezogen, ergibt NA als Mittelwert; default Einstellung</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] NA</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a></a><span class="fu">mean</span>(x, <span class="at">na.rm =</span> <span class="cn">TRUE</span>)    <span class="co">#fehlende Werte werden ausgeschlossen, ergibt 1 als Mittelwert</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a></a><span class="fu">mean</span>(x, <span class="at">na.rm =</span> <span class="cn">TRUE</span>)    <span class="co">#fehlende Werte werden ausgeschlossen, ergibt 1 als Mittelwert</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 1</code></pre>
 </div>
@@ -1314,26 +1317,26 @@ Das bedeutet, fehlende Werte <strong>durch geschätzte Werte zu ersetzen</strong
 <section id="beispiele-berechnung-von-skalenwerten" class="slide level2">
 <h2>Beispiele Berechnung von Skalenwerten</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a></a><span class="fu">library</span>(tidyverse)</span>
-<span id="cb19-2"><a></a></span>
-<span id="cb19-3"><a></a>dat_full <span class="ot">&lt;-</span> dat_full <span class="sc">|&gt;</span> <span class="fu">mutate</span>(<span class="at">mmq_mean =</span> (question1 <span class="sc">+</span> question2 <span class="sc">+</span> question3 <span class="sc">+</span> question4 <span class="sc">+</span> question5 <span class="sc">+</span> question6 <span class="sc">+</span> question7 <span class="sc">+</span> question8 <span class="sc">+</span> question9 <span class="sc">+</span> question10 <span class="sc">+</span> question11 <span class="sc">+</span> question12 <span class="sc">+</span> question13 <span class="sc">+</span> question14 <span class="sc">+</span> question15 <span class="sc">+</span> question16 <span class="sc">+</span> question17 <span class="sc">+</span> question18)<span class="sc">/</span><span class="dv">18</span>)</span>
-<span id="cb19-4"><a></a></span>
-<span id="cb19-5"><a></a><span class="co">#Sparsamere Alternative:</span></span>
-<span id="cb19-6"><a></a></span>
-<span id="cb19-7"><a></a>dat_full <span class="ot">&lt;-</span> dat_full <span class="sc">|&gt;</span> </span>
-<span id="cb19-8"><a></a>  <span class="fu">mutate</span>(<span class="at">mmq_mean =</span> <span class="fu">rowMeans</span>(<span class="fu">select</span>(dat_full, <span class="fu">starts_with</span>(<span class="st">&quot;question&quot;</span>)),</span>
-<span id="cb19-9"><a></a>                             <span class="at">na.rm =</span> <span class="cn">TRUE</span>))</span>
-<span id="cb19-10"><a></a></span>
-<span id="cb19-11"><a></a><span class="co">#Sparsamere Alternative:</span></span>
-<span id="cb19-12"><a></a></span>
-<span id="cb19-13"><a></a>dat_full <span class="ot">&lt;-</span> dat_full <span class="sc">|&gt;</span></span>
-<span id="cb19-14"><a></a>  <span class="fu">mutate</span>(<span class="at">mmq_mean =</span> <span class="fu">rowMeans</span>(<span class="fu">across</span>(question1<span class="sc">:</span>question18), <span class="at">na.rm =</span> <span class="cn">TRUE</span>))</span>
-<span id="cb19-15"><a></a></span>
-<span id="cb19-16"><a></a><span class="co">#Sparsamere Alternative:</span></span>
-<span id="cb19-17"><a></a></span>
-<span id="cb19-18"><a></a>dat_full <span class="ot">&lt;-</span> dat_full <span class="sc">%&gt;%</span></span>
-<span id="cb19-19"><a></a>  <span class="fu">rowwise</span>() <span class="sc">%&gt;%</span></span>
-<span id="cb19-20"><a></a>  <span class="fu">mutate</span>(<span class="at">mmq_mean3 =</span> <span class="fu">mean</span>(<span class="fu">c_across</span>(<span class="fu">starts_with</span>(<span class="st">&quot;question&quot;</span>)), <span class="at">na.rm =</span> <span class="cn">TRUE</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb21-2"><a></a></span>
+<span id="cb21-3"><a></a>dat_full <span class="ot">&lt;-</span> dat_full <span class="sc">|&gt;</span> <span class="fu">mutate</span>(<span class="at">mmq_mean =</span> (question1 <span class="sc">+</span> question2 <span class="sc">+</span> question3 <span class="sc">+</span> question4 <span class="sc">+</span> question5 <span class="sc">+</span> question6 <span class="sc">+</span> question7 <span class="sc">+</span> question8 <span class="sc">+</span> question9 <span class="sc">+</span> question10 <span class="sc">+</span> question11 <span class="sc">+</span> question12 <span class="sc">+</span> question13 <span class="sc">+</span> question14 <span class="sc">+</span> question15 <span class="sc">+</span> question16 <span class="sc">+</span> question17 <span class="sc">+</span> question18)<span class="sc">/</span><span class="dv">18</span>)</span>
+<span id="cb21-4"><a></a></span>
+<span id="cb21-5"><a></a><span class="co">#Sparsamere Alternative:</span></span>
+<span id="cb21-6"><a></a></span>
+<span id="cb21-7"><a></a>dat_full <span class="ot">&lt;-</span> dat_full <span class="sc">|&gt;</span> </span>
+<span id="cb21-8"><a></a>  <span class="fu">mutate</span>(<span class="at">mmq_mean =</span> <span class="fu">rowMeans</span>(<span class="fu">select</span>(dat_full, <span class="fu">starts_with</span>(<span class="st">&quot;question&quot;</span>)),</span>
+<span id="cb21-9"><a></a>                             <span class="at">na.rm =</span> <span class="cn">TRUE</span>))</span>
+<span id="cb21-10"><a></a></span>
+<span id="cb21-11"><a></a><span class="co">#Sparsamere Alternative:</span></span>
+<span id="cb21-12"><a></a></span>
+<span id="cb21-13"><a></a>dat_full <span class="ot">&lt;-</span> dat_full <span class="sc">|&gt;</span></span>
+<span id="cb21-14"><a></a>  <span class="fu">mutate</span>(<span class="at">mmq_mean =</span> <span class="fu">rowMeans</span>(<span class="fu">across</span>(question1<span class="sc">:</span>question18), <span class="at">na.rm =</span> <span class="cn">TRUE</span>))</span>
+<span id="cb21-15"><a></a></span>
+<span id="cb21-16"><a></a><span class="co">#Sparsamere Alternative:</span></span>
+<span id="cb21-17"><a></a></span>
+<span id="cb21-18"><a></a>dat_full <span class="ot">&lt;-</span> dat_full <span class="sc">%&gt;%</span></span>
+<span id="cb21-19"><a></a>  <span class="fu">rowwise</span>() <span class="sc">%&gt;%</span></span>
+<span id="cb21-20"><a></a>  <span class="fu">mutate</span>(<span class="at">mmq_mean3 =</span> <span class="fu">mean</span>(<span class="fu">c_across</span>(<span class="fu">starts_with</span>(<span class="st">&quot;question&quot;</span>)), <span class="at">na.rm =</span> <span class="cn">TRUE</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <aside class="notes">
 <p>na.rm = TRUE bedeutet, dass für eine Person ein Skalenwert berechnet wird wenn es mind. 1 vorhandenen Wert gibt</p>
