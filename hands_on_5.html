@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>requirements – R u Ready</title>
+<title>Hands On – Coding Basics (Einheiten 9 und 10) – R u Ready</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -54,7 +54,27 @@ div.sourceCode
 @media screen {
 pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -113,7 +133,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">requirements</li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./Übungen.html">Übungen zu den Einheiten</a></li><li class="breadcrumb-item"><a href="./hands_on_5.html">Hands on - Block 5 (Woche 9 - 10)</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -213,11 +233,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <div class="sidebar-item-container"> 
             <a href="./Übungen.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Übungen zu den Einheiten</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#" role="navigation" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="" class="collapse list-unstyled sidebar-section depth1 ">  
+      <ul id="" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./loesung_1.html" class="sidebar-item-text sidebar-link">
@@ -244,7 +264,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./hands_on_5.html" class="sidebar-item-text sidebar-link">
+  <a href="./hands_on_5.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Hands on - Block 5 (Woche 9 - 10)</span></a>
   </div>
 </li>
@@ -342,15 +362,38 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active" data-toc-expanded="-1">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#lernziele" id="toc-lernziele" class="nav-link active" data-scroll-target="#lernziele">Lernziele</a></li>
+  <li><a href="#duplizierte-werte-entfernen" id="toc-duplizierte-werte-entfernen" class="nav-link" data-scroll-target="#duplizierte-werte-entfernen"><strong>Duplizierte Werte entfernen</strong></a></li>
+  <li><a href="#dplyr-code-korrigieren-und-verbessern" id="toc-dplyr-code-korrigieren-und-verbessern" class="nav-link" data-scroll-target="#dplyr-code-korrigieren-und-verbessern">Dplyr: Code korrigieren und verbessern</a></li>
+  <li><a href="#wide-to-long" id="toc-wide-to-long" class="nav-link" data-scroll-target="#wide-to-long">Wide to Long:</a>
+  <ul class="collapse">
+  <li><a href="#übungen-zur-datenkonversion" id="toc-übungen-zur-datenkonversion" class="nav-link" data-scroll-target="#übungen-zur-datenkonversion">Übungen zur Datenkonversion</a></li>
+  </ul></li>
+  <li><a href="#datenqualität" id="toc-datenqualität" class="nav-link" data-scroll-target="#datenqualität">Datenqualität</a>
+  <ul class="collapse">
+  <li><a href="#skewness-und-kurtosis" id="toc-skewness-und-kurtosis" class="nav-link" data-scroll-target="#skewness-und-kurtosis">Skewness und Kurtosis</a></li>
+  <li><a href="#residuen" id="toc-residuen" class="nav-link" data-scroll-target="#residuen">Residuen</a></li>
+  <li><a href="#skalenreliabilität" id="toc-skalenreliabilität" class="nav-link" data-scroll-target="#skalenreliabilität">Skalenreliabilität</a></li>
+  <li><a href="#streudiagrammescatterplots-weitere-datenverteilungen" id="toc-streudiagrammescatterplots-weitere-datenverteilungen" class="nav-link" data-scroll-target="#streudiagrammescatterplots-weitere-datenverteilungen">Streudiagramme/Scatterplots &amp; weitere Datenverteilungen</a></li>
+  <li><a href="#fortgeschrittene-freiwillige-übungen" id="toc-fortgeschrittene-freiwillige-übungen" class="nav-link" data-scroll-target="#fortgeschrittene-freiwillige-übungen">Fortgeschrittene (freiwillige Übungen)</a></li>
+  </ul></li>
+  <li><a href="#tabellen" id="toc-tabellen" class="nav-link" data-scroll-target="#tabellen">Tabellen</a></li>
+  <li><a href="#apa-konforme-tabellen-von-statistischen-analysen" id="toc-apa-konforme-tabellen-von-statistischen-analysen" class="nav-link" data-scroll-target="#apa-konforme-tabellen-von-statistischen-analysen">APA-konforme Tabellen von statistischen Analysen</a></li>
+  <li><a href="#am-ende-deiner-übungen---vergiss-nicht-dein-skript-abzuspeichern" id="toc-am-ende-deiner-übungen---vergiss-nicht-dein-skript-abzuspeichern" class="nav-link" data-scroll-target="#am-ende-deiner-übungen---vergiss-nicht-dein-skript-abzuspeichern">Am Ende deiner Übungen - vergiss nicht dein Skript abzuspeichern! 😉</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default">
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./Übungen.html">Übungen zu den Einheiten</a></li><li class="breadcrumb-item"><a href="./hands_on_5.html">Hands on - Block 5 (Woche 9 - 10)</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">requirements</h1>
+<h1 class="title">Hands On – Coding Basics (Einheiten 9 und 10)</h1>
 </div>
 
 
@@ -367,43 +410,338 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
+<p><strong>Bei Bedarf findest du hier nochmals die Slides zu Einheit 9:</strong><br>
+</p>
+<iframe src="EH_9.html" width="100%" height="500px">
+</iframe>
+<section id="lernziele" class="level1">
+<h1>Lernziele</h1>
+<p>✅ Dplyr: Repetition</p>
+<p>✅ Duplizierte Werte Entfernen</p>
+<p>✅ Long &amp; Wide Transformationen</p>
+<p>✅ Datenqualitätsindkatoren berechnen</p>
+<p>✅ Ausreisseranalysen</p>
+<p>✅ Tabellen</p>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Important
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Für die heutigen Übungen benötigen wir <code>dat_full</code>!</p>
+</div>
+</div>
+</section>
+<section id="duplizierte-werte-entfernen" class="level1">
+<h1><strong>Duplizierte Werte entfernen</strong></h1>
+<p>In vielen Datensätzen kann es vorkommen, dass Werte mehrfach auftreten (z. B. wenn eine ID mehrmals vorkommt). Um dies zu bereinigen, müssen wir zunächst die Duplikate identifizieren und sie anschliessend bearbeiten oder entfernen.</p>
+<p>Im nächsten Schritt duplizieren wir exemplarisch drei zufällige Zeilen aus unserem Datensatz <strong>dat_full</strong>. Diese künstlich erzeugten Duplikate werden wir danach wieder bereinigen.</p>
+<p>Führe diesen Code-Chunk aus: Danach sollte dein <strong>dat_full</strong> 162 Beobachtungen enthalten.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># requirements.R</span></span>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">123</span>)   </span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Nutze das benutzerdefinierte Library-Verzeichnis, falls gesetzt</span></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> (<span class="sc">!</span><span class="fu">is.na</span>(<span class="fu">Sys.getenv</span>(<span class="st">"R_LIBS_USER"</span>, <span class="at">unset =</span> <span class="cn">NA</span>))) {</span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">.libPaths</span>(<span class="fu">Sys.getenv</span>(<span class="st">"R_LIBS_USER"</span>))</span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>install_if_missing <span class="ot">&lt;-</span> <span class="cf">function</span>(pkg) {</span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (<span class="sc">!</span>pkg <span class="sc">%in%</span> <span class="fu">rownames</span>(<span class="fu">installed.packages</span>())) {</span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>    <span class="fu">install.packages</span>(pkg, <span class="at">repos =</span> <span class="st">"https://cloud.r-project.org"</span>)</span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>  }</span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a><span class="co"># Liste der benötigten Pakete – hier kannst du jederzeit erweitern</span></span>
-<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>pkgs <span class="ot">&lt;-</span> <span class="fu">c</span>(</span>
-<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>  <span class="st">"tidyverse"</span>,</span>
-<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>  <span class="st">"knitr"</span>,</span>
-<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>  <span class="st">"rmarkdown"</span></span>
-<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a><span class="fu">sapply</span>(pkgs, install_if_missing)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>dup_rows <span class="ot">&lt;-</span> dat_full <span class="sc">%&gt;%</span> </span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">slice_sample</span>(<span class="at">n =</span> <span class="dv">3</span>)</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>dat_full <span class="ot">&lt;-</span> <span class="fu">bind_rows</span>(dat_full, dup_rows)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Es gibt mehrere Arten und Weisen, Duplikate zu identifizieren. Verwende die <code>dplyr</code>-Funktion <code>count()</code>, um die einzelnen IDs zu zählen. Gib dir anschliessend mit <code>filter()</code> diejenigen aus, die mehr als einmal vorkommen.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>dat_full <span class="sc">|&gt;</span> </span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">count</span>(XXXX) <span class="sc">|&gt;</span> </span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(XXX)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>dat_full <span class="sc">|&gt;</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">count</span>(code) <span class="sc">|&gt;</span> </span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(n <span class="sc">&gt;</span> <span class="dv">1</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>$tidyverse
-NULL
-
-$knitr
-NULL
-
-$rmarkdown
-NULL</code></pre>
+<pre><code># A tibble: 3 × 2
+   code     n
+  &lt;dbl&gt; &lt;int&gt;
+1    14     2
+2    50     2
+3   159     2</code></pre>
 </div>
 </div>
+<p>Entferne die Duplikate wieder, indem du z. B. <code>unique()</code> auf den Datensatz anwendest. <code>unique()</code> entfernt vollständig identische Zeilen und behält nur eine davon.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-2" class="callout-2-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Alternative: Falls du Duplikate nur auf Basis einer bestimmten Variable (z. B. id) entfernen möchtest, kannst du duplicated() verwenden. Dadurch bleibt pro ID nur die erste Zeile erhalten.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>dat_full <span class="ot">&lt;-</span> dat_full[<span class="sc">!</span><span class="fu">duplicated</span>(dat_full<span class="sc">$</span>code), ]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="dplyr-code-korrigieren-und-verbessern" class="level1">
+<h1>Dplyr: Code korrigieren und verbessern</h1>
+<p><strong>Dieser Code funktioniert nicht. Korrigiere ihn. Achte dabei auf Syntaxfehler.</strong></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>dat_full <span class="sc">%&gt;%</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(code, post, strategies)</span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(<span class="at">strtegies =</span> <span class="st">"1"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p><strong>Dieser Code funktioniert, ist jedoch sehr umständlich und ineffizient. Verwende <code>dplyr</code>-Funktionen, um ihn kürzer und übersichtlicher zu gestalten.</strong></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>dat_full <span class="sc">%&gt;%</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(</span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>    <span class="at">Gesamtmittelwert =</span> <span class="fu">mean</span>(</span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>      <span class="fu">c</span>(</span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>        question1, question2, question3, question4, question5,</span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>        question6, question7, question8, question9, question10,</span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>        question11, question12, question13, question14, question15,</span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a>        question16, question17, question18</span>
+<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a>      )</span>
+<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="wide-to-long" class="level1">
+<h1>Wide to Long:</h1>
+<section id="übungen-zur-datenkonversion" class="level2">
+<h2 class="anchored" data-anchor-id="übungen-zur-datenkonversion">Übungen zur Datenkonversion</h2>
+<p>📖<a href="https://r4ds.hadley.nz/data-tidy.html#sec-pivoting">R4DS - Kapitel 5.3</a></p>
+<p>📖<a href="https://methodenlehre.github.io/einfuehrung-in-R/chapters/03-data_frames.html#manuelle-konversion-von-wide-zu-long">Einführung in R - Kapitel 3.1.3</a></p>
+<p>Die folgenden Schritte dienen der Konversion von Daten zwischen dem Wide- und Long-Format unter Verwendung des <code>Tidyverse</code>-Pakets in R.</p>
+<ul>
+<li><p>Mit der Funktion <strong><code>pivot_longer()</code></strong> Spalten der Leistungseinschätzung in Long-Format umwandeln und in neuen Datensatz speichern, <strong>nur für Übungszwecke</strong>.</p></li>
+<li><p>Wandle den Datensatz noch mal in das Long Format um, aber nur basierend auf den Spalten <strong><code>pre1</code></strong> und <strong><code>pre4</code></strong> <strong>Long-Format wird für 2x3 ANOVA aus Grinschgl et al.&nbsp;(2020) benötigt; für Vergleich der 2 Messzeitpunkte in dieser Analysen, benötigen wir diese im Long-Format.</strong></p></li>
+<li><p>Wandle die Spalte <strong><code>time_rating</code></strong> in einen Factor um –&gt; <strong>auch notwendig für Analysen</strong>.</p></li>
+<li><p>Speichere den Long Datensatz als <strong><code>csv.</code></strong> Datei ab.</p></li>
+</ul>
+<ul>
+<li>Verwende <strong><code>pivot_wider</code></strong> unter Angabe von <strong><code>names_from</code></strong> und <strong><code>values_from</code></strong> um den Datensatz wieder in das Wide-Format zu bringen. –&gt; <strong>nur für Übungszwecke.</strong></li>
+</ul>
+</section>
+</section>
+<section id="datenqualität" class="level1">
+<h1>Datenqualität</h1>
+<section id="skewness-und-kurtosis" class="level2">
+<h2 class="anchored" data-anchor-id="skewness-und-kurtosis">Skewness und Kurtosis</h2>
+<p>Die folgenden Schritte dienen der Vorbereitung und deskriptiven Analyse von Daten in R.</p>
+<ul>
+<li><strong>Installieren und laden des Pakets</strong> {psych}: Stelle sicher, dass das Statis Paket <code>psych</code>für die weiteren Analysen geladen ist.</li>
+</ul>
+<ul>
+<li>Berechne die Schiefe und die Kurtosis der Variablen “Öffnungen des Modellfensters” (<code>mean_rl_all</code>) für die drei Gruppen. Verwende hierfür die <code>dplyr</code>-Funktionen <code>group_by()</code> und <code>summarize()</code>.</li>
+</ul>
+</section>
+<section id="residuen" class="level2">
+<h2 class="anchored" data-anchor-id="residuen">Residuen</h2>
+<p>📖Siehe auch: <a href="https://bjoernwalther.com/normalverteilung-der-residuen-bei-der-regression-in-r-testen/">Normalverteilung der Residuen bei der Regression in R testen</a></p>
+<p>Für die folgenden Schritte berechnen wir zuerst ein Regressionsmodell:</p>
+<ul>
+<li><strong>Spezifikation des Regressionsmodells:</strong> Verwende die Funktion <code>lm()</code> um ein Regressionsmodell zwischen Cognitive Offloading (<code>mean_rl_all</code> und der Arbeitsgedächtnisleistung (Feature Switch Detection Task - <code>cvstm_propcorrect</code>) zu spezifizieren.</li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>reg_fit <span class="ot">&lt;-</span> <span class="fu">lm</span>(Cognitive_Offloading_Variable <span class="sc">~</span> Arbeitsgedächtnisleistung, <span class="at">data =</span> dat_ full)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<ul>
+<li><strong>Speichern der Residuen:</strong> Speichere die Residuen dieses Regressionsmodells mit der Funktion <code>rstandard()</code></li>
+</ul>
+<ul>
+<li><p><strong>Visualisierung mittels Histogramm:</strong> Stelle die die Residuen in einem Histogramm mit der Funktion <code>hist()</code> dar.</p>
+<p><em>Frage:</em> Ist im Histogramm eine <strong>Glockenkurve</strong> (Normalverteilung) erkennbar?</p></li>
+<li><p><strong>Visualisierung mittels QQ-Plot:</strong> Stelledie Residuen in einem <code>QQ-Plot</code> mit der Funktion <code>qqnorm()</code> dar. Ergänze die <strong>Regressionsgerade</strong> mit <code>qqline()</code>.</p>
+<p><em>Frage:</em> Wie nah sind die Residuen einer <strong>perfekten Normalverteilung</strong> (d.h. der Geraden)?</p></li>
+</ul>
+</section>
+<section id="skalenreliabilität" class="level2">
+<h2 class="anchored" data-anchor-id="skalenreliabilität">Skalenreliabilität</h2>
+<p>📖 <a href="https://bookdown.org/annabrown/psychometricsR/exercise5.html">Psychometrics in R</a> &amp; <a href="https://bjoernwalther.com/cronbachs-alpha-in-r-berechnen/">Björn Walther</a></p>
+<p>Die folgenden Schritte dienen der Prüfung der <strong><em>internen Konsistenz</em></strong> der Messinstrumente.</p>
+<ul>
+<li><p><strong>Datenvorbereitung für die Analyse:</strong> Speichere alle Variablen des <code>MMQs</code> in einem <strong>neuen</strong> Data Frame ab. Wähle dabei die Spalten mittels <code>select</code> aus.</p></li>
+<li><p><strong>Berechnung von Cronbach’s Alpha:</strong> Verwende die Funktion <code>alpha()</code> aus dem <code>psych</code>-Paket und wende sie auf das neue Objekt an, um <strong>Cronbach’s Alpha</strong> (Interne Konsistenz) für diesen Fragebogen zu berechnen. Schau dir die Ergebnisse (insbesondere <code>raw_alpha</code>) an. Dieses sollte mit Werten in <span class="citation" data-cites="grinschgl2021">Grinschgl et al. (<a href="#ref-grinschgl2021" role="doc-biblioref">2021</a>)</span> übereinstimmen.</p></li>
+</ul>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Warning
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Achtung: Wenn du das Package ggplot() geladen hast, kann es sein dass die Funktion <code>alpha()</code>dadurch verdeckt wird. Spezifiziere aus welchem Package du die Funktion verwenden willst mit <code>psych::alpha()</code></p>
+</div>
+</div>
+<ul>
+<li><p>Verwende die Funktion <code>omega()</code> aus dem <strong>psych-Paket</strong> und wende sie auf dein Objekt (z. B. den Datensatz mit den relevanten Items) an, um <strong>McDonald’s Omega</strong> (interne Konsistenz auf Basis eines Faktorenmodells) zu berechnen.<br>
+</p></li>
+</ul>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+PDF Grinschgl2021 –&gt; Seite 7 –&gt; Multifactorial Memory Questionnaire
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-4" class="callout-4-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<iframe src="PDFs/Grinschgl2020.pdf" width="100%" height="500px">
+</iframe>
+</div>
+</div>
+</div>
+<blockquote class="blockquote">
+<p><strong>Tipp:</strong> In der <code>alpha()</code> Funktion werden unter <code>details</code> alle Werte beschrieben. Für weitere Erklärungen siehe auch: <a href="https://bookdown.org/annabrown/psychometricsR/exercise5.html">Psychometrics in R</a></p>
+</blockquote>
+<hr>
+</section>
+<section id="streudiagrammescatterplots-weitere-datenverteilungen" class="level2">
+<h2 class="anchored" data-anchor-id="streudiagrammescatterplots-weitere-datenverteilungen">Streudiagramme/Scatterplots &amp; weitere Datenverteilungen</h2>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 26%">
+<col style="width: 26%">
+<col style="width: 46%">
+</colgroup>
+<thead>
+<tr class="header">
+<th><strong>Geom</strong></th>
+<th><strong>Funktion</strong></th>
+<th><strong>Einsatzbereich</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>geom_point()</td>
+<td>Streudiagramm</td>
+<td>Zwei numerische Variablen vergleichen (x = Var1, y = Var2)</td>
+</tr>
+<tr class="even">
+<td>geom_line()</td>
+<td>Liniendiagramm</td>
+<td>Werteverlauf über kontinuierliche x-Achse darstellen</td>
+</tr>
+<tr class="odd">
+<td>geom_bar()</td>
+<td>Balkendiagramm</td>
+<td>Häufigkeiten oder Aggregationen für Kategorien (x = Gruppe)</td>
+</tr>
+<tr class="even">
+<td>geom_histogram()</td>
+<td>Histogramm</td>
+<td>Verteilung einer numerischen Variable (x = Wert)</td>
+</tr>
+<tr class="odd">
+<td>geom_boxplot()</td>
+<td>Boxplot</td>
+<td>Verteilungen über Gruppen vergleichen (x = Gruppe, y = Wert)</td>
+</tr>
+</tbody>
+</table>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-5-contents" aria-controls="callout-5" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Cheatsheet ggplot2
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-5" class="callout-5-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<iframe src="PDFs/ggplot.pdf" width="100%" height="500px">
+</iframe>
+</div>
+</div>
+</div>
+<p>Um Plots zu erstellen gibt es diverse Packages. Für einfache Darstellungen ist die Syntax der Base r <code>plot()</code> Funktion nützlich, bietet jedoch wesentlich weniger Optionen an als <code>ggplot()</code>. Für diese aufgaben sind zwar beide geeignet, jedoch empfehlen wir <code>ggplot()</code></p>
+<ul>
+<li>Plotte den Zusammenhang zwischen Cognitive Offloading (Öffnungen des Modelfensters - <code>mean_rl_all</code>) und der Arbeitsgedächtnisleistung (Feature Switch Detection Task <code>cvstm_propcorrect</code>). Ergänze dafür den Code unten mit den richtigen Variablen. (Wichtig für Ausreißerkontrolle bei Berechnungen von Korrelationen/Regressionen)</li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> dat_full, <span class="fu">aes</span>(<span class="at">x =</span> XXXXX, <span class="at">y =</span> XXXXXX))<span class="sc">+</span></span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_XXXX</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<ul>
+<li>Ausreißer können auch mit <code>boxplots</code> für einzelne Variablen identifiziert werden 👉 für Öffnungen des Modelfensters anschauen. Nutze das richtige <code>geom()</code> aus der Tabelle.</li>
+</ul>
+<p>❗Man sollte schon vor Studienerhebung oder zumindest vor der Datenanalyse festlegen ob bzw. wie man Ausreißer identifiziert und ausschließt (z.B. in Präregistrierungen oder Datenanalyseplänen)</p>
+<ul>
+<li>Lass dir den <code>boxplot()</code> getrennt für die 3 Experimentalgruppen anzeigen. Setze dafür <code>y = group</code>.</li>
+</ul>
+</section>
+<section id="fortgeschrittene-freiwillige-übungen" class="level2">
+<h2 class="anchored" data-anchor-id="fortgeschrittene-freiwillige-übungen">Fortgeschrittene (freiwillige Übungen)</h2>
+<ul>
+<li><p>Erweitere den Scatterplot deiner beiden Variablen um die folgenden Dinge:</p>
+<ul>
+<li><p>Färbe deine Datenpunkte nach Gruppenzugehörigkeit ein mit <code>color()</code></p></li>
+<li><p>Füge einen titel ein mit <code>ggtitle()</code></p></li>
+<li><p>Benne die Achsen mit <code>ylab()</code> und <code>xlab()</code></p></li>
+<li><p>Änder die Darstellungart zu <code>theme_minimal()</code></p></li>
+</ul></li>
+</ul>
+</section>
+</section>
+<section id="tabellen" class="level1">
+<h1>Tabellen</h1>
+<p>Diese Schritte dienen der Erstellung eines übersichtlichen Tabellen mit deskriptiver Statistik.</p>
+<ul>
+<li><strong>Paketinstallation und Laden:</strong> Paket <code>knitr</code> <strong>installieren</strong> und <strong>laden</strong> (ggf. muss davor das Paket <code>xfun</code> geupdated werden.</li>
+</ul>
+<ul>
+<li><p><strong>Erstellung des Data Frames:</strong> Erstelle einen Data Frame mit deskriptiver Statistik, z.B. mittels <code>summarise()</code> für die 4 Variablen des Pattern Copy Task</p></li>
+<li><p><strong>Anwendung von Labels:</strong> Wende <code>kable()</code> auf den Data Frame mit deskriptiver Statistik an.</p></li>
+<li><p><strong>Hilfefunktion und Formatierung:</strong> Schau dir die Hilfefunktion an und nimm Formatierungen vor, wie etwa die Umbenennung der Spalten mit <code>col.names(c(„new colnames here “))</code>, die Anpassung der Nachkommastellen auf 2 mit <code>digit =</code>, das Ergänzen einer Überschrift mit <code>caption =</code></p></li>
+</ul>
+<hr>
+</section>
+<section id="apa-konforme-tabellen-von-statistischen-analysen" class="level1">
+<h1>APA-konforme Tabellen von statistischen Analysen</h1>
+<p><strong>📑Referenz:</strong> <a href="https://dstanley4.github.io/apaTables/articles/apaTables.html" class="uri">https://dstanley4.github.io/apaTables/articles/apaTables.html</a></p>
+<ul>
+<li><strong>Paketinstallation und Laden:</strong> Paket <code>apaTables</code> <strong>installieren</strong> und <strong>laden</strong>.</li>
+</ul>
+<ul>
+<li><strong>Datenvorbereitung:</strong> Erstelle einen Data Frame nur mit den <strong>Proportion Correct Variablen</strong> der 3 Arbeitsgedächtnistests.</li>
+</ul>
+<ul>
+<li><strong>Erstellung der Korrelationstabelle:</strong> Wende <code>apa.cor.table()</code> auf diesen Data Frame an → du bekommst eine <strong>Korrelationstabelle im</strong> APA Format.</li>
+</ul>
+<ul>
+<li><strong>Speichern der Tabelle:</strong> Speichere die Tabelle in einer Word Datei mit der Ergänzung <code>filename = "somefilename.doc"</code>. <span class="citation" data-cites="Aaron">(<a href="#ref-Aaron" role="doc-biblioref"><strong>Aaron?</strong></a>)</span> im Ordner outputs?</li>
+</ul>
+<blockquote class="blockquote">
+<p><strong>Wichtiger Hinweis:</strong> Diese Funktion kann man auch für Regressionen und ANOVAs erstellen. Wir benutzen aber ein anderes Paket für ANOVAs (nicht ezANOVA, auf dem apaTables basiert)!</p>
+</blockquote>
+</section>
+<section id="am-ende-deiner-übungen---vergiss-nicht-dein-skript-abzuspeichern" class="level1">
 
 
 
-</main> <!-- /main -->
+
+</section>
+
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">Am Ende deiner Übungen - vergiss nicht dein Skript abzuspeichern! 😉</h2><div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
+<div id="ref-grinschgl2021" class="csl-entry" role="listitem">
+Grinschgl, Sandra, Hauke S. Meyerhoff, Stephan Schwan, and Frank Papenmeier. 2021. <span>“From Metacognitive Beliefs to Strategy Selection: Does Fake Performance Feedback Influence Cognitive Offloading?”</span> <em>Psychological Research</em> 85 (7): 2654–66. <a href="https://doi.org/10.1007/s00426-020-01435-9">https://doi.org/10.1007/s00426-020-01435-9</a>.
+</div>
+</div></section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {

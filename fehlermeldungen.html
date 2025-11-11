@@ -168,13 +168,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./EH_3.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Einheit 3 - 1.10.2025</span></a>
+ <span class="menu-text">Einheit 3 - 01.10.2025</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./EH_4.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Einheit 4 - 8.10.2025</span></a>
+ <span class="menu-text">Einheit 4 - 08.10.2025</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -198,7 +198,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./EH_8.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Einheit 8 - 5.11.2025</span></a>
+ <span class="menu-text">Einheit 8 - 05.11.2025</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./EH_9.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Einheit 9 - 12.11.2025</span></a>
   </div>
 </li>
       </ul>
@@ -232,15 +238,21 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./hands_on_4.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Hands on - Block 4 (Woche 7-8)</span></a>
+  <a href="./loesung_4.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Hands on - Block 4 (Woche 7- 8) - Mit Musterlösungen</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./hands_on_5.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Hands on - Block 5 (Woche 9 - 10)</span></a>
   </div>
 </li>
       </ul>
   </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./hausuebung_1.html" class="sidebar-item-text sidebar-link">
+  <a href="./hausuebung_loesung_1.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Hausübung 1</span></a>
   </div>
 </li>
@@ -337,6 +349,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <ul>
   <li><a href="#rendering-in-quarto-zu-einer-pdf-funktioniert-nicht" id="toc-rendering-in-quarto-zu-einer-pdf-funktioniert-nicht" class="nav-link active" data-scroll-target="#rendering-in-quarto-zu-einer-pdf-funktioniert-nicht">Rendering in Quarto zu einer PDF funktioniert nicht</a></li>
   <li><a href="#das-objekt-mit-dem-ich-etwas-machen-möchte-kann-nicht-gefunden-werden" id="toc-das-objekt-mit-dem-ich-etwas-machen-möchte-kann-nicht-gefunden-werden" class="nav-link" data-scroll-target="#das-objekt-mit-dem-ich-etwas-machen-möchte-kann-nicht-gefunden-werden">Das Objekt mit dem ich etwas machen möchte kann nicht gefunden werden</a></li>
+  <li><a href="#beim-rendern-einer-html-werden-noch-einige-weitere-ordner-und-dateien-erstellt" id="toc-beim-rendern-einer-html-werden-noch-einige-weitere-ordner-und-dateien-erstellt" class="nav-link" data-scroll-target="#beim-rendern-einer-html-werden-noch-einige-weitere-ordner-und-dateien-erstellt">Beim Rendern einer html werden noch einige weitere Ordner und Dateien erstellt</a></li>
   </ul>
 </nav>
     </div>
@@ -399,7 +412,26 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>dplyr<span class="sc">::</span><span class="fu">rename</span>(dat_full, <span class="at">cvstm_sum =</span> <span class="st">"csvtm_sum"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p><img src="images/Fehlermeldungen.png" class="img-fluid"></p>
-<p>Der zentrale Teil der Fehlermeldung ist hierbei “Error:! object <code>dat_full</code> not found”. Der Datensatz <code>dat_full</code> ist vor der Ausführung scheinbar noch nicht vorhanden. Stellt also unbedingt sicher, vor der Ausführung von <code>dplyr::rename(dat_full, cvstm_sum = "csvtm_sum")</code>den Datensatz eingelesen und den dafür vorgesehenen Chunk zum Einlesen <em>nicht</em> auf <code>eval = FALSE</code> gesetzt zu haben.</p>
+<p>Der zentrale Teil der Fehlermeldung ist hierbei “Error:! object <code>dat_full</code> not found”. Der Datensatz <code>dat_full</code> ist vor der Ausführung scheinbar noch nicht vorhanden. Stellt also unbedingt sicher, vor der Ausführung von <code>dplyr::rename(dat_full, cvstm_sum = "csvtm_sum")</code>den Datensatz eingelesen und den dafür vorgesehenen Chunk zum Einlesen <strong>nicht</strong> auf <code>eval = FALSE</code> gesetzt zu haben.</p>
+</section>
+<section id="beim-rendern-einer-html-werden-noch-einige-weitere-ordner-und-dateien-erstellt" class="level1">
+<h1>Beim Rendern einer html werden noch einige weitere Ordner und Dateien erstellt</h1>
+<p>Um zu grosse html-files oder Ladezeiten eines html-files zu vermeiden, weicht Quarto ggf. beim Rendern dazu aus nicht einen einzelnen html-file zu erstellen, sondern einen Ordner mit mehreren Dateien. Der html-file ruft diese dann beim Laden allesamt auf. Wenn das nicht gewünscht ist, dann gibt es mindestens zwei Möglichkeiten Quarto zu zwingen einen einzelnen und unabhängigen html-file zu erstellen. Als erste Variante kann der YAML-Header (der ganz oben im Quarto-file positioniert ist) um die Zeile <code>embed-resources: true</code> ergänzt werden:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># vorher</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>  format<span class="sc">:</span></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>    html<span class="sc">:</span></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a><span class="co"># nachher</span></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>  format<span class="sc">:</span></span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>    html<span class="sc">:</span></span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>      embed<span class="sc">-</span>resources<span class="sc">:</span> true</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Sollte sich auch damit das Problem nicht lösen, dann kann der Quarto-file auch manuell über das <em>Terminal</em> gerendert werden. Das Terminal beachten wir sonst im Seminar nicht, ist hierfür aber ausnahmsweise eine elegante Lösung. Das Terminal befindet sich unten links, wo sich auch die euch bereits vertraute <em>Console</em> und beim Rendern das Fenster <em>Background Jobs</em> befinden. Ist das Terminal noch nicht vorhanden, kann es über Tools –&gt; Terminal –&gt; New Terminal (Alt+ Umschalttaste + R) geöffnet werden. Dort wird dann folgender Befehl eingegeben:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>quarto render meinDokument.qmd <span class="sc">--</span>embed<span class="sc">-</span>resources</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Hierbei muss natürlich noch der Dateiname des .qmd-file entsprechend angepasst werden. Weitere Informationen gibt es <a href="https://quarto.org/docs/reference/formats/html.html">hier</a> (am besten auf der Seite selbst noch nach dem Begriff embed-resources suchen).</p>
 
 
 </section>
