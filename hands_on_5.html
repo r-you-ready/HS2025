@@ -455,19 +455,6 @@ Important
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">count</span>(XXXX) <span class="sc">|&gt;</span> </span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(XXX)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>dat_full <span class="sc">|&gt;</span></span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">count</span>(code) <span class="sc">|&gt;</span> </span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(n <span class="sc">&gt;</span> <span class="dv">1</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 3 × 2
-   code     n
-  &lt;dbl&gt; &lt;int&gt;
-1    14     2
-2    50     2
-3   159     2</code></pre>
-</div>
-</div>
 <p>Entferne die Duplikate wieder, indem du z. B. <code>unique()</code> auf den Datensatz anwendest. <code>unique()</code> entfernt vollständig identische Zeilen und behält nur eine davon.</p>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
@@ -483,7 +470,7 @@ Note
 <div class="callout-body-container callout-body">
 <p>Alternative: Falls du Duplikate nur auf Basis einer bestimmten Variable (z. B. id) entfernen möchtest, kannst du duplicated() verwenden. Dadurch bleibt pro ID nur die erste Zeile erhalten.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>dat_full <span class="ot">&lt;-</span> dat_full[<span class="sc">!</span><span class="fu">duplicated</span>(dat_full<span class="sc">$</span>code), ]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>dat_full <span class="ot">&lt;-</span> dat_full[<span class="sc">!</span><span class="fu">duplicated</span>(dat_full<span class="sc">$</span>code), ]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
 </div>
@@ -493,23 +480,40 @@ Note
 <h1>Dplyr: Code korrigieren und verbessern</h1>
 <p><strong>Dieser Code funktioniert nicht. Korrigiere ihn. Achte dabei auf Syntaxfehler.</strong></p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>dat_full <span class="sc">%&gt;%</span></span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(code, post, strategies)</span>
-<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(<span class="at">strtegies =</span> <span class="st">"1"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>dat_full <span class="sc">%&gt;%</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(code, post, strategies)</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(<span class="at">strtegies =</span> <span class="st">"1"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p><strong>Dieser Code funktioniert, ist jedoch sehr umständlich und ineffizient. Verwende <code>dplyr</code>-Funktionen, um ihn kürzer und übersichtlicher zu gestalten.</strong></p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>dat_full <span class="sc">%&gt;%</span></span>
-<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(</span>
-<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>    <span class="at">Gesamtmittelwert =</span> <span class="fu">mean</span>(</span>
-<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>      <span class="fu">c</span>(</span>
-<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>        question1, question2, question3, question4, question5,</span>
-<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>        question6, question7, question8, question9, question10,</span>
-<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>        question11, question12, question13, question14, question15,</span>
-<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a>        question16, question17, question18</span>
-<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a>      )</span>
-<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a>    )</span>
-<span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>dat_full <span class="sc">|&gt;</span> </span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>    <span class="at">Gesamtmittelwert =</span> <span class="fu">mean</span>(</span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>      <span class="fu">c</span>(</span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>        question1, question2, question3, question4, question5,</span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>        question6, question7, question8, question9, question10,</span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>        question11, question12, question13, question14, question15,</span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>        question16, question17, question18</span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>      )</span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p><strong>💡Tips:</strong></p>
+<ul>
+<li><p>Nutze <code>select()</code> zusammen mit <code>starts_with()</code>.<br>
+Achtung: <code>select()</code> braucht als erstes Argument den Datensatz obwohl wir die Pipe verwenden.</p></li>
+<li><p>Um den Gesamtmean zu berechnen, musst du zuerst <code>rowMeans()</code> anwenden und dann mit <code>mean()</code> kombinieren. <code>select()</code> gibt als Resultat nur ein Dataframe zurück, das <code>mean()</code> nicht direkt verarbeiten kann.</p></li>
+</ul>
+<p>Du kannst versuchen diese Struktur mit den richtigen Funktionen zu ergänzen.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>dat_full <span class="sc">|&gt;</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(</span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>    <span class="at">Gesamtmittelwert =</span> <span class="fu">Funktion_1</span>(</span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>      <span class="fu">Funktion_2</span>(</span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>        <span class="fu">Funktion_3</span>(dat_full, <span class="fu">starts_with</span>(<span class="st">"XXX"</span>))</span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>      )</span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="wide-to-long" class="level1">
@@ -550,7 +554,7 @@ Note
 <li><strong>Spezifikation des Regressionsmodells:</strong> Verwende die Funktion <code>lm()</code> um ein Regressionsmodell zwischen Cognitive Offloading (<code>mean_rl_all</code> und der Arbeitsgedächtnisleistung (Feature Switch Detection Task - <code>cvstm_propcorrect</code>) zu spezifizieren.</li>
 </ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>reg_fit <span class="ot">&lt;-</span> <span class="fu">lm</span>(Cognitive_Offloading_Variable <span class="sc">~</span> Arbeitsgedächtnisleistung, <span class="at">data =</span> dat_ full)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>reg_fit <span class="ot">&lt;-</span> <span class="fu">lm</span>(Cognitive_Offloading_Variable <span class="sc">~</span> Arbeitsgedächtnisleistung, <span class="at">data =</span> dat_ full)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <ul>
 <li><strong>Speichern der Residuen:</strong> Speichere die Residuen dieses Regressionsmodells mit der Funktion <code>rstandard()</code></li>
@@ -613,9 +617,9 @@ PDF Grinschgl2021 –&gt; Seite 7 –&gt; Multifactorial Memory Questionnaire
 <h2 class="anchored" data-anchor-id="streudiagrammescatterplots-weitere-datenverteilungen">Streudiagramme/Scatterplots &amp; weitere Datenverteilungen</h2>
 <table class="caption-top table">
 <colgroup>
-<col style="width: 26%">
-<col style="width: 26%">
-<col style="width: 46%">
+<col style="width: 27%">
+<col style="width: 27%">
+<col style="width: 44%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -674,8 +678,8 @@ Cheatsheet ggplot2
 <li>Plotte den Zusammenhang zwischen Cognitive Offloading (Öffnungen des Modelfensters - <code>mean_rl_all</code>) und der Arbeitsgedächtnisleistung (Feature Switch Detection Task <code>cvstm_propcorrect</code>). Ergänze dafür den Code unten mit den richtigen Variablen. (Wichtig für Ausreißerkontrolle bei Berechnungen von Korrelationen/Regressionen)</li>
 </ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> dat_full, <span class="fu">aes</span>(<span class="at">x =</span> XXXXX, <span class="at">y =</span> XXXXXX))<span class="sc">+</span></span>
-<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_XXXX</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> dat_full, <span class="fu">aes</span>(<span class="at">x =</span> XXXXX, <span class="at">y =</span> XXXXXX))<span class="sc">+</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_XXXX</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <ul>
 <li>Ausreißer können auch mit <code>boxplots</code> für einzelne Variablen identifiziert werden 👉 für Öffnungen des Modelfensters anschauen. Nutze das richtige <code>geom()</code> aus der Tabelle.</li>
@@ -724,7 +728,7 @@ Cheatsheet ggplot2
 <li><strong>Erstellung der Korrelationstabelle:</strong> Wende <code>apa.cor.table()</code> auf diesen Data Frame an → du bekommst eine <strong>Korrelationstabelle im</strong> APA Format.</li>
 </ul>
 <ul>
-<li><strong>Speichern der Tabelle:</strong> Speichere die Tabelle in einer Word Datei mit der Ergänzung <code>filename = "somefilename.doc"</code>. <span class="citation" data-cites="Aaron">(<a href="#ref-Aaron" role="doc-biblioref"><strong>Aaron?</strong></a>)</span> im Ordner outputs?</li>
+<li><strong>Speichern der Tabelle:</strong> Speichere die Tabelle in einer Word Datei mit der Ergänzung <code>filename = "somefilename.doc"</code> im Ordner outputs?</li>
 </ul>
 <blockquote class="blockquote">
 <p><strong>Wichtiger Hinweis:</strong> Diese Funktion kann man auch für Regressionen und ANOVAs erstellen. Wir benutzen aber ein anderes Paket für ANOVAs (nicht ezANOVA, auf dem apaTables basiert)!</p>
