@@ -1111,7 +1111,7 @@ display:block!important;
 </ul>
 <p><strong>Probleme beim Einlesen –&gt; Keine NAs sondern nur leere Zellen –&gt; Andere Funktionen als read_delim genutzt.</strong></p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a></a>data <span class="ot">&lt;-</span> <span class="fu">read_delim</span>(<span class="st">&quot;raw/fake_bfi_dataset.csv&quot;</span>, <span class="at">delim =</span> <span class="st">&quot;;&quot;</span>, <span class="at">escape_double =</span> <span class="cn">FALSE</span>, <span class="at">trim_ws =</span> <span class="cn">TRUE</span>)</span>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a></a>data <span class="ot">&lt;-</span> <span class="fu">read_delim</span>(<span class="st">&quot;raw/fake_bfi_dataset.csv&quot;</span>, <span class="at">delim =</span> <span class="st">&quot;;&quot;</span>)</span>
 <span id="cb1-2"><a></a></span>
 <span id="cb1-3"><a></a>bfi_10 <span class="ot">&lt;-</span> <span class="fu">drop_na</span>(data)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
@@ -1138,9 +1138,16 @@ display:block!important;
 <span id="cb2-16"><a></a></span>
 <span id="cb2-17"><a></a>data_bfi_recoded <span class="ot">&lt;-</span> clean_data_bfi_10 <span class="sc">|&gt;</span></span>
 <span id="cb2-18"><a></a>  <span class="fu">mutate</span>(</span>
-<span id="cb2-19"><a></a>    <span class="fu">across</span>(<span class="fu">ends_with</span>(<span class="st">&quot;_r&quot;</span>), <span class="sc">~</span> <span class="dv">6</span> <span class="sc">-</span> .)</span>
-<span id="cb2-20"><a></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb2-19"><a></a>    <span class="fu">across</span>(<span class="fu">ends_with</span>(<span class="st">&quot;_r&quot;</span>), <span class="sc">~</span> <span class="dv">6</span> <span class="sc">-</span> .)  <span class="co"># 6- Minus current Value . </span></span>
+<span id="cb2-20"><a></a>  )</span>
+<span id="cb2-21"><a></a></span>
+<span id="cb2-22"><a></a></span>
+<span id="cb2-23"><a></a>data_bfi_recoded <span class="ot">&lt;-</span> clean_data_bfi_10 <span class="sc">|&gt;</span></span>
+<span id="cb2-24"><a></a>  <span class="fu">mutate</span>(</span>
+<span id="cb2-25"><a></a>    <span class="fu">across</span>(<span class="fu">ends_with</span>(<span class="st">&quot;_r&quot;</span>), <span class="cf">function</span>(x) <span class="dv">6</span> <span class="sc">-</span> x) <span class="co"># Umgeschrieben</span></span>
+<span id="cb2-26"><a></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
+<p><a href="https://coolbutuseless.github.io/2019/03/13/anonymous-functions-in-r-part-1/">Anonyme Funktionen</a></p>
 </section>
 <section id="hausübung-1" class="slide level2">
 <h2>Hausübung 1</h2>
