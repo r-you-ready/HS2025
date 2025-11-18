@@ -207,6 +207,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
  <span class="menu-text">Einheit 9 - 12.11.2025</span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./EH_10.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Einheit 10 - 19.11.2025</span></a>
+  </div>
+</li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
@@ -250,12 +256,29 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
       </ul>
   </li>
-        <li class="sidebar-item">
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="./hausuebungen.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Hausuebungen</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./hausuebung_loesung_1.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Hausübung 1</span></a>
+ <span class="menu-text">Hausübung 1 - Mit Lösungen</span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./hausuebung_2.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Hausübung 2</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a href="./faq.html" class="sidebar-item-text sidebar-link">
@@ -767,24 +790,12 @@ Note
 <h2 class="anchored" data-anchor-id="wenn-ich-mein-quarto-dokument-zu-einer-pdf-datei-rendern-möchte-erhalte-ich-die-fehlermeldung-dass-latex-nicht-installiert-ist.-wie-kann-ich-latex-installieren">Wenn ich mein Quarto-Dokument zu einer PDF-Datei rendern möchte, erhalte ich die Fehlermeldung, dass LaTeX nicht installiert ist. Wie kann ich LaTeX installieren?</h2>
 <p>LaTeX ist eine Software um individuelle, professionelle Formatierungen für PDFs oder andere Dateien zu erstellen. Was für unsere Zwecke bereits ausreichen sollte ist die Installation von <code>tinytex</code>. <code>tinytex</code> ist keine eigenständige Software, sondern schlichtweg um ein Paket von vielen in R.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a> <span class="co">#| eval: false</span></span>
-<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a> <span class="co">#| echo: true</span></span>
-<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"tinytex"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>The following package(s) will be installed:
-- tinytex [0.57]
-These packages will be installed into "~/OneDrive - Universitaet Bern/MethodenLVOneDrive/MethodensemHS25/Website/ruready/renv/library/windows/R-4.5/x86_64-w64-mingw32".
-
-# Installing packages --------------------------------------------------------
-- Installing tinytex ...                        OK [linked from cache]
-Successfully installed 1 package in 69 milliseconds.</code></pre>
-</div>
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="co">#install.packages("tinytex")</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Nach der Installation des Pakets ruft ihr dann folgendene Funktion auf:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>tinytex<span class="sc">::</span><span class="fu">install_tinytex</span>() </span>
-<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a><span class="co"># tinytex:: stellt sicher, dass die Funktion aus dem entsprechenden Paket aufgerufen wird</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="co">#tinytex::install_tinytex() </span></span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a><span class="co">#tinytex:: stellt sicher, dass die Funktion aus dem entsprechenden Paket aufgerufen wird</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Hierdurch wird temporär die eigentliche Software installiert, mit welcher aus eurem Quarto-Dokument eine PDF erstellt werden kann. Dies kann einige Minuten dauern. Im Anschluss sollte das Rendern hin zu einer PDF funktionieren.</p>
 

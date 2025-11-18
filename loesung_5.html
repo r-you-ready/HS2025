@@ -227,6 +227,12 @@ div.csl-indent {
  <span class="menu-text">Einheit 9 - 12.11.2025</span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./EH_10.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Einheit 10 - 19.11.2025</span></a>
+  </div>
+</li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
@@ -270,12 +276,29 @@ div.csl-indent {
 </li>
       </ul>
   </li>
-        <li class="sidebar-item">
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="./hausuebungen.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Hausuebungen</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./hausuebung_loesung_1.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Hausübung 1</span></a>
+ <span class="menu-text">Hausübung 1 - Mit Lösungen</span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./hausuebung_2.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Hausübung 2</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a href="./faq.html" class="sidebar-item-text sidebar-link">
@@ -370,6 +393,21 @@ div.csl-indent {
   <li><a href="#lernziele" id="toc-lernziele" class="nav-link active" data-scroll-target="#lernziele">Lernziele</a></li>
   <li><a href="#duplizierte-werte-entfernen" id="toc-duplizierte-werte-entfernen" class="nav-link" data-scroll-target="#duplizierte-werte-entfernen"><strong>Duplizierte Werte entfernen</strong></a></li>
   <li><a href="#dplyr-code-korrigieren-und-verbessern" id="toc-dplyr-code-korrigieren-und-verbessern" class="nav-link" data-scroll-target="#dplyr-code-korrigieren-und-verbessern">Dplyr: Code korrigieren und verbessern</a></li>
+  <li><a href="#wide-to-long" id="toc-wide-to-long" class="nav-link" data-scroll-target="#wide-to-long">Wide to Long:</a>
+  <ul class="collapse">
+  <li><a href="#übungen-zur-datenkonversion" id="toc-übungen-zur-datenkonversion" class="nav-link" data-scroll-target="#übungen-zur-datenkonversion">Übungen zur Datenkonversion</a></li>
+  </ul></li>
+  <li><a href="#datenqualität" id="toc-datenqualität" class="nav-link" data-scroll-target="#datenqualität">Datenqualität</a>
+  <ul class="collapse">
+  <li><a href="#skewness-und-kurtosis" id="toc-skewness-und-kurtosis" class="nav-link" data-scroll-target="#skewness-und-kurtosis">Skewness und Kurtosis</a></li>
+  <li><a href="#residuen" id="toc-residuen" class="nav-link" data-scroll-target="#residuen">Residuen</a></li>
+  <li><a href="#skalenreliabilität" id="toc-skalenreliabilität" class="nav-link" data-scroll-target="#skalenreliabilität">Skalenreliabilität</a></li>
+  <li><a href="#streudiagrammescatterplots-weitere-datenverteilungen" id="toc-streudiagrammescatterplots-weitere-datenverteilungen" class="nav-link" data-scroll-target="#streudiagrammescatterplots-weitere-datenverteilungen">Streudiagramme/Scatterplots &amp; weitere Datenverteilungen</a></li>
+  <li><a href="#fortgeschrittene-freiwillige-übungen" id="toc-fortgeschrittene-freiwillige-übungen" class="nav-link" data-scroll-target="#fortgeschrittene-freiwillige-übungen">Fortgeschrittene (freiwillige Übungen)</a></li>
+  </ul></li>
+  <li><a href="#tabellen" id="toc-tabellen" class="nav-link" data-scroll-target="#tabellen">Tabellen</a></li>
+  <li><a href="#apa-konforme-tabellen-von-statistischen-analysen" id="toc-apa-konforme-tabellen-von-statistischen-analysen" class="nav-link" data-scroll-target="#apa-konforme-tabellen-von-statistischen-analysen">APA-konforme Tabellen von statistischen Analysen</a></li>
+  <li><a href="#am-ende-deiner-übungen---vergiss-nicht-dein-skript-abzuspeichern" id="toc-am-ende-deiner-übungen---vergiss-nicht-dein-skript-abzuspeichern" class="nav-link" data-scroll-target="#am-ende-deiner-übungen---vergiss-nicht-dein-skript-abzuspeichern">Am Ende deiner Übungen - vergiss nicht dein Skript abzuspeichern! 😉</a></li>
   </ul>
 </nav>
     </div>
@@ -506,7 +544,7 @@ Note
 <span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(<span class="at">strtegies =</span> <span class="st">"1"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="callout callout-style-default callout-note callout-titled" title="Lösung">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-36-contents" aria-controls="callout-36" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -515,7 +553,7 @@ Lösung
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-36" class="callout-36-contents callout-collapse collapse">
+<div id="callout-4" class="callout-4-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <div class="cell">
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>dat_full <span class="sc">|&gt;</span></span>
@@ -538,18 +576,9 @@ Lösung
 # ℹ 48 more rows</code></pre>
 </div>
 </div>
-<div class="callout callout-style-default callout-note callout-titled" title="Lösung">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-35-contents" aria-controls="callout-35" aria-expanded="false" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
 </div>
-<div class="callout-title-container flex-fill">
-Lösung
 </div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-35" class="callout-35-contents callout-collapse collapse">
-<div class="callout-body-container callout-body">
 <p><strong>Dieser Code funktioniert, ist jedoch sehr umständlich und ineffizient. Verwende <code>dplyr</code>-Funktionen, um ihn kürzer und übersichtlicher zu gestalten.</strong></p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>dat_full <span class="sc">|&gt;</span></span>
@@ -565,7 +594,7 @@ Lösung
 <span id="cb11-11"><a href="#cb11-11" aria-hidden="true" tabindex="-1"></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="callout callout-style-default callout-note callout-titled" title="Lösung">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-5-contents" aria-controls="callout-5" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -574,7 +603,7 @@ Lösung
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-4" class="callout-4-contents callout-collapse collapse">
+<div id="callout-5" class="callout-5-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <div class="cell">
 <div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>dat_full <span class="sc">|&gt;</span></span>
@@ -598,6 +627,7 @@ Caused by warning in `mean.default()`:
 </div>
 </div>
 </div>
+</section>
 <section id="wide-to-long" class="level1">
 <h1>Wide to Long:</h1>
 <section id="übungen-zur-datenkonversion" class="level2">
@@ -607,35 +637,6 @@ Caused by warning in `mean.default()`:
 <p>Die folgenden Schritte dienen der Konversion von Daten zwischen dem Wide- und Long-Format unter Verwendung des <code>Tidyverse</code>-Pakets in R.</p>
 <ul>
 <li>Mit der Funktion <strong><code>pivot_longer()</code></strong> Spalten der Leistungseinschätzung in Long-Format umwandeln und in neuen Datensatz speichern, <strong>nur für Übungszwecke</strong>.</li>
-</ul>
-<div class="callout callout-style-default callout-note callout-titled" title="Lösung">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-5-contents" aria-controls="callout-5" aria-expanded="false" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Lösung
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-5" class="callout-5-contents callout-collapse collapse">
-<div class="callout-body-container callout-body">
-<pre><code>::: {.cell}
-
-```{.r .cell-code}
-df_long &lt;- dat_full |&gt;
-  pivot_longer(
-    cols = c(pre1, pre2, pre3, pre4, post),
-    names_to = "time_rating",
-    values_to = "rating"
-  )
-```
-:::</code></pre>
-</div>
-</div>
-</div>
-<ul>
-<li>Wandle den Datensatz noch mal in das Long Format um, aber nur basierend auf den Spalten <strong><code>pre1</code></strong> und <strong><code>pre4</code></strong> <strong>Long-Format wird für 2x3 ANOVA aus Grinschgl et al.&nbsp;(2020) benötigt; für Vergleich der 2 Messzeitpunkte in dieser Analysen, benötigen wir diese im Long-Format.</strong></li>
 </ul>
 <div class="callout callout-style-default callout-note callout-titled" title="Lösung">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-6-contents" aria-controls="callout-6" aria-expanded="false" aria-label="Toggle callout">
@@ -649,55 +650,19 @@ Lösung
 </div>
 <div id="callout-6" class="callout-6-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<pre><code>::: {.cell}
-
-```{.r .cell-code}
-df_long &lt;- dat_full |&gt;
-  pivot_longer(
-    cols = c(pre1, pre4),
-    names_to = "time_rating",
-    values_to = "rating"
-  )
-```
-:::</code></pre>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>df_long <span class="ot">&lt;-</span> dat_full <span class="sc">|&gt;</span></span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">pivot_longer</span>(</span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a>    <span class="at">cols =</span> <span class="fu">c</span>(pre1, pre2, pre3, pre4, post),</span>
+<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a>    <span class="at">names_to =</span> <span class="st">"time_rating"</span>,</span>
+<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">values_to =</span> <span class="st">"rating"</span></span>
+<span id="cb15-6"><a href="#cb15-6" aria-hidden="true" tabindex="-1"></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 </div>
 </div>
 </div>
 <ul>
-<li>Wandle die Spalte <strong><code>time_rating</code></strong> in einen Factor um –&gt; <strong>auch notwendig für Analysen</strong>.</li>
-</ul>
-<div class="callout callout-style-default callout-note callout-titled" title="Lösung">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-34-contents" aria-controls="callout-34" aria-expanded="false" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Lösung
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-34" class="callout-34-contents callout-collapse collapse">
-<div class="callout-body-container callout-body">
-<pre><code>::: {.cell}
-
-```{.r .cell-code}
-df_long$time_rating &lt;- factor(df_long$time_rating)
-```
-:::</code></pre>
-<div class="callout callout-style-default callout-note callout-titled" title="Lösung">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-33-contents" aria-controls="callout-33" aria-expanded="false" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Lösung
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-33" class="callout-33-contents callout-collapse collapse">
-<div class="callout-body-container callout-body">
-<ul>
-<li>Speichere den Long Datensatz als <strong><code>csv.</code></strong> Datei ab.</li>
+<li>Wandle den Datensatz noch mal in das Long Format um, aber nur basierend auf den Spalten <strong><code>pre1</code></strong> und <strong><code>pre4</code></strong> <strong>Long-Format wird für 2x3 ANOVA aus Grinschgl et al.&nbsp;(2020) benötigt; für Vergleich der 2 Messzeitpunkte in dieser Analysen, benötigen wir diese im Long-Format.</strong></li>
 </ul>
 <div class="callout callout-style-default callout-note callout-titled" title="Lösung">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-7-contents" aria-controls="callout-7" aria-expanded="false" aria-label="Toggle callout">
@@ -712,13 +677,18 @@ Lösung
 <div id="callout-7" class="callout-7-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="fu">write.csv</span>(df_long, <span class="st">"processed/data_long.csv"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>df_long <span class="ot">&lt;-</span> dat_full <span class="sc">|&gt;</span></span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">pivot_longer</span>(</span>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a>    <span class="at">cols =</span> <span class="fu">c</span>(pre1, pre4),</span>
+<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a>    <span class="at">names_to =</span> <span class="st">"time_rating"</span>,</span>
+<span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">values_to =</span> <span class="st">"rating"</span></span>
+<span id="cb16-6"><a href="#cb16-6" aria-hidden="true" tabindex="-1"></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
 </div>
 </div>
 <ul>
-<li>Verwende <strong><code>pivot_wider</code></strong> unter Angabe von <strong><code>names_from</code></strong> und <strong><code>values_from</code></strong> um den Datensatz wieder in das Wide-Format zu bringen. –&gt; <strong>nur für Übungszwecke.</strong></li>
+<li>Wandle die Spalte <strong><code>time_rating</code></strong> in einen Factor um –&gt; <strong>auch notwendig für Analysen</strong>.</li>
 </ul>
 <div class="callout callout-style-default callout-note callout-titled" title="Lösung">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-8-contents" aria-controls="callout-8" aria-expanded="false" aria-label="Toggle callout">
@@ -733,6 +703,48 @@ Lösung
 <div id="callout-8" class="callout-8-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <div class="cell">
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>df_long<span class="sc">$</span>time_rating <span class="ot">&lt;-</span> <span class="fu">factor</span>(df_long<span class="sc">$</span>time_rating)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+</div>
+</div>
+<ul>
+<li>Speichere den Long Datensatz als <strong><code>csv.</code></strong> Datei ab.</li>
+</ul>
+<div class="callout callout-style-default callout-note callout-titled" title="Lösung">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-9-contents" aria-controls="callout-9" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Lösung
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-9" class="callout-9-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="fu">write.csv</span>(df_long, <span class="st">"processed/data_long.csv"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+</div>
+</div>
+<ul>
+<li>Verwende <strong><code>pivot_wider</code></strong> unter Angabe von <strong><code>names_from</code></strong> und <strong><code>values_from</code></strong> um den Datensatz wieder in das Wide-Format zu bringen. –&gt; <strong>nur für Übungszwecke.</strong></li>
+</ul>
+<div class="callout callout-style-default callout-note callout-titled" title="Lösung">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-10-contents" aria-controls="callout-10" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Lösung
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-10" class="callout-10-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<div class="cell">
 <div class="sourceCode cell-code" id="cb19"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a>df_wide <span class="ot">&lt;-</span> df_long <span class="sc">|&gt;</span> </span>
 <span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">pivot_wider</span>(<span class="at">names_from =</span> time_rating,</span>
 <span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a>              <span class="at">values_from =</span> rating)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -740,6 +752,8 @@ Lösung
 </div>
 </div>
 </div>
+</section>
+</section>
 <section id="datenqualität" class="level1">
 <h1>Datenqualität</h1>
 <section id="skewness-und-kurtosis" class="level2">
@@ -749,7 +763,7 @@ Lösung
 <li><strong>Installieren und laden des Pakets</strong> {psych}: Stelle sicher, dass das Statis Paket <code>psych</code>für die weiteren Analysen geladen ist.</li>
 </ul>
 <div class="callout callout-style-default callout-note callout-titled" title="Lösung">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-32-contents" aria-controls="callout-32" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-11-contents" aria-controls="callout-11" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -758,7 +772,7 @@ Lösung
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-32" class="callout-32-contents callout-collapse collapse">
+<div id="callout-11" class="callout-11-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <div class="cell">
 <div class="sourceCode cell-code" id="cb20"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="co"># install.packages("psych")</span></span>
@@ -773,11 +787,14 @@ Attache Paket: 'psych'</code></pre>
     %+%, alpha</code></pre>
 </div>
 </div>
+</div>
+</div>
+</div>
 <ul>
 <li>Berechne die Schiefe und die Kurtosis der Variablen “Öffnungen des Modellfensters” (<code>mean_rl_all</code>) für die drei Gruppen. Verwende hierfür die <code>dplyr</code>-Funktionen <code>group_by()</code> und <code>summarize()</code>.</li>
 </ul>
 <div class="callout callout-style-default callout-note callout-titled" title="Lösung">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-9-contents" aria-controls="callout-9" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-12-contents" aria-controls="callout-12" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -786,7 +803,7 @@ Lösung
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-9" class="callout-9-contents callout-collapse collapse">
+<div id="callout-12" class="callout-12-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <div class="cell">
 <div class="sourceCode cell-code" id="cb23"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a>summary_table <span class="ot">&lt;-</span> dat_full <span class="sc">|&gt;</span></span>
@@ -807,6 +824,7 @@ Lösung
 </div>
 </div>
 </div>
+</section>
 <section id="residuen" class="level2">
 <h2 class="anchored" data-anchor-id="residuen">Residuen</h2>
 <p>📖Siehe auch: <a href="https://bjoernwalther.com/normalverteilung-der-residuen-bei-der-regression-in-r-testen/">Normalverteilung der Residuen bei der Regression in R testen</a></p>
@@ -818,7 +836,7 @@ Lösung
 <div class="sourceCode cell-code" id="cb25"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a>reg_fit <span class="ot">&lt;-</span> <span class="fu">lm</span>(Cognitive_Offloading_Variable <span class="sc">~</span> Arbeitsgedächtnisleistung, <span class="at">data =</span> dat_ full)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="callout callout-style-default callout-note callout-titled" title="Lösung">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-10-contents" aria-controls="callout-10" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-13-contents" aria-controls="callout-13" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -827,7 +845,7 @@ Lösung
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-10" class="callout-10-contents callout-collapse collapse">
+<div id="callout-13" class="callout-13-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <div class="cell">
 <div class="sourceCode cell-code" id="cb26"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a>reg_fit <span class="ot">&lt;-</span> <span class="fu">lm</span>(mean_rl_all <span class="sc">~</span> cvstm_propcorrect, <span class="at">data =</span> dat_full)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -839,7 +857,7 @@ Lösung
 <li><strong>Speichern der Residuen:</strong> Speichere die Residuen dieses Regressionsmodells mit der Funktion <code>rstandard()</code></li>
 </ul>
 <div class="callout callout-style-default callout-note callout-titled" title="Lösung">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-11-contents" aria-controls="callout-11" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-14-contents" aria-controls="callout-14" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -848,7 +866,7 @@ Lösung
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-11" class="callout-11-contents callout-collapse collapse">
+<div id="callout-14" class="callout-14-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <div class="cell">
 <div class="sourceCode cell-code" id="cb27"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a>residuals <span class="ot">&lt;-</span> <span class="fu">rstandard</span>(reg_fit)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -860,7 +878,7 @@ Lösung
 <li><strong>Visualisierung mittels Histogramm:</strong> Stelle die die Residuen in einem Histogramm mit der Funktion <code>hist()</code> dar.</li>
 </ul>
 <div class="callout callout-style-default callout-note callout-titled" title="Lösung">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-12-contents" aria-controls="callout-12" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-15-contents" aria-controls="callout-15" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -869,7 +887,7 @@ Lösung
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-12" class="callout-12-contents callout-collapse collapse">
+<div id="callout-15" class="callout-15-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <div class="cell">
 <div class="sourceCode cell-code" id="cb28"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a><span class="fu">hist</span>(residuals)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -889,7 +907,7 @@ Lösung
 <li><strong>Visualisierung mittels QQ-Plot:</strong> Stelle die Residuen in einem <code>QQ-Plot</code> mit der Funktion <code>qqnorm()</code> dar. Ergänze die <strong>Regressionsgerade</strong> mit <code>qqline()</code>.</li>
 </ul>
 <div class="callout callout-style-default callout-note callout-titled" title="Lösung">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-13-contents" aria-controls="callout-13" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-16-contents" aria-controls="callout-16" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -898,7 +916,7 @@ Lösung
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-13" class="callout-13-contents callout-collapse collapse">
+<div id="callout-16" class="callout-16-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <div class="cell">
 <div class="sourceCode cell-code" id="cb30"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a><span class="fu">qqnorm</span>(residuals)</span>
@@ -924,7 +942,7 @@ Lösung
 <li><strong>Datenvorbereitung für die Analyse:</strong> Speichere alle Variablen des <code>MMQs</code> in einem <strong>neuen</strong> Data Frame ab. Wähle dabei die Spalten mittels <code>select</code> aus.</li>
 </ul>
 <div class="callout callout-style-default callout-note callout-titled" title="Lösung">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-14-contents" aria-controls="callout-14" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-17-contents" aria-controls="callout-17" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -933,7 +951,7 @@ Lösung
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-14" class="callout-14-contents callout-collapse collapse">
+<div id="callout-17" class="callout-17-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <div class="cell">
 <div class="sourceCode cell-code" id="cb32"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a>mmq_vars <span class="ot">&lt;-</span> dat_full <span class="sc">|&gt;</span></span>
@@ -959,7 +977,7 @@ Warning
 </div>
 </div>
 <div class="callout callout-style-default callout-note callout-titled" title="Lösung">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-16-contents" aria-controls="callout-16" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-19-contents" aria-controls="callout-19" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -968,7 +986,7 @@ Lösung
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-16" class="callout-16-contents callout-collapse collapse">
+<div id="callout-19" class="callout-19-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <div class="cell">
 <div class="sourceCode cell-code" id="cb33"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a>psych<span class="sc">::</span><span class="fu">alpha</span>(mmq_vars)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -1057,7 +1075,7 @@ question18 0.04 0.16 0.09 0.43 0.28    0</code></pre>
 </li>
 </ul>
 <div class="callout callout-style-default callout-note callout-titled" title="Lösung">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-17-contents" aria-controls="callout-17" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-20-contents" aria-controls="callout-20" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -1066,7 +1084,7 @@ Lösung
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-17" class="callout-17-contents callout-collapse collapse">
+<div id="callout-20" class="callout-20-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <div class="cell">
 <div class="sourceCode cell-code" id="cb35"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a>psych<span class="sc">::</span><span class="fu">omega</span>(mmq_vars)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -1181,7 +1199,7 @@ Omega group for total scores and subscales    0.05  NA 0.09 0.08</code></pre>
 </div>
 </div>
 <div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-18-contents" aria-controls="callout-18" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-21-contents" aria-controls="callout-21" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -1190,7 +1208,7 @@ PDF Grinschgl2021 –&gt; Seite 7 –&gt; Multifactorial Memory Questionnaire
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-18" class="callout-18-contents callout-collapse collapse">
+<div id="callout-21" class="callout-21-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <iframe src="PDFs/Grinschgl2020.pdf" width="100%" height="500px">
 </iframe>
@@ -1198,7 +1216,7 @@ PDF Grinschgl2021 –&gt; Seite 7 –&gt; Multifactorial Memory Questionnaire
 </div>
 </div>
 <div class="callout callout-style-default callout-note callout-titled" title="Lösung">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-19-contents" aria-controls="callout-19" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-22-contents" aria-controls="callout-22" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -1207,7 +1225,7 @@ Lösung
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-19" class="callout-19-contents callout-collapse collapse">
+<div id="callout-22" class="callout-22-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <div class="cell">
 <div class="sourceCode cell-code" id="cb44"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb44-1"><a href="#cb44-1" aria-hidden="true" tabindex="-1"></a><span class="fu">alpha</span>(mmq_vars)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -1300,9 +1318,9 @@ question18 0.04 0.16 0.09 0.43 0.28    0</code></pre>
 <h2 class="anchored" data-anchor-id="streudiagrammescatterplots-weitere-datenverteilungen">Streudiagramme/Scatterplots &amp; weitere Datenverteilungen</h2>
 <table class="caption-top table">
 <colgroup>
-<col style="width: 27%">
-<col style="width: 27%">
-<col style="width: 44%">
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -1340,7 +1358,7 @@ question18 0.04 0.16 0.09 0.43 0.28    0</code></pre>
 </tbody>
 </table>
 <div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-20-contents" aria-controls="callout-20" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-23-contents" aria-controls="callout-23" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -1349,7 +1367,7 @@ Cheatsheet ggplot2
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-20" class="callout-20-contents callout-collapse collapse">
+<div id="callout-23" class="callout-23-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <iframe src="PDFs/ggplot.pdf" width="100%" height="500px">
 </iframe>
@@ -1368,7 +1386,7 @@ Cheatsheet ggplot2
 <li>Ausreißer können auch mit <code>boxplots</code> für einzelne Variablen identifiziert werden 👉 für Öffnungen des Modelfensters anschauen. Nutze das richtige <code>geom()</code> aus der Tabelle.</li>
 </ul>
 <div class="callout callout-style-default callout-note callout-titled" title="Lösung">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-21-contents" aria-controls="callout-21" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-24-contents" aria-controls="callout-24" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -1377,7 +1395,7 @@ Lösung
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-21" class="callout-21-contents callout-collapse collapse">
+<div id="callout-24" class="callout-24-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <div class="cell">
 <div class="sourceCode cell-code" id="cb47"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb47-1"><a href="#cb47-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> dat_full, <span class="fu">aes</span>(<span class="at">y =</span> mean_rl_all))<span class="sc">+</span></span>
@@ -1398,7 +1416,7 @@ Lösung
 <li>Lass dir den <code>boxplot()</code> getrennt für die 3 Experimentalgruppen anzeigen. Setze dafür <code>y = group</code>.</li>
 </ul>
 <div class="callout callout-style-default callout-note callout-titled" title="Lösung">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-22-contents" aria-controls="callout-22" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-25-contents" aria-controls="callout-25" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -1407,7 +1425,7 @@ Lösung
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-22" class="callout-22-contents callout-collapse collapse">
+<div id="callout-25" class="callout-25-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <div class="cell">
 <div class="sourceCode cell-code" id="cb48"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb48-1"><a href="#cb48-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> dat_full, <span class="fu">aes</span>(<span class="at">x =</span> group_all, <span class="at">y =</span> mean_rl_all)) <span class="sc">+</span></span>
@@ -1436,7 +1454,7 @@ Lösung
 </ul></li>
 </ul>
 <div class="callout callout-style-default callout-note callout-titled" title="Lösung">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-23-contents" aria-controls="callout-23" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-26-contents" aria-controls="callout-26" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -1445,7 +1463,7 @@ Lösung
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-23" class="callout-23-contents callout-collapse collapse">
+<div id="callout-26" class="callout-26-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <div class="cell">
 <div class="sourceCode cell-code" id="cb49"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb49-1"><a href="#cb49-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> dat_full, <span class="fu">aes</span>(<span class="at">x =</span> mean_rl_all, <span class="at">y =</span> cvstm_propcorrect, <span class="at">color =</span> group_all))<span class="sc">+</span></span>
@@ -1466,6 +1484,7 @@ Lösung
 </div>
 </div>
 </section>
+</section>
 <section id="tabellen" class="level1">
 <h1>Tabellen</h1>
 <p>Diese Schritte dienen der Erstellung eines übersichtlichen Tabellen mit deskriptiver Statistik.</p>
@@ -1473,7 +1492,7 @@ Lösung
 <li><strong>Paketinstallation und Laden:</strong> Paket <code>knitr</code> <strong>installieren</strong> und <strong>laden</strong> (ggf. muss davor das Paket <code>xfun</code> geupdated werden.</li>
 </ul>
 <div class="callout callout-style-default callout-note callout-titled" title="Lösung">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-24-contents" aria-controls="callout-24" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-27-contents" aria-controls="callout-27" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -1482,7 +1501,7 @@ Lösung
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-24" class="callout-24-contents callout-collapse collapse">
+<div id="callout-27" class="callout-27-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <div class="cell">
 <div class="sourceCode cell-code" id="cb50"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb50-1"><a href="#cb50-1" aria-hidden="true" tabindex="-1"></a><span class="co">#install.packages("knitr")</span></span>
@@ -1495,7 +1514,7 @@ Lösung
 <li><strong>Erstellung des Data Frames:</strong> Erstelle einen Data Frame mit deskriptiver Statistik, z.B. mittels <code>summarise()</code> für die 4 Variablen des Pattern Copy Task</li>
 </ul>
 <div class="callout callout-style-default callout-note callout-titled" title="Lösung">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-25-contents" aria-controls="callout-25" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-28-contents" aria-controls="callout-28" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -1504,26 +1523,20 @@ Lösung
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-25" class="callout-25-contents callout-collapse collapse">
+<div id="callout-28" class="callout-28-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<pre><code>::: {.cell}
-
-```{.r .cell-code}
-summary_table &lt;- dat_full |&gt;
-  group_by(group_all) |&gt;
-  summarize("Mean Openings of Model Window" = mean(mean_rl_all),
-            "Mean Initially correctly copied items"  = mean(mean_e1_all),
-            "Mean Initial encoding duration (sec)" = mean(mean_d1_all),
-            "Mean Trial Duration (sec)" = mean(mean_d_all))
-
-
-summary_table
-```
-
-::: {.cell-output .cell-output-stdout}
-
-```
-# A tibble: 3 × 5
+<div class="cell">
+<div class="sourceCode cell-code" id="cb51"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb51-1"><a href="#cb51-1" aria-hidden="true" tabindex="-1"></a>summary_table <span class="ot">&lt;-</span> dat_full <span class="sc">|&gt;</span></span>
+<span id="cb51-2"><a href="#cb51-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(group_all) <span class="sc">|&gt;</span></span>
+<span id="cb51-3"><a href="#cb51-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarize</span>(<span class="st">"Mean Openings of Model Window"</span> <span class="ot">=</span> <span class="fu">mean</span>(mean_rl_all),</span>
+<span id="cb51-4"><a href="#cb51-4" aria-hidden="true" tabindex="-1"></a>            <span class="st">"Mean Initially correctly copied items"</span>  <span class="ot">=</span> <span class="fu">mean</span>(mean_e1_all),</span>
+<span id="cb51-5"><a href="#cb51-5" aria-hidden="true" tabindex="-1"></a>            <span class="st">"Mean Initial encoding duration (sec)"</span> <span class="ot">=</span> <span class="fu">mean</span>(mean_d1_all),</span>
+<span id="cb51-6"><a href="#cb51-6" aria-hidden="true" tabindex="-1"></a>            <span class="st">"Mean Trial Duration (sec)"</span> <span class="ot">=</span> <span class="fu">mean</span>(mean_d_all))</span>
+<span id="cb51-7"><a href="#cb51-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb51-8"><a href="#cb51-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb51-9"><a href="#cb51-9" aria-hidden="true" tabindex="-1"></a>summary_table</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 3 × 5
   group_all Mean Openings of Mod…¹ Mean Initially corre…² Mean Initial encodin…³
   &lt;chr&gt;                      &lt;dbl&gt;                  &lt;dbl&gt;                  &lt;dbl&gt;
 1 above                       5.10                   3.27                   6.33
@@ -1532,12 +1545,9 @@ summary_table
 # ℹ abbreviated names: ¹​`Mean Openings of Model Window`,
 #   ²​`Mean Initially correctly copied items`,
 #   ³​`Mean Initial encoding duration (sec)`
-# ℹ 1 more variable: `Mean Trial Duration (sec)` &lt;dbl&gt;
-```
-
-
-:::
-:::</code></pre>
+# ℹ 1 more variable: `Mean Trial Duration (sec)` &lt;dbl&gt;</code></pre>
+</div>
+</div>
 </div>
 </div>
 </div>
@@ -1545,7 +1555,7 @@ summary_table
 <li><strong>Anwendung von Labels:</strong> Wende <code>kable()</code> auf den Data Frame mit deskriptiver Statistik an.</li>
 </ul>
 <div class="callout callout-style-default callout-note callout-titled" title="Lösung">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-26-contents" aria-controls="callout-26" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-29-contents" aria-controls="callout-29" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -1554,10 +1564,10 @@ Lösung
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-26" class="callout-26-contents callout-collapse collapse">
+<div id="callout-29" class="callout-29-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb52"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb52-1"><a href="#cb52-1" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">kable</span>(summary_table)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb53"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb53-1"><a href="#cb53-1" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">kable</span>(summary_table)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <table class="caption-top table table-sm table-striped small">
 <colgroup>
@@ -1609,7 +1619,7 @@ Lösung
 <li><strong>Hilfefunktion und Formatierung:</strong> Schau dir die Hilfefunktion an und nimm Formatierungen vor, wie etwa die Umbenennung der Spalten mit <code>col.names(c(„new colnames here “))</code>, die Anpassung der Nachkommastellen auf 2 mit <code>digit =</code>, das Ergänzen einer Überschrift mit <code>caption =</code></li>
 </ul>
 <div class="callout callout-style-default callout-note callout-titled" title="Lösung">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-27-contents" aria-controls="callout-27" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-30-contents" aria-controls="callout-30" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -1618,14 +1628,14 @@ Lösung
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-27" class="callout-27-contents callout-collapse collapse">
+<div id="callout-30" class="callout-30-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb53"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb53-1"><a href="#cb53-1" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">kable</span>(</span>
-<span id="cb53-2"><a href="#cb53-2" aria-hidden="true" tabindex="-1"></a>  summary_table,</span>
-<span id="cb53-3"><a href="#cb53-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">col.names =</span> <span class="fu">c</span>(<span class="st">"Gruppe"</span>, <span class="st">"Durschschnittliche Modellöffnungen"</span>, <span class="st">"Durschnittliche Korrekt kopierte Items"</span>, <span class="st">"Durschnittliche Enkodierungszeit"</span>, <span class="st">"Durschnittliche Trialdauer"</span>),   <span class="co"># Spaltennamen</span></span>
-<span id="cb53-4"><a href="#cb53-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">digits =</span> <span class="dv">2</span>,                                                <span class="co"># 2 Nachkommastellen</span></span>
-<span id="cb53-5"><a href="#cb53-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">caption =</span> <span class="st">"Deskriptivstatistik Cognitive Offloading"</span>)      </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb54"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb54-1"><a href="#cb54-1" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">kable</span>(</span>
+<span id="cb54-2"><a href="#cb54-2" aria-hidden="true" tabindex="-1"></a>  summary_table,</span>
+<span id="cb54-3"><a href="#cb54-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">col.names =</span> <span class="fu">c</span>(<span class="st">"Gruppe"</span>, <span class="st">"Durschschnittliche Modellöffnungen"</span>, <span class="st">"Durschnittliche Korrekt kopierte Items"</span>, <span class="st">"Durschnittliche Enkodierungszeit"</span>, <span class="st">"Durschnittliche Trialdauer"</span>),   <span class="co"># Spaltennamen</span></span>
+<span id="cb54-4"><a href="#cb54-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">digits =</span> <span class="dv">2</span>,                                                <span class="co"># 2 Nachkommastellen</span></span>
+<span id="cb54-5"><a href="#cb54-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">caption =</span> <span class="st">"Deskriptivstatistik Cognitive Offloading"</span>)      </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <table class="caption-top table table-sm table-striped small">
 <caption>Deskriptivstatistik Cognitive Offloading</caption>
@@ -1683,7 +1693,7 @@ Lösung
 <li><strong>Paketinstallation und Laden:</strong> Paket <code>apaTables</code> <strong>installieren</strong> und <strong>laden</strong>.</li>
 </ul>
 <div class="callout callout-style-default callout-note callout-titled" title="Lösung">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-28-contents" aria-controls="callout-28" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-31-contents" aria-controls="callout-31" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -1692,11 +1702,11 @@ Lösung
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-28" class="callout-28-contents callout-collapse collapse">
+<div id="callout-31" class="callout-31-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb54"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb54-1"><a href="#cb54-1" aria-hidden="true" tabindex="-1"></a><span class="co">#install.packages("apaTables")</span></span>
-<span id="cb54-2"><a href="#cb54-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(apaTables)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb55"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb55-1"><a href="#cb55-1" aria-hidden="true" tabindex="-1"></a><span class="co"># install.packages("apaTables")</span></span>
+<span id="cb55-2"><a href="#cb55-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(apaTables)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
 </div>
@@ -1705,7 +1715,7 @@ Lösung
 <li><strong>Datenvorbereitung:</strong> Erstelle einen Data Frame nur mit den <strong>Proportion Correct Variablen</strong> der 3 Arbeitsgedächtnistests.</li>
 </ul>
 <div class="callout callout-style-default callout-note callout-titled" title="Lösung">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-29-contents" aria-controls="callout-29" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-32-contents" aria-controls="callout-32" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -1714,11 +1724,11 @@ Lösung
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-29" class="callout-29-contents callout-collapse collapse">
+<div id="callout-32" class="callout-32-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb55"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb55-1"><a href="#cb55-1" aria-hidden="true" tabindex="-1"></a>prop_correct_vars <span class="ot">&lt;-</span> dat_full <span class="sc">|&gt;</span> </span>
-<span id="cb55-2"><a href="#cb55-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(<span class="fu">ends_with</span>(<span class="st">"correct"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb56"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb56-1"><a href="#cb56-1" aria-hidden="true" tabindex="-1"></a>prop_correct_vars <span class="ot">&lt;-</span> dat_full <span class="sc">|&gt;</span> </span>
+<span id="cb56-2"><a href="#cb56-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(<span class="fu">ends_with</span>(<span class="st">"correct"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
 </div>
@@ -1727,7 +1737,7 @@ Lösung
 <li><strong>Erstellung der Korrelationstabelle:</strong> Wende <code>apa.cor.table()</code> auf diesen Data Frame an → du bekommst eine <strong>Korrelationstabelle im</strong> APA Format.</li>
 </ul>
 <div class="callout callout-style-default callout-note callout-titled" title="Lösung">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-30-contents" aria-controls="callout-30" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-33-contents" aria-controls="callout-33" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -1736,10 +1746,10 @@ Lösung
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-30" class="callout-30-contents callout-collapse collapse">
+<div id="callout-33" class="callout-33-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb56"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb56-1"><a href="#cb56-1" aria-hidden="true" tabindex="-1"></a><span class="fu">apa.cor.table</span>(prop_correct_vars)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb57"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb57-1"><a href="#cb57-1" aria-hidden="true" tabindex="-1"></a><span class="fu">apa.cor.table</span>(prop_correct_vars)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>
 
@@ -1771,7 +1781,7 @@ that could have caused the sample correlation (Cumming, 2014).
 <li><strong>Speichern der Tabelle:</strong> Speichere die Tabelle in einer Word Datei mit der Ergänzung <code>filename = "somefilename.doc"</code> im Ordner outputs?</li>
 </ul>
 <div class="callout callout-style-default callout-note callout-titled" title="Lösung">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-31-contents" aria-controls="callout-31" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-34-contents" aria-controls="callout-34" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -1780,11 +1790,11 @@ Lösung
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-31" class="callout-31-contents callout-collapse collapse">
+<div id="callout-34" class="callout-34-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb58"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb58-1"><a href="#cb58-1" aria-hidden="true" tabindex="-1"></a><span class="fu">apa.cor.table</span>(prop_correct_vars,</span>
-<span id="cb58-2"><a href="#cb58-2" aria-hidden="true" tabindex="-1"></a>              <span class="at">filename =</span> <span class="st">"propcorrtable.doc"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb59"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb59-1"><a href="#cb59-1" aria-hidden="true" tabindex="-1"></a><span class="fu">apa.cor.table</span>(prop_correct_vars,</span>
+<span id="cb59-2"><a href="#cb59-2" aria-hidden="true" tabindex="-1"></a>              <span class="at">filename =</span> <span class="st">"propcorrtable.doc"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>
 
@@ -1817,33 +1827,13 @@ that could have caused the sample correlation (Cumming, 2014).
 </blockquote>
 </section>
 <section id="am-ende-deiner-übungen---vergiss-nicht-dein-skript-abzuspeichern" class="level1">
-<h1>Am Ende deiner Übungen - vergiss nicht dein Skript abzuspeichern! 😉</h1>
+
+
 
 
 </section>
-</div>
-</div>
-</div>
-</section>
-</section>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</section>
-</section>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
 
-</section>
-
-<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">Am Ende deiner Übungen - vergiss nicht dein Skript abzuspeichern! 😉</h2><div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
 <div id="ref-grinschgl2021" class="csl-entry" role="listitem">
 Grinschgl, Sandra, Hauke S. Meyerhoff, Stephan Schwan, and Frank Papenmeier. 2021. <span>“From Metacognitive Beliefs to Strategy Selection: Does Fake Performance Feedback Influence Cognitive Offloading?”</span> <em>Psychological Research</em> 85 (7): 2654–66. <a href="https://doi.org/10.1007/s00426-020-01435-9">https://doi.org/10.1007/s00426-020-01435-9</a>.
 </div>

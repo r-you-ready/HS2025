@@ -207,6 +207,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
  <span class="menu-text">Einheit 9 - 12.11.2025</span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./EH_10.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Einheit 10 - 19.11.2025</span></a>
+  </div>
+</li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
@@ -250,12 +256,29 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
       </ul>
   </li>
-        <li class="sidebar-item">
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="./hausuebungen.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Hausuebungen</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./hausuebung_loesung_1.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Hausübung 1</span></a>
+ <span class="menu-text">Hausübung 1 - Mit Lösungen</span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./hausuebung_2.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Hausübung 2</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a href="./faq.html" class="sidebar-item-text sidebar-link">
@@ -396,102 +419,34 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h2 class="anchored" data-anchor-id="installieren-von-paketen-welche-chattr-im-hintergrund-benötigt">Installieren von Paketen, welche chattr im Hintergrund benötigt</h2>
 <p>Eventuell habt ihr diese schon installiert und ihr könnt diesen Schritt dann überspringen. Ansonsten müsst ihr diese Pakete, wie auch alle anderen, nur einmalig installieren.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"shiny"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>The following package(s) will be installed:
-- shiny [1.11.1]
-These packages will be installed into "~/OneDrive - Universitaet Bern/MethodenLVOneDrive/MethodensemHS25/Website/ruready/renv/library/windows/R-4.5/x86_64-w64-mingw32".
-
-# Installing packages --------------------------------------------------------
-- Installing shiny ...                          OK [linked from cache]
-Successfully installed 1 package in 24 milliseconds.</code></pre>
-</div>
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"httr2"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>The following package(s) will be installed:
-- httr2 [1.2.1]
-These packages will be installed into "~/OneDrive - Universitaet Bern/MethodenLVOneDrive/MethodensemHS25/Website/ruready/renv/library/windows/R-4.5/x86_64-w64-mingw32".
-
-# Installing packages --------------------------------------------------------
-- Installing httr2 ...                          OK [linked from cache]
-Successfully installed 1 package in 14 milliseconds.</code></pre>
-</div>
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"jsonlite"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>The following package(s) will be installed:
-- jsonlite [2.0.0]
-These packages will be installed into "~/OneDrive - Universitaet Bern/MethodenLVOneDrive/MethodensemHS25/Website/ruready/renv/library/windows/R-4.5/x86_64-w64-mingw32".
-
-# Installing packages --------------------------------------------------------
-- Installing jsonlite ...                       OK [linked from cache]
-Successfully installed 1 package in 14 milliseconds.</code></pre>
-</div>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"shiny"</span>)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"httr2"</span>)</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"jsonlite"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="installieren-des-chattr-pakets-von-github" class="level2">
 <h2 class="anchored" data-anchor-id="installieren-des-chattr-pakets-von-github">Installieren des chattr-Pakets von GitHub</h2>
 <p>Auch hier gilt, die Installation des Paketes müsst ihr nur einmalig vornehmen.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"remotes"</span>) <span class="co"># Hier werdet ihr in der Console möglicherweise gefragt, ob ihr das Paket unter dem vorgeschlagenen Dateipfad abspeichern wollt. Sofern dieser für euch passt könnt ihr einfach mit "Y" unten in der Console eingeben und mit Enter bestätigen.</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>The following package(s) will be installed:
-- remotes [2.5.0]
-These packages will be installed into "~/OneDrive - Universitaet Bern/MethodenLVOneDrive/MethodensemHS25/Website/ruready/renv/library/windows/R-4.5/x86_64-w64-mingw32".
-
-# Installing packages --------------------------------------------------------
-- Installing remotes ...                        OK [linked from cache]
-Successfully installed 1 package in 17 milliseconds.</code></pre>
-</div>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"remotes"</span>) <span class="co"># Hier werdet ihr in der Console möglicherweise gefragt, ob ihr das Paket unter dem vorgeschlagenen Dateipfad abspeichern wollt. Sofern dieser für euch passt könnt ihr einfach mit "Y" unten in der Console eingeben und mit Enter bestätigen.</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>remotes<span class="sc">::</span><span class="fu">install_github</span>(<span class="st">"mlverse/chattr"</span>) <span class="co"># Hier werdet ihr möglicherweise gefragt, welche der betroffenen Pakete ihr updaten wollt. Es empfehlt sich, alle zu updaten. Ihr könnt dies tun, indem ihr "1" in der Console eingebt und mit Enter bestätigt.</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Using GitHub PAT from the git credential store.</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Downloading GitHub repo mlverse/chattr@HEAD</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning in untar2(tarfile, files, list, exdir, restore_times): skipping pax
-global extended headers
-Warning in untar2(tarfile, files, list, exdir, restore_times): skipping pax
-global extended headers</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Running `R CMD build`...</code></pre>
-</div>
-<div class="cell-output cell-output-stdout">
-<pre><code>* checking for file 'C:\Users\af22u709\AppData\Local\Temp\RtmpwB4o4q\remotes51503eea1adc\mlverse-chattr-d7efbba/DESCRIPTION' ... OK
-* preparing 'chattr':
-* checking DESCRIPTION meta-information ... OK
-* checking for LF line-endings in source and make files and shell scripts
-* checking for empty or unneeded directories
-* building 'chattr_0.3.1.tar.gz'</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Installiere Paket nach 'C:/Users/af22u709/OneDrive - Universitaet Bern/MethodenLVOneDrive/MethodensemHS25/Website/ruready/renv/library/windows/R-4.5/x86_64-w64-mingw32'
-(da 'lib' nicht spezifiziert)</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning in i.p(...): Installation des Pakets
-'C:/Users/af22u709/AppData/Local/Temp/RtmpwB4o4q/file51503f043749/chattr_0.3.1.tar.gz'
-hatte Exit-Status ungleich 0</code></pre>
-</div>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>remotes<span class="sc">::</span><span class="fu">install_github</span>(<span class="st">"mlverse/chattr"</span>) <span class="co"># Hier werdet ihr möglicherweise gefragt, welche der betroffenen Pakete ihr updaten wollt. Es empfehlt sich, alle zu updaten. Ihr könnt dies tun, indem ihr "1" in der Console eingebt und mit Enter bestätigt.</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="laden-von-chattr" class="level2">
 <h2 class="anchored" data-anchor-id="laden-von-chattr">Laden von chattr</h2>
 <p>Die Schritte ab hier, also das Laden des Paketes und das Starten des Chat-Interface, müsst ihr bei jedem Start von RStudio erneut durchführen.</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(chattr) <span class="co"># So wie ihr es auch bereits von anderen Paketen kennt</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell" data-eval="false">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(chattr) <span class="co"># So wie ihr es auch bereits von anderen Paketen kennt</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="erstellen-des-chat-interface" class="level2">
 <h2 class="anchored" data-anchor-id="erstellen-des-chat-interface">Erstellen des Chat-Interface</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="fu">Sys.setenv</span>(<span class="at">OPENAI_API_KEY =</span> <span class="st">"Hier müsst ihr euren eigenen OpenAI API-Key einsetzen"</span>) <span class="co"># Ihr erhaltet euren OpenAI API Key, indem ihr euch bei OpenAI anmeldet und unter https://platform.openai.com/account/api-keys einen neuen Key generiert.</span></span>
-<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a><span class="fu">chattr_app</span>() <span class="co"># Hier werdet ihr möglicherweise gefragt, welche Version von ChatGPT ihr verwenden mögt. Mit Eingabe der Nummer wählt ihr das entsprechende Modell aus. Mit Enter bestätigt ihr die Eingabe.</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">Sys.setenv</span>(<span class="at">OPENAI_API_KEY =</span> <span class="st">"Hier müsst ihr euren eigenen OpenAI API-Key einsetzen"</span>) <span class="co"># Ihr erhaltet euren OpenAI API Key, indem ihr euch bei OpenAI anmeldet und unter https://platform.openai.com/account/api-keys einen neuen Key generiert.</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="fu">chattr_app</span>() <span class="co"># Hier werdet ihr möglicherweise gefragt, welche Version von ChatGPT ihr verwenden mögt. Mit Eingabe der Nummer wählt ihr das entsprechende Modell aus. Mit Enter bestätigt ihr die Eingabe.</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 </section>

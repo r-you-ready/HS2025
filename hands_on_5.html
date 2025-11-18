@@ -227,6 +227,12 @@ div.csl-indent {
  <span class="menu-text">Einheit 9 - 12.11.2025</span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./EH_10.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Einheit 10 - 19.11.2025</span></a>
+  </div>
+</li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
@@ -270,12 +276,29 @@ div.csl-indent {
 </li>
       </ul>
   </li>
-        <li class="sidebar-item">
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="./hausuebungen.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Hausuebungen</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./hausuebung_loesung_1.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Hausübung 1</span></a>
+ <span class="menu-text">Hausübung 1 - Mit Lösungen</span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./hausuebung_2.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Hausübung 2</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a href="./faq.html" class="sidebar-item-text sidebar-link">
@@ -615,11 +638,14 @@ PDF Grinschgl2021 –&gt; Seite 7 –&gt; Multifactorial Memory Questionnaire
 </section>
 <section id="streudiagrammescatterplots-weitere-datenverteilungen" class="level2">
 <h2 class="anchored" data-anchor-id="streudiagrammescatterplots-weitere-datenverteilungen">Streudiagramme/Scatterplots &amp; weitere Datenverteilungen</h2>
+<p>📊<a href="https://ggplot2.tidyverse.org/reference/index.html">Auflistung von Argumenten</a></p>
+<p>📊<a href="https://r4ds.hadley.nz/layers">R4DS - Layers</a></p>
+<p>📊<a href="https://r4ds.hadley.nz/EDA.html">R4DS - EDA</a></p>
 <table class="caption-top table">
 <colgroup>
-<col style="width: 27%">
-<col style="width: 27%">
-<col style="width: 44%">
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 58%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -635,21 +661,26 @@ PDF Grinschgl2021 –&gt; Seite 7 –&gt; Multifactorial Memory Questionnaire
 <td>Zwei numerische Variablen vergleichen (x = Var1, y = Var2)</td>
 </tr>
 <tr class="even">
+<td>geom_jitter()</td>
+<td>Jitter-Plot</td>
+<td>Punkte leicht versetzen, um Überlappung zu vermeiden (v. a. bei kategorialem x)</td>
+</tr>
+<tr class="odd">
 <td>geom_line()</td>
 <td>Liniendiagramm</td>
 <td>Werteverlauf über kontinuierliche x-Achse darstellen</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>geom_bar()</td>
 <td>Balkendiagramm</td>
 <td>Häufigkeiten oder Aggregationen für Kategorien (x = Gruppe)</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>geom_histogram()</td>
 <td>Histogramm</td>
 <td>Verteilung einer numerischen Variable (x = Wert)</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>geom_boxplot()</td>
 <td>Boxplot</td>
 <td>Verteilungen über Gruppen vergleichen (x = Gruppe, y = Wert)</td>
@@ -695,11 +726,12 @@ Cheatsheet ggplot2
 <li><p>Erweitere den Scatterplot deiner beiden Variablen um die folgenden Dinge:</p>
 <ul>
 <li><p>Färbe deine Datenpunkte nach Gruppenzugehörigkeit ein mit <code>color()</code></p></li>
-<li><p>Füge einen titel ein mit <code>ggtitle()</code></p></li>
+<li><p>Füge einen titel ein mit <code>labs</code> und title()</p></li>
 <li><p>Benne die Achsen mit <code>ylab()</code> und <code>xlab()</code></p></li>
 <li><p>Änder die Darstellungart zu <code>theme_minimal()</code></p></li>
 </ul></li>
 </ul>
+<p><strong><em>Wir werden in EH 11 noch vertiefende Übungen zu ggplot durchführen.</em></strong></p>
 </section>
 </section>
 <section id="tabellen" class="level1">
@@ -728,7 +760,7 @@ Cheatsheet ggplot2
 <li><strong>Erstellung der Korrelationstabelle:</strong> Wende <code>apa.cor.table()</code> auf diesen Data Frame an → du bekommst eine <strong>Korrelationstabelle im</strong> APA Format.</li>
 </ul>
 <ul>
-<li><strong>Speichern der Tabelle:</strong> Speichere die Tabelle in einer Word Datei mit der Ergänzung <code>filename = "somefilename.doc"</code> im Ordner outputs?</li>
+<li><strong>Speichern der Tabelle:</strong> Speichere die Tabelle in einer Word Datei mit der Ergänzung <code>filename = "somefilename.doc"</code> im Ordner <em>data -&gt; outputs -&gt; results</em></li>
 </ul>
 <blockquote class="blockquote">
 <p><strong>Wichtiger Hinweis:</strong> Diese Funktion kann man auch für Regressionen und ANOVAs erstellen. Wir benutzen aber ein anderes Paket für ANOVAs (nicht ezANOVA, auf dem apaTables basiert)!</p>
