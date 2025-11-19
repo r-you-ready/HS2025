@@ -402,7 +402,10 @@ div.csl-indent {
   <li><a href="#skewness-und-kurtosis" id="toc-skewness-und-kurtosis" class="nav-link" data-scroll-target="#skewness-und-kurtosis">Skewness und Kurtosis</a></li>
   <li><a href="#residuen" id="toc-residuen" class="nav-link" data-scroll-target="#residuen">Residuen</a></li>
   <li><a href="#skalenreliabilität" id="toc-skalenreliabilität" class="nav-link" data-scroll-target="#skalenreliabilität">Skalenreliabilität</a></li>
-  <li><a href="#streudiagrammescatterplots-weitere-datenverteilungen" id="toc-streudiagrammescatterplots-weitere-datenverteilungen" class="nav-link" data-scroll-target="#streudiagrammescatterplots-weitere-datenverteilungen">Streudiagramme/Scatterplots &amp; weitere Datenverteilungen</a></li>
+  <li><a href="#streudiagrammescatterplots-weitere-datenverteilungen" id="toc-streudiagrammescatterplots-weitere-datenverteilungen" class="nav-link" data-scroll-target="#streudiagrammescatterplots-weitere-datenverteilungen">Streudiagramme/Scatterplots &amp; weitere Datenverteilungen</a>
+  <ul class="collapse">
+  <li><a href="#tabelle-mit-einer-zusätzlichen-spalte" id="toc-tabelle-mit-einer-zusätzlichen-spalte" class="nav-link" data-scroll-target="#tabelle-mit-einer-zusätzlichen-spalte">Tabelle mit <strong>einer zusätzlichen Spalte</strong></a></li>
+  </ul></li>
   <li><a href="#fortgeschrittene-freiwillige-übungen" id="toc-fortgeschrittene-freiwillige-übungen" class="nav-link" data-scroll-target="#fortgeschrittene-freiwillige-übungen">Fortgeschrittene (freiwillige Übungen)</a></li>
   </ul></li>
   <li><a href="#tabellen" id="toc-tabellen" class="nav-link" data-scroll-target="#tabellen">Tabellen</a></li>
@@ -641,49 +644,59 @@ PDF Grinschgl2021 –&gt; Seite 7 –&gt; Multifactorial Memory Questionnaire
 <p>📊<a href="https://ggplot2.tidyverse.org/reference/index.html">Auflistung von Argumenten</a></p>
 <p>📊<a href="https://r4ds.hadley.nz/layers">R4DS - Layers</a></p>
 <p>📊<a href="https://r4ds.hadley.nz/EDA.html">R4DS - EDA</a></p>
+<section id="tabelle-mit-einer-zusätzlichen-spalte" class="level3">
+<h3 class="anchored" data-anchor-id="tabelle-mit-einer-zusätzlichen-spalte">Tabelle mit <strong>einer zusätzlichen Spalte</strong></h3>
 <table class="caption-top table">
 <colgroup>
-<col style="width: 20%">
-<col style="width: 20%">
-<col style="width: 58%">
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
 </colgroup>
 <thead>
 <tr class="header">
-<th><strong>Geom</strong></th>
-<th><strong>Funktion</strong></th>
-<th><strong>Einsatzbereich</strong></th>
+<th>Geom</th>
+<th>Funktion</th>
+<th>Einsatzbereich</th>
+<th>Bild / Beispiel</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td>geom_point()</td>
+<td><strong>geom_point()</strong></td>
 <td>Streudiagramm</td>
 <td>Zwei numerische Variablen vergleichen (x = Var1, y = Var2)</td>
+<td><img src="images/EH_10/geom_point.png" class="img-fluid"></td>
 </tr>
 <tr class="even">
-<td>geom_jitter()</td>
+<td><strong>geom_jitter()</strong></td>
 <td>Jitter-Plot</td>
 <td>Punkte leicht versetzen, um Überlappung zu vermeiden (v. a. bei kategorialem x)</td>
+<td><img src="images/EH_10/geom_jitter.png" class="img-fluid"></td>
 </tr>
 <tr class="odd">
-<td>geom_line()</td>
+<td><strong>geom_line()</strong></td>
 <td>Liniendiagramm</td>
-<td>Werteverlauf über kontinuierliche x-Achse darstellen</td>
+<td>Werteverlauf Über kontinuierliche x-Achse darstellen</td>
+<td><img src="images/EH_10/geom_line.png" class="img-fluid"></td>
 </tr>
 <tr class="even">
-<td>geom_bar()</td>
+<td><strong>geom_bar()</strong></td>
 <td>Balkendiagramm</td>
 <td>Häufigkeiten oder Aggregationen für Kategorien (x = Gruppe)</td>
+<td><img src="images/EH_10/geom_bar.png" class="img-fluid"></td>
 </tr>
 <tr class="odd">
-<td>geom_histogram()</td>
+<td><strong>geom_histogram()</strong></td>
 <td>Histogramm</td>
 <td>Verteilung einer numerischen Variable (x = Wert)</td>
+<td><img src="images/EH_10/geom_histogram.png" class="img-fluid"></td>
 </tr>
 <tr class="even">
-<td>geom_boxplot()</td>
+<td><strong>geom_boxplot()</strong></td>
 <td>Boxplot</td>
 <td>Verteilungen über Gruppen vergleichen (x = Gruppe, y = Wert)</td>
+<td><img src="images/EH_10/geom_boxplot.png" class="img-fluid"></td>
 </tr>
 </tbody>
 </table>
@@ -719,6 +732,7 @@ Cheatsheet ggplot2
 <ul>
 <li>Lass dir den <code>boxplot()</code> getrennt für die 3 Experimentalgruppen anzeigen. Setze dafür <code>y = group</code>.</li>
 </ul>
+</section>
 </section>
 <section id="fortgeschrittene-freiwillige-übungen" class="level2">
 <h2 class="anchored" data-anchor-id="fortgeschrittene-freiwillige-übungen">Fortgeschrittene (freiwillige Übungen)</h2>
