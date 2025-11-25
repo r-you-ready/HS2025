@@ -133,7 +133,7 @@ div.csl-indent {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Hands On – Coding Basics (Einheiten 9 und 10)</li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./Übungen.html">Übungen zu den Einheiten</a></li><li class="breadcrumb-item"><a href="./loesung_5.html">Hands on - Block 5 (Woche 9 - 10) - Mit Musterlösungen</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -233,17 +233,23 @@ div.csl-indent {
  <span class="menu-text">Einheit 10 - 19.11.2025</span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./EH_11.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Einheit 11 - 26.11.2025</span></a>
+  </div>
+</li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a href="./Übungen.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Übungen zu den Einheiten</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#" role="navigation" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="" class="collapse list-unstyled sidebar-section depth1 ">  
+      <ul id="" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./loesung_1.html" class="sidebar-item-text sidebar-link">
@@ -270,8 +276,14 @@ div.csl-indent {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./hands_on_5.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Hands on - Block 5 (Woche 9 - 10)</span></a>
+  <a href="./loesung_5.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Hands on - Block 5 (Woche 9 - 10) - Mit Musterlösungen</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./hands_on_6.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Hands on - Block 6 (Woche 11 - 12</span></a>
   </div>
 </li>
       </ul>
@@ -414,7 +426,7 @@ div.csl-indent {
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default">
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./Übungen.html">Übungen zu den Einheiten</a></li><li class="breadcrumb-item"><a href="./loesung_5.html">Hands on - Block 5 (Woche 9 - 10) - Mit Musterlösungen</a></li></ol></nav>
 <div class="quarto-title">
 <h1 class="title">Hands On – Coding Basics (Einheiten 9 und 10)</h1>
 </div>
@@ -709,7 +721,7 @@ Lösung
 </div>
 </div>
 <ul>
-<li>Speichere den Long Datensatz als <strong><code>csv.</code></strong> Datei ab.</li>
+<li>Speichere den Long Datensatz als <strong><code>csv.</code></strong> Datei ab. Achtung: achte auf das row.names() argument, um keine unnötige Spalte zu generieren.</li>
 </ul>
 <div class="callout callout-style-default callout-note callout-titled" title="Lösung">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-9-contents" aria-controls="callout-9" aria-expanded="false" aria-label="Toggle callout">
@@ -724,7 +736,7 @@ Lösung
 <div id="callout-9" class="callout-9-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="fu">write.csv</span>(df_long, <span class="st">"processed/data_long.csv"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="fu">write.csv</span>(df_long, <span class="st">"processed/data_long.csv"</span>, <span class="at">row.names =</span> <span class="cn">FALSE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
 </div>
