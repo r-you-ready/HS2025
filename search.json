@@ -448,7 +448,7 @@
     "href": "loesung_1.html",
     "title": "Lösung 1",
     "section": "",
-    "text": "Bei Bedarf finden sich hier nochmal die Slides zur EH1: \n\n\nInstalliere R und RStudio:\n\nInstallation von R – neueste Version 4.5.1: https://stat.ethz.ch/CRAN/\nInstallation von Rstudio (Version 2025.05.1): https://posit.co/download/rstudio-desktop/\n\nDu weisst nicht was mit R auf sich hat? Hier ist eine Kurzerklärung: https://methodenlehre.github.io/einfuehrung-in-R/\n\n\n\n\nRStudio öffnen & Einstellungen vornehmen: Unter «tools» –«global options» die unter 1.1. beschriebenen Einstellungen vornehmen: https://methodenlehre.github.io/einfuehrung-in-R/chapters/01-workflow.html\n\n\n\nNeues Skript öffnen & orientieren:\n\n\n\n\nIm folgenden machen wir uns vertraut mit der Oberfläche von R-Studio:\n\n\n\n\n\n\n\nSkript für Code-Eingabe sowie Kommentare\nKonsole für die Ausführung von Code -&gt; Teste einfache mathematische Operation in dieser; reproduziere diese mittels Skript\nRechts oben: Environment & History\nRechts unten: Files, Plots, Packages und Help Viewer\n\n\n\n\nTidyverse ist ein Meta-Paket, das mehrere Pakete umfasst\n\nPakete installieren (nur 1x notwendig) -&gt; führe diesen Code in der Konsole aus\n\ninstall.packages(\"tidyverse\")\n\nPaket laden (innerhalb des Skriptes, bei jedem Neustart von R notwendig)\n\nlibrary(tidyverse)\n\nWarning: Paket 'tidyverse' wurde unter R Version 4.5.2 erstellt\n\n\n── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.4     ✔ readr     2.1.5\n✔ forcats   1.0.0     ✔ stringr   1.5.1\n✔ ggplot2   4.0.0     ✔ tibble    3.3.0\n✔ lubridate 1.9.4     ✔ tidyr     1.3.1\n✔ purrr     1.1.0     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\n\n\n\nTipp: Pakete regelmässig updaten mit z.B. update.packages()\n\n\n\na. Nutze R als Taschenrechner\n\n123+456\n\n\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\n123 + 456\n\n[1] 579\n\n\n\n\n\n2.  `144*112`\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\n144*112\n\n[1] 16128\n\n\n\n\n\n3.  `10/3`\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\n10/3\n\n[1] 3.333333\n\n\n\n\n\n4.  Quadriere 420\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\n420^2\n\n[1] 176400\n\n\n\n\n\n5.  Ziehe die Quadratwurzel aus 146 mit der Funktion `sqrt()`\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\nsqrt(146)\n\n[1] 12.08305\n\n\n\n\n\n6.  Berechne den Rest der Division 10/3 mit dem Modulo Operator: `%%`\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\n10 %% 3\n\n[1] 1\n\n\n\n\n\n\n\n\n\n\nZeichen\nBedeutung\n\n\n\n\n+\nAddition\n\n\n-\nSubstraktion\n\n\n*\nMultiplikation\n\n\n/\nDivision\n\n\nsqrt(x)\nQuadratwurzel\n\n\nabs(x)\nBetrag (absoluter Wert)\n\n\nx %% y\nModulo (x mod y) 5 %% 2 = 1\n\n\n^\nPotenz\n\n\n\n\n\n\n\n\nWeise den Wert 5 der Variable x zu mit dem Operator &lt;-\n\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\nx &lt;- 5\n\n\n\n\n\nWeise eine beliebige Zahl der Variable y hinzu und dividiere dann x durch y. Speichere dieses Ergebnis in der Variable z.\n\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\ny &lt;- 10 # hier könntet ihr auch jede andere Ziffer wählen\n\nz &lt;- x / y\n\n\n\n\n\nSchaue dir das Ergebnis in deinem Environment an. Lass dir das Ergebnis auch in der Konsole ausgeben. Das Environment findest du oben rechts, die Konsole ist unter deinem Skript.\n\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\n# z (hier über das # auskommentiert, da der Befehl nicht im Skript, sondern unten in der Konsole ausgeführt werden soll)\n\n\n\n\n\nErstelle zwei Variablen: Eine mit deinem Vornamen und eine mit deinem Nachnamen. Solche “character” Variablen musst du in Anführungszeichen setzen \"\"\n\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\nvorname &lt;- \"Lars\"\nnachname &lt;- \"Schilling\"\n\n\n\n\n\nKombiniere deinen Vor- und Nachnamen zu deinem vollen Namen mittels paste . Speichere diese Variable als voller_name.\n\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\nvoller_name &lt;- paste(vorname, nachname)\n\n\n\n\n\n\n\n\nDefiniere einen Vektor «first_vector» mit den Zahlen 100, 80, 54, 73. Einen Vektor definiert man so: first_vector &lt;- c(...)\n\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\nfirst_vector &lt;- c(100, 80, 54, 73)\n\n\n\n\n\nWende den Befehl boxplot() auf deinen Vektor an\n\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\nboxplot(first_vector)\n\n\n\n\n\n\n\n\n\n\n\n\nBerechne die Summe sum()und den Mittelwert mean() von deinem Vektor\n\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\nsum(first_vector)\n\n[1] 307\n\nmean(first_vector)\n\n[1] 76.75\n\n\n\n\n\n\nMultipliziere deinen Vektor mit *2\n\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\nfirst_vector * 2\n\n[1] 200 160 108 146\n\n\n\n\n\nDie wichtigsten Operatoren und Funktionen in R: https://methodenlehre.github.io/einfuehrung-in-R/chapters/02-R-language.html\n\n\n\n\n\nFunktion\nBedeutung\n\n\n\n\nmean(x, na.rm =FALSE)\nMittelwert\n\n\nsd(x)\nStandardabweichung\n\n\nvar(x)\nVarianz\n\n\nmedian(x)\nMedian\n\n\nsum(x)\nSumme\n\n\nmin(x)\nMinimalwert\n\n\nmax(x)\nMaximalwert\n\n\nrange(x)\nMinimal - und Maximalwert\n\n\n\n\n\n\n\n\nTeste ob die Zahl 5 größer als 2 ist –&gt; TRUE or FALSE?\n\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\n5 &gt; 2\n\n[1] TRUE\n\n\nTRUE, 5 ist grösser als 2.\n\n\n\n\nTeste ob 6 ungleich 8 ist –&gt; TRUE or FALSE?\n\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\n6 != 8\n\n[1] TRUE\n\n\nTRUE, 6 und 8 sind ungleich.\n\n\n\n\nSubtrahiere 80 von 50 und speichere das Ergebnis in einer Variable namens «diff_score».\n\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\ndiff_score &lt;- 80 - 50\n\n\n\n\n\nBerechne mit abs() den absoluten Wert von «diff_score» lassen dir diesen mit print(diff_score) in der Konsole ausgeben.\n\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\ndiff_score_abs &lt;- abs(diff_score)\n\n# print(diff_score_abs) (hier erneut mit # auskommentiert, da der Befehl nicht im Skript, sondern in der Console ausgeführt werden soll)\n\n\n\n\n\n\n\n\n\nZeichen\nBedeutung\n\n\n\n\n==\ngleich\n\n\n!=\nungleich\n\n\n&gt;\ngrösser\n\n\n&gt;=\ngrösser gleich\n\n\n&lt;\nkleiner\n\n\n&lt;=\nkleiner gleich\n\n\n|\nLogisches Oder\n\n\n&\nLogisches Und\n\n\n\n\n\n\n\n\n\n\nInformative Kommentare im Code sind elementar für die Nachvollziehbarkeit.\n\nSchreibe einen Kommentar indem du ein # verwendest.\n\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\n# Hier ein Beipsiel für einen Kommentar, wie auch schon weiter oben mehrmals verwendet um die Lösungen davon zu hindern ausgeführt zu werden.\n\n\n\n\n\nCode der nach einem # steht wird nicht ausgeführt. Setze ein # vor eine Codezeile und führe sie aus und beobachte was passiert.\n\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\n# 1 + 2\n\n\n\n\n\n\n\nEs gibt verschiedene Konventionen wie man Variablen bennen kann:\nhttps://methodenlehre.github.io/einfuehrung-in-R/chapters/02-R-language.html#variablennamen\n\nDefiniere eine neue Variable nach snake_case\n\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\nneue_variable &lt;- \"snake_case\"\n\n\n\n\n\nDefiniere eine zweite Variable nach CamelCase\n\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\nneueVariable &lt;- \"CamelCase\"\n\n\n\n\n\n\n\n\n\nSpeichere die beiden höchsten Werte aus «first_vector» in einer neuen Variable ab.\n\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\ntop_two &lt;- sort(first_vector, decreasing = TRUE)[1:2]\n\n\n\n\n\nErstelle einen Vektor mit Werten von 0-1000 in 10er Schritten.\n\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\nvec_seq &lt;- seq(from = 1, to = 1000, by = 10)\n\n\n\n\n\nZiehe zufällig eine Zahl aus diesem Vektor\n\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\nsample(vec_seq, 1)\n\n[1] 261\n\n\n\n\n\n\nGeneriere einen Vektor, der aus 50 Wiederholungen der Zahl 3 besteht.\n\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\nmy_vector &lt;- rep(3, times = 50)\n\n\n\n\nTipps zu diesen Aufgaben findest du bei Bedarf hier: https://methodenlehre.github.io/einfuehrung-in-R/chapters/02-R-language.html (Kapitel 2.1)\n\n\n\n\nnumeric vectors: werden in integer (ganze Zahlen) und double (reelle Zahlen) unterteilt, z.B.\nnumerical_vector &lt;- c(1, 2.5, 4)\ncharacter vectors: bestehen aus Zeichen, welche von Anführungszeichen umgeben werden, z.B.\ntext_vector &lt;- c(\"Hello\", \"World\")\nlogical vectors: Elemente dieses Typs können nur 3 Werte annehmen: TRUE, FALSE oder NA\nlog_vector &lt;- c(TRUE, FALSE, TRUE)\n\nVektoren müssen aus denselbsten Elementen bestehen, d.h. z.B. numeric und character können nicht gemischt werden. Vektoren werden meist mit c() erstellt.",
+    "text": "Bei Bedarf finden sich hier nochmal die Slides zur EH1: \n\n\nInstalliere R und RStudio:\n\nInstallation von R – neueste Version 4.5.1: https://stat.ethz.ch/CRAN/\nInstallation von Rstudio (Version 2025.05.1): https://posit.co/download/rstudio-desktop/\n\nDu weisst nicht was mit R auf sich hat? Hier ist eine Kurzerklärung: https://methodenlehre.github.io/einfuehrung-in-R/\n\n\n\n\nRStudio öffnen & Einstellungen vornehmen: Unter «tools» –«global options» die unter 1.1. beschriebenen Einstellungen vornehmen: https://methodenlehre.github.io/einfuehrung-in-R/chapters/01-workflow.html\n\n\n\nNeues Skript öffnen & orientieren:\n\n\n\n\nIm folgenden machen wir uns vertraut mit der Oberfläche von R-Studio:\n\n\n\n\n\n\n\nSkript für Code-Eingabe sowie Kommentare\nKonsole für die Ausführung von Code -&gt; Teste einfache mathematische Operation in dieser; reproduziere diese mittels Skript\nRechts oben: Environment & History\nRechts unten: Files, Plots, Packages und Help Viewer\n\n\n\n\nTidyverse ist ein Meta-Paket, das mehrere Pakete umfasst\n\nPakete installieren (nur 1x notwendig) -&gt; führe diesen Code in der Konsole aus\n\ninstall.packages(\"tidyverse\")\n\nPaket laden (innerhalb des Skriptes, bei jedem Neustart von R notwendig)\n\nlibrary(tidyverse)\n\nWarning: Paket 'tidyverse' wurde unter R Version 4.5.2 erstellt\n\n\n── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.4     ✔ readr     2.1.5\n✔ forcats   1.0.0     ✔ stringr   1.5.1\n✔ ggplot2   4.0.0     ✔ tibble    3.3.0\n✔ lubridate 1.9.4     ✔ tidyr     1.3.1\n✔ purrr     1.1.0     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\n\n\n\nTipp: Pakete regelmässig updaten mit z.B. update.packages()\n\n\n\na. Nutze R als Taschenrechner\n\n123+456\n\n\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\n123 + 456\n\n[1] 579\n\n\n\n\n\n2.  `144*112`\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\n144*112\n\n[1] 16128\n\n\n\n\n\n3.  `10/3`\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\n10/3\n\n[1] 3.333333\n\n\n\n\n\n4.  Quadriere 420\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\n420^2\n\n[1] 176400\n\n\n\n\n\n5.  Ziehe die Quadratwurzel aus 146 mit der Funktion `sqrt()`\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\nsqrt(146)\n\n[1] 12.08305\n\n\n\n\n\n6.  Berechne den Rest der Division 10/3 mit dem Modulo Operator: `%%`\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\n10 %% 3\n\n[1] 1\n\n\n\n\n\n\n\n\n\n\nZeichen\nBedeutung\n\n\n\n\n+\nAddition\n\n\n-\nSubstraktion\n\n\n*\nMultiplikation\n\n\n/\nDivision\n\n\nsqrt(x)\nQuadratwurzel\n\n\nabs(x)\nBetrag (absoluter Wert)\n\n\nx %% y\nModulo (x mod y) 5 %% 2 = 1\n\n\n^\nPotenz\n\n\n\n\n\n\n\n\nWeise den Wert 5 der Variable x zu mit dem Operator &lt;-\n\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\nx &lt;- 5\n\n\n\n\n\nWeise eine beliebige Zahl der Variable y hinzu und dividiere dann x durch y. Speichere dieses Ergebnis in der Variable z.\n\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\ny &lt;- 10 # hier könntet ihr auch jede andere Ziffer wählen\n\nz &lt;- x / y\n\n\n\n\n\nSchaue dir das Ergebnis in deinem Environment an. Lass dir das Ergebnis auch in der Konsole ausgeben. Das Environment findest du oben rechts, die Konsole ist unter deinem Skript.\n\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\n# z (hier über das # auskommentiert, da der Befehl nicht im Skript, sondern unten in der Konsole ausgeführt werden soll)\n\n\n\n\n\nErstelle zwei Variablen: Eine mit deinem Vornamen und eine mit deinem Nachnamen. Solche “character” Variablen musst du in Anführungszeichen setzen \"\"\n\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\nvorname &lt;- \"Lars\"\nnachname &lt;- \"Schilling\"\n\n\n\n\n\nKombiniere deinen Vor- und Nachnamen zu deinem vollen Namen mittels paste . Speichere diese Variable als voller_name.\n\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\nvoller_name &lt;- paste(vorname, nachname)\n\n\n\n\n\n\n\n\nDefiniere einen Vektor «first_vector» mit den Zahlen 100, 80, 54, 73. Einen Vektor definiert man so: first_vector &lt;- c(...)\n\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\nfirst_vector &lt;- c(100, 80, 54, 73)\n\n\n\n\n\nWende den Befehl boxplot() auf deinen Vektor an\n\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\nboxplot(first_vector)\n\n\n\n\n\n\n\n\n\n\n\n\nBerechne die Summe sum()und den Mittelwert mean() von deinem Vektor\n\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\nsum(first_vector)\n\n[1] 307\n\nmean(first_vector)\n\n[1] 76.75\n\n\n\n\n\n\nMultipliziere deinen Vektor mit *2\n\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\nfirst_vector * 2\n\n[1] 200 160 108 146\n\n\n\n\n\nDie wichtigsten Operatoren und Funktionen in R: https://methodenlehre.github.io/einfuehrung-in-R/chapters/02-R-language.html\n\n\n\n\n\nFunktion\nBedeutung\n\n\n\n\nmean(x, na.rm =FALSE)\nMittelwert\n\n\nsd(x)\nStandardabweichung\n\n\nvar(x)\nVarianz\n\n\nmedian(x)\nMedian\n\n\nsum(x)\nSumme\n\n\nmin(x)\nMinimalwert\n\n\nmax(x)\nMaximalwert\n\n\nrange(x)\nMinimal - und Maximalwert\n\n\n\n\n\n\n\n\nTeste ob die Zahl 5 größer als 2 ist –&gt; TRUE or FALSE?\n\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\n5 &gt; 2\n\n[1] TRUE\n\n\nTRUE, 5 ist grösser als 2.\n\n\n\n\nTeste ob 6 ungleich 8 ist –&gt; TRUE or FALSE?\n\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\n6 != 8\n\n[1] TRUE\n\n\nTRUE, 6 und 8 sind ungleich.\n\n\n\n\nSubtrahiere 80 von 50 und speichere das Ergebnis in einer Variable namens «diff_score».\n\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\ndiff_score &lt;- 80 - 50\n\n\n\n\n\nBerechne mit abs() den absoluten Wert von «diff_score» lassen dir diesen mit print(diff_score) in der Konsole ausgeben.\n\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\ndiff_score_abs &lt;- abs(diff_score)\n\n# print(diff_score_abs) (hier erneut mit # auskommentiert, da der Befehl nicht im Skript, sondern in der Console ausgeführt werden soll)\n\n\n\n\n\n\n\n\n\nZeichen\nBedeutung\n\n\n\n\n==\ngleich\n\n\n!=\nungleich\n\n\n&gt;\ngrösser\n\n\n&gt;=\ngrösser gleich\n\n\n&lt;\nkleiner\n\n\n&lt;=\nkleiner gleich\n\n\n|\nLogisches Oder\n\n\n&\nLogisches Und\n\n\n\n\n\n\n\n\n\n\nInformative Kommentare im Code sind elementar für die Nachvollziehbarkeit.\n\nSchreibe einen Kommentar indem du ein # verwendest.\n\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\n# Hier ein Beipsiel für einen Kommentar, wie auch schon weiter oben mehrmals verwendet um die Lösungen davon zu hindern ausgeführt zu werden.\n\n\n\n\n\nCode der nach einem # steht wird nicht ausgeführt. Setze ein # vor eine Codezeile und führe sie aus und beobachte was passiert.\n\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\n# 1 + 2\n\n\n\n\n\n\n\nEs gibt verschiedene Konventionen wie man Variablen bennen kann:\nhttps://methodenlehre.github.io/einfuehrung-in-R/chapters/02-R-language.html#variablennamen\n\nDefiniere eine neue Variable nach snake_case\n\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\nneue_variable &lt;- \"snake_case\"\n\n\n\n\n\nDefiniere eine zweite Variable nach CamelCase\n\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\nneueVariable &lt;- \"CamelCase\"\n\n\n\n\n\n\n\n\n\nSpeichere die beiden höchsten Werte aus «first_vector» in einer neuen Variable ab.\n\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\ntop_two &lt;- sort(first_vector, decreasing = TRUE)[1:2]\n\n\n\n\n\nErstelle einen Vektor mit Werten von 0-1000 in 10er Schritten.\n\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\nvec_seq &lt;- seq(from = 1, to = 1000, by = 10)\n\n\n\n\n\nZiehe zufällig eine Zahl aus diesem Vektor\n\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\nsample(vec_seq, 1)\n\n[1] 621\n\n\n\n\n\n\nGeneriere einen Vektor, der aus 50 Wiederholungen der Zahl 3 besteht.\n\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\nmy_vector &lt;- rep(3, times = 50)\n\n\n\n\nTipps zu diesen Aufgaben findest du bei Bedarf hier: https://methodenlehre.github.io/einfuehrung-in-R/chapters/02-R-language.html (Kapitel 2.1)\n\n\n\n\nnumeric vectors: werden in integer (ganze Zahlen) und double (reelle Zahlen) unterteilt, z.B.\nnumerical_vector &lt;- c(1, 2.5, 4)\ncharacter vectors: bestehen aus Zeichen, welche von Anführungszeichen umgeben werden, z.B.\ntext_vector &lt;- c(\"Hello\", \"World\")\nlogical vectors: Elemente dieses Typs können nur 3 Werte annehmen: TRUE, FALSE oder NA\nlog_vector &lt;- c(TRUE, FALSE, TRUE)\n\nVektoren müssen aus denselbsten Elementen bestehen, d.h. z.B. numeric und character können nicht gemischt werden. Vektoren werden meist mit c() erstellt.",
     "crumbs": [
       "Übungen zu den Einheiten",
       "Hands on - Block 1 (Woche 1 - 2) - Mit Musterlösungen"
@@ -514,7 +514,7 @@
     "href": "loesung_1.html#für-fortgeschrittene-r-nutzerinnen",
     "title": "Lösung 1",
     "section": "",
-    "text": "Speichere die beiden höchsten Werte aus «first_vector» in einer neuen Variable ab.\n\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\ntop_two &lt;- sort(first_vector, decreasing = TRUE)[1:2]\n\n\n\n\n\nErstelle einen Vektor mit Werten von 0-1000 in 10er Schritten.\n\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\nvec_seq &lt;- seq(from = 1, to = 1000, by = 10)\n\n\n\n\n\nZiehe zufällig eine Zahl aus diesem Vektor\n\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\nsample(vec_seq, 1)\n\n[1] 261\n\n\n\n\n\n\nGeneriere einen Vektor, der aus 50 Wiederholungen der Zahl 3 besteht.\n\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\nmy_vector &lt;- rep(3, times = 50)\n\n\n\n\nTipps zu diesen Aufgaben findest du bei Bedarf hier: https://methodenlehre.github.io/einfuehrung-in-R/chapters/02-R-language.html (Kapitel 2.1)",
+    "text": "Speichere die beiden höchsten Werte aus «first_vector» in einer neuen Variable ab.\n\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\ntop_two &lt;- sort(first_vector, decreasing = TRUE)[1:2]\n\n\n\n\n\nErstelle einen Vektor mit Werten von 0-1000 in 10er Schritten.\n\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\nvec_seq &lt;- seq(from = 1, to = 1000, by = 10)\n\n\n\n\n\nZiehe zufällig eine Zahl aus diesem Vektor\n\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\nsample(vec_seq, 1)\n\n[1] 621\n\n\n\n\n\n\nGeneriere einen Vektor, der aus 50 Wiederholungen der Zahl 3 besteht.\n\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\nmy_vector &lt;- rep(3, times = 50)\n\n\n\n\nTipps zu diesen Aufgaben findest du bei Bedarf hier: https://methodenlehre.github.io/einfuehrung-in-R/chapters/02-R-language.html (Kapitel 2.1)",
     "crumbs": [
       "Übungen zu den Einheiten",
       "Hands on - Block 1 (Woche 1 - 2) - Mit Musterlösungen"
@@ -582,7 +582,7 @@
     "href": "hands_on_6.html#visualize---übungen-zu-ggplot2",
     "title": "Hands On – Coding Basics (Einheiten 11 und 12)",
     "section": "Visualize - Übungen zu ggplot2",
-    "text": "Visualize - Übungen zu ggplot2\n📚 Einführung in R - Kapitel 5\n📚 R for Data Science - Kapitel 1\n📚R for Data Science - Kapitel 11\n\n\n\n\n\n\nTabelle mit häufig verwendeten Geoms()\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nGeom\nFunktion\nEinsatzbereich\nBild / Beispiel\n\n\n\n\ngeom_point()\nStreudiagramm\nZwei numerische Variablen vergleichen (x = Var1, y = Var2)\n\n\n\ngeom_jitter()\nJitter-Plot\nPunkte leicht versetzen, um Überlappung zu vermeiden (v. a. bei kategorialem x)\n\n\n\ngeom_line()\nLiniendiagramm\nWerteverlauf Über kontinuierliche x-Achse darstellen\n\n\n\ngeom_bar()\nBalkendiagramm\nHäufigkeiten oder Aggregationen für Kategorien (x = Gruppe)\n\n\n\ngeom_histogram()\nHistogramm\nVerteilung einer numerischen Variable (x = Wert)\n\n\n\ngeom_boxplot()\nBoxplot\nVerteilungen über Gruppen vergleichen (x = Gruppe, y = Wert)\n\n\n\n\n\n\n\n\n\n\n\n\n\nCheatsheet ggplot2\n\n\n\n\n\n\n\n\n\n\nIm folgenden wollen wir Figure 4 Paus Grinschgl et al. (2021) reproduzieren:\n\n\n\n\n\n\n\n\n\n\nVorbereitungen:\n\ndat_full &lt;- dat_full |&gt; \n  mutate(mmq_mean = rowMeans(select(dat_full, starts_with(\"question\"))))\n\n\ngroup_summary &lt;- dat_full %&gt;%\n  group_by(group_all) %&gt;%\n  summarize(\n    group_mean_mmq = mean(mmq_mean),\n    se_mmq = sd(mmq_mean) / sqrt(n())\n  )\n\ngroup_summary$group_all &lt;- factor(group_summary$group_all,\n                                  levels = c(\"below\", \"control\", \"above\"))\n\nUm die Mittelwerte plotten zu können, müssen wir die Gruppenmittelwerte und Standardfehler berechnen. Passe dafür den Codeblock an:\nIm Hands-on Block 4 haben wir bereits mit dplyr die MMQ-Skalenwerte „mmq_mean“ pro Person berechnet. Nutze nun die dplyr-Funktionen, insbesondere group_by(), um den durchschnittlichen MMQ-Wert pro Gruppe (group_all) sowie den Standardfehler zu berechnen. Die Formel für den Standardfehler lautet: SE = SD / √n und kann z.b so berechnet werden. se_mmq = sd(mmq_mean) / sqrt(n()) . Ergänze den Code unten mit den nötigen Angaben. Lege group_all in deinem summary als faktor fest mit den Levels in der Reihenfolge: “below”, “control”, “above”.\n\n\n\n\n\n\nNote\n\n\n\n\n\nDer Standardfehler des Mittelwerts (SEM) beschreibt wie stark der geschätzte Stichprobenmittelwert zufällig vom wahren Populationsmittelwert abweichen kann. Er ist damit ein Mass für die Präzision des Mittelwerts.\n\n\n\n\ndat_full &lt;- dat_full |&gt; \n  mutate(mmq_mean = rowMeans(select(dat_full, starts_with(\"question\")))\n\n\ngroup_summary &lt;- dat_full %&gt;%\n  group_by(XXXXXXX) %&gt;%\n  summarize(\n    group_mean_mmq = mean(XXXXXX),\n    se_mmq = sd(XXXXXX) / sqrt(n())\n  )\n\ngroup_summary$group_all &lt;- factor(group_summary$group_all,\n                                  levels = c(\"XXXXX\", \"XXXXX\", \"XXXXX\"))\n\n\n\n1. Erstelle einen leeren Plot und gib deinen Datensatz an\nBeginne mit:\n\nggplot() und deinem Datensatz\n\n\n\n2. Definiere die Aesthetic Mappings\nLege fest:\n\nwelche Variable auf der x-Achse liegt\nwelche Variable auf der y-Achse liegt\n\n\n\n3. Füge geom_col() dem Plot hinzu\nDamit zeichnest du die Balken für die Gruppenmittelwerte.\n\ncolor = für Konturen\nfill = für die Füllfarben der Balken\n\n\n\n5. Füge Fehlerbalken hinzu\nDie Fehlerbalken die wir hier verwenden sind standardfehler (se\nNutze geom_errorbar() und definiere innerhalb von aes():\n\nymin = mean - sd - Füge die passenden Variablen ein.\nymax = mean + sd - Füge die passenden Variablen ein.\n\nPasse die Breite der Fehlerbalken mit width = an.\n\n\n6. Füge Titel und Achsenbeschriftungen hinzu\nNutze dafür labs(). Verändere das theme zu theme_classic()\n\n\n7. Stelle sicher, dass der vollständige Wertebereich sichtbar ist\n\nmit ylim(0, 4)\n\n\nNun wollen wir den zweiten Plot aus Grinschgl et al. (2021) reproduzieren.\nErgänze dafür den folgenden Code an den nötigen Stellen mit den passenden Werten und Argumenten.\n\nLade zuerst den in der letzten Woche gespeicherten Long-Datensatz.\nErsetze anschliessend die Platzhalter “XXXXXX” durch die erforderlichen Werte, um den Plot zu reproduzieren.\nSpeichere deinen Plot als PNG Datei ab.\n\n\n\n\n\n\n\n\n\n\n\ndescriptives &lt;- dat_long |&gt; \n  group_by(XXXXXX, XXXXXXX) |&gt; \n  summarize(N = length(rating),\n               mean_d = mean(rating),\n               sd_d   = sd(rating),\n               se_d   = sd_d / sqrt(N)\n)\n\ndescriptives$group_all &lt;- factor(descriptives$group_all, c(\"above\", \"control\", \"below\"))\n\nrate_plot &lt;- descriptives |&gt; \n  ggplot(aes(x = XXXXXX, \n             y = XXXXXX, \n             group = XXXX)) \n\nrate_plot +\n  geom_line(aes(color = group_all, linetype = group_all), size = 1.2) +\n  geom_errorbar(aes(ymin = mean_d - se_d, ymax = mean_d + se_d), width = .1) +\n  scale_color_manual(values = c(\"green4\", \"red\", \"black\")) +\n  theme_classic() +\n  labs(title = \"XXXXXXX\") +\n  ylab(\"XXXXXXXX\") +\n  xlab(\"XXXXXXXXX\") +\n  theme(plot.title = element_text(hjust = 0.5, size = 12, face = \"bold\"), \n        axis.text = element_text(size = 11), axis.title = element_text(size = 14))",
+    "text": "Visualize - Übungen zu ggplot2\n📚 Einführung in R - Kapitel 5\n📚 R for Data Science - Kapitel 1\n📚R for Data Science - Kapitel 11\n\n\n\n\n\n\nTabelle mit häufig verwendeten Geoms()\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nGeom\nFunktion\nEinsatzbereich\nBild / Beispiel\n\n\n\n\ngeom_point()\nStreudiagramm\nZwei numerische Variablen vergleichen (x = Var1, y = Var2)\n\n\n\ngeom_jitter()\nJitter-Plot\nPunkte leicht versetzen, um Überlappung zu vermeiden (v. a. bei kategorialem x)\n\n\n\ngeom_line()\nLiniendiagramm\nWerteverlauf Über kontinuierliche x-Achse darstellen\n\n\n\ngeom_bar()\nBalkendiagramm\nHäufigkeiten oder Aggregationen für Kategorien (x = Gruppe)\n\n\n\ngeom_histogram()\nHistogramm\nVerteilung einer numerischen Variable (x = Wert)\n\n\n\ngeom_boxplot()\nBoxplot\nVerteilungen über Gruppen vergleichen (x = Gruppe, y = Wert)\n\n\n\n\n\n\n\n\n\n\n\n\n\nCheatsheet ggplot2\n\n\n\n\n\n\n\n\n\n\nIm folgenden wollen wir Figure 4 aus Grinschgl et al. (2021) reproduzieren:\n\n\n\n\n\n\n\n\n\n\nVorbereitungen:\nUm die Mittelwerte plotten zu können, müssen wir die Gruppenmittelwerte und Standardfehler berechnen. Passe dafür den Codeblock an:\nIm Hands-on Block 4 haben wir bereits mit dplyr die MMQ-Skalenwerte „mmq_mean“ pro Person berechnet. Nutze nun die dplyr-Funktionen, insbesondere group_by(), um den durchschnittlichen MMQ-Wert pro Gruppe (group_all) sowie den Standardfehler zu berechnen. Die Formel für den Standardfehler lautet: SE = SD / √n und kann z.b so berechnet werden. se_mmq = sd(mmq_mean) / sqrt(n()) . Ergänze den Code unten mit den nötigen Angaben. Lege group_all in deinem summary als Faktor fest mit den Levels in der Reihenfolge: “below”, “control”, “above”.\n\n\n\n\n\n\nNote\n\n\n\n\n\nDer Standardfehler des Mittelwerts (SEM) beschreibt wie stark der geschätzte Stichprobenmittelwert zufällig vom wahren Populationsmittelwert abweichen kann. Er ist damit ein Mass für die Präzision des Mittelwerts.\n\n\n\n\ndat_full &lt;- dat_full |&gt; \n  mutate(mmq_mean = rowMeans(select(dat_full, starts_with(\"question\")))\n\n\ngroup_summary &lt;- dat_full %&gt;%\n  group_by(XXXXXXX) %&gt;%\n  summarize(\n    group_mean_mmq = mean(XXXXXX),\n    se_mmq = sd(XXXXXX) / sqrt(n())\n  )\n\ngroup_summary$group_all &lt;- factor(group_summary$group_all,\n                                  levels = c(\"XXXXX\", \"XXXXX\", \"XXXXX\"))\n\n\n\n1. Erstelle einen leeren Plot und gib deinen Datensatz an\nBeginne mit:\n\nggplot() und deinem Datensatz\n\n\n\n2. Definiere die Aesthetic Mappings\nLege fest:\n\nwelche Variable auf der x-Achse liegt\nwelche Variable auf der y-Achse liegt\n\n\n\n3. Füge geom_col() dem Plot hinzu\nDamit zeichnest du die Balken für die Gruppenmittelwerte.\n\ncolor = für Konturen\nfill = für die Füllfarben der Balken\n\n\n\n4. Füge Fehlerbalken hinzu\nDie Fehlerbalken die wir hier verwenden sind standardfehler (se\nNutze geom_errorbar() und definiere innerhalb von aes():\n\nymin = mean - sd - Füge die passenden Variablen ein.\nymax = mean + sd - Füge die passenden Variablen ein.\n\nPasse die Breite der Fehlerbalken mit width = an.\n\n\n5. Füge Titel und Achsenbeschriftungen hinzu\nNutze dafür labs(). Verändere das theme zu theme_classic()\n\n\n6. Stelle sicher, dass der vollständige Wertebereich sichtbar ist\n\nmit ylim(0, 4)\n\n\nNun wollen wir den zweiten Plot aus Grinschgl et al. (2021) reproduzieren.\nErgänze dafür den folgenden Code an den nötigen Stellen mit den passenden Werten und Argumenten.\n\nLade zuerst den in der letzten Woche gespeicherten Long-Datensatz.\nErsetze anschliessend die Platzhalter “XXXXXX” durch die erforderlichen Werte, um den Plot zu reproduzieren.\nSpeichere deinen Plot als PNG Datei ab.\n\n\n\n\n\n\n\n\n\n\n\ndescriptives &lt;- dat_long |&gt; \n  group_by(XXXXXX, XXXXXXX) |&gt; \n  summarize(N = length(rating),\n               mean_d = mean(rating),\n               sd_d   = sd(rating),\n               se_d   = sd_d / sqrt(N)\n)\n\ndescriptives$group_all &lt;- factor(descriptives$group_all, c(\"above\", \"control\", \"below\"))\n\nrate_plot &lt;- descriptives |&gt; \n  ggplot(aes(x = XXXXXX, \n             y = XXXXXX, \n             group = XXXX)) \n\nrate_plot +\n  geom_line(aes(color = group_all, linetype = group_all), size = 1.2) +\n  geom_errorbar(aes(ymin = mean_d - se_d, ymax = mean_d + se_d), width = .1) +\n  scale_color_manual(values = c(\"green4\", \"red\", \"black\")) +\n  theme_classic() +\n  labs(title = \"XXXXXXX\") +\n  ylab(\"XXXXXXXX\") +\n  xlab(\"XXXXXXXXX\") +\n  theme(plot.title = element_text(hjust = 0.5, size = 12, face = \"bold\"), \n        axis.text = element_text(size = 11), axis.title = element_text(size = 14))",
     "crumbs": [
       "Übungen zu den Einheiten",
       "Hands on - Block 6 (Woche 11 - 12 "
@@ -777,7 +777,7 @@
     "href": "front_page.html",
     "title": "Einleitung",
     "section": "",
-    "text": "In diesem E-Book findest du alle wichtigen Informationen zum Methodenseminar “R u Ready”. Du kannst hier u. a. die wöchentlichen Folien, Hands-On R Übungen, den Leistungsnachweis, und Frequently Asked Questions einsehen. Du kannst über die Unterkapitel (links) zu den entsprechenden Inhalten navigieren, oder auch die Suchfunktion oben links verwenden, um nach einem bestimmten Begriff zu suchen.\n\nHinweisboxen\nHier einen Überblick über die auf den Seiten enthaltenen Hinweisboxen:\n\n\n\n\n\n\nNote\n\n\n\nVertiefung: Hier geht es in die Tiefe.\n\n\n\n\n\n\n\n\nImportant\n\n\n\nWichtig: Dies ist eine wichtige Information.\n\n\n\n\n\n\n\n\nWarning\n\n\n\nAchtung: Hier ist Vorsicht geboten.\n\n\n\n\n\n\n\n\nCaution\n\n\n\nVorsicht: Diese Information ist noch in Bearbeitung.\n\n\n\n\nSyllabus\n\n\n\n\n\n\nCaution\n\n\n\nVorsicht: Der Syllabus dient als grobe Richtlinie und kann angepasst werden, falls wir in einzelnen Einheiten mehr oder weniger Zeit benötigen.\n\n\n\n\nLetztes Update November 26, 2025 at 09:58",
+    "text": "In diesem E-Book findest du alle wichtigen Informationen zum Methodenseminar “R u Ready”. Du kannst hier u. a. die wöchentlichen Folien, Hands-On R Übungen, den Leistungsnachweis, und Frequently Asked Questions einsehen. Du kannst über die Unterkapitel (links) zu den entsprechenden Inhalten navigieren, oder auch die Suchfunktion oben links verwenden, um nach einem bestimmten Begriff zu suchen.\n\nHinweisboxen\nHier einen Überblick über die auf den Seiten enthaltenen Hinweisboxen:\n\n\n\n\n\n\nNote\n\n\n\nVertiefung: Hier geht es in die Tiefe.\n\n\n\n\n\n\n\n\nImportant\n\n\n\nWichtig: Dies ist eine wichtige Information.\n\n\n\n\n\n\n\n\nWarning\n\n\n\nAchtung: Hier ist Vorsicht geboten.\n\n\n\n\n\n\n\n\nCaution\n\n\n\nVorsicht: Diese Information ist noch in Bearbeitung.\n\n\n\n\nSyllabus\n\n\n\n\n\n\nCaution\n\n\n\nVorsicht: Der Syllabus dient als grobe Richtlinie und kann angepasst werden, falls wir in einzelnen Einheiten mehr oder weniger Zeit benötigen.\n\n\n\n\nLetztes Update November 26, 2025 at 14:47",
     "crumbs": [
       "Einleitung"
     ]
@@ -2161,11 +2161,119 @@
     ]
   },
   {
-    "objectID": "Checklist_Abschlussarbeit.html",
-    "href": "Checklist_Abschlussarbeit.html",
+    "objectID": "checkliste_abschlussarbeit.html",
+    "href": "checkliste_abschlussarbeit.html",
     "title": "Checkliste Abschlussarbeit",
     "section": "",
-    "text": "Im folgenden findet ihr die Punkte für die Checkliste der Schlussabgabe\nFormalia\nInhaltliche Dinge\n\nUmfrage für Resultate."
+    "text": "Abgabe bis 11.1.2026 - 23:59\nAbgabe als ZIP-File: vorname_nachname_abschlussarbeit.zip\nFür die Abschlussarbeit erhaltet ihr simulierte Daten. Diese werden den Daten des Originalpapers in den meisten Aspekten sehr ähnlich sein. Allerdings müssen einige Teile davon zusätzlich bereinigt werden, bevor sie ausgewertet werden können. Die folgende Checkliste soll euch dabei helfen, an alle relevanten Aspekte der Datenbereinigung zu denken.\nDie Datensatzaufbereitung erfolgt im processing-Skript. Der final aufbereitete Datensatz (dat_full) sowie der Long-Datensatz (dat_long) werden im Ordner data/processed gespeichert.\n\n\n\nHaben alle Daten die gleiche Anzahl an Beobachtungen?\n\n-   Gibt es Personen mit fehlenden Werten, die ausgeschlossen werden müssen?\n\n-   Gibt es personen doppelt im Datensatz?\n\nGibt es unmögliche Werte in den Daten, z. B. -999? Wie können diese Daten ersetzt werden?\nGibt es reverse-kodierte Variablen (var_name_r)?\nGibt es Variablen, die nicht den korrekten Datentyp haben, z. B. numerische Variablen, die als Charakter angezeigt werden? Schaut euch diese Variablen genau an!\n(Beispiel: drei = 3, stimme voll und ganz zu = höchster Wert)\n\n\n\n\n\nDroppen von redundanten Variablen\nUmbenennen von Variablen, die nicht im snake_case-Format sind\nBerechnung der mmq_mean-Variablen\nSpeichern der Daten!"
+  },
+  {
+    "objectID": "checkliste_abschlussarbeit.html#checkliste-abschlussarbeit",
+    "href": "checkliste_abschlussarbeit.html#checkliste-abschlussarbeit",
+    "title": "Checkliste Abschlussarbeit",
+    "section": "",
+    "text": "Abgabe bis 11.1.2026 - 23:59\nAbgabe als ZIP-File: vorname_nachname_abschlussarbeit.zip\nFür die Abschlussarbeit erhaltet ihr simulierte Daten. Diese werden den Daten des Originalpapers in den meisten Aspekten sehr ähnlich sein. Allerdings müssen einige Teile davon zusätzlich bereinigt werden, bevor sie ausgewertet werden können. Die folgende Checkliste soll euch dabei helfen, an alle relevanten Aspekte der Datenbereinigung zu denken.\nDie Datensatzaufbereitung erfolgt im processing-Skript. Der final aufbereitete Datensatz (dat_full) sowie der Long-Datensatz (dat_long) werden im Ordner data/processed gespeichert.\n\n\n\nHaben alle Daten die gleiche Anzahl an Beobachtungen?\n\n-   Gibt es Personen mit fehlenden Werten, die ausgeschlossen werden müssen?\n\n-   Gibt es personen doppelt im Datensatz?\n\nGibt es unmögliche Werte in den Daten, z. B. -999? Wie können diese Daten ersetzt werden?\nGibt es reverse-kodierte Variablen (var_name_r)?\nGibt es Variablen, die nicht den korrekten Datentyp haben, z. B. numerische Variablen, die als Charakter angezeigt werden? Schaut euch diese Variablen genau an!\n(Beispiel: drei = 3, stimme voll und ganz zu = höchster Wert)\n\n\n\n\n\nDroppen von redundanten Variablen\nUmbenennen von Variablen, die nicht im snake_case-Format sind\nBerechnung der mmq_mean-Variablen\nSpeichern der Daten!"
+  },
+  {
+    "objectID": "checkliste_abschlussarbeit.html#im-analyseskript-analysis-werden",
+    "href": "checkliste_abschlussarbeit.html#im-analyseskript-analysis-werden",
+    "title": "Checkliste Abschlussarbeit",
+    "section": "Im Analyseskript (analysis) werden",
+    "text": "Im Analyseskript (analysis) werden\n\nNötige vorbereitungen gemacht (z.B. faktoren setzen)\nDie analysen aus dem Datenanlyseplan durchgeführt!\n\nDeskriptive Statistik (M & SD) berechnen so wie in Table 1 (siehe Grinschgl et al.,2020)\n2x3 mixed ANOVA für subj. Leistungseinschätzungen mit post-hoc t-Tests, inkl.Effektstärken (η2 und Cohen’s d)\nOne-Way ANOVA für jede Offloading Variable (3x), inkl. Effektstärke (η2)\nOne-Way ANOVA für Trial Duration in Pattern Copy Task, inkl. Effektstärke (η2)\nOne-Way ANOVA für MMQ mit post-hoc t-Tests, inkl. Effektstärken (η2 und Cohen’sd)\nOne-Way ANOVA für Arbeitsgedächtnisleistung im Feature Switch Detection Task,inkl. Effektstärke (η2)\n1 Tabelle und eine Abbildung nach Wahl erstellen\nOptional: Testen der Voraussetzungen bei jeder Analyse – wenn diese gemacht wird,soll es auch im Datenanalyseplan beschrieben werden\n\nDaten Visualisiert (mind. 1 Abbilgung + midestens eine Tabelle)."
+  },
+  {
+    "objectID": "checkliste_abschlussarbeit.html#dinge-die-im-datenanalyseplan-angepasst-werden-müssen",
+    "href": "checkliste_abschlussarbeit.html#dinge-die-im-datenanalyseplan-angepasst-werden-müssen",
+    "title": "Checkliste Abschlussarbeit",
+    "section": "Dinge, die im Datenanalyseplan angepasst werden müssen:",
+    "text": "Dinge, die im Datenanalyseplan angepasst werden müssen:\n\nData Access\nData Collection Procedures\nMissing Data"
+  },
+  {
+    "objectID": "checkliste_abschlussarbeit.html#dinge-die-im-codebook-angepasst-werden-müssen",
+    "href": "checkliste_abschlussarbeit.html#dinge-die-im-codebook-angepasst-werden-müssen",
+    "title": "Checkliste Abschlussarbeit",
+    "section": "Dinge, die im Codebook angepasst werden müssen:",
+    "text": "Dinge, die im Codebook angepasst werden müssen:\n\nCoding (reverse-kodierte Items)\nMissing Data\n@Sandra: Wir verlangen nur das Codebook für dat_full – dort wird es nach der Bereinigung keine NAs mehr geben. Soll trotzdem ein Abschnitt zu NA ergänzt werden?\nData Collection Procedures → Simulierte Daten.\n\n\n\nOrdnerstruktur für die Abgabe\nDie (für unser Seminar leicht abgeänderte) Psych-DS-Struktur wird eingehalten. Das bedeutet:\n\nDaten im Ordner data.\n\n-   Rohdaten in `data/raw` (werden nicht verändert).\n\n-   Aufbereitete Daten (`dat_full`) in `data/processed`\n\nAnalyseskripte (processing und analysis) im Ordner code\nGerenderte Analyseskripte (html) ebenfalls im Ordner code\nDatenanalyseplan im Ordner preregistration\nCodebook im Ordner data"
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "Diese Website wurde im Rahmen des Seminars “R u Ready” an der Universität Bern erstellt.\nSollte deine Frage nicht beantwortet worden sein, dann wende dich gerne direkt an die Autor:innen:\n\n\n\nlars.schilling@unibe.ch\n\n\naaron.friedli@unibe.ch\n\n\nsandra.grinschgl@unibe.ch\n\n\n\n\nThis work is licensed under CC BY-SA 4.0",
+    "crumbs": [
+      "About"
+    ]
+  },
+  {
+    "objectID": "1_presentation(1).html#beispielhafte-chunks-output",
+    "href": "1_presentation(1).html#beispielhafte-chunks-output",
+    "title": "R u Ready",
+    "section": "Beispielhafte Chunks & Output",
+    "text": "Beispielhafte Chunks & Output\n\n\n\nprint(\"Hello world!\")\n\n[1] \"Hello world!\"\n\n\n\n\n2+2\n\n[1] 4"
+  },
+  {
+    "objectID": "1_presentation(1).html#beispielhafte-formatierung",
+    "href": "1_presentation(1).html#beispielhafte-formatierung",
+    "title": "R u Ready",
+    "section": "Beispielhafte Formatierung",
+    "text": "Beispielhafte Formatierung\nDiese Präsentation verwendet Reveal.js in Quarto\n\n\n\n\n\n\nHinweis\n\n\nAuf den Folien sind erst einmal nur Beispiele zu sehen, wie man mit Quarto Präsentationen einfach Code einbinden und zeigen kann."
+  },
+  {
+    "objectID": "1_presentation(1).html#beispielhafter-datensatz",
+    "href": "1_presentation(1).html#beispielhafter-datensatz",
+    "title": "R u Ready",
+    "section": "Beispielhafter Datensatz",
+    "text": "Beispielhafter Datensatz\n\nhead(mtcars)\n\n                   mpg cyl disp  hp drat    wt  qsec vs am gear carb\nMazda RX4         21.0   6  160 110 3.90 2.620 16.46  0  1    4    4\nMazda RX4 Wag     21.0   6  160 110 3.90 2.875 17.02  0  1    4    4\nDatsun 710        22.8   4  108  93 3.85 2.320 18.61  1  1    4    1\nHornet 4 Drive    21.4   6  258 110 3.08 3.215 19.44  1  0    3    1\nHornet Sportabout 18.7   8  360 175 3.15 3.440 17.02  0  0    3    2\nValiant           18.1   6  225 105 2.76 3.460 20.22  1  0    3    1"
+  },
+  {
+    "objectID": "1_presentation(1).html#beispielhafter-ggplot-code-und-plot",
+    "href": "1_presentation(1).html#beispielhafter-ggplot-code-und-plot",
+    "title": "R u Ready",
+    "section": "Beispielhafter ggplot-code und plot",
+    "text": "Beispielhafter ggplot-code und plot\n\nggplot(data = mtcars, aes(x = hp, y = mpg, color = factor(cyl))) +\n  geom_point(size = 3) +\n  labs(\n    title = \"PS vs. Verbrauch\",\n    x = \"Horsepower (hp)\",\n    y = \"Miles per Gallon (mpg)\",\n    color = \"Zylinder\"\n  ) +\n  theme_minimal()"
+  },
+  {
+    "objectID": "1_presentation(1).html#beispielhafter-ggplot-code-und-plot-output",
+    "href": "1_presentation(1).html#beispielhafter-ggplot-code-und-plot-output",
+    "title": "R u Ready",
+    "section": "Beispielhafter ggplot-code und plot",
+    "text": "Beispielhafter ggplot-code und plot"
+  },
+  {
+    "objectID": "1_presentation.html#beispielhafte-chunks-output",
+    "href": "1_presentation.html#beispielhafte-chunks-output",
+    "title": "R u Ready",
+    "section": "Beispielhafte Chunks & Output",
+    "text": "Beispielhafte Chunks & Output\n\n\n\nprint(\"Hello world!\")\n\n[1] \"Hello world!\"\n\n\n\n\n2+2\n\n[1] 4"
+  },
+  {
+    "objectID": "1_presentation.html#beispielhafte-formatierung",
+    "href": "1_presentation.html#beispielhafte-formatierung",
+    "title": "R u Ready",
+    "section": "Beispielhafte Formatierung",
+    "text": "Beispielhafte Formatierung\nDiese Präsentation verwendet Reveal.js in Quarto\n\n\n\n\n\n\nHinweis\n\n\nAuf den Folien sind erst einmal nur Beispiele zu sehen, wie man mit Quarto Präsentationen einfach Code einbinden und zeigen kann."
+  },
+  {
+    "objectID": "1_presentation.html#beispielhafter-datensatz",
+    "href": "1_presentation.html#beispielhafter-datensatz",
+    "title": "R u Ready",
+    "section": "Beispielhafter Datensatz",
+    "text": "Beispielhafter Datensatz\n\nhead(mtcars)\n\n                   mpg cyl disp  hp drat    wt  qsec vs am gear carb\nMazda RX4         21.0   6  160 110 3.90 2.620 16.46  0  1    4    4\nMazda RX4 Wag     21.0   6  160 110 3.90 2.875 17.02  0  1    4    4\nDatsun 710        22.8   4  108  93 3.85 2.320 18.61  1  1    4    1\nHornet 4 Drive    21.4   6  258 110 3.08 3.215 19.44  1  0    3    1\nHornet Sportabout 18.7   8  360 175 3.15 3.440 17.02  0  0    3    2\nValiant           18.1   6  225 105 2.76 3.460 20.22  1  0    3    1"
+  },
+  {
+    "objectID": "1_presentation.html#beispielhafter-ggplot-code-und-plot",
+    "href": "1_presentation.html#beispielhafter-ggplot-code-und-plot",
+    "title": "R u Ready",
+    "section": "Beispielhafter ggplot-code und plot",
+    "text": "Beispielhafter ggplot-code und plot\n\nggplot(data = mtcars, aes(x = hp, y = mpg, color = factor(cyl))) +\n  geom_point(size = 3) +\n  labs(\n    title = \"PS vs. Verbrauch\",\n    x = \"Horsepower (hp)\",\n    y = \"Miles per Gallon (mpg)\",\n    color = \"Zylinder\"\n  ) +\n  theme_minimal()"
+  },
+  {
+    "objectID": "1_presentation.html#beispielhafter-ggplot-code-und-plot-output",
+    "href": "1_presentation.html#beispielhafter-ggplot-code-und-plot-output",
+    "title": "R u Ready",
+    "section": "Beispielhafter ggplot-code und plot",
+    "text": "Beispielhafter ggplot-code und plot"
   },
   {
     "objectID": "ChatGPT.html",
@@ -2232,100 +2340,6 @@
       "Links und Ressourcen",
       "ChatGPT in RStudio"
     ]
-  },
-  {
-    "objectID": "1_presentation.html#beispielhafte-chunks-output",
-    "href": "1_presentation.html#beispielhafte-chunks-output",
-    "title": "R u Ready",
-    "section": "Beispielhafte Chunks & Output",
-    "text": "Beispielhafte Chunks & Output\n\n\n\nprint(\"Hello world!\")\n\n[1] \"Hello world!\"\n\n\n\n\n2+2\n\n[1] 4"
-  },
-  {
-    "objectID": "1_presentation.html#beispielhafte-formatierung",
-    "href": "1_presentation.html#beispielhafte-formatierung",
-    "title": "R u Ready",
-    "section": "Beispielhafte Formatierung",
-    "text": "Beispielhafte Formatierung\nDiese Präsentation verwendet Reveal.js in Quarto\n\n\n\n\n\n\nHinweis\n\n\nAuf den Folien sind erst einmal nur Beispiele zu sehen, wie man mit Quarto Präsentationen einfach Code einbinden und zeigen kann."
-  },
-  {
-    "objectID": "1_presentation.html#beispielhafter-datensatz",
-    "href": "1_presentation.html#beispielhafter-datensatz",
-    "title": "R u Ready",
-    "section": "Beispielhafter Datensatz",
-    "text": "Beispielhafter Datensatz\n\nhead(mtcars)\n\n                   mpg cyl disp  hp drat    wt  qsec vs am gear carb\nMazda RX4         21.0   6  160 110 3.90 2.620 16.46  0  1    4    4\nMazda RX4 Wag     21.0   6  160 110 3.90 2.875 17.02  0  1    4    4\nDatsun 710        22.8   4  108  93 3.85 2.320 18.61  1  1    4    1\nHornet 4 Drive    21.4   6  258 110 3.08 3.215 19.44  1  0    3    1\nHornet Sportabout 18.7   8  360 175 3.15 3.440 17.02  0  0    3    2\nValiant           18.1   6  225 105 2.76 3.460 20.22  1  0    3    1"
-  },
-  {
-    "objectID": "1_presentation.html#beispielhafter-ggplot-code-und-plot",
-    "href": "1_presentation.html#beispielhafter-ggplot-code-und-plot",
-    "title": "R u Ready",
-    "section": "Beispielhafter ggplot-code und plot",
-    "text": "Beispielhafter ggplot-code und plot\n\nggplot(data = mtcars, aes(x = hp, y = mpg, color = factor(cyl))) +\n  geom_point(size = 3) +\n  labs(\n    title = \"PS vs. Verbrauch\",\n    x = \"Horsepower (hp)\",\n    y = \"Miles per Gallon (mpg)\",\n    color = \"Zylinder\"\n  ) +\n  theme_minimal()"
-  },
-  {
-    "objectID": "1_presentation.html#beispielhafter-ggplot-code-und-plot-output",
-    "href": "1_presentation.html#beispielhafter-ggplot-code-und-plot-output",
-    "title": "R u Ready",
-    "section": "Beispielhafter ggplot-code und plot",
-    "text": "Beispielhafter ggplot-code und plot"
-  },
-  {
-    "objectID": "1_presentation(1).html#beispielhafte-chunks-output",
-    "href": "1_presentation(1).html#beispielhafte-chunks-output",
-    "title": "R u Ready",
-    "section": "Beispielhafte Chunks & Output",
-    "text": "Beispielhafte Chunks & Output\n\n\n\nprint(\"Hello world!\")\n\n[1] \"Hello world!\"\n\n\n\n\n2+2\n\n[1] 4"
-  },
-  {
-    "objectID": "1_presentation(1).html#beispielhafte-formatierung",
-    "href": "1_presentation(1).html#beispielhafte-formatierung",
-    "title": "R u Ready",
-    "section": "Beispielhafte Formatierung",
-    "text": "Beispielhafte Formatierung\nDiese Präsentation verwendet Reveal.js in Quarto\n\n\n\n\n\n\nHinweis\n\n\nAuf den Folien sind erst einmal nur Beispiele zu sehen, wie man mit Quarto Präsentationen einfach Code einbinden und zeigen kann."
-  },
-  {
-    "objectID": "1_presentation(1).html#beispielhafter-datensatz",
-    "href": "1_presentation(1).html#beispielhafter-datensatz",
-    "title": "R u Ready",
-    "section": "Beispielhafter Datensatz",
-    "text": "Beispielhafter Datensatz\n\nhead(mtcars)\n\n                   mpg cyl disp  hp drat    wt  qsec vs am gear carb\nMazda RX4         21.0   6  160 110 3.90 2.620 16.46  0  1    4    4\nMazda RX4 Wag     21.0   6  160 110 3.90 2.875 17.02  0  1    4    4\nDatsun 710        22.8   4  108  93 3.85 2.320 18.61  1  1    4    1\nHornet 4 Drive    21.4   6  258 110 3.08 3.215 19.44  1  0    3    1\nHornet Sportabout 18.7   8  360 175 3.15 3.440 17.02  0  0    3    2\nValiant           18.1   6  225 105 2.76 3.460 20.22  1  0    3    1"
-  },
-  {
-    "objectID": "1_presentation(1).html#beispielhafter-ggplot-code-und-plot",
-    "href": "1_presentation(1).html#beispielhafter-ggplot-code-und-plot",
-    "title": "R u Ready",
-    "section": "Beispielhafter ggplot-code und plot",
-    "text": "Beispielhafter ggplot-code und plot\n\nggplot(data = mtcars, aes(x = hp, y = mpg, color = factor(cyl))) +\n  geom_point(size = 3) +\n  labs(\n    title = \"PS vs. Verbrauch\",\n    x = \"Horsepower (hp)\",\n    y = \"Miles per Gallon (mpg)\",\n    color = \"Zylinder\"\n  ) +\n  theme_minimal()"
-  },
-  {
-    "objectID": "1_presentation(1).html#beispielhafter-ggplot-code-und-plot-output",
-    "href": "1_presentation(1).html#beispielhafter-ggplot-code-und-plot-output",
-    "title": "R u Ready",
-    "section": "Beispielhafter ggplot-code und plot",
-    "text": "Beispielhafter ggplot-code und plot"
-  },
-  {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About",
-    "section": "",
-    "text": "Diese Website wurde im Rahmen des Seminars “R u Ready” an der Universität Bern erstellt.\nSollte deine Frage nicht beantwortet worden sein, dann wende dich gerne direkt an die Autor:innen:\n\n\n\nlars.schilling@unibe.ch\n\n\naaron.friedli@unibe.ch\n\n\nsandra.grinschgl@unibe.ch\n\n\n\n\nThis work is licensed under CC BY-SA 4.0",
-    "crumbs": [
-      "About"
-    ]
-  },
-  {
-    "objectID": "checkliste_abschlussarbeit.html",
-    "href": "checkliste_abschlussarbeit.html",
-    "title": "Checkliste Abschlussarbeit",
-    "section": "",
-    "text": "Abgabe ILIAS"
-  },
-  {
-    "objectID": "checkliste_abschlussarbeit.html#checkliste-abschlussarbeit",
-    "href": "checkliste_abschlussarbeit.html#checkliste-abschlussarbeit",
-    "title": "Checkliste Abschlussarbeit",
-    "section": "",
-    "text": "Abgabe ILIAS"
   },
   {
     "objectID": "codebook.html",
@@ -2827,7 +2841,7 @@
     "href": "EH_11.html#argumente-von-ggplot",
     "title": "R u Ready? HS2025 | Psychologie der Digitalisierung - Einheit 11",
     "section": "Argumente von ggplot()",
-    "text": "Argumente von ggplot()\n\nVariablen als Aesthe Mappings defineren\nMapping ist immer das zweite argument, “call” kann also auch verkürzt werden.\n\n\np &lt;- penguins |&gt;\n  ggplot( \n       mapping = \n         aes(x = body_mass_g, \n           y = bill_length_mm))\np",
+    "text": "Argumente von ggplot()\n\nVariablen als Aesthetic Mappings definieren\nMapping ist immer das zweite Argument (nach dem Datensatz), “call” kann also auch verkürzt werden.\n\n\np &lt;- penguins |&gt;\n  ggplot( \n       mapping = \n         aes(x = body_mass_g, \n           y = bill_length_mm))\np",
     "crumbs": [
       "Präsentationen",
       "Einheit 11 - 26.11.2025"
@@ -4873,7 +4887,7 @@
     "href": "index.html",
     "title": "Einleitung",
     "section": "",
-    "text": "In diesem E-Book findest du alle wichtigen Informationen zum Methodenseminar “R u Ready”. Du kannst hier u. a. die wöchentlichen Folien, Hands-On R Übungen, den Leistungsnachweis, und Frequently Asked Questions einsehen. Du kannst über die Unterkapitel (links) zu den entsprechenden Inhalten navigieren, oder auch die Suchfunktion oben links verwenden, um nach einem bestimmten Begriff zu suchen.\n\nHinweisboxen\nHier einen Überblick über die auf den Seiten enthaltenen Hinweisboxen:\n\n\n\n\n\n\nNote\n\n\n\nVertiefung: Hier geht es in die Tiefe.\n\n\n\n\n\n\n\n\nImportant\n\n\n\nWichtig: Dies ist eine wichtige Information.\n\n\n\n\n\n\n\n\nWarning\n\n\n\nAchtung: Hier ist Vorsicht geboten.\n\n\n\n\n\n\n\n\nCaution\n\n\n\nVorsicht: Diese Information ist noch in Bearbeitung.\n\n\n\n\nSyllabus\n\n\n\n\n\n\nCaution\n\n\n\nVorsicht: Der Syllabus dient als grobe Richtlinie und kann angepasst werden, falls wir in einzelnen Einheiten mehr oder weniger Zeit benötigen.\n\n\n\n\nLetztes Update November 26, 2025 at 09:59"
+    "text": "In diesem E-Book findest du alle wichtigen Informationen zum Methodenseminar “R u Ready”. Du kannst hier u. a. die wöchentlichen Folien, Hands-On R Übungen, den Leistungsnachweis, und Frequently Asked Questions einsehen. Du kannst über die Unterkapitel (links) zu den entsprechenden Inhalten navigieren, oder auch die Suchfunktion oben links verwenden, um nach einem bestimmten Begriff zu suchen.\n\nHinweisboxen\nHier einen Überblick über die auf den Seiten enthaltenen Hinweisboxen:\n\n\n\n\n\n\nNote\n\n\n\nVertiefung: Hier geht es in die Tiefe.\n\n\n\n\n\n\n\n\nImportant\n\n\n\nWichtig: Dies ist eine wichtige Information.\n\n\n\n\n\n\n\n\nWarning\n\n\n\nAchtung: Hier ist Vorsicht geboten.\n\n\n\n\n\n\n\n\nCaution\n\n\n\nVorsicht: Diese Information ist noch in Bearbeitung.\n\n\n\n\nSyllabus\n\n\n\n\n\n\nCaution\n\n\n\nVorsicht: Der Syllabus dient als grobe Richtlinie und kann angepasst werden, falls wir in einzelnen Einheiten mehr oder weniger Zeit benötigen.\n\n\n\n\nLetztes Update November 26, 2025 at 14:48"
   },
   {
     "objectID": "links_und_ressourcen.html",
