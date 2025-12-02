@@ -382,7 +382,7 @@
     "href": "loesung_3.html#inline-code",
     "title": "Lösung 3",
     "section": "Inline Code",
-    "text": "Inline Code\n\nFüge folgenden dynamischen Satz in dein Dokument ein: „Dieses Dokument wurde zum letzten Mal am datum bearbeitet.“\nBenutze dafür die Variable datum die du bereits kreiert hast. Diese kannst du hinzufügen indem du “/” benutzt und “Inline R Code” suchst.\n\n\n\n\n\n\n\nLösung\n\n\n\n\n\nDieses Dokument wurde zum letzten Mal am 2025-11-26 bearbeitet.\n\n\n\n\nRendere dein erstes Dokument: Stelle ganz oben in deinem Dokument dafür das Format um.\n\n\n\n\n\n\n\nLösung\n\n\n\n\n\nÜbliche Formate sind html, docx oder pdf.\n\n\n\n\nNutze dafür den Render-Button und schau dir das gerenderte Ergebnis an. Was ist mit deinem dynamischen Satz passiert?\n\n\n\n\n\n\n\nLösung\n\n\n\n\n\nBeim Rendern des Dokumentes wird der Inline-Code ausgeführt und das aktuelle Datum (bzw. grundsätzlich das entsprechend zuvor definierte Objekt) an der entsprechenden Stelle im Satz eingefügt.\n\n\n\nDas Resultat sollte so aussehen (mit dem aktuellen Datum):\nDieses Dokument wurde zum letzten Mal am 2025-11-26 bearbeitet.\n\n\n\n\n\n\nImportant\n\n\n\nQuarto-Dokumente lassen sich nur rendern, wenn das gesamte Skript fehlerfrei durchläuft. Tritt beim Rendern ein Fehler auf, ist es sinnvoll, das gesamte Skript auszuführen und auf Fehlermeldungen zu achten. Auf diese Weise wird die Reproduzierbarkeit sichergestellt.\nMöchte man das Skript trotz eines Fehlers rendern, kann man an den entsprechenden Code-Chunk #| eval: false schreiben - dies verhindert, dass der Code für die gerenderte Datei ausgeführt wird.",
+    "text": "Inline Code\n\nFüge folgenden dynamischen Satz in dein Dokument ein: „Dieses Dokument wurde zum letzten Mal am datum bearbeitet.“\nBenutze dafür die Variable datum die du bereits kreiert hast. Diese kannst du hinzufügen indem du “/” benutzt und “Inline R Code” suchst.\n\n\n\n\n\n\n\nLösung\n\n\n\n\n\nDieses Dokument wurde zum letzten Mal am 2025-12-02 bearbeitet.\n\n\n\n\nRendere dein erstes Dokument: Stelle ganz oben in deinem Dokument dafür das Format um.\n\n\n\n\n\n\n\nLösung\n\n\n\n\n\nÜbliche Formate sind html, docx oder pdf.\n\n\n\n\nNutze dafür den Render-Button und schau dir das gerenderte Ergebnis an. Was ist mit deinem dynamischen Satz passiert?\n\n\n\n\n\n\n\nLösung\n\n\n\n\n\nBeim Rendern des Dokumentes wird der Inline-Code ausgeführt und das aktuelle Datum (bzw. grundsätzlich das entsprechend zuvor definierte Objekt) an der entsprechenden Stelle im Satz eingefügt.\n\n\n\nDas Resultat sollte so aussehen (mit dem aktuellen Datum):\nDieses Dokument wurde zum letzten Mal am 2025-12-02 bearbeitet.\n\n\n\n\n\n\nImportant\n\n\n\nQuarto-Dokumente lassen sich nur rendern, wenn das gesamte Skript fehlerfrei durchläuft. Tritt beim Rendern ein Fehler auf, ist es sinnvoll, das gesamte Skript auszuführen und auf Fehlermeldungen zu achten. Auf diese Weise wird die Reproduzierbarkeit sichergestellt.\nMöchte man das Skript trotz eines Fehlers rendern, kann man an den entsprechenden Code-Chunk #| eval: false schreiben - dies verhindert, dass der Code für die gerenderte Datei ausgeführt wird.",
     "crumbs": [
       "Übungen zu den Einheiten",
       "Hands on - Block 3 (Woche 5 - 6) - Mit Musterlösungen"
@@ -448,7 +448,7 @@
     "href": "loesung_1.html",
     "title": "Lösung 1",
     "section": "",
-    "text": "Bei Bedarf finden sich hier nochmal die Slides zur EH1: \n\n\nInstalliere R und RStudio:\n\nInstallation von R – neueste Version 4.5.1: https://stat.ethz.ch/CRAN/\nInstallation von Rstudio (Version 2025.05.1): https://posit.co/download/rstudio-desktop/\n\nDu weisst nicht was mit R auf sich hat? Hier ist eine Kurzerklärung: https://methodenlehre.github.io/einfuehrung-in-R/\n\n\n\n\nRStudio öffnen & Einstellungen vornehmen: Unter «tools» –«global options» die unter 1.1. beschriebenen Einstellungen vornehmen: https://methodenlehre.github.io/einfuehrung-in-R/chapters/01-workflow.html\n\n\n\nNeues Skript öffnen & orientieren:\n\n\n\n\nIm folgenden machen wir uns vertraut mit der Oberfläche von R-Studio:\n\n\n\n\n\n\n\nSkript für Code-Eingabe sowie Kommentare\nKonsole für die Ausführung von Code -&gt; Teste einfache mathematische Operation in dieser; reproduziere diese mittels Skript\nRechts oben: Environment & History\nRechts unten: Files, Plots, Packages und Help Viewer\n\n\n\n\nTidyverse ist ein Meta-Paket, das mehrere Pakete umfasst\n\nPakete installieren (nur 1x notwendig) -&gt; führe diesen Code in der Konsole aus\n\ninstall.packages(\"tidyverse\")\n\nPaket laden (innerhalb des Skriptes, bei jedem Neustart von R notwendig)\n\nlibrary(tidyverse)\n\nWarning: Paket 'tidyverse' wurde unter R Version 4.5.2 erstellt\n\n\n── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.4     ✔ readr     2.1.5\n✔ forcats   1.0.0     ✔ stringr   1.5.1\n✔ ggplot2   4.0.0     ✔ tibble    3.3.0\n✔ lubridate 1.9.4     ✔ tidyr     1.3.1\n✔ purrr     1.1.0     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\n\n\n\nTipp: Pakete regelmässig updaten mit z.B. update.packages()\n\n\n\na. Nutze R als Taschenrechner\n\n123+456\n\n\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\n123 + 456\n\n[1] 579\n\n\n\n\n\n2.  `144*112`\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\n144*112\n\n[1] 16128\n\n\n\n\n\n3.  `10/3`\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\n10/3\n\n[1] 3.333333\n\n\n\n\n\n4.  Quadriere 420\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\n420^2\n\n[1] 176400\n\n\n\n\n\n5.  Ziehe die Quadratwurzel aus 146 mit der Funktion `sqrt()`\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\nsqrt(146)\n\n[1] 12.08305\n\n\n\n\n\n6.  Berechne den Rest der Division 10/3 mit dem Modulo Operator: `%%`\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\n10 %% 3\n\n[1] 1\n\n\n\n\n\n\n\n\n\n\nZeichen\nBedeutung\n\n\n\n\n+\nAddition\n\n\n-\nSubstraktion\n\n\n*\nMultiplikation\n\n\n/\nDivision\n\n\nsqrt(x)\nQuadratwurzel\n\n\nabs(x)\nBetrag (absoluter Wert)\n\n\nx %% y\nModulo (x mod y) 5 %% 2 = 1\n\n\n^\nPotenz\n\n\n\n\n\n\n\n\nWeise den Wert 5 der Variable x zu mit dem Operator &lt;-\n\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\nx &lt;- 5\n\n\n\n\n\nWeise eine beliebige Zahl der Variable y hinzu und dividiere dann x durch y. Speichere dieses Ergebnis in der Variable z.\n\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\ny &lt;- 10 # hier könntet ihr auch jede andere Ziffer wählen\n\nz &lt;- x / y\n\n\n\n\n\nSchaue dir das Ergebnis in deinem Environment an. Lass dir das Ergebnis auch in der Konsole ausgeben. Das Environment findest du oben rechts, die Konsole ist unter deinem Skript.\n\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\n# z (hier über das # auskommentiert, da der Befehl nicht im Skript, sondern unten in der Konsole ausgeführt werden soll)\n\n\n\n\n\nErstelle zwei Variablen: Eine mit deinem Vornamen und eine mit deinem Nachnamen. Solche “character” Variablen musst du in Anführungszeichen setzen \"\"\n\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\nvorname &lt;- \"Lars\"\nnachname &lt;- \"Schilling\"\n\n\n\n\n\nKombiniere deinen Vor- und Nachnamen zu deinem vollen Namen mittels paste . Speichere diese Variable als voller_name.\n\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\nvoller_name &lt;- paste(vorname, nachname)\n\n\n\n\n\n\n\n\nDefiniere einen Vektor «first_vector» mit den Zahlen 100, 80, 54, 73. Einen Vektor definiert man so: first_vector &lt;- c(...)\n\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\nfirst_vector &lt;- c(100, 80, 54, 73)\n\n\n\n\n\nWende den Befehl boxplot() auf deinen Vektor an\n\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\nboxplot(first_vector)\n\n\n\n\n\n\n\n\n\n\n\n\nBerechne die Summe sum()und den Mittelwert mean() von deinem Vektor\n\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\nsum(first_vector)\n\n[1] 307\n\nmean(first_vector)\n\n[1] 76.75\n\n\n\n\n\n\nMultipliziere deinen Vektor mit *2\n\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\nfirst_vector * 2\n\n[1] 200 160 108 146\n\n\n\n\n\nDie wichtigsten Operatoren und Funktionen in R: https://methodenlehre.github.io/einfuehrung-in-R/chapters/02-R-language.html\n\n\n\n\n\nFunktion\nBedeutung\n\n\n\n\nmean(x, na.rm =FALSE)\nMittelwert\n\n\nsd(x)\nStandardabweichung\n\n\nvar(x)\nVarianz\n\n\nmedian(x)\nMedian\n\n\nsum(x)\nSumme\n\n\nmin(x)\nMinimalwert\n\n\nmax(x)\nMaximalwert\n\n\nrange(x)\nMinimal - und Maximalwert\n\n\n\n\n\n\n\n\nTeste ob die Zahl 5 größer als 2 ist –&gt; TRUE or FALSE?\n\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\n5 &gt; 2\n\n[1] TRUE\n\n\nTRUE, 5 ist grösser als 2.\n\n\n\n\nTeste ob 6 ungleich 8 ist –&gt; TRUE or FALSE?\n\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\n6 != 8\n\n[1] TRUE\n\n\nTRUE, 6 und 8 sind ungleich.\n\n\n\n\nSubtrahiere 80 von 50 und speichere das Ergebnis in einer Variable namens «diff_score».\n\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\ndiff_score &lt;- 80 - 50\n\n\n\n\n\nBerechne mit abs() den absoluten Wert von «diff_score» lassen dir diesen mit print(diff_score) in der Konsole ausgeben.\n\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\ndiff_score_abs &lt;- abs(diff_score)\n\n# print(diff_score_abs) (hier erneut mit # auskommentiert, da der Befehl nicht im Skript, sondern in der Console ausgeführt werden soll)\n\n\n\n\n\n\n\n\n\nZeichen\nBedeutung\n\n\n\n\n==\ngleich\n\n\n!=\nungleich\n\n\n&gt;\ngrösser\n\n\n&gt;=\ngrösser gleich\n\n\n&lt;\nkleiner\n\n\n&lt;=\nkleiner gleich\n\n\n|\nLogisches Oder\n\n\n&\nLogisches Und\n\n\n\n\n\n\n\n\n\n\nInformative Kommentare im Code sind elementar für die Nachvollziehbarkeit.\n\nSchreibe einen Kommentar indem du ein # verwendest.\n\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\n# Hier ein Beipsiel für einen Kommentar, wie auch schon weiter oben mehrmals verwendet um die Lösungen davon zu hindern ausgeführt zu werden.\n\n\n\n\n\nCode der nach einem # steht wird nicht ausgeführt. Setze ein # vor eine Codezeile und führe sie aus und beobachte was passiert.\n\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\n# 1 + 2\n\n\n\n\n\n\n\nEs gibt verschiedene Konventionen wie man Variablen bennen kann:\nhttps://methodenlehre.github.io/einfuehrung-in-R/chapters/02-R-language.html#variablennamen\n\nDefiniere eine neue Variable nach snake_case\n\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\nneue_variable &lt;- \"snake_case\"\n\n\n\n\n\nDefiniere eine zweite Variable nach CamelCase\n\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\nneueVariable &lt;- \"CamelCase\"\n\n\n\n\n\n\n\n\n\nSpeichere die beiden höchsten Werte aus «first_vector» in einer neuen Variable ab.\n\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\ntop_two &lt;- sort(first_vector, decreasing = TRUE)[1:2]\n\n\n\n\n\nErstelle einen Vektor mit Werten von 0-1000 in 10er Schritten.\n\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\nvec_seq &lt;- seq(from = 1, to = 1000, by = 10)\n\n\n\n\n\nZiehe zufällig eine Zahl aus diesem Vektor\n\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\nsample(vec_seq, 1)\n\n[1] 521\n\n\n\n\n\n\nGeneriere einen Vektor, der aus 50 Wiederholungen der Zahl 3 besteht.\n\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\nmy_vector &lt;- rep(3, times = 50)\n\n\n\n\nTipps zu diesen Aufgaben findest du bei Bedarf hier: https://methodenlehre.github.io/einfuehrung-in-R/chapters/02-R-language.html (Kapitel 2.1)\n\n\n\n\nnumeric vectors: werden in integer (ganze Zahlen) und double (reelle Zahlen) unterteilt, z.B.\nnumerical_vector &lt;- c(1, 2.5, 4)\ncharacter vectors: bestehen aus Zeichen, welche von Anführungszeichen umgeben werden, z.B.\ntext_vector &lt;- c(\"Hello\", \"World\")\nlogical vectors: Elemente dieses Typs können nur 3 Werte annehmen: TRUE, FALSE oder NA\nlog_vector &lt;- c(TRUE, FALSE, TRUE)\n\nVektoren müssen aus denselbsten Elementen bestehen, d.h. z.B. numeric und character können nicht gemischt werden. Vektoren werden meist mit c() erstellt.",
+    "text": "Bei Bedarf finden sich hier nochmal die Slides zur EH1: \n\n\nInstalliere R und RStudio:\n\nInstallation von R – neueste Version 4.5.1: https://stat.ethz.ch/CRAN/\nInstallation von Rstudio (Version 2025.05.1): https://posit.co/download/rstudio-desktop/\n\nDu weisst nicht was mit R auf sich hat? Hier ist eine Kurzerklärung: https://methodenlehre.github.io/einfuehrung-in-R/\n\n\n\n\nRStudio öffnen & Einstellungen vornehmen: Unter «tools» –«global options» die unter 1.1. beschriebenen Einstellungen vornehmen: https://methodenlehre.github.io/einfuehrung-in-R/chapters/01-workflow.html\n\n\n\nNeues Skript öffnen & orientieren:\n\n\n\n\nIm folgenden machen wir uns vertraut mit der Oberfläche von R-Studio:\n\n\n\n\n\n\n\nSkript für Code-Eingabe sowie Kommentare\nKonsole für die Ausführung von Code -&gt; Teste einfache mathematische Operation in dieser; reproduziere diese mittels Skript\nRechts oben: Environment & History\nRechts unten: Files, Plots, Packages und Help Viewer\n\n\n\n\nTidyverse ist ein Meta-Paket, das mehrere Pakete umfasst\n\nPakete installieren (nur 1x notwendig) -&gt; führe diesen Code in der Konsole aus\n\ninstall.packages(\"tidyverse\")\n\nPaket laden (innerhalb des Skriptes, bei jedem Neustart von R notwendig)\n\nlibrary(tidyverse)\n\nWarning: Paket 'tidyverse' wurde unter R Version 4.5.2 erstellt\n\n\n── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.4     ✔ readr     2.1.5\n✔ forcats   1.0.0     ✔ stringr   1.5.1\n✔ ggplot2   4.0.0     ✔ tibble    3.3.0\n✔ lubridate 1.9.4     ✔ tidyr     1.3.1\n✔ purrr     1.1.0     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\n\n\n\nTipp: Pakete regelmässig updaten mit z.B. update.packages()\n\n\n\na. Nutze R als Taschenrechner\n\n123+456\n\n\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\n123 + 456\n\n[1] 579\n\n\n\n\n\n2.  `144*112`\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\n144*112\n\n[1] 16128\n\n\n\n\n\n3.  `10/3`\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\n10/3\n\n[1] 3.333333\n\n\n\n\n\n4.  Quadriere 420\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\n420^2\n\n[1] 176400\n\n\n\n\n\n5.  Ziehe die Quadratwurzel aus 146 mit der Funktion `sqrt()`\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\nsqrt(146)\n\n[1] 12.08305\n\n\n\n\n\n6.  Berechne den Rest der Division 10/3 mit dem Modulo Operator: `%%`\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\n10 %% 3\n\n[1] 1\n\n\n\n\n\n\n\n\n\n\nZeichen\nBedeutung\n\n\n\n\n+\nAddition\n\n\n-\nSubstraktion\n\n\n*\nMultiplikation\n\n\n/\nDivision\n\n\nsqrt(x)\nQuadratwurzel\n\n\nabs(x)\nBetrag (absoluter Wert)\n\n\nx %% y\nModulo (x mod y) 5 %% 2 = 1\n\n\n^\nPotenz\n\n\n\n\n\n\n\n\nWeise den Wert 5 der Variable x zu mit dem Operator &lt;-\n\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\nx &lt;- 5\n\n\n\n\n\nWeise eine beliebige Zahl der Variable y hinzu und dividiere dann x durch y. Speichere dieses Ergebnis in der Variable z.\n\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\ny &lt;- 10 # hier könntet ihr auch jede andere Ziffer wählen\n\nz &lt;- x / y\n\n\n\n\n\nSchaue dir das Ergebnis in deinem Environment an. Lass dir das Ergebnis auch in der Konsole ausgeben. Das Environment findest du oben rechts, die Konsole ist unter deinem Skript.\n\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\n# z (hier über das # auskommentiert, da der Befehl nicht im Skript, sondern unten in der Konsole ausgeführt werden soll)\n\n\n\n\n\nErstelle zwei Variablen: Eine mit deinem Vornamen und eine mit deinem Nachnamen. Solche “character” Variablen musst du in Anführungszeichen setzen \"\"\n\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\nvorname &lt;- \"Lars\"\nnachname &lt;- \"Schilling\"\n\n\n\n\n\nKombiniere deinen Vor- und Nachnamen zu deinem vollen Namen mittels paste . Speichere diese Variable als voller_name.\n\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\nvoller_name &lt;- paste(vorname, nachname)\n\n\n\n\n\n\n\n\nDefiniere einen Vektor «first_vector» mit den Zahlen 100, 80, 54, 73. Einen Vektor definiert man so: first_vector &lt;- c(...)\n\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\nfirst_vector &lt;- c(100, 80, 54, 73)\n\n\n\n\n\nWende den Befehl boxplot() auf deinen Vektor an\n\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\nboxplot(first_vector)\n\n\n\n\n\n\n\n\n\n\n\n\nBerechne die Summe sum()und den Mittelwert mean() von deinem Vektor\n\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\nsum(first_vector)\n\n[1] 307\n\nmean(first_vector)\n\n[1] 76.75\n\n\n\n\n\n\nMultipliziere deinen Vektor mit *2\n\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\nfirst_vector * 2\n\n[1] 200 160 108 146\n\n\n\n\n\nDie wichtigsten Operatoren und Funktionen in R: https://methodenlehre.github.io/einfuehrung-in-R/chapters/02-R-language.html\n\n\n\n\n\nFunktion\nBedeutung\n\n\n\n\nmean(x, na.rm =FALSE)\nMittelwert\n\n\nsd(x)\nStandardabweichung\n\n\nvar(x)\nVarianz\n\n\nmedian(x)\nMedian\n\n\nsum(x)\nSumme\n\n\nmin(x)\nMinimalwert\n\n\nmax(x)\nMaximalwert\n\n\nrange(x)\nMinimal - und Maximalwert\n\n\n\n\n\n\n\n\nTeste ob die Zahl 5 größer als 2 ist –&gt; TRUE or FALSE?\n\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\n5 &gt; 2\n\n[1] TRUE\n\n\nTRUE, 5 ist grösser als 2.\n\n\n\n\nTeste ob 6 ungleich 8 ist –&gt; TRUE or FALSE?\n\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\n6 != 8\n\n[1] TRUE\n\n\nTRUE, 6 und 8 sind ungleich.\n\n\n\n\nSubtrahiere 80 von 50 und speichere das Ergebnis in einer Variable namens «diff_score».\n\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\ndiff_score &lt;- 80 - 50\n\n\n\n\n\nBerechne mit abs() den absoluten Wert von «diff_score» lassen dir diesen mit print(diff_score) in der Konsole ausgeben.\n\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\ndiff_score_abs &lt;- abs(diff_score)\n\n# print(diff_score_abs) (hier erneut mit # auskommentiert, da der Befehl nicht im Skript, sondern in der Console ausgeführt werden soll)\n\n\n\n\n\n\n\n\n\nZeichen\nBedeutung\n\n\n\n\n==\ngleich\n\n\n!=\nungleich\n\n\n&gt;\ngrösser\n\n\n&gt;=\ngrösser gleich\n\n\n&lt;\nkleiner\n\n\n&lt;=\nkleiner gleich\n\n\n|\nLogisches Oder\n\n\n&\nLogisches Und\n\n\n\n\n\n\n\n\n\n\nInformative Kommentare im Code sind elementar für die Nachvollziehbarkeit.\n\nSchreibe einen Kommentar indem du ein # verwendest.\n\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\n# Hier ein Beipsiel für einen Kommentar, wie auch schon weiter oben mehrmals verwendet um die Lösungen davon zu hindern ausgeführt zu werden.\n\n\n\n\n\nCode der nach einem # steht wird nicht ausgeführt. Setze ein # vor eine Codezeile und führe sie aus und beobachte was passiert.\n\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\n# 1 + 2\n\n\n\n\n\n\n\nEs gibt verschiedene Konventionen wie man Variablen bennen kann:\nhttps://methodenlehre.github.io/einfuehrung-in-R/chapters/02-R-language.html#variablennamen\n\nDefiniere eine neue Variable nach snake_case\n\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\nneue_variable &lt;- \"snake_case\"\n\n\n\n\n\nDefiniere eine zweite Variable nach CamelCase\n\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\nneueVariable &lt;- \"CamelCase\"\n\n\n\n\n\n\n\n\n\nSpeichere die beiden höchsten Werte aus «first_vector» in einer neuen Variable ab.\n\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\ntop_two &lt;- sort(first_vector, decreasing = TRUE)[1:2]\n\n\n\n\n\nErstelle einen Vektor mit Werten von 0-1000 in 10er Schritten.\n\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\nvec_seq &lt;- seq(from = 1, to = 1000, by = 10)\n\n\n\n\n\nZiehe zufällig eine Zahl aus diesem Vektor\n\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\nsample(vec_seq, 1)\n\n[1] 341\n\n\n\n\n\n\nGeneriere einen Vektor, der aus 50 Wiederholungen der Zahl 3 besteht.\n\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\nmy_vector &lt;- rep(3, times = 50)\n\n\n\n\nTipps zu diesen Aufgaben findest du bei Bedarf hier: https://methodenlehre.github.io/einfuehrung-in-R/chapters/02-R-language.html (Kapitel 2.1)\n\n\n\n\nnumeric vectors: werden in integer (ganze Zahlen) und double (reelle Zahlen) unterteilt, z.B.\nnumerical_vector &lt;- c(1, 2.5, 4)\ncharacter vectors: bestehen aus Zeichen, welche von Anführungszeichen umgeben werden, z.B.\ntext_vector &lt;- c(\"Hello\", \"World\")\nlogical vectors: Elemente dieses Typs können nur 3 Werte annehmen: TRUE, FALSE oder NA\nlog_vector &lt;- c(TRUE, FALSE, TRUE)\n\nVektoren müssen aus denselbsten Elementen bestehen, d.h. z.B. numeric und character können nicht gemischt werden. Vektoren werden meist mit c() erstellt.",
     "crumbs": [
       "Übungen zu den Einheiten",
       "Hands on - Block 1 (Woche 1 - 2) - Mit Musterlösungen"
@@ -514,7 +514,7 @@
     "href": "loesung_1.html#für-fortgeschrittene-r-nutzerinnen",
     "title": "Lösung 1",
     "section": "",
-    "text": "Speichere die beiden höchsten Werte aus «first_vector» in einer neuen Variable ab.\n\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\ntop_two &lt;- sort(first_vector, decreasing = TRUE)[1:2]\n\n\n\n\n\nErstelle einen Vektor mit Werten von 0-1000 in 10er Schritten.\n\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\nvec_seq &lt;- seq(from = 1, to = 1000, by = 10)\n\n\n\n\n\nZiehe zufällig eine Zahl aus diesem Vektor\n\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\nsample(vec_seq, 1)\n\n[1] 521\n\n\n\n\n\n\nGeneriere einen Vektor, der aus 50 Wiederholungen der Zahl 3 besteht.\n\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\nmy_vector &lt;- rep(3, times = 50)\n\n\n\n\nTipps zu diesen Aufgaben findest du bei Bedarf hier: https://methodenlehre.github.io/einfuehrung-in-R/chapters/02-R-language.html (Kapitel 2.1)",
+    "text": "Speichere die beiden höchsten Werte aus «first_vector» in einer neuen Variable ab.\n\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\ntop_two &lt;- sort(first_vector, decreasing = TRUE)[1:2]\n\n\n\n\n\nErstelle einen Vektor mit Werten von 0-1000 in 10er Schritten.\n\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\nvec_seq &lt;- seq(from = 1, to = 1000, by = 10)\n\n\n\n\n\nZiehe zufällig eine Zahl aus diesem Vektor\n\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\nsample(vec_seq, 1)\n\n[1] 341\n\n\n\n\n\n\nGeneriere einen Vektor, der aus 50 Wiederholungen der Zahl 3 besteht.\n\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\nmy_vector &lt;- rep(3, times = 50)\n\n\n\n\nTipps zu diesen Aufgaben findest du bei Bedarf hier: https://methodenlehre.github.io/einfuehrung-in-R/chapters/02-R-language.html (Kapitel 2.1)",
     "crumbs": [
       "Übungen zu den Einheiten",
       "Hands on - Block 1 (Woche 1 - 2) - Mit Musterlösungen"
@@ -560,77 +560,105 @@
     ]
   },
   {
-    "objectID": "hausuebung_1.html",
-    "href": "hausuebung_1.html",
-    "title": "Hausübung 1",
+    "objectID": "hausuebung_2.html",
+    "href": "hausuebung_2.html",
+    "title": "hausuebung_2",
     "section": "",
-    "text": "Warning: Paket 'tidyverse' wurde unter R Version 4.5.2 erstellt\n\n\n\nAufgabenstellung\n\nAbgabefrist: 7.11.2025\nAbgabe auf ILIAS und Weitergabe an Peerpartner:in\nArbeite für diese Hausübung mit Quarto.\nVersuche beim Lösen der Aufgaben darauf zu achten, dass du sie reproduzierbar gestaltest. Am Ende der Aufgabe renderst du dein Skript.\nDie Abgabe besteht dann aus deinem Skript sowie dem gerenderten Skript als HTML- oder PDF-Datei.\n\n\n\nAufgabe 1: Datensatz aufbereiten und beschreiben\nWir arbeiten für die Übungen mit diesem Datensatz. Dieser wurde simuliert und spiegelt keine echten Daten oder Zusammenhänge wider. Der Datensatz beinhaltet demografische Variablen sowie eine Version des BFI-44-Fragebogens. In den folgenden Aufgaben werden wir diesen mit den bisher kennengelernten tidyverse-Funktionen aufbereiten und analysieren.\n 📥 Download fake_bfi_dataset.csv \nNutze die dplyr-Funktionen, die wir kennengelernt haben, um die folgenden Aufgaben zu bearbeiten.\nTipp: In einigen Variablen gibt es fehlende Werte (missings). Die Bearbeitung dieser Werte erfolgt erst in Aufgabe 2. Verwende, falls nötig, das Argument na.rm = TRUE.\nAufgaben\n\nBenenne die Variable Ort in Postleitzahl um.\n\n\nWelche Spalte scheint doppelt vorhanden zu sein? Lösche sie aus dem Datensatz.\n\n\nPersonen die nicht volljährig sind dürfen nicht an der Studie teilnehmen und müssen ausgeschlossen werden.\n\n\nFüge dem Datensatz die Spalte Alterskohorte hinzu. Wenn eine Person über 60 Jahre alt ist, gilt sie als alt, ansonsten als jung.\n\n\nWelche Variablen sollten Faktoren sein? Wandle sie in Faktoren um\n\n\nErstelle eine Kopie des Datensatzes nur mit den demographischen Variablen.\n\nVerwende die dplyr-Funktionen, um die folgenden Fragen zu beantworten:\n\nWelchen Anteil am Gesamtsample hat jeder Ort bzw. jede Postleitzahl, und wie kann dieser als neue Spalte im Datensatz ergänzt werden?\n\n\nIn welchem Quartier leben proportional am meisten Personen, die sich als weiblich beschreiben?\n\n\nWie hoch ist das durschnittliche Alter pro Quartier?\n\n\nWie alt sind die jüngsten Personen getrennt nach Gender?\n\n\nErstelle eine Rangliste der Quartiere nach durchschnittlichem Alter (vom höchsten zum niedrigsten).\n\n\n\nAufgabe 2: Fehlende Werte\n📖Kapitel 4.3.3 Ellis & Mayer\nFühre die folgenden Schritte durch:\n\nUntersuche den Datensatz auf fehlende Werte. Wie viele fehlende Werte gibt es insgesamt, und in welchen Variablen treten sie auf\n\n\nEinige Personen haben keine Angabe zu ihrer Geschlechtsidentität gemacht. Ersetze diese fehlenden Werte (NAs) durch “Keine Angabe”. Nutze dafür die Funktion mutate() und replace_na(). Beachte: Gender wurde bereits als Faktor definiert, muss aber erneut zu einem Character transformiert werden.\n\n\nZeilen mit fehlenden Werten löschen\nErstelle eine Kopie des Datensatzes und verwende drop_na(),\num alle Zeilen mit fehlenden Werten zu entfernen.\n\n\n\nAufgabe 3: Skalenberechnung\n📖Kapitel 4.4. Ellis & Mayer\nAufgaben:\n\nUmwandlung der BFI-Items in numerische Werte.\n\n„Stimme gar nicht zu“ → 1\n„Stimme voll und ganz zu“ → 5\n\n\nVerwende dafür eine Kombination aus mutate(), across() und case_when() oder recode().\n\nUmpolen der negativ formulierten Items\n\nDie negativ formulierten Items enden alle mit _r (für reverse). Poole diese Items um.\nSuche dir eine dplyr Funktion, welche helfen kann alle Variablen auszuwählen welche mit _r aufhören.\n💡Tipp: Ähnlich wie starts_with\n\nBerechnung der Big-Five-Skalen\n\nErstelle neue Variablen, die den Mittelwert jedes Big-Five-Faktors pro Person enthalten.\nMit welcher Funktion kannst du dir ersparen alle Variablen auszuschreiben?\n\n\n\nZusammenhänge zwischen Skalen testen\n\nTeste mit cor.test() die Korrelation zwischen zwei Big-Five-Faktoren,\nzum Beispiel zwischen Extraversion und Offenheit.\n\n\n\n\nBerechne die Durchschnittswerte, Standardabweichungen und Mediane der Big-Five-Faktoren Extraversion und Offenheit, unterteilt nach der Geschlechtsangabe.\n\n\nRendere dein Skript!\n\nGib dein Skript und deine gerenderte Datei als ZIP (Dateinaname: vorname_nachname_hausübung_1.ZIP) datei auf ILIAS ab und leite es deinem oder deiner Peerpartner:in weiter.\n\n\nInstruktionen Peerfeedback:\n\nKommentiere direkt im Quarto File deiner Peerpartner:in und schicke es ihm/ihr zu.\nSchreibe eine kurzen Kommentar im Forum auf ILIAS (Ordner EH8).\n\nFokussiere dich dabei auf die folgenden Punkte:\n\nFunktioniert der Code?\nIst die Analyse reproduzierbar (z. B. durch relative Pfade, Kommentierung des Codes, Einhaltung von Style-Guidelines)?\nWelche Aspekte wurden gut umgesetzt?\nWelche Punkte lassen sich noch verbessern?"
+    "text": "Abgabe bis: Freitag 28.11, 23:55 via ILIAS\nZip-Datei benennen: vorname_nachname.zip\n\nGerendertes Skript: vorname_nachname_hausuebung_2.html\nUngerendertes Quarto-Skript: vorname_nachname_hausuebung_2.qmd\n\nPeer Feedback: Bis 3.12 direkt an die Person und im Forum als Zusammenfassung. Im Forum bitte auch Namen der Person, für die das Feedback bestimmt ist, nennen.\n\n\n\n\n[1] TRUE [1] TRUE\n📥 Download practice_dataset2.csv\n\n\nStelle in deinem Quarto Header die folgenden Dinge ein. Achtung: Achte auf die Einrückung der Einstellungen. Wenn das nicht von Hand klappt kann man sich bei der Einrückung von einem LLM helfen lassen. 😉.\n\nformat: html\nembed-resources: true\ntable of contents (toc) = true\n\nLies den folgenden Datensatz ein: Practice_dataset2\n\n\n\nBerechne den Mittelwert und die Standardabweichung der Variable self_efficacy für jede Gruppe (condition). Runde die Ergebnisse jeweils auf drei Nachkommastellen. Speichere diese deskriptive Statistik in einen neuen Dataframe ab.\n\n\n\nNutze kable um Formatierungen am unter 1.2 erstellten Dataframe durchzuführen (Überschrift ergänzen, Spalten benennen, Nachkommastellen anpassen).\n\n\n\nBerechne zusätzlich die Schiefe (skew) und Kurtosis (kurtosi) der Variable self_efficacy pro Gruppe (condition), mit Funktionen aus dem Paket psych.\n\n\n\n\n\n\nDer Originaldatensatz enthält die Spalten pre_mood, mid_mood, post_mood. Verwandle diese mithilfe von pivot_longer() in einen Long-Datensatz namens mood_long. Die neue Spalte mit den Zeitpunkten soll mood_time heißen, die mit den Werten mood_rating.\n\n\n\n\n\n\nIm nächsten Schritt verwenden wir den LONG-Datensatz (Siehe Aufgabe 2.1), um den Verlauf über die verschiedenen Zeitpunkte darzustellen. Das Ziel ist es, die Stimmung (mood) zu den unterschiedlichen Zeitpunkten, aggregiert nach den Konditionen, als Verlaufsdiagramm abzubilden.\n\nDafür soll mood_time in einen Faktor mit geordneten Faktorstufen (pre, mid und post) umgewandelt werden.\nErstelle einen Summary, welches die für den Plot benötigten Angaben zusammenfasst (Durschschnittlicher Mood gruppiert nach Condition und Zeitpunkt).\n\n\n\n\nPlotte die Elemente mood_time und mean_mood. Gruppiere die conditions nach Farbe.\n💡Tipp: Wenn du den Plot einem Objekt zuweist, kannst du ihn weiterverwenden, indem du das Objekt aufrufst und erweiterst. So musst du den Code nicht jedes Mal neu ausschreiben.\n\n\n\nPasse nun den Plot aus 3.2 so an, dass er eine Farbpalette verwendet, die für farbenblinde Personen geeignet ist: Nutze die folgende Palette.\nTipp: Verwende: scale_color_manual\n\ncb_palette &lt;- c(   \"#000000\", \"#E69F00\", \"#56B4E9\", \"#009E73\",   \"#F0E442\", \"#0072B2\", \"#D55E00\", \"#CC79A7\" )  \n\n\n\n\nFüge mit geom_point() die einzelnen Punkte auf der Linie ein. Stelle die grösse (size() auf 3)\n\n\n\nFüge dem Diagramm Titel sowie Achsenbeschriftungen zu deinem Plot und verwende ein Theme das du passend findest.\n\n\n\n\n\n\n\n\nSpeichere den Plot ab mit ggsave als png ab.\n\n\n\n\nErstelle aus dem ursprünglichen Wide Originaldatensatz einen neuen Datensatz subset_mood, der nur Daten der Gruppe experimental beinhaltet.\n\n\nPrüfe nun (anhand des unter 4. erstellen Datensatzes) mittels eines gepaarten t-Test ob sich pre_mood und post_mood in der Gruppe experimental unterscheiden. Nutze dafür die Funktion t.test(). Lass dir das Ergebnis mit print() ausgeben.\n\n\n\n\n\nRendere dein Skript als HTML\nLade deine Abgabe (Skript + HTML) als ZIP ordner in ILIAS hoch und schicke sie deinem/deiner Peepartner:in."
   },
   {
-    "objectID": "hands_on_6.html",
-    "href": "hands_on_6.html",
-    "title": "Hands On – Coding Basics (Einheiten 11 und 12)",
+    "objectID": "hausuebung_2.html#formalitäten-und-abgabe",
+    "href": "hausuebung_2.html#formalitäten-und-abgabe",
+    "title": "hausuebung_2",
     "section": "",
-    "text": "Bei Bedarf findest du hier nochmals die Slides zu Einheit 10:",
+    "text": "Abgabe bis: Freitag 28.11, 23:55 via ILIAS\nZip-Datei benennen: vorname_nachname.zip\n\nGerendertes Skript: vorname_nachname_hausuebung_2.html\nUngerendertes Quarto-Skript: vorname_nachname_hausuebung_2.qmd\n\nPeer Feedback: Bis 3.12 direkt an die Person und im Forum als Zusammenfassung. Im Forum bitte auch Namen der Person, für die das Feedback bestimmt ist, nennen."
+  },
+  {
+    "objectID": "hausuebung_2.html#aufgabe-1-datensatz-einlesen-und-deskriptive-statistik",
+    "href": "hausuebung_2.html#aufgabe-1-datensatz-einlesen-und-deskriptive-statistik",
+    "title": "hausuebung_2",
+    "section": "",
+    "text": "[1] TRUE [1] TRUE\n📥 Download practice_dataset2.csv\n\n\nStelle in deinem Quarto Header die folgenden Dinge ein. Achtung: Achte auf die Einrückung der Einstellungen. Wenn das nicht von Hand klappt kann man sich bei der Einrückung von einem LLM helfen lassen. 😉.\n\nformat: html\nembed-resources: true\ntable of contents (toc) = true\n\nLies den folgenden Datensatz ein: Practice_dataset2\n\n\n\nBerechne den Mittelwert und die Standardabweichung der Variable self_efficacy für jede Gruppe (condition). Runde die Ergebnisse jeweils auf drei Nachkommastellen. Speichere diese deskriptive Statistik in einen neuen Dataframe ab.\n\n\n\nNutze kable um Formatierungen am unter 1.2 erstellten Dataframe durchzuführen (Überschrift ergänzen, Spalten benennen, Nachkommastellen anpassen).\n\n\n\nBerechne zusätzlich die Schiefe (skew) und Kurtosis (kurtosi) der Variable self_efficacy pro Gruppe (condition), mit Funktionen aus dem Paket psych."
+  },
+  {
+    "objectID": "hausuebung_2.html#aufgabe-2-wide-to-long-transformation",
+    "href": "hausuebung_2.html#aufgabe-2-wide-to-long-transformation",
+    "title": "hausuebung_2",
+    "section": "",
+    "text": "Der Originaldatensatz enthält die Spalten pre_mood, mid_mood, post_mood. Verwandle diese mithilfe von pivot_longer() in einen Long-Datensatz namens mood_long. Die neue Spalte mit den Zeitpunkten soll mood_time heißen, die mit den Werten mood_rating."
+  },
+  {
+    "objectID": "hausuebung_2.html#aufgabe-3-plot---verlaufsdiagramm",
+    "href": "hausuebung_2.html#aufgabe-3-plot---verlaufsdiagramm",
+    "title": "hausuebung_2",
+    "section": "",
+    "text": "Im nächsten Schritt verwenden wir den LONG-Datensatz (Siehe Aufgabe 2.1), um den Verlauf über die verschiedenen Zeitpunkte darzustellen. Das Ziel ist es, die Stimmung (mood) zu den unterschiedlichen Zeitpunkten, aggregiert nach den Konditionen, als Verlaufsdiagramm abzubilden.\n\nDafür soll mood_time in einen Faktor mit geordneten Faktorstufen (pre, mid und post) umgewandelt werden.\nErstelle einen Summary, welches die für den Plot benötigten Angaben zusammenfasst (Durschschnittlicher Mood gruppiert nach Condition und Zeitpunkt).\n\n\n\n\nPlotte die Elemente mood_time und mean_mood. Gruppiere die conditions nach Farbe.\n💡Tipp: Wenn du den Plot einem Objekt zuweist, kannst du ihn weiterverwenden, indem du das Objekt aufrufst und erweiterst. So musst du den Code nicht jedes Mal neu ausschreiben.\n\n\n\nPasse nun den Plot aus 3.2 so an, dass er eine Farbpalette verwendet, die für farbenblinde Personen geeignet ist: Nutze die folgende Palette.\nTipp: Verwende: scale_color_manual\n\ncb_palette &lt;- c(   \"#000000\", \"#E69F00\", \"#56B4E9\", \"#009E73\",   \"#F0E442\", \"#0072B2\", \"#D55E00\", \"#CC79A7\" )  \n\n\n\n\nFüge mit geom_point() die einzelnen Punkte auf der Linie ein. Stelle die grösse (size() auf 3)\n\n\n\nFüge dem Diagramm Titel sowie Achsenbeschriftungen zu deinem Plot und verwende ein Theme das du passend findest.\n\n\n\n\n\n\n\n\nSpeichere den Plot ab mit ggsave als png ab."
+  },
+  {
+    "objectID": "hausuebung_2.html#subsetting-und-t-test",
+    "href": "hausuebung_2.html#subsetting-und-t-test",
+    "title": "hausuebung_2",
+    "section": "",
+    "text": "Erstelle aus dem ursprünglichen Wide Originaldatensatz einen neuen Datensatz subset_mood, der nur Daten der Gruppe experimental beinhaltet.\n\n\nPrüfe nun (anhand des unter 4. erstellen Datensatzes) mittels eines gepaarten t-Test ob sich pre_mood und post_mood in der Gruppe experimental unterscheiden. Nutze dafür die Funktion t.test(). Lass dir das Ergebnis mit print() ausgeben."
+  },
+  {
+    "objectID": "hausuebung_2.html#rendern-und-hochladen",
+    "href": "hausuebung_2.html#rendern-und-hochladen",
+    "title": "hausuebung_2",
+    "section": "",
+    "text": "Rendere dein Skript als HTML\nLade deine Abgabe (Skript + HTML) als ZIP ordner in ILIAS hoch und schicke sie deinem/deiner Peepartner:in."
+  },
+  {
+    "objectID": "hausuebungen.html",
+    "href": "hausuebungen.html",
+    "title": "Hausuebungen",
+    "section": "",
+    "text": "Hier findest du die Hausübungen.",
     "crumbs": [
-      "Übungen zu den Einheiten",
-      "Hands on - Block 6 (Woche 11 - 12 "
+      "Hausuebungen"
     ]
   },
   {
-    "objectID": "hands_on_6.html#visualize---übungen-zu-ggplot2",
-    "href": "hands_on_6.html#visualize---übungen-zu-ggplot2",
+    "objectID": "hands_on_6-PSY-016893.html",
+    "href": "hands_on_6-PSY-016893.html",
+    "title": "Hands On – Coding Basics (Einheiten 11 und 12)",
+    "section": "",
+    "text": "Bei Bedarf findest du hier nochmals die Slides zu Einheit 10:"
+  },
+  {
+    "objectID": "hands_on_6-PSY-016893.html#visualize---übungen-zu-ggplot2",
+    "href": "hands_on_6-PSY-016893.html#visualize---übungen-zu-ggplot2",
     "title": "Hands On – Coding Basics (Einheiten 11 und 12)",
     "section": "Visualize - Übungen zu ggplot2",
-    "text": "Visualize - Übungen zu ggplot2\n📚 Einführung in R - Kapitel 5\n📚 R for Data Science - Kapitel 1\n📚R for Data Science - Kapitel 11\n\n\n\n\n\n\nTabelle mit häufig verwendeten Geoms()\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nGeom\nFunktion\nEinsatzbereich\nBild / Beispiel\n\n\n\n\ngeom_point()\nStreudiagramm\nZwei numerische Variablen vergleichen (x = Var1, y = Var2)\n\n\n\ngeom_jitter()\nJitter-Plot\nPunkte leicht versetzen, um Überlappung zu vermeiden (v. a. bei kategorialem x)\n\n\n\ngeom_line()\nLiniendiagramm\nWerteverlauf Über kontinuierliche x-Achse darstellen\n\n\n\ngeom_bar()\nBalkendiagramm\nHäufigkeiten oder Aggregationen für Kategorien (x = Gruppe)\n\n\n\ngeom_histogram()\nHistogramm\nVerteilung einer numerischen Variable (x = Wert)\n\n\n\ngeom_boxplot()\nBoxplot\nVerteilungen über Gruppen vergleichen (x = Gruppe, y = Wert)\n\n\n\n\n\n\n\n\n\n\n\n\n\nCheatsheet ggplot2\n\n\n\n\n\n\n\n\n\n\nIm folgenden wollen wir Figure 4 aus Grinschgl et al. (2021) reproduzieren:\n\n\n\n\n\n\n\n\n\n\nVorbereitungen:\nUm die Mittelwerte plotten zu können, müssen wir die Gruppenmittelwerte und Standardfehler berechnen. Passe dafür den Codeblock an:\nIm Hands-on Block 4 haben wir bereits mit dplyr die MMQ-Skalenwerte „mmq_mean“ pro Person berechnet. Nutze nun die dplyr-Funktionen, insbesondere group_by(), um den durchschnittlichen MMQ-Wert pro Gruppe (group_all) sowie den Standardfehler zu berechnen. Die Formel für den Standardfehler lautet: SE = SD / √n und kann z.b so berechnet werden. se_mmq = sd(mmq_mean) / sqrt(n()) . Ergänze den Code unten mit den nötigen Angaben. Lege group_all in deinem summary als Faktor fest mit den Levels in der Reihenfolge: “below”, “control”, “above”.\n\n\n\n\n\n\nNote\n\n\n\n\n\nDer Standardfehler des Mittelwerts (SEM) beschreibt wie stark der geschätzte Stichprobenmittelwert zufällig vom wahren Populationsmittelwert abweichen kann. Er ist damit ein Mass für die Präzision des Mittelwerts.\n\n\n\n\ndat_full &lt;- dat_full |&gt; \n  mutate(mmq_mean = rowMeans(select(dat_full, starts_with(\"question\")))\n\n\ngroup_summary &lt;- dat_full %&gt;%\n  group_by(XXXXXXX) %&gt;%\n  summarize(\n    group_mean_mmq = mean(XXXXXX),\n    se_mmq = sd(XXXXXX) / sqrt(n())\n  )\n\ngroup_summary$group_all &lt;- factor(group_summary$group_all,\n                                  levels = c(\"XXXXX\", \"XXXXX\", \"XXXXX\"))\n\n\n\n1. Erstelle einen leeren Plot und gib deinen Datensatz an\nBeginne mit:\n\nggplot() und deinem Datensatz\n\n\n\n2. Definiere die Aesthetic Mappings\nLege fest:\n\nwelche Variable auf der x-Achse liegt\nwelche Variable auf der y-Achse liegt\n\n\n\n3. Füge geom_col() dem Plot hinzu\nDamit zeichnest du die Balken für die Gruppenmittelwerte.\n\ncolor = für Konturen\nfill = für die Füllfarben der Balken\n\n\n\n4. Füge Fehlerbalken hinzu\nDie Fehlerbalken die wir hier verwenden sind standardfehler (se\nNutze geom_errorbar() und definiere innerhalb von aes():\n\nymin = mean - sd - Füge die passenden Variablen ein.\nymax = mean + sd - Füge die passenden Variablen ein.\n\nPasse die Breite der Fehlerbalken mit width = an.\n\n\n5. Füge Titel und Achsenbeschriftungen hinzu\nNutze dafür labs(). Verändere das theme zu theme_classic()\n\n\n6. Stelle sicher, dass der vollständige Wertebereich sichtbar ist\n\nmit ylim(0, 4)\n\n\nNun wollen wir den zweiten Plot aus Grinschgl et al. (2021) reproduzieren.\nErgänze dafür den folgenden Code an den nötigen Stellen mit den passenden Werten und Argumenten.\n\nLade zuerst den in der letzten Woche gespeicherten Long-Datensatz.\nErsetze anschliessend die Platzhalter “XXXXXX” durch die erforderlichen Werte, um den Plot zu reproduzieren.\nSpeichere deinen Plot als PNG Datei ab.\n\n\n\n\n\n\n\n\n\n\n\ndescriptives &lt;- dat_long |&gt; \n  group_by(XXXXXX, XXXXXXX) |&gt; \n  summarize(N = length(rating),\n               mean_d = mean(rating),\n               sd_d   = sd(rating),\n               se_d   = sd_d / sqrt(N)\n)\n\ndescriptives$group_all &lt;- factor(descriptives$group_all, c(\"above\", \"control\", \"below\"))\n\nrate_plot &lt;- descriptives |&gt; \n  ggplot(aes(x = XXXXXX, \n             y = XXXXXX, \n             group = XXXX)) \n\nrate_plot +\n  geom_line(aes(color = group_all, linetype = group_all), size = 1.2) +\n  geom_errorbar(aes(ymin = mean_d - se_d, ymax = mean_d + se_d), width = .1) +\n  scale_color_manual(values = c(\"green4\", \"red\", \"black\")) +\n  theme_classic() +\n  labs(title = \"XXXXXXX\") +\n  ylab(\"XXXXXXXX\") +\n  xlab(\"XXXXXXXXX\") +\n  theme(plot.title = element_text(hjust = 0.5, size = 12, face = \"bold\"), \n        axis.text = element_text(size = 11), axis.title = element_text(size = 14))",
-    "crumbs": [
-      "Übungen zu den Einheiten",
-      "Hands on - Block 6 (Woche 11 - 12 "
-    ]
+    "text": "Visualize - Übungen zu ggplot2\n📚 Einführung in R - Kapitel 5\n📚 R for Data Science - Kapitel 1\n📚R for Data Science - Kapitel 11\n\n\n\n\n\n\nTabelle mit häufig verwendeten Geoms()\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nGeom\nFunktion\nEinsatzbereich\nBild / Beispiel\n\n\n\n\ngeom_point()\nStreudiagramm\nZwei numerische Variablen vergleichen (x = Var1, y = Var2)\n\n\n\ngeom_jitter()\nJitter-Plot\nPunkte leicht versetzen, um Überlappung zu vermeiden (v. a. bei kategorialem x)\n\n\n\ngeom_line()\nLiniendiagramm\nWerteverlauf Über kontinuierliche x-Achse darstellen\n\n\n\ngeom_bar()\nBalkendiagramm\nHäufigkeiten oder Aggregationen für Kategorien (x = Gruppe)\n\n\n\ngeom_histogram()\nHistogramm\nVerteilung einer numerischen Variable (x = Wert)\n\n\n\ngeom_boxplot()\nBoxplot\nVerteilungen über Gruppen vergleichen (x = Gruppe, y = Wert)\n\n\n\n\n\n\n\n\n\n\n\n\n\nCheatsheet ggplot2\n\n\n\n\n\n\n\n\n\n\nIm folgenden wollen wir Figure 4 aus Grinschgl et al. (2021) reproduzieren:\n\n\n\n\n\n\n\n\n\n\nVorbereitungen:\nUm die Mittelwerte plotten zu können, müssen wir die Gruppenmittelwerte und Standardfehler berechnen. Passe dafür den Codeblock an:\nIm Hands-on Block 4 haben wir bereits mit dplyr die MMQ-Skalenwerte „mmq_mean“ pro Person berechnet. Nutze nun die dplyr-Funktionen, insbesondere group_by(), um den durchschnittlichen MMQ-Wert pro Gruppe (group_all) sowie den Standardfehler zu berechnen. Die Formel für den Standardfehler lautet: SE = SD / √n und kann z.b so berechnet werden. se_mmq = sd(mmq_mean) / sqrt(n()) . Ergänze den Code unten mit den nötigen Angaben. Lege group_all in deinem summary als Faktor fest mit den Levels in der Reihenfolge: “below”, “control”, “above”.\n\n\n\n\n\n\nNote\n\n\n\n\n\nDer Standardfehler des Mittelwerts (SEM) beschreibt wie stark der geschätzte Stichprobenmittelwert zufällig vom wahren Populationsmittelwert abweichen kann. Er ist damit ein Mass für die Präzision des Mittelwerts.\n\n\n\n\ndat_full &lt;- dat_full |&gt; \n  mutate(mmq_mean = rowMeans(select(dat_full, starts_with(\"question\")))\n\n\ngroup_summary &lt;- dat_full %&gt;%\n  group_by(XXXXXXX) %&gt;%\n  summarize(\n    group_mean_mmq = mean(XXXXXX),\n    se_mmq = sd(XXXXXX) / sqrt(n())\n  )\n\ngroup_summary$group_all &lt;- factor(group_summary$group_all,\n                                  levels = c(\"XXXXX\", \"XXXXX\", \"XXXXX\"))\n\n\n\n1. Erstelle einen leeren Plot und gib deinen Datensatz an\nBeginne mit:\n\nggplot() und deinem Datensatz\n\n\n\n2. Definiere die Aesthetic Mappings\nLege fest:\n\nwelche Variable auf der x-Achse liegt\nwelche Variable auf der y-Achse liegt\n\n\n\n3. Füge geom_col() dem Plot hinzu\nDamit zeichnest du die Balken für die Gruppenmittelwerte.\n\ncolor = für Konturen\nfill = für die Füllfarben der Balken\n\n\n\n4. Füge Fehlerbalken hinzu\nDie Fehlerbalken die wir hier verwenden sind standardfehler (se\nNutze geom_errorbar() und definiere innerhalb von aes():\n\nymin = mean - sd - Füge die passenden Variablen ein.\nymax = mean + sd - Füge die passenden Variablen ein.\n\nPasse die Breite der Fehlerbalken mit width = an.\n\n\n5. Füge Titel und Achsenbeschriftungen hinzu\nNutze dafür labs(). Verändere das theme zu theme_classic()\n\n\n6. Stelle sicher, dass der vollständige Wertebereich sichtbar ist\n\nmit ylim(0, 4)\n\n\nNun wollen wir den zweiten Plot aus Grinschgl et al. (2021) reproduzieren.\nErgänze dafür den folgenden Code an den nötigen Stellen mit den passenden Werten und Argumenten.\n\nLade zuerst den in der letzten Woche gespeicherten Long-Datensatz.\nErsetze anschliessend die Platzhalter “XXXXXX” durch die erforderlichen Werte, um den Plot zu reproduzieren.\nSpeichere deinen Plot als PNG Datei ab.\n\n\n\n\n\n\n\n\n\n\n\ndescriptives &lt;- dat_long |&gt; \n  group_by(XXXXXX, XXXXXXX) |&gt; \n  summarize(N = length(rating),\n               mean_d = mean(rating),\n               sd_d   = sd(rating),\n               se_d   = sd_d / sqrt(N)\n)\n\ndescriptives$group_all &lt;- factor(descriptives$group_all, c(\"above\", \"control\", \"below\"))\n\nrate_plot &lt;- descriptives |&gt; \n  ggplot(aes(x = XXXXXX, \n             y = XXXXXX, \n             group = XXXX)) \n\nrate_plot +\n  geom_line(aes(color = group_all, linetype = group_all), size = 1.2) +\n  geom_errorbar(aes(ymin = mean_d - se_d, ymax = mean_d + se_d), width = .1) +\n  scale_color_manual(values = c(\"green4\", \"red\", \"black\")) +\n  theme_classic() +\n  labs(title = \"XXXXXXX\") +\n  ylab(\"XXXXXXXX\") +\n  xlab(\"XXXXXXXXX\") +\n  theme(plot.title = element_text(hjust = 0.5, size = 12, face = \"bold\"), \n        axis.text = element_text(size = 11), axis.title = element_text(size = 14))"
   },
   {
-    "objectID": "hands_on_6.html#korrelationen",
-    "href": "hands_on_6.html#korrelationen",
+    "objectID": "hands_on_6-PSY-016893.html#korrelationen",
+    "href": "hands_on_6-PSY-016893.html#korrelationen",
     "title": "Hands On – Coding Basics (Einheiten 11 und 12)",
     "section": "Korrelationen:",
-    "text": "Korrelationen:\n\nWähle zwei metrische Variablen aus dem Wide Datensatz aus. Berechne die Korrelation mit cor.test() für diese beiden Variablen.\n\n\n\nFinde den Korrelationskoeffizienten r, den p-Wert und die Freiheitsgrade (df). Versuche das Ergebnis zu interpretieren.\n\n\n\nRufe die Hilfefunktion von cor.test() auf. Welche Anpassungen kannst du vornehmen, um die Korrelation einseitig (z.B. nur positiver Zusammenhang) und mit der Spearman-Methode zu berechnen?\n\n\n\n\n\n\n\nKorrelationen\n\n\n\n\n\nLinearer Zusammenhang (Kovarianz) zweier Variablen. Positive Korrelation = hohe Ausprägungen einer Variable hängen mit hohen Ausprägungen einer anderen Variable zusammen. Negative Korrelation = Hohe Ausprägungen einer Variable hängen mit niedrigen Ausprägungen einer anderen Variable zusammen. Korrelationskoeffizient r kann von -1 bis +1 gehen. Der Korrelationstest testet ob r sich signifikant von 0 (kein Zusammenhang unterscheidet). Für Pearson Korrelationen sollte die Normalverteilung der Residuen gegeben sein. Alternative: Spearman Korrelation.",
-    "crumbs": [
-      "Übungen zu den Einheiten",
-      "Hands on - Block 6 (Woche 11 - 12 "
-    ]
+    "text": "Korrelationen:\n\nWähle zwei metrische Variablen aus dem Wide Datensatz aus. Berechne die Korrelation mit cor.test() für diese beiden Variablen.\n\n\n\nFinde den Korrelationskoeffizienten r, den p-Wert und die Freiheitsgrade (df). Versuche das Ergebnis zu interpretieren.\n\n\n\nRufe die Hilfefunktion von cor.test() auf. Welche Anpassungen kannst du vornehmen, um die Korrelation einseitig (z.B. nur positiver Zusammenhang) und mit der Spearman-Methode zu berechnen?\n\n\n\n\n\n\n\nKorrelationen\n\n\n\n\n\nLinearer Zusammenhang (Kovarianz) zweier Variablen. Positive Korrelation = hohe Ausprägungen einer Variable hängen mit hohen Ausprägungen einer anderen Variable zusammen. Negative Korrelation = Hohe Ausprägungen einer Variable hängen mit niedrigen Ausprägungen einer anderen Variable zusammen. Korrelationskoeffizient r kann von -1 bis +1 gehen. Der Korrelationstest testet ob r sich signifikant von 0 (kein Zusammenhang unterscheidet). Für Pearson Korrelationen sollte die Normalverteilung der Residuen gegeben sein. Alternative: Spearman Korrelation."
   },
   {
-    "objectID": "hands_on_6.html#regressionen",
-    "href": "hands_on_6.html#regressionen",
+    "objectID": "hands_on_6-PSY-016893.html#regressionen",
+    "href": "hands_on_6-PSY-016893.html#regressionen",
     "title": "Hands On – Coding Basics (Einheiten 11 und 12)",
     "section": "Regressionen",
-    "text": "Regressionen\n\n\n\n\n\n\nTabelle: Funktionen für Regressionen und verwandte Analysen in R\n\n\n\n\n\n\n\n\n\n\n\n\nFunktion\nBeschreibung\n\n\n\n\nlm(y ~ x)\nEinfache lineare Regression mit einer abhängigen Variablen y und einem Prädiktor x.\n\n\nlm(y ~ x1 + x2)\nMultiple Regression mit einer abhängigen Variablen y und zwei Prädiktoren x1 und x2.\n\n\nsummary()\nGibt die Ergebnisse der Regressionsanalyse für ein Regressionsmodell aus.\n\n\nconfint()\nKonfidenzintervalle für die Regressionskoeffizienten.\n\n\nfitted()\nVorhergesagte Werte des Regressionsmodells.\n\n\nresid()\nResiduen des Regressionsmodells.\n\n\npredict()\nVorhergesagte Werte für bestimmte Werte der Prädiktorvariablen.\n\n\nanova()\nVergleicht die Determinationskoeffizienten zweier Regressionsmodelle mit einem F-Test.\n\n\nvif() *\nVariance Inflation Factors (VIF) für jeden Prädiktor; aus dem car-Paket.\n\n\n\n* aus zusätzlichen Paketen\n\n\n\n\nPaket „car“ installieren und laden.\nMach aus deiner davor berechneten Korrelation nun ein Regressionsmodel mit der Funktion model &lt;- lm(outcome ~ predictor, data). Schau dir den Output mit summary(model) an und versuche ihn zu interpretieren.\nErgänze das Modell nun um eine weitere Prädiktorvariable (mit + Variable), sodass du eine multiple Regression berechnest. Hier müssen wir auf Multikollinearität testen – mit vif(model) aus dem „car“ Paket (die Werte sollten größer als 0.10 sein, sodass keine Multikollinearität vorliegt). Berechne auch die Konfidenzintervalle der Beta-Koeffizienten mit confint(model).\n\n\n\n\n\n\n\nNote\n\n\n\n\n\nFortgeschritten/Freiwillig:\nBerechne eine einfache logistische Regression zwischen Strategien (ohne strategies == 3) und Offloading (mean_rl_all) mit dem Wide Datensatz. Nimm das Statistik III Cheatsheet von Dr. Boris Mayer zur Hand. Tipp: Du musst die Strategien in 0 und 1 umkodieren.",
-    "crumbs": [
-      "Übungen zu den Einheiten",
-      "Hands on - Block 6 (Woche 11 - 12 "
-    ]
+    "text": "Regressionen\n\n\n\n\n\n\nTabelle: Funktionen für Regressionen und verwandte Analysen in R\n\n\n\n\n\n\n\n\n\n\n\n\nFunktion\nBeschreibung\n\n\n\n\nlm(y ~ x)\nEinfache lineare Regression mit einer abhängigen Variablen y und einem Prädiktor x.\n\n\nlm(y ~ x1 + x2)\nMultiple Regression mit einer abhängigen Variablen y und zwei Prädiktoren x1 und x2.\n\n\nsummary()\nGibt die Ergebnisse der Regressionsanalyse für ein Regressionsmodell aus.\n\n\nconfint()\nKonfidenzintervalle für die Regressionskoeffizienten.\n\n\nfitted()\nVorhergesagte Werte des Regressionsmodells.\n\n\nresid()\nResiduen des Regressionsmodells.\n\n\npredict()\nVorhergesagte Werte für bestimmte Werte der Prädiktorvariablen.\n\n\nanova()\nVergleicht die Determinationskoeffizienten zweier Regressionsmodelle mit einem F-Test.\n\n\nvif() *\nVariance Inflation Factors (VIF) für jeden Prädiktor; aus dem car-Paket.\n\n\n\n* aus zusätzlichen Paketen\n\n\n\n\nPaket „car“ installieren und laden.\nMach aus deiner davor berechneten Korrelation nun ein Regressionsmodel mit der Funktion model &lt;- lm(outcome ~ predictor, data). Schau dir den Output mit summary(model) an und versuche ihn zu interpretieren.\nErgänze das Modell nun um eine weitere Prädiktorvariable (mit + Variable), sodass du eine multiple Regression berechnest. Hier müssen wir auf Multikollinearität testen – mit vif(model) aus dem „car“ Paket (die Werte sollten größer als 0.10 sein, sodass keine Multikollinearität vorliegt). Berechne auch die Konfidenzintervalle der Beta-Koeffizienten mit confint(model).\n\n\n\n\n\n\n\nNote\n\n\n\n\n\nFortgeschritten/Freiwillig:\nBerechne eine einfache logistische Regression zwischen Strategien (ohne strategies == 3) und Offloading (mean_rl_all) mit dem Wide Datensatz. Nimm das Statistik III Cheatsheet von Dr. Boris Mayer zur Hand. Tipp: Du musst die Strategien in 0 und 1 umkodieren."
   },
   {
-    "objectID": "hands_on_6.html#t-tests-für-unabhängige-stichproben",
-    "href": "hands_on_6.html#t-tests-für-unabhängige-stichproben",
+    "objectID": "hands_on_6-PSY-016893.html#t-tests-für-unabhängige-stichproben",
+    "href": "hands_on_6-PSY-016893.html#t-tests-für-unabhängige-stichproben",
     "title": "Hands On – Coding Basics (Einheiten 11 und 12)",
     "section": "t-Tests für unabhängige Stichproben",
-    "text": "t-Tests für unabhängige Stichproben\n\n\n\n\n\n\nTabelle: Funktionen für t-Tests und verwandte Analysen in R\n\n\n\n\n\n\n\n\n\n\n\n\nFunktion\nBeschreibung\n\n\n\n\nt.test\nAllgemeine Funktion für verschiedene t-Tests: Ein-Stichproben-t-Test, t-Test für unabhängige Stichproben und t-Test für abhängige Stichproben.\n\n\nt.test(av, mu = x)\nEin-Stichproben-t-Test. av = abhängige Variable. x = Vergleichswert der Population.\n\n\nt.test(av ~ uv)\nWelch-t-Test für unabhängige Stichproben. av = abhängige Variable, uv = Gruppenvariable.\n\n\nt.test(av ~ uv, var.equal = TRUE)\nKlassischer t-Test für unabhängige Stichproben (Varianzen vorausgesetzt gleich).\n\n\nt.test(av1, av2, paired = TRUE)\nt-Test für abhängige Stichproben (z. B. Prä–Post). av1 und av2 = gemessene Variablen.\n\n\nleveneTest(av, uv) *\nLevene-Test auf Varianzhomogenität für unabhängige Gruppen. Aus dem car-Paket.\n\n\neffsize::cohen.d() *\nBerechnet die standardisierte Effektgröße Cohen’s d + Konfidenzintervall. Aus dem effsize-Paket.\n\n\n\n* Funktionen aus zusätzlichen Paketen.\n\n\n\n\nPaket „effsize“ installieren und laden.\nWir wollen einen t-Test für unabhängige Stichproben durchführen, um das Pre 4 Rating der „above“ und „below“ Gruppen zu vergleichen. Starte mit einem leveneTest() aus dem „car“ Paket um die Varianzhomogenität zu prüfen. Tipp: Filtere die Daten, sodass nur die beiden Gruppen „above“ und „below“ beinhaltet sind (d.h. ohne die Gruppe „control“).\nBerechne nun den entsprechenden t-Test mit t.test(). Du kannst auch die Hilfefunktion zu Rate ziehen. Versuche dann den Output zu verstehen bzw. das Ergebnis zu interpretieren. Tipp: Wenn die Varianzhomogenität gegeben ist (d.h. der Levene Test nicht signifikant ist), muss man var.equal = TRUE angeben, ansonsten wird ein Welch t-Test berechnet.\nNun berechnen wir noch Cohen‘s d als Effektstärken-Maß für den Mittelwertsunterschied. Verwende dafür effsize::cohen.d().  Da es „cohen.D“ auch im Paket „psych“ gibt, ist es wichtig hier „effsize::“ voranzusetzen.\n\n👉 Und schon haben wir einen der Post-Hoc t-Tests für die 2x3 ANOVA aus Grinschgl et al. (2020) berechnet (notwendig für die Abschlussarbeit)",
-    "crumbs": [
-      "Übungen zu den Einheiten",
-      "Hands on - Block 6 (Woche 11 - 12 "
-    ]
+    "text": "t-Tests für unabhängige Stichproben\n\n\n\n\n\n\nTabelle: Funktionen für t-Tests und verwandte Analysen in R\n\n\n\n\n\n\n\n\n\n\n\n\nFunktion\nBeschreibung\n\n\n\n\nt.test\nAllgemeine Funktion für verschiedene t-Tests: Ein-Stichproben-t-Test, t-Test für unabhängige Stichproben und t-Test für abhängige Stichproben.\n\n\nt.test(av, mu = x)\nEin-Stichproben-t-Test. av = abhängige Variable. x = Vergleichswert der Population.\n\n\nt.test(av ~ uv)\nWelch-t-Test für unabhängige Stichproben. av = abhängige Variable, uv = Gruppenvariable.\n\n\nt.test(av ~ uv, var.equal = TRUE)\nKlassischer t-Test für unabhängige Stichproben (Varianzen vorausgesetzt gleich).\n\n\nt.test(av1, av2, paired = TRUE)\nt-Test für abhängige Stichproben (z. B. Prä–Post). av1 und av2 = gemessene Variablen.\n\n\nleveneTest(av, uv) *\nLevene-Test auf Varianzhomogenität für unabhängige Gruppen. Aus dem car-Paket.\n\n\neffsize::cohen.d() *\nBerechnet die standardisierte Effektgröße Cohen’s d + Konfidenzintervall. Aus dem effsize-Paket.\n\n\n\n* Funktionen aus zusätzlichen Paketen.\n\n\n\n\nPaket „effsize“ installieren und laden.\nWir wollen einen t-Test für unabhängige Stichproben durchführen, um das Pre 4 Rating der „above“ und „below“ Gruppen zu vergleichen. Starte mit einem leveneTest() aus dem „car“ Paket um die Varianzhomogenität zu prüfen. Tipp: Filtere die Daten, sodass nur die beiden Gruppen „above“ und „below“ beinhaltet sind (d.h. ohne die Gruppe „control“).\nBerechne nun den entsprechenden t-Test mit t.test(). Du kannst auch die Hilfefunktion zu Rate ziehen. Versuche dann den Output zu verstehen bzw. das Ergebnis zu interpretieren. Tipp: Wenn die Varianzhomogenität gegeben ist (d.h. der Levene Test nicht signifikant ist), muss man var.equal = TRUE angeben, ansonsten wird ein Welch t-Test berechnet.\nNun berechnen wir noch Cohen‘s d als Effektstärken-Maß für den Mittelwertsunterschied. Verwende dafür effsize::cohen.d().  Da es „cohen.D“ auch im Paket „psych“ gibt, ist es wichtig hier „effsize::“ voranzusetzen.\n\n👉 Und schon haben wir einen der Post-Hoc t-Tests für die 2x3 ANOVA aus Grinschgl et al. (2020) berechnet (notwendig für die Abschlussarbeit)"
   },
   {
-    "objectID": "hands_on_6.html#t-tests-für-unabhängige-stichproben-1",
-    "href": "hands_on_6.html#t-tests-für-unabhängige-stichproben-1",
+    "objectID": "hands_on_6-PSY-016893.html#t-tests-für-unabhängige-stichproben-1",
+    "href": "hands_on_6-PSY-016893.html#t-tests-für-unabhängige-stichproben-1",
     "title": "Hands On – Coding Basics (Einheiten 11 und 12)",
     "section": "t-Tests für unabhängige Stichproben",
-    "text": "t-Tests für unabhängige Stichproben\n\nBerechne einen t-Test für abhängige Stichproben um in der „control“ Gruppe Pre 1 und Pre 4 zu vergleichen. (D.h. filtere zunächst den Datensatz, sodass nur mehr die „control“ Gruppe\n\n\nt.test(datensatz$Variable1, datensatz$Variable2, paired = TRUE) \n\n\nWandle den t-Test nun in einen einseitigen Test mit alternative = „greater“ oder alternative = „less“ um und berechne Cohen‘s d als Effektstärkenmaß (Achtung: paired = True setzen).",
-    "crumbs": [
-      "Übungen zu den Einheiten",
-      "Hands on - Block 6 (Woche 11 - 12 "
-    ]
+    "text": "t-Tests für unabhängige Stichproben\n\nBerechne einen t-Test für abhängige Stichproben um in der „control“ Gruppe Pre 1 und Pre 4 zu vergleichen. (D.h. filtere zunächst den Datensatz, sodass nur mehr die „control“ Gruppe\n\n\nt.test(datensatz$Variable1, datensatz$Variable2, paired = TRUE) \n\n\nWandle den t-Test nun in einen einseitigen Test mit alternative = „greater“ oder alternative = „less“ um und berechne Cohen‘s d als Effektstärkenmaß (Achtung: paired = True setzen)."
   },
   {
     "objectID": "hands_on_4.html",
@@ -777,7 +805,7 @@
     "href": "front_page.html",
     "title": "Einleitung",
     "section": "",
-    "text": "In diesem E-Book findest du alle wichtigen Informationen zum Methodenseminar “R u Ready”. Du kannst hier u. a. die wöchentlichen Folien, Hands-On R Übungen, den Leistungsnachweis, und Frequently Asked Questions einsehen. Du kannst über die Unterkapitel (links) zu den entsprechenden Inhalten navigieren, oder auch die Suchfunktion oben links verwenden, um nach einem bestimmten Begriff zu suchen.\n\nHinweisboxen\nHier einen Überblick über die auf den Seiten enthaltenen Hinweisboxen:\n\n\n\n\n\n\nNote\n\n\n\nVertiefung: Hier geht es in die Tiefe.\n\n\n\n\n\n\n\n\nImportant\n\n\n\nWichtig: Dies ist eine wichtige Information.\n\n\n\n\n\n\n\n\nWarning\n\n\n\nAchtung: Hier ist Vorsicht geboten.\n\n\n\n\n\n\n\n\nCaution\n\n\n\nVorsicht: Diese Information ist noch in Bearbeitung.\n\n\n\n\nSyllabus\n\n\n\n\n\n\nCaution\n\n\n\nVorsicht: Der Syllabus dient als grobe Richtlinie und kann angepasst werden, falls wir in einzelnen Einheiten mehr oder weniger Zeit benötigen.\n\n\n\n\nLetztes Update November 26, 2025 at 14:58",
+    "text": "In diesem E-Book findest du alle wichtigen Informationen zum Methodenseminar “R u Ready”. Du kannst hier u. a. die wöchentlichen Folien, Hands-On R Übungen, den Leistungsnachweis, und Frequently Asked Questions einsehen. Du kannst über die Unterkapitel (links) zu den entsprechenden Inhalten navigieren, oder auch die Suchfunktion oben links verwenden, um nach einem bestimmten Begriff zu suchen.\n\nHinweisboxen\nHier einen Überblick über die auf den Seiten enthaltenen Hinweisboxen:\n\n\n\n\n\n\nNote\n\n\n\nVertiefung: Hier geht es in die Tiefe.\n\n\n\n\n\n\n\n\nImportant\n\n\n\nWichtig: Dies ist eine wichtige Information.\n\n\n\n\n\n\n\n\nWarning\n\n\n\nAchtung: Hier ist Vorsicht geboten.\n\n\n\n\n\n\n\n\nCaution\n\n\n\nVorsicht: Diese Information ist noch in Bearbeitung.\n\n\n\n\nSyllabus\n\n\n\n\n\n\nCaution\n\n\n\nVorsicht: Der Syllabus dient als grobe Richtlinie und kann angepasst werden, falls wir in einzelnen Einheiten mehr oder weniger Zeit benötigen.\n\n\n\n\nLetztes Update Dezember 02, 2025 at 14:28",
     "crumbs": [
       "Einleitung"
     ]
@@ -1834,23 +1862,167 @@
   {
     "objectID": "EH_12.html#r-u-ready-reproduzierbare-datenaufbereitung-und--analyse-mit-r",
     "href": "EH_12.html#r-u-ready-reproduzierbare-datenaufbereitung-und--analyse-mit-r",
-    "title": "R u Ready? HS2025 | Psychologie der Digitalisierung - Einheit 10",
+    "title": "R u Ready? HS2025 | Psychologie der Digitalisierung - Einheit 12",
     "section": "R u Ready? Reproduzierbare Datenaufbereitung und -analyse mit R",
-    "text": "R u Ready? Reproduzierbare Datenaufbereitung und -analyse mit R\nHS 2025 LV-Leitung: Dr. Sandra Grinschgl / MSc. Aaron Friedli Tutor: BSc. Lars Schilling10. Einheit, 19.11.2025"
+    "text": "R u Ready? Reproduzierbare Datenaufbereitung und -analyse mit R\nHS 2025 LV-Leitung: Dr. Sandra Grinschgl / MSc. Aaron Friedli Tutor: BSc. Lars Schilling12. Einheit, 03.12.2025",
+    "crumbs": [
+      "Präsentationen",
+      "Einheit 12 - 03.12.2025"
+    ]
   },
   {
     "objectID": "EH_12.html#heute",
     "href": "EH_12.html#heute",
-    "title": "R u Ready? HS2025 | Psychologie der Digitalisierung - Einheit 10",
+    "title": "R u Ready? HS2025 | Psychologie der Digitalisierung - Einheit 12",
     "section": "Heute:",
-    "text": "Heute:\n\n\n\nVerschiebung der Abgabe der Datensätze an die Studierenden auf EH12 auf Wunsch der Studierenden"
+    "text": "Heute:",
+    "crumbs": [
+      "Präsentationen",
+      "Einheit 12 - 03.12.2025"
+    ]
+  },
+  {
+    "objectID": "EH_12.html#fragen-zur-r-hausübung-2",
+    "href": "EH_12.html#fragen-zur-r-hausübung-2",
+    "title": "R u Ready? HS2025 | Psychologie der Digitalisierung - Einheit 12",
+    "section": "Fragen zur R Hausübung 2??",
+    "text": "Fragen zur R Hausübung 2??",
+    "crumbs": [
+      "Präsentationen",
+      "Einheit 12 - 03.12.2025"
+    ]
+  },
+  {
+    "objectID": "EH_12.html#abgabe-simulierte-datensätze",
+    "href": "EH_12.html#abgabe-simulierte-datensätze",
+    "title": "R u Ready? HS2025 | Psychologie der Digitalisierung - Einheit 12",
+    "section": "Abgabe simulierte Datensätze",
+    "text": "Abgabe simulierte Datensätze\nAuf ILIAS findet ihr Ordner mit eurem Namen. Diese sind nach dem PsychDS System strukturiert. In Raw findet ihr dann eure individuellen Datensätze",
+    "crumbs": [
+      "Präsentationen",
+      "Einheit 12 - 03.12.2025"
+    ]
+  },
+  {
+    "objectID": "EH_12.html#abschlussarbeit-leistungsnachweis",
+    "href": "EH_12.html#abschlussarbeit-leistungsnachweis",
+    "title": "R u Ready? HS2025 | Psychologie der Digitalisierung - Einheit 12",
+    "section": "Abschlussarbeit / Leistungsnachweis",
+    "text": "Abschlussarbeit / Leistungsnachweis",
+    "crumbs": [
+      "Präsentationen",
+      "Einheit 12 - 03.12.2025"
+    ]
+  },
+  {
+    "objectID": "EH_12.html#checkliste-abschlussarbeit",
+    "href": "EH_12.html#checkliste-abschlussarbeit",
+    "title": "R u Ready? HS2025 | Psychologie der Digitalisierung - Einheit 12",
+    "section": "Checkliste Abschlussarbeit",
+    "text": "Checkliste Abschlussarbeit",
+    "crumbs": [
+      "Präsentationen",
+      "Einheit 12 - 03.12.2025"
+    ]
+  },
+  {
+    "objectID": "EH_12.html#simulierte-datensätze",
+    "href": "EH_12.html#simulierte-datensätze",
+    "title": "R u Ready? HS2025 | Psychologie der Digitalisierung - Einheit 12",
+    "section": "Simulierte Datensätze",
+    "text": "Simulierte Datensätze\n\nVorgehen: Eine Funktion simuliert Population(en) und zieht daraus zufällig Datenpunkte. Diese Zufälligkeit der Ziehung führt dazu, dass sich eure Datensätze unterscheiden!\n\n\n\nDadurch ergeben sich Unterschiede in den Hypothesentests und deskriptiven Statistiken.\n\n\n\nAber: Die Ergebnisse werden sich dennoch in einer vergleichbaren Range voneinander bewegen.",
+    "crumbs": [
+      "Präsentationen",
+      "Einheit 12 - 03.12.2025"
+    ]
+  },
+  {
+    "objectID": "EH_12.html#plausible-ergebnisse",
+    "href": "EH_12.html#plausible-ergebnisse",
+    "title": "R u Ready? HS2025 | Psychologie der Digitalisierung - Einheit 12",
+    "section": "Plausible Ergebnisse",
+    "text": "Plausible Ergebnisse\n\nAngenommen der Effekt der Intervention hat wirklich keine Auswirkung auf das Offloading Verhalten der Personen (H0 ist wahr).\n\n✅H0 = Keine Gruppenunterschiede zwischen above und below gruppen.\n❌H1 = Gruppen unterscheiden sich voneinander im Offlading Verhalten.\n\n\n\n\nHypothesentest: t-Test für unabhängige Stichproben (above vs. below)\n\n\n\nWie hoch ist die Wahrscheinlichkeit das wir trotzdem ein sigifikantes Ergebnis (Fehler 1. Art) erhalten?\n\n\nAlpha-Fehler 0.05. In Allen Analysen in denen wir signifikante werte erwarten (2x3 anova und mmq one-way anova) werden auch signifikante werte rauskommen (simulation so eingestellt). In den ANOVAs in denen wir nicht mit signifikanten werten rechnen, kann es sein das es per zufall trotzdem zu signifikanten werten kommt. In diesen fällen wird nicht erwartet das noch posthoc t-tests gerechnet werden.",
+    "crumbs": [
+      "Präsentationen",
+      "Einheit 12 - 03.12.2025"
+    ]
   },
   {
     "objectID": "EH_12.html#t-tests",
     "href": "EH_12.html#t-tests",
-    "title": "R u Ready? HS2025 | Psychologie der Digitalisierung - Einheit 10",
-    "section": "T-Tests",
-    "text": "T-Tests\n\n\n\n\n\n\n\n\nMittelwertsvergleiche Für unabhängige Stichproben: testet ob sich die Mittelwerte von zwei unabhängigen Stichproben unterscheiden\nFür abhängige Stichproben: testet ob die Mittelwerte einer Stichprobe unterschiedlich in zwei verschiedenen Bedingungen (z.B. zwei Messzeitpunkte) sind\nVoraussetzungen: Normalverteilung, Varianzhomogenität Alternative: z.B. Welch t-Test"
+    "title": "R u Ready? HS2025 | Psychologie der Digitalisierung - Einheit 12",
+    "section": "t-Tests",
+    "text": "t-Tests\n\n\n\n\n\n\n\n\nMittelwertvergleiche\n\nFür unabhängige Stichproben: Testet, ob sich die Mittelwerte zweier unabhängiger Gruppen unterscheiden.\nFür abhängige Stichproben: Testet, ob sich die Mittelwerte derselben Personen in zwei Bedingungen (z. B. Messwiederholung) unterscheiden.\nVoraussetzungen: Normalverteilung, Varianzhomogenität\nAlternative: z. B. Welch-t-Test",
+    "crumbs": [
+      "Präsentationen",
+      "Einheit 12 - 03.12.2025"
+    ]
+  },
+  {
+    "objectID": "EH_12.html#t-test-voraussetzungsprüfung",
+    "href": "EH_12.html#t-test-voraussetzungsprüfung",
+    "title": "R u Ready? HS2025 | Psychologie der Digitalisierung - Einheit 12",
+    "section": "t-Test: Voraussetzungsprüfung",
+    "text": "t-Test: Voraussetzungsprüfung\nLevene-Test\nDer Levene Test überprüft Varianzhomogenität! Varianzhomogenität bedeutet dass alle Gruppen in einer Analyse ungeführ die gleiche Streuung aufweisen, bzw. ähnlich um ihren Mittelwert schwanken.\n\ndat_full_below_above &lt;- dat_full |&gt; \n  filter(group_all != \"control\")\n\ndat_full_below_above$group_all &lt;- as.factor(dat_full_below_above$group_all)\n\n\nlibrary(car)\n\nleveneTest(dat_full_below_above$pre4, dat_full_below_above$group_all)\n\nLevene's Test for Homogeneity of Variance (center = median)\n       Df F value Pr(&gt;F)  \ngroup   1  2.8442 0.0947 .\n      104                 \n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1",
+    "crumbs": [
+      "Präsentationen",
+      "Einheit 12 - 03.12.2025"
+    ]
+  },
+  {
+    "objectID": "EH_12.html#t-test-beispiel",
+    "href": "EH_12.html#t-test-beispiel",
+    "title": "R u Ready? HS2025 | Psychologie der Digitalisierung - Einheit 12",
+    "section": "t-Test: Beispiel",
+    "text": "t-Test: Beispiel\n\nt.test(pre4 ~ group_all, data = dat_full_below_above, var.equal = TRUE)\n\n\n    Two Sample t-test\n\ndata:  pre4 by group_all\nt = 7.9845, df = 104, p-value = 1.991e-12\nalternative hypothesis: true difference in means between group above and group below is not equal to 0\n95 percent confidence interval:\n 20.25170 33.63509\nsample estimates:\nmean in group above mean in group below \n           59.66038            32.71698 \n\neffsize::cohen.d(pre4 ~ group_all, data = dat_full_below_above)\n\n\nCohen's d\n\nd estimate: 1.551045 (large)\n95 percent confidence interval:\n   lower    upper \n1.111706 1.990383",
+    "crumbs": [
+      "Präsentationen",
+      "Einheit 12 - 03.12.2025"
+    ]
+  },
+  {
+    "objectID": "EH_12.html#grundlegende-t-test-funktionen",
+    "href": "EH_12.html#grundlegende-t-test-funktionen",
+    "title": "R u Ready? HS2025 | Psychologie der Digitalisierung - Einheit 12",
+    "section": "Grundlegende t-Test-Funktionen",
+    "text": "Grundlegende t-Test-Funktionen\n\n\n\n\n\n\n\nFunktion\nBeschreibung\n\n\n\n\nt.test\nAllgemeine Funktion für verschiedene t-Tests: Ein-Stichproben-, unabhängige und abhängige Stichproben.\n\n\nt.test(av, mu = x)\nEin-Stichproben-t-Test. av = abhängige Variable, x = Vergleichswert der Population.\n\n\nt.test(av ~ uv)\nWelch-t-Test für unabhängige Stichproben. av = abhängige Variable, uv = Gruppenvariable (Ungleiche Varianzen erlaubt).\n\n\nt.test(av ~ uv, var.equal = TRUE)\nKlassischer t-Test für unabhängige Stichproben (Varianzgleichheit vorausgesetzt).",
+    "crumbs": [
+      "Präsentationen",
+      "Einheit 12 - 03.12.2025"
+    ]
+  },
+  {
+    "objectID": "EH_12.html#paired-t-test-varianztests-und-effektgrössen",
+    "href": "EH_12.html#paired-t-test-varianztests-und-effektgrössen",
+    "title": "R u Ready? HS2025 | Psychologie der Digitalisierung - Einheit 12",
+    "section": "Paired t-Test, Varianztests und Effektgrössen",
+    "text": "Paired t-Test, Varianztests und Effektgrössen\n\n\n\n\n\n\n\nFunktion\nBeschreibung\n\n\n\n\nt.test(av1, av2, paired = TRUE)\nt-Test für abhängige Stichproben (z. B. Prä–Post). av1 und av2 = Messzeitpunkte.\n\n\nleveneTest(av, uv) *\nLevene-Test auf Varianzhomogenität für unabhängige Gruppen. Aus dem car-Paket.\n\n\neffsize::cohen.d() *\nBerechnet Cohen’s d + Konfidenzintervall. Aus dem efffsize-Paket.",
+    "crumbs": [
+      "Präsentationen",
+      "Einheit 12 - 03.12.2025"
+    ]
+  },
+  {
+    "objectID": "EH_12.html#heute-haben-wir",
+    "href": "EH_12.html#heute-haben-wir",
+    "title": "R u Ready? HS2025 | Psychologie der Digitalisierung - Einheit 12",
+    "section": "Heute haben wir…",
+    "text": "Heute haben wir…\n… uns die simulierten Datensätze für die Abschlussarbeit angeschaut.\n…Korrelationen, Regressionen und t-Tests gerechnet",
+    "crumbs": [
+      "Präsentationen",
+      "Einheit 12 - 03.12.2025"
+    ]
+  },
+  {
+    "objectID": "EH_12.html#hausübung",
+    "href": "EH_12.html#hausübung",
+    "title": "R u Ready? HS2025 | Psychologie der Digitalisierung - Einheit 12",
+    "section": "Hausübung",
+    "text": "Hausübung\nR Übung 3 bis 12.12.25\nNächste Woche: Aaron übernimmt beide Gruppen\n\n\n\nwith ChatGPT",
+    "crumbs": [
+      "Präsentationen",
+      "Einheit 12 - 03.12.2025"
+    ]
   },
   {
     "objectID": "EH_10.html#r-u-ready-reproduzierbare-datenaufbereitung-und--analyse-mit-r",
@@ -2165,115 +2337,90 @@
     "href": "checkliste_abschlussarbeit.html",
     "title": "Checkliste Abschlussarbeit",
     "section": "",
-    "text": "Abgabe bis 11.1.2026 - 23:59\nAbgabe als ZIP-File: vorname_nachname_abschlussarbeit.zip\nFür die Abschlussarbeit erhaltet ihr simulierte Daten. Diese werden den Daten des Originalpapers in den meisten Aspekten sehr ähnlich sein. Allerdings müssen einige Teile davon zusätzlich bereinigt werden, bevor sie ausgewertet werden können. Die folgende Checkliste soll euch dabei helfen, an alle relevanten Aspekte der Datenbereinigung zu denken.\nDie Datensatzaufbereitung erfolgt im processing-Skript. Der final aufbereitete Datensatz (dat_full) sowie der Long-Datensatz (dat_long) werden im Ordner data/processed gespeichert.\n\n\n\nHaben alle Daten die gleiche Anzahl an Beobachtungen?\n\n-   Gibt es Personen mit fehlenden Werten, die ausgeschlossen werden müssen?\n\n-   Gibt es personen doppelt im Datensatz?\n\nGibt es unmögliche Werte in den Daten, z. B. -999? Wie können diese Daten ersetzt werden?\nGibt es reverse-kodierte Variablen (var_name_r)?\nGibt es Variablen, die nicht den korrekten Datentyp haben, z. B. numerische Variablen, die als Charakter angezeigt werden? Schaut euch diese Variablen genau an!\n(Beispiel: drei = 3, stimme voll und ganz zu = höchster Wert)\n\n\n\n\n\nDroppen von redundanten Variablen\nUmbenennen von Variablen, die nicht im snake_case-Format sind\nBerechnung der mmq_mean-Variablen\nSpeichern der Daten!"
+    "text": "Abgabe bis 11.1.2026 - 23:55\nAbgabe als ZIP-File: vorname_nachname_abschlussarbeit.zip\nFür die Abschlussarbeit erhaltet ihr simulierte Daten. Diese werden den Daten des Originalpapers in den meisten Aspekten sehr ähnlich sein. Allerdings müssen einige Teile davon zusätzlich bereinigt werden, bevor sie ausgewertet werden können. Die folgende Checkliste soll euch dabei helfen, an alle relevanten Aspekte der Datenbereinigung zu denken.\nDie Datensatzaufbereitung erfolgt im processing-Skript. Der final aufbereitete Datensatz (dat_full) sowie der Long-Datensatz (dat_long) werden im Ordner data/processed gespeichert.",
+    "crumbs": [
+      "Checkliste Abschlussarbeit"
+    ]
   },
   {
-    "objectID": "checkliste_abschlussarbeit.html#checkliste-abschlussarbeit",
-    "href": "checkliste_abschlussarbeit.html#checkliste-abschlussarbeit",
+    "objectID": "checkliste_abschlussarbeit.html#aspekte-die-bei-der-bereinigung-processing-beachtet-werden-sollten",
+    "href": "checkliste_abschlussarbeit.html#aspekte-die-bei-der-bereinigung-processing-beachtet-werden-sollten",
     "title": "Checkliste Abschlussarbeit",
-    "section": "",
-    "text": "Abgabe bis 11.1.2026 - 23:59\nAbgabe als ZIP-File: vorname_nachname_abschlussarbeit.zip\nFür die Abschlussarbeit erhaltet ihr simulierte Daten. Diese werden den Daten des Originalpapers in den meisten Aspekten sehr ähnlich sein. Allerdings müssen einige Teile davon zusätzlich bereinigt werden, bevor sie ausgewertet werden können. Die folgende Checkliste soll euch dabei helfen, an alle relevanten Aspekte der Datenbereinigung zu denken.\nDie Datensatzaufbereitung erfolgt im processing-Skript. Der final aufbereitete Datensatz (dat_full) sowie der Long-Datensatz (dat_long) werden im Ordner data/processed gespeichert.\n\n\n\nHaben alle Daten die gleiche Anzahl an Beobachtungen?\n\n-   Gibt es Personen mit fehlenden Werten, die ausgeschlossen werden müssen?\n\n-   Gibt es personen doppelt im Datensatz?\n\nGibt es unmögliche Werte in den Daten, z. B. -999? Wie können diese Daten ersetzt werden?\nGibt es reverse-kodierte Variablen (var_name_r)?\nGibt es Variablen, die nicht den korrekten Datentyp haben, z. B. numerische Variablen, die als Charakter angezeigt werden? Schaut euch diese Variablen genau an!\n(Beispiel: drei = 3, stimme voll und ganz zu = höchster Wert)\n\n\n\n\n\nDroppen von redundanten Variablen\nUmbenennen von Variablen, die nicht im snake_case-Format sind\nBerechnung der mmq_mean-Variablen\nSpeichern der Daten!"
+    "section": "Aspekte, die bei der Bereinigung (processing) beachtet werden sollten",
+    "text": "Aspekte, die bei der Bereinigung (processing) beachtet werden sollten\n\nHaben alle Daten die gleiche Anzahl an Beobachtungen?\n\n-   Gibt es Personen mit fehlenden Werten, die ausgeschlossen werden müssen?\n\n-   Gibt es Personen doppelt im Datensatz?\n\nGibt es unmögliche Werte in den Daten, z. B. -999? Wie können diese Daten ersetzt werden z.B aus anderen Variablen berechnet werden?\nGibt es reverse-kodierte Fragebogenvariablen (var_name_r)?\nGibt es Variablen, die nicht den korrekten Datentyp haben, z. B. numerische Variablen, die als Character angezeigt werden? Schaut euch diese Variablen genau an!\n(Beispiel: drei = 3, stimme voll und ganz zu = höchster Wert)",
+    "crumbs": [
+      "Checkliste Abschlussarbeit"
+    ]
+  },
+  {
+    "objectID": "checkliste_abschlussarbeit.html#weitere-vorbereitende-schritte-im-processed-datensatz",
+    "href": "checkliste_abschlussarbeit.html#weitere-vorbereitende-schritte-im-processed-datensatz",
+    "title": "Checkliste Abschlussarbeit",
+    "section": "Weitere vorbereitende Schritte im processed-Datensatz",
+    "text": "Weitere vorbereitende Schritte im processed-Datensatz\n\nMergen der 7 Einzeldatensätze\nDroppen von redundanten Variablen\nUmbenennen von Variablen, die nicht im snake_case-Format sind\nBerechnung der mmq_mean Variable\nSpeichern der Daten!",
+    "crumbs": [
+      "Checkliste Abschlussarbeit"
+    ]
   },
   {
     "objectID": "checkliste_abschlussarbeit.html#im-analyseskript-analysis-werden",
     "href": "checkliste_abschlussarbeit.html#im-analyseskript-analysis-werden",
     "title": "Checkliste Abschlussarbeit",
     "section": "Im Analyseskript (analysis) werden",
-    "text": "Im Analyseskript (analysis) werden\n\nNötige vorbereitungen gemacht (z.B. faktoren setzen)\nDie analysen aus dem Datenanlyseplan durchgeführt!\n\nDeskriptive Statistik (M & SD) berechnen so wie in Table 1 (siehe Grinschgl et al.,2020)\n2x3 mixed ANOVA für subj. Leistungseinschätzungen mit post-hoc t-Tests, inkl.Effektstärken (η2 und Cohen’s d)\nOne-Way ANOVA für jede Offloading Variable (3x), inkl. Effektstärke (η2)\nOne-Way ANOVA für Trial Duration in Pattern Copy Task, inkl. Effektstärke (η2)\nOne-Way ANOVA für MMQ mit post-hoc t-Tests, inkl. Effektstärken (η2 und Cohen’sd)\nOne-Way ANOVA für Arbeitsgedächtnisleistung im Feature Switch Detection Task,inkl. Effektstärke (η2)\n1 Tabelle und eine Abbildung nach Wahl erstellen\nOptional: Testen der Voraussetzungen bei jeder Analyse – wenn diese gemacht wird,soll es auch im Datenanalyseplan beschrieben werden\n\nDaten Visualisiert (mind. 1 Abbilgung + midestens eine Tabelle)."
+    "text": "Im Analyseskript (analysis) werden\n\nNötige Vorbereitungen gemacht, die nicht zum processing gehören (z.B. Faktoren setzen)\nDie Analysen aus dem Datenanlyseplan durchgeführt!\n\nDeskriptive Statistik (M & SD) berechnen so wie in Table 1 (siehe Grinschgl et al., 2021)\n2x3 mixed ANOVA für subj. Leistungseinschätzungen mit post-hoc t-Tests, inkl.Effektstärken (η2 und Cohen’s d)\nOne-Way ANOVA für jede Offloading Variable (3x), inkl. Effektstärke (η2)\nOne-Way ANOVA für Trial Duration in Pattern Copy Task, inkl. Effektstärke (η2)\nOne-Way ANOVA für MMQ mit post-hoc t-Tests, inkl. Effektstärken (η2 und Cohen’sd)\nOne-Way ANOVA für Arbeitsgedächtnisleistung im Feature Switch Detection Task,inkl. Effektstärke (η2)\n1 Tabelle oder 1 Abbildung nach Wahl erstellen\nOptional: Testen der Voraussetzungen bei jeder Analyse – wenn diese gemacht wird, soll es auch im Datenanalyseplan beschrieben werden und die Analysen bei Voraussetzungsverletzungen entsprechend angepasst werden.\n\n\nPost-hoc-T-Tests werden nur für die 2x3-ANOVA und die MMQ-ANOVA erwartet. Sollte eine weitere ANOVA zufällig signifikante Werte aufweisen, werden hierfür keine Post-hoc-T-Tests verlangt.",
+    "crumbs": [
+      "Checkliste Abschlussarbeit"
+    ]
   },
   {
     "objectID": "checkliste_abschlussarbeit.html#dinge-die-im-datenanalyseplan-angepasst-werden-müssen",
     "href": "checkliste_abschlussarbeit.html#dinge-die-im-datenanalyseplan-angepasst-werden-müssen",
     "title": "Checkliste Abschlussarbeit",
     "section": "Dinge, die im Datenanalyseplan angepasst werden müssen:",
-    "text": "Dinge, die im Datenanalyseplan angepasst werden müssen:\n\nData Access\nData Collection Procedures\nMissing Data"
+    "text": "Dinge, die im Datenanalyseplan angepasst werden müssen:\n\nData Collection Procedures\nMissing Data\nUnit of Analyses/Data Exclusion",
+    "crumbs": [
+      "Checkliste Abschlussarbeit"
+    ]
   },
   {
     "objectID": "checkliste_abschlussarbeit.html#dinge-die-im-codebook-angepasst-werden-müssen",
     "href": "checkliste_abschlussarbeit.html#dinge-die-im-codebook-angepasst-werden-müssen",
     "title": "Checkliste Abschlussarbeit",
     "section": "Dinge, die im Codebook angepasst werden müssen:",
-    "text": "Dinge, die im Codebook angepasst werden müssen:\n\nCoding (reverse-kodierte Items)\nMissing Data\n@Sandra: Wir verlangen nur das Codebook für dat_full – dort wird es nach der Bereinigung keine NAs mehr geben. Soll trotzdem ein Abschnitt zu NA ergänzt werden?\nData Collection Procedures → Simulierte Daten.\n\n\n\nOrdnerstruktur für die Abgabe\nDie (für unser Seminar leicht abgeänderte) Psych-DS-Struktur wird eingehalten. Das bedeutet:\n\nDaten im Ordner data.\n\n-   Rohdaten in `data/raw` (werden nicht verändert).\n\n-   Aufbereitete Daten (`dat_full`) in `data/processed`\n\nAnalyseskripte (processing und analysis) im Ordner code\nGerenderte Analyseskripte (html) ebenfalls im Ordner code\nDatenanalyseplan im Ordner preregistration\nCodebook im Ordner data"
-  },
-  {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About",
-    "section": "",
-    "text": "Diese Website wurde im Rahmen des Seminars “R u Ready” an der Universität Bern erstellt.\nSollte deine Frage nicht beantwortet worden sein, dann wende dich gerne direkt an die Autor:innen:\n\n\n\nlars.schilling@unibe.ch\n\n\naaron.friedli@unibe.ch\n\n\nsandra.grinschgl@unibe.ch\n\n\n\n\nThis work is licensed under CC BY-SA 4.0",
+    "text": "Dinge, die im Codebook angepasst werden müssen:\n\nCoding of item → reverse-kodierte Items\nCoding of Missing Data (falls vorhanden)\n1stes Blatt: Data Collection Procedures → Simulierte Daten.",
     "crumbs": [
-      "About"
+      "Checkliste Abschlussarbeit"
     ]
   },
   {
-    "objectID": "1_presentation(1).html#beispielhafte-chunks-output",
-    "href": "1_presentation(1).html#beispielhafte-chunks-output",
-    "title": "R u Ready",
-    "section": "Beispielhafte Chunks & Output",
-    "text": "Beispielhafte Chunks & Output\n\n\n\nprint(\"Hello world!\")\n\n[1] \"Hello world!\"\n\n\n\n\n2+2\n\n[1] 4"
+    "objectID": "checkliste_abschlussarbeit.html#ordnerstruktur-für-die-abgabe",
+    "href": "checkliste_abschlussarbeit.html#ordnerstruktur-für-die-abgabe",
+    "title": "Checkliste Abschlussarbeit",
+    "section": "Ordnerstruktur für die Abgabe",
+    "text": "Ordnerstruktur für die Abgabe\nDie (für unser Seminar leicht abgeänderte) Psych-DS-Struktur wird eingehalten. Das bedeutet:\n\nDaten im Ordner data.\n\n-   Rohdaten in `data/raw` (werden nicht verändert).\n\n-   Aufbereitete Daten (`dat_full`) in `data/processed`\n\nAnalyseskripte (processing und analysis) im Ordner code\nGerenderte Analyseskripte (html oder docx oder pdf) ebenfalls im Ordner code\nDatenanalyseplan im Ordner preregistration\nCodebook im Ordner data",
+    "crumbs": [
+      "Checkliste Abschlussarbeit"
+    ]
   },
   {
-    "objectID": "1_presentation(1).html#beispielhafte-formatierung",
-    "href": "1_presentation(1).html#beispielhafte-formatierung",
-    "title": "R u Ready",
-    "section": "Beispielhafte Formatierung",
-    "text": "Beispielhafte Formatierung\nDiese Präsentation verwendet Reveal.js in Quarto\n\n\n\n\n\n\nHinweis\n\n\nAuf den Folien sind erst einmal nur Beispiele zu sehen, wie man mit Quarto Präsentationen einfach Code einbinden und zeigen kann."
+    "objectID": "checkliste_abschlussarbeit.html#self-check-wie-sehen-plausible-ergebnisse-aus",
+    "href": "checkliste_abschlussarbeit.html#self-check-wie-sehen-plausible-ergebnisse-aus",
+    "title": "Checkliste Abschlussarbeit",
+    "section": "Self-Check: Wie sehen plausible Ergebnisse aus?",
+    "text": "Self-Check: Wie sehen plausible Ergebnisse aus?\nDie grundsätzliche Struktur der Daten sollte sehr ähnlich zu den Originaldaten sein.\n\nBeispiel aus einem simulierten Datensatz vs Originaldaten\n\nDie Ergebnisse bewegen sich alle in einem ähnlichen Rahmen wie die Daten aus der Originalstudie.\nOriginale Ergebnisse\n\n\n\n\n\nSimulierter Datensatz\n\n\n\n\n\nDementsprechend werden auch die Effekte der Analysen ähnlich ausfallen:",
+    "crumbs": [
+      "Checkliste Abschlussarbeit"
+    ]
   },
   {
-    "objectID": "1_presentation(1).html#beispielhafter-datensatz",
-    "href": "1_presentation(1).html#beispielhafter-datensatz",
-    "title": "R u Ready",
-    "section": "Beispielhafter Datensatz",
-    "text": "Beispielhafter Datensatz\n\nhead(mtcars)\n\n                   mpg cyl disp  hp drat    wt  qsec vs am gear carb\nMazda RX4         21.0   6  160 110 3.90 2.620 16.46  0  1    4    4\nMazda RX4 Wag     21.0   6  160 110 3.90 2.875 17.02  0  1    4    4\nDatsun 710        22.8   4  108  93 3.85 2.320 18.61  1  1    4    1\nHornet 4 Drive    21.4   6  258 110 3.08 3.215 19.44  1  0    3    1\nHornet Sportabout 18.7   8  360 175 3.15 3.440 17.02  0  0    3    2\nValiant           18.1   6  225 105 2.76 3.460 20.22  1  0    3    1"
-  },
-  {
-    "objectID": "1_presentation(1).html#beispielhafter-ggplot-code-und-plot",
-    "href": "1_presentation(1).html#beispielhafter-ggplot-code-und-plot",
-    "title": "R u Ready",
-    "section": "Beispielhafter ggplot-code und plot",
-    "text": "Beispielhafter ggplot-code und plot\n\nggplot(data = mtcars, aes(x = hp, y = mpg, color = factor(cyl))) +\n  geom_point(size = 3) +\n  labs(\n    title = \"PS vs. Verbrauch\",\n    x = \"Horsepower (hp)\",\n    y = \"Miles per Gallon (mpg)\",\n    color = \"Zylinder\"\n  ) +\n  theme_minimal()"
-  },
-  {
-    "objectID": "1_presentation(1).html#beispielhafter-ggplot-code-und-plot-output",
-    "href": "1_presentation(1).html#beispielhafter-ggplot-code-und-plot-output",
-    "title": "R u Ready",
-    "section": "Beispielhafter ggplot-code und plot",
-    "text": "Beispielhafter ggplot-code und plot"
-  },
-  {
-    "objectID": "1_presentation.html#beispielhafte-chunks-output",
-    "href": "1_presentation.html#beispielhafte-chunks-output",
-    "title": "R u Ready",
-    "section": "Beispielhafte Chunks & Output",
-    "text": "Beispielhafte Chunks & Output\n\n\n\nprint(\"Hello world!\")\n\n[1] \"Hello world!\"\n\n\n\n\n2+2\n\n[1] 4"
-  },
-  {
-    "objectID": "1_presentation.html#beispielhafte-formatierung",
-    "href": "1_presentation.html#beispielhafte-formatierung",
-    "title": "R u Ready",
-    "section": "Beispielhafte Formatierung",
-    "text": "Beispielhafte Formatierung\nDiese Präsentation verwendet Reveal.js in Quarto\n\n\n\n\n\n\nHinweis\n\n\nAuf den Folien sind erst einmal nur Beispiele zu sehen, wie man mit Quarto Präsentationen einfach Code einbinden und zeigen kann."
-  },
-  {
-    "objectID": "1_presentation.html#beispielhafter-datensatz",
-    "href": "1_presentation.html#beispielhafter-datensatz",
-    "title": "R u Ready",
-    "section": "Beispielhafter Datensatz",
-    "text": "Beispielhafter Datensatz\n\nhead(mtcars)\n\n                   mpg cyl disp  hp drat    wt  qsec vs am gear carb\nMazda RX4         21.0   6  160 110 3.90 2.620 16.46  0  1    4    4\nMazda RX4 Wag     21.0   6  160 110 3.90 2.875 17.02  0  1    4    4\nDatsun 710        22.8   4  108  93 3.85 2.320 18.61  1  1    4    1\nHornet 4 Drive    21.4   6  258 110 3.08 3.215 19.44  1  0    3    1\nHornet Sportabout 18.7   8  360 175 3.15 3.440 17.02  0  0    3    2\nValiant           18.1   6  225 105 2.76 3.460 20.22  1  0    3    1"
-  },
-  {
-    "objectID": "1_presentation.html#beispielhafter-ggplot-code-und-plot",
-    "href": "1_presentation.html#beispielhafter-ggplot-code-und-plot",
-    "title": "R u Ready",
-    "section": "Beispielhafter ggplot-code und plot",
-    "text": "Beispielhafter ggplot-code und plot\n\nggplot(data = mtcars, aes(x = hp, y = mpg, color = factor(cyl))) +\n  geom_point(size = 3) +\n  labs(\n    title = \"PS vs. Verbrauch\",\n    x = \"Horsepower (hp)\",\n    y = \"Miles per Gallon (mpg)\",\n    color = \"Zylinder\"\n  ) +\n  theme_minimal()"
-  },
-  {
-    "objectID": "1_presentation.html#beispielhafter-ggplot-code-und-plot-output",
-    "href": "1_presentation.html#beispielhafter-ggplot-code-und-plot-output",
-    "title": "R u Ready",
-    "section": "Beispielhafter ggplot-code und plot",
-    "text": "Beispielhafter ggplot-code und plot"
+    "objectID": "checkliste_abschlussarbeit.html#zu-erwartende-abweichungen-der-ergebnisse-von-der-originalstudie",
+    "href": "checkliste_abschlussarbeit.html#zu-erwartende-abweichungen-der-ergebnisse-von-der-originalstudie",
+    "title": "Checkliste Abschlussarbeit",
+    "section": "Zu erwartende Abweichungen der Ergebnisse von der Originalstudie:",
+    "text": "Zu erwartende Abweichungen der Ergebnisse von der Originalstudie:\n\nEinzelne Werte werden sich unterscheiden! Deskriptiva, Effektgrössen usw. werden sich unterscheiden! Eta2 sind hier grösser als in der Originalstudie.\n\n\n\n\n\n\n\nDeskriptiva: Unterschiede in den Means und SDs!\n\n\n\n\n\n\n##Unplausible Resultate\nErgebnisse die ein komplett anderes Gesamtbild hinterlassen sind nicht zu erwarten!",
+    "crumbs": [
+      "Checkliste Abschlussarbeit"
+    ]
   },
   {
     "objectID": "ChatGPT.html",
@@ -2340,6 +2487,121 @@
       "Links und Ressourcen",
       "ChatGPT in RStudio"
     ]
+  },
+  {
+    "objectID": "1_presentation.html#beispielhafte-chunks-output",
+    "href": "1_presentation.html#beispielhafte-chunks-output",
+    "title": "R u Ready",
+    "section": "Beispielhafte Chunks & Output",
+    "text": "Beispielhafte Chunks & Output\n\n\n\nprint(\"Hello world!\")\n\n[1] \"Hello world!\"\n\n\n\n\n2+2\n\n[1] 4"
+  },
+  {
+    "objectID": "1_presentation.html#beispielhafte-formatierung",
+    "href": "1_presentation.html#beispielhafte-formatierung",
+    "title": "R u Ready",
+    "section": "Beispielhafte Formatierung",
+    "text": "Beispielhafte Formatierung\nDiese Präsentation verwendet Reveal.js in Quarto\n\n\n\n\n\n\nHinweis\n\n\nAuf den Folien sind erst einmal nur Beispiele zu sehen, wie man mit Quarto Präsentationen einfach Code einbinden und zeigen kann."
+  },
+  {
+    "objectID": "1_presentation.html#beispielhafter-datensatz",
+    "href": "1_presentation.html#beispielhafter-datensatz",
+    "title": "R u Ready",
+    "section": "Beispielhafter Datensatz",
+    "text": "Beispielhafter Datensatz\n\nhead(mtcars)\n\n                   mpg cyl disp  hp drat    wt  qsec vs am gear carb\nMazda RX4         21.0   6  160 110 3.90 2.620 16.46  0  1    4    4\nMazda RX4 Wag     21.0   6  160 110 3.90 2.875 17.02  0  1    4    4\nDatsun 710        22.8   4  108  93 3.85 2.320 18.61  1  1    4    1\nHornet 4 Drive    21.4   6  258 110 3.08 3.215 19.44  1  0    3    1\nHornet Sportabout 18.7   8  360 175 3.15 3.440 17.02  0  0    3    2\nValiant           18.1   6  225 105 2.76 3.460 20.22  1  0    3    1"
+  },
+  {
+    "objectID": "1_presentation.html#beispielhafter-ggplot-code-und-plot",
+    "href": "1_presentation.html#beispielhafter-ggplot-code-und-plot",
+    "title": "R u Ready",
+    "section": "Beispielhafter ggplot-code und plot",
+    "text": "Beispielhafter ggplot-code und plot\n\nggplot(data = mtcars, aes(x = hp, y = mpg, color = factor(cyl))) +\n  geom_point(size = 3) +\n  labs(\n    title = \"PS vs. Verbrauch\",\n    x = \"Horsepower (hp)\",\n    y = \"Miles per Gallon (mpg)\",\n    color = \"Zylinder\"\n  ) +\n  theme_minimal()"
+  },
+  {
+    "objectID": "1_presentation.html#beispielhafter-ggplot-code-und-plot-output",
+    "href": "1_presentation.html#beispielhafter-ggplot-code-und-plot-output",
+    "title": "R u Ready",
+    "section": "Beispielhafter ggplot-code und plot",
+    "text": "Beispielhafter ggplot-code und plot"
+  },
+  {
+    "objectID": "1_presentation(1).html#beispielhafte-chunks-output",
+    "href": "1_presentation(1).html#beispielhafte-chunks-output",
+    "title": "R u Ready",
+    "section": "Beispielhafte Chunks & Output",
+    "text": "Beispielhafte Chunks & Output\n\n\n\nprint(\"Hello world!\")\n\n[1] \"Hello world!\"\n\n\n\n\n2+2\n\n[1] 4"
+  },
+  {
+    "objectID": "1_presentation(1).html#beispielhafte-formatierung",
+    "href": "1_presentation(1).html#beispielhafte-formatierung",
+    "title": "R u Ready",
+    "section": "Beispielhafte Formatierung",
+    "text": "Beispielhafte Formatierung\nDiese Präsentation verwendet Reveal.js in Quarto\n\n\n\n\n\n\nHinweis\n\n\nAuf den Folien sind erst einmal nur Beispiele zu sehen, wie man mit Quarto Präsentationen einfach Code einbinden und zeigen kann."
+  },
+  {
+    "objectID": "1_presentation(1).html#beispielhafter-datensatz",
+    "href": "1_presentation(1).html#beispielhafter-datensatz",
+    "title": "R u Ready",
+    "section": "Beispielhafter Datensatz",
+    "text": "Beispielhafter Datensatz\n\nhead(mtcars)\n\n                   mpg cyl disp  hp drat    wt  qsec vs am gear carb\nMazda RX4         21.0   6  160 110 3.90 2.620 16.46  0  1    4    4\nMazda RX4 Wag     21.0   6  160 110 3.90 2.875 17.02  0  1    4    4\nDatsun 710        22.8   4  108  93 3.85 2.320 18.61  1  1    4    1\nHornet 4 Drive    21.4   6  258 110 3.08 3.215 19.44  1  0    3    1\nHornet Sportabout 18.7   8  360 175 3.15 3.440 17.02  0  0    3    2\nValiant           18.1   6  225 105 2.76 3.460 20.22  1  0    3    1"
+  },
+  {
+    "objectID": "1_presentation(1).html#beispielhafter-ggplot-code-und-plot",
+    "href": "1_presentation(1).html#beispielhafter-ggplot-code-und-plot",
+    "title": "R u Ready",
+    "section": "Beispielhafter ggplot-code und plot",
+    "text": "Beispielhafter ggplot-code und plot\n\nggplot(data = mtcars, aes(x = hp, y = mpg, color = factor(cyl))) +\n  geom_point(size = 3) +\n  labs(\n    title = \"PS vs. Verbrauch\",\n    x = \"Horsepower (hp)\",\n    y = \"Miles per Gallon (mpg)\",\n    color = \"Zylinder\"\n  ) +\n  theme_minimal()"
+  },
+  {
+    "objectID": "1_presentation(1).html#beispielhafter-ggplot-code-und-plot-output",
+    "href": "1_presentation(1).html#beispielhafter-ggplot-code-und-plot-output",
+    "title": "R u Ready",
+    "section": "Beispielhafter ggplot-code und plot",
+    "text": "Beispielhafter ggplot-code und plot"
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "Diese Website wurde im Rahmen des Seminars “R u Ready” an der Universität Bern erstellt.\nSollte deine Frage nicht beantwortet worden sein, dann wende dich gerne direkt an die Autor:innen:\n\n\n\nlars.schilling@unibe.ch\n\n\naaron.friedli@unibe.ch\n\n\nsandra.grinschgl@unibe.ch\n\n\n\n\nThis work is licensed under CC BY-SA 4.0",
+    "crumbs": [
+      "About"
+    ]
+  },
+  {
+    "objectID": "checkliste_abschlussarbeit-PSY-016893.html",
+    "href": "checkliste_abschlussarbeit-PSY-016893.html",
+    "title": "Checkliste Abschlussarbeit",
+    "section": "",
+    "text": "Abgabe bis 11.1.2026 - 23:59\nAbgabe als ZIP-File: vorname_nachname_abschlussarbeit.zip\nFür die Abschlussarbeit erhaltet ihr simulierte Daten. Diese werden den Daten des Originalpapers in den meisten Aspekten sehr ähnlich sein. Allerdings müssen einige Teile davon zusätzlich bereinigt werden, bevor sie ausgewertet werden können. Die folgende Checkliste soll euch dabei helfen, an alle relevanten Aspekte der Datenbereinigung zu denken.\nDie Datensatzaufbereitung erfolgt im processing-Skript. Der final aufbereitete Datensatz (dat_full) sowie der Long-Datensatz (dat_long) werden im Ordner data/processed gespeichert.\n\n\n\nHaben alle Daten die gleiche Anzahl an Beobachtungen?\n\n-   Gibt es Personen mit fehlenden Werten, die ausgeschlossen werden müssen?\n\n-   Gibt es personen doppelt im Datensatz?\n\nGibt es unmögliche Werte in den Daten, z. B. -999? Wie können diese Daten ersetzt werden?\nGibt es reverse-kodierte Variablen (var_name_r)?\nGibt es Variablen, die nicht den korrekten Datentyp haben, z. B. numerische Variablen, die als Charakter angezeigt werden? Schaut euch diese Variablen genau an!\n(Beispiel: drei = 3, stimme voll und ganz zu = höchster Wert)\n\n\n\n\n\nDroppen von redundanten Variablen\nUmbenennen von Variablen, die nicht im snake_case-Format sind\nBerechnung der mmq_mean-Variablen\nSpeichern der Daten!"
+  },
+  {
+    "objectID": "checkliste_abschlussarbeit-PSY-016893.html#checkliste-abschlussarbeit",
+    "href": "checkliste_abschlussarbeit-PSY-016893.html#checkliste-abschlussarbeit",
+    "title": "Checkliste Abschlussarbeit",
+    "section": "",
+    "text": "Abgabe bis 11.1.2026 - 23:59\nAbgabe als ZIP-File: vorname_nachname_abschlussarbeit.zip\nFür die Abschlussarbeit erhaltet ihr simulierte Daten. Diese werden den Daten des Originalpapers in den meisten Aspekten sehr ähnlich sein. Allerdings müssen einige Teile davon zusätzlich bereinigt werden, bevor sie ausgewertet werden können. Die folgende Checkliste soll euch dabei helfen, an alle relevanten Aspekte der Datenbereinigung zu denken.\nDie Datensatzaufbereitung erfolgt im processing-Skript. Der final aufbereitete Datensatz (dat_full) sowie der Long-Datensatz (dat_long) werden im Ordner data/processed gespeichert.\n\n\n\nHaben alle Daten die gleiche Anzahl an Beobachtungen?\n\n-   Gibt es Personen mit fehlenden Werten, die ausgeschlossen werden müssen?\n\n-   Gibt es personen doppelt im Datensatz?\n\nGibt es unmögliche Werte in den Daten, z. B. -999? Wie können diese Daten ersetzt werden?\nGibt es reverse-kodierte Variablen (var_name_r)?\nGibt es Variablen, die nicht den korrekten Datentyp haben, z. B. numerische Variablen, die als Charakter angezeigt werden? Schaut euch diese Variablen genau an!\n(Beispiel: drei = 3, stimme voll und ganz zu = höchster Wert)\n\n\n\n\n\nDroppen von redundanten Variablen\nUmbenennen von Variablen, die nicht im snake_case-Format sind\nBerechnung der mmq_mean-Variablen\nSpeichern der Daten!"
+  },
+  {
+    "objectID": "checkliste_abschlussarbeit-PSY-016893.html#im-analyseskript-analysis-werden",
+    "href": "checkliste_abschlussarbeit-PSY-016893.html#im-analyseskript-analysis-werden",
+    "title": "Checkliste Abschlussarbeit",
+    "section": "Im Analyseskript (analysis) werden",
+    "text": "Im Analyseskript (analysis) werden\n\nNötige vorbereitungen gemacht (z.B. faktoren setzen)\nDie analysen aus dem Datenanlyseplan durchgeführt!\n\nDeskriptive Statistik (M & SD) berechnen so wie in Table 1 (siehe Grinschgl et al.,2020)\n2x3 mixed ANOVA für subj. Leistungseinschätzungen mit post-hoc t-Tests, inkl.Effektstärken (η2 und Cohen’s d)\nOne-Way ANOVA für jede Offloading Variable (3x), inkl. Effektstärke (η2)\nOne-Way ANOVA für Trial Duration in Pattern Copy Task, inkl. Effektstärke (η2)\nOne-Way ANOVA für MMQ mit post-hoc t-Tests, inkl. Effektstärken (η2 und Cohen’sd)\nOne-Way ANOVA für Arbeitsgedächtnisleistung im Feature Switch Detection Task,inkl. Effektstärke (η2)\n1 Tabelle und eine Abbildung nach Wahl erstellen\nOptional: Testen der Voraussetzungen bei jeder Analyse – wenn diese gemacht wird,soll es auch im Datenanalyseplan beschrieben werden\n\nDaten Visualisiert (mind. 1 Abbilgung + midestens eine Tabelle)."
+  },
+  {
+    "objectID": "checkliste_abschlussarbeit-PSY-016893.html#dinge-die-im-datenanalyseplan-angepasst-werden-müssen",
+    "href": "checkliste_abschlussarbeit-PSY-016893.html#dinge-die-im-datenanalyseplan-angepasst-werden-müssen",
+    "title": "Checkliste Abschlussarbeit",
+    "section": "Dinge, die im Datenanalyseplan angepasst werden müssen:",
+    "text": "Dinge, die im Datenanalyseplan angepasst werden müssen:\n\nData Access\nData Collection Procedures\nMissing Data"
+  },
+  {
+    "objectID": "checkliste_abschlussarbeit-PSY-016893.html#dinge-die-im-codebook-angepasst-werden-müssen",
+    "href": "checkliste_abschlussarbeit-PSY-016893.html#dinge-die-im-codebook-angepasst-werden-müssen",
+    "title": "Checkliste Abschlussarbeit",
+    "section": "Dinge, die im Codebook angepasst werden müssen:",
+    "text": "Dinge, die im Codebook angepasst werden müssen:\n\nCoding (reverse-kodierte Items)\nMissing Data\n@Sandra: Wir verlangen nur das Codebook für dat_full – dort wird es nach der Bereinigung keine NAs mehr geben. Soll trotzdem ein Abschnitt zu NA ergänzt werden?\nData Collection Procedures → Simulierte Daten.\n\n\n\nOrdnerstruktur für die Abgabe\nDie (für unser Seminar leicht abgeänderte) Psych-DS-Struktur wird eingehalten. Das bedeutet:\n\nDaten im Ordner data.\n\n-   Rohdaten in `data/raw` (werden nicht verändert).\n\n-   Aufbereitete Daten (`dat_full`) in `data/processed`\n\nAnalyseskripte (processing und analysis) im Ordner code\nGerenderte Analyseskripte (html) ebenfalls im Ordner code\nDatenanalyseplan im Ordner preregistration\nCodebook im Ordner data"
   },
   {
     "objectID": "codebook.html",
@@ -4653,7 +4915,7 @@
     "href": "hands_on_3.html#inline-code",
     "title": "Hands On – Coding Basics (Einheiten 5 und 6)",
     "section": "Inline Code",
-    "text": "Inline Code\n\nFüge folgenden dynamischen Satz in dein Dokument ein: „Dieses Dokument wurde zum letzten Mal am datum bearbeitet.“\nBenutze dafür die Variable datum die du bereits kreiert hast. Diese kannst du hinzufügen indem du “/” benutzt und “Inline R Code” suchst. Inline Code lässt sich auch mit diesem Sonderzeichen ` kreieren wenn du danach ein “r” eingibst.\nRendere dein erstes Dokument: Stelle ganz oben in deinem Dokument dafür das Format auf docx um. Wenn du das Dokument als PDF rendern willst benötigst du TinyTeX. Das kannst du mit dem Befehl install.packages(\"tinytex\") installieren.\nNutze dafür den Render-Button und schau dir das gerenderte Ergebnis an. Was ist mit deinem dynamischen Satz passiert?\n\nDas Resultat sollte so aussehen (mit dem aktuellen Datum):\nDieses Dokument wurde zum letzten Mal am 2025-11-26 bearbeitet.\n\n\n\n\n\n\nImportant\n\n\n\nQuarto-Dokumente lassen sich nur rendern, wenn das gesamte Skript fehlerfrei durchläuft. Tritt beim Rendern ein Fehler auf, ist es sinnvoll, das gesamte Skript auszuführen und auf Fehlermeldungen zu achten. Auf diese Weise wird die Reproduzierbarkeit sichergestellt.\nMöchte man das Skript trotz eines Fehlers rendern, kann man an den entsprechenden Code-Chunk #| eval: false schreiben - dies verhindert, dass der Code für die gerenderte Datei ausgeführt wird"
+    "text": "Inline Code\n\nFüge folgenden dynamischen Satz in dein Dokument ein: „Dieses Dokument wurde zum letzten Mal am datum bearbeitet.“\nBenutze dafür die Variable datum die du bereits kreiert hast. Diese kannst du hinzufügen indem du “/” benutzt und “Inline R Code” suchst. Inline Code lässt sich auch mit diesem Sonderzeichen ` kreieren wenn du danach ein “r” eingibst.\nRendere dein erstes Dokument: Stelle ganz oben in deinem Dokument dafür das Format auf docx um. Wenn du das Dokument als PDF rendern willst benötigst du TinyTeX. Das kannst du mit dem Befehl install.packages(\"tinytex\") installieren.\nNutze dafür den Render-Button und schau dir das gerenderte Ergebnis an. Was ist mit deinem dynamischen Satz passiert?\n\nDas Resultat sollte so aussehen (mit dem aktuellen Datum):\nDieses Dokument wurde zum letzten Mal am 2025-12-02 bearbeitet.\n\n\n\n\n\n\nImportant\n\n\n\nQuarto-Dokumente lassen sich nur rendern, wenn das gesamte Skript fehlerfrei durchläuft. Tritt beim Rendern ein Fehler auf, ist es sinnvoll, das gesamte Skript auszuführen und auf Fehlermeldungen zu achten. Auf diese Weise wird die Reproduzierbarkeit sichergestellt.\nMöchte man das Skript trotz eines Fehlers rendern, kann man an den entsprechenden Code-Chunk #| eval: false schreiben - dies verhindert, dass der Code für die gerenderte Datei ausgeführt wird"
   },
   {
     "objectID": "hands_on_3.html#quarto-header",
@@ -4747,90 +5009,131 @@
     "text": "Fortgeschrittene (freiwillige Übungen)\n\nErweitere den Scatterplot deiner beiden Variablen um die folgenden Dinge:\n\nFärbe deine Datenpunkte nach Gruppenzugehörigkeit ein mit color()\nFüge einen titel ein mit labs und title()\nBenne die Achsen mit ylab() und xlab()\nÄnder die Darstellungart zu theme_minimal()\n\n\nWir werden in EH 11 noch vertiefende Übungen zu ggplot durchführen."
   },
   {
-    "objectID": "hausuebungen.html",
-    "href": "hausuebungen.html",
-    "title": "Hausuebungen",
+    "objectID": "hands_on_6.html",
+    "href": "hands_on_6.html",
+    "title": "Hands On – Coding Basics (Einheiten 11 und 12)",
     "section": "",
-    "text": "Hier findest du die Hausübungen.",
+    "text": "Bei Bedarf findest du hier nochmals die Slides zu Einheit 10:",
     "crumbs": [
-      "Hausuebungen"
+      "Übungen zu den Einheiten",
+      "Hands on - Block 6 (Woche 11 - 12 "
     ]
   },
   {
-    "objectID": "hausuebung_2.html",
-    "href": "hausuebung_2.html",
-    "title": "hausuebung_2",
-    "section": "",
-    "text": "Abgabe bis: Freitag 28.11, 23:55 via ILIAS\nZip-Datei benennen: vorname_nachname.zip\n\nGerendertes Skript: vorname_nachname_hausuebung_2.html\nUngerendertes Quarto-Skript: vorname_nachname_hausuebung_2.qmd\n\nPeer Feedback: Bis 3.12 direkt an die Person und im Forum als Zusammenfassung. Im Forum bitte auch Namen der Person, für die das Feedback bestimmt ist, nennen.\n\n\n\n\n[1] TRUE [1] TRUE\n📥 Download practice_dataset2.csv\n\n\nStelle in deinem Quarto Header die folgenden Dinge ein. Achtung: Achte auf die Einrückung der Einstellungen. Wenn das nicht von Hand klappt kann man sich bei der Einrückung von einem LLM helfen lassen. 😉.\n\nformat: html\nembed-resources: true\ntable of contents (toc) = true\n\nLies den folgenden Datensatz ein: Practice_dataset2\n\n\n\nBerechne den Mittelwert und die Standardabweichung der Variable self_efficacy für jede Gruppe (condition). Runde die Ergebnisse jeweils auf drei Nachkommastellen. Speichere diese deskriptive Statistik in einen neuen Dataframe ab.\n\n\n\nNutze kable um Formatierungen am unter 1.2 erstellten Dataframe durchzuführen (Überschrift ergänzen, Spalten benennen, Nachkommastellen anpassen).\n\n\n\nBerechne zusätzlich die Schiefe (skew) und Kurtosis (kurtosi) der Variable self_efficacy pro Gruppe (condition), mit Funktionen aus dem Paket psych.\n\n\n\n\n\n\nDer Originaldatensatz enthält die Spalten pre_mood, mid_mood, post_mood. Verwandle diese mithilfe von pivot_longer() in einen Long-Datensatz namens mood_long. Die neue Spalte mit den Zeitpunkten soll mood_time heißen, die mit den Werten mood_rating.\n\n\n\n\n\n\nIm nächsten Schritt verwenden wir den LONG-Datensatz (Siehe Aufgabe 2.1), um den Verlauf über die verschiedenen Zeitpunkte darzustellen. Das Ziel ist es, die Stimmung (mood) zu den unterschiedlichen Zeitpunkten, aggregiert nach den Konditionen, als Verlaufsdiagramm abzubilden.\n\nDafür soll mood_time in einen Faktor mit geordneten Faktorstufen (pre, mid und post) umgewandelt werden.\nErstelle einen Summary, welches die für den Plot benötigten Angaben zusammenfasst (Durschschnittlicher Mood gruppiert nach Condition und Zeitpunkt).\n\n\n\n\nPlotte die Elemente mood_time und mean_mood. Gruppiere die conditions nach Farbe.\n💡Tipp: Wenn du den Plot einem Objekt zuweist, kannst du ihn weiterverwenden, indem du das Objekt aufrufst und erweiterst. So musst du den Code nicht jedes Mal neu ausschreiben.\n\n\n\nPasse nun den Plot aus 3.2 so an, dass er eine Farbpalette verwendet, die für farbenblinde Personen geeignet ist: Nutze die folgende Palette.\nTipp: Verwende: scale_color_manual\n\ncb_palette &lt;- c(   \"#000000\", \"#E69F00\", \"#56B4E9\", \"#009E73\",   \"#F0E442\", \"#0072B2\", \"#D55E00\", \"#CC79A7\" )  \n\n\n\n\nFüge mit geom_point() die einzelnen Punkte auf der Linie ein. Stelle die grösse (size() auf 3)\n\n\n\nFüge dem Diagramm Titel sowie Achsenbeschriftungen zu deinem Plot und verwende ein Theme das du passend findest.\n\n\n\n\n\n\n\n\nSpeichere den Plot ab mit ggsave als png ab.\n\n\n\n\nErstelle aus dem ursprünglichen Wide Originaldatensatz einen neuen Datensatz subset_mood, der nur Daten der Gruppe experimental beinhaltet.\n\n\nPrüfe nun (anhand des unter 4. erstellen Datensatzes) mittels eines gepaarten t-Test ob sich pre_mood und post_mood in der Gruppe experimental unterscheiden. Nutze dafür die Funktion t.test(). Lass dir das Ergebnis mit print() ausgeben.\n\n\n\n\n\nRendere dein Skript als HTML\nLade deine Abgabe (Skript + HTML) als ZIP ordner in ILIAS hoch und schicke sie deinem/deiner Peepartner:in.",
+    "objectID": "hands_on_6.html#visualize---übungen-zu-ggplot2",
+    "href": "hands_on_6.html#visualize---übungen-zu-ggplot2",
+    "title": "Hands On – Coding Basics (Einheiten 11 und 12)",
+    "section": "Visualize - Übungen zu ggplot2",
+    "text": "Visualize - Übungen zu ggplot2\n📚 Einführung in R - Kapitel 5\n📚 R for Data Science - Kapitel 1\n📚R for Data Science - Kapitel 11\n\n\n\n\n\n\nTabelle mit häufig verwendeten Geoms()\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nGeom\nFunktion\nEinsatzbereich\nBild / Beispiel\n\n\n\n\ngeom_point()\nStreudiagramm\nZwei numerische Variablen vergleichen (x = Var1, y = Var2)\n\n\n\ngeom_jitter()\nJitter-Plot\nPunkte leicht versetzen, um Überlappung zu vermeiden (v. a. bei kategorialem x)\n\n\n\ngeom_line()\nLiniendiagramm\nWerteverlauf Über kontinuierliche x-Achse darstellen\n\n\n\ngeom_bar()\nBalkendiagramm\nHäufigkeiten oder Aggregationen für Kategorien (x = Gruppe)\n\n\n\ngeom_histogram()\nHistogramm\nVerteilung einer numerischen Variable (x = Wert)\n\n\n\ngeom_boxplot()\nBoxplot\nVerteilungen über Gruppen vergleichen (x = Gruppe, y = Wert)\n\n\n\n\n\n\n\n\n\n\n\n\n\nCheatsheet ggplot2\n\n\n\n\n\n\n\n\n\n\nIm folgenden wollen wir Figure 4 aus Grinschgl et al. (2021) reproduzieren:\n\n\n\n\n\n\n\n\n\n\nVorbereitungen:\nUm die Mittelwerte plotten zu können, müssen wir die Gruppenmittelwerte und Standardfehler berechnen. Passe dafür den Codeblock an:\nIm Hands-on Block 4 haben wir bereits mit dplyr die MMQ-Skalenwerte „mmq_mean“ pro Person berechnet. Nutze nun die dplyr-Funktionen, insbesondere group_by(), um den durchschnittlichen MMQ-Wert pro Gruppe (group_all) sowie den Standardfehler zu berechnen. Die Formel für den Standardfehler lautet: SE = SD / √n und kann z.b so berechnet werden. se_mmq = sd(mmq_mean) / sqrt(n()) . Ergänze den Code unten mit den nötigen Angaben. Lege group_all in deinem summary als Faktor fest mit den Levels in der Reihenfolge: “below”, “control”, “above”.\n\n\n\n\n\n\nNote\n\n\n\n\n\nDer Standardfehler des Mittelwerts (SEM) beschreibt wie stark der geschätzte Stichprobenmittelwert zufällig vom wahren Populationsmittelwert abweichen kann. Er ist damit ein Mass für die Präzision des Mittelwerts.\n\n\n\n\ndat_full &lt;- dat_full |&gt; \n  mutate(mmq_mean = rowMeans(select(dat_full, starts_with(\"question\")))\n\n\ngroup_summary &lt;- dat_full %&gt;%\n  group_by(XXXXXXX) %&gt;%\n  summarize(\n    group_mean_mmq = mean(XXXXXX),\n    se_mmq = sd(XXXXXX) / sqrt(n())\n  )\n\ngroup_summary$group_all &lt;- factor(group_summary$group_all,\n                                  levels = c(\"XXXXX\", \"XXXXX\", \"XXXXX\"))\n\n\n\n1. Erstelle einen leeren Plot und gib deinen Datensatz an\nBeginne mit:\n\nggplot() und deinem Datensatz\n\n\n\n2. Definiere die Aesthetic Mappings\nLege fest:\n\nwelche Variable auf der x-Achse liegt\nwelche Variable auf der y-Achse liegt\n\n\n\n3. Füge geom_col() dem Plot hinzu\nDamit zeichnest du die Balken für die Gruppenmittelwerte.\n\ncolor = für Konturen\nfill = für die Füllfarben der Balken\n\n\n\n4. Füge Fehlerbalken hinzu\nNutze geom_errorbar() und definiere innerhalb von aes():\n\nymin = mean - se - Füge die passenden Variablen ein.\nymax = mean + se - Füge die passenden Variablen ein.\n\nPasse die Breite der Fehlerbalken mit width = an.\n\n\n5. Füge Titel und Achsenbeschriftungen hinzu\nNutze dafür labs(). Verändere das theme zu theme_classic()\n\n\n6. Stelle sicher, dass der vollständige Wertebereich sichtbar ist\n\nmit ylim(0, 4)\n\n\nNun wollen wir den zweiten Plot aus Grinschgl et al. (2021) reproduzieren.\nErgänze dafür den folgenden Code an den nötigen Stellen mit den passenden Werten und Argumenten.\n\nLade zuerst den in der letzten Woche gespeicherten Long-Datensatz.\nErsetze anschliessend die Platzhalter “XXXXXX” durch die erforderlichen Werte, um den Plot zu reproduzieren.\nSpeichere deinen Plot als PNG Datei ab.\n\n\n\n\n\n\n\n\n\n\n\ndescriptives &lt;- dat_long |&gt; \n  group_by(XXXXXX, XXXXXXX) |&gt; \n  summarize(N = length(rating),\n               mean_d = mean(rating),\n               sd_d   = sd(rating),\n               se_d   = sd_d / sqrt(N)\n)\n\ndescriptives$group_all &lt;- factor(descriptives$group_all, c(\"above\", \"control\", \"below\"))\n\nrate_plot &lt;- descriptives |&gt; \n  ggplot(aes(x = XXXXXX, \n             y = XXXXXX, \n             group = XXXX)) \n\nrate_plot +\n  geom_line(aes(color = group_all, linetype = group_all), size = 1.2) +\n  geom_errorbar(aes(ymin = mean_d - se_d, ymax = mean_d + se_d), width = .1) +\n  scale_color_manual(values = c(\"green4\", \"red\", \"black\")) +\n  theme_classic() +\n  labs(title = \"XXXXXXX\") +\n  ylab(\"XXXXXXXX\") +\n  xlab(\"XXXXXXXXX\") +\n  theme(plot.title = element_text(hjust = 0.5, size = 12, face = \"bold\"), \n        axis.text = element_text(size = 11), axis.title = element_text(size = 14))",
     "crumbs": [
-      "Hausuebungen",
-      "Hausübung 2"
+      "Übungen zu den Einheiten",
+      "Hands on - Block 6 (Woche 11 - 12 "
     ]
   },
   {
-    "objectID": "hausuebung_2.html#formalitäten-und-abgabe",
-    "href": "hausuebung_2.html#formalitäten-und-abgabe",
-    "title": "hausuebung_2",
-    "section": "",
-    "text": "Abgabe bis: Freitag 28.11, 23:55 via ILIAS\nZip-Datei benennen: vorname_nachname.zip\n\nGerendertes Skript: vorname_nachname_hausuebung_2.html\nUngerendertes Quarto-Skript: vorname_nachname_hausuebung_2.qmd\n\nPeer Feedback: Bis 3.12 direkt an die Person und im Forum als Zusammenfassung. Im Forum bitte auch Namen der Person, für die das Feedback bestimmt ist, nennen.",
+    "objectID": "hands_on_6.html#korrelationen",
+    "href": "hands_on_6.html#korrelationen",
+    "title": "Hands On – Coding Basics (Einheiten 11 und 12)",
+    "section": "Korrelationen:",
+    "text": "Korrelationen:\n\nWähle zwei metrische Variablen aus dem Wide Datensatz aus. Berechne die Korrelation mit cor.test() für diese beiden Variablen.\n\n\n\nFinde den Korrelationskoeffizienten r, den p-Wert und die Freiheitsgrade (df). Versuche das Ergebnis zu interpretieren.\n\n\n\nRufe die Hilfefunktion von cor.test() auf. Welche Anpassungen kannst du vornehmen, um die Korrelation einseitig (z.B. nur positiver Zusammenhang) und mit der Spearman-Methode zu berechnen?\n\n\n\n\n\n\n\nKorrelationen\n\n\n\n\n\nLinearer Zusammenhang (Kovarianz) zweier Variablen. Positive Korrelation = hohe Ausprägungen einer Variable hängen mit hohen Ausprägungen einer anderen Variable zusammen. Negative Korrelation = Hohe Ausprägungen einer Variable hängen mit niedrigen Ausprägungen einer anderen Variable zusammen. Korrelationskoeffizient r kann von -1 bis +1 gehen. Der Korrelationstest testet ob r sich signifikant von 0 (kein Zusammenhang unterscheidet). Für Pearson Korrelationen sollte die Normalverteilung der Residuen gegeben sein. Alternative: Spearman Korrelation.",
     "crumbs": [
-      "Hausuebungen",
-      "Hausübung 2"
+      "Übungen zu den Einheiten",
+      "Hands on - Block 6 (Woche 11 - 12 "
     ]
   },
   {
-    "objectID": "hausuebung_2.html#aufgabe-1-datensatz-einlesen-und-deskriptive-statistik",
-    "href": "hausuebung_2.html#aufgabe-1-datensatz-einlesen-und-deskriptive-statistik",
-    "title": "hausuebung_2",
-    "section": "",
-    "text": "[1] TRUE [1] TRUE\n📥 Download practice_dataset2.csv\n\n\nStelle in deinem Quarto Header die folgenden Dinge ein. Achtung: Achte auf die Einrückung der Einstellungen. Wenn das nicht von Hand klappt kann man sich bei der Einrückung von einem LLM helfen lassen. 😉.\n\nformat: html\nembed-resources: true\ntable of contents (toc) = true\n\nLies den folgenden Datensatz ein: Practice_dataset2\n\n\n\nBerechne den Mittelwert und die Standardabweichung der Variable self_efficacy für jede Gruppe (condition). Runde die Ergebnisse jeweils auf drei Nachkommastellen. Speichere diese deskriptive Statistik in einen neuen Dataframe ab.\n\n\n\nNutze kable um Formatierungen am unter 1.2 erstellten Dataframe durchzuführen (Überschrift ergänzen, Spalten benennen, Nachkommastellen anpassen).\n\n\n\nBerechne zusätzlich die Schiefe (skew) und Kurtosis (kurtosi) der Variable self_efficacy pro Gruppe (condition), mit Funktionen aus dem Paket psych.",
+    "objectID": "hands_on_6.html#regressionen",
+    "href": "hands_on_6.html#regressionen",
+    "title": "Hands On – Coding Basics (Einheiten 11 und 12)",
+    "section": "Regressionen",
+    "text": "Regressionen\n\n\n\n\n\n\nTabelle: Funktionen für Regressionen und verwandte Analysen in R\n\n\n\n\n\n\n\n\n\n\n\n\nFunktion\nBeschreibung\n\n\n\n\nlm(y ~ x)\nEinfache lineare Regression mit einer abhängigen Variablen y und einem Prädiktor x.\n\n\nlm(y ~ x1 + x2)\nMultiple Regression mit einer abhängigen Variablen y und zwei Prädiktoren x1 und x2.\n\n\nsummary()\nGibt die Ergebnisse der Regressionsanalyse für ein Regressionsmodell aus.\n\n\nconfint()\nKonfidenzintervalle für die Regressionskoeffizienten.\n\n\nfitted()\nVorhergesagte Werte des Regressionsmodells.\n\n\nresid()\nResiduen des Regressionsmodells.\n\n\npredict()\nVorhergesagte Werte für bestimmte Werte der Prädiktorvariablen.\n\n\nanova()\nVergleicht die Determinationskoeffizienten zweier Regressionsmodelle mit einem F-Test.\n\n\nvif() *\nVariance Inflation Factors (VIF) für jeden Prädiktor; aus dem car-Paket.\n\n\n\n* aus zusätzlichen Paketen\n\n\n\n\nPaket „car“ installieren und laden.\nMach aus deiner davor berechneten Korrelation nun ein Regressionsmodel mit der Funktion model &lt;- lm(outcome ~ predictor, data). Schau dir den Output mit summary(model) an und versuche ihn zu interpretieren.\nErgänze das Modell nun um eine weitere Prädiktorvariable (mit + Variable), sodass du eine multiple Regression berechnest. Hier müssen wir auf Multikollinearität testen – mit vif(model) aus dem „car“ Paket (die Werte sollten größer als 0.10 sein, sodass keine Multikollinearität vorliegt). Berechne auch die Konfidenzintervalle der Beta-Koeffizienten mit confint(model).\n\n\n\n\n\n\n\nNote\n\n\n\n\n\nFortgeschritten/Freiwillig:\nBerechne eine einfache logistische Regression zwischen Strategien (ohne strategies == 3) und Offloading (mean_rl_all) mit dem Wide Datensatz. Nimm das Statistik III Cheatsheet von Dr. Boris Mayer zur Hand. Tipp: Du musst die Strategien in 0 und 1 umkodieren.",
     "crumbs": [
-      "Hausuebungen",
-      "Hausübung 2"
+      "Übungen zu den Einheiten",
+      "Hands on - Block 6 (Woche 11 - 12 "
     ]
   },
   {
-    "objectID": "hausuebung_2.html#aufgabe-2-wide-to-long-transformation",
-    "href": "hausuebung_2.html#aufgabe-2-wide-to-long-transformation",
-    "title": "hausuebung_2",
-    "section": "",
-    "text": "Der Originaldatensatz enthält die Spalten pre_mood, mid_mood, post_mood. Verwandle diese mithilfe von pivot_longer() in einen Long-Datensatz namens mood_long. Die neue Spalte mit den Zeitpunkten soll mood_time heißen, die mit den Werten mood_rating.",
+    "objectID": "hands_on_6.html#t-tests-für-unabhängige-stichproben",
+    "href": "hands_on_6.html#t-tests-für-unabhängige-stichproben",
+    "title": "Hands On – Coding Basics (Einheiten 11 und 12)",
+    "section": "t-Tests für unabhängige Stichproben",
+    "text": "t-Tests für unabhängige Stichproben\n\n\n\n\n\n\nTabelle: Funktionen für t-Tests und verwandte Analysen in R\n\n\n\n\n\n\n\n\n\n\n\n\nFunktion\nBeschreibung\n\n\n\n\nt.test\nAllgemeine Funktion für verschiedene t-Tests: Ein-Stichproben-t-Test, t-Test für unabhängige Stichproben und t-Test für abhängige Stichproben.\n\n\nt.test(av, mu = x)\nEin-Stichproben-t-Test. av = abhängige Variable. x = Vergleichswert der Population.\n\n\nt.test(av ~ uv)\nWelch-t-Test für unabhängige Stichproben. av = abhängige Variable, uv = Gruppenvariable.\n\n\nt.test(av ~ uv, var.equal = TRUE)\nKlassischer t-Test für unabhängige Stichproben (Varianzen vorausgesetzt gleich).\n\n\nt.test(av1, av2, paired = TRUE)\nt-Test für abhängige Stichproben (z. B. Prä–Post). av1 und av2 = gemessene Variablen.\n\n\nleveneTest(av, uv) *\nLevene-Test auf Varianzhomogenität für unabhängige Gruppen. Aus dem car-Paket.\n\n\neffsize::cohen.d() *\nBerechnet die standardisierte Effektgröße Cohen’s d + Konfidenzintervall. Aus dem effsize-Paket.\n\n\n\n* Funktionen aus zusätzlichen Paketen.\n\n\n\n\nPaket „effsize“ installieren und laden.\nWir wollen einen t-Test für unabhängige Stichproben durchführen, um das Pre 4 Rating der „above“ und „below“ Gruppen zu vergleichen. Starte mit einem leveneTest() aus dem „car“ Paket um die Varianzhomogenität zu prüfen. Tipp: Filtere die Daten, sodass nur die beiden Gruppen „above“ und „below“ beinhaltet sind (d.h. ohne die Gruppe „control“).\nBerechne nun den entsprechenden t-Test mit t.test(). Du kannst auch die Hilfefunktion zu Rate ziehen. Versuche dann den Output zu verstehen bzw. das Ergebnis zu interpretieren. Tipp: Wenn die Varianzhomogenität gegeben ist (d.h. der Levene Test nicht signifikant ist), muss man var.equal = TRUE angeben, ansonsten wird ein Welch t-Test berechnet.\nNun berechnen wir noch Cohen‘s d als Effektstärken-Maß für den Mittelwertsunterschied. Verwende dafür effsize::cohen.d().  Da es „cohen.D“ auch im Paket „psych“ gibt, ist es wichtig hier „effsize::“ voranzusetzen.\n\n👉 Und schon haben wir einen der Post-Hoc t-Tests für die 2x3 ANOVA aus Grinschgl et al. (2020) berechnet (notwendig für die Abschlussarbeit)",
     "crumbs": [
-      "Hausuebungen",
-      "Hausübung 2"
+      "Übungen zu den Einheiten",
+      "Hands on - Block 6 (Woche 11 - 12 "
     ]
   },
   {
-    "objectID": "hausuebung_2.html#aufgabe-3-plot---verlaufsdiagramm",
-    "href": "hausuebung_2.html#aufgabe-3-plot---verlaufsdiagramm",
-    "title": "hausuebung_2",
-    "section": "",
-    "text": "Im nächsten Schritt verwenden wir den LONG-Datensatz (Siehe Aufgabe 2.1), um den Verlauf über die verschiedenen Zeitpunkte darzustellen. Das Ziel ist es, die Stimmung (mood) zu den unterschiedlichen Zeitpunkten, aggregiert nach den Konditionen, als Verlaufsdiagramm abzubilden.\n\nDafür soll mood_time in einen Faktor mit geordneten Faktorstufen (pre, mid und post) umgewandelt werden.\nErstelle einen Summary, welches die für den Plot benötigten Angaben zusammenfasst (Durschschnittlicher Mood gruppiert nach Condition und Zeitpunkt).\n\n\n\n\nPlotte die Elemente mood_time und mean_mood. Gruppiere die conditions nach Farbe.\n💡Tipp: Wenn du den Plot einem Objekt zuweist, kannst du ihn weiterverwenden, indem du das Objekt aufrufst und erweiterst. So musst du den Code nicht jedes Mal neu ausschreiben.\n\n\n\nPasse nun den Plot aus 3.2 so an, dass er eine Farbpalette verwendet, die für farbenblinde Personen geeignet ist: Nutze die folgende Palette.\nTipp: Verwende: scale_color_manual\n\ncb_palette &lt;- c(   \"#000000\", \"#E69F00\", \"#56B4E9\", \"#009E73\",   \"#F0E442\", \"#0072B2\", \"#D55E00\", \"#CC79A7\" )  \n\n\n\n\nFüge mit geom_point() die einzelnen Punkte auf der Linie ein. Stelle die grösse (size() auf 3)\n\n\n\nFüge dem Diagramm Titel sowie Achsenbeschriftungen zu deinem Plot und verwende ein Theme das du passend findest.\n\n\n\n\n\n\n\n\nSpeichere den Plot ab mit ggsave als png ab.",
+    "objectID": "hands_on_6.html#t-tests-für-unabhängige-stichproben-1",
+    "href": "hands_on_6.html#t-tests-für-unabhängige-stichproben-1",
+    "title": "Hands On – Coding Basics (Einheiten 11 und 12)",
+    "section": "t-Tests für unabhängige Stichproben",
+    "text": "t-Tests für unabhängige Stichproben\n\nBerechne einen t-Test für abhängige Stichproben um in der „control“ Gruppe Pre 1 und Pre 4 zu vergleichen. (D.h. filtere zunächst den Datensatz, sodass nur mehr die „control“ Gruppe\n\n\nt.test(datensatz$Variable1, datensatz$Variable2, paired = TRUE) \n\n\nWandle den t-Test nun in einen einseitigen Test mit alternative = „greater“ oder alternative = „less“ um und berechne Cohen‘s d als Effektstärkenmaß (Achtung: paired = True setzen).",
     "crumbs": [
-      "Hausuebungen",
-      "Hausübung 2"
+      "Übungen zu den Einheiten",
+      "Hands on - Block 6 (Woche 11 - 12 "
     ]
   },
   {
-    "objectID": "hausuebung_2.html#subsetting-und-t-test",
-    "href": "hausuebung_2.html#subsetting-und-t-test",
+    "objectID": "hausuebung_1.html",
+    "href": "hausuebung_1.html",
+    "title": "Hausübung 1",
+    "section": "",
+    "text": "Warning: Paket 'tidyverse' wurde unter R Version 4.5.2 erstellt\n\n\n\nAufgabenstellung\n\nAbgabefrist: 7.11.2025\nAbgabe auf ILIAS und Weitergabe an Peerpartner:in\nArbeite für diese Hausübung mit Quarto.\nVersuche beim Lösen der Aufgaben darauf zu achten, dass du sie reproduzierbar gestaltest. Am Ende der Aufgabe renderst du dein Skript.\nDie Abgabe besteht dann aus deinem Skript sowie dem gerenderten Skript als HTML- oder PDF-Datei.\n\n\n\nAufgabe 1: Datensatz aufbereiten und beschreiben\nWir arbeiten für die Übungen mit diesem Datensatz. Dieser wurde simuliert und spiegelt keine echten Daten oder Zusammenhänge wider. Der Datensatz beinhaltet demografische Variablen sowie eine Version des BFI-44-Fragebogens. In den folgenden Aufgaben werden wir diesen mit den bisher kennengelernten tidyverse-Funktionen aufbereiten und analysieren.\n 📥 Download fake_bfi_dataset.csv \nNutze die dplyr-Funktionen, die wir kennengelernt haben, um die folgenden Aufgaben zu bearbeiten.\nTipp: In einigen Variablen gibt es fehlende Werte (missings). Die Bearbeitung dieser Werte erfolgt erst in Aufgabe 2. Verwende, falls nötig, das Argument na.rm = TRUE.\nAufgaben\n\nBenenne die Variable Ort in Postleitzahl um.\n\n\nWelche Spalte scheint doppelt vorhanden zu sein? Lösche sie aus dem Datensatz.\n\n\nPersonen die nicht volljährig sind dürfen nicht an der Studie teilnehmen und müssen ausgeschlossen werden.\n\n\nFüge dem Datensatz die Spalte Alterskohorte hinzu. Wenn eine Person über 60 Jahre alt ist, gilt sie als alt, ansonsten als jung.\n\n\nWelche Variablen sollten Faktoren sein? Wandle sie in Faktoren um\n\n\nErstelle eine Kopie des Datensatzes nur mit den demographischen Variablen.\n\nVerwende die dplyr-Funktionen, um die folgenden Fragen zu beantworten:\n\nWelchen Anteil am Gesamtsample hat jeder Ort bzw. jede Postleitzahl, und wie kann dieser als neue Spalte im Datensatz ergänzt werden?\n\n\nIn welchem Quartier leben proportional am meisten Personen, die sich als weiblich beschreiben?\n\n\nWie hoch ist das durschnittliche Alter pro Quartier?\n\n\nWie alt sind die jüngsten Personen getrennt nach Gender?\n\n\nErstelle eine Rangliste der Quartiere nach durchschnittlichem Alter (vom höchsten zum niedrigsten).\n\n\n\nAufgabe 2: Fehlende Werte\n📖Kapitel 4.3.3 Ellis & Mayer\nFühre die folgenden Schritte durch:\n\nUntersuche den Datensatz auf fehlende Werte. Wie viele fehlende Werte gibt es insgesamt, und in welchen Variablen treten sie auf\n\n\nEinige Personen haben keine Angabe zu ihrer Geschlechtsidentität gemacht. Ersetze diese fehlenden Werte (NAs) durch “Keine Angabe”. Nutze dafür die Funktion mutate() und replace_na(). Beachte: Gender wurde bereits als Faktor definiert, muss aber erneut zu einem Character transformiert werden.\n\n\nZeilen mit fehlenden Werten löschen\nErstelle eine Kopie des Datensatzes und verwende drop_na(),\num alle Zeilen mit fehlenden Werten zu entfernen.\n\n\n\nAufgabe 3: Skalenberechnung\n📖Kapitel 4.4. Ellis & Mayer\nAufgaben:\n\nUmwandlung der BFI-Items in numerische Werte.\n\n„Stimme gar nicht zu“ → 1\n„Stimme voll und ganz zu“ → 5\n\n\nVerwende dafür eine Kombination aus mutate(), across() und case_when() oder recode().\n\nUmpolen der negativ formulierten Items\n\nDie negativ formulierten Items enden alle mit _r (für reverse). Poole diese Items um.\nSuche dir eine dplyr Funktion, welche helfen kann alle Variablen auszuwählen welche mit _r aufhören.\n💡Tipp: Ähnlich wie starts_with\n\nBerechnung der Big-Five-Skalen\n\nErstelle neue Variablen, die den Mittelwert jedes Big-Five-Faktors pro Person enthalten.\nMit welcher Funktion kannst du dir ersparen alle Variablen auszuschreiben?\n\n\n\nZusammenhänge zwischen Skalen testen\n\nTeste mit cor.test() die Korrelation zwischen zwei Big-Five-Faktoren,\nzum Beispiel zwischen Extraversion und Offenheit.\n\n\n\n\nBerechne die Durchschnittswerte, Standardabweichungen und Mediane der Big-Five-Faktoren Extraversion und Offenheit, unterteilt nach der Geschlechtsangabe.\n\n\nRendere dein Skript!\n\nGib dein Skript und deine gerenderte Datei als ZIP (Dateinaname: vorname_nachname_hausübung_1.ZIP) datei auf ILIAS ab und leite es deinem oder deiner Peerpartner:in weiter.\n\n\nInstruktionen Peerfeedback:\n\nKommentiere direkt im Quarto File deiner Peerpartner:in und schicke es ihm/ihr zu.\nSchreibe eine kurzen Kommentar im Forum auf ILIAS (Ordner EH8).\n\nFokussiere dich dabei auf die folgenden Punkte:\n\nFunktioniert der Code?\nIst die Analyse reproduzierbar (z. B. durch relative Pfade, Kommentierung des Codes, Einhaltung von Style-Guidelines)?\nWelche Aspekte wurden gut umgesetzt?\nWelche Punkte lassen sich noch verbessern?"
+  },
+  {
+    "objectID": "hausuebung_3.html",
+    "href": "hausuebung_3.html",
     "title": "hausuebung_2",
     "section": "",
-    "text": "Erstelle aus dem ursprünglichen Wide Originaldatensatz einen neuen Datensatz subset_mood, der nur Daten der Gruppe experimental beinhaltet.\n\n\nPrüfe nun (anhand des unter 4. erstellen Datensatzes) mittels eines gepaarten t-Test ob sich pre_mood und post_mood in der Gruppe experimental unterscheiden. Nutze dafür die Funktion t.test(). Lass dir das Ergebnis mit print() ausgeben.",
+    "text": "Abgabe bis: Freitag 12.12, 23:55 via ILIAS\nZip-Datei benennen: vorname_nachname.zip\n\nGerendertes Skript: vorname_nachname_hausuebung_3.html\nUngerendertes Quarto-Skript: vorname_nachname_hausuebung_3.qmd\n\nPeer Feedback: Bis 17.12 direkt an die Person und im Forum als Zusammenfassung. Im Forum bitte auch Namen der Person, für die das Feedback bestimmt ist, nennen.\n\n\n\n\n\n\n\nNote\n\n\n\n\n\nStelle deinen YAML-Header so ein, dass ein table of contents erstellt wird, embed-resources: true aktiviert ist und das Ausgabeformat auf html gesetzt wird. Dies verbessert die Leserlichkeit des Dokuments.\n\n\n\n📥 Download therapie_bedingung.csv\n📥 Download therapie_results.csv\n\n\n\n\nIn den folgenden Daten versuchst du herauszufinden, ob sich eine neuartige Therapie von der Kontrollgruppe (Warteliste) unterscheidet. Dafür wurde das Wohlbefinden der Personen über drei Zeitpunkte hinweg gemessen (therapie_results). Zuerst musst du die Daten bereinigen, mergen und visualisieren und zum Schluss mit einem Hypothesentest entscheiden, ob die neue Therapieform besser abschneidet als die Kontrollgruppe.\n\nLies die beiden Datensätze therapie_Bedingung und therapie_results ein.\nBereinge die Datensätze! Gibt es duplizierte Werte? Gibt es Missings? Gibt es unmögliche Werte?\n\n\nMerge die bereinigten Datensätze!\n\n\nWandle die Variablen id und bedingung in Faktoren um.\n\n\nFühre eine Wide-to-Long-Transformation durch und erstelle damit einen Dataframe therapie_long mit einem messwiederholten Faktor messzeitpunkt und der (Outcome-)Variable wohlbefinden. Diese setzt sich aus den Werten in beginn, mitte und ende zusammen.\n\n\nDefiniere die Variable messzeitpunkt als Faktor mit den Faktorstufen beginn, mitte und ende (in genau dieser Reihenfolge).\n\n\n\n\n\n\nBevor wir die Daten mit Hypothesentests analysieren, wollen wir ein Gefühl für die Daten erhalten. Plotte dafür den Mittelwertsverlauf mit Fehlerbalken über die drei Zeitpunkte hinweg. Nutze den zur Verfügung gestellten Code, um ein Summary zu erstellen.\n\n\nsummary_data &lt;- therapie_long |&gt;\n  group_by(bedingung, messzeitpunkt) |&gt;\n  summarise(\n    mean_wb = mean(wohlbefinden),\n    se_wb   = sd(wohlbefinden) / sqrt(n())\n  )\n\n\nPlotte nun die Daten. Färbe die Verlaufslinien nach Versuchsbedingung ein und gruppiere die Daten mit color = bedingung und group = bedingung. Verwende drei Geoms:\n\ngeom_line() für die Verlaufslinien\ngeom_point() für die einzelnen Datenpunkten\ngeom_errorbar() für die Fehlerbalken.\n\nFüge ausserdem angemessene Formatierungen hinzu (Titel, Achsenbeschriftungen, Theme).\n\n\n\n\n\nPrüfe die Daten auf Varianzhomogenität und nutze dafür den Levene-Test. Der Levene-Test wird für die abhängige Variable über die Gruppen des Between-Faktors berechnet (also: Sind die Varianzen der AV über die drei Gruppen hinweg ähnlich verteilt?).\n\nErgänze dafür den Code um die nötigen Variablen. Der Test prüft gegen Varianzhomogenität; daher bedeutet ein nicht signifikantes Ergebnis, dass die Voraussetzung für die ANOVA nicht verletzt ist.\n\n\nleveneTeste(AV ~ Gruppen, data = )\n\n\nFühre eine Mixed-Design-ANOVA mit aov_4() durch. Die abhängige Variable ist wohlbefinden, die unabhängige Between-Variable ist bedingung und die unabhängige Within-Variable ist messzeitpunkt. Die Formel für die ANOVA lautet: AV ~ Between-Subjects-Faktor + (Within-Faktor). Für den Within-Faktor verwenden wir die folgende Schreibweise: (messzeitpunkt | id), da die Messwiederholungen innerhalb jeder Person verschachtelt sind.\n\nPasse den Code an:\n\nanova_1 &lt;- aov_4(AV ~ between_subjects_faktor + (messzeitpunkt | id) data = ))\n  \nsummary(anova_1)\n\n\n\n\n\n\n\nNote\n\n\n\nSchaue dir die Ergebnisse einschliesslich des Mauchly-Tests auf Sphärizität an – dieser ist relevant bei mindestens drei Within-Faktoren. Der Mauchly-Test sollte nicht signifikant sein, sodass wir Sphärizität annehmen können. Falls doch: Greenhouse-Geisser-Korrektur anwenden.\n\n\n\nBerechne die die ANOVA erneut und inkludiere die Berechnung des partiellen Eta². Nutze dafür als zusätzliches Argument in der aov_4 Funktion anova_table = list(es = c(\"ges\", \"pes\"))) .\nBetrachte die Ergebnisse indem du mit $ auf anova_table des Objekts zugreifst in dem du die ANOVA abgespeichert hast.\n\n\nBerechne nun paarweise Post-hoc-Vergleiche mit Tukey-Korrektur (Korrektur für multiples Testen), indem du zuerst emmeans() speicherst und anschliessend die Funktion pairs() anwendest. Hier ist ein Muster-Code:\n\n\nresult &lt;- emmeans(object = your_anova_model, specs = ~ messwiederholung_faktor * between_factor)\npairs(results, simple = \"mw_factor\", adjust = \"tukey\")",
     "crumbs": [
       "Hausuebungen",
-      "Hausübung 2"
+      "Hausübung 3"
     ]
   },
   {
-    "objectID": "hausuebung_2.html#rendern-und-hochladen",
-    "href": "hausuebung_2.html#rendern-und-hochladen",
+    "objectID": "hausuebung_3.html#formalitäten-und-abgabe",
+    "href": "hausuebung_3.html#formalitäten-und-abgabe",
     "title": "hausuebung_2",
     "section": "",
-    "text": "Rendere dein Skript als HTML\nLade deine Abgabe (Skript + HTML) als ZIP ordner in ILIAS hoch und schicke sie deinem/deiner Peepartner:in.",
+    "text": "Abgabe bis: Freitag 12.12, 23:55 via ILIAS\nZip-Datei benennen: vorname_nachname.zip\n\nGerendertes Skript: vorname_nachname_hausuebung_3.html\nUngerendertes Quarto-Skript: vorname_nachname_hausuebung_3.qmd\n\nPeer Feedback: Bis 17.12 direkt an die Person und im Forum als Zusammenfassung. Im Forum bitte auch Namen der Person, für die das Feedback bestimmt ist, nennen.\n\n\n\n\n\n\n\nNote\n\n\n\n\n\nStelle deinen YAML-Header so ein, dass ein table of contents erstellt wird, embed-resources: true aktiviert ist und das Ausgabeformat auf html gesetzt wird. Dies verbessert die Leserlichkeit des Dokuments.\n\n\n\n📥 Download therapie_bedingung.csv\n📥 Download therapie_results.csv",
     "crumbs": [
       "Hausuebungen",
-      "Hausübung 2"
+      "Hausübung 3"
+    ]
+  },
+  {
+    "objectID": "hausuebung_3.html#datensätze-therapie-einlesen-und-bereinigen",
+    "href": "hausuebung_3.html#datensätze-therapie-einlesen-und-bereinigen",
+    "title": "hausuebung_2",
+    "section": "",
+    "text": "In den folgenden Daten versuchst du herauszufinden, ob sich eine neuartige Therapie von der Kontrollgruppe (Warteliste) unterscheidet. Dafür wurde das Wohlbefinden der Personen über drei Zeitpunkte hinweg gemessen (therapie_results). Zuerst musst du die Daten bereinigen, mergen und visualisieren und zum Schluss mit einem Hypothesentest entscheiden, ob die neue Therapieform besser abschneidet als die Kontrollgruppe.\n\nLies die beiden Datensätze therapie_Bedingung und therapie_results ein.\nBereinge die Datensätze! Gibt es duplizierte Werte? Gibt es Missings? Gibt es unmögliche Werte?\n\n\nMerge die bereinigten Datensätze!\n\n\nWandle die Variablen id und bedingung in Faktoren um.\n\n\nFühre eine Wide-to-Long-Transformation durch und erstelle damit einen Dataframe therapie_long mit einem messwiederholten Faktor messzeitpunkt und der (Outcome-)Variable wohlbefinden. Diese setzt sich aus den Werten in beginn, mitte und ende zusammen.\n\n\nDefiniere die Variable messzeitpunkt als Faktor mit den Faktorstufen beginn, mitte und ende (in genau dieser Reihenfolge).",
+    "crumbs": [
+      "Hausuebungen",
+      "Hausübung 3"
+    ]
+  },
+  {
+    "objectID": "hausuebung_3.html#daten-visualisieren",
+    "href": "hausuebung_3.html#daten-visualisieren",
+    "title": "hausuebung_2",
+    "section": "",
+    "text": "Bevor wir die Daten mit Hypothesentests analysieren, wollen wir ein Gefühl für die Daten erhalten. Plotte dafür den Mittelwertsverlauf mit Fehlerbalken über die drei Zeitpunkte hinweg. Nutze den zur Verfügung gestellten Code, um ein Summary zu erstellen.\n\n\nsummary_data &lt;- therapie_long |&gt;\n  group_by(bedingung, messzeitpunkt) |&gt;\n  summarise(\n    mean_wb = mean(wohlbefinden),\n    se_wb   = sd(wohlbefinden) / sqrt(n())\n  )\n\n\nPlotte nun die Daten. Färbe die Verlaufslinien nach Versuchsbedingung ein und gruppiere die Daten mit color = bedingung und group = bedingung. Verwende drei Geoms:\n\ngeom_line() für die Verlaufslinien\ngeom_point() für die einzelnen Datenpunkten\ngeom_errorbar() für die Fehlerbalken.\n\nFüge ausserdem angemessene Formatierungen hinzu (Titel, Achsenbeschriftungen, Theme).",
+    "crumbs": [
+      "Hausuebungen",
+      "Hausübung 3"
+    ]
+  },
+  {
+    "objectID": "hausuebung_3.html#anovas-und-post-hoc-t-tests",
+    "href": "hausuebung_3.html#anovas-und-post-hoc-t-tests",
+    "title": "hausuebung_2",
+    "section": "",
+    "text": "Prüfe die Daten auf Varianzhomogenität und nutze dafür den Levene-Test. Der Levene-Test wird für die abhängige Variable über die Gruppen des Between-Faktors berechnet (also: Sind die Varianzen der AV über die drei Gruppen hinweg ähnlich verteilt?).\n\nErgänze dafür den Code um die nötigen Variablen. Der Test prüft gegen Varianzhomogenität; daher bedeutet ein nicht signifikantes Ergebnis, dass die Voraussetzung für die ANOVA nicht verletzt ist.\n\n\nleveneTeste(AV ~ Gruppen, data = )\n\n\nFühre eine Mixed-Design-ANOVA mit aov_4() durch. Die abhängige Variable ist wohlbefinden, die unabhängige Between-Variable ist bedingung und die unabhängige Within-Variable ist messzeitpunkt. Die Formel für die ANOVA lautet: AV ~ Between-Subjects-Faktor + (Within-Faktor). Für den Within-Faktor verwenden wir die folgende Schreibweise: (messzeitpunkt | id), da die Messwiederholungen innerhalb jeder Person verschachtelt sind.\n\nPasse den Code an:\n\nanova_1 &lt;- aov_4(AV ~ between_subjects_faktor + (messzeitpunkt | id) data = ))\n  \nsummary(anova_1)\n\n\n\n\n\n\n\nNote\n\n\n\nSchaue dir die Ergebnisse einschliesslich des Mauchly-Tests auf Sphärizität an – dieser ist relevant bei mindestens drei Within-Faktoren. Der Mauchly-Test sollte nicht signifikant sein, sodass wir Sphärizität annehmen können. Falls doch: Greenhouse-Geisser-Korrektur anwenden.\n\n\n\nBerechne die die ANOVA erneut und inkludiere die Berechnung des partiellen Eta². Nutze dafür als zusätzliches Argument in der aov_4 Funktion anova_table = list(es = c(\"ges\", \"pes\"))) .\nBetrachte die Ergebnisse indem du mit $ auf anova_table des Objekts zugreifst in dem du die ANOVA abgespeichert hast.\n\n\nBerechne nun paarweise Post-hoc-Vergleiche mit Tukey-Korrektur (Korrektur für multiples Testen), indem du zuerst emmeans() speicherst und anschliessend die Funktion pairs() anwendest. Hier ist ein Muster-Code:\n\n\nresult &lt;- emmeans(object = your_anova_model, specs = ~ messwiederholung_faktor * between_factor)\npairs(results, simple = \"mw_factor\", adjust = \"tukey\")",
+    "crumbs": [
+      "Hausuebungen",
+      "Hausübung 3"
     ]
   },
   {
@@ -4838,56 +5141,84 @@
     "href": "hausuebung_loesung_2.html",
     "title": "Hausübung 2 Lösung",
     "section": "",
-    "text": "Abgabe bis: Freitag 28.11, 23:55 via ILIAS\nZip-Datei benennen: vorname_nachname.zip\n\nGerendertes Skript: vorname_nachname_hausuebung_2.html\nUngerendertes Quarto-Skript: vorname_nachname_hausuebung_2.qmd\n\nPeer Feedback: Bis 3.12 direkt an die Person und im Forum als Zusammenfassung. Im Forum bitte auch Namen der Person, für die das Feedback bestimmt ist, nennen.\n\n\n\n\n📥 Download practice_dataset2.csv\n\n\nStelle in deinem Quarto Header die folgenden Dinge ein. Achtung: Achte auf die Einrückung der Einstellungen. Wenn das nicht von Hand klappt kann man sich bei der Einrückung von einem LLM helfen lassen. 😉.\n\nformat: html\nembed-resources: true\ntable of contents (toc) = true\n\nLies den folgenden Datensatz ein: Practice_dataset2\n\n\n\n\n\n\nLösungen\n\n\n\n\n\n\n\n\n\n\n\n\nBerechne den Mittelwert und die Standardabweichung der Variable self_efficacy für jede Gruppe (condition). Runde die Ergebnisse jeweils auf drei Nachkommastellen. Speichere diese deskriptive Statistik in einen neuen Dataframe ab.\n\n\n\n\n\n\nLösungen\n\n\n\n\n\n\n\n\n\n\n\n\nNutze kable um Formatierungen am unter 1.2 erstellten Dataframe durchzuführen (Überschrift ergänzen, Spalten benennen, Nachkommastellen anpassen).\n\n\n\n\n\n\nLösungen\n\n\n\n\n\n\n\n\nZusammenfassung der Self-Efficacy nach Bedingung\n\n\nBedingung\nMittelwert Self-Efficacy\nSD Self-Efficacy\n\n\n\n\ncontrol\n68.993\n10.21\n\n\nexperimental\n70.596\n8.25\n\n\n\n\n\n\n\n\n\n\n\nBerechne zusätzlich die Schiefe (skew) und Kurtosis (kurtosi) der Variable self_efficacy pro Gruppe (condition), mit Funktionen aus dem Paket psych.\n\n\n\n\n\n\nLösungen\n\n\n\n\n\n\n\n# A tibble: 2 × 3\n  condition     skew kurtosis\n  &lt;chr&gt;        &lt;dbl&gt;    &lt;dbl&gt;\n1 control      0.11    -0.217\n2 experimental 0.025    0.22 \n\n\n\n\n\n\n\n\n\n\n\nDer Originaldatensatz enthält die Spalten pre_mood, mid_mood, post_mood. Verwandle diese mithilfe von pivot_longer() in einen Long-Datensatz namens mood_long. Die neue Spalte mit den Zeitpunkten soll mood_time heißen, die mit den Werten mood_rating.\n\n\n\n\n\n\nLösungen\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nIm nächsten Schritt verwenden wir den LONG-Datensatz (Siehe Aufgabe 2.1), um den Verlauf über die verschiedenen Zeitpunkte darzustellen. Das Ziel ist es, die Stimmung (mood) zu den unterschiedlichen Zeitpunkten, aggregiert nach den Konditionen, als Verlaufsdiagramm abzubilden.\n\nDafür soll mood_time in einen Faktor mit geordneten Faktorstufen (pre, mid und post) umgewandelt werden.\nErstelle einen Summary, welches die für den Plot benötigten Angaben zusammenfasst (Durschschnittlicher Mood gruppiert nach Condition und Zeitpunkt).\n\n\n\n\n\n\n\nLösungen\n\n\n\n\n\n\n\n[1] \"pre_mood\"  \"mid_mood\"  \"post_mood\"\n\n\n\n\n\n\n\n\nPlotte die Elemente mood_time und mean_mood. Gruppiere die conditions nach Farbe.\n💡Tipp: Wenn du den Plot einem Objekt zuweist, kannst du ihn weiterverwenden, indem du das Objekt aufrufst und erweiterst. So musst du den Code nicht jedes Mal neu ausschreiben.\n\n\n\n\n\n\nLösungen\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nNormalerweise würde das Argument color = condition ausreichen, damit ggplot implizit eine Gruppierung der Daten nach der Variable condition vornimmt und die Datenpunkte innerhalb des Plots verbindet. Da wir vorher aber auch die Variable mood_time explizit als Faktor gesetzt hatten, wird nun jede Kombination aus beiden Variablen implizit als Gruppierung angesehen. Daher gibt es ohne das von uns explizite Argument group = condition für jede Zeile eine eigene Gruppe und die Datenpunkte würden nicht verbunden werden. Probiere den ggplot-call gerne ohne das entsprechende Argument aus und schaue, was passiert!\n\n\n\n\n\n\nPasse nun den Plot aus 3.2 so an, dass er eine Farbpalette verwendet, die für farbenblinde Personen geeignet ist: Nutze die folgende Palette.\nTipp: Verwende: scale_color_manual\n\n\n\n\n\n\nLösungen\n\n\n\n\n\n\ncb_palette &lt;- c(   \"#000000\", \"#E69F00\", \"#56B4E9\", \"#009E73\",   \"#F0E442\", \"#0072B2\", \"#D55E00\", \"#CC79A7\" )  \n\n\n\n\n\n\n\n\n\n\nLösungen\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nFüge mit geom_point() die einzelnen Punkte auf der Linie ein. Stelle die grösse (size() auf 3)\n\n\n\n\n\n\nLösungen\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nFüge dem Diagramm Titel sowie Achsenbeschriftungen zu deinem Plot und verwende ein Theme das du passend findest.\n\n\n\n\n\n\n\n\n\n\n\nLösungen\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nSpeichere den Plot ab mit ggsave als png ab.\n\n\n\n\n\n\nLösungen\n\n\n\n\n\n\n\n\n\n\n\n\n\nErstelle aus dem ursprünglichen Wide Originaldatensatz einen neuen Datensatz subset_mood, der nur Daten der Gruppe experimental beinhaltet.\n\n\n\n\n\n\nLösungen\n\n\n\n\n\n\n\n\n\n\n\nPrüfe nun (anhand des unter 4. erstellen Datensatzes) mittels eines gepaarten t-Test ob sich pre_mood und post_mood in der Gruppe experimental unterscheiden. Nutze dafür die Funktion t.test(). Lass dir das Ergebnis mit print() ausgeben.\n\n\n\n\n\n\nLösungen\n\n\n\n\n\n\n\n\n    Paired t-test\n\ndata:  subset_mood$pre_mood and subset_mood$post_mood\nt = -0.42731, df = 43, p-value = 0.6713\nalternative hypothesis: true mean difference is not equal to 0\n95 percent confidence interval:\n -1.0399187  0.6762823\nsample estimates:\nmean difference \n     -0.1818182 \n\n\n\n\n\n\n\n\n\n\nRendere dein Skript als HTML\nLade deine Abgabe (Skript + HTML) als ZIP ordner in ILIAS hoch und schicke sie deinem/deiner Peepartner:in."
+    "text": "Abgabe bis: Freitag 28.11, 23:55 via ILIAS\nZip-Datei benennen: vorname_nachname.zip\n\nGerendertes Skript: vorname_nachname_hausuebung_2.html\nUngerendertes Quarto-Skript: vorname_nachname_hausuebung_2.qmd\n\nPeer Feedback: Bis 3.12 direkt an die Person und im Forum als Zusammenfassung. Im Forum bitte auch Namen der Person, für die das Feedback bestimmt ist, nennen.\n\n\n\n\n📥 Download practice_dataset2.csv\n\n\nStelle in deinem Quarto Header die folgenden Dinge ein. Achtung: Achte auf die Einrückung der Einstellungen. Wenn das nicht von Hand klappt kann man sich bei der Einrückung von einem LLM helfen lassen. 😉.\n\nformat: html\nembed-resources: true\ntable of contents (toc) = true\n\nLies den folgenden Datensatz ein: Practice_dataset2\n\n\n\n\n\n\nLösungen\n\n\n\n\n\n\n\n\n\n\n\n\nBerechne den Mittelwert und die Standardabweichung der Variable self_efficacy für jede Gruppe (condition). Runde die Ergebnisse jeweils auf drei Nachkommastellen. Speichere diese deskriptive Statistik in einen neuen Dataframe ab.\n\n\n\n\n\n\nLösungen\n\n\n\n\n\n\n\n\n\n\n\n\nNutze kable um Formatierungen am unter 1.2 erstellten Dataframe durchzuführen (Überschrift ergänzen, Spalten benennen, Nachkommastellen anpassen).\n\n\n\n\n\n\nLösungen\n\n\n\n\n\n\n\n\nZusammenfassung der Self-Efficacy nach Bedingung\n\n\nBedingung\nMittelwert Self-Efficacy\nSD Self-Efficacy\n\n\n\n\ncontrol\n68.993\n10.21\n\n\nexperimental\n70.596\n8.25\n\n\n\n\n\n\n\n\n\n\n\nBerechne zusätzlich die Schiefe (skew) und Kurtosis (kurtosi) der Variable self_efficacy pro Gruppe (condition), mit Funktionen aus dem Paket psych.\n\n\n\n\n\n\nLösungen\n\n\n\n\n\n\n\n# A tibble: 2 × 3\n  condition     skew kurtosis\n  &lt;chr&gt;        &lt;dbl&gt;    &lt;dbl&gt;\n1 control      0.11    -0.217\n2 experimental 0.025    0.22 \n\n\n\n\n\n\n\n\n\n\n\nDer Originaldatensatz enthält die Spalten pre_mood, mid_mood, post_mood. Verwandle diese mithilfe von pivot_longer() in einen Long-Datensatz namens mood_long. Die neue Spalte mit den Zeitpunkten soll mood_time heißen, die mit den Werten mood_rating.\n\n\n\n\n\n\nLösungen\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nIm nächsten Schritt verwenden wir den LONG-Datensatz (Siehe Aufgabe 2.1), um den Verlauf über die verschiedenen Zeitpunkte darzustellen. Das Ziel ist es, die Stimmung (mood) zu den unterschiedlichen Zeitpunkten, aggregiert nach den Konditionen, als Verlaufsdiagramm abzubilden.\n\nDafür soll mood_time in einen Faktor mit geordneten Faktorstufen (pre, mid und post) umgewandelt werden.\nErstelle einen Summary, welches die für den Plot benötigten Angaben zusammenfasst (Durschschnittlicher Mood gruppiert nach Condition und Zeitpunkt).\n\n\n\n\n\n\n\nLösungen\n\n\n\n\n\n\n\n[1] \"pre_mood\"  \"mid_mood\"  \"post_mood\"\n\n\n\n\n\n\n\n\nPlotte die Elemente mood_time und mean_mood. Gruppiere die conditions nach Farbe.\n💡Tipp: Wenn du den Plot einem Objekt zuweist, kannst du ihn weiterverwenden, indem du das Objekt aufrufst und erweiterst. So musst du den Code nicht jedes Mal neu ausschreiben.\n\n\n\n\n\n\nLösungen\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nNormalerweise würde das Argument color = condition ausreichen, damit ggplot implizit eine Gruppierung der Daten nach der Variable condition vornimmt und die Datenpunkte innerhalb des Plots verbindet. Da wir vorher aber auch die Variable mood_time explizit als Faktor gesetzt hatten, wird nun jede Kombination aus beiden Variablen implizit als Gruppierung angesehen. Daher gibt es ohne das von uns explizite Argument group = condition für jede Zeile eine eigene Gruppe und die Datenpunkte würden nicht verbunden werden. Probiere den ggplot-call gerne ohne das entsprechende Argument aus und schaue, was passiert!\n\n\n\n\n\n\nPasse nun den Plot aus 3.2 so an, dass er eine Farbpalette verwendet, die für farbenblinde Personen geeignet ist: Nutze die folgende Palette.\nTipp: Verwende: scale_color_manual\n\n\n\n\n\n\nLösungen\n\n\n\n\n\n\ncb_palette &lt;- c(   \"#000000\", \"#E69F00\", \"#56B4E9\", \"#009E73\",   \"#F0E442\", \"#0072B2\", \"#D55E00\", \"#CC79A7\" )  \n\n\n\n\n\n\n\n\n\n\nLösungen\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nFüge mit geom_point() die einzelnen Punkte auf der Linie ein. Stelle die grösse (size() auf 3)\n\n\n\n\n\n\nLösungen\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nFüge dem Diagramm Titel sowie Achsenbeschriftungen zu deinem Plot und verwende ein Theme das du passend findest.\n\n\n\n\n\n\n\n\n\n\n\nLösungen\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nSpeichere den Plot ab mit ggsave als png ab.\n\n\n\n\n\n\nLösungen\n\n\n\n\n\n\n\n\n\n\n\n\n\nErstelle aus dem ursprünglichen Wide Originaldatensatz einen neuen Datensatz subset_mood, der nur Daten der Gruppe experimental beinhaltet.\n\n\n\n\n\n\nLösungen\n\n\n\n\n\n\n\n\n\n\n\nPrüfe nun (anhand des unter 4. erstellen Datensatzes) mittels eines gepaarten t-Test ob sich pre_mood und post_mood in der Gruppe experimental unterscheiden. Nutze dafür die Funktion t.test(). Lass dir das Ergebnis mit print() ausgeben.\n\n\n\n\n\n\nLösungen\n\n\n\n\n\n\n\n\n    Paired t-test\n\ndata:  subset_mood$pre_mood and subset_mood$post_mood\nt = -0.42731, df = 43, p-value = 0.6713\nalternative hypothesis: true mean difference is not equal to 0\n95 percent confidence interval:\n -1.0399187  0.6762823\nsample estimates:\nmean difference \n     -0.1818182 \n\n\n\n\n\n\n\n\n\n\nRendere dein Skript als HTML\nLade deine Abgabe (Skript + HTML) als ZIP ordner in ILIAS hoch und schicke sie deinem/deiner Peepartner:in.",
+    "crumbs": [
+      "Hausuebungen",
+      "Hausübung 2 - Mit Lösungen"
+    ]
   },
   {
     "objectID": "hausuebung_loesung_2.html#formalitäten-und-abgabe",
     "href": "hausuebung_loesung_2.html#formalitäten-und-abgabe",
     "title": "Hausübung 2 Lösung",
     "section": "",
-    "text": "Abgabe bis: Freitag 28.11, 23:55 via ILIAS\nZip-Datei benennen: vorname_nachname.zip\n\nGerendertes Skript: vorname_nachname_hausuebung_2.html\nUngerendertes Quarto-Skript: vorname_nachname_hausuebung_2.qmd\n\nPeer Feedback: Bis 3.12 direkt an die Person und im Forum als Zusammenfassung. Im Forum bitte auch Namen der Person, für die das Feedback bestimmt ist, nennen."
+    "text": "Abgabe bis: Freitag 28.11, 23:55 via ILIAS\nZip-Datei benennen: vorname_nachname.zip\n\nGerendertes Skript: vorname_nachname_hausuebung_2.html\nUngerendertes Quarto-Skript: vorname_nachname_hausuebung_2.qmd\n\nPeer Feedback: Bis 3.12 direkt an die Person und im Forum als Zusammenfassung. Im Forum bitte auch Namen der Person, für die das Feedback bestimmt ist, nennen.",
+    "crumbs": [
+      "Hausuebungen",
+      "Hausübung 2 - Mit Lösungen"
+    ]
   },
   {
     "objectID": "hausuebung_loesung_2.html#aufgabe-1-datensatz-einlesen-und-deskriptive-statistik",
     "href": "hausuebung_loesung_2.html#aufgabe-1-datensatz-einlesen-und-deskriptive-statistik",
     "title": "Hausübung 2 Lösung",
     "section": "",
-    "text": "📥 Download practice_dataset2.csv\n\n\nStelle in deinem Quarto Header die folgenden Dinge ein. Achtung: Achte auf die Einrückung der Einstellungen. Wenn das nicht von Hand klappt kann man sich bei der Einrückung von einem LLM helfen lassen. 😉.\n\nformat: html\nembed-resources: true\ntable of contents (toc) = true\n\nLies den folgenden Datensatz ein: Practice_dataset2\n\n\n\n\n\n\nLösungen\n\n\n\n\n\n\n\n\n\n\n\n\nBerechne den Mittelwert und die Standardabweichung der Variable self_efficacy für jede Gruppe (condition). Runde die Ergebnisse jeweils auf drei Nachkommastellen. Speichere diese deskriptive Statistik in einen neuen Dataframe ab.\n\n\n\n\n\n\nLösungen\n\n\n\n\n\n\n\n\n\n\n\n\nNutze kable um Formatierungen am unter 1.2 erstellten Dataframe durchzuführen (Überschrift ergänzen, Spalten benennen, Nachkommastellen anpassen).\n\n\n\n\n\n\nLösungen\n\n\n\n\n\n\n\n\nZusammenfassung der Self-Efficacy nach Bedingung\n\n\nBedingung\nMittelwert Self-Efficacy\nSD Self-Efficacy\n\n\n\n\ncontrol\n68.993\n10.21\n\n\nexperimental\n70.596\n8.25\n\n\n\n\n\n\n\n\n\n\n\nBerechne zusätzlich die Schiefe (skew) und Kurtosis (kurtosi) der Variable self_efficacy pro Gruppe (condition), mit Funktionen aus dem Paket psych.\n\n\n\n\n\n\nLösungen\n\n\n\n\n\n\n\n# A tibble: 2 × 3\n  condition     skew kurtosis\n  &lt;chr&gt;        &lt;dbl&gt;    &lt;dbl&gt;\n1 control      0.11    -0.217\n2 experimental 0.025    0.22"
+    "text": "📥 Download practice_dataset2.csv\n\n\nStelle in deinem Quarto Header die folgenden Dinge ein. Achtung: Achte auf die Einrückung der Einstellungen. Wenn das nicht von Hand klappt kann man sich bei der Einrückung von einem LLM helfen lassen. 😉.\n\nformat: html\nembed-resources: true\ntable of contents (toc) = true\n\nLies den folgenden Datensatz ein: Practice_dataset2\n\n\n\n\n\n\nLösungen\n\n\n\n\n\n\n\n\n\n\n\n\nBerechne den Mittelwert und die Standardabweichung der Variable self_efficacy für jede Gruppe (condition). Runde die Ergebnisse jeweils auf drei Nachkommastellen. Speichere diese deskriptive Statistik in einen neuen Dataframe ab.\n\n\n\n\n\n\nLösungen\n\n\n\n\n\n\n\n\n\n\n\n\nNutze kable um Formatierungen am unter 1.2 erstellten Dataframe durchzuführen (Überschrift ergänzen, Spalten benennen, Nachkommastellen anpassen).\n\n\n\n\n\n\nLösungen\n\n\n\n\n\n\n\n\nZusammenfassung der Self-Efficacy nach Bedingung\n\n\nBedingung\nMittelwert Self-Efficacy\nSD Self-Efficacy\n\n\n\n\ncontrol\n68.993\n10.21\n\n\nexperimental\n70.596\n8.25\n\n\n\n\n\n\n\n\n\n\n\nBerechne zusätzlich die Schiefe (skew) und Kurtosis (kurtosi) der Variable self_efficacy pro Gruppe (condition), mit Funktionen aus dem Paket psych.\n\n\n\n\n\n\nLösungen\n\n\n\n\n\n\n\n# A tibble: 2 × 3\n  condition     skew kurtosis\n  &lt;chr&gt;        &lt;dbl&gt;    &lt;dbl&gt;\n1 control      0.11    -0.217\n2 experimental 0.025    0.22",
+    "crumbs": [
+      "Hausuebungen",
+      "Hausübung 2 - Mit Lösungen"
+    ]
   },
   {
     "objectID": "hausuebung_loesung_2.html#aufgabe-2-wide-to-long-transformation",
     "href": "hausuebung_loesung_2.html#aufgabe-2-wide-to-long-transformation",
     "title": "Hausübung 2 Lösung",
     "section": "",
-    "text": "Der Originaldatensatz enthält die Spalten pre_mood, mid_mood, post_mood. Verwandle diese mithilfe von pivot_longer() in einen Long-Datensatz namens mood_long. Die neue Spalte mit den Zeitpunkten soll mood_time heißen, die mit den Werten mood_rating.\n\n\n\n\n\n\nLösungen"
+    "text": "Der Originaldatensatz enthält die Spalten pre_mood, mid_mood, post_mood. Verwandle diese mithilfe von pivot_longer() in einen Long-Datensatz namens mood_long. Die neue Spalte mit den Zeitpunkten soll mood_time heißen, die mit den Werten mood_rating.\n\n\n\n\n\n\nLösungen",
+    "crumbs": [
+      "Hausuebungen",
+      "Hausübung 2 - Mit Lösungen"
+    ]
   },
   {
     "objectID": "hausuebung_loesung_2.html#aufgabe-3-plot---verlaufsdiagramm",
     "href": "hausuebung_loesung_2.html#aufgabe-3-plot---verlaufsdiagramm",
     "title": "Hausübung 2 Lösung",
     "section": "",
-    "text": "Im nächsten Schritt verwenden wir den LONG-Datensatz (Siehe Aufgabe 2.1), um den Verlauf über die verschiedenen Zeitpunkte darzustellen. Das Ziel ist es, die Stimmung (mood) zu den unterschiedlichen Zeitpunkten, aggregiert nach den Konditionen, als Verlaufsdiagramm abzubilden.\n\nDafür soll mood_time in einen Faktor mit geordneten Faktorstufen (pre, mid und post) umgewandelt werden.\nErstelle einen Summary, welches die für den Plot benötigten Angaben zusammenfasst (Durschschnittlicher Mood gruppiert nach Condition und Zeitpunkt).\n\n\n\n\n\n\n\nLösungen\n\n\n\n\n\n\n\n[1] \"pre_mood\"  \"mid_mood\"  \"post_mood\"\n\n\n\n\n\n\n\n\nPlotte die Elemente mood_time und mean_mood. Gruppiere die conditions nach Farbe.\n💡Tipp: Wenn du den Plot einem Objekt zuweist, kannst du ihn weiterverwenden, indem du das Objekt aufrufst und erweiterst. So musst du den Code nicht jedes Mal neu ausschreiben.\n\n\n\n\n\n\nLösungen\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nNormalerweise würde das Argument color = condition ausreichen, damit ggplot implizit eine Gruppierung der Daten nach der Variable condition vornimmt und die Datenpunkte innerhalb des Plots verbindet. Da wir vorher aber auch die Variable mood_time explizit als Faktor gesetzt hatten, wird nun jede Kombination aus beiden Variablen implizit als Gruppierung angesehen. Daher gibt es ohne das von uns explizite Argument group = condition für jede Zeile eine eigene Gruppe und die Datenpunkte würden nicht verbunden werden. Probiere den ggplot-call gerne ohne das entsprechende Argument aus und schaue, was passiert!\n\n\n\n\n\n\nPasse nun den Plot aus 3.2 so an, dass er eine Farbpalette verwendet, die für farbenblinde Personen geeignet ist: Nutze die folgende Palette.\nTipp: Verwende: scale_color_manual\n\n\n\n\n\n\nLösungen\n\n\n\n\n\n\ncb_palette &lt;- c(   \"#000000\", \"#E69F00\", \"#56B4E9\", \"#009E73\",   \"#F0E442\", \"#0072B2\", \"#D55E00\", \"#CC79A7\" )  \n\n\n\n\n\n\n\n\n\n\nLösungen\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nFüge mit geom_point() die einzelnen Punkte auf der Linie ein. Stelle die grösse (size() auf 3)\n\n\n\n\n\n\nLösungen\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nFüge dem Diagramm Titel sowie Achsenbeschriftungen zu deinem Plot und verwende ein Theme das du passend findest.\n\n\n\n\n\n\n\n\n\n\n\nLösungen\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nSpeichere den Plot ab mit ggsave als png ab.\n\n\n\n\n\n\nLösungen"
+    "text": "Im nächsten Schritt verwenden wir den LONG-Datensatz (Siehe Aufgabe 2.1), um den Verlauf über die verschiedenen Zeitpunkte darzustellen. Das Ziel ist es, die Stimmung (mood) zu den unterschiedlichen Zeitpunkten, aggregiert nach den Konditionen, als Verlaufsdiagramm abzubilden.\n\nDafür soll mood_time in einen Faktor mit geordneten Faktorstufen (pre, mid und post) umgewandelt werden.\nErstelle einen Summary, welches die für den Plot benötigten Angaben zusammenfasst (Durschschnittlicher Mood gruppiert nach Condition und Zeitpunkt).\n\n\n\n\n\n\n\nLösungen\n\n\n\n\n\n\n\n[1] \"pre_mood\"  \"mid_mood\"  \"post_mood\"\n\n\n\n\n\n\n\n\nPlotte die Elemente mood_time und mean_mood. Gruppiere die conditions nach Farbe.\n💡Tipp: Wenn du den Plot einem Objekt zuweist, kannst du ihn weiterverwenden, indem du das Objekt aufrufst und erweiterst. So musst du den Code nicht jedes Mal neu ausschreiben.\n\n\n\n\n\n\nLösungen\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nNormalerweise würde das Argument color = condition ausreichen, damit ggplot implizit eine Gruppierung der Daten nach der Variable condition vornimmt und die Datenpunkte innerhalb des Plots verbindet. Da wir vorher aber auch die Variable mood_time explizit als Faktor gesetzt hatten, wird nun jede Kombination aus beiden Variablen implizit als Gruppierung angesehen. Daher gibt es ohne das von uns explizite Argument group = condition für jede Zeile eine eigene Gruppe und die Datenpunkte würden nicht verbunden werden. Probiere den ggplot-call gerne ohne das entsprechende Argument aus und schaue, was passiert!\n\n\n\n\n\n\nPasse nun den Plot aus 3.2 so an, dass er eine Farbpalette verwendet, die für farbenblinde Personen geeignet ist: Nutze die folgende Palette.\nTipp: Verwende: scale_color_manual\n\n\n\n\n\n\nLösungen\n\n\n\n\n\n\ncb_palette &lt;- c(   \"#000000\", \"#E69F00\", \"#56B4E9\", \"#009E73\",   \"#F0E442\", \"#0072B2\", \"#D55E00\", \"#CC79A7\" )  \n\n\n\n\n\n\n\n\n\n\nLösungen\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nFüge mit geom_point() die einzelnen Punkte auf der Linie ein. Stelle die grösse (size() auf 3)\n\n\n\n\n\n\nLösungen\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nFüge dem Diagramm Titel sowie Achsenbeschriftungen zu deinem Plot und verwende ein Theme das du passend findest.\n\n\n\n\n\n\n\n\n\n\n\nLösungen\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nSpeichere den Plot ab mit ggsave als png ab.\n\n\n\n\n\n\nLösungen",
+    "crumbs": [
+      "Hausuebungen",
+      "Hausübung 2 - Mit Lösungen"
+    ]
   },
   {
     "objectID": "hausuebung_loesung_2.html#subsetting-und-t-test",
     "href": "hausuebung_loesung_2.html#subsetting-und-t-test",
     "title": "Hausübung 2 Lösung",
     "section": "",
-    "text": "Erstelle aus dem ursprünglichen Wide Originaldatensatz einen neuen Datensatz subset_mood, der nur Daten der Gruppe experimental beinhaltet.\n\n\n\n\n\n\nLösungen\n\n\n\n\n\n\n\n\n\n\n\nPrüfe nun (anhand des unter 4. erstellen Datensatzes) mittels eines gepaarten t-Test ob sich pre_mood und post_mood in der Gruppe experimental unterscheiden. Nutze dafür die Funktion t.test(). Lass dir das Ergebnis mit print() ausgeben.\n\n\n\n\n\n\nLösungen\n\n\n\n\n\n\n\n\n    Paired t-test\n\ndata:  subset_mood$pre_mood and subset_mood$post_mood\nt = -0.42731, df = 43, p-value = 0.6713\nalternative hypothesis: true mean difference is not equal to 0\n95 percent confidence interval:\n -1.0399187  0.6762823\nsample estimates:\nmean difference \n     -0.1818182"
+    "text": "Erstelle aus dem ursprünglichen Wide Originaldatensatz einen neuen Datensatz subset_mood, der nur Daten der Gruppe experimental beinhaltet.\n\n\n\n\n\n\nLösungen\n\n\n\n\n\n\n\n\n\n\n\nPrüfe nun (anhand des unter 4. erstellen Datensatzes) mittels eines gepaarten t-Test ob sich pre_mood und post_mood in der Gruppe experimental unterscheiden. Nutze dafür die Funktion t.test(). Lass dir das Ergebnis mit print() ausgeben.\n\n\n\n\n\n\nLösungen\n\n\n\n\n\n\n\n\n    Paired t-test\n\ndata:  subset_mood$pre_mood and subset_mood$post_mood\nt = -0.42731, df = 43, p-value = 0.6713\nalternative hypothesis: true mean difference is not equal to 0\n95 percent confidence interval:\n -1.0399187  0.6762823\nsample estimates:\nmean difference \n     -0.1818182",
+    "crumbs": [
+      "Hausuebungen",
+      "Hausübung 2 - Mit Lösungen"
+    ]
   },
   {
     "objectID": "hausuebung_loesung_2.html#rendern-und-hochladen",
     "href": "hausuebung_loesung_2.html#rendern-und-hochladen",
     "title": "Hausübung 2 Lösung",
     "section": "",
-    "text": "Rendere dein Skript als HTML\nLade deine Abgabe (Skript + HTML) als ZIP ordner in ILIAS hoch und schicke sie deinem/deiner Peepartner:in."
+    "text": "Rendere dein Skript als HTML\nLade deine Abgabe (Skript + HTML) als ZIP ordner in ILIAS hoch und schicke sie deinem/deiner Peepartner:in.",
+    "crumbs": [
+      "Hausuebungen",
+      "Hausübung 2 - Mit Lösungen"
+    ]
   },
   {
     "objectID": "index.html",
     "href": "index.html",
     "title": "Einleitung",
     "section": "",
-    "text": "In diesem E-Book findest du alle wichtigen Informationen zum Methodenseminar “R u Ready”. Du kannst hier u. a. die wöchentlichen Folien, Hands-On R Übungen, den Leistungsnachweis, und Frequently Asked Questions einsehen. Du kannst über die Unterkapitel (links) zu den entsprechenden Inhalten navigieren, oder auch die Suchfunktion oben links verwenden, um nach einem bestimmten Begriff zu suchen.\n\nHinweisboxen\nHier einen Überblick über die auf den Seiten enthaltenen Hinweisboxen:\n\n\n\n\n\n\nNote\n\n\n\nVertiefung: Hier geht es in die Tiefe.\n\n\n\n\n\n\n\n\nImportant\n\n\n\nWichtig: Dies ist eine wichtige Information.\n\n\n\n\n\n\n\n\nWarning\n\n\n\nAchtung: Hier ist Vorsicht geboten.\n\n\n\n\n\n\n\n\nCaution\n\n\n\nVorsicht: Diese Information ist noch in Bearbeitung.\n\n\n\n\nSyllabus\n\n\n\n\n\n\nCaution\n\n\n\nVorsicht: Der Syllabus dient als grobe Richtlinie und kann angepasst werden, falls wir in einzelnen Einheiten mehr oder weniger Zeit benötigen.\n\n\n\n\nLetztes Update November 26, 2025 at 14:59"
+    "text": "In diesem E-Book findest du alle wichtigen Informationen zum Methodenseminar “R u Ready”. Du kannst hier u. a. die wöchentlichen Folien, Hands-On R Übungen, den Leistungsnachweis, und Frequently Asked Questions einsehen. Du kannst über die Unterkapitel (links) zu den entsprechenden Inhalten navigieren, oder auch die Suchfunktion oben links verwenden, um nach einem bestimmten Begriff zu suchen.\n\nHinweisboxen\nHier einen Überblick über die auf den Seiten enthaltenen Hinweisboxen:\n\n\n\n\n\n\nNote\n\n\n\nVertiefung: Hier geht es in die Tiefe.\n\n\n\n\n\n\n\n\nImportant\n\n\n\nWichtig: Dies ist eine wichtige Information.\n\n\n\n\n\n\n\n\nWarning\n\n\n\nAchtung: Hier ist Vorsicht geboten.\n\n\n\n\n\n\n\n\nCaution\n\n\n\nVorsicht: Diese Information ist noch in Bearbeitung.\n\n\n\n\nSyllabus\n\n\n\n\n\n\nCaution\n\n\n\nVorsicht: Der Syllabus dient als grobe Richtlinie und kann angepasst werden, falls wir in einzelnen Einheiten mehr oder weniger Zeit benötigen.\n\n\n\n\nLetztes Update Dezember 02, 2025 at 14:29"
   },
   {
     "objectID": "links_und_ressourcen.html",
