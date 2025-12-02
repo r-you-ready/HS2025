@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>hausuebung_2 – R u Ready</title>
+<title>hausuebung_3 – R u Ready</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -5044,8 +5044,8 @@ vertical-align: -.125em;
   <li><a href="#hausübung-3" id="toc-hausübung-3" class="nav-link active" data-scroll-target="#hausübung-3">Hausübung 3</a>
   <ul class="collapse">
   <li><a href="#formalitäten-und-abgabe" id="toc-formalitäten-und-abgabe" class="nav-link" data-scroll-target="#formalitäten-und-abgabe">📅 Formalitäten und Abgabe</a></li>
-  <li><a href="#datensätze-therapie-einlesen-und-bereinigen" id="toc-datensätze-therapie-einlesen-und-bereinigen" class="nav-link" data-scroll-target="#datensätze-therapie-einlesen-und-bereinigen">📖 Datensätze “Therapie” Einlesen und bereinigen</a></li>
-  <li><a href="#daten-visualisieren" id="toc-daten-visualisieren" class="nav-link" data-scroll-target="#daten-visualisieren">🖌️Daten Visualisieren</a></li>
+  <li><a href="#datensätze-therapie-einlesen-und-bereinigen" id="toc-datensätze-therapie-einlesen-und-bereinigen" class="nav-link" data-scroll-target="#datensätze-therapie-einlesen-und-bereinigen">📖 Datensätze “Therapie” einlesen und bereinigen</a></li>
+  <li><a href="#daten-visualisieren" id="toc-daten-visualisieren" class="nav-link" data-scroll-target="#daten-visualisieren">🖌️Daten visualisieren</a></li>
   <li><a href="#anovas-und-post-hoc-t-tests" id="toc-anovas-und-post-hoc-t-tests" class="nav-link" data-scroll-target="#anovas-und-post-hoc-t-tests">📊 ANOVAs und Post-hoc t-Tests</a></li>
   </ul></li>
   </ul>
@@ -5056,7 +5056,7 @@ vertical-align: -.125em;
 
 <header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./hausuebungen.html">Hausuebungen</a></li><li class="breadcrumb-item"><a href="./hausuebung_3.html">Hausübung 3</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">hausuebung_2</h1>
+<h1 class="title">hausuebung_3</h1>
 </div>
 
 
@@ -5107,7 +5107,7 @@ Note
 <hr>
 </section>
 <section id="datensätze-therapie-einlesen-und-bereinigen" class="level2">
-<h2 class="anchored" data-anchor-id="datensätze-therapie-einlesen-und-bereinigen">📖 Datensätze “Therapie” Einlesen und bereinigen</h2>
+<h2 class="anchored" data-anchor-id="datensätze-therapie-einlesen-und-bereinigen">📖 Datensätze “Therapie” einlesen und bereinigen</h2>
 <p>In den folgenden Daten versuchst du herauszufinden, ob sich eine neuartige Therapie von der Kontrollgruppe (Warteliste) unterscheidet. Dafür wurde das Wohlbefinden der Personen über drei Zeitpunkte hinweg gemessen (<em>therapie_results</em>). Zuerst musst du die Daten bereinigen, mergen und visualisieren und zum Schluss mit einem Hypothesentest entscheiden, ob die neue Therapieform besser abschneidet als die Kontrollgruppe.</p>
 <ul>
 <li><p>Lies die beiden Datensätze <code>therapie_Bedingung</code> und <code>therapie_results</code> ein.</p></li>
@@ -5128,7 +5128,7 @@ Note
 <hr>
 </section>
 <section id="daten-visualisieren" class="level2">
-<h2 class="anchored" data-anchor-id="daten-visualisieren">🖌️Daten Visualisieren</h2>
+<h2 class="anchored" data-anchor-id="daten-visualisieren">🖌️Daten visualisieren</h2>
 <ul>
 <li>Bevor wir die Daten mit Hypothesentests analysieren, wollen wir ein Gefühl für die Daten erhalten. Plotte dafür den Mittelwertsverlauf mit Fehlerbalken über die drei Zeitpunkte hinweg. Nutze den zur Verfügung gestellten Code, um ein Summary zu erstellen.</li>
 </ul>
@@ -5153,15 +5153,15 @@ Note
 </section>
 <section id="anovas-und-post-hoc-t-tests" class="level2">
 <h2 class="anchored" data-anchor-id="anovas-und-post-hoc-t-tests">📊 ANOVAs und Post-hoc t-Tests</h2>
-<p>Prüfe die Daten auf Varianzhomogenität und nutze dafür den Levene-Test. Der Levene-Test wird für die abhängige Variable über die Gruppen des Between-Faktors berechnet (also: Sind die Varianzen der AV über die drei Gruppen hinweg ähnlich verteilt?).</p>
+<p>Prüfe die Daten auf Varianzhomogenität und nutze dafür den Levene-Test. Der Levene-Test wird für die abhängige Variable über den Between-Faktor berechnet (also: Sind die Varianzen der AV über die drei Gruppen hinweg ähnlich verteilt?).</p>
 <ul>
 <li>Ergänze dafür den Code um die nötigen Variablen. Der Test prüft gegen Varianzhomogenität; daher bedeutet ein nicht signifikantes Ergebnis, dass die Voraussetzung für die ANOVA nicht verletzt ist.</li>
 </ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">leveneTeste</span>(AV <span class="sc">~</span> Gruppen, <span class="at">data =</span> )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">leveneTest</span>(AV <span class="sc">~</span> Gruppen, <span class="at">data =</span> )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <ul>
-<li>Führe eine Mixed-Design-ANOVA mit <code>aov_4()</code> durch. Die abhängige Variable ist <em><code>wohlbefinden</code></em>, die unabhängige Between-Variable ist <em><code>bedingung</code></em> und die unabhängige Within-Variable ist <em><code>messzeitpunkt</code></em>. Die Formel für die ANOVA lautet: AV ~ Between-Subjects-Faktor + (Within-Faktor). Für den Within-Faktor verwenden wir die folgende Schreibweise: <em><code>(messzeitpunkt | id)</code></em>, da die Messwiederholungen innerhalb jeder Person verschachtelt sind.</li>
+<li>Führe eine Mixed-Design-ANOVA mit <code>aov_4()</code> durch. Die abhängige Variable ist <em><code>wohlbefinden</code></em>, der unabhängige Between-Faktor ist <em><code>bedingung</code></em> und der unabhängige Within-Faktor ist <em><code>messzeitpunkt</code></em>. Die Formel für die ANOVA lautet: AV ~ Between-Faktor + (Within-Faktor). Für den Within-Faktor verwenden wir die folgende Schreibweise: <em><code>(messzeitpunkt | id)</code></em>, da die Messwiederholungen innerhalb jeder Person verschachtelt sind.</li>
 </ul>
 <p><strong>Passe den Code an:</strong></p>
 <div class="cell">
@@ -5179,7 +5179,7 @@ Note
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Schaue dir die Ergebnisse einschliesslich des Mauchly-Tests auf Sphärizität an – dieser ist relevant bei mindestens drei Within-Faktoren. Der Mauchly-Test sollte nicht signifikant sein, sodass wir Sphärizität annehmen können. Falls doch: Greenhouse-Geisser-Korrektur anwenden.</p>
+<p>Schaue dir die Ergebnisse einschliesslich des Mauchly-Tests auf Sphärizität an – dieser ist relevant bei mindestens drei Within-Faktoren. Der Mauchly-Test sollte nicht signifikant sein, sodass wir Sphärizität annehmen können (ähnlich zum Levene Test). Falls doch: Werte nach Greenhouse-Geisser-Korrektur interpretieren.</p>
 </div>
 </div>
 <ul>

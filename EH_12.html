@@ -1123,7 +1123,7 @@ Sandra Grinschgl, Aaron Friedli, Lars Schilling
 <li>Wie hoch ist die Wahrscheinlichkeit das wir trotzdem ein sigifikantes Ergebnis (Fehler 1. Art) erhalten?</li>
 </ul>
 <aside class="notes">
-<p>Alpha-Fehler 0.05. In Allen Analysen in denen wir signifikante werte erwarten (2x3 anova und mmq one-way anova) werden auch signifikante werte rauskommen (simulation so eingestellt). In den ANOVAs in denen wir nicht mit signifikanten werten rechnen, kann es sein das es per zufall trotzdem zu signifikanten werten kommt. In diesen fällen wird nicht erwartet das noch posthoc t-tests gerechnet werden.</p>
+<p>Alpha-Fehler 0.05. In allen Analysen in denen wir signifikante werte erwarten (2x3 anova und mmq one-way anova) werden auch signifikante werte rauskommen (simulation so eingestellt). In den ANOVAs in denen wir nicht mit signifikanten werten rechnen, kann es sein das es per zufall trotzdem zu signifikanten werten kommt. In diesen fällen wird nicht erwartet das noch posthoc t-tests gerechnet werden.</p>
 <style type="text/css">
 span.MJX_Assistive_MathML {
 position:absolute!important;
@@ -1158,7 +1158,7 @@ display:block!important;
 <section id="t-test-voraussetzungsprüfung" class="slide level2">
 <h2>t-Test: Voraussetzungsprüfung</h2>
 <p><strong>Levene-Test</strong></p>
-<p>Der Levene Test überprüft Varianzhomogenität! Varianzhomogenität bedeutet dass alle Gruppen in einer Analyse ungeführ die gleiche Streuung aufweisen, bzw. ähnlich um ihren Mittelwert schwanken.</p>
+<p>Der Levene Test überprüft Varianzhomogenität! Varianzhomogenität bedeutet, dass alle Gruppen in einer Analyse ungeführ die gleiche Streuung aufweisen, bzw. ähnlich um ihren Mittelwert schwanken.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a></a>dat_full_below_above <span class="ot">&lt;-</span> dat_full <span class="sc">|&gt;</span> </span>
 <span id="cb1-2"><a></a>  <span class="fu">filter</span>(group_all <span class="sc">!=</span> <span class="st">&quot;control&quot;</span>)</span>
@@ -1241,8 +1241,8 @@ d estimate: 1.551045 (large)
 </tbody>
 </table>
 </section>
-<section id="paired-t-test-varianztests-und-effektgrössen" class="slide level2">
-<h2><strong>Paired t-Test, Varianztests und Effektgrössen</strong></h2>
+<section id="paired-t-test-varianzhomogenität-und-effektgrössen" class="slide level2">
+<h2><strong>Paired t-Test, Varianzhomogenität und Effektgrössen</strong></h2>
 <table class="caption-top">
 <colgroup>
 <col style="width: 50%">
