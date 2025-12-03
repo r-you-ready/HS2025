@@ -382,7 +382,7 @@
     "href": "loesung_3.html#inline-code",
     "title": "Lösung 3",
     "section": "Inline Code",
-    "text": "Inline Code\n\nFüge folgenden dynamischen Satz in dein Dokument ein: „Dieses Dokument wurde zum letzten Mal am datum bearbeitet.“\nBenutze dafür die Variable datum die du bereits kreiert hast. Diese kannst du hinzufügen indem du “/” benutzt und “Inline R Code” suchst.\n\n\n\n\n\n\n\nLösung\n\n\n\n\n\nDieses Dokument wurde zum letzten Mal am 2025-12-02 bearbeitet.\n\n\n\n\nRendere dein erstes Dokument: Stelle ganz oben in deinem Dokument dafür das Format um.\n\n\n\n\n\n\n\nLösung\n\n\n\n\n\nÜbliche Formate sind html, docx oder pdf.\n\n\n\n\nNutze dafür den Render-Button und schau dir das gerenderte Ergebnis an. Was ist mit deinem dynamischen Satz passiert?\n\n\n\n\n\n\n\nLösung\n\n\n\n\n\nBeim Rendern des Dokumentes wird der Inline-Code ausgeführt und das aktuelle Datum (bzw. grundsätzlich das entsprechend zuvor definierte Objekt) an der entsprechenden Stelle im Satz eingefügt.\n\n\n\nDas Resultat sollte so aussehen (mit dem aktuellen Datum):\nDieses Dokument wurde zum letzten Mal am 2025-12-02 bearbeitet.\n\n\n\n\n\n\nImportant\n\n\n\nQuarto-Dokumente lassen sich nur rendern, wenn das gesamte Skript fehlerfrei durchläuft. Tritt beim Rendern ein Fehler auf, ist es sinnvoll, das gesamte Skript auszuführen und auf Fehlermeldungen zu achten. Auf diese Weise wird die Reproduzierbarkeit sichergestellt.\nMöchte man das Skript trotz eines Fehlers rendern, kann man an den entsprechenden Code-Chunk #| eval: false schreiben - dies verhindert, dass der Code für die gerenderte Datei ausgeführt wird.",
+    "text": "Inline Code\n\nFüge folgenden dynamischen Satz in dein Dokument ein: „Dieses Dokument wurde zum letzten Mal am datum bearbeitet.“\nBenutze dafür die Variable datum die du bereits kreiert hast. Diese kannst du hinzufügen indem du “/” benutzt und “Inline R Code” suchst.\n\n\n\n\n\n\n\nLösung\n\n\n\n\n\nDieses Dokument wurde zum letzten Mal am 2025-12-03 bearbeitet.\n\n\n\n\nRendere dein erstes Dokument: Stelle ganz oben in deinem Dokument dafür das Format um.\n\n\n\n\n\n\n\nLösung\n\n\n\n\n\nÜbliche Formate sind html, docx oder pdf.\n\n\n\n\nNutze dafür den Render-Button und schau dir das gerenderte Ergebnis an. Was ist mit deinem dynamischen Satz passiert?\n\n\n\n\n\n\n\nLösung\n\n\n\n\n\nBeim Rendern des Dokumentes wird der Inline-Code ausgeführt und das aktuelle Datum (bzw. grundsätzlich das entsprechend zuvor definierte Objekt) an der entsprechenden Stelle im Satz eingefügt.\n\n\n\nDas Resultat sollte so aussehen (mit dem aktuellen Datum):\nDieses Dokument wurde zum letzten Mal am 2025-12-03 bearbeitet.\n\n\n\n\n\n\nImportant\n\n\n\nQuarto-Dokumente lassen sich nur rendern, wenn das gesamte Skript fehlerfrei durchläuft. Tritt beim Rendern ein Fehler auf, ist es sinnvoll, das gesamte Skript auszuführen und auf Fehlermeldungen zu achten. Auf diese Weise wird die Reproduzierbarkeit sichergestellt.\nMöchte man das Skript trotz eines Fehlers rendern, kann man an den entsprechenden Code-Chunk #| eval: false schreiben - dies verhindert, dass der Code für die gerenderte Datei ausgeführt wird.",
     "crumbs": [
       "Übungen zu den Einheiten",
       "Hands on - Block 3 (Woche 5 - 6) - Mit Musterlösungen"
@@ -448,7 +448,7 @@
     "href": "loesung_1.html",
     "title": "Lösung 1",
     "section": "",
-    "text": "Bei Bedarf finden sich hier nochmal die Slides zur EH1: \n\n\nInstalliere R und RStudio:\n\nInstallation von R – neueste Version 4.5.1: https://stat.ethz.ch/CRAN/\nInstallation von Rstudio (Version 2025.05.1): https://posit.co/download/rstudio-desktop/\n\nDu weisst nicht was mit R auf sich hat? Hier ist eine Kurzerklärung: https://methodenlehre.github.io/einfuehrung-in-R/\n\n\n\n\nRStudio öffnen & Einstellungen vornehmen: Unter «tools» –«global options» die unter 1.1. beschriebenen Einstellungen vornehmen: https://methodenlehre.github.io/einfuehrung-in-R/chapters/01-workflow.html\n\n\n\nNeues Skript öffnen & orientieren:\n\n\n\n\nIm folgenden machen wir uns vertraut mit der Oberfläche von R-Studio:\n\n\n\n\n\n\n\nSkript für Code-Eingabe sowie Kommentare\nKonsole für die Ausführung von Code -&gt; Teste einfache mathematische Operation in dieser; reproduziere diese mittels Skript\nRechts oben: Environment & History\nRechts unten: Files, Plots, Packages und Help Viewer\n\n\n\n\nTidyverse ist ein Meta-Paket, das mehrere Pakete umfasst\n\nPakete installieren (nur 1x notwendig) -&gt; führe diesen Code in der Konsole aus\n\ninstall.packages(\"tidyverse\")\n\nPaket laden (innerhalb des Skriptes, bei jedem Neustart von R notwendig)\n\nlibrary(tidyverse)\n\nWarning: Paket 'tidyverse' wurde unter R Version 4.5.2 erstellt\n\n\n── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.4     ✔ readr     2.1.5\n✔ forcats   1.0.0     ✔ stringr   1.5.1\n✔ ggplot2   4.0.0     ✔ tibble    3.3.0\n✔ lubridate 1.9.4     ✔ tidyr     1.3.1\n✔ purrr     1.1.0     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\n\n\n\nTipp: Pakete regelmässig updaten mit z.B. update.packages()\n\n\n\na. Nutze R als Taschenrechner\n\n123+456\n\n\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\n123 + 456\n\n[1] 579\n\n\n\n\n\n2.  `144*112`\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\n144*112\n\n[1] 16128\n\n\n\n\n\n3.  `10/3`\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\n10/3\n\n[1] 3.333333\n\n\n\n\n\n4.  Quadriere 420\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\n420^2\n\n[1] 176400\n\n\n\n\n\n5.  Ziehe die Quadratwurzel aus 146 mit der Funktion `sqrt()`\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\nsqrt(146)\n\n[1] 12.08305\n\n\n\n\n\n6.  Berechne den Rest der Division 10/3 mit dem Modulo Operator: `%%`\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\n10 %% 3\n\n[1] 1\n\n\n\n\n\n\n\n\n\n\nZeichen\nBedeutung\n\n\n\n\n+\nAddition\n\n\n-\nSubstraktion\n\n\n*\nMultiplikation\n\n\n/\nDivision\n\n\nsqrt(x)\nQuadratwurzel\n\n\nabs(x)\nBetrag (absoluter Wert)\n\n\nx %% y\nModulo (x mod y) 5 %% 2 = 1\n\n\n^\nPotenz\n\n\n\n\n\n\n\n\nWeise den Wert 5 der Variable x zu mit dem Operator &lt;-\n\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\nx &lt;- 5\n\n\n\n\n\nWeise eine beliebige Zahl der Variable y hinzu und dividiere dann x durch y. Speichere dieses Ergebnis in der Variable z.\n\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\ny &lt;- 10 # hier könntet ihr auch jede andere Ziffer wählen\n\nz &lt;- x / y\n\n\n\n\n\nSchaue dir das Ergebnis in deinem Environment an. Lass dir das Ergebnis auch in der Konsole ausgeben. Das Environment findest du oben rechts, die Konsole ist unter deinem Skript.\n\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\n# z (hier über das # auskommentiert, da der Befehl nicht im Skript, sondern unten in der Konsole ausgeführt werden soll)\n\n\n\n\n\nErstelle zwei Variablen: Eine mit deinem Vornamen und eine mit deinem Nachnamen. Solche “character” Variablen musst du in Anführungszeichen setzen \"\"\n\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\nvorname &lt;- \"Lars\"\nnachname &lt;- \"Schilling\"\n\n\n\n\n\nKombiniere deinen Vor- und Nachnamen zu deinem vollen Namen mittels paste . Speichere diese Variable als voller_name.\n\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\nvoller_name &lt;- paste(vorname, nachname)\n\n\n\n\n\n\n\n\nDefiniere einen Vektor «first_vector» mit den Zahlen 100, 80, 54, 73. Einen Vektor definiert man so: first_vector &lt;- c(...)\n\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\nfirst_vector &lt;- c(100, 80, 54, 73)\n\n\n\n\n\nWende den Befehl boxplot() auf deinen Vektor an\n\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\nboxplot(first_vector)\n\n\n\n\n\n\n\n\n\n\n\n\nBerechne die Summe sum()und den Mittelwert mean() von deinem Vektor\n\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\nsum(first_vector)\n\n[1] 307\n\nmean(first_vector)\n\n[1] 76.75\n\n\n\n\n\n\nMultipliziere deinen Vektor mit *2\n\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\nfirst_vector * 2\n\n[1] 200 160 108 146\n\n\n\n\n\nDie wichtigsten Operatoren und Funktionen in R: https://methodenlehre.github.io/einfuehrung-in-R/chapters/02-R-language.html\n\n\n\n\n\nFunktion\nBedeutung\n\n\n\n\nmean(x, na.rm =FALSE)\nMittelwert\n\n\nsd(x)\nStandardabweichung\n\n\nvar(x)\nVarianz\n\n\nmedian(x)\nMedian\n\n\nsum(x)\nSumme\n\n\nmin(x)\nMinimalwert\n\n\nmax(x)\nMaximalwert\n\n\nrange(x)\nMinimal - und Maximalwert\n\n\n\n\n\n\n\n\nTeste ob die Zahl 5 größer als 2 ist –&gt; TRUE or FALSE?\n\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\n5 &gt; 2\n\n[1] TRUE\n\n\nTRUE, 5 ist grösser als 2.\n\n\n\n\nTeste ob 6 ungleich 8 ist –&gt; TRUE or FALSE?\n\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\n6 != 8\n\n[1] TRUE\n\n\nTRUE, 6 und 8 sind ungleich.\n\n\n\n\nSubtrahiere 80 von 50 und speichere das Ergebnis in einer Variable namens «diff_score».\n\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\ndiff_score &lt;- 80 - 50\n\n\n\n\n\nBerechne mit abs() den absoluten Wert von «diff_score» lassen dir diesen mit print(diff_score) in der Konsole ausgeben.\n\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\ndiff_score_abs &lt;- abs(diff_score)\n\n# print(diff_score_abs) (hier erneut mit # auskommentiert, da der Befehl nicht im Skript, sondern in der Console ausgeführt werden soll)\n\n\n\n\n\n\n\n\n\nZeichen\nBedeutung\n\n\n\n\n==\ngleich\n\n\n!=\nungleich\n\n\n&gt;\ngrösser\n\n\n&gt;=\ngrösser gleich\n\n\n&lt;\nkleiner\n\n\n&lt;=\nkleiner gleich\n\n\n|\nLogisches Oder\n\n\n&\nLogisches Und\n\n\n\n\n\n\n\n\n\n\nInformative Kommentare im Code sind elementar für die Nachvollziehbarkeit.\n\nSchreibe einen Kommentar indem du ein # verwendest.\n\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\n# Hier ein Beipsiel für einen Kommentar, wie auch schon weiter oben mehrmals verwendet um die Lösungen davon zu hindern ausgeführt zu werden.\n\n\n\n\n\nCode der nach einem # steht wird nicht ausgeführt. Setze ein # vor eine Codezeile und führe sie aus und beobachte was passiert.\n\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\n# 1 + 2\n\n\n\n\n\n\n\nEs gibt verschiedene Konventionen wie man Variablen bennen kann:\nhttps://methodenlehre.github.io/einfuehrung-in-R/chapters/02-R-language.html#variablennamen\n\nDefiniere eine neue Variable nach snake_case\n\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\nneue_variable &lt;- \"snake_case\"\n\n\n\n\n\nDefiniere eine zweite Variable nach CamelCase\n\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\nneueVariable &lt;- \"CamelCase\"\n\n\n\n\n\n\n\n\n\nSpeichere die beiden höchsten Werte aus «first_vector» in einer neuen Variable ab.\n\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\ntop_two &lt;- sort(first_vector, decreasing = TRUE)[1:2]\n\n\n\n\n\nErstelle einen Vektor mit Werten von 0-1000 in 10er Schritten.\n\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\nvec_seq &lt;- seq(from = 1, to = 1000, by = 10)\n\n\n\n\n\nZiehe zufällig eine Zahl aus diesem Vektor\n\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\nsample(vec_seq, 1)\n\n[1] 461\n\n\n\n\n\n\nGeneriere einen Vektor, der aus 50 Wiederholungen der Zahl 3 besteht.\n\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\nmy_vector &lt;- rep(3, times = 50)\n\n\n\n\nTipps zu diesen Aufgaben findest du bei Bedarf hier: https://methodenlehre.github.io/einfuehrung-in-R/chapters/02-R-language.html (Kapitel 2.1)\n\n\n\n\nnumeric vectors: werden in integer (ganze Zahlen) und double (reelle Zahlen) unterteilt, z.B.\nnumerical_vector &lt;- c(1, 2.5, 4)\ncharacter vectors: bestehen aus Zeichen, welche von Anführungszeichen umgeben werden, z.B.\ntext_vector &lt;- c(\"Hello\", \"World\")\nlogical vectors: Elemente dieses Typs können nur 3 Werte annehmen: TRUE, FALSE oder NA\nlog_vector &lt;- c(TRUE, FALSE, TRUE)\n\nVektoren müssen aus denselbsten Elementen bestehen, d.h. z.B. numeric und character können nicht gemischt werden. Vektoren werden meist mit c() erstellt.",
+    "text": "Bei Bedarf finden sich hier nochmal die Slides zur EH1: \n\n\nInstalliere R und RStudio:\n\nInstallation von R – neueste Version 4.5.1: https://stat.ethz.ch/CRAN/\nInstallation von Rstudio (Version 2025.05.1): https://posit.co/download/rstudio-desktop/\n\nDu weisst nicht was mit R auf sich hat? Hier ist eine Kurzerklärung: https://methodenlehre.github.io/einfuehrung-in-R/\n\n\n\n\nRStudio öffnen & Einstellungen vornehmen: Unter «tools» –«global options» die unter 1.1. beschriebenen Einstellungen vornehmen: https://methodenlehre.github.io/einfuehrung-in-R/chapters/01-workflow.html\n\n\n\nNeues Skript öffnen & orientieren:\n\n\n\n\nIm folgenden machen wir uns vertraut mit der Oberfläche von R-Studio:\n\n\n\n\n\n\n\nSkript für Code-Eingabe sowie Kommentare\nKonsole für die Ausführung von Code -&gt; Teste einfache mathematische Operation in dieser; reproduziere diese mittels Skript\nRechts oben: Environment & History\nRechts unten: Files, Plots, Packages und Help Viewer\n\n\n\n\nTidyverse ist ein Meta-Paket, das mehrere Pakete umfasst\n\nPakete installieren (nur 1x notwendig) -&gt; führe diesen Code in der Konsole aus\n\ninstall.packages(\"tidyverse\")\n\nPaket laden (innerhalb des Skriptes, bei jedem Neustart von R notwendig)\n\nlibrary(tidyverse)\n\nWarning: Paket 'tidyverse' wurde unter R Version 4.5.2 erstellt\n\n\n── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.4     ✔ readr     2.1.5\n✔ forcats   1.0.0     ✔ stringr   1.5.1\n✔ ggplot2   4.0.0     ✔ tibble    3.3.0\n✔ lubridate 1.9.4     ✔ tidyr     1.3.1\n✔ purrr     1.1.0     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\n\n\n\nTipp: Pakete regelmässig updaten mit z.B. update.packages()\n\n\n\na. Nutze R als Taschenrechner\n\n123+456\n\n\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\n123 + 456\n\n[1] 579\n\n\n\n\n\n2.  `144*112`\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\n144*112\n\n[1] 16128\n\n\n\n\n\n3.  `10/3`\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\n10/3\n\n[1] 3.333333\n\n\n\n\n\n4.  Quadriere 420\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\n420^2\n\n[1] 176400\n\n\n\n\n\n5.  Ziehe die Quadratwurzel aus 146 mit der Funktion `sqrt()`\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\nsqrt(146)\n\n[1] 12.08305\n\n\n\n\n\n6.  Berechne den Rest der Division 10/3 mit dem Modulo Operator: `%%`\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\n10 %% 3\n\n[1] 1\n\n\n\n\n\n\n\n\n\n\nZeichen\nBedeutung\n\n\n\n\n+\nAddition\n\n\n-\nSubstraktion\n\n\n*\nMultiplikation\n\n\n/\nDivision\n\n\nsqrt(x)\nQuadratwurzel\n\n\nabs(x)\nBetrag (absoluter Wert)\n\n\nx %% y\nModulo (x mod y) 5 %% 2 = 1\n\n\n^\nPotenz\n\n\n\n\n\n\n\n\nWeise den Wert 5 der Variable x zu mit dem Operator &lt;-\n\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\nx &lt;- 5\n\n\n\n\n\nWeise eine beliebige Zahl der Variable y hinzu und dividiere dann x durch y. Speichere dieses Ergebnis in der Variable z.\n\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\ny &lt;- 10 # hier könntet ihr auch jede andere Ziffer wählen\n\nz &lt;- x / y\n\n\n\n\n\nSchaue dir das Ergebnis in deinem Environment an. Lass dir das Ergebnis auch in der Konsole ausgeben. Das Environment findest du oben rechts, die Konsole ist unter deinem Skript.\n\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\n# z (hier über das # auskommentiert, da der Befehl nicht im Skript, sondern unten in der Konsole ausgeführt werden soll)\n\n\n\n\n\nErstelle zwei Variablen: Eine mit deinem Vornamen und eine mit deinem Nachnamen. Solche “character” Variablen musst du in Anführungszeichen setzen \"\"\n\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\nvorname &lt;- \"Lars\"\nnachname &lt;- \"Schilling\"\n\n\n\n\n\nKombiniere deinen Vor- und Nachnamen zu deinem vollen Namen mittels paste . Speichere diese Variable als voller_name.\n\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\nvoller_name &lt;- paste(vorname, nachname)\n\n\n\n\n\n\n\n\nDefiniere einen Vektor «first_vector» mit den Zahlen 100, 80, 54, 73. Einen Vektor definiert man so: first_vector &lt;- c(...)\n\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\nfirst_vector &lt;- c(100, 80, 54, 73)\n\n\n\n\n\nWende den Befehl boxplot() auf deinen Vektor an\n\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\nboxplot(first_vector)\n\n\n\n\n\n\n\n\n\n\n\n\nBerechne die Summe sum()und den Mittelwert mean() von deinem Vektor\n\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\nsum(first_vector)\n\n[1] 307\n\nmean(first_vector)\n\n[1] 76.75\n\n\n\n\n\n\nMultipliziere deinen Vektor mit *2\n\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\nfirst_vector * 2\n\n[1] 200 160 108 146\n\n\n\n\n\nDie wichtigsten Operatoren und Funktionen in R: https://methodenlehre.github.io/einfuehrung-in-R/chapters/02-R-language.html\n\n\n\n\n\nFunktion\nBedeutung\n\n\n\n\nmean(x, na.rm =FALSE)\nMittelwert\n\n\nsd(x)\nStandardabweichung\n\n\nvar(x)\nVarianz\n\n\nmedian(x)\nMedian\n\n\nsum(x)\nSumme\n\n\nmin(x)\nMinimalwert\n\n\nmax(x)\nMaximalwert\n\n\nrange(x)\nMinimal - und Maximalwert\n\n\n\n\n\n\n\n\nTeste ob die Zahl 5 größer als 2 ist –&gt; TRUE or FALSE?\n\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\n5 &gt; 2\n\n[1] TRUE\n\n\nTRUE, 5 ist grösser als 2.\n\n\n\n\nTeste ob 6 ungleich 8 ist –&gt; TRUE or FALSE?\n\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\n6 != 8\n\n[1] TRUE\n\n\nTRUE, 6 und 8 sind ungleich.\n\n\n\n\nSubtrahiere 80 von 50 und speichere das Ergebnis in einer Variable namens «diff_score».\n\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\ndiff_score &lt;- 80 - 50\n\n\n\n\n\nBerechne mit abs() den absoluten Wert von «diff_score» lassen dir diesen mit print(diff_score) in der Konsole ausgeben.\n\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\ndiff_score_abs &lt;- abs(diff_score)\n\n# print(diff_score_abs) (hier erneut mit # auskommentiert, da der Befehl nicht im Skript, sondern in der Console ausgeführt werden soll)\n\n\n\n\n\n\n\n\n\nZeichen\nBedeutung\n\n\n\n\n==\ngleich\n\n\n!=\nungleich\n\n\n&gt;\ngrösser\n\n\n&gt;=\ngrösser gleich\n\n\n&lt;\nkleiner\n\n\n&lt;=\nkleiner gleich\n\n\n|\nLogisches Oder\n\n\n&\nLogisches Und\n\n\n\n\n\n\n\n\n\n\nInformative Kommentare im Code sind elementar für die Nachvollziehbarkeit.\n\nSchreibe einen Kommentar indem du ein # verwendest.\n\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\n# Hier ein Beipsiel für einen Kommentar, wie auch schon weiter oben mehrmals verwendet um die Lösungen davon zu hindern ausgeführt zu werden.\n\n\n\n\n\nCode der nach einem # steht wird nicht ausgeführt. Setze ein # vor eine Codezeile und führe sie aus und beobachte was passiert.\n\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\n# 1 + 2\n\n\n\n\n\n\n\nEs gibt verschiedene Konventionen wie man Variablen bennen kann:\nhttps://methodenlehre.github.io/einfuehrung-in-R/chapters/02-R-language.html#variablennamen\n\nDefiniere eine neue Variable nach snake_case\n\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\nneue_variable &lt;- \"snake_case\"\n\n\n\n\n\nDefiniere eine zweite Variable nach CamelCase\n\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\nneueVariable &lt;- \"CamelCase\"\n\n\n\n\n\n\n\n\n\nSpeichere die beiden höchsten Werte aus «first_vector» in einer neuen Variable ab.\n\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\ntop_two &lt;- sort(first_vector, decreasing = TRUE)[1:2]\n\n\n\n\n\nErstelle einen Vektor mit Werten von 0-1000 in 10er Schritten.\n\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\nvec_seq &lt;- seq(from = 1, to = 1000, by = 10)\n\n\n\n\n\nZiehe zufällig eine Zahl aus diesem Vektor\n\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\nsample(vec_seq, 1)\n\n[1] 421\n\n\n\n\n\n\nGeneriere einen Vektor, der aus 50 Wiederholungen der Zahl 3 besteht.\n\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\nmy_vector &lt;- rep(3, times = 50)\n\n\n\n\nTipps zu diesen Aufgaben findest du bei Bedarf hier: https://methodenlehre.github.io/einfuehrung-in-R/chapters/02-R-language.html (Kapitel 2.1)\n\n\n\n\nnumeric vectors: werden in integer (ganze Zahlen) und double (reelle Zahlen) unterteilt, z.B.\nnumerical_vector &lt;- c(1, 2.5, 4)\ncharacter vectors: bestehen aus Zeichen, welche von Anführungszeichen umgeben werden, z.B.\ntext_vector &lt;- c(\"Hello\", \"World\")\nlogical vectors: Elemente dieses Typs können nur 3 Werte annehmen: TRUE, FALSE oder NA\nlog_vector &lt;- c(TRUE, FALSE, TRUE)\n\nVektoren müssen aus denselbsten Elementen bestehen, d.h. z.B. numeric und character können nicht gemischt werden. Vektoren werden meist mit c() erstellt.",
     "crumbs": [
       "Übungen zu den Einheiten",
       "Hands on - Block 1 (Woche 1 - 2) - Mit Musterlösungen"
@@ -514,7 +514,7 @@
     "href": "loesung_1.html#für-fortgeschrittene-r-nutzerinnen",
     "title": "Lösung 1",
     "section": "",
-    "text": "Speichere die beiden höchsten Werte aus «first_vector» in einer neuen Variable ab.\n\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\ntop_two &lt;- sort(first_vector, decreasing = TRUE)[1:2]\n\n\n\n\n\nErstelle einen Vektor mit Werten von 0-1000 in 10er Schritten.\n\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\nvec_seq &lt;- seq(from = 1, to = 1000, by = 10)\n\n\n\n\n\nZiehe zufällig eine Zahl aus diesem Vektor\n\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\nsample(vec_seq, 1)\n\n[1] 461\n\n\n\n\n\n\nGeneriere einen Vektor, der aus 50 Wiederholungen der Zahl 3 besteht.\n\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\nmy_vector &lt;- rep(3, times = 50)\n\n\n\n\nTipps zu diesen Aufgaben findest du bei Bedarf hier: https://methodenlehre.github.io/einfuehrung-in-R/chapters/02-R-language.html (Kapitel 2.1)",
+    "text": "Speichere die beiden höchsten Werte aus «first_vector» in einer neuen Variable ab.\n\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\ntop_two &lt;- sort(first_vector, decreasing = TRUE)[1:2]\n\n\n\n\n\nErstelle einen Vektor mit Werten von 0-1000 in 10er Schritten.\n\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\nvec_seq &lt;- seq(from = 1, to = 1000, by = 10)\n\n\n\n\n\nZiehe zufällig eine Zahl aus diesem Vektor\n\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\nsample(vec_seq, 1)\n\n[1] 421\n\n\n\n\n\n\nGeneriere einen Vektor, der aus 50 Wiederholungen der Zahl 3 besteht.\n\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\nmy_vector &lt;- rep(3, times = 50)\n\n\n\n\nTipps zu diesen Aufgaben findest du bei Bedarf hier: https://methodenlehre.github.io/einfuehrung-in-R/chapters/02-R-language.html (Kapitel 2.1)",
     "crumbs": [
       "Übungen zu den Einheiten",
       "Hands on - Block 1 (Woche 1 - 2) - Mit Musterlösungen"
@@ -805,7 +805,7 @@
     "href": "front_page.html",
     "title": "Einleitung",
     "section": "",
-    "text": "In diesem E-Book findest du alle wichtigen Informationen zum Methodenseminar “R u Ready”. Du kannst hier u. a. die wöchentlichen Folien, Hands-On R Übungen, den Leistungsnachweis, und Frequently Asked Questions einsehen. Du kannst über die Unterkapitel (links) zu den entsprechenden Inhalten navigieren, oder auch die Suchfunktion oben links verwenden, um nach einem bestimmten Begriff zu suchen.\n\nHinweisboxen\nHier einen Überblick über die auf den Seiten enthaltenen Hinweisboxen:\n\n\n\n\n\n\nNote\n\n\n\nVertiefung: Hier geht es in die Tiefe.\n\n\n\n\n\n\n\n\nImportant\n\n\n\nWichtig: Dies ist eine wichtige Information.\n\n\n\n\n\n\n\n\nWarning\n\n\n\nAchtung: Hier ist Vorsicht geboten.\n\n\n\n\n\n\n\n\nCaution\n\n\n\nVorsicht: Diese Information ist noch in Bearbeitung.\n\n\n\n\nSyllabus\n\n\n\n\n\n\nCaution\n\n\n\nVorsicht: Der Syllabus dient als grobe Richtlinie und kann angepasst werden, falls wir in einzelnen Einheiten mehr oder weniger Zeit benötigen.\n\n\n\n\nLetztes Update Dezember 02, 2025 at 15:35",
+    "text": "In diesem E-Book findest du alle wichtigen Informationen zum Methodenseminar “R u Ready”. Du kannst hier u. a. die wöchentlichen Folien, Hands-On R Übungen, den Leistungsnachweis, und Frequently Asked Questions einsehen. Du kannst über die Unterkapitel (links) zu den entsprechenden Inhalten navigieren, oder auch die Suchfunktion oben links verwenden, um nach einem bestimmten Begriff zu suchen.\n\nHinweisboxen\nHier einen Überblick über die auf den Seiten enthaltenen Hinweisboxen:\n\n\n\n\n\n\nNote\n\n\n\nVertiefung: Hier geht es in die Tiefe.\n\n\n\n\n\n\n\n\nImportant\n\n\n\nWichtig: Dies ist eine wichtige Information.\n\n\n\n\n\n\n\n\nWarning\n\n\n\nAchtung: Hier ist Vorsicht geboten.\n\n\n\n\n\n\n\n\nCaution\n\n\n\nVorsicht: Diese Information ist noch in Bearbeitung.\n\n\n\n\nSyllabus\n\n\n\n\n\n\nCaution\n\n\n\nVorsicht: Der Syllabus dient als grobe Richtlinie und kann angepasst werden, falls wir in einzelnen Einheiten mehr oder weniger Zeit benötigen.\n\n\n\n\nLetztes Update Dezember 03, 2025 at 09:45",
     "crumbs": [
       "Einleitung"
     ]
@@ -1860,835 +1860,292 @@
     ]
   },
   {
-    "objectID": "EH_12.html#r-u-ready-reproduzierbare-datenaufbereitung-und--analyse-mit-r",
-    "href": "EH_12.html#r-u-ready-reproduzierbare-datenaufbereitung-und--analyse-mit-r",
-    "title": "R u Ready? HS2025 | Psychologie der Digitalisierung - Einheit 12",
+    "objectID": "EH_13.html#r-u-ready-reproduzierbare-datenaufbereitung-und--analyse-mit-r",
+    "href": "EH_13.html#r-u-ready-reproduzierbare-datenaufbereitung-und--analyse-mit-r",
+    "title": "R u Ready? HS2025 | Psychologie der Digitalisierung - Einheit 13",
     "section": "R u Ready? Reproduzierbare Datenaufbereitung und -analyse mit R",
-    "text": "R u Ready? Reproduzierbare Datenaufbereitung und -analyse mit R\nHS 2025 LV-Leitung: Dr. Sandra Grinschgl / MSc. Aaron Friedli Tutor: BSc. Lars Schilling12. Einheit, 03.12.2025",
+    "text": "R u Ready? Reproduzierbare Datenaufbereitung und -analyse mit R\nHS 2025 LV-Leitung: Dr. Sandra Grinschgl / MSc. Aaron Friedli Tutor: BSc. Lars Schilling13. Einheit, 10.12.2025"
+  },
+  {
+    "objectID": "EH_13.html#heute",
+    "href": "EH_13.html#heute",
+    "title": "R u Ready? HS2025 | Psychologie der Digitalisierung - Einheit 13",
+    "section": "Heute:",
+    "text": "Heute:"
+  },
+  {
+    "objectID": "EH_11.html#r-u-ready-reproduzierbare-datenaufbereitung-und--analyse-mit-r",
+    "href": "EH_11.html#r-u-ready-reproduzierbare-datenaufbereitung-und--analyse-mit-r",
+    "title": "R u Ready? HS2025 | Psychologie der Digitalisierung - Einheit 11",
+    "section": "R u Ready? Reproduzierbare Datenaufbereitung und -analyse mit R",
+    "text": "R u Ready? Reproduzierbare Datenaufbereitung und -analyse mit R\nHS 2025 LV-Leitung: Dr. Sandra Grinschgl / MSc. Aaron Friedli Tutor: BSc. Lars Schilling11. Einheit, 24.11.2025",
     "crumbs": [
       "Präsentationen",
-      "Einheit 12 - 03.12.2025"
+      "Einheit 11 - 26.11.2025"
     ]
   },
   {
-    "objectID": "EH_12.html#heute",
-    "href": "EH_12.html#heute",
-    "title": "R u Ready? HS2025 | Psychologie der Digitalisierung - Einheit 12",
+    "objectID": "EH_11.html#heute",
+    "href": "EH_11.html#heute",
+    "title": "R u Ready? HS2025 | Psychologie der Digitalisierung - Einheit 11",
     "section": "Heute:",
     "text": "Heute:",
     "crumbs": [
       "Präsentationen",
-      "Einheit 12 - 03.12.2025"
+      "Einheit 11 - 26.11.2025"
     ]
   },
   {
-    "objectID": "EH_12.html#fragen-zur-r-hausübung-2",
-    "href": "EH_12.html#fragen-zur-r-hausübung-2",
-    "title": "R u Ready? HS2025 | Psychologie der Digitalisierung - Einheit 12",
-    "section": "Fragen zur R Hausübung 2??",
-    "text": "Fragen zur R Hausübung 2??",
+    "objectID": "EH_11.html#fragen-hands-on-block-5",
+    "href": "EH_11.html#fragen-hands-on-block-5",
+    "title": "R u Ready? HS2025 | Psychologie der Digitalisierung - Einheit 11",
+    "section": "Fragen Hands On Block 5?",
+    "text": "Fragen Hands On Block 5?",
     "crumbs": [
       "Präsentationen",
-      "Einheit 12 - 03.12.2025"
+      "Einheit 11 - 26.11.2025"
     ]
   },
   {
-    "objectID": "EH_12.html#abgabe-simulierte-datensätze",
-    "href": "EH_12.html#abgabe-simulierte-datensätze",
-    "title": "R u Ready? HS2025 | Psychologie der Digitalisierung - Einheit 12",
-    "section": "Abgabe simulierte Datensätze",
-    "text": "Abgabe simulierte Datensätze\nAuf ILIAS findet ihr Ordner mit eurem Namen. Diese sind nach dem PsychDS System strukturiert. In Raw findet ihr dann eure individuellen Datensätze",
+    "objectID": "EH_11.html#abbildungen-visualize",
+    "href": "EH_11.html#abbildungen-visualize",
+    "title": "R u Ready? HS2025 | Psychologie der Digitalisierung - Einheit 11",
+    "section": "Abbildungen: Visualize",
+    "text": "Abbildungen: Visualize",
     "crumbs": [
       "Präsentationen",
-      "Einheit 12 - 03.12.2025"
+      "Einheit 11 - 26.11.2025"
     ]
   },
   {
-    "objectID": "EH_12.html#abschlussarbeit-leistungsnachweis",
-    "href": "EH_12.html#abschlussarbeit-leistungsnachweis",
-    "title": "R u Ready? HS2025 | Psychologie der Digitalisierung - Einheit 12",
-    "section": "Abschlussarbeit / Leistungsnachweis",
-    "text": "Abschlussarbeit / Leistungsnachweis",
-    "crumbs": [
-      "Präsentationen",
-      "Einheit 12 - 03.12.2025"
-    ]
-  },
-  {
-    "objectID": "EH_12.html#simulierte-datensätze",
-    "href": "EH_12.html#simulierte-datensätze",
-    "title": "R u Ready? HS2025 | Psychologie der Digitalisierung - Einheit 12",
-    "section": "Simulierte Datensätze",
-    "text": "Simulierte Datensätze\n\nVorgehen: Eine Funktion simuliert Population(en) und zieht daraus zufällig Datenpunkte. Diese Zufälligkeit der Ziehung führt dazu, dass sich eure Datensätze unterscheiden!\n\n\n\nDadurch ergeben sich Unterschiede in den Hypothesentests und deskriptiven Statistiken.\n\n\n\nAber: Die Ergebnisse werden sich dennoch in einer vergleichbaren Range voneinander bewegen.",
-    "crumbs": [
-      "Präsentationen",
-      "Einheit 12 - 03.12.2025"
-    ]
-  },
-  {
-    "objectID": "EH_12.html#plausible-ergebnisse",
-    "href": "EH_12.html#plausible-ergebnisse",
-    "title": "R u Ready? HS2025 | Psychologie der Digitalisierung - Einheit 12",
-    "section": "Plausible Ergebnisse",
-    "text": "Plausible Ergebnisse\n\nAngenommen der Effekt der Intervention hat wirklich keine Auswirkung auf das Offloading Verhalten der Personen (H0 ist wahr).\n\n✅H0 = Keine Gruppenunterschiede zwischen above und below gruppen.\n❌H1 = Gruppen unterscheiden sich voneinander im Offlading Verhalten.\n\n\n\n\nHypothesentest: t-Test für unabhängige Stichproben (above vs. below)\n\n\n\nWie hoch ist die Wahrscheinlichkeit das wir trotzdem ein sigifikantes Ergebnis (Fehler 1. Art) erhalten?\n\n\nAlpha-Fehler 0.05. In allen Analysen in denen wir signifikante werte erwarten (2x3 anova und mmq one-way anova) werden auch signifikante werte rauskommen (simulation so eingestellt). In den ANOVAs in denen wir nicht mit signifikanten werten rechnen, kann es sein das es per zufall trotzdem zu signifikanten werten kommt. In diesen fällen wird nicht erwartet das noch posthoc t-tests gerechnet werden.",
-    "crumbs": [
-      "Präsentationen",
-      "Einheit 12 - 03.12.2025"
-    ]
-  },
-  {
-    "objectID": "EH_12.html#t-tests",
-    "href": "EH_12.html#t-tests",
-    "title": "R u Ready? HS2025 | Psychologie der Digitalisierung - Einheit 12",
-    "section": "t-Tests",
-    "text": "t-Tests\n\n\n\n\n\n\n\n\nMittelwertvergleiche\n\nFür unabhängige Stichproben: Testet, ob sich die Mittelwerte zweier unabhängiger Gruppen unterscheiden.\nFür abhängige Stichproben: Testet, ob sich die Mittelwerte derselben Personen in zwei Bedingungen (z. B. Messwiederholung) unterscheiden.\nVoraussetzungen: Normalverteilung, Varianzhomogenität\nAlternative: z. B. Welch-t-Test",
-    "crumbs": [
-      "Präsentationen",
-      "Einheit 12 - 03.12.2025"
-    ]
-  },
-  {
-    "objectID": "EH_12.html#t-test-voraussetzungsprüfung",
-    "href": "EH_12.html#t-test-voraussetzungsprüfung",
-    "title": "R u Ready? HS2025 | Psychologie der Digitalisierung - Einheit 12",
-    "section": "t-Test: Voraussetzungsprüfung",
-    "text": "t-Test: Voraussetzungsprüfung\nLevene-Test\nDer Levene Test überprüft Varianzhomogenität! Varianzhomogenität bedeutet, dass alle Gruppen in einer Analyse ungeführ die gleiche Streuung aufweisen, bzw. ähnlich um ihren Mittelwert schwanken.\n\ndat_full_below_above &lt;- dat_full |&gt; \n  filter(group_all != \"control\")\n\ndat_full_below_above$group_all &lt;- as.factor(dat_full_below_above$group_all)\n\n\nlibrary(car)\n\nleveneTest(dat_full_below_above$pre4, dat_full_below_above$group_all)\n\nLevene's Test for Homogeneity of Variance (center = median)\n       Df F value Pr(&gt;F)  \ngroup   1  2.8442 0.0947 .\n      104                 \n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1",
-    "crumbs": [
-      "Präsentationen",
-      "Einheit 12 - 03.12.2025"
-    ]
-  },
-  {
-    "objectID": "EH_12.html#t-test-beispiel",
-    "href": "EH_12.html#t-test-beispiel",
-    "title": "R u Ready? HS2025 | Psychologie der Digitalisierung - Einheit 12",
-    "section": "t-Test: Beispiel",
-    "text": "t-Test: Beispiel\n\nt.test(pre4 ~ group_all, data = dat_full_below_above, var.equal = TRUE)\n\n\n    Two Sample t-test\n\ndata:  pre4 by group_all\nt = 7.9845, df = 104, p-value = 1.991e-12\nalternative hypothesis: true difference in means between group above and group below is not equal to 0\n95 percent confidence interval:\n 20.25170 33.63509\nsample estimates:\nmean in group above mean in group below \n           59.66038            32.71698 \n\neffsize::cohen.d(pre4 ~ group_all, data = dat_full_below_above)\n\n\nCohen's d\n\nd estimate: 1.551045 (large)\n95 percent confidence interval:\n   lower    upper \n1.111706 1.990383",
-    "crumbs": [
-      "Präsentationen",
-      "Einheit 12 - 03.12.2025"
-    ]
-  },
-  {
-    "objectID": "EH_12.html#grundlegende-t-test-funktionen",
-    "href": "EH_12.html#grundlegende-t-test-funktionen",
-    "title": "R u Ready? HS2025 | Psychologie der Digitalisierung - Einheit 12",
-    "section": "Grundlegende t-Test-Funktionen",
-    "text": "Grundlegende t-Test-Funktionen\n\n\n\n\n\n\n\nFunktion\nBeschreibung\n\n\n\n\nt.test\nAllgemeine Funktion für verschiedene t-Tests: Ein-Stichproben-, unabhängige und abhängige Stichproben.\n\n\nt.test(av, mu = x)\nEin-Stichproben-t-Test. av = abhängige Variable, x = Vergleichswert der Population.\n\n\nt.test(av ~ uv)\nWelch-t-Test für unabhängige Stichproben. av = abhängige Variable, uv = Gruppenvariable (Ungleiche Varianzen erlaubt).\n\n\nt.test(av ~ uv, var.equal = TRUE)\nKlassischer t-Test für unabhängige Stichproben (Varianzgleichheit vorausgesetzt).",
-    "crumbs": [
-      "Präsentationen",
-      "Einheit 12 - 03.12.2025"
-    ]
-  },
-  {
-    "objectID": "EH_12.html#paired-t-test-varianzhomogenität-und-effektgrössen",
-    "href": "EH_12.html#paired-t-test-varianzhomogenität-und-effektgrössen",
-    "title": "R u Ready? HS2025 | Psychologie der Digitalisierung - Einheit 12",
-    "section": "Paired t-Test, Varianzhomogenität und Effektgrössen",
-    "text": "Paired t-Test, Varianzhomogenität und Effektgrössen\n\n\n\n\n\n\n\nFunktion\nBeschreibung\n\n\n\n\nt.test(av1, av2, paired = TRUE)\nt-Test für abhängige Stichproben (z. B. Prä–Post). av1 und av2 = Messzeitpunkte.\n\n\nleveneTest(av, uv) *\nLevene-Test auf Varianzhomogenität für unabhängige Gruppen. Aus dem car-Paket.\n\n\neffsize::cohen.d() *\nBerechnet Cohen’s d + Konfidenzintervall. Aus dem efffsize-Paket.",
-    "crumbs": [
-      "Präsentationen",
-      "Einheit 12 - 03.12.2025"
-    ]
-  },
-  {
-    "objectID": "EH_12.html#heute-haben-wir",
-    "href": "EH_12.html#heute-haben-wir",
-    "title": "R u Ready? HS2025 | Psychologie der Digitalisierung - Einheit 12",
-    "section": "Heute haben wir…",
-    "text": "Heute haben wir…\n… uns die simulierten Datensätze für die Abschlussarbeit angeschaut.\n…Korrelationen, Regressionen und t-Tests gerechnet",
-    "crumbs": [
-      "Präsentationen",
-      "Einheit 12 - 03.12.2025"
-    ]
-  },
-  {
-    "objectID": "EH_12.html#hausübung",
-    "href": "EH_12.html#hausübung",
-    "title": "R u Ready? HS2025 | Psychologie der Digitalisierung - Einheit 12",
-    "section": "Hausübung",
-    "text": "Hausübung\nR Übung 3 bis 12.12.25\nNächste Woche: Aaron übernimmt beide Gruppen\n\n\n\nwith ChatGPT",
-    "crumbs": [
-      "Präsentationen",
-      "Einheit 12 - 03.12.2025"
-    ]
-  },
-  {
-    "objectID": "EH_10.html#r-u-ready-reproduzierbare-datenaufbereitung-und--analyse-mit-r",
-    "href": "EH_10.html#r-u-ready-reproduzierbare-datenaufbereitung-und--analyse-mit-r",
-    "title": "R u Ready? HS2025 | Psychologie der Digitalisierung - Einheit 10",
-    "section": "R u Ready? Reproduzierbare Datenaufbereitung und -analyse mit R",
-    "text": "R u Ready? Reproduzierbare Datenaufbereitung und -analyse mit R\nHS 2025 LV-Leitung: Dr. Sandra Grinschgl / MSc. Aaron Friedli Tutor: BSc. Lars Schilling10. Einheit, 19.11.2025",
-    "crumbs": [
-      "Präsentationen",
-      "Einheit 10 - 19.11.2025"
-    ]
-  },
-  {
-    "objectID": "EH_10.html#heute",
-    "href": "EH_10.html#heute",
-    "title": "R u Ready? HS2025 | Psychologie der Digitalisierung - Einheit 10",
-    "section": "Heute:",
-    "text": "Heute:\n\n\n\nVerschiebung der Abgabe der Datensätze an die Studierenden auf EH12 auf Wunsch der Studierenden",
-    "crumbs": [
-      "Präsentationen",
-      "Einheit 10 - 19.11.2025"
-    ]
-  },
-  {
-    "objectID": "EH_10.html#muddiest-points",
-    "href": "EH_10.html#muddiest-points",
-    "title": "R u Ready? HS2025 | Psychologie der Digitalisierung - Einheit 10",
-    "section": "Muddiest Points!",
-    "text": "Muddiest Points!",
-    "crumbs": [
-      "Präsentationen",
-      "Einheit 10 - 19.11.2025"
-    ]
-  },
-  {
-    "objectID": "EH_10.html#gruppe-sandra",
-    "href": "EH_10.html#gruppe-sandra",
-    "title": "R u Ready? HS2025 | Psychologie der Digitalisierung - Einheit 10",
-    "section": "Gruppe Sandra",
-    "text": "Gruppe Sandra\nFortsetzung Datenqualität -&gt; Folien EH 9\nZuerst Theorie, dann Hands-On",
-    "crumbs": [
-      "Präsentationen",
-      "Einheit 10 - 19.11.2025"
-    ]
-  },
-  {
-    "objectID": "EH_10.html#hands-on-block-5-check-in",
-    "href": "EH_10.html#hands-on-block-5-check-in",
-    "title": "R u Ready? HS2025 | Psychologie der Digitalisierung - Einheit 10",
-    "section": "Hands-on Block 5: Check In",
-    "text": "Hands-on Block 5: Check In\nHaben alle einen Long Datensatz (e.g. dat_full_long) mit 318 Zeilen = 2 Zeilen pro Versuchsperson?\nWenn nicht:\n\ndat_full_long &lt;- dat_full |&gt; \n  pivot_longer(cols = c(pre1, pre4),\n               names_to = \"time_rating\",         \n               values_to = \"rating\")\n\n❗Falls ihr bis Ende Lektion noch nicht den LONG Datensatz erstellt und gespeichert habt - meldet euch bei uns",
-    "crumbs": [
-      "Präsentationen",
-      "Einheit 10 - 19.11.2025"
-    ]
-  },
-  {
-    "objectID": "EH_10.html#visualize-tabellen",
-    "href": "EH_10.html#visualize-tabellen",
-    "title": "R u Ready? HS2025 | Psychologie der Digitalisierung - Einheit 10",
-    "section": "Visualize: Tabellen",
-    "text": "Visualize: Tabellen\n\nMöglichkeit APA konforme Tabellen in R zu erstellen\n\nSchritt 1: Deskriptive Tabelle erstellen mit summarize\n\npenguins_full &lt;- drop_na(penguins)\npenguins_summary &lt;- penguins_full |&gt; \n  group_by(species) |&gt;\n  summarize(mean_body_mass = mean(body_mass_g),\n            min_body_mass = min(body_mass_g),\n            max_body_mass = max(body_mass_g)\n            )\n\npenguins_summary\n\n# A tibble: 3 × 4\n  species   mean_body_mass min_body_mass max_body_mass\n  &lt;fct&gt;              &lt;dbl&gt;         &lt;int&gt;         &lt;int&gt;\n1 Adelie             3706.          2850          4775\n2 Chinstrap          3733.          2700          4800\n3 Gentoo             5092.          3950          6300",
-    "crumbs": [
-      "Präsentationen",
-      "Einheit 10 - 19.11.2025"
-    ]
-  },
-  {
-    "objectID": "EH_10.html#visualize-tabellen-1",
-    "href": "EH_10.html#visualize-tabellen-1",
-    "title": "R u Ready? HS2025 | Psychologie der Digitalisierung - Einheit 10",
-    "section": "Visualize: Tabellen",
-    "text": "Visualize: Tabellen\nSchritt 2: kable auf deskriptive Tabelle anwenden\n\nlibrary(knitr)\n\npenguins_summary |&gt;\n  kable(\n    caption = \"Summary of penguin body mass by species\",\n    digits = 1,\n    col.names = c(\"Species\", \"Mean body mass (g)\", \"Min\", \"Max\")\n  )\n\n\nSummary of penguin body mass by species\n\n\nSpecies\nMean body mass (g)\nMin\nMax\n\n\n\n\nAdelie\n3706.2\n2850\n4775\n\n\nChinstrap\n3733.1\n2700\n4800\n\n\nGentoo\n5092.4\n3950\n6300\n\n\n\n\n\nWeitere Formatierungen möglich, z.B. row.names, col.names…siehe Hilfefunktion",
-    "crumbs": [
-      "Präsentationen",
-      "Einheit 10 - 19.11.2025"
-    ]
-  },
-  {
-    "objectID": "EH_10.html#apatables---apa-konforme-tabellen-von-statistischen-analysen",
-    "href": "EH_10.html#apatables---apa-konforme-tabellen-von-statistischen-analysen",
-    "title": "R u Ready? HS2025 | Psychologie der Digitalisierung - Einheit 10",
-    "section": "apaTables - APA konforme Tabellen von statistischen Analysen",
-    "text": "apaTables - APA konforme Tabellen von statistischen Analysen\nKorrelationstabelle im APA Format –&gt; Kann man auch für Regressionen und ANOVAs verwenden\n1.Schritt: Auswahl von Variablen\n\npenguins_subset &lt;- penguins |&gt;\n  select(bill_length_mm, bill_depth_mm, flipper_length_mm)",
-    "crumbs": [
-      "Präsentationen",
-      "Einheit 10 - 19.11.2025"
-    ]
-  },
-  {
-    "objectID": "EH_10.html#apatables---apa-konforme-tabellen-von-statistischen-analysen-1",
-    "href": "EH_10.html#apatables---apa-konforme-tabellen-von-statistischen-analysen-1",
-    "title": "R u Ready? HS2025 | Psychologie der Digitalisierung - Einheit 10",
-    "section": "apaTables - APA konforme Tabellen von statistischen Analysen",
-    "text": "apaTables - APA konforme Tabellen von statistischen Analysen\n2.Schritt: Korrelationstabelle for ausgewählte Variablen\nSpeichert Tabelle als Word Datei\n\nlibrary(apaTables)\napa.cor.table(penguins_subset)",
-    "crumbs": [
-      "Präsentationen",
-      "Einheit 10 - 19.11.2025"
-    ]
-  },
-  {
-    "objectID": "EH_10.html#abbildungen-visualize-fortsetzung-in-eh-11",
-    "href": "EH_10.html#abbildungen-visualize-fortsetzung-in-eh-11",
-    "title": "R u Ready? HS2025 | Psychologie der Digitalisierung - Einheit 10",
-    "section": "Abbildungen: Visualize (Fortsetzung in EH 11)",
-    "text": "Abbildungen: Visualize (Fortsetzung in EH 11)",
-    "crumbs": [
-      "Präsentationen",
-      "Einheit 10 - 19.11.2025"
-    ]
-  },
-  {
-    "objectID": "EH_10.html#visualisierungen-reproduktion-der-figures-aus-grinschgl-2021",
-    "href": "EH_10.html#visualisierungen-reproduktion-der-figures-aus-grinschgl-2021",
-    "title": "R u Ready? HS2025 | Psychologie der Digitalisierung - Einheit 10",
+    "objectID": "EH_11.html#visualisierungen-reproduktion-der-figures-aus-grinschgl-2021",
+    "href": "EH_11.html#visualisierungen-reproduktion-der-figures-aus-grinschgl-2021",
+    "title": "R u Ready? HS2025 | Psychologie der Digitalisierung - Einheit 11",
     "section": "Visualisierungen: Reproduktion der Figures aus Grinschgl 2021",
     "text": "Visualisierungen: Reproduktion der Figures aus Grinschgl 2021",
     "crumbs": [
       "Präsentationen",
-      "Einheit 10 - 19.11.2025"
+      "Einheit 11 - 26.11.2025"
     ]
   },
   {
-    "objectID": "EH_10.html#visualisierungen",
-    "href": "EH_10.html#visualisierungen",
-    "title": "R u Ready? HS2025 | Psychologie der Digitalisierung - Einheit 10",
+    "objectID": "EH_11.html#visualisierungen",
+    "href": "EH_11.html#visualisierungen",
+    "title": "R u Ready? HS2025 | Psychologie der Digitalisierung - Einheit 11",
     "section": "Visualisierungen",
     "text": "Visualisierungen",
     "crumbs": [
       "Präsentationen",
-      "Einheit 10 - 19.11.2025"
+      "Einheit 11 - 26.11.2025"
     ]
   },
   {
-    "objectID": "EH_10.html#ggplot2",
-    "href": "EH_10.html#ggplot2",
-    "title": "R u Ready? HS2025 | Psychologie der Digitalisierung - Einheit 10",
+    "objectID": "EH_11.html#ggplot2",
+    "href": "EH_11.html#ggplot2",
+    "title": "R u Ready? HS2025 | Psychologie der Digitalisierung - Einheit 11",
     "section": "ggplot2()",
     "text": "ggplot2()\nSehr flexibles Paket.\n\nPlots werden schrittweise “befüllt”\n\n\n\nAlle plots beginnen mit ggplot() und dem verwendeten Datensatz\nMit aes() definieren wir die elemantaren Elemente der Plots - Variablen die geplottet werden sollen\nmit + können wir geoms, layers und weitere Elemente hinzufügen.",
     "crumbs": [
       "Präsentationen",
-      "Einheit 10 - 19.11.2025"
+      "Einheit 11 - 26.11.2025"
     ]
   },
   {
-    "objectID": "EH_10.html#ggplot2---cheatsheet",
-    "href": "EH_10.html#ggplot2---cheatsheet",
-    "title": "R u Ready? HS2025 | Psychologie der Digitalisierung - Einheit 10",
+    "objectID": "EH_11.html#ggplot2---cheatsheet",
+    "href": "EH_11.html#ggplot2---cheatsheet",
+    "title": "R u Ready? HS2025 | Psychologie der Digitalisierung - Einheit 11",
     "section": "ggplot2() - Cheatsheet",
     "text": "ggplot2() - Cheatsheet\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWith ggplot2, you begin a plot with the function ggplot(), defining a plot object that you then add layers to. The first argument of ggplot() is the dataset to use in the graph and so ggplot(data = penguins) creates an empty graph that is primed to display the penguins data, but since we haven’t told it how to visualize it yet, for now it’s empty. This is not a very exciting plot, but you can think of it like an empty canvas you’ll paint the remaining layers of your plot onto.\nNext, we need to tell ggplot() how the information from our data will be visually represented. The mapping argument of the ggplot() function defines how variables in your dataset are mapped to visual properties (aesthetics) of your plot. The mapping argument is always defined in the aes() function, and the x and y arguments of aes() specify which variables to map to the x and y axes. For now, we will only map flipper length to the x aesthetic and body mass to the y aesthetic. ggplot2 looks for the mapped variables in the data argument, in this case, penguins.\nTo do so, we need to define a geom: the geometrical object that a plot uses to represent data. These geometric objects are made available in ggplot2 with functions that start with geom_. People often describe plots by the type of geom that the plot uses. For example, bar charts use bar geoms (geom_bar()), line charts use line geoms (geom_line()), boxplots use boxplot geoms (geom_boxplot()), scatterplots use point geoms (geom_point()), and so on.\nZusammenhang bedeutet die Verwendung von +, dass wir einzelne Elemente eines Plot-Objektes zusammenfügen.",
     "crumbs": [
       "Präsentationen",
-      "Einheit 10 - 19.11.2025"
+      "Einheit 11 - 26.11.2025"
     ]
   },
   {
-    "objectID": "EH_10.html#argumente-von-ggplot",
-    "href": "EH_10.html#argumente-von-ggplot",
-    "title": "R u Ready? HS2025 | Psychologie der Digitalisierung - Einheit 10",
+    "objectID": "EH_11.html#argumente-von-ggplot",
+    "href": "EH_11.html#argumente-von-ggplot",
+    "title": "R u Ready? HS2025 | Psychologie der Digitalisierung - Einheit 11",
     "section": "Argumente von ggplot()",
-    "text": "Argumente von ggplot()\n\nVariablen als Aestheatic Mappings defineren\nMapping ist immer das zweite argument, “call” kann also auch verkürzt werden.\n\n\np &lt;- penguins |&gt;\n  ggplot( \n       mapping = \n         aes(x = body_mass_g, \n           y = bill_length_mm))\np",
+    "text": "Argumente von ggplot()\n\nVariablen als Aesthetic Mappings definieren\nMapping ist immer das zweite Argument (nach dem Datensatz), “call” kann also auch verkürzt werden.\n\n\np &lt;- penguins |&gt;\n  ggplot( \n       mapping = \n         aes(x = body_mass_g, \n           y = bill_length_mm))\np",
     "crumbs": [
       "Präsentationen",
-      "Einheit 10 - 19.11.2025"
+      "Einheit 11 - 26.11.2025"
     ]
   },
   {
-    "objectID": "EH_10.html#ggplot---geoms",
-    "href": "EH_10.html#ggplot---geoms",
-    "title": "R u Ready? HS2025 | Psychologie der Digitalisierung - Einheit 10",
+    "objectID": "EH_11.html#ggplot---geoms",
+    "href": "EH_11.html#ggplot---geoms",
+    "title": "R u Ready? HS2025 | Psychologie der Digitalisierung - Einheit 11",
     "section": "ggplot() - Geoms",
-    "text": "ggplot() - Geoms\n\nLayers Hinzufügen z.B. ein geom mit +\nGeoms = geometrische Objekte, die die Daten darstellen (z.B. Punkte, Linien)\nMuss je nachdem welche Daten man hat und wie man diese darstellen will ausgewählt werden, z.B.\n\nKategoriale Variable: geom_bar()\nKontinuierliche Variable: geom_histogram()\n2 kontinuierliche Variablen: geom_point(), geom_line()\n2 Kategoriale Variablen: geom_count()\nKategorial + Kontinuierlich: geom_boxplot(), geom_violin()\n\n\n\np &lt;- p +\n  geom_point()\n\np",
+    "text": "ggplot() - Geoms\n\nLayers Hinzufügen z.B. ein geom mit +\nGeoms = geometrische Objekte, die die Daten darstellen (z.B. Punkte, Linien)\nMuss je nachdem welche Daten man hat und wie man diese darstellen will ausgewählt werden, z.B.\n\nKategoriale Variable: geom_bar()\nKontinuierliche Variable: geom_histogram()\n2 kontinuierliche Variablen: geom_point(), geom_line()\n2 Kategoriale Variablen: geom_count()\nKategorial + Kontinuierlich: geom_boxplot(), geom_violin()",
     "crumbs": [
       "Präsentationen",
-      "Einheit 10 - 19.11.2025"
+      "Einheit 11 - 26.11.2025"
     ]
   },
   {
-    "objectID": "EH_10.html#ggplot---layers",
-    "href": "EH_10.html#ggplot---layers",
-    "title": "R u Ready? HS2025 | Psychologie der Digitalisierung - Einheit 10",
+    "objectID": "EH_11.html#ggplot---geoms-1",
+    "href": "EH_11.html#ggplot---geoms-1",
+    "title": "R u Ready? HS2025 | Psychologie der Digitalisierung - Einheit 11",
+    "section": "ggplot() - Geoms",
+    "text": "ggplot() - Geoms\n\np &lt;- p +\n  geom_point()\n\np",
+    "crumbs": [
+      "Präsentationen",
+      "Einheit 11 - 26.11.2025"
+    ]
+  },
+  {
+    "objectID": "EH_11.html#ggplot---layers",
+    "href": "EH_11.html#ggplot---layers",
+    "title": "R u Ready? HS2025 | Psychologie der Digitalisierung - Einheit 11",
     "section": "ggplot() - Layers",
     "text": "ggplot() - Layers\n\nMappings können auch in den Layers definiert werden\n\n\np &lt;- p + \n  geom_point(aes(x = body_mass_g, \n           y = bill_length_mm))\n\np",
     "crumbs": [
       "Präsentationen",
-      "Einheit 10 - 19.11.2025"
+      "Einheit 11 - 26.11.2025"
     ]
   },
   {
-    "objectID": "EH_10.html#ggplot---layers-1",
-    "href": "EH_10.html#ggplot---layers-1",
-    "title": "R u Ready? HS2025 | Psychologie der Digitalisierung - Einheit 10",
+    "objectID": "EH_11.html#ggplot---layers-1",
+    "href": "EH_11.html#ggplot---layers-1",
+    "title": "R u Ready? HS2025 | Psychologie der Digitalisierung - Einheit 11",
     "section": "ggplot() - Layers",
     "text": "ggplot() - Layers\n\nTitel + Achsenbeschriftung (= labs), Regressionslinien, vereinfachtes Design\n\n\np &lt;- p +\n  geom_smooth(aes(group = 1), method = \"lm\") +\n  theme_classic() +\n  labs(\n    title = \"Relationship Between Body Mass and Bill Length\",\n    x = \"Body Mass (g)\",\n    y = \"Bill Length (mm)\"\n  )\n\np\n\n\nmit theme_ können verschiedene Formatierungen gewählt werden. theme_classic wird typischerweise für APA7 passende Formatierungen gewählt.",
     "crumbs": [
       "Präsentationen",
-      "Einheit 10 - 19.11.2025"
+      "Einheit 11 - 26.11.2025"
     ]
   },
   {
-    "objectID": "EH_10.html#ggplot---verschiedene-layersgeoms-kombiniert",
-    "href": "EH_10.html#ggplot---verschiedene-layersgeoms-kombiniert",
-    "title": "R u Ready? HS2025 | Psychologie der Digitalisierung - Einheit 10",
+    "objectID": "EH_11.html#ggplot---verschiedene-layersgeoms-kombiniert",
+    "href": "EH_11.html#ggplot---verschiedene-layersgeoms-kombiniert",
+    "title": "R u Ready? HS2025 | Psychologie der Digitalisierung - Einheit 11",
     "section": "ggplot() - Verschiedene Layers/Geoms kombiniert",
     "text": "ggplot() - Verschiedene Layers/Geoms kombiniert\n\np2 &lt;- penguins |&gt;\n  ggplot(aes(x = island, y = body_mass_g, color = island, shape = sex)) +\n  geom_boxplot() +\n  geom_jitter(alpha = 0.5)+\n  theme_classic()+\n  labs(\n    title = \"Body Mass Per Island and Species\", x = \"Island\", y = \"Body Mass (g)\")\np2\n\n\n\nAchtung: Nicht optimal formatiert, weil sonst der Plot zu klein dargestellt wird.",
     "crumbs": [
       "Präsentationen",
-      "Einheit 10 - 19.11.2025"
+      "Einheit 11 - 26.11.2025"
     ]
   },
   {
-    "objectID": "EH_10.html#abbildungen-speichern",
-    "href": "EH_10.html#abbildungen-speichern",
-    "title": "R u Ready? HS2025 | Psychologie der Digitalisierung - Einheit 10",
+    "objectID": "EH_11.html#abbildungen-speichern",
+    "href": "EH_11.html#abbildungen-speichern",
+    "title": "R u Ready? HS2025 | Psychologie der Digitalisierung - Einheit 11",
     "section": "Abbildungen speichern",
     "text": "Abbildungen speichern\n\nggsave(filename = \"my_first_plot.png\", plot = p2)",
     "crumbs": [
       "Präsentationen",
-      "Einheit 10 - 19.11.2025"
+      "Einheit 11 - 26.11.2025"
     ]
   },
   {
-    "objectID": "EH_10.html#weitere-ressourcen",
-    "href": "EH_10.html#weitere-ressourcen",
-    "title": "R u Ready? HS2025 | Psychologie der Digitalisierung - Einheit 10",
+    "objectID": "EH_11.html#weitere-ressourcen",
+    "href": "EH_11.html#weitere-ressourcen",
+    "title": "R u Ready? HS2025 | Psychologie der Digitalisierung - Einheit 11",
     "section": "Weitere Ressourcen:",
     "text": "Weitere Ressourcen:\nViel, viel mehr Möglichkeiten als wir hier besprechen, siehe z.B.:\nAuflistung von Argumenten\nggplot2 Cheatsheet\nR for Data Science – Kapitel 9 & 10:\nKapitel „Layers“\nKapitel „EDA“\nWeitere Textelemente in Abbildungen (Kapitel 11)\nHier findet man auch weitere Visualisierungsmöglichkeiten & Informationen dazu, wie man verschiedene Plots neben/untereinander abbilden kann.\nTop 50 Visualisierungen mit ggplot2\nfür Animationen, Signifikanztests, Wordclouds usw.",
     "crumbs": [
       "Präsentationen",
-      "Einheit 10 - 19.11.2025"
+      "Einheit 11 - 26.11.2025"
     ]
   },
   {
-    "objectID": "EH_10.html#heute-haben-wir",
-    "href": "EH_10.html#heute-haben-wir",
-    "title": "R u Ready? HS2025 | Psychologie der Digitalisierung - Einheit 10",
+    "objectID": "EH_11.html#erinnerung-statistik",
+    "href": "EH_11.html#erinnerung-statistik",
+    "title": "R u Ready? HS2025 | Psychologie der Digitalisierung - Einheit 11",
+    "section": "Erinnerung Statistik",
+    "text": "Erinnerung Statistik\n\nForschungsfrage/ Hyptothese aufstellen und Auswahl passender Testverfahren 👉 Bereits im Datenanalyseplan gemacht\n\nEntscheidungsbaum statistischer Testverfahren\n\nEntscheidungsbaum UZH",
+    "crumbs": [
+      "Präsentationen",
+      "Einheit 11 - 26.11.2025"
+    ]
+  },
+  {
+    "objectID": "EH_11.html#korrelationen",
+    "href": "EH_11.html#korrelationen",
+    "title": "R u Ready? HS2025 | Psychologie der Digitalisierung - Einheit 11",
+    "section": "Korrelationen",
+    "text": "Korrelationen\n\nLinearer Zusammenhang zweier Variablen\nPositive Korrelation = hohe Ausprägungen einer Variable hängen mit hohen Ausprägungen einer anderen Variable zusammen\nNegative Korrelation = Hohe Ausprägungen einer Variable hängen mit niedrigen Ausprägungen einer anderen Variable zusammen\nKorrelationskoeffizient r kann von -1 bis +1 gehen\nVoraussetzung: Normalverteilung der Residuen (siehe EH 10)\nNicht-parametrische Alternative: Spearman Korrelation\n\n\ncor.test(penguins$bill_length_mm, penguins$body_mass_g)\n\n\n    Pearson's product-moment correlation\n\ndata:  penguins$bill_length_mm and penguins$body_mass_g\nt = 13.654, df = 340, p-value &lt; 2.2e-16\nalternative hypothesis: true correlation is not equal to 0\n95 percent confidence interval:\n 0.5220040 0.6595358\nsample estimates:\n      cor \n0.5951098",
+    "crumbs": [
+      "Präsentationen",
+      "Einheit 11 - 26.11.2025"
+    ]
+  },
+  {
+    "objectID": "EH_11.html#notation",
+    "href": "EH_11.html#notation",
+    "title": "R u Ready? HS2025 | Psychologie der Digitalisierung - Einheit 11",
+    "section": "Notation",
+    "text": "Notation\n\noptions(scipen = 999)\ncor.test(penguins$bill_length_mm, penguins$body_mass_g)\n\n\n    Pearson's product-moment correlation\n\ndata:  penguins$bill_length_mm and penguins$body_mass_g\nt = 13.654, df = 340, p-value &lt; 0.00000000000000022\nalternative hypothesis: true correlation is not equal to 0\n95 percent confidence interval:\n 0.5220040 0.6595358\nsample estimates:\n      cor \n0.5951098",
+    "crumbs": [
+      "Präsentationen",
+      "Einheit 11 - 26.11.2025"
+    ]
+  },
+  {
+    "objectID": "EH_11.html#hinweise-zur-linearen-regression",
+    "href": "EH_11.html#hinweise-zur-linearen-regression",
+    "title": "R u Ready? HS2025 | Psychologie der Digitalisierung - Einheit 11",
+    "section": "Hinweise zur linearen Regression",
+    "text": "Hinweise zur linearen Regression\n\nTestet den Zusammenhang zwischen zwei Variablen\nEinfache lineare Regression = Korrelation\nKeine Kausalaussagen möglich (wie auch bei Korrelationen)\nVoraussetzungen: Normalverteilung der Residuen, Multikollinearität und Homoskedastizität\nNicht-parametrische Alternative: Poisson-Regression\n\n\n\nHomoskedastizität bedeutet, dass die Varianz der Residuen in einer Regressionsanalyse   für alle Werte des Prädiktors konstant ist. Das heißt, die Abweichungen der vorhergesagten Werte von den wahren Werten sind in etwa immer gleich groß – unabhängig wie hoch oder niedrig der Wert des Prädiktors ist. Um deine Regressionsanalyse sinnvoll interpretieren zu können, ist es wichtig, dass Homoskedastizität vorliegt. Homoskedastizität bildet deshalb neben einigen weiteren Aspekten (z.B. Vermeidung von Multikollinearität ) eine wichtige Voraussetzung für die lineare Regression. Heteroskedastizität Das Gegenteil von Homoskedastizität ist Heteroskedastizität. In diesem Fall verändert sich die Varianz der Residuen mit ansteigenden oder abfallenden Werten des Prädiktors. Beispielsweise kannst du bei Heteroskedastizität mit deiner Vorhersage systematisch umso weiter daneben liegen, je größer der Prädiktorwert ist, für den du dein Kriterium schätzen möchtest.",
+    "crumbs": [
+      "Präsentationen",
+      "Einheit 11 - 26.11.2025"
+    ]
+  },
+  {
+    "objectID": "EH_11.html#einfache-lineare-regressionen",
+    "href": "EH_11.html#einfache-lineare-regressionen",
+    "title": "R u Ready? HS2025 | Psychologie der Digitalisierung - Einheit 11",
+    "section": "Einfache lineare Regressionen",
+    "text": "Einfache lineare Regressionen\nArgumente\n\nmodel_1 &lt;- lm(mean_rl_all ~ cvstm_propcorrect, data = dat_full)\n\nsummary(model_1)\n\n\nCall:\nlm(formula = mean_rl_all ~ cvstm_propcorrect, data = dat_full)\n\nResiduals:\n    Min      1Q  Median      3Q     Max \n-2.1982 -0.6544 -0.1708  0.7555  3.5717 \n\nCoefficients:\n                  Estimate Std. Error t value             Pr(&gt;|t|)    \n(Intercept)         7.6277     0.8257   9.238 &lt; 0.0000000000000002 ***\ncvstm_propcorrect  -3.2993     1.1202  -2.945              0.00372 ** \n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\nResidual standard error: 1.097 on 157 degrees of freedom\nMultiple R-squared:  0.05236,   Adjusted R-squared:  0.04632 \nF-statistic: 8.674 on 1 and 157 DF,  p-value: 0.003719",
+    "crumbs": [
+      "Präsentationen",
+      "Einheit 11 - 26.11.2025"
+    ]
+  },
+  {
+    "objectID": "EH_11.html#regression-output",
+    "href": "EH_11.html#regression-output",
+    "title": "R u Ready? HS2025 | Psychologie der Digitalisierung - Einheit 11",
+    "section": "Regression: Output",
+    "text": "Regression: Output\n\n\nHier eine sehr kurze, punktuelle Zusammenfassung:\n\nIntercept (7.63): Ausgangswert von mean_rl_all, wenn cvstm_propcorrect = 0.\nSteigung (-3.30): Hoeherer cvstm_propcorrect sagt niedrigeren mean_rl_all voraus (negativer Zusammenhang\np = .0037: Zusammenhang ist signifikant.\nResiduen: Durchschnittliche Abweichung vom Modell ca. 1.10.\nR² = 0.052: Modell erklaert 5% der Varianz → kleiner Effekt.\nF-Test p = .0037: Das Gesamtmodell ist signifikant.\n\nKurz: Höhere cvstm_propcorrect-Werte gehen mit niedrigeren mean_rl_all-Werten einher, aber das Modell erklaert nur wenig Varianz.",
+    "crumbs": [
+      "Präsentationen",
+      "Einheit 11 - 26.11.2025"
+    ]
+  },
+  {
+    "objectID": "EH_11.html#hierarchische-regression",
+    "href": "EH_11.html#hierarchische-regression",
+    "title": "R u Ready? HS2025 | Psychologie der Digitalisierung - Einheit 11",
+    "section": "Hierarchische Regression",
+    "text": "Hierarchische Regression\n\nMan legt zwei oder mehr Regressionsmodelle an mit zunehmenden Prädiktoren\nDann vergleicht man diese Modelle mit anova(model1, model2). Gibt es einen signifikanten Zuwachs an aufgeklärter Varianz (siehe Determinationskoeffizient) von model1 zu model2?\n\nSiehe hier: Lineare Regression mit R (einfach, multiple, hierarchisch)",
+    "crumbs": [
+      "Präsentationen",
+      "Einheit 11 - 26.11.2025"
+    ]
+  },
+  {
+    "objectID": "EH_11.html#heute-haben-wir",
+    "href": "EH_11.html#heute-haben-wir",
+    "title": "R u Ready? HS2025 | Psychologie der Digitalisierung - Einheit 11",
     "section": "Heute haben wir:",
-    "text": "Heute haben wir:\n\nMuddiest Points besprochen\nBasics der Datenvisualisierungen kennengelernt\n\nErstellung von Tabellen\nggplot()\n\n\nReminder: Beim Abschlussprojekt müsst ihr 1 Tabelle oder Abbildung nach Wahl zu den simulierten Daten abgeben.",
+    "text": "Heute haben wir:\n\nBasics der Datenvisualisierungen kennengelernt\n\nErstellung von Tabellen\nggplot()\n\nKorrelationen und Regressionen in R kennengelernt\n\nReminder: R Übung bis Freitag 28.11, Peer Feedback über Forum bis 03.12.",
     "crumbs": [
       "Präsentationen",
-      "Einheit 10 - 19.11.2025"
+      "Einheit 11 - 26.11.2025"
     ]
   },
   {
-    "objectID": "EH_10.html#r-hausübung-2",
-    "href": "EH_10.html#r-hausübung-2",
-    "title": "R u Ready? HS2025 | Psychologie der Digitalisierung - Einheit 10",
-    "section": "R Hausübung 2",
-    "text": "R Hausübung 2\nAbgabe bis Freitag 28.11.2025, 23:55\nPeerfeedback bis Mittwoch 03.12.2025 (vor der Einheit)\nAchtung: Einhalten der Namensvorgaben!\n\nNamenseinhaltung für Abgabe der Files (da wir diese via R-Funktion öffnen)",
+    "objectID": "EH_11.html#optionale-slide-korrelation-einfache-lineare-regression",
+    "href": "EH_11.html#optionale-slide-korrelation-einfache-lineare-regression",
+    "title": "R u Ready? HS2025 | Psychologie der Digitalisierung - Einheit 11",
+    "section": "Optionale Slide Korrelation = Einfache lineare Regression",
+    "text": "Optionale Slide Korrelation = Einfache lineare Regression\n\n\n\n    Pearson's product-moment correlation\n\ndata:  penguins$bill_length_mm and penguins$body_mass_g\nt = 13.654, df = 340, p-value &lt; 0.00000000000000022\nalternative hypothesis: true correlation is not equal to 0\n95 percent confidence interval:\n 0.5220040 0.6595358\nsample estimates:\n      cor \n0.5951098 \n\n\n\nCall:\nlm(formula = bill_length_mm ~ body_mass_g, data = penguins)\n\nResiduals:\n     Min       1Q   Median       3Q      Max \n-10.1251  -3.0434  -0.8089   2.0711  16.1109 \n\nCoefficients:\n              Estimate Std. Error t value            Pr(&gt;|t|)    \n(Intercept) 26.8988724  1.2691478   21.19 &lt;0.0000000000000002 ***\nbody_mass_g  0.0040514  0.0002967   13.65 &lt;0.0000000000000002 ***\n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\nResidual standard error: 4.394 on 340 degrees of freedom\n  (2 Beobachtungen als fehlend gelöscht)\nMultiple R-squared:  0.3542,    Adjusted R-squared:  0.3523 \nF-statistic: 186.4 on 1 and 340 DF,  p-value: &lt; 0.00000000000000022\n\n\n\n\n[1] 0.3541557",
     "crumbs": [
       "Präsentationen",
-      "Einheit 10 - 19.11.2025"
-    ]
-  },
-  {
-    "objectID": "datenanalyseplan.html",
-    "href": "datenanalyseplan.html",
-    "title": "3 Datenanalyseplan",
-    "section": "",
-    "text": "Fragen zum Datenanalyseplan",
-    "crumbs": [
-      "FAQ",
-      "3  Datenanalyseplan"
-    ]
-  },
-  {
-    "objectID": "datenanalyseplan.html#müssen-die-anmerkungen-im-datenanalyseplan-nach-der-bearbeitung-gelöscht-werden-so-dass-nur-die-frage-und-der-titel-verbleiben",
-    "href": "datenanalyseplan.html#müssen-die-anmerkungen-im-datenanalyseplan-nach-der-bearbeitung-gelöscht-werden-so-dass-nur-die-frage-und-der-titel-verbleiben",
-    "title": "3 Datenanalyseplan",
-    "section": "Müssen die Anmerkungen im Datenanalyseplan nach der Bearbeitung gelöscht werden, so dass nur die Frage und der Titel verbleiben?",
-    "text": "Müssen die Anmerkungen im Datenanalyseplan nach der Bearbeitung gelöscht werden, so dass nur die Frage und der Titel verbleiben?\nÜblicherweise werden Datenanalysepläne auf OSF (dem Open Science Framework) mitsamt den Anmerkungen veröffentlicht. Für das Seminar ist es möglich die Anmerkungen zu behalten oder zu löschen.",
-    "crumbs": [
-      "FAQ",
-      "3  Datenanalyseplan"
-    ]
-  },
-  {
-    "objectID": "datenanalyseplan.html#müssen-auch-zu-explorativen-fragestellungen-hypothesen-aufgestellt-werden",
-    "href": "datenanalyseplan.html#müssen-auch-zu-explorativen-fragestellungen-hypothesen-aufgestellt-werden",
-    "title": "3 Datenanalyseplan",
-    "section": "Müssen auch zu explorativen Fragestellungen Hypothesen aufgestellt werden?",
-    "text": "Müssen auch zu explorativen Fragestellungen Hypothesen aufgestellt werden?\nKurzgesagt, nein. Bei explorativen Fragestellungen kann man auch einfach anmerken, dass diese explorativ sind – es also keine bisherige Theorie oder Evidenz für einen bestimmte Richtung gibt. Wichtig ist hierbei vor allem, transparent und vorausschauend zu arbeiten, in diesem Fall also den Umstand, explorativ zu arbeiten, klar zu benennen.",
-    "crumbs": [
-      "FAQ",
-      "3  Datenanalyseplan"
-    ]
-  },
-  {
-    "objectID": "datenanalyseplan.html#wenn-voraussetzungsprüfungen-oder-post-hoc-tests-durchgeführt-werden-müssen-diese-auch-im-datenanalyseplan-ergänzt-werden",
-    "href": "datenanalyseplan.html#wenn-voraussetzungsprüfungen-oder-post-hoc-tests-durchgeführt-werden-müssen-diese-auch-im-datenanalyseplan-ergänzt-werden",
-    "title": "3 Datenanalyseplan",
-    "section": "Wenn Voraussetzungsprüfungen oder post-hoc Tests durchgeführt werden, müssen diese auch im Datenanalyseplan ergänzt werden?",
-    "text": "Wenn Voraussetzungsprüfungen oder post-hoc Tests durchgeführt werden, müssen diese auch im Datenanalyseplan ergänzt werden?\nGrundsätzlich gilt: Der Datenanalyseplan soll fremden Wissenschaftler:innen aus der Psychologie ermöglichen die Studie und die Datenanalyse ohne weiteren Aufwand nachvollziehen zu können. Dafür sollte auf Vollständigkeit und Genauigkeit geachtet werden. Dementsprechend gilt es, die Voraussetzungsprüfungen entweder komplett wegzulassen oder sie sowohl im Skript als auch im Datenanalyseplan zu ergänzen.",
-    "crumbs": [
-      "FAQ",
-      "3  Datenanalyseplan"
-    ]
-  },
-  {
-    "objectID": "datenanalyseplan.html#soll-der-abstract-bereits-die-resultate-von-grinschgl-et-al.-2020-erwähnen-oder-offenlassen-welche-resultate-zu-erwarten-sind",
-    "href": "datenanalyseplan.html#soll-der-abstract-bereits-die-resultate-von-grinschgl-et-al.-2020-erwähnen-oder-offenlassen-welche-resultate-zu-erwarten-sind",
-    "title": "3 Datenanalyseplan",
-    "section": "Soll der Abstract bereits die Resultate von Grinschgl et al. (2020) erwähnen oder offenlassen, welche Resultate zu erwarten sind?",
-    "text": "Soll der Abstract bereits die Resultate von Grinschgl et al. (2020) erwähnen oder offenlassen, welche Resultate zu erwarten sind?\nÜblicherweise lässt der Datenanalyseplan die Resultate der beschriebenen Analyse im Abstract noch offen, da diese zu dem Zeitpunkt, zu welchem der Datenanalyseplan erstellt wird, noch nicht bekannt sind. Bei einer Replikation der Originalstudie – wie es hier der Fall ist – können die Ergebnisse aus dieser aber auch bereits genannt werden. Bezüglich der eigenen Datenanalyse sollte wiederum von erwarteten Ergebnissen ausgehen. Da die Analyse der Daten erst nach Verfassen des Datenanalyseplans folgt sind die Resultate bis dahin nicht bekannt.",
-    "crumbs": [
-      "FAQ",
-      "3  Datenanalyseplan"
-    ]
-  },
-  {
-    "objectID": "checkliste_abschlussarbeit.html",
-    "href": "checkliste_abschlussarbeit.html",
-    "title": "Checkliste Abschlussarbeit",
-    "section": "",
-    "text": "Abgabe bis 11.1.2026 - 23:55\nAbgabe als ZIP-File: vorname_nachname_abschlussarbeit.zip\nFür die Abschlussarbeit erhaltet ihr simulierte Daten. Diese werden den Daten des Originalpapers in den meisten Aspekten sehr ähnlich sein. Allerdings müssen einige Teile davon zusätzlich bereinigt werden, bevor sie ausgewertet werden können. Die folgende Checkliste soll euch dabei helfen, an alle relevanten Aspekte der Datenbereinigung zu denken.\nDie Datensatzaufbereitung erfolgt im processing-Skript. Der final aufbereitete Datensatz (dat_full) sowie der Long-Datensatz (dat_long) werden im Ordner data/processed gespeichert.",
-    "crumbs": [
-      "Checkliste Abschlussarbeit"
-    ]
-  },
-  {
-    "objectID": "checkliste_abschlussarbeit.html#aspekte-die-bei-der-bereinigung-processing-beachtet-werden-sollten",
-    "href": "checkliste_abschlussarbeit.html#aspekte-die-bei-der-bereinigung-processing-beachtet-werden-sollten",
-    "title": "Checkliste Abschlussarbeit",
-    "section": "Aspekte, die bei der Bereinigung (processing) beachtet werden sollten",
-    "text": "Aspekte, die bei der Bereinigung (processing) beachtet werden sollten\n\nHaben alle Daten die gleiche Anzahl an Beobachtungen?\n\n-   Gibt es Personen mit fehlenden Werten, die ausgeschlossen werden müssen?\n\n-   Gibt es Personen doppelt im Datensatz?\n\nGibt es unmögliche Werte in den Daten, z. B. -999? Wie können diese Daten ersetzt werden z.B aus anderen Variablen berechnet werden?\nGibt es reverse-kodierte Fragebogenvariablen (var_name_r)?\nGibt es Variablen, die nicht den korrekten Datentyp haben, z. B. numerische Variablen, die als Character angezeigt werden? Schaut euch diese Variablen genau an!\n(Beispiel: drei = 3, stimme voll und ganz zu = höchster Wert)",
-    "crumbs": [
-      "Checkliste Abschlussarbeit"
-    ]
-  },
-  {
-    "objectID": "checkliste_abschlussarbeit.html#weitere-vorbereitende-schritte-im-processed-datensatz",
-    "href": "checkliste_abschlussarbeit.html#weitere-vorbereitende-schritte-im-processed-datensatz",
-    "title": "Checkliste Abschlussarbeit",
-    "section": "Weitere vorbereitende Schritte im processed-Datensatz",
-    "text": "Weitere vorbereitende Schritte im processed-Datensatz\n\nMergen der 7 Einzeldatensätze\nDroppen von redundanten Variablen\nUmbenennen von Variablen, die nicht im snake_case-Format sind\nBerechnung der mmq_mean Variable\nSpeichern der Daten!",
-    "crumbs": [
-      "Checkliste Abschlussarbeit"
-    ]
-  },
-  {
-    "objectID": "checkliste_abschlussarbeit.html#im-analyseskript-analysis-werden",
-    "href": "checkliste_abschlussarbeit.html#im-analyseskript-analysis-werden",
-    "title": "Checkliste Abschlussarbeit",
-    "section": "Im Analyseskript (analysis) werden",
-    "text": "Im Analyseskript (analysis) werden\n\nNötige Vorbereitungen gemacht, die nicht zum processing gehören (z.B. Faktoren setzen)\nDie Analysen aus dem Datenanlyseplan durchgeführt!\n\nDeskriptive Statistik (M & SD) berechnen so wie in Table 1 (siehe Grinschgl et al., 2021)\n2x3 mixed ANOVA für subj. Leistungseinschätzungen mit post-hoc t-Tests, inkl.Effektstärken (η2 und Cohen’s d)\nOne-Way ANOVA für jede Offloading Variable (3x), inkl. Effektstärke (η2)\nOne-Way ANOVA für Trial Duration in Pattern Copy Task, inkl. Effektstärke (η2)\nOne-Way ANOVA für MMQ mit post-hoc t-Tests, inkl. Effektstärken (η2 und Cohen’sd)\nOne-Way ANOVA für Arbeitsgedächtnisleistung im Feature Switch Detection Task,inkl. Effektstärke (η2)\n1 Tabelle oder 1 Abbildung nach Wahl erstellen\nOptional: Testen der Voraussetzungen bei jeder Analyse – wenn diese gemacht wird, soll es auch im Datenanalyseplan beschrieben werden und die Analysen bei Voraussetzungsverletzungen entsprechend angepasst werden.\n\n\nPost-hoc-t-Tests werden nur für die 2x3-ANOVA und die MMQ-ANOVA erwartet. Sollte eine weitere ANOVA zufällig signifikante Werte aufweisen, werden hierfür keine Post-hoc-t-Tests verlangt.",
-    "crumbs": [
-      "Checkliste Abschlussarbeit"
-    ]
-  },
-  {
-    "objectID": "checkliste_abschlussarbeit.html#dinge-die-im-datenanalyseplan-angepasst-werden-müssen",
-    "href": "checkliste_abschlussarbeit.html#dinge-die-im-datenanalyseplan-angepasst-werden-müssen",
-    "title": "Checkliste Abschlussarbeit",
-    "section": "Dinge, die im Datenanalyseplan angepasst werden müssen:",
-    "text": "Dinge, die im Datenanalyseplan angepasst werden müssen:\n\nData Collection Procedures\nMissing Data\nUnit of Analyses/Data Exclusion",
-    "crumbs": [
-      "Checkliste Abschlussarbeit"
-    ]
-  },
-  {
-    "objectID": "checkliste_abschlussarbeit.html#dinge-die-im-codebook-angepasst-werden-müssen",
-    "href": "checkliste_abschlussarbeit.html#dinge-die-im-codebook-angepasst-werden-müssen",
-    "title": "Checkliste Abschlussarbeit",
-    "section": "Dinge, die im Codebook angepasst werden müssen:",
-    "text": "Dinge, die im Codebook angepasst werden müssen:\n\nCoding of item → reverse-kodierte Items\nCoding of Missing Data (falls vorhanden)\n1stes Blatt: Data Collection Procedures → Simulierte Daten.",
-    "crumbs": [
-      "Checkliste Abschlussarbeit"
-    ]
-  },
-  {
-    "objectID": "checkliste_abschlussarbeit.html#ordnerstruktur-für-die-abgabe",
-    "href": "checkliste_abschlussarbeit.html#ordnerstruktur-für-die-abgabe",
-    "title": "Checkliste Abschlussarbeit",
-    "section": "Ordnerstruktur für die Abgabe",
-    "text": "Ordnerstruktur für die Abgabe\nDie (für unser Seminar leicht abgeänderte) Psych-DS-Struktur wird eingehalten. Das bedeutet:\n\nDaten im Ordner data.\n\n-   Rohdaten in `data/raw` (werden nicht verändert).\n\n-   Aufbereitete Daten (`dat_full`) in `data/processed`\n\nAnalyseskripte (processing und analysis) im Ordner code\nGerenderte Analyseskripte (html oder docx oder pdf) ebenfalls im Ordner code\nDatenanalyseplan im Ordner preregistration\nCodebook im Ordner data",
-    "crumbs": [
-      "Checkliste Abschlussarbeit"
-    ]
-  },
-  {
-    "objectID": "checkliste_abschlussarbeit.html#self-check-wie-sehen-plausible-ergebnisse-aus",
-    "href": "checkliste_abschlussarbeit.html#self-check-wie-sehen-plausible-ergebnisse-aus",
-    "title": "Checkliste Abschlussarbeit",
-    "section": "Self-Check: Wie sehen plausible Ergebnisse aus?",
-    "text": "Self-Check: Wie sehen plausible Ergebnisse aus?\nDie grundsätzliche Struktur der Daten sollte sehr ähnlich zu den Originaldaten sein.\n\nBeispiel aus einem simulierten Datensatz vs Originaldaten\n\nDie Ergebnisse bewegen sich alle in einem ähnlichen Rahmen wie die Daten aus der Originalstudie.\nOriginale Ergebnisse\n\n\n\n\n\nSimulierter Datensatz\n\n\n\n\n\nDementsprechend werden auch die Effekte der Analysen ähnlich ausfallen:",
-    "crumbs": [
-      "Checkliste Abschlussarbeit"
-    ]
-  },
-  {
-    "objectID": "checkliste_abschlussarbeit.html#zu-erwartende-abweichungen-der-ergebnisse-von-der-originalstudie",
-    "href": "checkliste_abschlussarbeit.html#zu-erwartende-abweichungen-der-ergebnisse-von-der-originalstudie",
-    "title": "Checkliste Abschlussarbeit",
-    "section": "Zu erwartende Abweichungen der Ergebnisse von der Originalstudie:",
-    "text": "Zu erwartende Abweichungen der Ergebnisse von der Originalstudie:\n\nEinzelne Werte werden sich unterscheiden! Deskriptiva, Effektgrössen usw. werden sich unterscheiden! Eta2 sind hier grösser als in der Originalstudie.\n\n\n\n\n\n\n\nDeskriptiva: Unterschiede in den Means und SDs!\n\n\n\n\n\n\n##Unplausible Resultate\nErgebnisse die ein komplett anderes Gesamtbild hinterlassen sind nicht zu erwarten!",
-    "crumbs": [
-      "Checkliste Abschlussarbeit"
-    ]
-  },
-  {
-    "objectID": "ChatGPT.html",
-    "href": "ChatGPT.html",
-    "title": "ChatGPT in RStudio",
-    "section": "",
-    "text": "Damit ihr ChatGPT in RStudio einbinden könnt ist ein Account bei OpenAI / ChatGPT notwendig (falls ihr ChatGPT bisher ohne Anmeldung genutzt habt): https://chatgpt.com/\nNeben dieser Anleitung gibt es auch noch dieses YouTube-Tutorial [2:36 - 5:08] welches euch bei der Einrichtung behilflich sein könnte.\nRechtliche Informationen zum Umgang mit ChatGPT und anderen generativen KI-Anwendungen findet ihr hier.",
-    "crumbs": [
-      "Links und Ressourcen",
-      "ChatGPT in RStudio"
-    ]
-  },
-  {
-    "objectID": "ChatGPT.html#installieren-von-paketen-welche-chattr-im-hintergrund-benötigt",
-    "href": "ChatGPT.html#installieren-von-paketen-welche-chattr-im-hintergrund-benötigt",
-    "title": "ChatGPT in RStudio",
-    "section": "Installieren von Paketen, welche chattr im Hintergrund benötigt",
-    "text": "Installieren von Paketen, welche chattr im Hintergrund benötigt\nEventuell habt ihr diese schon installiert und ihr könnt diesen Schritt dann überspringen. Ansonsten müsst ihr diese Pakete, wie auch alle anderen, nur einmalig installieren.\n\ninstall.packages(\"shiny\")\ninstall.packages(\"httr2\")\ninstall.packages(\"jsonlite\")",
-    "crumbs": [
-      "Links und Ressourcen",
-      "ChatGPT in RStudio"
-    ]
-  },
-  {
-    "objectID": "ChatGPT.html#installieren-des-chattr-pakets-von-github",
-    "href": "ChatGPT.html#installieren-des-chattr-pakets-von-github",
-    "title": "ChatGPT in RStudio",
-    "section": "Installieren des chattr-Pakets von GitHub",
-    "text": "Installieren des chattr-Pakets von GitHub\nAuch hier gilt, die Installation des Paketes müsst ihr nur einmalig vornehmen.\n\ninstall.packages(\"remotes\") # Hier werdet ihr in der Console möglicherweise gefragt, ob ihr das Paket unter dem vorgeschlagenen Dateipfad abspeichern wollt. Sofern dieser für euch passt könnt ihr einfach mit \"Y\" unten in der Console eingeben und mit Enter bestätigen.\n\n\nremotes::install_github(\"mlverse/chattr\") # Hier werdet ihr möglicherweise gefragt, welche der betroffenen Pakete ihr updaten wollt. Es empfehlt sich, alle zu updaten. Ihr könnt dies tun, indem ihr \"1\" in der Console eingebt und mit Enter bestätigt.",
-    "crumbs": [
-      "Links und Ressourcen",
-      "ChatGPT in RStudio"
-    ]
-  },
-  {
-    "objectID": "ChatGPT.html#laden-von-chattr",
-    "href": "ChatGPT.html#laden-von-chattr",
-    "title": "ChatGPT in RStudio",
-    "section": "Laden von chattr",
-    "text": "Laden von chattr\nDie Schritte ab hier, also das Laden des Paketes und das Starten des Chat-Interface, müsst ihr bei jedem Start von RStudio erneut durchführen.\n\nlibrary(chattr) # So wie ihr es auch bereits von anderen Paketen kennt",
-    "crumbs": [
-      "Links und Ressourcen",
-      "ChatGPT in RStudio"
-    ]
-  },
-  {
-    "objectID": "ChatGPT.html#erstellen-des-chat-interface",
-    "href": "ChatGPT.html#erstellen-des-chat-interface",
-    "title": "ChatGPT in RStudio",
-    "section": "Erstellen des Chat-Interface",
-    "text": "Erstellen des Chat-Interface\n\nSys.setenv(OPENAI_API_KEY = \"Hier müsst ihr euren eigenen OpenAI API-Key einsetzen\") # Ihr erhaltet euren OpenAI API Key, indem ihr euch bei OpenAI anmeldet und unter https://platform.openai.com/account/api-keys einen neuen Key generiert.\n\nchattr_app() # Hier werdet ihr möglicherweise gefragt, welche Version von ChatGPT ihr verwenden mögt. Mit Eingabe der Nummer wählt ihr das entsprechende Modell aus. Mit Enter bestätigt ihr die Eingabe.",
-    "crumbs": [
-      "Links und Ressourcen",
-      "ChatGPT in RStudio"
-    ]
-  },
-  {
-    "objectID": "ChatGPT.html#prompt-beispiel",
-    "href": "ChatGPT.html#prompt-beispiel",
-    "title": "ChatGPT in RStudio",
-    "section": "Prompt-Beispiel",
-    "text": "Prompt-Beispiel\nWofür braucht das Paket chattr im Hintergrund noch die Pakete shiny, httr2 und jsonlite?",
-    "crumbs": [
-      "Links und Ressourcen",
-      "ChatGPT in RStudio"
-    ]
-  },
-  {
-    "objectID": "1_presentation.html#beispielhafte-chunks-output",
-    "href": "1_presentation.html#beispielhafte-chunks-output",
-    "title": "R u Ready",
-    "section": "Beispielhafte Chunks & Output",
-    "text": "Beispielhafte Chunks & Output\n\n\n\nprint(\"Hello world!\")\n\n[1] \"Hello world!\"\n\n\n\n\n2+2\n\n[1] 4"
-  },
-  {
-    "objectID": "1_presentation.html#beispielhafte-formatierung",
-    "href": "1_presentation.html#beispielhafte-formatierung",
-    "title": "R u Ready",
-    "section": "Beispielhafte Formatierung",
-    "text": "Beispielhafte Formatierung\nDiese Präsentation verwendet Reveal.js in Quarto\n\n\n\n\n\n\nHinweis\n\n\nAuf den Folien sind erst einmal nur Beispiele zu sehen, wie man mit Quarto Präsentationen einfach Code einbinden und zeigen kann."
-  },
-  {
-    "objectID": "1_presentation.html#beispielhafter-datensatz",
-    "href": "1_presentation.html#beispielhafter-datensatz",
-    "title": "R u Ready",
-    "section": "Beispielhafter Datensatz",
-    "text": "Beispielhafter Datensatz\n\nhead(mtcars)\n\n                   mpg cyl disp  hp drat    wt  qsec vs am gear carb\nMazda RX4         21.0   6  160 110 3.90 2.620 16.46  0  1    4    4\nMazda RX4 Wag     21.0   6  160 110 3.90 2.875 17.02  0  1    4    4\nDatsun 710        22.8   4  108  93 3.85 2.320 18.61  1  1    4    1\nHornet 4 Drive    21.4   6  258 110 3.08 3.215 19.44  1  0    3    1\nHornet Sportabout 18.7   8  360 175 3.15 3.440 17.02  0  0    3    2\nValiant           18.1   6  225 105 2.76 3.460 20.22  1  0    3    1"
-  },
-  {
-    "objectID": "1_presentation.html#beispielhafter-ggplot-code-und-plot",
-    "href": "1_presentation.html#beispielhafter-ggplot-code-und-plot",
-    "title": "R u Ready",
-    "section": "Beispielhafter ggplot-code und plot",
-    "text": "Beispielhafter ggplot-code und plot\n\nggplot(data = mtcars, aes(x = hp, y = mpg, color = factor(cyl))) +\n  geom_point(size = 3) +\n  labs(\n    title = \"PS vs. Verbrauch\",\n    x = \"Horsepower (hp)\",\n    y = \"Miles per Gallon (mpg)\",\n    color = \"Zylinder\"\n  ) +\n  theme_minimal()"
-  },
-  {
-    "objectID": "1_presentation.html#beispielhafter-ggplot-code-und-plot-output",
-    "href": "1_presentation.html#beispielhafter-ggplot-code-und-plot-output",
-    "title": "R u Ready",
-    "section": "Beispielhafter ggplot-code und plot",
-    "text": "Beispielhafter ggplot-code und plot"
-  },
-  {
-    "objectID": "1_presentation(1).html#beispielhafte-chunks-output",
-    "href": "1_presentation(1).html#beispielhafte-chunks-output",
-    "title": "R u Ready",
-    "section": "Beispielhafte Chunks & Output",
-    "text": "Beispielhafte Chunks & Output\n\n\n\nprint(\"Hello world!\")\n\n[1] \"Hello world!\"\n\n\n\n\n2+2\n\n[1] 4"
-  },
-  {
-    "objectID": "1_presentation(1).html#beispielhafte-formatierung",
-    "href": "1_presentation(1).html#beispielhafte-formatierung",
-    "title": "R u Ready",
-    "section": "Beispielhafte Formatierung",
-    "text": "Beispielhafte Formatierung\nDiese Präsentation verwendet Reveal.js in Quarto\n\n\n\n\n\n\nHinweis\n\n\nAuf den Folien sind erst einmal nur Beispiele zu sehen, wie man mit Quarto Präsentationen einfach Code einbinden und zeigen kann."
-  },
-  {
-    "objectID": "1_presentation(1).html#beispielhafter-datensatz",
-    "href": "1_presentation(1).html#beispielhafter-datensatz",
-    "title": "R u Ready",
-    "section": "Beispielhafter Datensatz",
-    "text": "Beispielhafter Datensatz\n\nhead(mtcars)\n\n                   mpg cyl disp  hp drat    wt  qsec vs am gear carb\nMazda RX4         21.0   6  160 110 3.90 2.620 16.46  0  1    4    4\nMazda RX4 Wag     21.0   6  160 110 3.90 2.875 17.02  0  1    4    4\nDatsun 710        22.8   4  108  93 3.85 2.320 18.61  1  1    4    1\nHornet 4 Drive    21.4   6  258 110 3.08 3.215 19.44  1  0    3    1\nHornet Sportabout 18.7   8  360 175 3.15 3.440 17.02  0  0    3    2\nValiant           18.1   6  225 105 2.76 3.460 20.22  1  0    3    1"
-  },
-  {
-    "objectID": "1_presentation(1).html#beispielhafter-ggplot-code-und-plot",
-    "href": "1_presentation(1).html#beispielhafter-ggplot-code-und-plot",
-    "title": "R u Ready",
-    "section": "Beispielhafter ggplot-code und plot",
-    "text": "Beispielhafter ggplot-code und plot\n\nggplot(data = mtcars, aes(x = hp, y = mpg, color = factor(cyl))) +\n  geom_point(size = 3) +\n  labs(\n    title = \"PS vs. Verbrauch\",\n    x = \"Horsepower (hp)\",\n    y = \"Miles per Gallon (mpg)\",\n    color = \"Zylinder\"\n  ) +\n  theme_minimal()"
-  },
-  {
-    "objectID": "1_presentation(1).html#beispielhafter-ggplot-code-und-plot-output",
-    "href": "1_presentation(1).html#beispielhafter-ggplot-code-und-plot-output",
-    "title": "R u Ready",
-    "section": "Beispielhafter ggplot-code und plot",
-    "text": "Beispielhafter ggplot-code und plot"
-  },
-  {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About",
-    "section": "",
-    "text": "Diese Website wurde im Rahmen des Seminars “R u Ready” an der Universität Bern erstellt.\nSollte deine Frage nicht beantwortet worden sein, dann wende dich gerne direkt an die Autor:innen:\n\n\n\nlars.schilling@unibe.ch\n\n\naaron.friedli@unibe.ch\n\n\nsandra.grinschgl@unibe.ch\n\n\n\n\nThis work is licensed under CC BY-SA 4.0",
-    "crumbs": [
-      "About"
-    ]
-  },
-  {
-    "objectID": "checkliste_abschlussarbeit-PSY-016893.html",
-    "href": "checkliste_abschlussarbeit-PSY-016893.html",
-    "title": "Checkliste Abschlussarbeit",
-    "section": "",
-    "text": "Abgabe bis 11.1.2026 - 23:59\nAbgabe als ZIP-File: vorname_nachname_abschlussarbeit.zip\nFür die Abschlussarbeit erhaltet ihr simulierte Daten. Diese werden den Daten des Originalpapers in den meisten Aspekten sehr ähnlich sein. Allerdings müssen einige Teile davon zusätzlich bereinigt werden, bevor sie ausgewertet werden können. Die folgende Checkliste soll euch dabei helfen, an alle relevanten Aspekte der Datenbereinigung zu denken.\nDie Datensatzaufbereitung erfolgt im processing-Skript. Der final aufbereitete Datensatz (dat_full) sowie der Long-Datensatz (dat_long) werden im Ordner data/processed gespeichert.\n\n\n\nHaben alle Daten die gleiche Anzahl an Beobachtungen?\n\n-   Gibt es Personen mit fehlenden Werten, die ausgeschlossen werden müssen?\n\n-   Gibt es personen doppelt im Datensatz?\n\nGibt es unmögliche Werte in den Daten, z. B. -999? Wie können diese Daten ersetzt werden?\nGibt es reverse-kodierte Variablen (var_name_r)?\nGibt es Variablen, die nicht den korrekten Datentyp haben, z. B. numerische Variablen, die als Charakter angezeigt werden? Schaut euch diese Variablen genau an!\n(Beispiel: drei = 3, stimme voll und ganz zu = höchster Wert)\n\n\n\n\n\nDroppen von redundanten Variablen\nUmbenennen von Variablen, die nicht im snake_case-Format sind\nBerechnung der mmq_mean-Variablen\nSpeichern der Daten!"
-  },
-  {
-    "objectID": "checkliste_abschlussarbeit-PSY-016893.html#checkliste-abschlussarbeit",
-    "href": "checkliste_abschlussarbeit-PSY-016893.html#checkliste-abschlussarbeit",
-    "title": "Checkliste Abschlussarbeit",
-    "section": "",
-    "text": "Abgabe bis 11.1.2026 - 23:59\nAbgabe als ZIP-File: vorname_nachname_abschlussarbeit.zip\nFür die Abschlussarbeit erhaltet ihr simulierte Daten. Diese werden den Daten des Originalpapers in den meisten Aspekten sehr ähnlich sein. Allerdings müssen einige Teile davon zusätzlich bereinigt werden, bevor sie ausgewertet werden können. Die folgende Checkliste soll euch dabei helfen, an alle relevanten Aspekte der Datenbereinigung zu denken.\nDie Datensatzaufbereitung erfolgt im processing-Skript. Der final aufbereitete Datensatz (dat_full) sowie der Long-Datensatz (dat_long) werden im Ordner data/processed gespeichert.\n\n\n\nHaben alle Daten die gleiche Anzahl an Beobachtungen?\n\n-   Gibt es Personen mit fehlenden Werten, die ausgeschlossen werden müssen?\n\n-   Gibt es personen doppelt im Datensatz?\n\nGibt es unmögliche Werte in den Daten, z. B. -999? Wie können diese Daten ersetzt werden?\nGibt es reverse-kodierte Variablen (var_name_r)?\nGibt es Variablen, die nicht den korrekten Datentyp haben, z. B. numerische Variablen, die als Charakter angezeigt werden? Schaut euch diese Variablen genau an!\n(Beispiel: drei = 3, stimme voll und ganz zu = höchster Wert)\n\n\n\n\n\nDroppen von redundanten Variablen\nUmbenennen von Variablen, die nicht im snake_case-Format sind\nBerechnung der mmq_mean-Variablen\nSpeichern der Daten!"
-  },
-  {
-    "objectID": "checkliste_abschlussarbeit-PSY-016893.html#im-analyseskript-analysis-werden",
-    "href": "checkliste_abschlussarbeit-PSY-016893.html#im-analyseskript-analysis-werden",
-    "title": "Checkliste Abschlussarbeit",
-    "section": "Im Analyseskript (analysis) werden",
-    "text": "Im Analyseskript (analysis) werden\n\nNötige vorbereitungen gemacht (z.B. faktoren setzen)\nDie analysen aus dem Datenanlyseplan durchgeführt!\n\nDeskriptive Statistik (M & SD) berechnen so wie in Table 1 (siehe Grinschgl et al.,2020)\n2x3 mixed ANOVA für subj. Leistungseinschätzungen mit post-hoc t-Tests, inkl.Effektstärken (η2 und Cohen’s d)\nOne-Way ANOVA für jede Offloading Variable (3x), inkl. Effektstärke (η2)\nOne-Way ANOVA für Trial Duration in Pattern Copy Task, inkl. Effektstärke (η2)\nOne-Way ANOVA für MMQ mit post-hoc t-Tests, inkl. Effektstärken (η2 und Cohen’sd)\nOne-Way ANOVA für Arbeitsgedächtnisleistung im Feature Switch Detection Task,inkl. Effektstärke (η2)\n1 Tabelle und eine Abbildung nach Wahl erstellen\nOptional: Testen der Voraussetzungen bei jeder Analyse – wenn diese gemacht wird,soll es auch im Datenanalyseplan beschrieben werden\n\nDaten Visualisiert (mind. 1 Abbilgung + midestens eine Tabelle)."
-  },
-  {
-    "objectID": "checkliste_abschlussarbeit-PSY-016893.html#dinge-die-im-datenanalyseplan-angepasst-werden-müssen",
-    "href": "checkliste_abschlussarbeit-PSY-016893.html#dinge-die-im-datenanalyseplan-angepasst-werden-müssen",
-    "title": "Checkliste Abschlussarbeit",
-    "section": "Dinge, die im Datenanalyseplan angepasst werden müssen:",
-    "text": "Dinge, die im Datenanalyseplan angepasst werden müssen:\n\nData Access\nData Collection Procedures\nMissing Data"
-  },
-  {
-    "objectID": "checkliste_abschlussarbeit-PSY-016893.html#dinge-die-im-codebook-angepasst-werden-müssen",
-    "href": "checkliste_abschlussarbeit-PSY-016893.html#dinge-die-im-codebook-angepasst-werden-müssen",
-    "title": "Checkliste Abschlussarbeit",
-    "section": "Dinge, die im Codebook angepasst werden müssen:",
-    "text": "Dinge, die im Codebook angepasst werden müssen:\n\nCoding (reverse-kodierte Items)\nMissing Data\n@Sandra: Wir verlangen nur das Codebook für dat_full – dort wird es nach der Bereinigung keine NAs mehr geben. Soll trotzdem ein Abschnitt zu NA ergänzt werden?\nData Collection Procedures → Simulierte Daten.\n\n\n\nOrdnerstruktur für die Abgabe\nDie (für unser Seminar leicht abgeänderte) Psych-DS-Struktur wird eingehalten. Das bedeutet:\n\nDaten im Ordner data.\n\n-   Rohdaten in `data/raw` (werden nicht verändert).\n\n-   Aufbereitete Daten (`dat_full`) in `data/processed`\n\nAnalyseskripte (processing und analysis) im Ordner code\nGerenderte Analyseskripte (html) ebenfalls im Ordner code\nDatenanalyseplan im Ordner preregistration\nCodebook im Ordner data"
-  },
-  {
-    "objectID": "codebook.html",
-    "href": "codebook.html",
-    "title": "2 Codebook",
-    "section": "",
-    "text": "Fragen zum Codebook",
-    "crumbs": [
-      "FAQ",
-      "2  Codebook"
-    ]
-  },
-  {
-    "objectID": "codebook.html#sollen-im-codebook-alle-variablen-eines-datensatzes-beschrieben-werden-oder-nur-diejenigen-welche-auch-im-rahmen-der-analyse-verwendet-werden",
-    "href": "codebook.html#sollen-im-codebook-alle-variablen-eines-datensatzes-beschrieben-werden-oder-nur-diejenigen-welche-auch-im-rahmen-der-analyse-verwendet-werden",
-    "title": "2 Codebook",
-    "section": "Sollen im Codebook alle Variablen eines Datensatzes beschrieben werden oder nur diejenigen, welche auch im Rahmen der Analyse verwendet werden?",
-    "text": "Sollen im Codebook alle Variablen eines Datensatzes beschrieben werden oder nur diejenigen, welche auch im Rahmen der Analyse verwendet werden?\nAls Grundsatz gilt: Das Codebook soll fremden Wissenschaftler:innen aus der Psychologie dabei helfen ohne weiteren Aufwand eure Arbeit zu beurteilen und ggf. zu replizieren. Für eine Replikation würde eine genaue Beschreibung der von euch in der Analyse verwendeten Variablen ausreichend. Eine allgemeine Beurteilung ist aber erst dann vollständig möglich, wenn auch alle anderen Variablen umfangreich beschrieben sind. Deswegen müssen im Codebook alle Variablen eures Datensatzes beschrieben werden, auch jene, die in der Analyse nicht weiter Beachtung finden.",
-    "crumbs": [
-      "FAQ",
-      "2  Codebook"
-    ]
-  },
-  {
-    "objectID": "codebook.html#sollten-unter-questionnaire-wirklich-nur-fragebögen-aufgelistet-werden-oder-kann-man-hier-auch-die-namen-möglicher-kognitiver-tests-angeben",
-    "href": "codebook.html#sollten-unter-questionnaire-wirklich-nur-fragebögen-aufgelistet-werden-oder-kann-man-hier-auch-die-namen-möglicher-kognitiver-tests-angeben",
-    "title": "2 Codebook",
-    "section": "Sollten unter „questionnaire“ wirklich nur Fragebögen aufgelistet werden oder kann man hier auch die Namen möglicher kognitiver Tests angeben?",
-    "text": "Sollten unter „questionnaire“ wirklich nur Fragebögen aufgelistet werden oder kann man hier auch die Namen möglicher kognitiver Tests angeben?\nBei Angaben im Codebook sollte immer gelten: Sie erklären für unbeteiligte Wissenschaftler:innen aus der Psychologie mehr als das sie Verwirrung stiften. Unter „questionnaire“ auch die Namen von ggf. angewendeten kognitiven Tests anzugeben, unterstützt die Nachvollziehbarkeit und kann daher so gemacht werden.",
-    "crumbs": [
-      "FAQ",
-      "2  Codebook"
-    ]
-  },
-  {
-    "objectID": "codebook.html#wo-liegt-der-unterschied-zwischen-description-und-composition-of-item",
-    "href": "codebook.html#wo-liegt-der-unterschied-zwischen-description-und-composition-of-item",
-    "title": "2 Codebook",
-    "section": "Wo liegt der Unterschied zwischen „description“ und „Composition of item…“?",
-    "text": "Wo liegt der Unterschied zwischen „description“ und „Composition of item…“?\nBei „description“ geht es um eine kurze inhaltliche Beschreibung der Variable, also was für einen Zweck die Variable in der Studie einnimmt oder mit welchem Konstrukt die Variable im Zusammenhang steht. Bei „composition of item“ geht es um die mathematische Zusammensetzung der Variable (z.B. Mittelwert aus Items XYZ).",
-    "crumbs": [
-      "FAQ",
-      "2  Codebook"
-    ]
-  },
-  {
-    "objectID": "codebook.html#wann-sind-response_labels-zu-verwenden-und-wann-nicht",
-    "href": "codebook.html#wann-sind-response_labels-zu-verwenden-und-wann-nicht",
-    "title": "2 Codebook",
-    "section": "Wann sind „response_labels“ zu verwenden und wann nicht?",
-    "text": "Wann sind „response_labels“ zu verwenden und wann nicht?\nDie Labels der Antwortmöglichkeiten direkt zu benennen ist dann wichtig, wenn diese nicht logisch erschliessbar sind. Dies ist z.B. bei einer Likert-Skala der Fall, da diese unterschiedlich streng formuliert sein kann. Selbst wenn diese im Datenanalyseplan aufgeführt werden, ist es sicherer diese auch noch mal im Codebook zu erwähnen.",
-    "crumbs": [
-      "FAQ",
-      "2  Codebook"
-    ]
-  },
-  {
-    "objectID": "codebook.html#was-ist-mit-der-spalte-dimensions-gemeint",
-    "href": "codebook.html#was-ist-mit-der-spalte-dimensions-gemeint",
-    "title": "2 Codebook",
-    "section": "Was ist mit der Spalte „dimensions“ gemeint?",
-    "text": "Was ist mit der Spalte „dimensions“ gemeint?\nUnter „dimensions“ soll das Konstrukt aufgeführt werden, welches sich hinter Items eines Fragebogens verbirgt (z.B. Item XY gehört zur dimension „Extraversion“ in einem Big 5 Fragebogen).",
-    "crumbs": [
-      "FAQ",
-      "2  Codebook"
-    ]
-  },
-  {
-    "objectID": "codebook.html#wie-soll-man-vorgehen-wenn-zu-manchen-dimensionen-der-variable-weder-im-paper-noch-in-der-präregistrierung-genaue-angaben-zu-finden-sind",
-    "href": "codebook.html#wie-soll-man-vorgehen-wenn-zu-manchen-dimensionen-der-variable-weder-im-paper-noch-in-der-präregistrierung-genaue-angaben-zu-finden-sind",
-    "title": "2 Codebook",
-    "section": "Wie soll man vorgehen, wenn zu manchen Dimensionen der Variable weder im Paper noch in der Präregistrierung genaue Angaben zu finden sind?",
-    "text": "Wie soll man vorgehen, wenn zu manchen Dimensionen der Variable weder im Paper noch in der Präregistrierung genaue Angaben zu finden sind?\nFür den Fall, dass zu einer Angabe genaue Informationen fehlen, gibt es zwei Möglichkeiten. Zum einen kann man „reverse Engineering“ anwenden. Manche Informationen sind nirgendwo explizit angegeben, lassen sich aber beispielsweise anhand der gegebenen Informationen schlussfolgern. Hierzu zählen beispielsweise die minimalen und maximalen Werte einer Skala, welche mit einer hohen Wahrscheinlichkeit aus den Rohdaten ablesbar sind. Hierzu kann aber auch zählen, sich zu überlegen, was logisch oder mögliche Angaben sind. Das bedeutet nicht, dass in der ursprünglichen Studie auch tatsächlich so gearbeitet wurde, gibt aber trotzdem einen guten Anhaltspunkt. Unabhängig davon, wie man vorgeht, müsste dies kenntlich gemacht werden. Nur so können andere Personen mögliche Fehler in den Schlussfolgerungen oder Annahmen finden, anhand welcher die entsprechenden Informationen ergänzt wurden.",
-    "crumbs": [
-      "FAQ",
-      "2  Codebook"
-    ]
-  },
-  {
-    "objectID": "codebook.html#welche-informationen-sind-für-das-codebook-relevant-die-studie-von-grinschgl-et-al.-2020-undoder-die-präregistrierung-von-grinschgl-et-al.-2020",
-    "href": "codebook.html#welche-informationen-sind-für-das-codebook-relevant-die-studie-von-grinschgl-et-al.-2020-undoder-die-präregistrierung-von-grinschgl-et-al.-2020",
-    "title": "2 Codebook",
-    "section": "Welche Informationen sind für das Codebook relevant? Die Studie von Grinschgl et al. (2020) und/oder die Präregistrierung von Grinschgl et al. (2020)?",
-    "text": "Welche Informationen sind für das Codebook relevant? Die Studie von Grinschgl et al. (2020) und/oder die Präregistrierung von Grinschgl et al. (2020)?\nFür das Ausfüllen des Codebook sind beide Quellen relevant, die Studie von Grinschgl et al. 2020 und die Präregistrierung zu Grinschgl et al. (2020).",
-    "crumbs": [
-      "FAQ",
-      "2  Codebook"
-    ]
-  },
-  {
-    "objectID": "codebook.html#sollen-alle-messwiederholungen-im-codebook-einzeln-aufgeführt-werden-oder-soll-es-eine-einzelne-variable-für-die-messwiederholung-im-codebook-geben",
-    "href": "codebook.html#sollen-alle-messwiederholungen-im-codebook-einzeln-aufgeführt-werden-oder-soll-es-eine-einzelne-variable-für-die-messwiederholung-im-codebook-geben",
-    "title": "2 Codebook",
-    "section": "Sollen alle Messwiederholungen im Codebook einzeln aufgeführt werden oder soll es eine einzelne Variable für die Messwiederholung im Codebook geben?",
-    "text": "Sollen alle Messwiederholungen im Codebook einzeln aufgeführt werden oder soll es eine einzelne Variable für die Messwiederholung im Codebook geben?\nPrinzipiell gilt: Das Codebook soll es aussenstehenden möglichst einfach machen, sich mit den Daten und der Analyse der Daten vertraut zu machen und diese replizieren zu können. Daher gilt: Angaben sollten vollständig sein und so exakt wie möglich. Abweichungen – wie beispielsweise Zusammenfassungen mehrerer Variablen – sind demnach nur dann möglich und sinnvoll, wenn sich die einzelnen Variablen nicht voneinander unterscheiden und dies so klarer dargestellt werden kann.",
-    "crumbs": [
-      "FAQ",
-      "2  Codebook"
+      "Einheit 11 - 26.11.2025"
     ]
   },
   {
@@ -3000,278 +2457,835 @@
     ]
   },
   {
-    "objectID": "EH_11.html#r-u-ready-reproduzierbare-datenaufbereitung-und--analyse-mit-r",
-    "href": "EH_11.html#r-u-ready-reproduzierbare-datenaufbereitung-und--analyse-mit-r",
-    "title": "R u Ready? HS2025 | Psychologie der Digitalisierung - Einheit 11",
+    "objectID": "codebook.html",
+    "href": "codebook.html",
+    "title": "2 Codebook",
+    "section": "",
+    "text": "Fragen zum Codebook",
+    "crumbs": [
+      "FAQ",
+      "2  Codebook"
+    ]
+  },
+  {
+    "objectID": "codebook.html#sollen-im-codebook-alle-variablen-eines-datensatzes-beschrieben-werden-oder-nur-diejenigen-welche-auch-im-rahmen-der-analyse-verwendet-werden",
+    "href": "codebook.html#sollen-im-codebook-alle-variablen-eines-datensatzes-beschrieben-werden-oder-nur-diejenigen-welche-auch-im-rahmen-der-analyse-verwendet-werden",
+    "title": "2 Codebook",
+    "section": "Sollen im Codebook alle Variablen eines Datensatzes beschrieben werden oder nur diejenigen, welche auch im Rahmen der Analyse verwendet werden?",
+    "text": "Sollen im Codebook alle Variablen eines Datensatzes beschrieben werden oder nur diejenigen, welche auch im Rahmen der Analyse verwendet werden?\nAls Grundsatz gilt: Das Codebook soll fremden Wissenschaftler:innen aus der Psychologie dabei helfen ohne weiteren Aufwand eure Arbeit zu beurteilen und ggf. zu replizieren. Für eine Replikation würde eine genaue Beschreibung der von euch in der Analyse verwendeten Variablen ausreichend. Eine allgemeine Beurteilung ist aber erst dann vollständig möglich, wenn auch alle anderen Variablen umfangreich beschrieben sind. Deswegen müssen im Codebook alle Variablen eures Datensatzes beschrieben werden, auch jene, die in der Analyse nicht weiter Beachtung finden.",
+    "crumbs": [
+      "FAQ",
+      "2  Codebook"
+    ]
+  },
+  {
+    "objectID": "codebook.html#sollten-unter-questionnaire-wirklich-nur-fragebögen-aufgelistet-werden-oder-kann-man-hier-auch-die-namen-möglicher-kognitiver-tests-angeben",
+    "href": "codebook.html#sollten-unter-questionnaire-wirklich-nur-fragebögen-aufgelistet-werden-oder-kann-man-hier-auch-die-namen-möglicher-kognitiver-tests-angeben",
+    "title": "2 Codebook",
+    "section": "Sollten unter „questionnaire“ wirklich nur Fragebögen aufgelistet werden oder kann man hier auch die Namen möglicher kognitiver Tests angeben?",
+    "text": "Sollten unter „questionnaire“ wirklich nur Fragebögen aufgelistet werden oder kann man hier auch die Namen möglicher kognitiver Tests angeben?\nBei Angaben im Codebook sollte immer gelten: Sie erklären für unbeteiligte Wissenschaftler:innen aus der Psychologie mehr als das sie Verwirrung stiften. Unter „questionnaire“ auch die Namen von ggf. angewendeten kognitiven Tests anzugeben, unterstützt die Nachvollziehbarkeit und kann daher so gemacht werden.",
+    "crumbs": [
+      "FAQ",
+      "2  Codebook"
+    ]
+  },
+  {
+    "objectID": "codebook.html#wo-liegt-der-unterschied-zwischen-description-und-composition-of-item",
+    "href": "codebook.html#wo-liegt-der-unterschied-zwischen-description-und-composition-of-item",
+    "title": "2 Codebook",
+    "section": "Wo liegt der Unterschied zwischen „description“ und „Composition of item…“?",
+    "text": "Wo liegt der Unterschied zwischen „description“ und „Composition of item…“?\nBei „description“ geht es um eine kurze inhaltliche Beschreibung der Variable, also was für einen Zweck die Variable in der Studie einnimmt oder mit welchem Konstrukt die Variable im Zusammenhang steht. Bei „composition of item“ geht es um die mathematische Zusammensetzung der Variable (z.B. Mittelwert aus Items XYZ).",
+    "crumbs": [
+      "FAQ",
+      "2  Codebook"
+    ]
+  },
+  {
+    "objectID": "codebook.html#wann-sind-response_labels-zu-verwenden-und-wann-nicht",
+    "href": "codebook.html#wann-sind-response_labels-zu-verwenden-und-wann-nicht",
+    "title": "2 Codebook",
+    "section": "Wann sind „response_labels“ zu verwenden und wann nicht?",
+    "text": "Wann sind „response_labels“ zu verwenden und wann nicht?\nDie Labels der Antwortmöglichkeiten direkt zu benennen ist dann wichtig, wenn diese nicht logisch erschliessbar sind. Dies ist z.B. bei einer Likert-Skala der Fall, da diese unterschiedlich streng formuliert sein kann. Selbst wenn diese im Datenanalyseplan aufgeführt werden, ist es sicherer diese auch noch mal im Codebook zu erwähnen.",
+    "crumbs": [
+      "FAQ",
+      "2  Codebook"
+    ]
+  },
+  {
+    "objectID": "codebook.html#was-ist-mit-der-spalte-dimensions-gemeint",
+    "href": "codebook.html#was-ist-mit-der-spalte-dimensions-gemeint",
+    "title": "2 Codebook",
+    "section": "Was ist mit der Spalte „dimensions“ gemeint?",
+    "text": "Was ist mit der Spalte „dimensions“ gemeint?\nUnter „dimensions“ soll das Konstrukt aufgeführt werden, welches sich hinter Items eines Fragebogens verbirgt (z.B. Item XY gehört zur dimension „Extraversion“ in einem Big 5 Fragebogen).",
+    "crumbs": [
+      "FAQ",
+      "2  Codebook"
+    ]
+  },
+  {
+    "objectID": "codebook.html#wie-soll-man-vorgehen-wenn-zu-manchen-dimensionen-der-variable-weder-im-paper-noch-in-der-präregistrierung-genaue-angaben-zu-finden-sind",
+    "href": "codebook.html#wie-soll-man-vorgehen-wenn-zu-manchen-dimensionen-der-variable-weder-im-paper-noch-in-der-präregistrierung-genaue-angaben-zu-finden-sind",
+    "title": "2 Codebook",
+    "section": "Wie soll man vorgehen, wenn zu manchen Dimensionen der Variable weder im Paper noch in der Präregistrierung genaue Angaben zu finden sind?",
+    "text": "Wie soll man vorgehen, wenn zu manchen Dimensionen der Variable weder im Paper noch in der Präregistrierung genaue Angaben zu finden sind?\nFür den Fall, dass zu einer Angabe genaue Informationen fehlen, gibt es zwei Möglichkeiten. Zum einen kann man „reverse Engineering“ anwenden. Manche Informationen sind nirgendwo explizit angegeben, lassen sich aber beispielsweise anhand der gegebenen Informationen schlussfolgern. Hierzu zählen beispielsweise die minimalen und maximalen Werte einer Skala, welche mit einer hohen Wahrscheinlichkeit aus den Rohdaten ablesbar sind. Hierzu kann aber auch zählen, sich zu überlegen, was logisch oder mögliche Angaben sind. Das bedeutet nicht, dass in der ursprünglichen Studie auch tatsächlich so gearbeitet wurde, gibt aber trotzdem einen guten Anhaltspunkt. Unabhängig davon, wie man vorgeht, müsste dies kenntlich gemacht werden. Nur so können andere Personen mögliche Fehler in den Schlussfolgerungen oder Annahmen finden, anhand welcher die entsprechenden Informationen ergänzt wurden.",
+    "crumbs": [
+      "FAQ",
+      "2  Codebook"
+    ]
+  },
+  {
+    "objectID": "codebook.html#welche-informationen-sind-für-das-codebook-relevant-die-studie-von-grinschgl-et-al.-2020-undoder-die-präregistrierung-von-grinschgl-et-al.-2020",
+    "href": "codebook.html#welche-informationen-sind-für-das-codebook-relevant-die-studie-von-grinschgl-et-al.-2020-undoder-die-präregistrierung-von-grinschgl-et-al.-2020",
+    "title": "2 Codebook",
+    "section": "Welche Informationen sind für das Codebook relevant? Die Studie von Grinschgl et al. (2020) und/oder die Präregistrierung von Grinschgl et al. (2020)?",
+    "text": "Welche Informationen sind für das Codebook relevant? Die Studie von Grinschgl et al. (2020) und/oder die Präregistrierung von Grinschgl et al. (2020)?\nFür das Ausfüllen des Codebook sind beide Quellen relevant, die Studie von Grinschgl et al. 2020 und die Präregistrierung zu Grinschgl et al. (2020).",
+    "crumbs": [
+      "FAQ",
+      "2  Codebook"
+    ]
+  },
+  {
+    "objectID": "codebook.html#sollen-alle-messwiederholungen-im-codebook-einzeln-aufgeführt-werden-oder-soll-es-eine-einzelne-variable-für-die-messwiederholung-im-codebook-geben",
+    "href": "codebook.html#sollen-alle-messwiederholungen-im-codebook-einzeln-aufgeführt-werden-oder-soll-es-eine-einzelne-variable-für-die-messwiederholung-im-codebook-geben",
+    "title": "2 Codebook",
+    "section": "Sollen alle Messwiederholungen im Codebook einzeln aufgeführt werden oder soll es eine einzelne Variable für die Messwiederholung im Codebook geben?",
+    "text": "Sollen alle Messwiederholungen im Codebook einzeln aufgeführt werden oder soll es eine einzelne Variable für die Messwiederholung im Codebook geben?\nPrinzipiell gilt: Das Codebook soll es aussenstehenden möglichst einfach machen, sich mit den Daten und der Analyse der Daten vertraut zu machen und diese replizieren zu können. Daher gilt: Angaben sollten vollständig sein und so exakt wie möglich. Abweichungen – wie beispielsweise Zusammenfassungen mehrerer Variablen – sind demnach nur dann möglich und sinnvoll, wenn sich die einzelnen Variablen nicht voneinander unterscheiden und dies so klarer dargestellt werden kann.",
+    "crumbs": [
+      "FAQ",
+      "2  Codebook"
+    ]
+  },
+  {
+    "objectID": "checkliste_abschlussarbeit-PSY-016893.html",
+    "href": "checkliste_abschlussarbeit-PSY-016893.html",
+    "title": "Checkliste Abschlussarbeit",
+    "section": "",
+    "text": "Abgabe bis 11.1.2026 - 23:59\nAbgabe als ZIP-File: vorname_nachname_abschlussarbeit.zip\nFür die Abschlussarbeit erhaltet ihr simulierte Daten. Diese werden den Daten des Originalpapers in den meisten Aspekten sehr ähnlich sein. Allerdings müssen einige Teile davon zusätzlich bereinigt werden, bevor sie ausgewertet werden können. Die folgende Checkliste soll euch dabei helfen, an alle relevanten Aspekte der Datenbereinigung zu denken.\nDie Datensatzaufbereitung erfolgt im processing-Skript. Der final aufbereitete Datensatz (dat_full) sowie der Long-Datensatz (dat_long) werden im Ordner data/processed gespeichert.\n\n\n\nHaben alle Daten die gleiche Anzahl an Beobachtungen?\n\n-   Gibt es Personen mit fehlenden Werten, die ausgeschlossen werden müssen?\n\n-   Gibt es personen doppelt im Datensatz?\n\nGibt es unmögliche Werte in den Daten, z. B. -999? Wie können diese Daten ersetzt werden?\nGibt es reverse-kodierte Variablen (var_name_r)?\nGibt es Variablen, die nicht den korrekten Datentyp haben, z. B. numerische Variablen, die als Charakter angezeigt werden? Schaut euch diese Variablen genau an!\n(Beispiel: drei = 3, stimme voll und ganz zu = höchster Wert)\n\n\n\n\n\nDroppen von redundanten Variablen\nUmbenennen von Variablen, die nicht im snake_case-Format sind\nBerechnung der mmq_mean-Variablen\nSpeichern der Daten!"
+  },
+  {
+    "objectID": "checkliste_abschlussarbeit-PSY-016893.html#checkliste-abschlussarbeit",
+    "href": "checkliste_abschlussarbeit-PSY-016893.html#checkliste-abschlussarbeit",
+    "title": "Checkliste Abschlussarbeit",
+    "section": "",
+    "text": "Abgabe bis 11.1.2026 - 23:59\nAbgabe als ZIP-File: vorname_nachname_abschlussarbeit.zip\nFür die Abschlussarbeit erhaltet ihr simulierte Daten. Diese werden den Daten des Originalpapers in den meisten Aspekten sehr ähnlich sein. Allerdings müssen einige Teile davon zusätzlich bereinigt werden, bevor sie ausgewertet werden können. Die folgende Checkliste soll euch dabei helfen, an alle relevanten Aspekte der Datenbereinigung zu denken.\nDie Datensatzaufbereitung erfolgt im processing-Skript. Der final aufbereitete Datensatz (dat_full) sowie der Long-Datensatz (dat_long) werden im Ordner data/processed gespeichert.\n\n\n\nHaben alle Daten die gleiche Anzahl an Beobachtungen?\n\n-   Gibt es Personen mit fehlenden Werten, die ausgeschlossen werden müssen?\n\n-   Gibt es personen doppelt im Datensatz?\n\nGibt es unmögliche Werte in den Daten, z. B. -999? Wie können diese Daten ersetzt werden?\nGibt es reverse-kodierte Variablen (var_name_r)?\nGibt es Variablen, die nicht den korrekten Datentyp haben, z. B. numerische Variablen, die als Charakter angezeigt werden? Schaut euch diese Variablen genau an!\n(Beispiel: drei = 3, stimme voll und ganz zu = höchster Wert)\n\n\n\n\n\nDroppen von redundanten Variablen\nUmbenennen von Variablen, die nicht im snake_case-Format sind\nBerechnung der mmq_mean-Variablen\nSpeichern der Daten!"
+  },
+  {
+    "objectID": "checkliste_abschlussarbeit-PSY-016893.html#im-analyseskript-analysis-werden",
+    "href": "checkliste_abschlussarbeit-PSY-016893.html#im-analyseskript-analysis-werden",
+    "title": "Checkliste Abschlussarbeit",
+    "section": "Im Analyseskript (analysis) werden",
+    "text": "Im Analyseskript (analysis) werden\n\nNötige vorbereitungen gemacht (z.B. faktoren setzen)\nDie analysen aus dem Datenanlyseplan durchgeführt!\n\nDeskriptive Statistik (M & SD) berechnen so wie in Table 1 (siehe Grinschgl et al.,2020)\n2x3 mixed ANOVA für subj. Leistungseinschätzungen mit post-hoc t-Tests, inkl.Effektstärken (η2 und Cohen’s d)\nOne-Way ANOVA für jede Offloading Variable (3x), inkl. Effektstärke (η2)\nOne-Way ANOVA für Trial Duration in Pattern Copy Task, inkl. Effektstärke (η2)\nOne-Way ANOVA für MMQ mit post-hoc t-Tests, inkl. Effektstärken (η2 und Cohen’sd)\nOne-Way ANOVA für Arbeitsgedächtnisleistung im Feature Switch Detection Task,inkl. Effektstärke (η2)\n1 Tabelle und eine Abbildung nach Wahl erstellen\nOptional: Testen der Voraussetzungen bei jeder Analyse – wenn diese gemacht wird,soll es auch im Datenanalyseplan beschrieben werden\n\nDaten Visualisiert (mind. 1 Abbilgung + midestens eine Tabelle)."
+  },
+  {
+    "objectID": "checkliste_abschlussarbeit-PSY-016893.html#dinge-die-im-datenanalyseplan-angepasst-werden-müssen",
+    "href": "checkliste_abschlussarbeit-PSY-016893.html#dinge-die-im-datenanalyseplan-angepasst-werden-müssen",
+    "title": "Checkliste Abschlussarbeit",
+    "section": "Dinge, die im Datenanalyseplan angepasst werden müssen:",
+    "text": "Dinge, die im Datenanalyseplan angepasst werden müssen:\n\nData Access\nData Collection Procedures\nMissing Data"
+  },
+  {
+    "objectID": "checkliste_abschlussarbeit-PSY-016893.html#dinge-die-im-codebook-angepasst-werden-müssen",
+    "href": "checkliste_abschlussarbeit-PSY-016893.html#dinge-die-im-codebook-angepasst-werden-müssen",
+    "title": "Checkliste Abschlussarbeit",
+    "section": "Dinge, die im Codebook angepasst werden müssen:",
+    "text": "Dinge, die im Codebook angepasst werden müssen:\n\nCoding (reverse-kodierte Items)\nMissing Data\n@Sandra: Wir verlangen nur das Codebook für dat_full – dort wird es nach der Bereinigung keine NAs mehr geben. Soll trotzdem ein Abschnitt zu NA ergänzt werden?\nData Collection Procedures → Simulierte Daten.\n\n\n\nOrdnerstruktur für die Abgabe\nDie (für unser Seminar leicht abgeänderte) Psych-DS-Struktur wird eingehalten. Das bedeutet:\n\nDaten im Ordner data.\n\n-   Rohdaten in `data/raw` (werden nicht verändert).\n\n-   Aufbereitete Daten (`dat_full`) in `data/processed`\n\nAnalyseskripte (processing und analysis) im Ordner code\nGerenderte Analyseskripte (html) ebenfalls im Ordner code\nDatenanalyseplan im Ordner preregistration\nCodebook im Ordner data"
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "Diese Website wurde im Rahmen des Seminars “R u Ready” an der Universität Bern erstellt.\nSollte deine Frage nicht beantwortet worden sein, dann wende dich gerne direkt an die Autor:innen:\n\n\n\nlars.schilling@unibe.ch\n\n\naaron.friedli@unibe.ch\n\n\nsandra.grinschgl@unibe.ch\n\n\n\n\nThis work is licensed under CC BY-SA 4.0",
+    "crumbs": [
+      "About"
+    ]
+  },
+  {
+    "objectID": "1_presentation(1).html#beispielhafte-chunks-output",
+    "href": "1_presentation(1).html#beispielhafte-chunks-output",
+    "title": "R u Ready",
+    "section": "Beispielhafte Chunks & Output",
+    "text": "Beispielhafte Chunks & Output\n\n\n\nprint(\"Hello world!\")\n\n[1] \"Hello world!\"\n\n\n\n\n2+2\n\n[1] 4"
+  },
+  {
+    "objectID": "1_presentation(1).html#beispielhafte-formatierung",
+    "href": "1_presentation(1).html#beispielhafte-formatierung",
+    "title": "R u Ready",
+    "section": "Beispielhafte Formatierung",
+    "text": "Beispielhafte Formatierung\nDiese Präsentation verwendet Reveal.js in Quarto\n\n\n\n\n\n\nHinweis\n\n\nAuf den Folien sind erst einmal nur Beispiele zu sehen, wie man mit Quarto Präsentationen einfach Code einbinden und zeigen kann."
+  },
+  {
+    "objectID": "1_presentation(1).html#beispielhafter-datensatz",
+    "href": "1_presentation(1).html#beispielhafter-datensatz",
+    "title": "R u Ready",
+    "section": "Beispielhafter Datensatz",
+    "text": "Beispielhafter Datensatz\n\nhead(mtcars)\n\n                   mpg cyl disp  hp drat    wt  qsec vs am gear carb\nMazda RX4         21.0   6  160 110 3.90 2.620 16.46  0  1    4    4\nMazda RX4 Wag     21.0   6  160 110 3.90 2.875 17.02  0  1    4    4\nDatsun 710        22.8   4  108  93 3.85 2.320 18.61  1  1    4    1\nHornet 4 Drive    21.4   6  258 110 3.08 3.215 19.44  1  0    3    1\nHornet Sportabout 18.7   8  360 175 3.15 3.440 17.02  0  0    3    2\nValiant           18.1   6  225 105 2.76 3.460 20.22  1  0    3    1"
+  },
+  {
+    "objectID": "1_presentation(1).html#beispielhafter-ggplot-code-und-plot",
+    "href": "1_presentation(1).html#beispielhafter-ggplot-code-und-plot",
+    "title": "R u Ready",
+    "section": "Beispielhafter ggplot-code und plot",
+    "text": "Beispielhafter ggplot-code und plot\n\nggplot(data = mtcars, aes(x = hp, y = mpg, color = factor(cyl))) +\n  geom_point(size = 3) +\n  labs(\n    title = \"PS vs. Verbrauch\",\n    x = \"Horsepower (hp)\",\n    y = \"Miles per Gallon (mpg)\",\n    color = \"Zylinder\"\n  ) +\n  theme_minimal()"
+  },
+  {
+    "objectID": "1_presentation(1).html#beispielhafter-ggplot-code-und-plot-output",
+    "href": "1_presentation(1).html#beispielhafter-ggplot-code-und-plot-output",
+    "title": "R u Ready",
+    "section": "Beispielhafter ggplot-code und plot",
+    "text": "Beispielhafter ggplot-code und plot"
+  },
+  {
+    "objectID": "1_presentation.html#beispielhafte-chunks-output",
+    "href": "1_presentation.html#beispielhafte-chunks-output",
+    "title": "R u Ready",
+    "section": "Beispielhafte Chunks & Output",
+    "text": "Beispielhafte Chunks & Output\n\n\n\nprint(\"Hello world!\")\n\n[1] \"Hello world!\"\n\n\n\n\n2+2\n\n[1] 4"
+  },
+  {
+    "objectID": "1_presentation.html#beispielhafte-formatierung",
+    "href": "1_presentation.html#beispielhafte-formatierung",
+    "title": "R u Ready",
+    "section": "Beispielhafte Formatierung",
+    "text": "Beispielhafte Formatierung\nDiese Präsentation verwendet Reveal.js in Quarto\n\n\n\n\n\n\nHinweis\n\n\nAuf den Folien sind erst einmal nur Beispiele zu sehen, wie man mit Quarto Präsentationen einfach Code einbinden und zeigen kann."
+  },
+  {
+    "objectID": "1_presentation.html#beispielhafter-datensatz",
+    "href": "1_presentation.html#beispielhafter-datensatz",
+    "title": "R u Ready",
+    "section": "Beispielhafter Datensatz",
+    "text": "Beispielhafter Datensatz\n\nhead(mtcars)\n\n                   mpg cyl disp  hp drat    wt  qsec vs am gear carb\nMazda RX4         21.0   6  160 110 3.90 2.620 16.46  0  1    4    4\nMazda RX4 Wag     21.0   6  160 110 3.90 2.875 17.02  0  1    4    4\nDatsun 710        22.8   4  108  93 3.85 2.320 18.61  1  1    4    1\nHornet 4 Drive    21.4   6  258 110 3.08 3.215 19.44  1  0    3    1\nHornet Sportabout 18.7   8  360 175 3.15 3.440 17.02  0  0    3    2\nValiant           18.1   6  225 105 2.76 3.460 20.22  1  0    3    1"
+  },
+  {
+    "objectID": "1_presentation.html#beispielhafter-ggplot-code-und-plot",
+    "href": "1_presentation.html#beispielhafter-ggplot-code-und-plot",
+    "title": "R u Ready",
+    "section": "Beispielhafter ggplot-code und plot",
+    "text": "Beispielhafter ggplot-code und plot\n\nggplot(data = mtcars, aes(x = hp, y = mpg, color = factor(cyl))) +\n  geom_point(size = 3) +\n  labs(\n    title = \"PS vs. Verbrauch\",\n    x = \"Horsepower (hp)\",\n    y = \"Miles per Gallon (mpg)\",\n    color = \"Zylinder\"\n  ) +\n  theme_minimal()"
+  },
+  {
+    "objectID": "1_presentation.html#beispielhafter-ggplot-code-und-plot-output",
+    "href": "1_presentation.html#beispielhafter-ggplot-code-und-plot-output",
+    "title": "R u Ready",
+    "section": "Beispielhafter ggplot-code und plot",
+    "text": "Beispielhafter ggplot-code und plot"
+  },
+  {
+    "objectID": "ChatGPT.html",
+    "href": "ChatGPT.html",
+    "title": "ChatGPT in RStudio",
+    "section": "",
+    "text": "Damit ihr ChatGPT in RStudio einbinden könnt ist ein Account bei OpenAI / ChatGPT notwendig (falls ihr ChatGPT bisher ohne Anmeldung genutzt habt): https://chatgpt.com/\nNeben dieser Anleitung gibt es auch noch dieses YouTube-Tutorial [2:36 - 5:08] welches euch bei der Einrichtung behilflich sein könnte.\nRechtliche Informationen zum Umgang mit ChatGPT und anderen generativen KI-Anwendungen findet ihr hier.",
+    "crumbs": [
+      "Links und Ressourcen",
+      "ChatGPT in RStudio"
+    ]
+  },
+  {
+    "objectID": "ChatGPT.html#installieren-von-paketen-welche-chattr-im-hintergrund-benötigt",
+    "href": "ChatGPT.html#installieren-von-paketen-welche-chattr-im-hintergrund-benötigt",
+    "title": "ChatGPT in RStudio",
+    "section": "Installieren von Paketen, welche chattr im Hintergrund benötigt",
+    "text": "Installieren von Paketen, welche chattr im Hintergrund benötigt\nEventuell habt ihr diese schon installiert und ihr könnt diesen Schritt dann überspringen. Ansonsten müsst ihr diese Pakete, wie auch alle anderen, nur einmalig installieren.\n\ninstall.packages(\"shiny\")\ninstall.packages(\"httr2\")\ninstall.packages(\"jsonlite\")",
+    "crumbs": [
+      "Links und Ressourcen",
+      "ChatGPT in RStudio"
+    ]
+  },
+  {
+    "objectID": "ChatGPT.html#installieren-des-chattr-pakets-von-github",
+    "href": "ChatGPT.html#installieren-des-chattr-pakets-von-github",
+    "title": "ChatGPT in RStudio",
+    "section": "Installieren des chattr-Pakets von GitHub",
+    "text": "Installieren des chattr-Pakets von GitHub\nAuch hier gilt, die Installation des Paketes müsst ihr nur einmalig vornehmen.\n\ninstall.packages(\"remotes\") # Hier werdet ihr in der Console möglicherweise gefragt, ob ihr das Paket unter dem vorgeschlagenen Dateipfad abspeichern wollt. Sofern dieser für euch passt könnt ihr einfach mit \"Y\" unten in der Console eingeben und mit Enter bestätigen.\n\n\nremotes::install_github(\"mlverse/chattr\") # Hier werdet ihr möglicherweise gefragt, welche der betroffenen Pakete ihr updaten wollt. Es empfehlt sich, alle zu updaten. Ihr könnt dies tun, indem ihr \"1\" in der Console eingebt und mit Enter bestätigt.",
+    "crumbs": [
+      "Links und Ressourcen",
+      "ChatGPT in RStudio"
+    ]
+  },
+  {
+    "objectID": "ChatGPT.html#laden-von-chattr",
+    "href": "ChatGPT.html#laden-von-chattr",
+    "title": "ChatGPT in RStudio",
+    "section": "Laden von chattr",
+    "text": "Laden von chattr\nDie Schritte ab hier, also das Laden des Paketes und das Starten des Chat-Interface, müsst ihr bei jedem Start von RStudio erneut durchführen.\n\nlibrary(chattr) # So wie ihr es auch bereits von anderen Paketen kennt",
+    "crumbs": [
+      "Links und Ressourcen",
+      "ChatGPT in RStudio"
+    ]
+  },
+  {
+    "objectID": "ChatGPT.html#erstellen-des-chat-interface",
+    "href": "ChatGPT.html#erstellen-des-chat-interface",
+    "title": "ChatGPT in RStudio",
+    "section": "Erstellen des Chat-Interface",
+    "text": "Erstellen des Chat-Interface\n\nSys.setenv(OPENAI_API_KEY = \"Hier müsst ihr euren eigenen OpenAI API-Key einsetzen\") # Ihr erhaltet euren OpenAI API Key, indem ihr euch bei OpenAI anmeldet und unter https://platform.openai.com/account/api-keys einen neuen Key generiert.\n\nchattr_app() # Hier werdet ihr möglicherweise gefragt, welche Version von ChatGPT ihr verwenden mögt. Mit Eingabe der Nummer wählt ihr das entsprechende Modell aus. Mit Enter bestätigt ihr die Eingabe.",
+    "crumbs": [
+      "Links und Ressourcen",
+      "ChatGPT in RStudio"
+    ]
+  },
+  {
+    "objectID": "ChatGPT.html#prompt-beispiel",
+    "href": "ChatGPT.html#prompt-beispiel",
+    "title": "ChatGPT in RStudio",
+    "section": "Prompt-Beispiel",
+    "text": "Prompt-Beispiel\nWofür braucht das Paket chattr im Hintergrund noch die Pakete shiny, httr2 und jsonlite?",
+    "crumbs": [
+      "Links und Ressourcen",
+      "ChatGPT in RStudio"
+    ]
+  },
+  {
+    "objectID": "checkliste_abschlussarbeit.html",
+    "href": "checkliste_abschlussarbeit.html",
+    "title": "Checkliste Abschlussarbeit",
+    "section": "",
+    "text": "Abgabe bis 11.1.2026 - 23:55\nAbgabe als ZIP-File: vorname_nachname_abschlussarbeit.zip\nFür die Abschlussarbeit erhaltet ihr simulierte Daten. Diese werden den Daten des Originalpapers in den meisten Aspekten sehr ähnlich sein. Allerdings müssen einige Teile davon zusätzlich bereinigt werden, bevor sie ausgewertet werden können. Die folgende Checkliste soll euch dabei helfen, an alle relevanten Aspekte der Datenbereinigung zu denken.\nDie Datensatzaufbereitung erfolgt im processing-Skript. Der final aufbereitete Datensatz (dat_full) sowie der Long-Datensatz (dat_long) werden im Ordner data/processed gespeichert.",
+    "crumbs": [
+      "Checkliste Abschlussarbeit"
+    ]
+  },
+  {
+    "objectID": "checkliste_abschlussarbeit.html#aspekte-die-bei-der-bereinigung-processing-beachtet-werden-sollten",
+    "href": "checkliste_abschlussarbeit.html#aspekte-die-bei-der-bereinigung-processing-beachtet-werden-sollten",
+    "title": "Checkliste Abschlussarbeit",
+    "section": "Aspekte, die bei der Bereinigung (processing) beachtet werden sollten",
+    "text": "Aspekte, die bei der Bereinigung (processing) beachtet werden sollten\n\nHaben alle Daten die gleiche Anzahl an Beobachtungen?\n\n-   Gibt es Personen mit fehlenden Werten, die ausgeschlossen werden müssen?\n\n-   Gibt es Personen doppelt im Datensatz?\n\nGibt es unmögliche Werte in den Daten, z. B. -999? Wie können diese Daten ersetzt werden z.B aus anderen Variablen berechnet werden?\nGibt es reverse-kodierte Fragebogenvariablen (var_name_r)?\nGibt es Variablen, die nicht den korrekten Datentyp haben, z. B. numerische Variablen, die als Character angezeigt werden? Schaut euch diese Variablen genau an!\n(Beispiel: drei = 3, stimme voll und ganz zu = höchster Wert)",
+    "crumbs": [
+      "Checkliste Abschlussarbeit"
+    ]
+  },
+  {
+    "objectID": "checkliste_abschlussarbeit.html#weitere-vorbereitende-schritte-im-processed-datensatz",
+    "href": "checkliste_abschlussarbeit.html#weitere-vorbereitende-schritte-im-processed-datensatz",
+    "title": "Checkliste Abschlussarbeit",
+    "section": "Weitere vorbereitende Schritte im processed-Datensatz",
+    "text": "Weitere vorbereitende Schritte im processed-Datensatz\n\nMergen der 7 Einzeldatensätze\nDroppen von redundanten Variablen\nUmbenennen von Variablen, die nicht im snake_case-Format sind\nBerechnung der mmq_mean Variable\nSpeichern der Daten!",
+    "crumbs": [
+      "Checkliste Abschlussarbeit"
+    ]
+  },
+  {
+    "objectID": "checkliste_abschlussarbeit.html#im-analyseskript-analysis-werden",
+    "href": "checkliste_abschlussarbeit.html#im-analyseskript-analysis-werden",
+    "title": "Checkliste Abschlussarbeit",
+    "section": "Im Analyseskript (analysis) werden",
+    "text": "Im Analyseskript (analysis) werden\n\nNötige Vorbereitungen gemacht, die nicht zum processing gehören (z.B. Faktoren setzen)\nDie Analysen aus dem Datenanlyseplan durchgeführt!\n\nDeskriptive Statistik (M & SD) berechnen so wie in Table 1 (siehe Grinschgl et al., 2021)\n2x3 mixed ANOVA für subj. Leistungseinschätzungen mit post-hoc t-Tests, inkl.Effektstärken (η2 und Cohen’s d)\nOne-Way ANOVA für jede Offloading Variable (3x), inkl. Effektstärke (η2)\nOne-Way ANOVA für Trial Duration in Pattern Copy Task, inkl. Effektstärke (η2)\nOne-Way ANOVA für MMQ mit post-hoc t-Tests, inkl. Effektstärken (η2 und Cohen’sd)\nOne-Way ANOVA für Arbeitsgedächtnisleistung im Feature Switch Detection Task,inkl. Effektstärke (η2)\n1 Tabelle oder 1 Abbildung nach Wahl erstellen\nOptional: Testen der Voraussetzungen bei jeder Analyse – wenn diese gemacht wird, soll es auch im Datenanalyseplan beschrieben werden und die Analysen bei Voraussetzungsverletzungen entsprechend angepasst werden.\n\n\nPost-hoc-t-Tests werden nur für die 2x3-ANOVA und die MMQ-ANOVA erwartet. Sollte eine weitere ANOVA zufällig signifikante Werte aufweisen, werden hierfür keine Post-hoc-t-Tests verlangt.",
+    "crumbs": [
+      "Checkliste Abschlussarbeit"
+    ]
+  },
+  {
+    "objectID": "checkliste_abschlussarbeit.html#dinge-die-im-datenanalyseplan-angepasst-werden-müssen",
+    "href": "checkliste_abschlussarbeit.html#dinge-die-im-datenanalyseplan-angepasst-werden-müssen",
+    "title": "Checkliste Abschlussarbeit",
+    "section": "Dinge, die im Datenanalyseplan angepasst werden müssen:",
+    "text": "Dinge, die im Datenanalyseplan angepasst werden müssen:\n\nData Collection Procedures\nMissing Data\nUnit of Analyses/Data Exclusion",
+    "crumbs": [
+      "Checkliste Abschlussarbeit"
+    ]
+  },
+  {
+    "objectID": "checkliste_abschlussarbeit.html#dinge-die-im-codebook-angepasst-werden-müssen",
+    "href": "checkliste_abschlussarbeit.html#dinge-die-im-codebook-angepasst-werden-müssen",
+    "title": "Checkliste Abschlussarbeit",
+    "section": "Dinge, die im Codebook angepasst werden müssen:",
+    "text": "Dinge, die im Codebook angepasst werden müssen:\n\nCoding of item → reverse-kodierte Items\nCoding of Missing Data (falls vorhanden)\n1stes Blatt: Data Collection Procedures → Simulierte Daten.",
+    "crumbs": [
+      "Checkliste Abschlussarbeit"
+    ]
+  },
+  {
+    "objectID": "checkliste_abschlussarbeit.html#ordnerstruktur-für-die-abgabe",
+    "href": "checkliste_abschlussarbeit.html#ordnerstruktur-für-die-abgabe",
+    "title": "Checkliste Abschlussarbeit",
+    "section": "Ordnerstruktur für die Abgabe",
+    "text": "Ordnerstruktur für die Abgabe\nDie (für unser Seminar leicht abgeänderte) Psych-DS-Struktur wird eingehalten. Das bedeutet:\n\nDaten im Ordner data.\n\n-   Rohdaten in `data/raw` (werden nicht verändert).\n\n-   Aufbereitete Daten (`dat_full`) in `data/processed`\n\nAnalyseskripte (processing und analysis) im Ordner code\nGerenderte Analyseskripte (html) ebenfalls im Ordner code\nDatenanalyseplan im Ordner preregistration\nCodebook im Ordner data",
+    "crumbs": [
+      "Checkliste Abschlussarbeit"
+    ]
+  },
+  {
+    "objectID": "checkliste_abschlussarbeit.html#self-check-wie-sehen-plausible-ergebnisse-aus",
+    "href": "checkliste_abschlussarbeit.html#self-check-wie-sehen-plausible-ergebnisse-aus",
+    "title": "Checkliste Abschlussarbeit",
+    "section": "Self-Check: Wie sehen plausible Ergebnisse aus?",
+    "text": "Self-Check: Wie sehen plausible Ergebnisse aus?\nDie grundsätzliche Struktur der Daten sollte sehr ähnlich zu den Originaldaten sein.\n\nBeispiel aus einem simulierten Datensatz vs Originaldaten\n\nDie Ergebnisse bewegen sich alle in einem ähnlichen Rahmen wie die Daten aus der Originalstudie.\nOriginale Ergebnisse\n\n\n\n\n\nSimulierter Datensatz\n\n\n\n\n\nDementsprechend werden auch die Effekte der Analysen ähnlich ausfallen:",
+    "crumbs": [
+      "Checkliste Abschlussarbeit"
+    ]
+  },
+  {
+    "objectID": "checkliste_abschlussarbeit.html#zu-erwartende-abweichungen-der-ergebnisse-von-der-originalstudie",
+    "href": "checkliste_abschlussarbeit.html#zu-erwartende-abweichungen-der-ergebnisse-von-der-originalstudie",
+    "title": "Checkliste Abschlussarbeit",
+    "section": "Zu erwartende Abweichungen der Ergebnisse von der Originalstudie:",
+    "text": "Zu erwartende Abweichungen der Ergebnisse von der Originalstudie:\n\nZufällig signifikante Effekte die in der Originalstudie nicht signifikant waren sind möglich! In der Originalstudie gab es keinen signifikanten Effekt dieser Variable.\n\n\n\nEinzelne Werte werden sich unterscheiden! Deskriptiva, Effektgrössen usw. werden sich unterscheiden! Eta2 sind hier grösser als in der Originalstudie.\n\n\n\n\n\n\n\nDeskriptiva: Unterschiede in den Means und SDs!\n\n\n\n\n\n\n##Unplausible Resultate\nErgebnisse die ein komplett anderes Gesamtbild hinterlassen sind nicht zu erwarten!",
+    "crumbs": [
+      "Checkliste Abschlussarbeit"
+    ]
+  },
+  {
+    "objectID": "datenanalyseplan.html",
+    "href": "datenanalyseplan.html",
+    "title": "3 Datenanalyseplan",
+    "section": "",
+    "text": "Fragen zum Datenanalyseplan",
+    "crumbs": [
+      "FAQ",
+      "3  Datenanalyseplan"
+    ]
+  },
+  {
+    "objectID": "datenanalyseplan.html#müssen-die-anmerkungen-im-datenanalyseplan-nach-der-bearbeitung-gelöscht-werden-so-dass-nur-die-frage-und-der-titel-verbleiben",
+    "href": "datenanalyseplan.html#müssen-die-anmerkungen-im-datenanalyseplan-nach-der-bearbeitung-gelöscht-werden-so-dass-nur-die-frage-und-der-titel-verbleiben",
+    "title": "3 Datenanalyseplan",
+    "section": "Müssen die Anmerkungen im Datenanalyseplan nach der Bearbeitung gelöscht werden, so dass nur die Frage und der Titel verbleiben?",
+    "text": "Müssen die Anmerkungen im Datenanalyseplan nach der Bearbeitung gelöscht werden, so dass nur die Frage und der Titel verbleiben?\nÜblicherweise werden Datenanalysepläne auf OSF (dem Open Science Framework) mitsamt den Anmerkungen veröffentlicht. Für das Seminar ist es möglich die Anmerkungen zu behalten oder zu löschen.",
+    "crumbs": [
+      "FAQ",
+      "3  Datenanalyseplan"
+    ]
+  },
+  {
+    "objectID": "datenanalyseplan.html#müssen-auch-zu-explorativen-fragestellungen-hypothesen-aufgestellt-werden",
+    "href": "datenanalyseplan.html#müssen-auch-zu-explorativen-fragestellungen-hypothesen-aufgestellt-werden",
+    "title": "3 Datenanalyseplan",
+    "section": "Müssen auch zu explorativen Fragestellungen Hypothesen aufgestellt werden?",
+    "text": "Müssen auch zu explorativen Fragestellungen Hypothesen aufgestellt werden?\nKurzgesagt, nein. Bei explorativen Fragestellungen kann man auch einfach anmerken, dass diese explorativ sind – es also keine bisherige Theorie oder Evidenz für einen bestimmte Richtung gibt. Wichtig ist hierbei vor allem, transparent und vorausschauend zu arbeiten, in diesem Fall also den Umstand, explorativ zu arbeiten, klar zu benennen.",
+    "crumbs": [
+      "FAQ",
+      "3  Datenanalyseplan"
+    ]
+  },
+  {
+    "objectID": "datenanalyseplan.html#wenn-voraussetzungsprüfungen-oder-post-hoc-tests-durchgeführt-werden-müssen-diese-auch-im-datenanalyseplan-ergänzt-werden",
+    "href": "datenanalyseplan.html#wenn-voraussetzungsprüfungen-oder-post-hoc-tests-durchgeführt-werden-müssen-diese-auch-im-datenanalyseplan-ergänzt-werden",
+    "title": "3 Datenanalyseplan",
+    "section": "Wenn Voraussetzungsprüfungen oder post-hoc Tests durchgeführt werden, müssen diese auch im Datenanalyseplan ergänzt werden?",
+    "text": "Wenn Voraussetzungsprüfungen oder post-hoc Tests durchgeführt werden, müssen diese auch im Datenanalyseplan ergänzt werden?\nGrundsätzlich gilt: Der Datenanalyseplan soll fremden Wissenschaftler:innen aus der Psychologie ermöglichen die Studie und die Datenanalyse ohne weiteren Aufwand nachvollziehen zu können. Dafür sollte auf Vollständigkeit und Genauigkeit geachtet werden. Dementsprechend gilt es, die Voraussetzungsprüfungen entweder komplett wegzulassen oder sie sowohl im Skript als auch im Datenanalyseplan zu ergänzen.",
+    "crumbs": [
+      "FAQ",
+      "3  Datenanalyseplan"
+    ]
+  },
+  {
+    "objectID": "datenanalyseplan.html#soll-der-abstract-bereits-die-resultate-von-grinschgl-et-al.-2020-erwähnen-oder-offenlassen-welche-resultate-zu-erwarten-sind",
+    "href": "datenanalyseplan.html#soll-der-abstract-bereits-die-resultate-von-grinschgl-et-al.-2020-erwähnen-oder-offenlassen-welche-resultate-zu-erwarten-sind",
+    "title": "3 Datenanalyseplan",
+    "section": "Soll der Abstract bereits die Resultate von Grinschgl et al. (2020) erwähnen oder offenlassen, welche Resultate zu erwarten sind?",
+    "text": "Soll der Abstract bereits die Resultate von Grinschgl et al. (2020) erwähnen oder offenlassen, welche Resultate zu erwarten sind?\nÜblicherweise lässt der Datenanalyseplan die Resultate der beschriebenen Analyse im Abstract noch offen, da diese zu dem Zeitpunkt, zu welchem der Datenanalyseplan erstellt wird, noch nicht bekannt sind. Bei einer Replikation der Originalstudie – wie es hier der Fall ist – können die Ergebnisse aus dieser aber auch bereits genannt werden. Bezüglich der eigenen Datenanalyse sollte wiederum von erwarteten Ergebnissen ausgehen. Da die Analyse der Daten erst nach Verfassen des Datenanalyseplans folgt sind die Resultate bis dahin nicht bekannt.",
+    "crumbs": [
+      "FAQ",
+      "3  Datenanalyseplan"
+    ]
+  },
+  {
+    "objectID": "EH_10.html#r-u-ready-reproduzierbare-datenaufbereitung-und--analyse-mit-r",
+    "href": "EH_10.html#r-u-ready-reproduzierbare-datenaufbereitung-und--analyse-mit-r",
+    "title": "R u Ready? HS2025 | Psychologie der Digitalisierung - Einheit 10",
     "section": "R u Ready? Reproduzierbare Datenaufbereitung und -analyse mit R",
-    "text": "R u Ready? Reproduzierbare Datenaufbereitung und -analyse mit R\nHS 2025 LV-Leitung: Dr. Sandra Grinschgl / MSc. Aaron Friedli Tutor: BSc. Lars Schilling11. Einheit, 24.11.2025",
+    "text": "R u Ready? Reproduzierbare Datenaufbereitung und -analyse mit R\nHS 2025 LV-Leitung: Dr. Sandra Grinschgl / MSc. Aaron Friedli Tutor: BSc. Lars Schilling10. Einheit, 19.11.2025",
     "crumbs": [
       "Präsentationen",
-      "Einheit 11 - 26.11.2025"
+      "Einheit 10 - 19.11.2025"
     ]
   },
   {
-    "objectID": "EH_11.html#heute",
-    "href": "EH_11.html#heute",
-    "title": "R u Ready? HS2025 | Psychologie der Digitalisierung - Einheit 11",
+    "objectID": "EH_10.html#heute",
+    "href": "EH_10.html#heute",
+    "title": "R u Ready? HS2025 | Psychologie der Digitalisierung - Einheit 10",
     "section": "Heute:",
-    "text": "Heute:",
+    "text": "Heute:\n\n\n\nVerschiebung der Abgabe der Datensätze an die Studierenden auf EH12 auf Wunsch der Studierenden",
     "crumbs": [
       "Präsentationen",
-      "Einheit 11 - 26.11.2025"
+      "Einheit 10 - 19.11.2025"
     ]
   },
   {
-    "objectID": "EH_11.html#fragen-hands-on-block-5",
-    "href": "EH_11.html#fragen-hands-on-block-5",
-    "title": "R u Ready? HS2025 | Psychologie der Digitalisierung - Einheit 11",
-    "section": "Fragen Hands On Block 5?",
-    "text": "Fragen Hands On Block 5?",
+    "objectID": "EH_10.html#muddiest-points",
+    "href": "EH_10.html#muddiest-points",
+    "title": "R u Ready? HS2025 | Psychologie der Digitalisierung - Einheit 10",
+    "section": "Muddiest Points!",
+    "text": "Muddiest Points!",
     "crumbs": [
       "Präsentationen",
-      "Einheit 11 - 26.11.2025"
+      "Einheit 10 - 19.11.2025"
     ]
   },
   {
-    "objectID": "EH_11.html#abbildungen-visualize",
-    "href": "EH_11.html#abbildungen-visualize",
-    "title": "R u Ready? HS2025 | Psychologie der Digitalisierung - Einheit 11",
-    "section": "Abbildungen: Visualize",
-    "text": "Abbildungen: Visualize",
+    "objectID": "EH_10.html#gruppe-sandra",
+    "href": "EH_10.html#gruppe-sandra",
+    "title": "R u Ready? HS2025 | Psychologie der Digitalisierung - Einheit 10",
+    "section": "Gruppe Sandra",
+    "text": "Gruppe Sandra\nFortsetzung Datenqualität -&gt; Folien EH 9\nZuerst Theorie, dann Hands-On",
     "crumbs": [
       "Präsentationen",
-      "Einheit 11 - 26.11.2025"
+      "Einheit 10 - 19.11.2025"
     ]
   },
   {
-    "objectID": "EH_11.html#visualisierungen-reproduktion-der-figures-aus-grinschgl-2021",
-    "href": "EH_11.html#visualisierungen-reproduktion-der-figures-aus-grinschgl-2021",
-    "title": "R u Ready? HS2025 | Psychologie der Digitalisierung - Einheit 11",
+    "objectID": "EH_10.html#hands-on-block-5-check-in",
+    "href": "EH_10.html#hands-on-block-5-check-in",
+    "title": "R u Ready? HS2025 | Psychologie der Digitalisierung - Einheit 10",
+    "section": "Hands-on Block 5: Check In",
+    "text": "Hands-on Block 5: Check In\nHaben alle einen Long Datensatz (e.g. dat_full_long) mit 318 Zeilen = 2 Zeilen pro Versuchsperson?\nWenn nicht:\n\ndat_full_long &lt;- dat_full |&gt; \n  pivot_longer(cols = c(pre1, pre4),\n               names_to = \"time_rating\",         \n               values_to = \"rating\")\n\n❗Falls ihr bis Ende Lektion noch nicht den LONG Datensatz erstellt und gespeichert habt - meldet euch bei uns",
+    "crumbs": [
+      "Präsentationen",
+      "Einheit 10 - 19.11.2025"
+    ]
+  },
+  {
+    "objectID": "EH_10.html#visualize-tabellen",
+    "href": "EH_10.html#visualize-tabellen",
+    "title": "R u Ready? HS2025 | Psychologie der Digitalisierung - Einheit 10",
+    "section": "Visualize: Tabellen",
+    "text": "Visualize: Tabellen\n\nMöglichkeit APA konforme Tabellen in R zu erstellen\n\nSchritt 1: Deskriptive Tabelle erstellen mit summarize\n\npenguins_full &lt;- drop_na(penguins)\npenguins_summary &lt;- penguins_full |&gt; \n  group_by(species) |&gt;\n  summarize(mean_body_mass = mean(body_mass_g),\n            min_body_mass = min(body_mass_g),\n            max_body_mass = max(body_mass_g)\n            )\n\npenguins_summary\n\n# A tibble: 3 × 4\n  species   mean_body_mass min_body_mass max_body_mass\n  &lt;fct&gt;              &lt;dbl&gt;         &lt;int&gt;         &lt;int&gt;\n1 Adelie             3706.          2850          4775\n2 Chinstrap          3733.          2700          4800\n3 Gentoo             5092.          3950          6300",
+    "crumbs": [
+      "Präsentationen",
+      "Einheit 10 - 19.11.2025"
+    ]
+  },
+  {
+    "objectID": "EH_10.html#visualize-tabellen-1",
+    "href": "EH_10.html#visualize-tabellen-1",
+    "title": "R u Ready? HS2025 | Psychologie der Digitalisierung - Einheit 10",
+    "section": "Visualize: Tabellen",
+    "text": "Visualize: Tabellen\nSchritt 2: kable auf deskriptive Tabelle anwenden\n\nlibrary(knitr)\n\npenguins_summary |&gt;\n  kable(\n    caption = \"Summary of penguin body mass by species\",\n    digits = 1,\n    col.names = c(\"Species\", \"Mean body mass (g)\", \"Min\", \"Max\")\n  )\n\n\nSummary of penguin body mass by species\n\n\nSpecies\nMean body mass (g)\nMin\nMax\n\n\n\n\nAdelie\n3706.2\n2850\n4775\n\n\nChinstrap\n3733.1\n2700\n4800\n\n\nGentoo\n5092.4\n3950\n6300\n\n\n\n\n\nWeitere Formatierungen möglich, z.B. row.names, col.names…siehe Hilfefunktion",
+    "crumbs": [
+      "Präsentationen",
+      "Einheit 10 - 19.11.2025"
+    ]
+  },
+  {
+    "objectID": "EH_10.html#apatables---apa-konforme-tabellen-von-statistischen-analysen",
+    "href": "EH_10.html#apatables---apa-konforme-tabellen-von-statistischen-analysen",
+    "title": "R u Ready? HS2025 | Psychologie der Digitalisierung - Einheit 10",
+    "section": "apaTables - APA konforme Tabellen von statistischen Analysen",
+    "text": "apaTables - APA konforme Tabellen von statistischen Analysen\nKorrelationstabelle im APA Format –&gt; Kann man auch für Regressionen und ANOVAs verwenden\n1.Schritt: Auswahl von Variablen\n\npenguins_subset &lt;- penguins |&gt;\n  select(bill_length_mm, bill_depth_mm, flipper_length_mm)",
+    "crumbs": [
+      "Präsentationen",
+      "Einheit 10 - 19.11.2025"
+    ]
+  },
+  {
+    "objectID": "EH_10.html#apatables---apa-konforme-tabellen-von-statistischen-analysen-1",
+    "href": "EH_10.html#apatables---apa-konforme-tabellen-von-statistischen-analysen-1",
+    "title": "R u Ready? HS2025 | Psychologie der Digitalisierung - Einheit 10",
+    "section": "apaTables - APA konforme Tabellen von statistischen Analysen",
+    "text": "apaTables - APA konforme Tabellen von statistischen Analysen\n2.Schritt: Korrelationstabelle for ausgewählte Variablen\nSpeichert Tabelle als Word Datei\n\nlibrary(apaTables)\napa.cor.table(penguins_subset)",
+    "crumbs": [
+      "Präsentationen",
+      "Einheit 10 - 19.11.2025"
+    ]
+  },
+  {
+    "objectID": "EH_10.html#abbildungen-visualize-fortsetzung-in-eh-11",
+    "href": "EH_10.html#abbildungen-visualize-fortsetzung-in-eh-11",
+    "title": "R u Ready? HS2025 | Psychologie der Digitalisierung - Einheit 10",
+    "section": "Abbildungen: Visualize (Fortsetzung in EH 11)",
+    "text": "Abbildungen: Visualize (Fortsetzung in EH 11)",
+    "crumbs": [
+      "Präsentationen",
+      "Einheit 10 - 19.11.2025"
+    ]
+  },
+  {
+    "objectID": "EH_10.html#visualisierungen-reproduktion-der-figures-aus-grinschgl-2021",
+    "href": "EH_10.html#visualisierungen-reproduktion-der-figures-aus-grinschgl-2021",
+    "title": "R u Ready? HS2025 | Psychologie der Digitalisierung - Einheit 10",
     "section": "Visualisierungen: Reproduktion der Figures aus Grinschgl 2021",
     "text": "Visualisierungen: Reproduktion der Figures aus Grinschgl 2021",
     "crumbs": [
       "Präsentationen",
-      "Einheit 11 - 26.11.2025"
+      "Einheit 10 - 19.11.2025"
     ]
   },
   {
-    "objectID": "EH_11.html#visualisierungen",
-    "href": "EH_11.html#visualisierungen",
-    "title": "R u Ready? HS2025 | Psychologie der Digitalisierung - Einheit 11",
+    "objectID": "EH_10.html#visualisierungen",
+    "href": "EH_10.html#visualisierungen",
+    "title": "R u Ready? HS2025 | Psychologie der Digitalisierung - Einheit 10",
     "section": "Visualisierungen",
     "text": "Visualisierungen",
     "crumbs": [
       "Präsentationen",
-      "Einheit 11 - 26.11.2025"
+      "Einheit 10 - 19.11.2025"
     ]
   },
   {
-    "objectID": "EH_11.html#ggplot2",
-    "href": "EH_11.html#ggplot2",
-    "title": "R u Ready? HS2025 | Psychologie der Digitalisierung - Einheit 11",
+    "objectID": "EH_10.html#ggplot2",
+    "href": "EH_10.html#ggplot2",
+    "title": "R u Ready? HS2025 | Psychologie der Digitalisierung - Einheit 10",
     "section": "ggplot2()",
     "text": "ggplot2()\nSehr flexibles Paket.\n\nPlots werden schrittweise “befüllt”\n\n\n\nAlle plots beginnen mit ggplot() und dem verwendeten Datensatz\nMit aes() definieren wir die elemantaren Elemente der Plots - Variablen die geplottet werden sollen\nmit + können wir geoms, layers und weitere Elemente hinzufügen.",
     "crumbs": [
       "Präsentationen",
-      "Einheit 11 - 26.11.2025"
+      "Einheit 10 - 19.11.2025"
     ]
   },
   {
-    "objectID": "EH_11.html#ggplot2---cheatsheet",
-    "href": "EH_11.html#ggplot2---cheatsheet",
-    "title": "R u Ready? HS2025 | Psychologie der Digitalisierung - Einheit 11",
+    "objectID": "EH_10.html#ggplot2---cheatsheet",
+    "href": "EH_10.html#ggplot2---cheatsheet",
+    "title": "R u Ready? HS2025 | Psychologie der Digitalisierung - Einheit 10",
     "section": "ggplot2() - Cheatsheet",
     "text": "ggplot2() - Cheatsheet\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWith ggplot2, you begin a plot with the function ggplot(), defining a plot object that you then add layers to. The first argument of ggplot() is the dataset to use in the graph and so ggplot(data = penguins) creates an empty graph that is primed to display the penguins data, but since we haven’t told it how to visualize it yet, for now it’s empty. This is not a very exciting plot, but you can think of it like an empty canvas you’ll paint the remaining layers of your plot onto.\nNext, we need to tell ggplot() how the information from our data will be visually represented. The mapping argument of the ggplot() function defines how variables in your dataset are mapped to visual properties (aesthetics) of your plot. The mapping argument is always defined in the aes() function, and the x and y arguments of aes() specify which variables to map to the x and y axes. For now, we will only map flipper length to the x aesthetic and body mass to the y aesthetic. ggplot2 looks for the mapped variables in the data argument, in this case, penguins.\nTo do so, we need to define a geom: the geometrical object that a plot uses to represent data. These geometric objects are made available in ggplot2 with functions that start with geom_. People often describe plots by the type of geom that the plot uses. For example, bar charts use bar geoms (geom_bar()), line charts use line geoms (geom_line()), boxplots use boxplot geoms (geom_boxplot()), scatterplots use point geoms (geom_point()), and so on.\nZusammenhang bedeutet die Verwendung von +, dass wir einzelne Elemente eines Plot-Objektes zusammenfügen.",
     "crumbs": [
       "Präsentationen",
-      "Einheit 11 - 26.11.2025"
+      "Einheit 10 - 19.11.2025"
     ]
   },
   {
-    "objectID": "EH_11.html#argumente-von-ggplot",
-    "href": "EH_11.html#argumente-von-ggplot",
-    "title": "R u Ready? HS2025 | Psychologie der Digitalisierung - Einheit 11",
+    "objectID": "EH_10.html#argumente-von-ggplot",
+    "href": "EH_10.html#argumente-von-ggplot",
+    "title": "R u Ready? HS2025 | Psychologie der Digitalisierung - Einheit 10",
     "section": "Argumente von ggplot()",
-    "text": "Argumente von ggplot()\n\nVariablen als Aesthetic Mappings definieren\nMapping ist immer das zweite Argument (nach dem Datensatz), “call” kann also auch verkürzt werden.\n\n\np &lt;- penguins |&gt;\n  ggplot( \n       mapping = \n         aes(x = body_mass_g, \n           y = bill_length_mm))\np",
+    "text": "Argumente von ggplot()\n\nVariablen als Aestheatic Mappings defineren\nMapping ist immer das zweite argument, “call” kann also auch verkürzt werden.\n\n\np &lt;- penguins |&gt;\n  ggplot( \n       mapping = \n         aes(x = body_mass_g, \n           y = bill_length_mm))\np",
     "crumbs": [
       "Präsentationen",
-      "Einheit 11 - 26.11.2025"
+      "Einheit 10 - 19.11.2025"
     ]
   },
   {
-    "objectID": "EH_11.html#ggplot---geoms",
-    "href": "EH_11.html#ggplot---geoms",
-    "title": "R u Ready? HS2025 | Psychologie der Digitalisierung - Einheit 11",
+    "objectID": "EH_10.html#ggplot---geoms",
+    "href": "EH_10.html#ggplot---geoms",
+    "title": "R u Ready? HS2025 | Psychologie der Digitalisierung - Einheit 10",
     "section": "ggplot() - Geoms",
-    "text": "ggplot() - Geoms\n\nLayers Hinzufügen z.B. ein geom mit +\nGeoms = geometrische Objekte, die die Daten darstellen (z.B. Punkte, Linien)\nMuss je nachdem welche Daten man hat und wie man diese darstellen will ausgewählt werden, z.B.\n\nKategoriale Variable: geom_bar()\nKontinuierliche Variable: geom_histogram()\n2 kontinuierliche Variablen: geom_point(), geom_line()\n2 Kategoriale Variablen: geom_count()\nKategorial + Kontinuierlich: geom_boxplot(), geom_violin()",
+    "text": "ggplot() - Geoms\n\nLayers Hinzufügen z.B. ein geom mit +\nGeoms = geometrische Objekte, die die Daten darstellen (z.B. Punkte, Linien)\nMuss je nachdem welche Daten man hat und wie man diese darstellen will ausgewählt werden, z.B.\n\nKategoriale Variable: geom_bar()\nKontinuierliche Variable: geom_histogram()\n2 kontinuierliche Variablen: geom_point(), geom_line()\n2 Kategoriale Variablen: geom_count()\nKategorial + Kontinuierlich: geom_boxplot(), geom_violin()\n\n\n\np &lt;- p +\n  geom_point()\n\np",
     "crumbs": [
       "Präsentationen",
-      "Einheit 11 - 26.11.2025"
+      "Einheit 10 - 19.11.2025"
     ]
   },
   {
-    "objectID": "EH_11.html#ggplot---geoms-1",
-    "href": "EH_11.html#ggplot---geoms-1",
-    "title": "R u Ready? HS2025 | Psychologie der Digitalisierung - Einheit 11",
-    "section": "ggplot() - Geoms",
-    "text": "ggplot() - Geoms\n\np &lt;- p +\n  geom_point()\n\np",
-    "crumbs": [
-      "Präsentationen",
-      "Einheit 11 - 26.11.2025"
-    ]
-  },
-  {
-    "objectID": "EH_11.html#ggplot---layers",
-    "href": "EH_11.html#ggplot---layers",
-    "title": "R u Ready? HS2025 | Psychologie der Digitalisierung - Einheit 11",
+    "objectID": "EH_10.html#ggplot---layers",
+    "href": "EH_10.html#ggplot---layers",
+    "title": "R u Ready? HS2025 | Psychologie der Digitalisierung - Einheit 10",
     "section": "ggplot() - Layers",
     "text": "ggplot() - Layers\n\nMappings können auch in den Layers definiert werden\n\n\np &lt;- p + \n  geom_point(aes(x = body_mass_g, \n           y = bill_length_mm))\n\np",
     "crumbs": [
       "Präsentationen",
-      "Einheit 11 - 26.11.2025"
+      "Einheit 10 - 19.11.2025"
     ]
   },
   {
-    "objectID": "EH_11.html#ggplot---layers-1",
-    "href": "EH_11.html#ggplot---layers-1",
-    "title": "R u Ready? HS2025 | Psychologie der Digitalisierung - Einheit 11",
+    "objectID": "EH_10.html#ggplot---layers-1",
+    "href": "EH_10.html#ggplot---layers-1",
+    "title": "R u Ready? HS2025 | Psychologie der Digitalisierung - Einheit 10",
     "section": "ggplot() - Layers",
     "text": "ggplot() - Layers\n\nTitel + Achsenbeschriftung (= labs), Regressionslinien, vereinfachtes Design\n\n\np &lt;- p +\n  geom_smooth(aes(group = 1), method = \"lm\") +\n  theme_classic() +\n  labs(\n    title = \"Relationship Between Body Mass and Bill Length\",\n    x = \"Body Mass (g)\",\n    y = \"Bill Length (mm)\"\n  )\n\np\n\n\nmit theme_ können verschiedene Formatierungen gewählt werden. theme_classic wird typischerweise für APA7 passende Formatierungen gewählt.",
     "crumbs": [
       "Präsentationen",
-      "Einheit 11 - 26.11.2025"
+      "Einheit 10 - 19.11.2025"
     ]
   },
   {
-    "objectID": "EH_11.html#ggplot---verschiedene-layersgeoms-kombiniert",
-    "href": "EH_11.html#ggplot---verschiedene-layersgeoms-kombiniert",
-    "title": "R u Ready? HS2025 | Psychologie der Digitalisierung - Einheit 11",
+    "objectID": "EH_10.html#ggplot---verschiedene-layersgeoms-kombiniert",
+    "href": "EH_10.html#ggplot---verschiedene-layersgeoms-kombiniert",
+    "title": "R u Ready? HS2025 | Psychologie der Digitalisierung - Einheit 10",
     "section": "ggplot() - Verschiedene Layers/Geoms kombiniert",
     "text": "ggplot() - Verschiedene Layers/Geoms kombiniert\n\np2 &lt;- penguins |&gt;\n  ggplot(aes(x = island, y = body_mass_g, color = island, shape = sex)) +\n  geom_boxplot() +\n  geom_jitter(alpha = 0.5)+\n  theme_classic()+\n  labs(\n    title = \"Body Mass Per Island and Species\", x = \"Island\", y = \"Body Mass (g)\")\np2\n\n\n\nAchtung: Nicht optimal formatiert, weil sonst der Plot zu klein dargestellt wird.",
     "crumbs": [
       "Präsentationen",
-      "Einheit 11 - 26.11.2025"
+      "Einheit 10 - 19.11.2025"
     ]
   },
   {
-    "objectID": "EH_11.html#abbildungen-speichern",
-    "href": "EH_11.html#abbildungen-speichern",
-    "title": "R u Ready? HS2025 | Psychologie der Digitalisierung - Einheit 11",
+    "objectID": "EH_10.html#abbildungen-speichern",
+    "href": "EH_10.html#abbildungen-speichern",
+    "title": "R u Ready? HS2025 | Psychologie der Digitalisierung - Einheit 10",
     "section": "Abbildungen speichern",
     "text": "Abbildungen speichern\n\nggsave(filename = \"my_first_plot.png\", plot = p2)",
     "crumbs": [
       "Präsentationen",
-      "Einheit 11 - 26.11.2025"
+      "Einheit 10 - 19.11.2025"
     ]
   },
   {
-    "objectID": "EH_11.html#weitere-ressourcen",
-    "href": "EH_11.html#weitere-ressourcen",
-    "title": "R u Ready? HS2025 | Psychologie der Digitalisierung - Einheit 11",
+    "objectID": "EH_10.html#weitere-ressourcen",
+    "href": "EH_10.html#weitere-ressourcen",
+    "title": "R u Ready? HS2025 | Psychologie der Digitalisierung - Einheit 10",
     "section": "Weitere Ressourcen:",
     "text": "Weitere Ressourcen:\nViel, viel mehr Möglichkeiten als wir hier besprechen, siehe z.B.:\nAuflistung von Argumenten\nggplot2 Cheatsheet\nR for Data Science – Kapitel 9 & 10:\nKapitel „Layers“\nKapitel „EDA“\nWeitere Textelemente in Abbildungen (Kapitel 11)\nHier findet man auch weitere Visualisierungsmöglichkeiten & Informationen dazu, wie man verschiedene Plots neben/untereinander abbilden kann.\nTop 50 Visualisierungen mit ggplot2\nfür Animationen, Signifikanztests, Wordclouds usw.",
     "crumbs": [
       "Präsentationen",
-      "Einheit 11 - 26.11.2025"
+      "Einheit 10 - 19.11.2025"
     ]
   },
   {
-    "objectID": "EH_11.html#erinnerung-statistik",
-    "href": "EH_11.html#erinnerung-statistik",
-    "title": "R u Ready? HS2025 | Psychologie der Digitalisierung - Einheit 11",
-    "section": "Erinnerung Statistik",
-    "text": "Erinnerung Statistik\n\nForschungsfrage/ Hyptothese aufstellen und Auswahl passender Testverfahren 👉 Bereits im Datenanalyseplan gemacht\n\nEntscheidungsbaum statistischer Testverfahren\n\nEntscheidungsbaum UZH",
-    "crumbs": [
-      "Präsentationen",
-      "Einheit 11 - 26.11.2025"
-    ]
-  },
-  {
-    "objectID": "EH_11.html#korrelationen",
-    "href": "EH_11.html#korrelationen",
-    "title": "R u Ready? HS2025 | Psychologie der Digitalisierung - Einheit 11",
-    "section": "Korrelationen",
-    "text": "Korrelationen\n\nLinearer Zusammenhang zweier Variablen\nPositive Korrelation = hohe Ausprägungen einer Variable hängen mit hohen Ausprägungen einer anderen Variable zusammen\nNegative Korrelation = Hohe Ausprägungen einer Variable hängen mit niedrigen Ausprägungen einer anderen Variable zusammen\nKorrelationskoeffizient r kann von -1 bis +1 gehen\nVoraussetzung: Normalverteilung der Residuen (siehe EH 10)\nNicht-parametrische Alternative: Spearman Korrelation\n\n\ncor.test(penguins$bill_length_mm, penguins$body_mass_g)\n\n\n    Pearson's product-moment correlation\n\ndata:  penguins$bill_length_mm and penguins$body_mass_g\nt = 13.654, df = 340, p-value &lt; 2.2e-16\nalternative hypothesis: true correlation is not equal to 0\n95 percent confidence interval:\n 0.5220040 0.6595358\nsample estimates:\n      cor \n0.5951098",
-    "crumbs": [
-      "Präsentationen",
-      "Einheit 11 - 26.11.2025"
-    ]
-  },
-  {
-    "objectID": "EH_11.html#notation",
-    "href": "EH_11.html#notation",
-    "title": "R u Ready? HS2025 | Psychologie der Digitalisierung - Einheit 11",
-    "section": "Notation",
-    "text": "Notation\n\noptions(scipen = 999)\ncor.test(penguins$bill_length_mm, penguins$body_mass_g)\n\n\n    Pearson's product-moment correlation\n\ndata:  penguins$bill_length_mm and penguins$body_mass_g\nt = 13.654, df = 340, p-value &lt; 0.00000000000000022\nalternative hypothesis: true correlation is not equal to 0\n95 percent confidence interval:\n 0.5220040 0.6595358\nsample estimates:\n      cor \n0.5951098",
-    "crumbs": [
-      "Präsentationen",
-      "Einheit 11 - 26.11.2025"
-    ]
-  },
-  {
-    "objectID": "EH_11.html#hinweise-zur-linearen-regression",
-    "href": "EH_11.html#hinweise-zur-linearen-regression",
-    "title": "R u Ready? HS2025 | Psychologie der Digitalisierung - Einheit 11",
-    "section": "Hinweise zur linearen Regression",
-    "text": "Hinweise zur linearen Regression\n\nTestet den Zusammenhang zwischen zwei Variablen\nEinfache lineare Regression = Korrelation\nKeine Kausalaussagen möglich (wie auch bei Korrelationen)\nVoraussetzungen: Normalverteilung der Residuen, Multikollinearität und Homoskedastizität\nNicht-parametrische Alternative: Poisson-Regression\n\n\n\nHomoskedastizität bedeutet, dass die Varianz der Residuen in einer Regressionsanalyse   für alle Werte des Prädiktors konstant ist. Das heißt, die Abweichungen der vorhergesagten Werte von den wahren Werten sind in etwa immer gleich groß – unabhängig wie hoch oder niedrig der Wert des Prädiktors ist. Um deine Regressionsanalyse sinnvoll interpretieren zu können, ist es wichtig, dass Homoskedastizität vorliegt. Homoskedastizität bildet deshalb neben einigen weiteren Aspekten (z.B. Vermeidung von Multikollinearität ) eine wichtige Voraussetzung für die lineare Regression. Heteroskedastizität Das Gegenteil von Homoskedastizität ist Heteroskedastizität. In diesem Fall verändert sich die Varianz der Residuen mit ansteigenden oder abfallenden Werten des Prädiktors. Beispielsweise kannst du bei Heteroskedastizität mit deiner Vorhersage systematisch umso weiter daneben liegen, je größer der Prädiktorwert ist, für den du dein Kriterium schätzen möchtest.",
-    "crumbs": [
-      "Präsentationen",
-      "Einheit 11 - 26.11.2025"
-    ]
-  },
-  {
-    "objectID": "EH_11.html#einfache-lineare-regressionen",
-    "href": "EH_11.html#einfache-lineare-regressionen",
-    "title": "R u Ready? HS2025 | Psychologie der Digitalisierung - Einheit 11",
-    "section": "Einfache lineare Regressionen",
-    "text": "Einfache lineare Regressionen\nArgumente\n\nmodel_1 &lt;- lm(mean_rl_all ~ cvstm_propcorrect, data = dat_full)\n\nsummary(model_1)\n\n\nCall:\nlm(formula = mean_rl_all ~ cvstm_propcorrect, data = dat_full)\n\nResiduals:\n    Min      1Q  Median      3Q     Max \n-2.1982 -0.6544 -0.1708  0.7555  3.5717 \n\nCoefficients:\n                  Estimate Std. Error t value             Pr(&gt;|t|)    \n(Intercept)         7.6277     0.8257   9.238 &lt; 0.0000000000000002 ***\ncvstm_propcorrect  -3.2993     1.1202  -2.945              0.00372 ** \n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\nResidual standard error: 1.097 on 157 degrees of freedom\nMultiple R-squared:  0.05236,   Adjusted R-squared:  0.04632 \nF-statistic: 8.674 on 1 and 157 DF,  p-value: 0.003719",
-    "crumbs": [
-      "Präsentationen",
-      "Einheit 11 - 26.11.2025"
-    ]
-  },
-  {
-    "objectID": "EH_11.html#regression-output",
-    "href": "EH_11.html#regression-output",
-    "title": "R u Ready? HS2025 | Psychologie der Digitalisierung - Einheit 11",
-    "section": "Regression: Output",
-    "text": "Regression: Output\n\n\nHier eine sehr kurze, punktuelle Zusammenfassung:\n\nIntercept (7.63): Ausgangswert von mean_rl_all, wenn cvstm_propcorrect = 0.\nSteigung (-3.30): Hoeherer cvstm_propcorrect sagt niedrigeren mean_rl_all voraus (negativer Zusammenhang\np = .0037: Zusammenhang ist signifikant.\nResiduen: Durchschnittliche Abweichung vom Modell ca. 1.10.\nR² = 0.052: Modell erklaert 5% der Varianz → kleiner Effekt.\nF-Test p = .0037: Das Gesamtmodell ist signifikant.\n\nKurz: Höhere cvstm_propcorrect-Werte gehen mit niedrigeren mean_rl_all-Werten einher, aber das Modell erklaert nur wenig Varianz.",
-    "crumbs": [
-      "Präsentationen",
-      "Einheit 11 - 26.11.2025"
-    ]
-  },
-  {
-    "objectID": "EH_11.html#hierarchische-regression",
-    "href": "EH_11.html#hierarchische-regression",
-    "title": "R u Ready? HS2025 | Psychologie der Digitalisierung - Einheit 11",
-    "section": "Hierarchische Regression",
-    "text": "Hierarchische Regression\n\nMan legt zwei oder mehr Regressionsmodelle an mit zunehmenden Prädiktoren\nDann vergleicht man diese Modelle mit anova(model1, model2). Gibt es einen signifikanten Zuwachs an aufgeklärter Varianz (siehe Determinationskoeffizient) von model1 zu model2?\n\nSiehe hier: Lineare Regression mit R (einfach, multiple, hierarchisch)",
-    "crumbs": [
-      "Präsentationen",
-      "Einheit 11 - 26.11.2025"
-    ]
-  },
-  {
-    "objectID": "EH_11.html#heute-haben-wir",
-    "href": "EH_11.html#heute-haben-wir",
-    "title": "R u Ready? HS2025 | Psychologie der Digitalisierung - Einheit 11",
+    "objectID": "EH_10.html#heute-haben-wir",
+    "href": "EH_10.html#heute-haben-wir",
+    "title": "R u Ready? HS2025 | Psychologie der Digitalisierung - Einheit 10",
     "section": "Heute haben wir:",
-    "text": "Heute haben wir:\n\nBasics der Datenvisualisierungen kennengelernt\n\nErstellung von Tabellen\nggplot()\n\nKorrelationen und Regressionen in R kennengelernt\n\nReminder: R Übung bis Freitag 28.11, Peer Feedback über Forum bis 03.12.",
+    "text": "Heute haben wir:\n\nMuddiest Points besprochen\nBasics der Datenvisualisierungen kennengelernt\n\nErstellung von Tabellen\nggplot()\n\n\nReminder: Beim Abschlussprojekt müsst ihr 1 Tabelle oder Abbildung nach Wahl zu den simulierten Daten abgeben.",
     "crumbs": [
       "Präsentationen",
-      "Einheit 11 - 26.11.2025"
+      "Einheit 10 - 19.11.2025"
     ]
   },
   {
-    "objectID": "EH_11.html#optionale-slide-korrelation-einfache-lineare-regression",
-    "href": "EH_11.html#optionale-slide-korrelation-einfache-lineare-regression",
-    "title": "R u Ready? HS2025 | Psychologie der Digitalisierung - Einheit 11",
-    "section": "Optionale Slide Korrelation = Einfache lineare Regression",
-    "text": "Optionale Slide Korrelation = Einfache lineare Regression\n\n\n\n    Pearson's product-moment correlation\n\ndata:  penguins$bill_length_mm and penguins$body_mass_g\nt = 13.654, df = 340, p-value &lt; 0.00000000000000022\nalternative hypothesis: true correlation is not equal to 0\n95 percent confidence interval:\n 0.5220040 0.6595358\nsample estimates:\n      cor \n0.5951098 \n\n\n\nCall:\nlm(formula = bill_length_mm ~ body_mass_g, data = penguins)\n\nResiduals:\n     Min       1Q   Median       3Q      Max \n-10.1251  -3.0434  -0.8089   2.0711  16.1109 \n\nCoefficients:\n              Estimate Std. Error t value            Pr(&gt;|t|)    \n(Intercept) 26.8988724  1.2691478   21.19 &lt;0.0000000000000002 ***\nbody_mass_g  0.0040514  0.0002967   13.65 &lt;0.0000000000000002 ***\n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\nResidual standard error: 4.394 on 340 degrees of freedom\n  (2 Beobachtungen als fehlend gelöscht)\nMultiple R-squared:  0.3542,    Adjusted R-squared:  0.3523 \nF-statistic: 186.4 on 1 and 340 DF,  p-value: &lt; 0.00000000000000022\n\n\n\n\n[1] 0.3541557",
+    "objectID": "EH_10.html#r-hausübung-2",
+    "href": "EH_10.html#r-hausübung-2",
+    "title": "R u Ready? HS2025 | Psychologie der Digitalisierung - Einheit 10",
+    "section": "R Hausübung 2",
+    "text": "R Hausübung 2\nAbgabe bis Freitag 28.11.2025, 23:55\nPeerfeedback bis Mittwoch 03.12.2025 (vor der Einheit)\nAchtung: Einhalten der Namensvorgaben!\n\nNamenseinhaltung für Abgabe der Files (da wir diese via R-Funktion öffnen)",
     "crumbs": [
       "Präsentationen",
-      "Einheit 11 - 26.11.2025"
+      "Einheit 10 - 19.11.2025"
+    ]
+  },
+  {
+    "objectID": "EH_12.html#r-u-ready-reproduzierbare-datenaufbereitung-und--analyse-mit-r",
+    "href": "EH_12.html#r-u-ready-reproduzierbare-datenaufbereitung-und--analyse-mit-r",
+    "title": "R u Ready? HS2025 | Psychologie der Digitalisierung - Einheit 12",
+    "section": "R u Ready? Reproduzierbare Datenaufbereitung und -analyse mit R",
+    "text": "R u Ready? Reproduzierbare Datenaufbereitung und -analyse mit R\nHS 2025 LV-Leitung: Dr. Sandra Grinschgl / MSc. Aaron Friedli Tutor: BSc. Lars Schilling12. Einheit, 03.12.2025",
+    "crumbs": [
+      "Präsentationen",
+      "Einheit 12 - 03.12.2025"
+    ]
+  },
+  {
+    "objectID": "EH_12.html#heute",
+    "href": "EH_12.html#heute",
+    "title": "R u Ready? HS2025 | Psychologie der Digitalisierung - Einheit 12",
+    "section": "Heute:",
+    "text": "Heute:",
+    "crumbs": [
+      "Präsentationen",
+      "Einheit 12 - 03.12.2025"
+    ]
+  },
+  {
+    "objectID": "EH_12.html#fragen-zur-r-hausübung-2",
+    "href": "EH_12.html#fragen-zur-r-hausübung-2",
+    "title": "R u Ready? HS2025 | Psychologie der Digitalisierung - Einheit 12",
+    "section": "Fragen zur R Hausübung 2??",
+    "text": "Fragen zur R Hausübung 2??",
+    "crumbs": [
+      "Präsentationen",
+      "Einheit 12 - 03.12.2025"
+    ]
+  },
+  {
+    "objectID": "EH_12.html#abgabe-simulierte-datensätze",
+    "href": "EH_12.html#abgabe-simulierte-datensätze",
+    "title": "R u Ready? HS2025 | Psychologie der Digitalisierung - Einheit 12",
+    "section": "Abgabe simulierte Datensätze",
+    "text": "Abgabe simulierte Datensätze\nAuf ILIAS findet ihr Ordner mit eurem Namen. Diese sind nach dem PsychDS System strukturiert. In Raw findet ihr dann eure individuellen Datensätze",
+    "crumbs": [
+      "Präsentationen",
+      "Einheit 12 - 03.12.2025"
+    ]
+  },
+  {
+    "objectID": "EH_12.html#abschlussarbeit-leistungsnachweis",
+    "href": "EH_12.html#abschlussarbeit-leistungsnachweis",
+    "title": "R u Ready? HS2025 | Psychologie der Digitalisierung - Einheit 12",
+    "section": "Abschlussarbeit / Leistungsnachweis",
+    "text": "Abschlussarbeit / Leistungsnachweis",
+    "crumbs": [
+      "Präsentationen",
+      "Einheit 12 - 03.12.2025"
+    ]
+  },
+  {
+    "objectID": "EH_12.html#simulierte-datensätze",
+    "href": "EH_12.html#simulierte-datensätze",
+    "title": "R u Ready? HS2025 | Psychologie der Digitalisierung - Einheit 12",
+    "section": "Simulierte Datensätze",
+    "text": "Simulierte Datensätze\n\nVorgehen: Eine Funktion simuliert Population(en) und zieht daraus zufällig Datenpunkte. Diese Zufälligkeit der Ziehung führt dazu, dass sich eure Datensätze unterscheiden!\n\n\n\nDadurch ergeben sich Unterschiede in den Hypothesentests und deskriptiven Statistiken.\n\n\n\nAber: Die Ergebnisse werden sich dennoch in einer vergleichbaren Range voneinander bewegen.",
+    "crumbs": [
+      "Präsentationen",
+      "Einheit 12 - 03.12.2025"
+    ]
+  },
+  {
+    "objectID": "EH_12.html#plausible-ergebnisse",
+    "href": "EH_12.html#plausible-ergebnisse",
+    "title": "R u Ready? HS2025 | Psychologie der Digitalisierung - Einheit 12",
+    "section": "Plausible Ergebnisse",
+    "text": "Plausible Ergebnisse\n\nAngenommen der Effekt der Intervention hat wirklich keine Auswirkung auf das Offloading Verhalten der Personen (H0 ist wahr).\n\n✅H0 = Keine Gruppenunterschiede zwischen above und below gruppen.\n❌H1 = Gruppen unterscheiden sich voneinander im Offlading Verhalten.\n\n\n\n\nHypothesentest: t-Test für unabhängige Stichproben (above vs. below)\n\n\n\nWie hoch ist die Wahrscheinlichkeit das wir trotzdem ein sigifikantes Ergebnis (Fehler 1. Art) erhalten?\n\n\nAlpha-Fehler 0.05. In allen Analysen in denen wir signifikante werte erwarten (2x3 anova und mmq one-way anova) werden auch signifikante werte rauskommen (simulation so eingestellt). In den ANOVAs in denen wir nicht mit signifikanten werten rechnen, kann es sein das es per zufall trotzdem zu signifikanten werten kommt. In diesen fällen wird nicht erwartet das noch posthoc t-tests gerechnet werden.",
+    "crumbs": [
+      "Präsentationen",
+      "Einheit 12 - 03.12.2025"
+    ]
+  },
+  {
+    "objectID": "EH_12.html#t-tests",
+    "href": "EH_12.html#t-tests",
+    "title": "R u Ready? HS2025 | Psychologie der Digitalisierung - Einheit 12",
+    "section": "t-Tests",
+    "text": "t-Tests\n\n\n\n\n\n\n\n\nMittelwertvergleiche\n\nFür unabhängige Stichproben: Testet, ob sich die Mittelwerte zweier unabhängiger Gruppen unterscheiden.\nFür abhängige Stichproben: Testet, ob sich die Mittelwerte derselben Personen in zwei Bedingungen (z. B. Messwiederholung) unterscheiden.\nVoraussetzungen: Normalverteilung, Varianzhomogenität\nAlternative: z. B. Welch-t-Test",
+    "crumbs": [
+      "Präsentationen",
+      "Einheit 12 - 03.12.2025"
+    ]
+  },
+  {
+    "objectID": "EH_12.html#t-test-voraussetzungsprüfung",
+    "href": "EH_12.html#t-test-voraussetzungsprüfung",
+    "title": "R u Ready? HS2025 | Psychologie der Digitalisierung - Einheit 12",
+    "section": "t-Test: Voraussetzungsprüfung",
+    "text": "t-Test: Voraussetzungsprüfung\nLevene-Test\nDer Levene Test überprüft Varianzhomogenität! Varianzhomogenität bedeutet, dass alle Gruppen in einer Analyse ungeführ die gleiche Streuung aufweisen, bzw. ähnlich um ihren Mittelwert schwanken.\n\ndat_full_below_above &lt;- dat_full |&gt; \n  filter(group_all != \"control\")\n\ndat_full_below_above$group_all &lt;- as.factor(dat_full_below_above$group_all)\n\n\nlibrary(car)\n\nleveneTest(dat_full_below_above$pre4, dat_full_below_above$group_all)\n\nLevene's Test for Homogeneity of Variance (center = median)\n       Df F value Pr(&gt;F)  \ngroup   1  2.8442 0.0947 .\n      104                 \n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1",
+    "crumbs": [
+      "Präsentationen",
+      "Einheit 12 - 03.12.2025"
+    ]
+  },
+  {
+    "objectID": "EH_12.html#t-test-beispiel",
+    "href": "EH_12.html#t-test-beispiel",
+    "title": "R u Ready? HS2025 | Psychologie der Digitalisierung - Einheit 12",
+    "section": "t-Test: Beispiel",
+    "text": "t-Test: Beispiel\n\nt.test(pre4 ~ group_all, data = dat_full_below_above, var.equal = TRUE)\n\n\n    Two Sample t-test\n\ndata:  pre4 by group_all\nt = 7.9845, df = 104, p-value = 1.991e-12\nalternative hypothesis: true difference in means between group above and group below is not equal to 0\n95 percent confidence interval:\n 20.25170 33.63509\nsample estimates:\nmean in group above mean in group below \n           59.66038            32.71698 \n\neffsize::cohen.d(pre4 ~ group_all, data = dat_full_below_above)\n\n\nCohen's d\n\nd estimate: 1.551045 (large)\n95 percent confidence interval:\n   lower    upper \n1.111706 1.990383",
+    "crumbs": [
+      "Präsentationen",
+      "Einheit 12 - 03.12.2025"
+    ]
+  },
+  {
+    "objectID": "EH_12.html#grundlegende-t-test-funktionen",
+    "href": "EH_12.html#grundlegende-t-test-funktionen",
+    "title": "R u Ready? HS2025 | Psychologie der Digitalisierung - Einheit 12",
+    "section": "Grundlegende t-Test-Funktionen",
+    "text": "Grundlegende t-Test-Funktionen\n\n\n\n\n\n\n\nFunktion\nBeschreibung\n\n\n\n\nt.test\nAllgemeine Funktion für verschiedene t-Tests: Ein-Stichproben-, unabhängige und abhängige Stichproben.\n\n\nt.test(av, mu = x)\nEin-Stichproben-t-Test. av = abhängige Variable, x = Vergleichswert der Population.\n\n\nt.test(av ~ uv)\nWelch-t-Test für unabhängige Stichproben. av = abhängige Variable, uv = Gruppenvariable (Ungleiche Varianzen erlaubt).\n\n\nt.test(av ~ uv, var.equal = TRUE)\nKlassischer t-Test für unabhängige Stichproben (Varianzgleichheit vorausgesetzt).",
+    "crumbs": [
+      "Präsentationen",
+      "Einheit 12 - 03.12.2025"
+    ]
+  },
+  {
+    "objectID": "EH_12.html#paired-t-test-varianzhomogenität-und-effektgrössen",
+    "href": "EH_12.html#paired-t-test-varianzhomogenität-und-effektgrössen",
+    "title": "R u Ready? HS2025 | Psychologie der Digitalisierung - Einheit 12",
+    "section": "Paired t-Test, Varianzhomogenität und Effektgrössen",
+    "text": "Paired t-Test, Varianzhomogenität und Effektgrössen\n\n\n\n\n\n\n\nFunktion\nBeschreibung\n\n\n\n\nt.test(av1, av2, paired = TRUE)\nt-Test für abhängige Stichproben (z. B. Prä–Post). av1 und av2 = Messzeitpunkte.\n\n\nleveneTest(av, uv) *\nLevene-Test auf Varianzhomogenität für unabhängige Gruppen. Aus dem car-Paket.\n\n\neffsize::cohen.d() *\nBerechnet Cohen’s d + Konfidenzintervall. Aus dem efffsize-Paket.",
+    "crumbs": [
+      "Präsentationen",
+      "Einheit 12 - 03.12.2025"
+    ]
+  },
+  {
+    "objectID": "EH_12.html#heute-haben-wir",
+    "href": "EH_12.html#heute-haben-wir",
+    "title": "R u Ready? HS2025 | Psychologie der Digitalisierung - Einheit 12",
+    "section": "Heute haben wir…",
+    "text": "Heute haben wir…\n… uns die simulierten Datensätze für die Abschlussarbeit angeschaut.\n…Korrelationen, Regressionen und t-Tests gerechnet",
+    "crumbs": [
+      "Präsentationen",
+      "Einheit 12 - 03.12.2025"
+    ]
+  },
+  {
+    "objectID": "EH_12.html#hausübung",
+    "href": "EH_12.html#hausübung",
+    "title": "R u Ready? HS2025 | Psychologie der Digitalisierung - Einheit 12",
+    "section": "Hausübung",
+    "text": "Hausübung\nR Übung 3 bis 12.12.25\nNächste Woche: Aaron übernimmt beide Gruppen\n\n\n\nwith ChatGPT",
+    "crumbs": [
+      "Präsentationen",
+      "Einheit 12 - 03.12.2025"
     ]
   },
   {
@@ -4904,7 +4918,7 @@
     "href": "hands_on_3.html#inline-code",
     "title": "Hands On – Coding Basics (Einheiten 5 und 6)",
     "section": "Inline Code",
-    "text": "Inline Code\n\nFüge folgenden dynamischen Satz in dein Dokument ein: „Dieses Dokument wurde zum letzten Mal am datum bearbeitet.“\nBenutze dafür die Variable datum die du bereits kreiert hast. Diese kannst du hinzufügen indem du “/” benutzt und “Inline R Code” suchst. Inline Code lässt sich auch mit diesem Sonderzeichen ` kreieren wenn du danach ein “r” eingibst.\nRendere dein erstes Dokument: Stelle ganz oben in deinem Dokument dafür das Format auf docx um. Wenn du das Dokument als PDF rendern willst benötigst du TinyTeX. Das kannst du mit dem Befehl install.packages(\"tinytex\") installieren.\nNutze dafür den Render-Button und schau dir das gerenderte Ergebnis an. Was ist mit deinem dynamischen Satz passiert?\n\nDas Resultat sollte so aussehen (mit dem aktuellen Datum):\nDieses Dokument wurde zum letzten Mal am 2025-12-02 bearbeitet.\n\n\n\n\n\n\nImportant\n\n\n\nQuarto-Dokumente lassen sich nur rendern, wenn das gesamte Skript fehlerfrei durchläuft. Tritt beim Rendern ein Fehler auf, ist es sinnvoll, das gesamte Skript auszuführen und auf Fehlermeldungen zu achten. Auf diese Weise wird die Reproduzierbarkeit sichergestellt.\nMöchte man das Skript trotz eines Fehlers rendern, kann man an den entsprechenden Code-Chunk #| eval: false schreiben - dies verhindert, dass der Code für die gerenderte Datei ausgeführt wird"
+    "text": "Inline Code\n\nFüge folgenden dynamischen Satz in dein Dokument ein: „Dieses Dokument wurde zum letzten Mal am datum bearbeitet.“\nBenutze dafür die Variable datum die du bereits kreiert hast. Diese kannst du hinzufügen indem du “/” benutzt und “Inline R Code” suchst. Inline Code lässt sich auch mit diesem Sonderzeichen ` kreieren wenn du danach ein “r” eingibst.\nRendere dein erstes Dokument: Stelle ganz oben in deinem Dokument dafür das Format auf docx um. Wenn du das Dokument als PDF rendern willst benötigst du TinyTeX. Das kannst du mit dem Befehl install.packages(\"tinytex\") installieren.\nNutze dafür den Render-Button und schau dir das gerenderte Ergebnis an. Was ist mit deinem dynamischen Satz passiert?\n\nDas Resultat sollte so aussehen (mit dem aktuellen Datum):\nDieses Dokument wurde zum letzten Mal am 2025-12-03 bearbeitet.\n\n\n\n\n\n\nImportant\n\n\n\nQuarto-Dokumente lassen sich nur rendern, wenn das gesamte Skript fehlerfrei durchläuft. Tritt beim Rendern ein Fehler auf, ist es sinnvoll, das gesamte Skript auszuführen und auf Fehlermeldungen zu achten. Auf diese Weise wird die Reproduzierbarkeit sichergestellt.\nMöchte man das Skript trotz eines Fehlers rendern, kann man an den entsprechenden Code-Chunk #| eval: false schreiben - dies verhindert, dass der Code für die gerenderte Datei ausgeführt wird"
   },
   {
     "objectID": "hands_on_3.html#quarto-header",
@@ -5207,7 +5221,7 @@
     "href": "index.html",
     "title": "Einleitung",
     "section": "",
-    "text": "In diesem E-Book findest du alle wichtigen Informationen zum Methodenseminar “R u Ready”. Du kannst hier u. a. die wöchentlichen Folien, Hands-On R Übungen, den Leistungsnachweis, und Frequently Asked Questions einsehen. Du kannst über die Unterkapitel (links) zu den entsprechenden Inhalten navigieren, oder auch die Suchfunktion oben links verwenden, um nach einem bestimmten Begriff zu suchen.\n\nHinweisboxen\nHier einen Überblick über die auf den Seiten enthaltenen Hinweisboxen:\n\n\n\n\n\n\nNote\n\n\n\nVertiefung: Hier geht es in die Tiefe.\n\n\n\n\n\n\n\n\nImportant\n\n\n\nWichtig: Dies ist eine wichtige Information.\n\n\n\n\n\n\n\n\nWarning\n\n\n\nAchtung: Hier ist Vorsicht geboten.\n\n\n\n\n\n\n\n\nCaution\n\n\n\nVorsicht: Diese Information ist noch in Bearbeitung.\n\n\n\n\nSyllabus\n\n\n\n\n\n\nCaution\n\n\n\nVorsicht: Der Syllabus dient als grobe Richtlinie und kann angepasst werden, falls wir in einzelnen Einheiten mehr oder weniger Zeit benötigen.\n\n\n\n\nLetztes Update Dezember 02, 2025 at 15:36"
+    "text": "In diesem E-Book findest du alle wichtigen Informationen zum Methodenseminar “R u Ready”. Du kannst hier u. a. die wöchentlichen Folien, Hands-On R Übungen, den Leistungsnachweis, und Frequently Asked Questions einsehen. Du kannst über die Unterkapitel (links) zu den entsprechenden Inhalten navigieren, oder auch die Suchfunktion oben links verwenden, um nach einem bestimmten Begriff zu suchen.\n\nHinweisboxen\nHier einen Überblick über die auf den Seiten enthaltenen Hinweisboxen:\n\n\n\n\n\n\nNote\n\n\n\nVertiefung: Hier geht es in die Tiefe.\n\n\n\n\n\n\n\n\nImportant\n\n\n\nWichtig: Dies ist eine wichtige Information.\n\n\n\n\n\n\n\n\nWarning\n\n\n\nAchtung: Hier ist Vorsicht geboten.\n\n\n\n\n\n\n\n\nCaution\n\n\n\nVorsicht: Diese Information ist noch in Bearbeitung.\n\n\n\n\nSyllabus\n\n\n\n\n\n\nCaution\n\n\n\nVorsicht: Der Syllabus dient als grobe Richtlinie und kann angepasst werden, falls wir in einzelnen Einheiten mehr oder weniger Zeit benötigen.\n\n\n\n\nLetztes Update Dezember 03, 2025 at 09:46"
   },
   {
     "objectID": "links_und_ressourcen.html",
