@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Hands On – Coding Basics (Einheiten 5 und 6) – R u Ready</title>
+<title>Hands On – Coding Basics (Einheiten 7 und 8) – R u Ready</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -113,7 +113,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Hands On – Coding Basics (Einheiten 5 und 6)</li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Hands On – Coding Basics (Einheiten 7 und 8)</li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -219,12 +219,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
  <span class="menu-text">Einheit 11 - 26.11.2025</span></a>
   </div>
 </li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./EH_12.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Einheit 12 - 03.12.2025</span></a>
-  </div>
-</li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
@@ -291,14 +285,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./hausuebung_loesung_2.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Hausübung 2 - Mit Lösungen</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./hausuebung_3.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Hausübung 3</span></a>
+  <a href="./hausuebung_2.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Hausübung 2</span></a>
   </div>
 </li>
       </ul>
@@ -380,12 +368,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./checkliste_abschlussarbeit.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Checkliste Abschlussarbeit</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
   <a href="./about.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">About</span></a>
   </div>
@@ -400,27 +382,41 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#lernziele-des-hands-on-blocks-3" id="toc-lernziele-des-hands-on-blocks-3" class="nav-link active" data-scroll-target="#lernziele-des-hands-on-blocks-3">Lernziele des Hands-On-Blocks 3</a></li>
-  <li><a href="#reproduzierbarer-code-quarto" id="toc-reproduzierbarer-code-quarto" class="nav-link" data-scroll-target="#reproduzierbarer-code-quarto">Reproduzierbarer Code: Quarto</a>
+  <li><a href="#lernziele" id="toc-lernziele" class="nav-link active" data-scroll-target="#lernziele">Lernziele</a></li>
+  <li><a href="#pipe-operator" id="toc-pipe-operator" class="nav-link" data-scroll-target="#pipe-operator"><strong>Pipe-Operator</strong></a></li>
+  <li><a href="#datenaufbereitung-tidy-transform" id="toc-datenaufbereitung-tidy-transform" class="nav-link" data-scroll-target="#datenaufbereitung-tidy-transform">Datenaufbereitung – Tidy &amp; Transform</a>
   <ul class="collapse">
-  <li><a href="#übungen" id="toc-übungen" class="nav-link" data-scroll-target="#übungen">Übungen:</a></li>
-  <li><a href="#code-chunks" id="toc-code-chunks" class="nav-link" data-scroll-target="#code-chunks">Code Chunks</a></li>
-  <li><a href="#inline-code" id="toc-inline-code" class="nav-link" data-scroll-target="#inline-code">Inline Code</a></li>
-  <li><a href="#quarto-header" id="toc-quarto-header" class="nav-link" data-scroll-target="#quarto-header">Quarto Header</a>
+  <li><a href="#filter" id="toc-filter" class="nav-link" data-scroll-target="#filter">filter()</a>
   <ul class="collapse">
-  <li><a href="#übungen-quarto-header" id="toc-übungen-quarto-header" class="nav-link" data-scroll-target="#übungen-quarto-header">Übungen Quarto Header</a></li>
+  <li><a href="#übungen-zu-filter" id="toc-übungen-zu-filter" class="nav-link" data-scroll-target="#übungen-zu-filter"><strong>Übungen zu <code>filter()</code></strong></a></li>
   </ul></li>
-  </ul></li>
-  <li><a href="#faktoren-spezialtyp-eines-vektors" id="toc-faktoren-spezialtyp-eines-vektors" class="nav-link" data-scroll-target="#faktoren-spezialtyp-eines-vektors">Faktoren (Spezialtyp eines Vektors):</a></li>
-  <li><a href="#datenstrukturen-vektoren-listen-matrizen-und-data-frames" id="toc-datenstrukturen-vektoren-listen-matrizen-und-data-frames" class="nav-link" data-scroll-target="#datenstrukturen-vektoren-listen-matrizen-und-data-frames">Datenstrukturen: Vektoren, Listen, Matrizen und Data Frames</a>
+  <li><a href="#select" id="toc-select" class="nav-link" data-scroll-target="#select">select()</a>
   <ul class="collapse">
-  <li><a href="#vektoren" id="toc-vektoren" class="nav-link" data-scroll-target="#vektoren">Vektoren:</a></li>
-  <li><a href="#matrizen" id="toc-matrizen" class="nav-link" data-scroll-target="#matrizen">Matrizen</a></li>
-  <li><a href="#listen" id="toc-listen" class="nav-link" data-scroll-target="#listen">Listen</a></li>
-  <li><a href="#data-frames" id="toc-data-frames" class="nav-link" data-scroll-target="#data-frames">Data Frames</a></li>
-  <li><a href="#übungen-mit-dat_full" id="toc-übungen-mit-dat_full" class="nav-link" data-scroll-target="#übungen-mit-dat_full">Übungen mit dat_full</a></li>
+  <li><a href="#übungen-zu-select" id="toc-übungen-zu-select" class="nav-link" data-scroll-target="#übungen-zu-select"><strong>Übungen zu select()</strong></a></li>
+  <li><a href="#kombination-von-filter-und-select" id="toc-kombination-von-filter-und-select" class="nav-link" data-scroll-target="#kombination-von-filter-und-select"><strong>Kombination von filter() und select()</strong></a></li>
   </ul></li>
-  <li><a href="#am-ende-deiner-übungen---vergiss-nicht-dein-skript-abzuspeichern--" id="toc-am-ende-deiner-übungen---vergiss-nicht-dein-skript-abzuspeichern--" class="nav-link" data-scroll-target="#am-ende-deiner-übungen---vergiss-nicht-dein-skript-abzuspeichern--">Am Ende deiner Übungen - vergiss nicht dein Skript abzuspeichern! :-)</a></li>
+  <li><a href="#rename" id="toc-rename" class="nav-link" data-scroll-target="#rename">rename()</a></li>
+  <li><a href="#mutate" id="toc-mutate" class="nav-link" data-scroll-target="#mutate">mutate()</a></li>
+  <li><a href="#summarize" id="toc-summarize" class="nav-link" data-scroll-target="#summarize">summarize()</a></li>
+  <li><a href="#kombination-summarize-und-group_by" id="toc-kombination-summarize-und-group_by" class="nav-link" data-scroll-target="#kombination-summarize-und-group_by">Kombination summarize() und group_by()</a></li>
+  <li><a href="#anwendung-dplyr-funktionen" id="toc-anwendung-dplyr-funktionen" class="nav-link" data-scroll-target="#anwendung-dplyr-funktionen">Anwendung: dplyr-Funktionen</a>
+  <ul class="collapse">
+  <li><a href="#berechnen-von-mmq_mean" id="toc-berechnen-von-mmq_mean" class="nav-link" data-scroll-target="#berechnen-von-mmq_mean">Berechnen von <em>mmq_mean</em></a></li>
+  </ul></li>
+  <li><a href="#multiplizieren-von-pre-ratings" id="toc-multiplizieren-von-pre-ratings" class="nav-link" data-scroll-target="#multiplizieren-von-pre-ratings">Multiplizieren von Pre Ratings</a></li>
+  </ul></li>
+  <li><a href="#fehlende-werte" id="toc-fehlende-werte" class="nav-link" data-scroll-target="#fehlende-werte">Fehlende Werte</a>
+  <ul class="collapse">
+  <li><a href="#häufige-formen-fehlender-werte" id="toc-häufige-formen-fehlender-werte" class="nav-link" data-scroll-target="#häufige-formen-fehlender-werte"><strong>Häufige Formen fehlender Werte</strong></a></li>
+  <li><a href="#umgang-mit-fehlenden-werten" id="toc-umgang-mit-fehlenden-werten" class="nav-link" data-scroll-target="#umgang-mit-fehlenden-werten">Umgang mit fehlenden Werten</a></li>
+  <li><a href="#aufgabe" id="toc-aufgabe" class="nav-link" data-scroll-target="#aufgabe">Aufgabe:</a></li>
+  </ul></li>
+  <li><a href="#skalenberechnung" id="toc-skalenberechnung" class="nav-link" data-scroll-target="#skalenberechnung">Skalenberechnung</a>
+  <ul class="collapse">
+  <li><a href="#umpolen-der-negativ-formulierten-items" id="toc-umpolen-der-negativ-formulierten-items" class="nav-link" data-scroll-target="#umpolen-der-negativ-formulierten-items"><strong>Umpolen der negativ formulierten Items</strong></a></li>
+  <li><a href="#berechnung-der-big-five-skalen" id="toc-berechnung-der-big-five-skalen" class="nav-link" data-scroll-target="#berechnung-der-big-five-skalen"><strong>Berechnung der Big-Five-Skalen</strong></a></li>
+  </ul></li>
+  <li><a href="#am-ende-deiner-übungen---vergiss-nicht-dein-skript-abzuspeichern" id="toc-am-ende-deiner-übungen---vergiss-nicht-dein-skript-abzuspeichern" class="nav-link" data-scroll-target="#am-ende-deiner-übungen---vergiss-nicht-dein-skript-abzuspeichern">Am Ende deiner Übungen - vergiss nicht dein Skript abzuspeichern! 😉</a></li>
   </ul>
 </nav>
     </div>
@@ -429,7 +425,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Hands On – Coding Basics (Einheiten 5 und 6)</h1>
+<h1 class="title">Hands On – Coding Basics (Einheiten 7 und 8)</h1>
 </div>
 
 
@@ -446,276 +442,303 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<p>Bei Bedarf findest du hier nochmals die Slides zu Einheit 5:<br>
+<div class="cell">
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: Paket 'tidyverse' wurde unter R Version 4.5.2 erstellt</code></pre>
+</div>
+</div>
+<p>Bei Bedarf findest du hier nochmals die Slides zu Einheit 7 &amp; 8 :<br>
 </p>
-<iframe src="EH_5.html" width="100%" height="500px">
+<iframe src="EH_7.html" width="100%" height="500px">
 </iframe>
-<p>Und Einheit 6:</p>
-<iframe src="EH_6.html" width="100%" height="500px">
+<iframe src="EH_8.html" width="100%" height="500px">
 </iframe>
-<section id="lernziele-des-hands-on-blocks-3" class="level1">
-<h1>Lernziele des Hands-On-Blocks 3</h1>
-<p>✅Basics Reproduziebarer Code</p>
-<p>✅Quarto</p>
-<p>✅Faktoren</p>
-<p>✅Datentypen: Vektoren, Listen, Matrizen, Dataframes</p>
+<section id="lernziele" class="level1">
+<h1>Lernziele</h1>
+<p>✅ Pipe-Operator |&gt; oder %&gt;% kennenlernen und anwenden</p>
+<p>✅ dplyr-Funktionen verstehen und nutzen</p>
+<p>✅ Skalenberechnung &amp; Kodierung</p>
+<p>✅ Identifikation und Umgang mit fehlenden Werten</p>
 </section>
-<section id="reproduzierbarer-code-quarto" class="level1">
-<h1>Reproduzierbarer Code: Quarto</h1>
-<p>👉<a href="https://r4ds.hadley.nz/quarto.html">R for Datascience, Kapitel 28</a></p>
-<p>Bisher haben wir hauptsächlich in Skripten gearbeitet. RStudio bietet jedoch die Möglichkeit, in einem <strong>reproduzierbareren Format</strong> zu arbeiten – 👉 <strong>Quarto</strong>.</p>
-<p>Quarto verbindet normalen Text und Code in einem dynamischen Dokument. Auch diese Website wurde mit Quarto erstellt. Dadurch lässt sich die Kommentierung von Code besser integrieren, was die Arbeit insgesamt reproduzierbarer macht. Mit Quarto können zudem ganze Dokumente erstellt werden, beispielsweise eine Masterarbeit.</p>
-<p>In den folgenden Übungen setzen wir uns mit einigen der <strong>Vorteile von Quarto</strong> auseinander.</p>
-<section id="übungen" class="level2">
-<h2 class="anchored" data-anchor-id="übungen">Übungen:</h2>
-<ul>
-<li>Erstelle ein neues Quarto-Skript:</li>
-</ul>
-<p><img src="images/hands_on_3/Quarto.png" class="img-fluid"></p>
-<ul>
-<li><p>Versuche dich zu orientieren: Wie wechselst du zwischen dem <strong>Visual</strong> und <strong>Source Editor</strong>?</p></li>
-<li><p><strong>Erstelle eine Überschrift:</strong></p>
-<ul>
-<li><p>Suche zuerst nach der entsprechenden Option im <strong>Visual Editor</strong>.</p></li>
-<li><p>Schau dir anschließend die Überschrift im <strong>Source Editor</strong> an. Wie unterscheiden sich Überschriften von normalem Text?</p></li>
-<li><p>Schreibe einige Dinge in <em>kursiv</em>, <strong>fett</strong>, <u>unterstrichen</u>, Schaue dir diese im Source Editor an.</p></li>
-<li><p>Rendere deine Datei indem du den Button “Render” verwendest. Schaue dir das Resultat an.</p></li>
-</ul></li>
-</ul>
-</section>
-<section id="code-chunks" class="level2">
-<h2 class="anchored" data-anchor-id="code-chunks">Code Chunks</h2>
-<p>📖 <a href="https://r4ds.hadley.nz/quarto.html#code-chunks">R4DS Kapitel 28.5.1</a></p>
-<p>Für weitere Informationen, konsultiere das <a href="https://rstudio.github.io/cheatsheets/quarto.pdf">Quarto Cheatsheat</a> und die <a href="https://quarto.org/">Quarto Website</a>.</p>
-<ul>
-<li><p><strong>Erstelle einen neuen Code-Chunk:</strong></p>
-<ul>
-<li>Versuche es im <strong>Visual Editor</strong>, indem du ein „/“ eingibst und im Drop-down-Menü <strong>„R-Code Chunk“</strong> auswählst</li>
-</ul></li>
-<li><p>Gib deinem Code-Chunk ein “Label”. Verwende dafür “#|” in deinem Chunk um lokale Einstellungen zu setzen. (📖 <a href="https://r4ds.hadley.nz/quarto.html#code-chunks">R4DS Kapitel 28.5.1</a>).</p></li>
-<li><p>Manchmal will man nicht alle Teile des Skripts in das gerenderte Dokument übernehmen. Erstelle einen neuen Code-Chunk und stelle <code>eval</code> und <code>include</code> auf TRUE</p></li>
-<li><p><strong>Kreiere eine neue Variable <code>datum</code></strong> mit dem heutigen Datum. Nutze dafür <code>Sys.Date()</code>.</p></li>
-</ul>
-</section>
-<section id="inline-code" class="level2">
-<h2 class="anchored" data-anchor-id="inline-code">Inline Code</h2>
-<ul>
-<li><p><strong>Füge folgenden dynamischen Satz in dein Dokument ein:</strong> „<em>Dieses Dokument wurde zum letzten Mal am <code>datum</code> bearbeitet.</em>“</p></li>
-<li><p>Benutze dafür die Variable <code>datum</code> die du bereits kreiert hast. Diese kannst du hinzufügen indem du “/” benutzt und “Inline R Code” suchst. Inline Code lässt sich auch mit diesem Sonderzeichen ` kreieren wenn du danach ein “r” eingibst.</p></li>
-<li><p><strong>Rendere dein erstes Dokument:</strong> Stelle ganz oben in deinem Dokument dafür das Format auf docx um. Wenn du das Dokument als PDF rendern willst benötigst du TinyTeX. Das kannst du mit dem Befehl <code>install.packages("tinytex")</code> installieren.</p></li>
-<li><p>Nutze dafür den <strong>Render-Button</strong> und schau dir das gerenderte Ergebnis an. Was ist mit deinem dynamischen Satz passiert?</p></li>
-</ul>
-<p><em>Das Resultat sollte so aussehen (mit dem aktuellen Datum):</em></p>
-<p>Dieses Dokument wurde zum letzten Mal am 2025-12-04 bearbeitet.</p>
-<div class="callout callout-style-default callout-important callout-titled">
+<section id="pipe-operator" class="level1">
+<h1><strong>Pipe-Operator</strong></h1>
+<p><a href="https://methodenlehre.github.io/einfuehrung-in-R/chapters/04-tidyverse.html#der-pipe-operator">📖Kapitel 4.2 Ellis &amp; Mayer</a></p>
+<div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Important
+Tip
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Quarto-Dokumente lassen sich nur rendern, wenn das gesamte Skript fehlerfrei durchläuft. Tritt beim Rendern ein Fehler auf, ist es sinnvoll, das gesamte Skript auszuführen und auf Fehlermeldungen zu achten. Auf diese Weise wird die <strong>Reproduzierbarkeit</strong> sichergestellt.</p>
-<p>Möchte man das Skript trotz eines Fehlers rendern, kann man an den entsprechenden Code-Chunk <code>#| eval: false</code> schreiben - dies verhindert, dass der Code für die gerenderte Datei ausgeführt wird</p>
+<p><strong>Tastenkombinationen für den Pipe Operator:</strong></p>
+<p><strong>Windows/Linux:</strong> <code>Ctrl</code> + <code>Shift</code> + <code>M</code> → fügt |&gt; ein</p>
+<p><strong>Mac:</strong> <code>Cmd</code> + <code>Shift</code> + <code>M</code> → fügt |&gt; ein</p>
+<p>Vergiss nicht, dass du das <code>tidyverse</code> laden musst um die Pipe zu verwenden!</p>
+<p>Ggf. musst du unter “Tools” - “Global Options” - “Code” noch den “Native Pipe Operator” aktivieren</p>
 </div>
 </div>
-</section>
-<section id="quarto-header" class="level2">
-<h2 class="anchored" data-anchor-id="quarto-header">Quarto Header</h2>
-<p>In den Code Chunks hast du bereits einige Einstellungen kennengelernt. In den <strong>Quarto-Headern</strong> lassen sich verschiedene Einstellungen vornehmen.<br>
-Beispielsweise kann man den <strong>Output des Dokuments</strong> anpassen (z. B. <code>format: html</code> <code>format: docx</code> <code>format: pdf</code>).</p>
-<p>Manchmal möchte man auch <strong>globale Einstellungen</strong> vornehmen, die für das gesamte Dokument gelten.<br>
-Zum Beispiel kann es sinnvoll sein, <strong>Warnmeldungen von R</strong> im gerenderten Dokument auszublenden, um die Übersicht zu behalten.<br>
-Dies lässt sich mit der Option <code>warning: false</code> einstellen.</p>
-<ul>
-<li>Versuche den Quarto Header so zu verändern das du ein Word oder Pdf renderst.</li>
-</ul>
-<p>Viele weitere Einstellungsmöglichkeiten findest du unter folgendem <a href="https://quarto.org/docs/reference/formats/html.html">Link</a>.</p>
-<p><img src="images/hands_on_3/Quarto_header.png" class="img-fluid"></p>
-<section id="übungen-quarto-header" class="level3">
-<h3 class="anchored" data-anchor-id="übungen-quarto-header">Übungen Quarto Header</h3>
-<p>Stelle in deinem Quarto Header die folgenden Einstellungen ein indem du die Elemente des YAML-Headers überarbeitest. Diesen findest du ganz oben in deinem Dokument. Dafür kannst du den Code-Block unten kopieren und für deinen Header anpassen.</p>
-<ul>
-<li><p>Titel</p></li>
-<li><p>Autor:in</p></li>
-<li><p>Inhaltsverzeichnis (toc) = TRUE</p></li>
-<li><p>Position des Inhaltsverzeichnisses = left</p></li>
-<li><p>Warning = FALSE</p></li>
-<li><p>Message = FALSE</p></li>
-<li><div>
+<p><strong>Aufgabe:</strong></p>
+<p>Schreibe folgenden Code mit der Pipe um:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>title<span class="sc">:</span> <span class="st">'Gib hier den Namen deines Dokuments ein'</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>author<span class="sc">:</span> <span class="st">'Dein Name'</span></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>date<span class="sc">:</span> today</span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>format<span class="sc">:</span></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>  html<span class="sc">:</span></span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>    theme<span class="sc">:</span> flatly</span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>    toc<span class="sc">:</span>   <span class="co"># Inhaltsverzeichnis?</span></span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>    toc<span class="sc">-</span>location<span class="sc">:</span>  <span class="co"># Links oder Rechts?</span></span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>execute<span class="sc">:</span></span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>  warning<span class="sc">:</span>  <span class="co"># TRUE or FALSE</span></span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>  message<span class="sc">:</span> <span class="co"># TRUE or FALSE</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mean</span>(<span class="fu">round</span>((<span class="fu">seq</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">20</span>)), <span class="at">digits =</span> <span class="dv">2</span>), <span class="at">trim =</span> <span class="fl">0.5</span>) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 10.5</code></pre>
 </div>
-</div></li>
-</ul>
-<p><strong>Aufgabe:</strong> Rendere das Dokument erneut und überprüfe das gerenderte Ergebnis im Vorschaufenster oder im Ausgabeordner.</p>
+</div>
+<p>💡 Hinweis: Überlege, welche Schritte nacheinander ausgeführt werden und wie man sie mit |&gt; lesbarer machen kann.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Versuche in den folgenden Übungen wenn möglich mit der Pipe zu arbeiten!</p>
+</div>
+</div>
 </section>
-</section>
-</section>
-<section id="faktoren-spezialtyp-eines-vektors" class="level1">
-<h1>Faktoren (Spezialtyp eines Vektors):</h1>
-<p>👉<a href="https://methodenlehre.github.io/einfuehrung-in-R/chapters/02-R-language.html#factors">Einführung in R, Kapitel 2.4.4</a></p>
-<p><strong><em>Aufgabe: Arbeiten mit kategorialen Variablen (Faktoren)</em></strong></p>
-<p>Kategoriale bzw. nominale Variablen werden in R als <strong>Faktoren</strong> gespeichert (<code>factor</code>-Datentyp).</p>
-<ul>
-<li><p><strong>Erstelle</strong> einen Character-Vektor mit mindestens fünf Einträgen, die verschiedene Geschlechtskategorien enthalten (z. B. <em>“male”</em>, <em>“female”</em>, <em>“nonbinary”</em>).</p></li>
-<li><p><strong>Definiere</strong> nun einen Faktor mit der Funktion <code>factor()</code> für diesen Vektor.</p></li>
-<li><p><strong>Untersuche</strong> die Eigenschaften deines Faktors mit den Funktionen <code>class()</code>, <code>attributes()</code> und <code>table()</code>.</p></li>
-</ul>
-<p><strong>Beachte:</strong> Die erste Stufe des Faktors ist die sogenannte <strong>Referenzkategorie</strong> – sie ist für manche Analysen relevant. Mit <code>relevel()</code> kannst du die Referenzkategorie ändern.</p>
-</section>
-<section id="datenstrukturen-vektoren-listen-matrizen-und-data-frames" class="level1">
-<h1>Datenstrukturen: Vektoren, Listen, Matrizen und Data Frames</h1>
-<p>👉<a href="https://methodenlehre.github.io/einfuehrung-in-R/chapters/02-R-language.html#datentypen">Einführung in R, Kapitel 2.4</a></p>
-<p>Bevor wir mit den Übungen starten, ein Überblick über die Unterschiede:</p>
+<section id="datenaufbereitung-tidy-transform" class="level1">
+<h1>Datenaufbereitung – Tidy &amp; Transform</h1>
+<p>In den folgenden Aufgaben lernen wir die grundlegenden Funktionen des <strong>dplyr</strong>-Packages aus dem <strong>tidyverse</strong> kennen.</p>
+<p><strong>Hier findest du ein Cheatsheet zu den dplyr-Funktionen:</strong></p>
+<iframe src="PDFs/dplyr_cheatsheet.pdf" width="100%" height="600px">
+</iframe>
+<section id="filter" class="level2">
+<h2 class="anchored" data-anchor-id="filter">filter()</h2>
+<section id="übungen-zu-filter" class="level3">
+<h3 class="anchored" data-anchor-id="übungen-zu-filter"><strong>Übungen zu <code>filter()</code></strong></h3>
+<p>Diese Aufgaben helfen dir, den Umgang mit <code>dplyr</code>-Funktionen wie <code>filter()</code> und <code>select()</code> zu üben.</p>
+<p>Der Datensatz heißt <strong><code>dat_full</code></strong> und enthält 159 Zeilen und 36 Variablen. Stelle sicher, dass du diesen geladen hast.</p>
+<p><em>Reminder: Verwende die logischen Operatoren, die wir in Hands On 1 kennengelernt haben.</em></p>
 <table class="caption-top table">
-<colgroup>
-<col style="width: 33%">
-<col style="width: 33%">
-<col style="width: 33%">
-</colgroup>
 <thead>
 <tr class="header">
-<th>Struktur</th>
-<th>Eigenschaften</th>
-<th>Beispiel-Inhalt</th>
+<th>Zeichen</th>
+<th>Bedeutung</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td><strong>Vektor</strong></td>
-<td>- Enthält Elemente <strong>eines</strong> Datentyps<br>- Grundbaustein in R</td>
-<td><code>c(1, 2, 3)</code> oder <code>c("Anna", "Ben")</code></td>
+<td>==</td>
+<td>gleich</td>
 </tr>
 <tr class="even">
-<td><strong>Liste</strong></td>
-<td>- Kann verschiedene Datentypen enthalten<br>- Elemente können unterschiedlich lang sein</td>
-<td>Zahlenvektor, Textvektor, logischer Vektor in einer Liste</td>
+<td>!=</td>
+<td>ungleich</td>
 </tr>
 <tr class="odd">
-<td><strong>Matrix</strong></td>
-<td>- Enthält nur <strong>einen</strong> Datentyp<br>- Hat feste Dimensionen (Zeilen, Spalten)</td>
-<td>3x3-Matrix mit Zahlen 1–9</td>
+<td>&gt;</td>
+<td>grösser</td>
 </tr>
 <tr class="even">
-<td><strong>Data Frame</strong></td>
-<td>- Tabellarisch aufgebaut<br>- Spalten können unterschiedliche Datentypen enthalten<br>- Jede Spalte gleich lang</td>
-<td>Tabelle mit Name (Character), Alter (Numeric), Studiert (Logical)</td>
+<td>&gt;=</td>
+<td>grösser gleich</td>
+</tr>
+<tr class="odd">
+<td>&lt;</td>
+<td>kleiner</td>
+</tr>
+<tr class="even">
+<td>&lt;=</td>
+<td>kleiner gleich</td>
+</tr>
+<tr class="odd">
+<td>|</td>
+<td>Logisches Oder</td>
+</tr>
+<tr class="even">
+<td>&amp;</td>
+<td>Logisches Und</td>
 </tr>
 </tbody>
 </table>
-<p><strong><em>👉</em></strong> <strong>Merksatz:</strong></p>
-<p><br>
-<strong>Vektor</strong> = einfachste Struktur, ein Datentyp<br>
-<strong>Liste</strong> = flexibel, verschiedene Datentypen<br>
-<strong>Matrix</strong> = „Zahlenrechteck“, ein Datentyp<br>
-<strong>Data Frame</strong> = Tabelle, Spalten können unterschiedliche Datentypen haben</p>
-<section id="vektoren" class="level2">
-<h2 class="anchored" data-anchor-id="vektoren">Vektoren:</h2>
-<p>Wir haben in den Hands-On-Übungen Block 1 und 2 bereits einige einfache Vektoren erstellt und damit operiert.</p>
-</section>
-<section id="matrizen" class="level2">
-<h2 class="anchored" data-anchor-id="matrizen">Matrizen</h2>
-<p>Eine <strong>Matrix</strong> besteht nur aus einem Datentyp (z. B. nur Zahlen).</p>
 <ul>
-<li><p>Erstelle eine 3x3-Matrix <code>matrix()</code> mit den Zahlen 1 bis 9.</p></li>
-<li><p>Wandle einen Vektor 1:12 in eine 3x4-Matrix um. Teste den Unterschied zwischen <code>byrow = TRUE</code> und <code>byrow = FALSE</code> innerhalb von matrix().</p></li>
-<li><p>Greife auf das Element in der 2. Zeile, 3. Spalte zu.</p></li>
-<li><p>Berechne die Spaltensummen und Zeilensummen.</p></li>
-<li><p>Schaue dir an, was passiert wenn du <code>t()</code> auf deine Matrix anwendest.</p></li>
+<li><p><strong>Erste Schritte mit Filter</strong></p>
+<ul>
+<li><p>Wähle alle Teilnehmenden aus, die in der Gruppe <code>"above"</code> sind.</p></li>
+<li><p>Wähle alle Teilnehmenden aus, die mehr als 0.7 in <code>cvstm_propcorrect</code> erreicht haben.</p></li>
+</ul></li>
 </ul>
-<div class="callout callout-style-default callout-note callout-titled">
+<ul>
+<li><p><strong>Kombinierte Filter: Nutze die Pipe um beide Filter nacheinander auszuführen.</strong></p>
+<ul>
+<li><p>Filtere alle, die gleichzeitig in der Gruppe <code>below</code> sind UND weniger als 0.6 in <code>vp_propcorrect</code> haben.</p></li>
+<li><p>Wähle alle Fälle aus, deren <code>strategies</code> größer oder gleich 2 sind oder deren Wert in <code>mean_rl_all</code> nicht gleich 4.5 ist.</p></li>
+</ul></li>
+</ul>
+</section>
+</section>
+<section id="select" class="level2">
+<h2 class="anchored" data-anchor-id="select">select()</h2>
+<section id="übungen-zu-select" class="level3">
+<h3 class="anchored" data-anchor-id="übungen-zu-select"><strong>Übungen zu select()</strong></h3>
+<ol type="a">
+<li>Wähle die Variablen (bzw. Spalten) <code>code</code>, <code>group_all</code>, <code>vp_sum</code> und <code>cvstm_propcorrect</code> aus <code>dat_full</code> aus</li>
+</ol>
+</section>
+<section id="kombination-von-filter-und-select" class="level3">
+<h3 class="anchored" data-anchor-id="kombination-von-filter-und-select"><strong>Kombination von filter() und select()</strong></h3>
+<ol type="a">
+<li><p>Wähle alle Personen aus der Gruppe “above” aus, die mehr als 0.8 in <code>vp_propcorrect</code> haben,</p>
+<p>und zeige nur <code>code</code>, <code>group_all</code>, <code>vp_sum</code>, <code>vp_propcorrect</code> an.</p></li>
+</ol>
+</section>
+</section>
+<section id="rename" class="level2">
+<h2 class="anchored" data-anchor-id="rename">rename()</h2>
+<ul>
+<li><p>Benenne die Variable <code>group_all</code> in <code>group</code> um, indem du die Funktion <code>rename()</code> verwendest; achte dabei darauf, dass der neue Name zuerst angegeben wird.</p>
+<p>Anmerkung: je nachdem wie du deine Daten gemerged hast, heisst die Variable bereits “group”. Dann ist dieser Schritt nicht notwendig.</p></li>
+</ul>
+</section>
+<section id="mutate" class="level2">
+<h2 class="anchored" data-anchor-id="mutate">mutate()</h2>
+<p>Nur für Übungszwecke: Erstelle eine neue Spalte aus der Variable <code>group</code>. Aus <code>above</code> soll <code>EG1</code>, aus <code>below</code> <code>EG2</code> und aus <code>control</code> <code>KG</code> werden. Verwende dafür eine Kombination aus <code>case_when()</code> (oder <code>recode()</code>) und <code>mutate()</code></p>
+</section>
+<section id="summarize" class="level2">
+<h2 class="anchored" data-anchor-id="summarize">summarize()</h2>
+<p>Dich interessieren der <strong>Durchschnitt (mean)</strong> und die <strong>Standardabweichung (sd)</strong> der Variable <code>mean_e1_all</code>. Du möchtest diese Werte jedoch <strong>nicht</strong> zu <code>dat_full</code> hinzufügen, sondern als <strong>Zusammenfassung in einem neuen Objekt</strong> speichern.<br>
+Nutze dafür die Funktion <code>summarize()</code>.</p>
+</section>
+<section id="kombination-summarize-und-group_by" class="level2">
+<h2 class="anchored" data-anchor-id="kombination-summarize-und-group_by">Kombination summarize() und group_by()</h2>
+<p>Finde heraus, wie die <strong>durchschnittlichen Werte</strong> und <strong>Standardabweichungen</strong> von <code>pre4</code> in den verschiedenen Gruppen (<code>group</code>) ausfallen.</p>
+<ul>
+<li><p>Nutze dafür zuerst <code>group_by()</code></p></li>
+<li><p>Pipe das Ergebnis in <code>summarize()</code></p></li>
+</ul>
+<p>So kannst du zum Beispiel Tabelle 1 aus Grinschgl et al.&nbsp;(2020) reproduzieren.</p>
+</section>
+<section id="anwendung-dplyr-funktionen" class="level2">
+<h2 class="anchored" data-anchor-id="anwendung-dplyr-funktionen">Anwendung: dplyr-Funktionen</h2>
+<p>In der Analyse von Grinschgl et al.&nbsp;(2020), werden die Skalenwerte des MMQ-Fragebogens untersucht.<br>
+Um diese auszuwerten, müssen wir den Skalenwert pro Person berechnen.</p>
+<section id="berechnen-von-mmq_mean" class="level3">
+<h3 class="anchored" data-anchor-id="berechnen-von-mmq_mean">Berechnen von <em>mmq_mean</em></h3>
+<p>Mit <code>mutate()</code> kannst du einem bestehenden Datensatz eine neue Spalte hinzufügen.<br>
+Um die Daten des MMQ zu analysieren, füge eine Spalte hinzu, die den Durchschnitt (<em>mmq_mean</em>) über alle 18 Items (z. B. <code>question1</code> bis <code>question18</code>) enthält.</p>
+<p>💡 <strong>Tipps:</strong></p>
+<ul>
+<li><p>Verwende <code>rowMeans()</code> statt <code>mean()</code>, um den Mittelwert pro Versuchsperson zeihlenweise zu berechnen.</p></li>
+<li><p>Du kannst mit <code>starts_with()</code> alle Spalten auswählen, die mit <em>question</em> beginnen.</p></li>
+<li><p>Wenn die Items im Datensatz nebeneinanderstehen, kannst du sie auch mit einem Bereich auswählen, z. B. <code>question1:question18</code>.</p></li>
+</ul>
+</section>
+</section>
+<section id="multiplizieren-von-pre-ratings" class="level2">
+<h2 class="anchored" data-anchor-id="multiplizieren-von-pre-ratings">Multiplizieren von Pre Ratings</h2>
+<p>Die Variablen <em>pre1</em>–<em>pre4</em> und <em>post</em> stellen in der Studie die Leistungseinschätzungen auf einer Skala von 1 bis 100 dar. In unserem Datensatz sind sie jedoch nur auf einer Skala von 1 bis 10 abgebildet. Verwende die Funktion <code>mutate</code>, um die Variablen mit 10 zu multiplizieren und so die richtigen Werte zu erhalten.</p>
+<p>Weitere Informationen zu dplyr findest du auch hier: <a href="https://methodenlehre.github.io/einfuehrung-in-R/chapters/04-tidyverse.html#data-wrangling-dplyr">📖Kapitel 4.4 Ellis &amp; Mayer</a></p>
+</section>
+</section>
+<section id="fehlende-werte" class="level1">
+<h1>Fehlende Werte</h1>
+<p>In den meisten Datensätzen gibt es <strong>fehlende Werte</strong>.<br>
+Diese können je nach verwendeter Software <strong>unterschiedlich kodiert</strong> sein.</p>
+<section id="häufige-formen-fehlender-werte" class="level2">
+<h2 class="anchored" data-anchor-id="häufige-formen-fehlender-werte"><strong>Häufige Formen fehlender Werte</strong></h2>
+<ul>
+<li><p><code>NA</code> (R-typische Kennzeichnung für <em>Not Available</em>)</p></li>
+<li><p><code>999</code> oder <code>-999</code> (häufig manuell gesetzte Platzhalter)</p></li>
+<li><p>leere Zellen (<code>""</code>)</p></li>
+<li><p><code>NULL</code> (in manchen Programmiersprachen, aber in R selten in Datensätzen verwendet)</p></li>
+</ul>
+</section>
+<section id="umgang-mit-fehlenden-werten" class="level2">
+<h2 class="anchored" data-anchor-id="umgang-mit-fehlenden-werten">Umgang mit fehlenden Werten</h2>
+<p>Im Umgang mit fehlenden Werten sollten wir:</p>
+<ol type="1">
+<li><p><strong>Prüfen</strong>, ob und wie viele Werte fehlen.</p></li>
+<li><p><strong>Verstehen</strong>, warum sie fehlen (z. B. fehlende Eingabe durch Teilnehmende).</p></li>
+<li><p><strong>Entscheiden</strong>, wie mit den fehlenden Werten umgegangen werden soll – basierend auf dieser Analyse.</p></li>
+</ol>
+</section>
+<section id="aufgabe" class="level2">
+<h2 class="anchored" data-anchor-id="aufgabe">Aufgabe:</h2>
+<p><a href="bfi_10_data.csv" download="" class="btn btn-primary"> 📥 Download bfi_10_data.csv </a></p>
+<p><a href="https://methodenlehre.github.io/einfuehrung-in-R/chapters/04-tidyverse.html#fehlende-werte-auschliessen-drop_na">📖Kapitel 4.3.3 Ellis &amp; Mayer</a></p>
+<p>Führe die folgenden Schritte durch:</p>
+<ol type="1">
+<li><strong>Datensatz downloaden und einlesen</strong><br>
+Lade den Übungsdatensatz in R ein. Achte auf den Delimiter/das Trennzeichen (<code>;</code>)</li>
+</ol>
+<ol type="1">
+<li><strong>Fehlende Werte prüfen</strong><br>
+Teste mit <code>is.na()</code>, ob der Datensatz fehlende Werte enthält,<br>
+und zähle sie mit <code>table(is.na())</code>. Eine weitere Art und Weise einen Überblick über missings zu erhalten ist mit dem <code>skimr</code> Paket und der <code>skim()</code> Funktion. Teste diese.</li>
+</ol>
+<ol type="1">
+<li><strong>Zeilen mit fehlenden Werten löschen</strong><br>
+Erstelle eine <strong>Kopie</strong> des Datensatzes und verwende <code>drop_na()</code>,<br>
+um alle Zeilen mit fehlenden Werten zu entfernen.<br>
+Zähle anschließend erneut, wie viele fehlende Werte noch vorhanden sind.</li>
+</ol>
+<div class="callout callout-style-default callout-caution callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Freiwillig für Fortgeschrittene:
+Caution
 </div>
 </div>
 <div class="callout-body-container callout-body">
+<p><strong>Achtung:</strong> Ein einziger fehlender Wert reicht aus, damit die <strong>gesamte Zeile (also eine Versuchsperson)</strong> entfernt wird!</p>
+</div>
+</div>
+</section>
+</section>
+<section id="skalenberechnung" class="level1">
+<h1>Skalenberechnung</h1>
+<p><a href="https://methodenlehre.github.io/einfuehrung-in-R/chapters/04-tidyverse.html">📖Kapitel 4.4. Ellis &amp; Mayer</a></p>
+<p>In den meisten psychologischen Studien arbeiten wir mit <strong>Skalen</strong>.<br>
+Ein häufig genutzter Fragebogen ist der <strong>Big-Five-Fragebogen</strong> mit 10 Items (BFI-10).<br>
+In diesem Fragebogen sind einige <strong>invertiert (reverse) kodierte Items</strong> enthalten.</p>
+<section id="umpolen-der-negativ-formulierten-items" class="level2">
+<h2 class="anchored" data-anchor-id="umpolen-der-negativ-formulierten-items"><strong>Umpolen der negativ formulierten Items</strong></h2>
 <ul>
-<li><p>Generiere aus den Variablen ID, Initialen und Alter eine Matrize, die so aussieht: “1-RS-44” “2-MM-78” “3-PD-22” “4-PG-34” “5-DK-67” “1-RS-59«</p></li>
-<li><p>Erstelle einen Vektor mit den Namen mehrerer berühmter Wissenschaftler:innen. Kombiniere die Namen mit paste() und einem zusätzlichen Suffix, z. B. „, PhD“. Prüfe mit grepl(), ob einer der Namen ein bestimmtes Muster enthält (z. B. „stein“).</p></li>
+<li>Pole die negativ gepolten (reverse codierten) BFI-Items um. Die reverse kodierten Items enden immer mit <code>_r</code>. Du kannst dafür <strong>Base R</strong> oder Funktionen aus dem <strong>tidyverse</strong> verwenden.</li>
 </ul>
-</div>
-</div>
-</section>
-<section id="listen" class="level2">
-<h2 class="anchored" data-anchor-id="listen">Listen</h2>
-<p>Eine <strong>Liste</strong> kann verschiedene Datentypen enthalten (z. B. Zahlen, Zeichenketten, logische Werte).</p>
-<p>👉 <a href="https://methodenlehre.github.io/einfuehrung-in-R/chapters/02-R-language.html#lists">Einführung in R, Kapitel 2.4.5</a></p>
+<p><strong>Vervollständige diesen Code!</strong></p>
 <ul>
-<li><p><strong>Erstelle eine Liste mit drei Elementen und der Funktion</strong> <code>list()</code><strong>:</strong></p>
-<ul>
-<li><p>einem Vektor mit den Zahlen 1 bis 5</p></li>
-<li><p>einem Character-Vektor mit den Namen deiner Kommiliton:innen</p></li>
-<li><p>einem logischen Vektor (TRUE, FALSE)</p></li>
-</ul></li>
-<li><p>Greife auf das zweite Element der Liste zu.</p></li>
-<li><p>Greife auf den dritten Wert des ersten Elements der Liste zu.</p></li>
-<li><p>Füge der Liste ein weiteres Element hinzu (z. B. den Mittelwert der Zahlen).</p></li>
+<li>Nötige Argumente: Datensatz, Variablen, Rekodierungsschema.</li>
 </ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>data_bfi_recoded <span class="ot">&lt;-</span> XXXXX <span class="sc">|&gt;</span> </span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">across</span>(</span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>      <span class="fu">c</span>(XXXXXX),</span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>      <span class="sc">~</span> <span class="fu">case_when</span>(</span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>        . <span class="sc">==</span> <span class="dv">1</span> <span class="sc">~</span> <span class="dv">5</span>,</span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>        XXXXXXXXXX</span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>      )</span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Erklärungen zu diesem Code findest du hier: <a href="https://methodenlehre.github.io/einfuehrung-in-R/chapters/04-tidyverse.html#neue-variablen-erstellen-mit-mutate">Kapitel 4.4.6 Ellis &amp; Mayer</a> und hier: <a href="https://methodenlehre.github.io/einfuehrung-in-R/chapters/04-tidyverse.html#variablen-rekodieren-mit-case_when">Kapitel 4.4.7 Ellis &amp; Mayer</a></p>
 </section>
-<section id="data-frames" class="level2">
-<h2 class="anchored" data-anchor-id="data-frames">Data Frames</h2>
-<p>👉<a href="https://methodenlehre.github.io/einfuehrung-in-R/chapters/02-R-language.html#data-frames">Einführung in R, Kapitel 2.4.6</a></p>
-<p>Ein <strong>Data Frame</strong> ist eine tabellarische Struktur mit Spalten, die verschiedene Datentypen enthalten können.</p>
+<section id="berechnung-der-big-five-skalen" class="level2">
+<h2 class="anchored" data-anchor-id="berechnung-der-big-five-skalen"><strong>Berechnung der Big-Five-Skalen</strong></h2>
 <ul>
-<li><p>Erstelle einen Data Frame <code>data.frame()</code> oder <code>tibble()</code> mit drei Spalten:</p>
-<ul>
-<li><p>name (Character)</p></li>
-<li><p>alter (Numeric)</p></li>
-<li><p>studiert (Logical: TRUE/FALSE)</p></li>
-</ul></li>
-<li><p>Greife mit <code>datensatz$alter</code> auf die Spalte “alter” zu.</p></li>
-<li><p>Filtere alle Zeilen, in denen studiert <code>== TRUE</code>.</p></li>
-<li><p>Füge eine neue Spalte hinzu, die “alter” + 10 berechnet.</p></li>
-<li><p>Benenne die Spalten in deinem Data Frame mit <code>colnames()</code> oder <code>rename()</code>um, sodass sie internationalen Standards folgen.</p></li>
-<li><p>Berechne den Mittelwert und die Standardabweichung der Variable „age”.</p></li>
-<li><p>Sortiere den Data Frame basierend auf “age” absteigend mit <code>arrange()</code>.</p></li>
+<li>Erstelle neue Variablen, die den <strong>Mittelwert jedes Big-Five-Faktors</strong> pro Person enthalten.</li>
 </ul>
-<p>Weitere Informationen zum Erstellen von Data Frames findest du hier: <a href="https://methodenlehre.github.io/einfuehrung-in-R/chapters/03-data_frames.html#datens%C3%A4tze-selber-erstellen">Einführung in R, Kapitel 3.1</a></p>
-</section>
-<section id="übungen-mit-dat_full" class="level2">
-<h2 class="anchored" data-anchor-id="übungen-mit-dat_full">Übungen mit dat_full</h2>
-<p>Nun, da wir einige Operationen mit Data Frames kennengelernt haben, wenden wir diese auf unseren Datensatz dat_full an.</p>
+<p>Nutze dafür die Funktionen:</p>
 <ul>
-<li><p>Lies dat_full ein. Diesen Datensatz solltest du als .csv-Datei abgespeichert haben.</p></li>
-<li><p>Sieh dir den Datensatz genau an. Die Variable <code>csvtm_sum</code> scheint einen Tippfehler zu enthalten. Korrigiere diesen zu <code>cvstm_sum</code> mit einer der oben vorgestellten Funktionen.</p></li>
-<li><p>Überlege dir: Welche Variable sollte in einen Faktor umgewandelt werden?</p></li>
-<li><p>Definiere diese Variable(n) als Faktor, z. B. mit <code>as.factor()</code> oder <code>factor().</code></p></li>
-<li><p><strong>Zum Schluss speichere den bereinigten Datensatz erneut mit <code>write.csv</code> ab.</strong></p></li>
+<li><code>mutate()</code>, <code>row_means()</code> und <code>select()</code></li>
 </ul>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Note
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p><strong>Hinweis:</strong> R speichert nicht automatisch, dass eine Variable als Faktor definiert wurde. Dieser Code muss daher bei jedem Neustart erneut ausgeführt werden, wenn du wieder mit denselben Faktoren arbeiten möchtest.</p>
-</div>
-</div>
+<p>💡<strong>Tipp:</strong> Wenn du die <code>select()</code>-Funktion <strong>innerhalb von <code>mutate()</code></strong> verwendest und den <strong>native pipe (<code>|&gt;</code>)</strong> nutzt, musst du angeben, <strong>auf welchen Datensatz</strong> sich <code>select()</code> bezieht.</p>
+<p>z.B: <code>extraversion = rowMeans(select(data_bfi_recoded, bfi_extra_1_r, bfi_extra_2))</code></p>
+<p><strong>Abschlussübung:</strong> Versuche dein Skript dieser Hands on Einheit zu rendern. Wenn es nicht funktioniert, versuche die Fehlermeldungen nachzuvollziehen und zu beheben!</p>
 </section>
 </section>
-<section id="am-ende-deiner-übungen---vergiss-nicht-dein-skript-abzuspeichern--" class="level1">
-<h1>Am Ende deiner Übungen - vergiss nicht dein Skript abzuspeichern! :-)</h1>
+<section id="am-ende-deiner-übungen---vergiss-nicht-dein-skript-abzuspeichern" class="level1">
+<h1>Am Ende deiner Übungen - vergiss nicht dein Skript abzuspeichern! 😉</h1>
 
 
 </section>

@@ -4754,7 +4754,7 @@ vertical-align: -.125em;
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./hausuebungen.html">Hausuebungen</a></li><li class="breadcrumb-item"><a href="./hausuebung_3.html">Hausübung 3</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">hausuebung_3</li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -4919,11 +4919,11 @@ vertical-align: -.125em;
       <div class="sidebar-item-container"> 
             <a href="./hausuebungen.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Hausuebungen</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./hausuebung_loesung_1.html" class="sidebar-item-text sidebar-link">
@@ -4938,7 +4938,7 @@ vertical-align: -.125em;
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./hausuebung_3.html" class="sidebar-item-text sidebar-link active">
+  <a href="./hausuebung_3.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Hausübung 3</span></a>
   </div>
 </li>
@@ -5054,7 +5054,7 @@ vertical-align: -.125em;
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./hausuebungen.html">Hausuebungen</a></li><li class="breadcrumb-item"><a href="./hausuebung_3.html">Hausübung 3</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
 <h1 class="title">hausuebung_3</h1>
 </div>
@@ -5110,21 +5110,375 @@ Note
 <h2 class="anchored" data-anchor-id="datensätze-therapie-einlesen-und-bereinigen">📖 Datensätze “Therapie” einlesen und bereinigen</h2>
 <p>In den folgenden Daten versuchst du herauszufinden, ob sich eine neuartige Therapie von der Kontrollgruppe (Warteliste) unterscheidet. Dafür wurde das Wohlbefinden der Personen über drei Zeitpunkte hinweg gemessen (<em>therapie_results</em>). Zuerst musst du die Daten bereinigen, mergen und visualisieren und zum Schluss mit einem Hypothesentest entscheiden, ob die neue Therapieform besser abschneidet als die Kontrollgruppe.</p>
 <ul>
-<li><p>Lies die beiden Datensätze <code>therapie_Bedingung</code> und <code>therapie_results</code> ein.</p></li>
-<li><p>Bereinge die Datensätze! Gibt es duplizierte Werte? Gibt es Missings? Gibt es unmögliche Werte?</p></li>
+<li>Lies die beiden Datensätze <code>therapie_Bedingung</code> und <code>therapie_results</code> ein.</li>
 </ul>
+<div class="callout callout-style-default callout-note callout-titled" title="Lösungen">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Lösungen
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-2" class="callout-2-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+
+</div>
+</div>
+</div>
+<ul>
+<li>Bereinge die Datensätze! Gibt es duplizierte Werte? Gibt es Missings? Gibt es unmögliche Werte?</li>
+</ul>
+<div class="callout callout-style-default callout-note callout-titled" title="Lösungen">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Lösungen
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-3" class="callout-3-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<div class="cell">
+<div class="cell-output-display">
+<table class="caption-top table table-sm table-striped small">
+<caption>Data summary</caption>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Name</td>
+<td style="text-align: left;">therapie_bedingung</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Number of rows</td>
+<td style="text-align: left;">54</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Number of columns</td>
+<td style="text-align: left;">2</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">_______________________</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Column type frequency:</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">character</td>
+<td style="text-align: left;">1</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">numeric</td>
+<td style="text-align: left;">1</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">________________________</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Group variables</td>
+<td style="text-align: left;">None</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Variable type: character</strong></p>
+<table class="caption-top table table-sm table-striped small">
+<colgroup>
+<col style="width: 19%">
+<col style="width: 13%">
+<col style="width: 19%">
+<col style="width: 5%">
+<col style="width: 5%">
+<col style="width: 8%">
+<col style="width: 12%">
+<col style="width: 15%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">skim_variable</th>
+<th style="text-align: right;">n_missing</th>
+<th style="text-align: right;">complete_rate</th>
+<th style="text-align: right;">min</th>
+<th style="text-align: right;">max</th>
+<th style="text-align: right;">empty</th>
+<th style="text-align: right;">n_unique</th>
+<th style="text-align: right;">whitespace</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">bedingung</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">14</td>
+<td style="text-align: right;">14</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">0</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Variable type: numeric</strong></p>
+<table class="caption-top table table-sm table-striped small">
+<colgroup>
+<col style="width: 17%">
+<col style="width: 12%">
+<col style="width: 17%">
+<col style="width: 7%">
+<col style="width: 6%">
+<col style="width: 3%">
+<col style="width: 7%">
+<col style="width: 6%">
+<col style="width: 7%">
+<col style="width: 6%">
+<col style="width: 7%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">skim_variable</th>
+<th style="text-align: right;">n_missing</th>
+<th style="text-align: right;">complete_rate</th>
+<th style="text-align: right;">mean</th>
+<th style="text-align: right;">sd</th>
+<th style="text-align: right;">p0</th>
+<th style="text-align: right;">p25</th>
+<th style="text-align: right;">p50</th>
+<th style="text-align: right;">p75</th>
+<th style="text-align: right;">p100</th>
+<th style="text-align: left;">hist</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">id</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">25.28</td>
+<td style="text-align: right;">14.5</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">13.25</td>
+<td style="text-align: right;">24.5</td>
+<td style="text-align: right;">37.75</td>
+<td style="text-align: right;">50</td>
+<td style="text-align: left;">▇▇▇▇▇</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="cell-output-display">
+<table class="caption-top table table-sm table-striped small">
+<caption>Data summary</caption>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Name</td>
+<td style="text-align: left;">therapie_results</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Number of rows</td>
+<td style="text-align: left;">50</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Number of columns</td>
+<td style="text-align: left;">4</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">_______________________</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Column type frequency:</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">numeric</td>
+<td style="text-align: left;">4</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">________________________</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Group variables</td>
+<td style="text-align: left;">None</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Variable type: numeric</strong></p>
+<table class="caption-top table table-sm table-striped small">
+<colgroup>
+<col style="width: 17%">
+<col style="width: 12%">
+<col style="width: 17%">
+<col style="width: 7%">
+<col style="width: 7%">
+<col style="width: 3%">
+<col style="width: 7%">
+<col style="width: 6%">
+<col style="width: 7%">
+<col style="width: 6%">
+<col style="width: 7%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">skim_variable</th>
+<th style="text-align: right;">n_missing</th>
+<th style="text-align: right;">complete_rate</th>
+<th style="text-align: right;">mean</th>
+<th style="text-align: right;">sd</th>
+<th style="text-align: right;">p0</th>
+<th style="text-align: right;">p25</th>
+<th style="text-align: right;">p50</th>
+<th style="text-align: right;">p75</th>
+<th style="text-align: right;">p100</th>
+<th style="text-align: left;">hist</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">id</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">25.50</td>
+<td style="text-align: right;">14.58</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">13.25</td>
+<td style="text-align: right;">25.5</td>
+<td style="text-align: right;">37.75</td>
+<td style="text-align: right;">50</td>
+<td style="text-align: left;">▇▇▇▇▇</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">beginn</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">3.62</td>
+<td style="text-align: right;">1.34</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">2.80</td>
+<td style="text-align: right;">3.6</td>
+<td style="text-align: right;">4.60</td>
+<td style="text-align: right;">6</td>
+<td style="text-align: left;">▃▇▇▃▆</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">mitte</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">3.86</td>
+<td style="text-align: right;">1.36</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">3.00</td>
+<td style="text-align: right;">3.8</td>
+<td style="text-align: right;">4.95</td>
+<td style="text-align: right;">6</td>
+<td style="text-align: left;">▅▃▇▅▆</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">ende</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">3.76</td>
+<td style="text-align: right;">1.39</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">3.00</td>
+<td style="text-align: right;">3.7</td>
+<td style="text-align: right;">5.00</td>
+<td style="text-align: right;">6</td>
+<td style="text-align: left;">▃▅▇▇▅</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p>Im Datensatz <code>therapie_bedingung</code> gab es duplizierte Werte, die mit der Funktion <code>unique()</code> entfernt wurden. In beiden Datensätzen gab es keine Missings oder unmöglichen Werte.</p>
+</div>
+</div>
+</div>
 <ul>
 <li>Merge die bereinigten Datensätze!</li>
 </ul>
+<div class="callout callout-style-default callout-note callout-titled" title="Lösungen">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Lösungen
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-4" class="callout-4-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+
+</div>
+</div>
+</div>
 <ul>
 <li>Wandle die Variablen <code>id</code> und <code>bedingung</code> in Faktoren um.</li>
 </ul>
+<div class="callout callout-style-default callout-note callout-titled" title="Lösungen">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-5-contents" aria-controls="callout-5" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Lösungen
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-5" class="callout-5-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+
+</div>
+</div>
+</div>
 <ul>
 <li>Führe eine Wide-to-Long-Transformation durch und erstelle damit einen Dataframe <code>therapie_long</code> mit einem messwiederholten Faktor <code>messzeitpunkt</code> und der (Outcome-)Variable <code>wohlbefinden</code>. Diese setzt sich aus den Werten in <code>beginn</code>, <code>mitte</code> und <code>ende</code> zusammen.</li>
 </ul>
+<div class="callout callout-style-default callout-note callout-titled" title="Lösungen">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-6-contents" aria-controls="callout-6" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Lösungen
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-6" class="callout-6-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+
+</div>
+</div>
+</div>
 <ul>
 <li>Definiere die Variable <code>messzeitpunkt</code> als Faktor mit den Faktorstufen <code>beginn</code>, <code>mitte</code> und <code>ende</code> (in genau dieser Reihenfolge).</li>
 </ul>
+<div class="callout callout-style-default callout-note callout-titled" title="Lösungen">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-7-contents" aria-controls="callout-7" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Lösungen
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-7" class="callout-7-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] &quot;beginn&quot; &quot;mitte&quot;  &quot;ende&quot;  </code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
 <hr>
 </section>
 <section id="daten-visualisieren" class="level2">
@@ -5133,12 +5487,12 @@ Note
 <li>Bevor wir die Daten mit Hypothesentests analysieren, wollen wir ein Gefühl für die Daten erhalten. Plotte dafür den Mittelwertsverlauf mit Fehlerbalken über die drei Zeitpunkte hinweg. Nutze den zur Verfügung gestellten Code, um ein Summary zu erstellen.</li>
 </ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>summary_data <span class="ot">&lt;-</span> therapie_long <span class="sc">|&gt;</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(bedingung, messzeitpunkt) <span class="sc">|&gt;</span></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(</span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>    <span class="at">mean_wb =</span> <span class="fu">mean</span>(wohlbefinden),</span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">se_wb   =</span> <span class="fu">sd</span>(wohlbefinden) <span class="sc">/</span> <span class="fu">sqrt</span>(<span class="fu">n</span>())</span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>summary_data <span class="ot">&lt;-</span> therapie_long <span class="sc">|&gt;</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(bedingung, messzeitpunkt) <span class="sc">|&gt;</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>    <span class="at">mean_wb =</span> <span class="fu">mean</span>(wohlbefinden),</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">se_wb   =</span> <span class="fu">sd</span>(wohlbefinden) <span class="sc">/</span> <span class="fu">sqrt</span>(<span class="fu">n</span>())</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <ul>
 <li><p>Plotte nun die Daten. Färbe die Verlaufslinien nach Versuchsbedingung ein und gruppiere die Daten mit <code>color = bedingung</code> und <code>group = bedingung</code>. Verwende drei Geoms:</p>
@@ -5149,6 +5503,42 @@ Note
 </ul></li>
 <li><p>Füge ausserdem angemessene Formatierungen hinzu (Titel, Achsenbeschriftungen, Theme).</p></li>
 </ul>
+<div class="callout callout-style-default callout-note callout-titled" title="Lösungen">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-8-contents" aria-controls="callout-8" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Lösungen
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-8" class="callout-8-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(summary_data, <span class="fu">aes</span>(<span class="at">x =</span> messzeitpunkt, <span class="at">y =</span> mean_wb,</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>                         <span class="at">color =</span> bedingung, <span class="at">group =</span> bedingung)) <span class="sc">+</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>() <span class="sc">+</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_errorbar</span>(<span class="fu">aes</span>(<span class="at">ymin =</span> mean_wb <span class="sc">-</span> se_wb, <span class="at">ymax =</span> mean_wb <span class="sc">+</span> se_wb),</span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>                <span class="at">width =</span> <span class="fl">0.1</span>) <span class="sc">+</span></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(</span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span> <span class="st">&quot;Messzeitpunkt&quot;</span>,</span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>    <span class="at">y =</span> <span class="st">&quot;Wohlbefinden&quot;</span>,</span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>    <span class="at">color =</span> <span class="st">&quot;Bedingung&quot;</span></span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img role="img" src="data:image/png;base64,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" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
 <hr>
 </section>
 <section id="anovas-und-post-hoc-t-tests" class="level2">
@@ -5158,16 +5548,40 @@ Note
 <li>Ergänze dafür den Code um die nötigen Variablen. Der Test prüft gegen Varianzhomogenität; daher bedeutet ein nicht signifikantes Ergebnis, dass die Voraussetzung für die ANOVA nicht verletzt ist.</li>
 </ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">leveneTest</span>(AV <span class="sc">~</span> Gruppen, <span class="at">data =</span> )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">leveneTest</span>(AV <span class="sc">~</span> Gruppen, <span class="at">data =</span> )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="callout callout-style-default callout-note callout-titled" title="Lösungen">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-9-contents" aria-controls="callout-9" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Lösungen
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-9" class="callout-9-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code>Levene&#39;s Test for Homogeneity of Variance (center = median)
+       Df F value Pr(&gt;F)
+group   1   0.485 0.4873
+      148               </code></pre>
+</div>
+</div>
+<p>Der Levene-Test ist nicht signifikant (p &gt; .05), somit ist die Voraussetzung der Varianzhomogenität erfüllt.</p>
+</div>
+</div>
 </div>
 <ul>
-<li>Führe eine Mixed-Design-ANOVA mit <code>aov_4()</code> (aus dem Paket <code>afex</code>) durch. Die abhängige Variable ist <em><code>wohlbefinden</code></em>, der unabhängige Between-Faktor ist <em><code>bedingung</code></em> und der unabhängige Within-Faktor ist <em><code>messzeitpunkt</code></em>. Die Formel für die ANOVA lautet: AV ~ Between-Faktor + (Within-Faktor). Für den Within-Faktor verwenden wir die folgende Schreibweise: <em><code>(messzeitpunkt | id)</code></em>, da die Messwiederholungen innerhalb jeder Person verschachtelt sind.</li>
+<li>Führe eine Mixed-Design-ANOVA mit <code>aov_4()</code> durch. Die abhängige Variable ist <em><code>wohlbefinden</code></em>, der unabhängige Between-Faktor ist <em><code>bedingung</code></em> und der unabhängige Within-Faktor ist <em><code>messzeitpunkt</code></em>. Die Formel für die ANOVA lautet: AV ~ Between-Faktor + (Within-Faktor). Für den Within-Faktor verwenden wir die folgende Schreibweise: <em><code>(messzeitpunkt | id)</code></em>, da die Messwiederholungen innerhalb jeder Person verschachtelt sind.</li>
 </ul>
 <p><strong>Passe den Code an:</strong></p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>anova_1 <span class="ot">&lt;-</span> <span class="fu">aov_4</span>(AV <span class="sc">~</span> between_subjects_faktor <span class="sc">+</span> (messzeitpunkt <span class="sc">|</span> id), <span class="at">data =</span> xx)</span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(anova_1)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>anova_1 <span class="ot">&lt;-</span> <span class="fu">aov_4</span>(AV <span class="sc">~</span> between_subjects_faktor <span class="sc">+</span> (messzeitpunkt <span class="sc">|</span> id) <span class="at">data =</span> )<span class="er">)</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(anova_1)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -5182,16 +5596,146 @@ Note
 <p>Schaue dir die Ergebnisse einschliesslich des Mauchly-Tests auf Sphärizität an – dieser ist relevant bei mindestens drei Within-Faktoren. Der Mauchly-Test sollte nicht signifikant sein, sodass wir Sphärizität annehmen können (ähnlich zum Levene Test). Falls doch: Werte nach Greenhouse-Geisser-Korrektur interpretieren.</p>
 </div>
 </div>
+<div class="callout callout-style-default callout-note callout-titled" title="Lösungen">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-11-contents" aria-controls="callout-11" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Lösungen
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-11" class="callout-11-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code>
+Univariate Type III Repeated-Measures ANOVA Assuming Sphericity
+
+                         Sum Sq num Df Error SS den Df  F value    Pr(&gt;F)    
+(Intercept)             2104.13      1  196.775     48 513.2660 &lt; 2.2e-16 ***
+bedingung                  3.78      1  196.775     48   0.9212     0.342    
+messzeitpunkt              1.41      2   57.833     96   1.1691     0.315    
+bedingung:messzeitpunkt   15.24      2   57.833     96  12.6481 1.332e-05 ***
+---
+Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
+
+
+Mauchly Tests for Sphericity
+
+                        Test statistic p-value
+messzeitpunkt                  0.97258  0.5203
+bedingung:messzeitpunkt        0.97258  0.5203
+
+
+Greenhouse-Geisser and Huynh-Feldt Corrections
+ for Departure from Sphericity
+
+                         GG eps Pr(&gt;F[GG])    
+messzeitpunkt           0.97331     0.3142    
+bedingung:messzeitpunkt 0.97331   1.66e-05 ***
+---
+Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
+
+                          HF eps   Pr(&gt;F[HF])
+messzeitpunkt           1.013874 3.150422e-01
+bedingung:messzeitpunkt 1.013874 1.331591e-05</code></pre>
+</div>
+</div>
+<p>Der Mauchly-Test auf Sphärizität ist nicht signifikant, sodass wir Sphärizität annehmen können. Die ANOVA zeigt keinen signifikanten Haupteffekt für den Between-Faktor <code>bedingung</code> (p &gt; .05) und keinen signifikanten Haupteffekt für den Within-Faktor <code>messzeitpunkt</code> (p &gt; .05). Signifikant ist allerdings die Interaktion des Between-Faktors <code>bedingung</code> und des Within-Faktor <code>messzeitpunkt</code>. Das bedeutet, abhängig von der Bedingung zu welcher eine Versuchsperson gehört, verändert sich das Wohlbefinden einer Person unterschiedlich.</p>
+</div>
+</div>
+</div>
 <ul>
 <li>Berechne die die ANOVA erneut und inkludiere die Berechnung des partiellen Eta². Nutze dafür als zusätzliches Argument in der <code>aov_4</code> Funktion <code>anova_table = list(es = c(&quot;ges&quot;, &quot;pes&quot;)))</code> .</li>
 <li>Betrachte die Ergebnisse indem du mit <code>$</code> auf <code>anova_table</code> des Objekts zugreifst in dem du die ANOVA abgespeichert hast.</li>
 </ul>
+<div class="callout callout-style-default callout-note callout-titled" title="Lösungen">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-12-contents" aria-controls="callout-12" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Lösungen
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-12" class="callout-12-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code>Anova Table (Type 3 tests)
+
+Response: wohlbefinden
+                        num Df den Df    MSE       F      pes      ges   Pr(&gt;F)
+bedingung               1.0000 48.000 4.0995  0.9212 0.018829 0.014615   0.3420
+messzeitpunkt           1.9466 93.438 0.6189  1.1691 0.023776 0.005502   0.3142
+bedingung:messzeitpunkt 1.9466 93.438 0.6189 12.6481 0.208548 0.056473 1.66e-05
+                           
+bedingung                  
+messzeitpunkt              
+bedingung:messzeitpunkt ***
+---
+Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1</code></pre>
+</div>
+</div>
+<p><code>ges</code> und <code>pes</code> geben das generelle und partielle Eta² an. Genauere Erläuterungen zum Unterschied zwischen den beiden Massen findest du auch noch mal in unserem FAQ. Das generelle Eta² ist für den Between-Faktor <code>bedingung</code> 0.015 und für den Within-Faktor <code>messzeitpunkt</code> 0.005. Das partielle Eta² ist für den Between-Faktor <code>bedingung</code> 0.019 und für den Within-Faktor <code>messzeitpunkt</code> 0.024.</p>
+</div>
+</div>
+</div>
 <ul>
 <li>Berechne nun paarweise Post-hoc-Vergleiche mit <code>Tukey-Korrektur</code> (Korrektur für multiples Testen), indem du zuerst <code>emmeans()</code> speicherst und anschliessend die Funktion <code>pairs()</code> anwendest. Hier ist ein Muster-Code:</li>
 </ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>result <span class="ot">&lt;-</span> <span class="fu">emmeans</span>(<span class="at">object =</span> your_anova_model, <span class="at">specs =</span> <span class="sc">~</span> messwiederholung_faktor <span class="sc">*</span> between_factor)</span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="fu">pairs</span>(results, <span class="at">simple =</span> <span class="st">&quot;mw_factor&quot;</span>, <span class="at">adjust =</span> <span class="st">&quot;tukey&quot;</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>result <span class="ot">&lt;-</span> <span class="fu">emmeans</span>(<span class="at">object =</span> your_anova_model, <span class="at">specs =</span> <span class="sc">~</span> messwiederholung_faktor <span class="sc">*</span> between_factor)</span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="fu">pairs</span>(results, <span class="at">simple =</span> <span class="st">&quot;mw_factor&quot;</span>, <span class="at">adjust =</span> <span class="st">&quot;tukey&quot;</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="callout callout-style-default callout-note callout-titled" title="Lösungen">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-13-contents" aria-controls="callout-13" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Lösungen
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-13" class="callout-13-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code>messzeitpunkt = beginn:
+ contrast                        estimate    SE df t.ratio p.value
+ Kontrollgruppe - Therapiegruppe    0.584 0.373 48   1.565  0.1241
+
+messzeitpunkt = mitte:
+ contrast                        estimate    SE df t.ratio p.value
+ Kontrollgruppe - Therapiegruppe   -0.752 0.374 48  -2.012  0.0498
+
+messzeitpunkt = ende:
+ contrast                        estimate    SE df t.ratio p.value
+ Kontrollgruppe - Therapiegruppe   -0.784 0.381 48  -2.056  0.0453</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>bedingung = Kontrollgruppe:
+ contrast       estimate    SE df t.ratio p.value
+ beginn - mitte    0.432 0.201 48   2.151  0.0903
+ beginn - ende     0.544 0.231 48   2.357  0.0575
+ mitte - ende      0.112 0.226 48   0.496  0.8736
+
+bedingung = Therapiegruppe:
+ contrast       estimate    SE df t.ratio p.value
+ beginn - mitte   -0.904 0.201 48  -4.502  0.0001
+ beginn - ende    -0.824 0.231 48  -3.571  0.0023
+ mitte - ende      0.080 0.226 48   0.354  0.9333
+
+P value adjustment: tukey method for comparing a family of 3 estimates </code></pre>
+</div>
+</div>
+<p>Die vorherige globale ANOVA zeigte eine signifikante Interaktion an. Mit <code>emmeans</code> und <code>pairs</code> lässt sich nun herausfinden, zwischen welchen Messzeitpunkten die signifikanten Unterschiede bestehen. Die paarweisen Vergleiche zeigen, dass es signifikante Unterschiede im Wohlbefinden zwischen der Kontrollgruppe und der Therapiegruppe sowohl zur Mitte als auch zum Ende der Therapie gibt (p &lt; .05). Es gibt jedoch keine signifikanten Unterschiede zu Beginn der Therapie (p &gt; .05). Dies spiegelt die eben gefundene Interaktion wieder und deutet darauf hin, dass die neue Therapieform im Vergleich zur Kontrollgruppe hinsichtlich des Wohlbefindens der Personen über die Zeit hinweg zu positiveren Resultaten führt.</p>
+</div>
+</div>
 </div>
 
 
