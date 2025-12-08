@@ -5575,7 +5575,7 @@ group   1   0.485 0.4873
 </div>
 </div>
 <ul>
-<li>Führe eine Mixed-Design-ANOVA mit <code>aov_4()</code> durch. Die abhängige Variable ist <em><code>wohlbefinden</code></em>, der unabhängige Between-Faktor ist <em><code>bedingung</code></em> und der unabhängige Within-Faktor ist <em><code>messzeitpunkt</code></em>. Die Formel für die ANOVA lautet: AV ~ Between-Faktor + (Within-Faktor). Für den Within-Faktor verwenden wir die folgende Schreibweise: <em><code>(messzeitpunkt | id)</code></em>, da die Messwiederholungen innerhalb jeder Person verschachtelt sind.</li>
+<li>Führe eine Mixed-Design-ANOVA mit <code>aov_4()</code> (aus dem Paket “afex”) durch. Die abhängige Variable ist <em><code>wohlbefinden</code></em>, der unabhängige Between-Faktor ist <em><code>bedingung</code></em> und der unabhängige Within-Faktor ist <em><code>messzeitpunkt</code></em>. Die Formel für die ANOVA lautet: AV ~ Between-Faktor + (Within-Faktor). Für den Within-Faktor verwenden wir die folgende Schreibweise: <em><code>(messzeitpunkt | id)</code></em>, da die Messwiederholungen innerhalb jeder Person verschachtelt sind.</li>
 </ul>
 <p><strong>Passe den Code an:</strong></p>
 <div class="cell">
@@ -5685,7 +5685,7 @@ Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&
 </div>
 </div>
 <ul>
-<li>Berechne nun paarweise Post-hoc-Vergleiche mit <code>Tukey-Korrektur</code> (Korrektur für multiples Testen), indem du zuerst <code>emmeans()</code> speicherst und anschliessend die Funktion <code>pairs()</code> anwendest. Hier ist ein Muster-Code:</li>
+<li>Berechne nun paarweise Post-hoc-Vergleiche mit <code>Tukey-Korrektur</code> (Korrektur für multiples Testen), indem du zuerst <code>emmeans()</code> (aus dem Paket “emmeans”) speicherst und anschliessend die Funktion <code>pairs()</code> anwendest. Hier ist ein Muster-Code:</li>
 </ul>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>result <span class="ot">&lt;-</span> <span class="fu">emmeans</span>(<span class="at">object =</span> your_anova_model, <span class="at">specs =</span> <span class="sc">~</span> messwiederholung_faktor <span class="sc">*</span> between_factor)</span>

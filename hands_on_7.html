@@ -423,10 +423,10 @@ div.csl-indent {
   <li><a href="#lernziele" id="toc-lernziele" class="nav-link active" data-scroll-target="#lernziele">Lernziele</a>
   <ul class="collapse">
   <li><a href="#einfaktorielle-anova" id="toc-einfaktorielle-anova" class="nav-link" data-scroll-target="#einfaktorielle-anova">Einfaktorielle ANOVA</a></li>
-  <li><a href="#post-hoc-t-test" id="toc-post-hoc-t-test" class="nav-link" data-scroll-target="#post-hoc-t-test">Post-Hoc t-Test</a></li>
-  <li><a href="#welch-anova" id="toc-welch-anova" class="nav-link" data-scroll-target="#welch-anova">Welch ANOVA</a></li>
-  <li><a href="#x3-mixed-anova-mit-messwiederholung" id="toc-x3-mixed-anova-mit-messwiederholung" class="nav-link" data-scroll-target="#x3-mixed-anova-mit-messwiederholung">2X3 Mixed ANOVA mit Messwiederholung</a></li>
-  <li><a href="#x3-mixed-anova---post-hoc-t-tests" id="toc-x3-mixed-anova---post-hoc-t-tests" class="nav-link" data-scroll-target="#x3-mixed-anova---post-hoc-t-tests">2X3 Mixed ANOVA - Post-Hoc t-Tests</a></li>
+  <li><a href="#post-hoc-t-tests" id="toc-post-hoc-t-tests" class="nav-link" data-scroll-target="#post-hoc-t-tests">Post-hoc <em>t</em>-Tests</a></li>
+  <li><a href="#welch-anova-aaron-siehe-oben-können-wir-denke-ich-weglasesn" id="toc-welch-anova-aaron-siehe-oben-können-wir-denke-ich-weglasesn" class="nav-link" data-scroll-target="#welch-anova-aaron-siehe-oben-können-wir-denke-ich-weglasesn">Welch ANOVA <span class="citation" data-cites="Aaron">(<strong>Aaron?</strong>)</span> siehe oben, können wir denke ich weglasesn</a></li>
+  <li><a href="#x3-mixed-anova-mit-messwiederholung-aaron-levene-für-between-faktor-auch-rechnen" id="toc-x3-mixed-anova-mit-messwiederholung-aaron-levene-für-between-faktor-auch-rechnen" class="nav-link" data-scroll-target="#x3-mixed-anova-mit-messwiederholung-aaron-levene-für-between-faktor-auch-rechnen">2x3 Mixed ANOVA mit Messwiederholung <span class="citation" data-cites="Aaron">(<strong>Aaron?</strong>)</span> levene für between faktor auch rechnen?</a></li>
+  <li><a href="#x3-mixed-anova---post-hoc-t-tests" id="toc-x3-mixed-anova---post-hoc-t-tests" class="nav-link" data-scroll-target="#x3-mixed-anova---post-hoc-t-tests">2x3 Mixed ANOVA - Post-Hoc <em>t</em>-Tests</a></li>
   </ul></li>
   <li><a href="#am-ende-deiner-übungen---vergiss-nicht-dein-skript-abzuspeichern" id="toc-am-ende-deiner-übungen---vergiss-nicht-dein-skript-abzuspeichern" class="nav-link" data-scroll-target="#am-ende-deiner-übungen---vergiss-nicht-dein-skript-abzuspeichern">Am Ende deiner Übungen - vergiss nicht dein Skript abzuspeichern! 😉</a></li>
   </ul>
@@ -461,10 +461,10 @@ div.csl-indent {
 <section id="lernziele" class="level1">
 <h1>Lernziele</h1>
 <p>✅Einfaktorielle ANOVA</p>
-<p>✅ Effektstärken berechnen</p>
+<p>✅Effektstärken berechnen</p>
 <p>✅Voraussetzungsprüfung ANOVA</p>
-<p>✅ Mixed ANOVA</p>
-<p>✅ Post-Hoc t-Tests</p>
+<p>✅Mixed ANOVA</p>
+<p>✅Post-hoc <em>t</em>-Tests</p>
 <div class="callout callout-style-default callout-important callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -531,8 +531,9 @@ PDF Grinschgl2021
 <hr>
 <section id="einfaktorielle-anova" class="level2">
 <h2 class="anchored" data-anchor-id="einfaktorielle-anova">Einfaktorielle ANOVA</h2>
+<p><span class="citation" data-cites="Aaron">(<a href="#ref-Aaron" role="doc-biblioref"><strong>Aaron?</strong></a>)</span> würde hier Levene ergänzen, aber dann dafür die Welch ANOVA weglassen und diese nur auf den Folien erwähnen</p>
 <ul>
-<li>Berechne eine einfaktorielle ANOVA mit <code>aov_4</code> für die offloading Variable mean_rl_all (Öffnungen des Modelfensters). Definiere die ANOVA nach der folgenden Vorlage</li>
+<li>Berechne eine einfaktorielle ANOVA mit <code>aov_4</code> (aus dem Paket “afex”) ür die Offloading-Variable mean_rl_all (Öffnungen des Modelfensters). Definiere die ANOVA nach der folgenden Vorlage</li>
 </ul>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>model_1 <span class="ot">&lt;-</span> <span class="fu">aov_4</span>(AV <span class="sc">~</span> Faktor_1 <span class="sc">+</span> (<span class="dv">1</span> <span class="sc">|</span> ID), <span class="at">data =</span> data)</span>
@@ -540,13 +541,13 @@ PDF Grinschgl2021
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(model_1)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <ul>
-<li><p>Versuche das Ergbenis zu interpretieren und mit dem <span class="citation" data-cites="grinschgl2021">Grinschgl et al. (<a href="#ref-grinschgl2021" role="doc-biblioref">2021</a>)</span> Paper zu vergleichen. 👉 Und schon haben wir ein ANOVAs für die Offloading Variablen berechnet (Teil der Abschlussarbeit).</p></li>
+<li><p>Versuche das Ergbenis zu interpretieren und mit dem <span class="citation" data-cites="grinschgl2021">Grinschgl et al. (<a href="#ref-grinschgl2021" role="doc-biblioref">2021</a>)</span> Paper zu vergleichen. 👉 Und schon haben wir ein ANOVAs für die Offloading Variablen berechnet.</p></li>
 <li><p>Berechne die Effektstärken partielles <code>η²</code> und generalisiertes <code>η²</code> . Ergänze dafür die aov_4 Funktion um <code>anova_table = list(es = c("ges" ,"pes"))</code> . Lasse dir das Ergebnis mit <code>model$anova_table</code> ausgeben. Bei einfaktoriellen ANOVAs sind die partiellen und generalisierten <code>η²</code> identisch.</p></li>
 </ul>
 <hr>
 </section>
-<section id="post-hoc-t-test" class="level2">
-<h2 class="anchored" data-anchor-id="post-hoc-t-test">Post-Hoc t-Test</h2>
+<section id="post-hoc-t-tests" class="level2">
+<h2 class="anchored" data-anchor-id="post-hoc-t-tests">Post-hoc <em>t</em>-Tests</h2>
 <p>Zu Übungszwecken, inhaltlich nicht notwendig wenn die ANOVA nicht signifikant ist.</p>
 <ul>
 <li>Lade das Package <code>emmeans</code></li>
@@ -556,18 +557,34 @@ PDF Grinschgl2021
 <li>Speichere mit <code>new_object &lt;- emmeans(object = model, specs = ~group_all)</code> die Mittelwerte und Standardfehler in einem neuen Objekt.</li>
 </ul>
 <ul>
-<li>Berechne mit <code>pairs(new_object)</code> multiple t-Tests als Post-Hoc Tests. Diese werden als default-Einstellung mit der Tukey-Methode korrigiert. –&gt; Das ist eine Alternative zu einzelnen t-Tests in Grinschgl et al.&nbsp;(2020) so wie in EH11 berechnet - ergibt leicht andere Werte wegen Tukey-Korrektur für multiples Testen. (Für Abschlussarbeit sind Post-Hoc Tests in beiden Varianten okay – entweder mit <code>emmeans()</code> oder mit <code>t.test()</code>.</li>
+<li>Berechne mit <code>pairs(new_object)</code> multiple t-Tests als Post-Hoc Tests. Diese werden als default-Einstellung mit der <code>Tukey-Methode</code>korrigiert. –&gt; Das ist eine Alternative zu einzelnen t-Tests in <span class="citation" data-cites="grinschgl2021">Grinschgl et al. (<a href="#ref-grinschgl2021" role="doc-biblioref">2021</a>)</span> so wie in EH12 berechnet - ergibt leicht andere Werte wegen Tukey-Korrektur für multiples Testen. (Für das Abschlussprojekt sind Post-Hoc Tests in beiden Varianten okay – entweder mit <code>emmeans()</code> oder mit <code>t.test()</code>.)</li>
 </ul>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-5-contents" aria-controls="callout-5" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-5" class="callout-5-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Die Tukey-Korrektur ist ein simultanes Verfahren für Post-hoc-Gruppenvergleiche, das verhindert, dass sich der Alpha-Fehler durch viele t-Tests (familywise error rate) aufsummiert. Sie wird bevorzugt eingesetzt, wenn alle Gruppen miteinander verglichen werden sollen.</p>
+</div>
+</div>
+</div>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">pairs</span>(posthoc_tests)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <hr>
 </section>
-<section id="welch-anova" class="level2">
-<h2 class="anchored" data-anchor-id="welch-anova">Welch ANOVA</h2>
+<section id="welch-anova-aaron-siehe-oben-können-wir-denke-ich-weglasesn" class="level2">
+<h2 class="anchored" data-anchor-id="welch-anova-aaron-siehe-oben-können-wir-denke-ich-weglasesn">Welch ANOVA <span class="citation" data-cites="Aaron">(<a href="#ref-Aaron" role="doc-biblioref"><strong>Aaron?</strong></a>)</span> siehe oben, können wir denke ich weglasesn</h2>
 <p><a href="https://learningstatisticswithr.com/book/anova.html">📖Learning Statistics with R</a></p>
 <ul>
-<li>Berechne eine zweite ANOVA für eine weitere Offloading-Variable deiner Wahl. Prüfe zuvor die Varianzhomogenität. Falls diese nicht gegeben ist, kannst du eine Welch-ANOVA durchführen, zum Beispiel mit <code>oneway.test()</code>. Achtung: In <code>oneway.test</code> ist die Spezifizierung des Random Effects (<code>(1 | code)</code>) nicht nötig und kann ausgelassen werden.</li>
+<li>Berechne eine zweite ANOVA für eine weitere Offloading-Variable deiner Wahl. Prüfe zuvor die Varianzhomogenität. Falls diese nicht gegeben ist, kannst du eine <code>Welch-ANOVA</code> durchführen, zum Beispiel mit <code>oneway.test()</code>. Achtung: In <code>oneway.test</code> ist die Spezifizierung des Random Effects (<code>(1 | code)</code>) nicht nötig und kann ausgelassen werden.</li>
 </ul>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>model_2 <span class="ot">&lt;-</span> <span class="fu">oneway.test</span>(mean_rl_all <span class="sc">~</span> group_all, <span class="at">data =</span> dat_full)</span>
@@ -575,8 +592,8 @@ PDF Grinschgl2021
 </div>
 <hr>
 </section>
-<section id="x3-mixed-anova-mit-messwiederholung" class="level2">
-<h2 class="anchored" data-anchor-id="x3-mixed-anova-mit-messwiederholung">2X3 Mixed ANOVA mit Messwiederholung</h2>
+<section id="x3-mixed-anova-mit-messwiederholung-aaron-levene-für-between-faktor-auch-rechnen" class="level2">
+<h2 class="anchored" data-anchor-id="x3-mixed-anova-mit-messwiederholung-aaron-levene-für-between-faktor-auch-rechnen">2x3 Mixed ANOVA mit Messwiederholung <span class="citation" data-cites="Aaron">(<a href="#ref-Aaron" role="doc-biblioref"><strong>Aaron?</strong></a>)</span> levene für between faktor auch rechnen?</h2>
 <ul>
 <li>Definiere das 2x3 ANOVA Model aus <span class="citation" data-cites="grinschgl2021">Grinschgl et al. (<a href="#ref-grinschgl2021" role="doc-biblioref">2021</a>)</span>, nach folgendem Muster - hierfür benötigen wir den Long Datensatz!</li>
 </ul>
@@ -585,12 +602,14 @@ PDF Grinschgl2021
 </div>
 <ul>
 <li><p>Ergänze den Code wie vorher um <code>anova_table</code> um dir die Effektstärken partielles <code>η²</code> und generalisiertes <code>η²</code> ausgeben zu lassen.</p></li>
-<li><p>Versuche das Ergebnis dieser ANOVA zu interpretieren und mit <span class="citation" data-cites="grinschgl2021">Grinschgl et al. (<a href="#ref-grinschgl2021" role="doc-biblioref">2021</a>)</span> zu vergleichen.</p></li>
+<li><p>Versuche das Ergebnis dieser ANOVA zu interpretieren und mit <span class="citation" data-cites="grinschgl2021">Grinschgl et al. (<a href="#ref-grinschgl2021" role="doc-biblioref">2021</a>)</span> zu vergleichen.</p>
+<p><span class="citation" data-cites="Aaron">(<a href="#ref-Aaron" role="doc-biblioref"><strong>Aaron?</strong></a>)</span> –&gt; im Paper wird “reines” Eta berichtet, da muss man noch extra berechnen:<br>
+<img src="images/clipboard-3964086882.png" class="img-fluid"></p></li>
 </ul>
 <hr>
 </section>
 <section id="x3-mixed-anova---post-hoc-t-tests" class="level2">
-<h2 class="anchored" data-anchor-id="x3-mixed-anova---post-hoc-t-tests">2X3 Mixed ANOVA - Post-Hoc t-Tests</h2>
+<h2 class="anchored" data-anchor-id="x3-mixed-anova---post-hoc-t-tests">2x3 Mixed ANOVA - Post-Hoc <em>t</em>-Tests</h2>
 <ul>
 <li>2 x 3 mixed ANOVA mit Messwiederholung Post-Hoc Tests: <code>emmeans()</code> Objekt erstellen nach folgender Vorlage:</li>
 </ul>
@@ -600,10 +619,11 @@ PDF Grinschgl2021
 <ul>
 <li><p><code>pairs()</code> darauf anwenden – hier wollen wir mit <code>simple = „group_all“</code> Post-Hoc Tests für die Gruppenvergleiche zu den beiden Zeitpunkten berechnen. 👉 Berechnung von bedingten Mittelwertsunterschieden so wie im <span class="citation" data-cites="grinschgl2021">Grinschgl et al. (<a href="#ref-grinschgl2021" role="doc-biblioref">2021</a>)</span> Paper (aber dort leicht andere Werte wegen anderer Berechnungsfunktion)</p></li>
 <li><p>Ändere es nun auf <code>simple = time_rating</code> ab und schaue dir den Unterschied zum vorherigen Ergebnis an.</p></li>
-<li><p>Ergänze nun die Bonferroni Korrektur für multiples Testen mit <code>adjust = „bonferroni“</code></p></li>
+<li><p>Ergänze nun die Bonferroni Korrektur für multiples Testen mit <code>adjust = „bonferroni“</code></p>
+<p><span class="citation" data-cites="Aaron">(<a href="#ref-Aaron" role="doc-biblioref"><strong>Aaron?</strong></a>)</span> pairs gibt keine Effektstärken aus, oder? dies noch thematisieren und die Studierenden selbst mit ChatGPT versuchen lassen wie man diese trotzdem berechnen kann?</p></li>
 </ul>
 <div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-5-contents" aria-controls="callout-5" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-6-contents" aria-controls="callout-6" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -612,38 +632,44 @@ Verletzungen der Varianzhomogenität in Mixed ANOVAs
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-5" class="callout-5-contents callout-collapse collapse">
+<div id="callout-6" class="callout-6-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>Verschiedene alternative Möglichkeiten, z.B.:</p>
 <ul>
 <li><p>Robuste ANOVA mit <code>WRS2</code> Paket</p></li>
 <li><p>Multilevel Model mit <code>lme4</code></p></li>
 </ul>
-<p>Bei <span class="citation" data-cites="grinschgl2021">Grinschgl et al. (<a href="#ref-grinschgl2021" role="doc-biblioref">2021</a>)</span> wurde dies aber außer Acht gelassen. Auf jeden Fall sollte man sich im Vorfeld der Datenerhebung überlegen ob und wie man Voraussetzungen überprüft und wie man bei potenziellen Verletzungen vorgeht.</p>
+<p>Bei <span class="citation" data-cites="grinschgl2021">Grinschgl et al. (<a href="#ref-grinschgl2021" role="doc-biblioref">2021</a>)</span> wurde dies aber außer Acht gelassen. Auf jeden Fall sollte man sich im Vorfeld der Datenerhebung überlegen ob und wie man Voraussetzungen überprüft und wie man bei potenziellen Verletzungen vorgeht. <span class="citation" data-cites="Aaron">(<a href="#ref-Aaron" role="doc-biblioref"><strong>Aaron?</strong></a>)</span> –&gt; ja, kann man denke ich in die Folien reinnehmen und hier wegtun</p>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-7-contents" aria-controls="callout-7" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Mauchly Test auf Sphärizität
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-7" class="callout-7-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Der Test wird nur durchgeführt, wenn der Within-Faktor mindestens drei Stufen aufweist. Er wird automatisch zusammen mit der ANOVA ausgegeben. Falls der Test nicht signifikant ist, kann von gegebener Sphärizität ausgegangen werden. Ist der Test jedoch signifikant, muss eine Korrektur vorgenommen werden. In diesem Fall sollten die <code>Greenhouse-Geisser-korrigierten Ergebnisse</code> interpretiert werden.</p>
+<p>Diese korrigierten Werte werden automatisch im Element <strong><code>$anova_table</code></strong> ausgegeben. Mit <strong><code>summary()</code></strong> erhält man in der ersten Tabelle die unkorrigierten Werte.</p>
 </div>
 </div>
 </div>
 </section>
 </section>
 <section id="am-ende-deiner-übungen---vergiss-nicht-dein-skript-abzuspeichern" class="level1">
-<h1>Am Ende deiner Übungen - vergiss nicht dein Skript abzuspeichern! 😉</h1>
-<p>Wenn dir nun langweilig ist kannst du dir gerne ein paar R-Memes anschauen.</p>
-<p><a href="https://www.instagram.com/p/DMujUkYBXv3/">🔗</a></p>
-<p><a href="https://x.com/rudeboybert/status/866442948560531456">🔗</a></p>
-<p><a href="https://share.google/images/C5nA6hhJAWLRNomJy">🔗</a></p>
-<p><a href="https://www.instagram.com/p/DRAExObD7WJ/">🔗</a></p>
-<p><a href="https://www.instagram.com/p/DPLRMh-k3Mi/">🔗</a></p>
-<p><a href="https://www.reddit.com/r/rstatsmemes/comments/1h4db7s/i_have_a_dream/#lightbox">🔗</a></p>
-<p><a href="https://www.reddit.com/r/rstatsmemes/comments/cw4axj/trying_to_apply_a_fancy_new_r_library_to_my_real/#lightbox">🔗</a></p>
-<p><a href="https://www.reddit.com/r/rstatsmemes/comments/1k8zgzr/this_is_fine/#lightbox">🔗</a></p>
-<p><a href="https://www.reddit.com/r/rstatsmemes/comments/6htss1/who_would_win_you_decide/#lightbox">🔗</a></p>
-<p><a href="https://www.instagram.com/reel/DIbi8-XtjiV/">🔗</a></p>
+
 
 
 
 </section>
 
-<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">Am Ende deiner Übungen - vergiss nicht dein Skript abzuspeichern! 😉</h2><div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
 <div id="ref-grinschgl2021" class="csl-entry" role="listitem">
 Grinschgl, Sandra, Hauke S. Meyerhoff, Stephan Schwan, and Frank Papenmeier. 2021. <span>“From Metacognitive Beliefs to Strategy Selection: Does Fake Performance Feedback Influence Cognitive Offloading?”</span> <em>Psychological Research</em> 85 (7): 2654–66. <a href="https://doi.org/10.1007/s00426-020-01435-9">https://doi.org/10.1007/s00426-020-01435-9</a>.
 </div>

@@ -1093,7 +1093,7 @@ Sandra Grinschgl, Aaron Friedli, Lars Schilling
 </section>
 <section id="anova---analysis-of-variance" class="slide level2">
 <h2>ANOVA - Analysis of Variance</h2>
-<p>Testet, ob sich die Mittelwerte in mehreren Gruppen unterscheiden</p>
+<p>Testet, ob sich Mittelwerte in mehreren Gruppen unterscheiden</p>
 <p><strong>Verschiedene Arten</strong></p>
 <ul>
 <li><p><strong>One-Way ANOVA (einfaktoriell):</strong><br>
@@ -1105,7 +1105,7 @@ Kombination aus Within-Subject-Faktoren (Messwiederholung) und Between-Subject-F
 <li><p><strong>Multivariate ANOVA (MANOVA):</strong><br>
 Mindestens zwei abhängige Variablen.</p></li>
 <li><p><strong>ANCOVA:</strong><br>
-Kontrolle fuer eine zusätzliche Drittvariable (Kovariate).</p></li>
+Kontrolle für eine zusätzliche Drittvariable (Kovariate).</p></li>
 </ul>
 </section>
 <section id="voraussetzungen" class="slide level2">
@@ -1113,7 +1113,7 @@ Kontrolle fuer eine zusätzliche Drittvariable (Kovariate).</p></li>
 <ul>
 <li>Normalverteilung der abhängigen Variablen</li>
 <li>Varianzhomogenität (Levene-Test)</li>
-<li>Sphärizität (Mauchly Test) bei Mixed ANOVA</li>
+<li>Sphärizität (Mauchly Test) bei Mixed ANOVA <span class="citation" data-cites="Sandra">(<a href="#/references" role="doc-biblioref" onclick><strong>Sandra?</strong></a>)</span> zeigen wir nicht oder? Eventuell als Zusatzübunung in den Hands on! <span class="citation" data-cites="Aaron">(<a href="#/references" role="doc-biblioref" onclick><strong>Aaron?</strong></a>)</span> siehe unten</li>
 </ul>
 </section>
 <section id="einfaktorielle-anova" class="slide level2">
@@ -1121,7 +1121,7 @@ Kontrolle fuer eine zusätzliche Drittvariable (Kovariate).</p></li>
 <p><strong>Unterscheiden sich die Mittelwerte der drei Gruppen voneinander?</strong></p>
 <p>AV: <code>cvstm_propcorrect</code></p>
 <p>Fixed Effekt: <code>group_all</code> 👉 Dieser Effekt interessiert uns</p>
-<p>Random Intercept: <code>(1 | code)</code> 👉 Irrelevant bei one-way ANOVA wird aber von AFEX verlangt.</p>
+<p>Random Intercept: <code>(1 | code)</code> 👉 Irrelevant bei One-Way ANOVA wird aber von der Funktion <code>afex</code> verlangt.</p>
 <p><br></p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a></a><span class="fu">library</span>(car)</span>
@@ -1153,6 +1153,8 @@ width: 1px!important;
 overflow: hidden!important;
 display:block!important;
 }</style></aside>
+<p><span class="citation" data-cites="Aaron">(<a href="#/references" role="doc-biblioref" onclick><strong>Aaron?</strong></a>)</span> Output auch kurz mit Markierunge zeigen? Wie auf Folien im FS - sodass beschrieben ist was welcher Wert ist</p>
+<p>auch bei der 2x3 ANOVA</p>
 </section>
 <section id="anova-different-package---same-result" class="slide level2">
 <h2>ANOVA: Different Package - same result</h2>
@@ -1189,7 +1191,7 @@ group_all      2    156 0.0061368 0.0735 0.00094166 0.9292</code></pre>
 </section>
 <section id="anova-effektstärken" class="slide level2">
 <h2>ANOVA: Effektstärken</h2>
-<p>generalisiertes <strong>η2</strong> &amp; partielles <strong>η2</strong></p>
+<p>generalisiertes <strong><code>η2</code></strong> &amp; partielles <strong><code>η2</code></strong></p>
 <p><br></p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a></a><span class="fu">eta_squared</span>(anova_cvstm, <span class="at">generalized =</span> <span class="cn">TRUE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -1217,18 +1219,38 @@ group_all | 9.42e-04 | [0.00, 1.00]
 </section>
 <section id="unterschiede-generalisiertes-und-partielles-η²" class="slide level2">
 <h2>Unterschiede generalisiertes und partielles η²</h2>
-<p>Das generalisierte und <code>partielle</code> <code>η²</code>sind beides Masse, welche den <strong>Anteil an erklärter Varianz</strong> einer <strong>abhängigen Variable</strong> angeben.</p>
 <p><br></p>
-<p>Das <code>generalisierte η²</code> berechnet den Anteil der erklärten Varianz einer abhängigen Variable unter <strong>Einbezug der gesamten Varianz, also aller Effekte.</strong></p>
+<ul>
+<li>Das generalisierte und <code>partielle</code> <code>η²</code>sind beides Masse, welche den <strong>Anteil an erklärter Varianz</strong> einer <strong>abhängigen Variable</strong> angeben.</li>
+</ul>
 <p><br></p>
-<p>Das <code>partielle η²</code> beachtet bei der Berechnung des Anteils an erklärter Varianz für die <strong>abhängige Variable nicht die gesamte Varianz</strong>, sondern nur jene, welche dem <strong>zuvor definierten Effekt</strong> zugeschrieben werden kann.</p>
+<ul>
+<li>Das <code>generalisierte η²</code> berechnet den Anteil der erklärten Varianz einer abhängigen Variable unter <strong>Einbezug der gesamten Varianz, also aller Effekte.</strong></li>
+</ul>
+<p><br></p>
+<ul>
+<li>Das <code>partielle η²</code> beachtet bei der Berechnung des Anteils an erklärter Varianz für die <strong>abhängige Variable nicht die gesamte Varianz</strong>, sondern nur jene, welche dem <strong>zuvor definierten Effekt</strong> zugeschrieben werden kann.</li>
+</ul>
+<p><span class="citation" data-cites="Aaron">(<a href="#/references" role="doc-biblioref" onclick><strong>Aaron?</strong></a>)</span> siehe Kommentar im Hands On. Bei der 2x3 ANOVA wird “reines” Eta berechnet, also werder partiel noch generalisiert</p>
+</section>
+<section class="slide level2">
+
+<p>Post-Hoc t-Tests mit <code>pairs</code></p>
+<p><span class="citation" data-cites="Sandra">(<a href="#/references" role="doc-biblioref" onclick><strong>Sandra?</strong></a>)</span> –&gt; ausreichend in den Hands on? Oder noch eine slide zu korrektur für multiples testen?</p>
+<p><span class="citation" data-cites="Aaron">(<a href="#/references" role="doc-biblioref" onclick><strong>Aaron?</strong></a>)</span> würde es der Vollständigkeit auch hier noch mal kurz erwähnen und sagen, dass es verschiedene Optionen gibt (die mal idealerweise präregistiert), z.B.</p>
+<p>normale t-tests als Posthoc tests (wie im Paper, siehe EH 12)</p>
+<p>das gleiche geht auch schneller mit pairs –&gt; aber keine Effektstärke (?)</p>
+<p>man kann auch nur andere vorab definierte Einzelvergleiche rechnen…präregistrieren…</p>
+<p>und ja, auch Korrekturen kurz erwähnen - ob und was man anwendet sollte man sich auch im Vorfeld überlegen. verschiedene Optionen mit pairs zeigen. Verweis auf Statistik zu Erklärungen –&gt; Folien Statistik 2 (siehe EH 13 im FS)</p>
 </section>
 <section id="x3-mixed-anova-vorbereitungen" class="slide level2">
 <h2>2x3 mixed ANOVA: Vorbereitungen</h2>
-<p>Mixed-ANOVA mit <code>AFEX</code></p>
-<p>AV = Rating</p>
-<p>Between Subjects Faktor = Feedbackgruppe, Messzeitpunkt (Messwiederholter Faktor)</p>
-<p>Muster:</p>
+<p><strong><em>Mixed-ANOVA mit <code>afex</code></em></strong></p>
+<p><strong>AV</strong> = Rating</p>
+<p><strong>Between Subjects Faktor</strong> = Feedbackgruppe (below vs. control vs. above)</p>
+<p><strong>Within Subjects Faktor:</strong> Messzeitpunkt (Messwiederholter Faktor, pre 1 vs. pre 4)</p>
+<p>-&gt; Long Datensatz</p>
+<p><strong><em>Muster:</em></strong></p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a></a>mixed_anova <span class="ot">&lt;-</span> <span class="fu">aov_4</span>(AV <span class="sc">~</span> between_factor <span class="sc">+</span> (messwiederholter_faktor <span class="sc">|</span> ID) <span class="at">data =</span> dat_full_long)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
@@ -1278,20 +1300,27 @@ Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&
 <section id="vergleich-mit-grinschgl2021" class="slide level2">
 <h2>Vergleich mit <span class="citation" data-cites="grinschgl2021">Grinschgl et al. (<a href="#/references" role="doc-biblioref" onclick>2021</a>)</span></h2>
 <p>We observed a main effect of the factor <strong>“feedback group”, F(2, 156) = 19.74, p &lt; 0.001, η2 = 0.12</strong>, as well as a main effect of the factor “time of pre-rating”, <strong>F(1, 156) = 22.67, p &lt; 0.001, η2 = 0.04</strong>. Most importantly, we also found a significant interaction between these factors, <strong>F(2, 156) = 20.09, p &lt; 0.001, η2 = 0.07</strong>.</p>
+<p><span class="citation" data-cites="Aaron">(<a href="#/references" role="doc-biblioref" onclick><strong>Aaron?</strong></a>)</span> noch eine Folie mit Alternativen bei Voraussetzungen?</p>
+<p>zb Welch ANOVA, Kruskal Wallis</p>
+<p>auch kurz Sphärizität -&gt; interpretation der Greenhouse Geisser korrigierten Werte</p>
+<p>Robust ANOVA mit wsr2</p>
+<p>multilevel models</p>
+<p>siehe Folien EH 12 FS</p>
+<p>&amp; Folie mit weiteren statistischen Modellen? oder in Abschlusseinheit? siehe auch Folien EH12</p>
 </section>
 <section id="heute-haben-wir" class="slide level2">
 <h2>Heute haben wir:</h2>
 <ul>
 <li><p>ANOVAs kennengelernt</p></li>
-<li><p>Effektstärken berechnet</p></li>
+<li><p>Post-hoc Tests und Effektstärken berechnet</p></li>
 <li><p>Vorausetzungsprüfungen und Alternativen angeschaut</p></li>
 </ul>
 </section>
 <section id="bis-nächste-woche" class="slide level2">
 <h2>Bis nächste Woche:</h2>
 <ul>
-<li><p>Muddiest Points!! Bis Sonntag!</p></li>
-<li><p>Hausübung und Peerfeedback!</p></li>
+<li><p><strong>Muddiest Points!!</strong> Bis Sonntag! siehe Ilias EH 13</p></li>
+<li><p><strong>Hausübung</strong> bis Freitag <strong>und Peerfeedback</strong> bis Mittwoch<strong>!</strong></p></li>
 </ul>
 </section>
 <section class="slide level2 smaller scrollable" id="references">

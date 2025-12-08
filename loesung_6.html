@@ -594,7 +594,7 @@ Cheatsheet ggplot2
 <section id="vorbereitungen" class="level3">
 <h3 class="anchored" data-anchor-id="vorbereitungen"><strong>Vorbereitungen:</strong></h3>
 <p>Um die Mittelwerte plotten zu können, müssen wir die Gruppenmittelwerte und Standardfehler berechnen. Passe dafür den Codeblock an:</p>
-<p>Im Hands-on Block 4 haben wir bereits mit <em>dplyr</em> die MMQ-Skalenwerte „mmq_mean“ pro Person berechnet. Nutze nun die <em>dplyr</em>-Funktionen, insbesondere <code>group_by()</code>, um den durchschnittlichen MMQ-Wert pro Gruppe (<code>group_all</code>) sowie den Standardfehler zu berechnen. Die Formel für den Standardfehler lautet: <strong>SE = SD / √n und kann z.b so berechnet werden.</strong> <code>se_mmq = sd(mmq_mean) / sqrt(n())</code> . Ergänze den Code unten mit den nötigen Angaben. Lege group_all in deinem summary als Faktor fest mit den Levels in der Reihenfolge: “below”, “control”, “above”.</p>
+<p>Im Hands-on Block 4 haben wir bereits mit <em>dplyr</em> die MMQ-Skalenwerte „mmq_mean“ pro Person berechnet. Nutze nun die <em>dplyr</em>-Funktionen, insbesondere <code>group_by()</code>, um den durchschnittlichen MMQ-Wert pro Gruppe (<code>group_all</code>) sowie den Standardfehler zu berechnen. Die Formel für den Standardfehler lautet: <strong>SE = SD / √n</strong> und kann z.b so berechnet werden. <code>se_mmq = sd(mmq_mean) / sqrt(n())</code> . Ergänze den Code unten mit den nötigen Angaben. Lege group_all in deinem summary als Faktor fest mit den Levels in der Reihenfolge: “below”, “control”, “above”.</p>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
@@ -1225,7 +1225,7 @@ Multiple R-squared:  0.6427,    Adjusted R-squared:  0.6404
 F-statistic: 282.4 on 1 and 157 DF,  p-value: &lt; 2.2e-16</code></pre>
 </div>
 </div>
-<p>Wie die folgende logische Abfrage zeigt, entspricht die Wurzel von R-squared der Korrelation zwischen den beiden Variablen.</p>
+<p>Wie die folgende logische Abfrage zeigt, entspricht die Wurzel von R-Squared der Korrelation zwischen den beiden Variablen.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb28"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cor</span>(dat_full<span class="sc">$</span>mean_d1_all, dat_full<span class="sc">$</span>mean_d_all) <span class="sc">==</span> <span class="fu">sqrt</span>(<span class="fu">summary</span>(model_1)<span class="sc">$</span>r.squared)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -1291,6 +1291,7 @@ mean_rl_all -1.4525580 -0.9589823</code></pre>
 </div>
 </div>
 </div>
+<p><span class="citation" data-cites="Lars">(<a href="#ref-Lars" role="doc-biblioref"><strong>Lars?</strong></a>)</span> für Regression noch eine Interpretation ergänzen?</p>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-23-contents" aria-controls="callout-23" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
