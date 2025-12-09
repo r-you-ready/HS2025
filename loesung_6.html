@@ -1020,7 +1020,7 @@ Lösung
 </div>
 <div id="callout-16" class="callout-16-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>In dem von uns gewählten Beispiel wurde die Korrelation von mean_d1_all mit mean_d_all berechnet. Der Korrelationskoeffizient r beträgt r = 0.78, was auf eine starke positive Korrelation hinweist. Der p-Wert ist p &lt; 0.001, was darauf hindeutet, dass die Korrelation statistisch signifikant ist. Die Freiheitsgrade (df) betragen 157, was auf die Anzahl der Beobachtungen minus 2 zurückzuführen ist (n-2).</p>
+<p>In dem von uns gewählten Beispiel wurde die Korrelation von <code>mean_d1_all</code> mit <code>mean_d_all</code> berechnet. Der Korrelationskoeffizient r beträgt r = 0.78, was auf eine starke positive Korrelation hinweist. Der p-Wert ist p &lt; 0.001, was darauf hindeutet, dass die Korrelation statistisch signifikant ist. Die Freiheitsgrade (df) betragen 157, was auf die Anzahl der Beobachtungen minus 2 zurückzuführen ist (n-2). Das die Dauer bis zur ersten Fensteröffnung und die Dauer des gesamten Trials zusammenhängen war inhaltlich zu erwarten.</p>
 </div>
 </div>
 </div>
@@ -1225,6 +1225,7 @@ Multiple R-squared:  0.6427,    Adjusted R-squared:  0.6404
 F-statistic: 282.4 on 1 and 157 DF,  p-value: &lt; 2.2e-16</code></pre>
 </div>
 </div>
+<p>Mit <code>summary(model_1)</code> erhalten wir Informationen über das Regressionsmodell. Der Koeffizient für <code>mean_d_all</code> zeigt an, wie stark sich <code>mean_d1_all</code> ändert, wenn <code>mean_d_all</code> um eine Einheit steigt. Der p-Wert für diesen Koeffizienten ist signifikant (p &lt; 0.001), was darauf hinweist, dass <code>mean_d_all</code> Prädiktor signifikant zur Vorhersage der abhängigen Variable <code>mean_d1_all</code> beiträgt. Das R-Quadrat (R²) beträgt 0.64, was bedeutet, dass etwa 64% der Varianz in <code>mean_d1_all</code> durch <code>mean_d_all</code> erklärt wird.</p>
 <p>Wie die folgende logische Abfrage zeigt, entspricht die Wurzel von R-Squared der Korrelation zwischen den beiden Variablen.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb28"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cor</span>(dat_full<span class="sc">$</span>mean_d1_all, dat_full<span class="sc">$</span>mean_d_all) <span class="sc">==</span> <span class="fu">sqrt</span>(<span class="fu">summary</span>(model_1)<span class="sc">$</span>r.squared)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -1288,10 +1289,12 @@ mean_d_all   0.2774643  0.3368628
 mean_rl_all -1.4525580 -0.9589823</code></pre>
 </div>
 </div>
+<p>Mit summary(model_2) erhalten wir auch Informationen über das neue, multiple Regressionsmodell. Die Koeffizienten für <code>mean_d_all</code> und <code>mean_rl_all</code> zeigen an, wie stark sich <code>mean_d1_all</code> ändert, wenn diese Prädiktoren um eine Einheit steigen. Beide Prädiktoren haben signifikante p-Werte (p &lt; 0.001), was darauf hinweist, dass sie signifikant zur Vorhersage der abhängigen Variable beitragen. Das R-Quadrat (R²) beträgt 0.77, was bedeutet, dass etwa 77% der Varianz in <code>mean_d1_all</code> durch beide Prödiktoren zusammen erklärt wird.</p>
+<p>Die VIF-Werte für beide Prädiktoren sind unter 10, was darauf hinweist, dass keine Multikollinearität vorliegt.</p>
+<p>Die Konfidenzintervalle für die Koeffizienten geben den Bereich an, in dem wir mit 95%iger Sicherheit erwarten können, dass die wahren Koeffizientenwerte liegen. Beinhalten diese Konfidenzintervalle die 0 <strong>nicht</strong>, dann gelten die Koeffizienten ebenfalls als signifkant (unterschiedlich zu null).</p>
 </div>
 </div>
 </div>
-<p><span class="citation" data-cites="Lars">(<a href="#ref-Lars" role="doc-biblioref"><strong>Lars?</strong></a>)</span> für Regression noch eine Interpretation ergänzen?</p>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-23-contents" aria-controls="callout-23" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
@@ -1350,6 +1353,7 @@ AIC: 195.69
 Number of Fisher Scoring iterations: 4</code></pre>
 </div>
 </div>
+<p>Einmal mehr erhalten wir mit <code>summary()</code> informationen über das von uns gerechnete Modell. Der Koeffizient für <code>mean_rl_all</code> zeigt an, wie sich die Wahrscheinlichkeiten (Log-Odds) der Wahl von Strategie 2 (im Vergleich zu Strategie 1) ändern, wenn <code>mean_rl_all</code> um eine Einheit steigt. Der p-Wert für diesen Koeffizienten ist signifikant (p &lt; 0.05), was darauf hinweist, dass <code>mean_rl_all</code> signifikant zur Vorhersage der Strategiewahl beiträgt.</p>
 </div>
 </div>
 </div>
@@ -1452,6 +1456,7 @@ group   1  2.8442 0.0947 .
 Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
 </div>
 </div>
+<p>Der Levene Test prüft die Homogenität der Varianzen zwischen den Gruppen. Ein nicht-signifikanter p-Wert (p &gt; 0.05) deutet darauf hin, dass die Varianzen in den beiden Gruppen als gleich angenommen werden können. Der vorliegende Test ist nicht signifikant (p = 0.09 &gt; 0.05), was darauf hinweist, dass die Varianzen in den Gruppen <code>„above“</code> und <code>„below“</code> als homogen betrachtet werden können.</p>
 </div>
 </div>
 </div>
@@ -1486,6 +1491,7 @@ mean in group above mean in group below
            5.966038            3.271698 </code></pre>
 </div>
 </div>
+<p>Der students t-Test vergleicht die Mittelwerte der <code>pre4</code> Ratings zwischen den Gruppen <code>„above“</code> und <code>„below“</code>. Der p-Wert weisst auf einen statistisch signifikanten Unterschied der beiden Mittelwerte hin (p &lt; 0.05). Das 95%-Konfidenzintervall für den Mittelwertunterschied liegt zwischen 2.03 und 3.36. Das dieser Bereich <strong>nicht</strong> die 0 beinhaltet spricht ebenfalls für die Signifikanz der Mittelwertsunterschiede. Unter Einbezug der beiden Gruppenmittelwerte (<code>mean in group above</code> = 5.97 und <code>mean in group below</code> 3.27) deutet das Ergebnis darauf hin, dass die <code>„above“</code> Gruppe signifikant höhere <code>pre4</code> Ratings aufweist als die <code>„below“</code> Gruppe.</p>
 </div>
 </div>
 </div>
@@ -1516,6 +1522,7 @@ d estimate: 1.551045 (large)
 1.111706 1.990383 </code></pre>
 </div>
 </div>
+<p>Cohen’s d beträgt 1.55, was auf einen großen Effekt hinweist.</p>
 </div>
 </div>
 </div>
@@ -1561,6 +1568,7 @@ mean difference
       0.7264151 </code></pre>
 </div>
 </div>
+<p>Der t-Test für abhängige Stichproben (paired = TRUE) vergleicht die Mittelwerte von <code>pre1</code> und <code>pre4</code> innerhalb der <code>„control“</code> Gruppe. Der p-Wert weisst auf einen signifikanten Unterschied zwischen den Mittelwerten dieser beiden Messzeitpunkte hin (p &lt; 0.05). Das 95%-Konfidenzintervall für den Mittelwertunterschied liegt zwischen 0.39 und 1.06, umschliesst damit nicht die 0, und zeigt dadurch ebenfalls einen signifikanten Mittelwertsunterschied zwsichen den beiden Messzeitpunkten an. Die Angabe <code>mean_difference</code> zeigt an, wie stark der Mittelwert von <code>pre1</code> auf <code>pre4</code>angestiegen ist (mean difference = 0.73).</p>
 </div>
 </div>
 </div>
@@ -1610,6 +1618,7 @@ mean difference
 0.34      | [0.18, 0.50]</code></pre>
 </div>
 </div>
+<p>Während der ungerichtete t-test prüft, ob die Mittelwerte von <code>pre1</code> und <code>pre4</code> ungleich sind, prüft der gerichtete t-test (alternative = “greater”) spezifischer, ob der Mittelwert von <code>pre4</code> signifikant größer ist als der Mittelwert von <code>pre1</code>. Dies ist auch am Ergebnis “alternative hypothesis: true mean difference is greather than 0” erkennen. Der Unterschied im <code>mean_difference</code> ist allerdings gleich geblieben, ebenso das Resultat der Signifikanzprüfung.</p>
 </div>
 </div>
 </div>
