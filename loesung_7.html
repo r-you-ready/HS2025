@@ -133,7 +133,7 @@ div.csl-indent {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./Übungen.html">Übungen zu den Einheiten</a></li><li class="breadcrumb-item"><a href="./hands_on_7.html">Hands on - Block 7 (Woche 13)</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Hands On – Analyze (Einheit 13)</li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -257,11 +257,11 @@ div.csl-indent {
       <div class="sidebar-item-container"> 
             <a href="./Übungen.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Übungen zu den Einheiten</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./loesung_1.html" class="sidebar-item-text sidebar-link">
@@ -300,7 +300,7 @@ div.csl-indent {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./hands_on_7.html" class="sidebar-item-text sidebar-link active">
+  <a href="./hands_on_7.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Hands on - Block 7 (Woche 13)</span></a>
   </div>
 </li>
@@ -446,7 +446,7 @@ div.csl-indent {
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./Übungen.html">Übungen zu den Einheiten</a></li><li class="breadcrumb-item"><a href="./hands_on_7.html">Hands on - Block 7 (Woche 13)</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
 <h1 class="title">Hands On – Analyze (Einheit 13)</h1>
 </div>
@@ -543,19 +543,133 @@ PDF Grinschgl2021
 <section id="einfaktorielle-anova" class="level2">
 <h2 class="anchored" data-anchor-id="einfaktorielle-anova">Einfaktorielle ANOVA</h2>
 <ul>
-<li><p>Berechne eine einfaktorielle ANOVA mit <code>aov_4</code> (aus dem Paket “afex”) ür die Offloading-Variable <code>mean_rl_all</code> (Öffnungen des Modelfensters). Nutze hierfür den Wide-Datensatz (<code>dat_full</code>).</p></li>
+<li><p>Berechne eine einfaktorielle ANOVA mit <code>aov_4</code> (aus dem Paket “afex”) für die Offloading-Variable mean_rl_all (Öffnungen des Modelfensters).</p></li>
 <li><p>Berechnet dafür zuerst den <code>Levene-Test</code> um die Varianzhomogenität des between-Faktors zu überprüfen.</p></li>
-<li><p>Definiere die ANOVA nach der folgenden Vorlage</p></li>
 </ul>
+<div class="callout callout-style-default callout-note callout-titled" title="Lösung">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-5-contents" aria-controls="callout-5" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Lösung
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-5" class="callout-5-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>model_1 <span class="ot">&lt;-</span> <span class="fu">aov_4</span>(AV <span class="sc">~</span> Faktor_1 <span class="sc">+</span> (<span class="dv">1</span> <span class="sc">|</span> ID), <span class="at">data =</span> data)</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(model_1)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">leveneTest</span>(mean_rl_all <span class="sc">~</span> group_all, <span class="at">data=</span> dat_full)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning in leveneTest.default(y = y, group = group, ...): group coerced to
+factor.</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Levene's Test for Homogeneity of Variance (center = median)
+       Df F value Pr(&gt;F)
+group   2  0.6889 0.5036
+      156               </code></pre>
+</div>
+</div>
+<p>Der Levene-Test ist <strong>nicht</strong> signifikant (p &gt; 0.05). Somit ist die Varianzhomogenität, als eine der Vorausetzungen zur Berechnung der ANOVA, gegeben.</p>
+</div>
+</div>
 </div>
 <ul>
-<li><p>Versuche das Ergbenis zu interpretieren und mit dem <span class="citation" data-cites="grinschgl2021">Grinschgl et al. (<a href="#ref-grinschgl2021" role="doc-biblioref">2021</a>)</span> Paper zu vergleichen. 👉 Und schon haben wir ein ANOVAs für die Offloading Variablen berechnet.</p></li>
-<li><p>Berechne die Effektstärken partielles <code>η²</code> und generalisiertes <code>η²</code> . Ergänze dafür die aov_4 Funktion um <code>anova_table = list(es = c("ges" ,"pes"))</code> . Lasse dir das Ergebnis mit <code>model$anova_table</code> ausgeben. Bei einfaktoriellen ANOVAs sind die partiellen und generalisierten <code>η²</code> identisch.</p></li>
+<li>Definiere die ANOVA nach der folgenden Vorlage</li>
 </ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>model_1 <span class="ot">&lt;-</span> <span class="fu">aov_4</span>(AV <span class="sc">~</span> Faktor_1 <span class="sc">+</span> (<span class="dv">1</span> <span class="sc">|</span> ID), <span class="at">data =</span> data)</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(model_1)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="callout callout-style-default callout-note callout-titled" title="Lösung">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-6-contents" aria-controls="callout-6" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Lösung
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-6" class="callout-6-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>model_1 <span class="ot">&lt;-</span> <span class="fu">aov_4</span>(mean_rl_all <span class="sc">~</span> group_all <span class="sc">+</span> (<span class="dv">1</span> <span class="sc">|</span> code), <span class="at">data =</span> dat_full)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Converting to factor: group_all</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Contrasts set to contr.sum for the following variables: group_all</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(model_1)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Anova Table (Type 3 tests)
+
+Response: mean_rl_all
+          num Df den Df    MSE      F      ges Pr(&gt;F)
+group_all      2    156 1.2602 1.0448 0.013218 0.3542</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<ul>
+<li>Versuche das Ergbenis zu interpretieren und mit dem <span class="citation" data-cites="grinschgl2021">Grinschgl et al. (<a href="#ref-grinschgl2021" role="doc-biblioref">2021</a>)</span> Paper zu vergleichen. 👉 Und schon haben wir ein ANOVAs für die Offloading Variablen berechnet.</li>
+</ul>
+<div class="callout callout-style-default callout-note callout-titled" title="Lösung">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-7-contents" aria-controls="callout-7" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Lösung
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-7" class="callout-7-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Die ANOVA ist nicht signifikant (p &gt; 0.05) – es gibt also <strong>keine</strong> Unterschiede in den Offloadinghäufigkeiten zwischen den Gruppen.</p>
+</div>
+</div>
+</div>
+<ul>
+<li>Berechne die Effektstärken partielles <code>η²</code> und generalisiertes <code>η²</code> . Ergänze dafür die aov_4 Funktion um <code>anova_table = list(es = c("ges" ,"pes"))</code> . Lasse dir das Ergebnis mit <code>model$anova_table</code> ausgeben. Bei einfaktoriellen ANOVAs sind die partiellen und generalisierten <code>η²</code> identisch.</li>
+</ul>
+<div class="callout callout-style-default callout-note callout-titled" title="Lösung">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-8-contents" aria-controls="callout-8" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Lösung
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-8" class="callout-8-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>model_1 <span class="ot">&lt;-</span> <span class="fu">aov_4</span>(mean_rl_all <span class="sc">~</span> group_all <span class="sc">+</span> (<span class="dv">1</span> <span class="sc">|</span> code), <span class="at">data =</span> dat_full, <span class="at">anova_table =</span> <span class="fu">list</span>(<span class="at">es =</span> <span class="fu">c</span>(<span class="st">"ges"</span> ,<span class="st">"pes"</span>)))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Converting to factor: group_all</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Contrasts set to contr.sum for the following variables: group_all</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>model_1<span class="sc">$</span>anova_table</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Anova Table (Type 3 tests)
+
+Response: mean_rl_all
+          num Df den Df    MSE      F      pes      ges Pr(&gt;F)
+group_all      2    156 1.2602 1.0448 0.013218 0.013218 0.3542</code></pre>
+</div>
+</div>
+<p>Das partielle Eta² und das generalisierte Eta² sind identisch und betragen 0.01, was auf einen sehr kleinen Effekt hinweist. Die Gruppenzugehörigkeit kann also nur wenig Varianz des Offloadingverhalten erklären. Dies hat sich auch in der ANOVA gezeigt, bei welcher die Gruppierungsvariable aufgrund geringer Varianzerklärung nicht signifikant wurde.</p>
+</div>
+</div>
+</div>
 <hr>
 </section>
 <section id="post-hoc-t-tests" class="level2">
@@ -568,11 +682,65 @@ PDF Grinschgl2021
 <ul>
 <li>Speichere mit <code>new_object &lt;- emmeans(object = model, specs = ~group_all)</code> die Mittelwerte und Standardfehler in einem neuen Objekt.</li>
 </ul>
+<div class="callout callout-style-default callout-note callout-titled" title="Lösung">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-9-contents" aria-controls="callout-9" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Lösung
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-9" class="callout-9-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>new_object <span class="ot">&lt;-</span> <span class="fu">emmeans</span>(<span class="at">object =</span> model_1, <span class="at">specs =</span> <span class="sc">~</span> group_all)</span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>new_object</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code> group_all emmean    SE  df lower.CL upper.CL
+ above       5.10 0.154 156     4.79     5.40
+ below       5.39 0.154 156     5.09     5.69
+ control     5.14 0.154 156     4.84     5.45
+
+Confidence level used: 0.95 </code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
 <ul>
 <li>Berechne mit <code>pairs(new_object)</code> multiple t-Tests als Post-Hoc Tests. Diese werden als default-Einstellung mit der <code>Tukey-Methode</code>korrigiert. Das ist eine Alternative zu einzelnen t-Tests in <span class="citation" data-cites="grinschgl2021">Grinschgl et al. (<a href="#ref-grinschgl2021" role="doc-biblioref">2021</a>)</span> so wie in EH12 berechnet - ergibt leicht andere Werte wegen Tukey-Korrektur für multiples Testen. (Für das Abschlussprojekt sind Post-Hoc Tests in beiden Varianten okay – entweder mit <code>emmeans()</code> oder mit <code>t.test()</code> ).</li>
 </ul>
+<div class="callout callout-style-default callout-note callout-titled" title="Lösung">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-10-contents" aria-controls="callout-10" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Lösung
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-10" class="callout-10-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="fu">pairs</span>(new_object)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code> contrast        estimate    SE  df t.ratio p.value
+ above - below    -0.2925 0.218 156  -1.341  0.3747
+ above - control  -0.0443 0.218 156  -0.203  0.9775
+ below - control   0.2481 0.218 156   1.138  0.4924
+
+P value adjustment: tukey method for comparing a family of 3 estimates </code></pre>
+</div>
+</div>
+<p>Die einzelnen post-hoc Tests zeigen <strong>keine</strong> signifikanten Unterschiede zwischen den jeweiligen Gruppen (alle p-Werte &gt; 0.05). Auch dieses Resultat war zu erwarten, da ja schon der globale Test mit der ANOVA keinerlei Unterschiede zwischen irgendwelchen Gruppen signalisiert hat.</p>
+</div>
+</div>
+</div>
 <div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-5-contents" aria-controls="callout-5" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-12-contents" aria-controls="callout-12" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -581,14 +749,41 @@ Tukey-Korrektur
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-5" class="callout-5-contents callout-collapse collapse">
+<div id="callout-12" class="callout-12-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>Die Tukey-Korrektur ist ein simultanes Verfahren für Post-hoc-Gruppenvergleiche, das verhindert, dass sich der Alpha-Fehler durch viele t-Tests (familywise error rate) aufsummiert. Sie wird bevorzugt eingesetzt, wenn alle Gruppen miteinander verglichen werden sollen.</p>
+<div class="callout callout-style-default callout-note callout-titled" title="Lösung">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-11-contents" aria-controls="callout-11" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Lösung
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-11" class="callout-11-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="fu">pairs</span>(new_object)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code> contrast        estimate    SE  df t.ratio p.value
+ above - below    -0.2925 0.218 156  -1.341  0.3747
+ above - control  -0.0443 0.218 156  -0.203  0.9775
+ below - control   0.2481 0.218 156   1.138  0.4924
+
+P value adjustment: tukey method for comparing a family of 3 estimates </code></pre>
+</div>
+</div>
+<p>Auch hier zeigen die post-hoc Tests keine signifikanten Unterschiede zwischen den jeweiligen Gruppen (alle p-Werte &gt; 0.05).</p>
+</div>
+</div>
+</div>
 </div>
 </div>
 </div>
 <div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-6-contents" aria-controls="callout-6" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-13-contents" aria-controls="callout-13" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -597,17 +792,17 @@ Fortgeschritten - Effektstärken mit <code>pairs()</code>
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-6" class="callout-6-contents callout-collapse collapse">
+<div id="callout-13" class="callout-13-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>Der Befehl <code>pairs()</code> berechnet nicht automatisch die gewünschten Effektstärken (zum Beispiel Cohen’s d). Die Effektstärken können entweder einzeln wie in den Übungen zu EH 12 berechnet werden, etwa mit <code>cohens_d()</code>. Wenn man jedoch die Effektstärken aller Paarvergleiche simultan berechnen möchte, kann man dies mit <code>eff_size()</code> tun. Dafür greift man auf die Residualvarianzen und Freiheitsgrade des ANOVA-Modells zu. Diese Informationen sind im <code>lm</code>-Objekt des Modells gespeichert. Unten siehst du ein Codebeispiel:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>posthoc_tests <span class="ot">&lt;-</span> <span class="fu">emmeans</span>(<span class="at">object =</span> model_1, <span class="at">specs =</span> <span class="sc">~</span> group_all)</span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="fu">eff_size</span>(</span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>  posthoc_tests,</span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">sigma =</span> <span class="fu">sigma</span>(model_1<span class="sc">$</span>lm),</span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>  <span class="at">edf   =</span> <span class="fu">df.residual</span>(model_1<span class="sc">$</span>lm)</span>
-<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a>posthoc_tests <span class="ot">&lt;-</span> <span class="fu">emmeans</span>(<span class="at">object =</span> model_1, <span class="at">specs =</span> <span class="sc">~</span> group_all)</span>
+<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a><span class="fu">eff_size</span>(</span>
+<span id="cb21-4"><a href="#cb21-4" aria-hidden="true" tabindex="-1"></a>  posthoc_tests,</span>
+<span id="cb21-5"><a href="#cb21-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">sigma =</span> <span class="fu">sigma</span>(model_1<span class="sc">$</span>lm),</span>
+<span id="cb21-6"><a href="#cb21-6" aria-hidden="true" tabindex="-1"></a>  <span class="at">edf   =</span> <span class="fu">df.residual</span>(model_1<span class="sc">$</span>lm)</span>
+<span id="cb21-7"><a href="#cb21-7" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code> contrast        effect.size    SE  df lower.CL upper.CL
  above - below       -0.2605 0.195 156   -0.645    0.124
@@ -620,12 +815,12 @@ Confidence level used: 0.95 </code></pre>
 </div>
 <p><strong>Zum Vergleich: Mit <code>cohens_d()</code></strong></p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>dat_full_above_below <span class="ot">&lt;-</span> dat_full <span class="sc">|&gt;</span></span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(group_all <span class="sc">!=</span> <span class="st">"control"</span>)</span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>dat_full_above_below<span class="sc">$</span>group_all <span class="ot">&lt;-</span> <span class="fu">factor</span>(dat_full_above_below<span class="sc">$</span>group_all )</span>
-<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a><span class="fu">cohens_d</span>(mean_rl_all <span class="sc">~</span> group_all, <span class="at">data =</span> dat_full_above_below)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a>dat_full_above_below <span class="ot">&lt;-</span> dat_full <span class="sc">|&gt;</span></span>
+<span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(group_all <span class="sc">!=</span> <span class="st">"control"</span>)</span>
+<span id="cb23-3"><a href="#cb23-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-4"><a href="#cb23-4" aria-hidden="true" tabindex="-1"></a>dat_full_above_below<span class="sc">$</span>group_all <span class="ot">&lt;-</span> <span class="fu">factor</span>(dat_full_above_below<span class="sc">$</span>group_all )</span>
+<span id="cb23-5"><a href="#cb23-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-6"><a href="#cb23-6" aria-hidden="true" tabindex="-1"></a><span class="fu">cohens_d</span>(mean_rl_all <span class="sc">~</span> group_all, <span class="at">data =</span> dat_full_above_below)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Cohen's d |        95% CI
 -------------------------
@@ -646,15 +841,159 @@ Confidence level used: 0.95 </code></pre>
 <li>Definiere das 2x3 ANOVA Model aus <span class="citation" data-cites="grinschgl2021">Grinschgl et al. (<a href="#ref-grinschgl2021" role="doc-biblioref">2021</a>)</span>, nach folgendem Muster - hierfür benötigen wir den Long Datensatz!</li>
 </ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>mixed_anova <span class="ot">&lt;-</span> <span class="fu">aov_4</span>(AV <span class="sc">~</span> between_factor <span class="sc">+</span> (messwiederholter_faktor <span class="sc">|</span> ID), <span class="at">data =</span> df_long)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a>mixed_anova <span class="ot">&lt;-</span> <span class="fu">aov_4</span>(AV <span class="sc">~</span> between_factor <span class="sc">+</span> (messwiederholter_faktor <span class="sc">|</span> ID) <span class="at">data =</span> df_long)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="callout callout-style-default callout-note callout-titled" title="Lösung">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-14-contents" aria-controls="callout-14" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Lösung
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-14" class="callout-14-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb26"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a>mixed_anova <span class="ot">&lt;-</span> <span class="fu">aov_4</span>(rating <span class="sc">~</span> group_all <span class="sc">+</span> (time_rating <span class="sc">|</span> code), <span class="at">data =</span> dat_long)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Converting to factor: group_all</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Contrasts set to contr.sum for the following variables: group_all</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb29"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(mixed_anova)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+Univariate Type III Repeated-Measures ANOVA Assuming Sphericity
+
+                      Sum Sq num Df Error SS den Df  F value    Pr(&gt;F)    
+(Intercept)           8198.9      1   500.58    156 2555.113 &lt; 2.2e-16 ***
+group_all              126.7      2   500.58    156   19.736 2.286e-08 ***
+time_rating             42.0      1   288.70    156   22.668 4.364e-06 ***
+group_all:time_rating   74.4      2   288.70    156   20.090 1.724e-08 ***
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
+</div>
+</div>
+</div>
+</div>
 </div>
 <ul>
-<li><p>Ergänze den Code wie vorher um <code>anova_table</code> um dir die Effektstärken partielles <code>η²</code> und generalisiertes <code>η²</code> ausgeben zu lassen.</p></li>
-<li><p>In <span class="citation" data-cites="grinschgl2021">Grinschgl et al. (<a href="#ref-grinschgl2021" role="doc-biblioref">2021</a>)</span> wird jedoch nur das reine <code>η²</code> berichtet (weder generalisiert noch partiell). Wende <code>eta_squared()</code> auf dem package <code>effectsize</code> auf dein ANOVA Model an und setze <code>partial = FALSE</code>.</p></li>
+<li>Ergänze den Code wie vorher um <code>anova_table</code> um dir die Effektstärken partielles <code>η²</code> und generalisiertes <code>η²</code> ausgeben zu lassen.</li>
 </ul>
+<div class="callout callout-style-default callout-note callout-titled" title="Lösung">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-15-contents" aria-controls="callout-15" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Lösung
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-15" class="callout-15-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb31"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a>mixed_anova <span class="ot">&lt;-</span> <span class="fu">aov_4</span>(rating <span class="sc">~</span> group_all <span class="sc">+</span> (time_rating <span class="sc">|</span> code), <span class="at">data =</span> dat_long, <span class="at">anova_table =</span> <span class="fu">list</span>(<span class="at">es =</span> <span class="fu">c</span>(<span class="st">"ges"</span> ,<span class="st">"pes"</span>)))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Converting to factor: group_all</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Contrasts set to contr.sum for the following variables: group_all</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb34"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(mixed_anova)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+Univariate Type III Repeated-Measures ANOVA Assuming Sphericity
+
+                      Sum Sq num Df Error SS den Df  F value    Pr(&gt;F)    
+(Intercept)           8198.9      1   500.58    156 2555.113 &lt; 2.2e-16 ***
+group_all              126.7      2   500.58    156   19.736 2.286e-08 ***
+time_rating             42.0      1   288.70    156   22.668 4.364e-06 ***
+group_all:time_rating   74.4      2   288.70    156   20.090 1.724e-08 ***
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb36"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb36-1"><a href="#cb36-1" aria-hidden="true" tabindex="-1"></a>mixed_anova<span class="sc">$</span>anova_table</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Anova Table (Type 3 tests)
+
+Response: rating
+                      num Df den Df    MSE      F     pes      ges    Pr(&gt;F)
+group_all                  2    156 3.2088 19.736 0.20193 0.138283 2.286e-08
+time_rating                1    156 1.8507 22.668 0.12687 0.050468 4.364e-06
+group_all:time_rating      2    156 1.8507 20.090 0.20481 0.086102 1.724e-08
+                         
+group_all             ***
+time_rating           ***
+group_all:time_rating ***
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<ul>
+<li>In <span class="citation" data-cites="grinschgl2021">Grinschgl et al. (<a href="#ref-grinschgl2021" role="doc-biblioref">2021</a>)</span> wird jedoch nur das reine <code>η²</code> berichtet (weder generalisiert noch partiell). Wende <code>eta_squared()</code> auf dem package <code>effectsize</code> auf dein ANOVA Model an und setze <code>partial = FALSE</code>.</li>
+</ul>
+<div class="callout callout-style-default callout-note callout-titled" title="Lösung">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-16-contents" aria-controls="callout-16" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Lösung
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-16" class="callout-16-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb38"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb38-1"><a href="#cb38-1" aria-hidden="true" tabindex="-1"></a>mixed_anova <span class="ot">&lt;-</span> <span class="fu">aov_4</span>(rating <span class="sc">~</span> group_all <span class="sc">+</span> (time_rating <span class="sc">|</span> code), <span class="at">data =</span> dat_long, <span class="at">anova_table =</span> <span class="fu">list</span>(<span class="at">es =</span> <span class="fu">c</span>(<span class="st">"ges"</span> ,<span class="st">"pes"</span>)))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Converting to factor: group_all</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Contrasts set to contr.sum for the following variables: group_all</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb41"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb41-1"><a href="#cb41-1" aria-hidden="true" tabindex="-1"></a><span class="fu">eta_squared</span>(mixed_anova, <span class="at">partial =</span> <span class="cn">FALSE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># Effect Size for ANOVA (Type III)
+
+Parameter             | Eta2 |       95% CI
+-------------------------------------------
+group_all             | 0.12 | [0.05, 1.00]
+time_rating           | 0.04 | [0.01, 1.00]
+group_all:time_rating | 0.07 | [0.02, 1.00]
+
+- One-sided CIs: upper bound fixed at [1.00].</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
 <ul>
 <li>Versuche das Ergebnis dieser ANOVA zu interpretieren und mit <span class="citation" data-cites="grinschgl2021">Grinschgl et al. (<a href="#ref-grinschgl2021" role="doc-biblioref">2021</a>)</span> zu vergleichen.</li>
 </ul>
+<div class="callout callout-style-default callout-note callout-titled" title="Lösung">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-17-contents" aria-controls="callout-17" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Lösung
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-17" class="callout-17-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Die Resultate der von uns gerechneten ANOVA und der in <span class="citation" data-cites="grinschgl2021">Grinschgl et al. (<a href="#ref-grinschgl2021" role="doc-biblioref">2021</a>)</span> berichteten ANOVA stimmen überein. Es gibt signifikante Haupteffekte für den Between-Faktor <code>group_all</code> (p &lt; 0.05, η² = 0.12), den Within-Faktor <code>time_rating</code> (p &lt; 0.05, η² = 0.04) und die Interaktion beider Variablen <code>group_all:time_rating</code> (p &lt; 0.05, η² = 0.07). Es gibt somit Unterschiede im <code>rating</code> zwischen Gruppen, Unterschiede über die Gruppen hinweg zwischen verschiedenen Zeitpunkten, und diese Unterschiede zwischen Gruppen entwickeln sich im Verlaufe der Zeit auch noch unterschiedlich. Die Effektstärken deuten auf kleine bis mittlere Effekte hin.</p>
+</div>
+</div>
+</div>
 <hr>
 </section>
 <section id="x3-mixed-anova---post-hoc-t-tests" class="level2">
@@ -663,17 +1002,134 @@ Confidence level used: 0.95 </code></pre>
 <li>2 x 3 mixed ANOVA mit Messwiederholung Post-Hoc Tests: <code>emmeans()</code> Objekt erstellen nach folgender Vorlage:</li>
 </ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>results <span class="ot">&lt;-</span> <span class="fu">emmeans</span>(<span class="at">object =</span> my_anova, <span class="at">specs =</span> <span class="sc">~</span> within_factor <span class="sc">*</span> between_factor)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb43"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb43-1"><a href="#cb43-1" aria-hidden="true" tabindex="-1"></a>results <span class="ot">&lt;-</span> <span class="fu">emmeans</span>(<span class="at">object =</span> my_anova, <span class="at">specs =</span> <span class="sc">~</span> within_factor <span class="sc">*</span> between_factor)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="callout callout-style-default callout-note callout-titled" title="Lösung">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-18-contents" aria-controls="callout-18" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Lösung
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-18" class="callout-18-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb44"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb44-1"><a href="#cb44-1" aria-hidden="true" tabindex="-1"></a>results <span class="ot">&lt;-</span> <span class="fu">emmeans</span>(<span class="at">object =</span> mixed_anova, <span class="at">specs =</span> <span class="sc">~</span> time_rating <span class="sc">*</span> group_all)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+</div>
 </div>
 <ul>
 <li><code>pairs()</code> darauf anwenden – hier wollen wir mit <code>simple = „group_all“</code> Post-Hoc Tests für die Gruppenvergleiche zu den beiden Zeitpunkten berechnen. 👉 Berechnung von bedingten Mittelwertsunterschieden so wie im <span class="citation" data-cites="grinschgl2021">Grinschgl et al. (<a href="#ref-grinschgl2021" role="doc-biblioref">2021</a>)</span> Paper (aber dort leicht andere Werte wegen anderer Berechnungsfunktion)</li>
 </ul>
+<div class="callout callout-style-default callout-note callout-titled" title="Lösung">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-19-contents" aria-controls="callout-19" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Lösung
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-19" class="callout-19-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb45"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb45-1"><a href="#cb45-1" aria-hidden="true" tabindex="-1"></a><span class="fu">pairs</span>(results, <span class="at">simple =</span> <span class="st">"group_all"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>time_rating = pre1:
+ contrast        estimate    SE  df t.ratio p.value
+ above - below     0.3962 0.270 156   1.466  0.3103
+ above - control   0.4094 0.270 156   1.514  0.2869
+ below - control   0.0132 0.270 156   0.049  0.9987
+
+time_rating = pre4:
+ contrast        estimate    SE  df t.ratio p.value
+ above - below     2.6943 0.343 156   7.849  &lt;.0001
+ above - control   1.0604 0.343 156   3.089  0.0067
+ below - control  -1.6340 0.343 156  -4.760  &lt;.0001
+
+P value adjustment: tukey method for comparing a family of 3 estimates </code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
 <ul>
 <li>Ändere es nun auf <code>simple = time_rating</code> ab und schaue dir den Unterschied zum vorherigen Ergebnis an.</li>
 </ul>
+<div class="callout callout-style-default callout-note callout-titled" title="Lösung">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-20-contents" aria-controls="callout-20" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Lösung
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-20" class="callout-20-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb47"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb47-1"><a href="#cb47-1" aria-hidden="true" tabindex="-1"></a><span class="fu">pairs</span>(results, <span class="at">simple =</span> <span class="st">"time_rating"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>group_all = above:
+ contrast    estimate    SE  df t.ratio p.value
+ pre1 - pre4   -0.257 0.264 156  -0.971  0.3330
+
+group_all = below:
+ contrast    estimate    SE  df t.ratio p.value
+ pre1 - pre4    2.042 0.264 156   7.725  &lt;.0001
+
+group_all = control:
+ contrast    estimate    SE  df t.ratio p.value
+ pre1 - pre4    0.394 0.264 156   1.492  0.1377</code></pre>
+</div>
+</div>
+<p>Hier werden die Mittelwertsunterschiede für die Messzeitpunkte innerhalb der jeweiligen Gruppen berechnet. In der <code>control</code> Gruppe gibt es <strong>keinen</strong> signifikanten Unterschiede zwischen den Zeitpunkten (p &gt; 0.05). In der <code>above</code> Gruppe gibt es ebenfalls <strong>keinen</strong> signifikanten Unterschied zwischen den Zeitpunkten (p &gt; 0.05), Innerhalb der Gruppe <code>below</code> gibt es allerdings einen signifikanten Unterschied zwischen den beiden Messzeitpunkten (p &lt; 0.05). Die Gruppen entwickeln sich also über die Messzeitpunkte hinweg unterschiedlich. Dies entspricht der oben gefundenen Interaktion zwischen <code>group_all:time_rating</code>. Die Resultate müssen allerdings mit Vorsicht interpretiert werden, da diese noch nicht für das multiple testen angepasst wurden und die p-Werte sich im Anschluss noch (signifikant) verändern könnten.</p>
+</div>
+</div>
+</div>
 <ul>
 <li>Ergänze nun die Bonferroni Korrektur für multiples Testen mit <code>adjust = „bonferroni“</code></li>
 </ul>
+<div class="callout callout-style-default callout-note callout-titled" title="Lösung">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-21-contents" aria-controls="callout-21" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Lösung
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-21" class="callout-21-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb49"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb49-1"><a href="#cb49-1" aria-hidden="true" tabindex="-1"></a><span class="fu">pairs</span>(results, <span class="at">simple =</span> <span class="st">"group_all"</span>, <span class="at">adjust =</span> <span class="st">"bonferroni"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>time_rating = pre1:
+ contrast        estimate    SE  df t.ratio p.value
+ above - below     0.3962 0.270 156   1.466  0.4343
+ above - control   0.4094 0.270 156   1.514  0.3958
+ below - control   0.0132 0.270 156   0.049  1.0000
+
+time_rating = pre4:
+ contrast        estimate    SE  df t.ratio p.value
+ above - below     2.6943 0.343 156   7.849  &lt;.0001
+ above - control   1.0604 0.343 156   3.089  0.0071
+ below - control  -1.6340 0.343 156  -4.760  &lt;.0001
+
+P value adjustment: bonferroni method for 3 tests </code></pre>
+</div>
+</div>
+<p>Die paarweisen Vergleiche gelten jeweils für alle möglichen Gruppenpaare für die beiden Zeitpunkte <code>time_rating = pre1</code> und <code>time_rating = pre4</code>. Zum Zeitpunkt <code>pre1</code> gibt es noch keinerlei signifikante Gruppenunterschiede (alle p-Werte &gt; 0.05). Zum Zeitpunkt <code>pre4</code> unterscheiden sich dann allerdings alle Gruppen voneinander (alle p-Werte &lt; 0.05). Dies entspricht dem zuvor gefundenen Haupteffekt des Faktors <code>time_rating</code>.</p>
+</div>
+</div>
+</div>
 <div class="callout callout-style-default callout-important callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
