@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Muddiest Points 3 – R u Ready</title>
+<title>Muddiest Points 3 – R You Ready - Copy</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -283,7 +283,7 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./EH_14.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Einheit 14 - 17.12.2025</span></a>
+ <span class="menu-text">Einheit 14 - 10.12.2025</span></a>
   </div>
 </li>
       </ul>
@@ -344,7 +344,7 @@ window.Quarto = {
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a href="./hausuebungen.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Hausuebungen</span></a>
+ <span class="menu-text">Hausübungen</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -405,7 +405,7 @@ window.Quarto = {
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a href="./rstudio.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">1  RStudio</span></a>
+ <span class="menu-text">1 RStudio</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -464,12 +464,6 @@ window.Quarto = {
   <div class="sidebar-item-container"> 
   <a href="./ChatGPT.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">ChatGPT in RStudio</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./Memes.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Memes :)</span></a>
   </div>
 </li>
       </ul>
@@ -904,14 +898,16 @@ Das entspricht dem Mittelwert einer Variable über alle Personen</p>
 <p><strong>Antwort:</strong> Tabellen für ANOVAs haben wir nicht behandelt. In der Praxis werden ANOVAs meist auch nicht in Tabellenform berichtet, sondern direkt im Text. Es ist jedoch möglich, APA-konforme ANOVA-Tabellen mit Packages <code>apaTables</code> wie <a href="https://cran.r-project.org/web/packages/papaja/refman/papaja.html#arrange_anova">Papaja</a> zu erstellen.</p>
 <p>Beispiel aus <span class="citation" data-cites="grinschgl2021">Grinschgl et al. (<a href="#ref-grinschgl2021" role="doc-biblioref">2021</a>)</span></p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb29"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(apaTables)</span>
-<span id="cb29-2"><a href="#cb29-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb29-3"><a href="#cb29-3" aria-hidden="true" tabindex="-1"></a>model_1 <span class="ot">&lt;-</span> <span class="fu">aov</span>(bill_length_mm <span class="sc">~</span> island <span class="sc">+</span> sex <span class="sc">+</span> species, <span class="at">data =</span> penguins_filtered)</span>
-<span id="cb29-4"><a href="#cb29-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb29-5"><a href="#cb29-5" aria-hidden="true" tabindex="-1"></a><span class="fu">apa.aov.table</span>(</span>
-<span id="cb29-6"><a href="#cb29-6" aria-hidden="true" tabindex="-1"></a>  <span class="at">lm_output =</span> model_1,</span>
-<span id="cb29-7"><a href="#cb29-7" aria-hidden="true" tabindex="-1"></a>  <span class="at">filename  =</span> <span class="st">"anova_table.doc"</span></span>
-<span id="cb29-8"><a href="#cb29-8" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb29"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(apaTables)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: Paket 'apaTables' wurde unter R Version 4.5.2 erstellt</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb31"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a>model_1 <span class="ot">&lt;-</span> <span class="fu">aov</span>(bill_length_mm <span class="sc">~</span> island <span class="sc">+</span> sex <span class="sc">+</span> species, <span class="at">data =</span> penguins_filtered)</span>
+<span id="cb31-2"><a href="#cb31-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb31-3"><a href="#cb31-3" aria-hidden="true" tabindex="-1"></a><span class="fu">apa.aov.table</span>(</span>
+<span id="cb31-4"><a href="#cb31-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">lm_output =</span> model_1,</span>
+<span id="cb31-5"><a href="#cb31-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">filename  =</span> <span class="st">"anova_table.doc"</span></span>
+<span id="cb31-6"><a href="#cb31-6" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>
 

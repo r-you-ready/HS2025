@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Hands On – Analyze (Einheiten 11 und 12) – R u Ready</title>
+<title>Hands On – Analyze (Einheiten 11 und 12) – R You Ready - Copy</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -254,7 +254,7 @@ div.csl-indent {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./EH_14.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Einheit 14 - 17.12.2025</span></a>
+ <span class="menu-text">Einheit 14 - 10.12.2025</span></a>
   </div>
 </li>
       </ul>
@@ -315,7 +315,7 @@ div.csl-indent {
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a href="./hausuebungen.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Hausuebungen</span></a>
+ <span class="menu-text">Hausübungen</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -376,7 +376,7 @@ div.csl-indent {
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a href="./rstudio.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">1  RStudio</span></a>
+ <span class="menu-text">1 RStudio</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -435,12 +435,6 @@ div.csl-indent {
   <div class="sidebar-item-container"> 
   <a href="./ChatGPT.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">ChatGPT in RStudio</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./Memes.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Memes :)</span></a>
   </div>
 </li>
       </ul>
@@ -996,11 +990,16 @@ Fortgeschritten / Freiwillig
 <li><p>Paket <code>„effsize“</code> installieren und laden.</p></li>
 <li><p>Wir wollen einen t-Test für unabhängige Stichproben durchführen, um das Pre 4 Rating der <code>„above“</code> und <code>„below“</code> Gruppen zu vergleichen. Starte mit einem <code>leveneTest()</code> aus dem <code>„car“</code> Paket um die Varianzhomogenität zu prüfen. Tipp: Filtere die Daten, sodass nur die beiden Gruppen <code>„above“</code> und <code>„below“</code> beinhaltet sind (d.h. ohne die Gruppe <code>„control“</code>).</p></li>
 </ul>
+<div class="cell">
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: Paket 'car' wurde unter R Version 4.5.2 erstellt</code></pre>
+</div>
+</div>
 <ul>
 <li>Berechne nun den entsprechenden t-Test mit <code>t.test()</code>. Du kannst auch die Hilfefunktion zu Rate ziehen. Versuche dann den Output zu verstehen bzw. das Ergebnis zu interpretieren. Tipp: Wenn die Varianzhomogenität gegeben ist (d.h. der Levene Test nicht signifikant ist), muss man <code>var.equal = TRUE</code> angeben, ansonsten wird ein <code>Welch t-Test</code> berechnet.</li>
 </ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">t.test</span>(pre4 <span class="sc">~</span> group_all, <span class="at">data =</span> dat_full_below_above, <span class="at">var.equal =</span> <span class="cn">TRUE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">t.test</span>(pre4 <span class="sc">~</span> group_all, <span class="at">data =</span> dat_full_below_above, <span class="at">var.equal =</span> <span class="cn">TRUE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <ul>
 <li>Nun berechnen wir noch <code>Cohen‘s d</code> als Effektstärken-Maß für den Mittelwertsunterschied. Verwende dafür <code>effsize::cohen.d()</code>.  Da es <code>„cohen.D“</code> auch im Paket <code>„psych“</code> gibt, ist es wichtig hier <code>„effsize::“</code> voranzusetzen.</li>
@@ -1014,7 +1013,7 @@ Fortgeschritten / Freiwillig
 <li>Berechne einen <em>t</em>-Test für abhängige Stichproben um in der <code>„control“</code> Gruppe <code>Pre 1</code> und <code>Pre 4</code> zu vergleichen. (D.h. filtere zunächst den Datensatz, sodass nur mehr die <code>„control“</code> Gruppe</li>
 </ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">t.test</span>(datensatz<span class="sc">$</span>Variable1, datensatz<span class="sc">$</span>Variable2, <span class="at">paired =</span> <span class="cn">TRUE</span>) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">t.test</span>(datensatz<span class="sc">$</span>Variable1, datensatz<span class="sc">$</span>Variable2, <span class="at">paired =</span> <span class="cn">TRUE</span>) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <ul>
 <li>Wandle den t-Test nun in einen einseitigen Test mit alternative = „greater“ oder alternative = „less“ um und berechne Cohen‘s d als Effektstärkenmaß (Achtung: paired = True setzen).</li>
