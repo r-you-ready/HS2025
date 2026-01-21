@@ -5483,7 +5483,10 @@
     "href": "LearnR.html",
     "title": "LearnR Shinyapp",
     "section": "",
-    "text": "Hier kannst du deine individuellen Lösungen basierend auf deinem Datensatz abrufen.\n\n\n\n\n\n\n\n\nProbleme mit der Anzeige?\n\n\n\nFalls die App nicht richtig lädt, kannst du sie auch direkt hier öffnen: R You Ready App"
+    "text": "Hier kannst du deine individuellen Lösungen basierend auf deinem Datensatz abrufen.\n\n\n\n\n\n\n\n\nProbleme mit der Anzeige?\n\n\n\nFalls die App nicht richtig lädt, kannst du sie auch direkt hier öffnen: R You Ready App",
+    "crumbs": [
+      "LearnR - Shinyapp"
+    ]
   },
   {
     "objectID": "links_und_ressourcen.html",
