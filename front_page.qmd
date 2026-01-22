@@ -14,7 +14,7 @@ In diesem E-Book findest du alle wichtigen Informationen zum Methodenseminar "R 
 Hier einen Überblick über die auf den Seiten enthaltenen Hinweisboxen:
 
 ::: callout-note
-**Veriefung:** Hier geht es in die Tiefe.
+**Vertiefung:** Hier geht es in die Tiefe.
 :::
 
 ::: callout-important
@@ -35,5 +35,13 @@ Hier einen Überblick über die auf den Seiten enthaltenen Hinweisboxen:
 **Vorsicht:** Der Syllabus dient als grobe Richtlinie und kann angepasst werden, falls wir in einzelnen Einheiten mehr oder weniger Zeit benötigen.
 :::
 
-<iframe src="PDFs/Syllabus.pdf" width="100%" height="600px"></iframe>
+<iframe src="PDFs/Syllabus.pdf" width="100%" height="600px">
 
+</iframe>
+
+```{r, echo=FALSE}
+
+last_update <- format(Sys.time(), "%B %d, %Y at %H:%M")
+```
+
+Letztes Update `r last_update`

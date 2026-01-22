@@ -1,0 +1,15 @@
+{
+  "hash": "75ff31cfa86c7475bf65796ff944de72",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"ChatGPT in RStudio\"\nformat: html\n---\n\n\n\n\n# Einführung\n\nDamit ihr ChatGPT in RStudio einbinden könnt ist ein **Account bei OpenAI / ChatGPT** notwendig (falls ihr ChatGPT bisher ohne Anmeldung genutzt habt): https://chatgpt.com/\n\nNeben dieser Anleitung gibt es auch noch dieses [**YouTube-Tutorial**](https://www.youtube.com/watch?v=t7NrkAeosog) \\[2:36 - 5:08\\] welches euch bei der Einrichtung behilflich sein könnte.\n\n**Rechtliche Informationen** zum Umgang mit ChatGPT und anderen generativen KI-Anwendungen findet ihr [hier](https://www.unibe.ch/universitaet/campus__und__infrastruktur/rund_um_computer/soft_und_hardware/software/generative_kis/index_ger.html).\n\n# Einrichtung\n\n## Installieren von Paketen, welche chattr im Hintergrund benötigt\n\nEventuell habt ihr diese schon installiert und ihr könnt diesen Schritt dann überspringen. Ansonsten müsst ihr diese Pakete, wie auch alle anderen, nur einmalig installieren.\n\n\n\n\n::: {.cell}\n\n```{.r .cell-code}\ninstall.packages(\"shiny\")\ninstall.packages(\"httr2\")\ninstall.packages(\"jsonlite\")\n```\n:::\n\n\n\n\n## Installieren des chattr-Pakets von GitHub\n\nAuch hier gilt, die Installation des Paketes müsst ihr nur einmalig vornehmen.\n\n\n\n\n::: {.cell}\n\n```{.r .cell-code}\ninstall.packages(\"remotes\") # Hier werdet ihr in der Console möglicherweise gefragt, ob ihr das Paket unter dem vorgeschlagenen Dateipfad abspeichern wollt. Sofern dieser für euch passt könnt ihr einfach mit \"Y\" unten in der Console eingeben und mit Enter bestätigen.\n```\n:::\n\n::: {.cell}\n\n```{.r .cell-code}\nremotes::install_github(\"mlverse/chattr\") # Hier werdet ihr möglicherweise gefragt, welche der betroffenen Pakete ihr updaten wollt. Es empfehlt sich, alle zu updaten. Ihr könnt dies tun, indem ihr \"1\" in der Console eingebt und mit Enter bestätigt.\n```\n:::\n\n\n\n\n## Laden von chattr\n\nDie Schritte ab hier, also das Laden des Paketes und das Starten des Chat-Interface, müsst ihr bei jedem Start von RStudio erneut durchführen.\n\n\n\n\n::: {.cell Eval='false'}\n\n```{.r .cell-code}\nlibrary(chattr) # So wie ihr es auch bereits von anderen Paketen kennt\n```\n:::\n\n\n\n\n## Erstellen des Chat-Interface\n\n\n\n\n::: {.cell}\n\n```{.r .cell-code}\nSys.setenv(OPENAI_API_KEY = \"Hier müsst ihr euren eigenen OpenAI API-Key einsetzen\") # Ihr erhaltet euren OpenAI API Key, indem ihr euch bei OpenAI anmeldet und unter https://platform.openai.com/account/api-keys einen neuen Key generiert.\n\nchattr_app() # Hier werdet ihr möglicherweise gefragt, welche Version von ChatGPT ihr verwenden mögt. Mit Eingabe der Nummer wählt ihr das entsprechende Modell aus. Mit Enter bestätigt ihr die Eingabe.\n```\n:::\n\n\n\n\n# Anwendung\n\n## Prompt-Beispiel\n\nWofür braucht das Paket `chattr` im Hintergrund noch die Pakete `shiny`, `httr2` und `jsonlite`?\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

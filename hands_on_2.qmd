@@ -1,30 +1,24 @@
 ---
-title: "Hands_On_2"
+title: "Hands On – Coding Basics (Einheiten 3 und 4)"
 editor: visual
 ---
-
-# Hands On – Coding Basics (Einheiten 2 und 3)
 
 Bei Bedarf findest du hier nochmals die Slides zu Einheit 3:\
 <iframe src="EH_3.html" width="100%" height="500px"></iframe>
 
-## Lernziele dieses Hands-On-Blocks
+# Lernziele dieses Hands-On-Blocks
 
--   **Verstehen von Pfaden und Projekten:**
+✅Projekte
 
-    -   Relativ vs. Absolut
-    -   Projekte
+✅Unterschied zwischen relativen und absoluten Pfaden verstehen
 
--   **Coding Basics:**
+✅Datensätze in R importieren, inspizieren und speichern
 
-    -   Daten einlesen
-    -   Daten exportieren
-    -   Datensätze mergen (zusammenfügen)
-        -   Vor- und Nachteile verschiedener Funktionen kennenlernen (Wann brauche ich welche Funktion?)
+✅Datensätze mit `cbind()` und `full_join()` mergen und Vor- und Nachteile reflektieren
 
--   Liste und Matrizen
+✅Funktionen und ihre Argumente (inkl. Defaults) nutzen
 
-    -   
+✅Style Conventions
 
 # Projekte und Pfade
 
@@ -35,38 +29,50 @@ Bei Bedarf findest du hier nochmals die Slides zu Einheit 3:\
 Ein **R-Projekt** ist eine Projektdatei (`.Rproj`), die du in RStudio anlegst.\
 Wenn du ein Projekt öffnest:
 
--   RStudio setzt automatisch das **Working Directory (Arbeitsverzeichnis)** auf den Ordner, in dem die `.Rproj` liegt.\
+-   RStudio setzt automatisch das **Working Directory (Arbeitsverzeichnis)** auf den Ordner, in dem `.Rproj` liegt.\
 -   Alle Dateien, Skripte, Daten und Ergebnisse, die du in diesem Ordner ablegst, gehören logisch zu diesem Projekt.\
 -   Man kann es sich vorstellen wie einen „Container“ für ein Forschungsprojekt, eine Hausarbeit oder ein Analysepaket.\
 -   Du kannst entweder ein neues Projekt erstellen oder ein bestehendes Projekt öffnen.
 
-👉 In RStudio siehst du oben rechts, in welchem Projekt du dich gerade befindest.
+👉 In RStudio siehst du oben rechts, in welchem Projekt du dich gerade befindest. In diesem Screenshot ist noch kein Projekt geöffnet.
 
 ![](images/EH3/Project.png)
 
 **Übung:**\
-Im Ordner *grinschgl2020* liegt bereits eine `.Rproj`-Datei. Öffne sie und überprüfe oben rechts in RStudio, ob du dich im richtigen Projekt befindest.
+Im Ordner *Grinschgl2020* liegt bereits eine `.Rproj`-Datei. Öffne sie und überprüfe oben rechts in RStudio, ob du dich im richtigen Projekt befindest. Du kannst zukünftig immer auf das Projekt klicken wenn du die Analyseskripte dazu öffnen willst.
+
+**Projekt erstellen**
+
+Falls du in Zukunft ein Projekt erstellen willst (z.B. für deine Masterarbeit): 👉[Kapitel 6.2](https://r4ds.hadley.nz/workflow-scripts.html#projects)
 
 ------------------------------------------------------------------------
 
 ### Absolute vs. relative Pfade
 
--   **Absolute Pfade** beschreiben den vollständigen Weg zu einer Datei, ausgehend vom Wurzelverzeichnis deines Computers.
-    -   Nachteil: Sie sind oft sehr lang und funktionieren nur auf deinem Rechner.\
+-   **Absolute Pfade** beschreiben den vollständigen Weg zu einer Datei, ausgehend vom Wurzelverzeichnis *deines* Computers.
+
+    🔴 Nachteil: Sie sind oft sehr lang und funktionieren nur auf deinem Rechner.\
+
     -   Beispiel (Windows):\
         `C:\Users\maxmustermann\Dokumente\r_you_ready\Grinschgl2020\data\raw\Beispieldatei.csv`
--   **Relative Pfade** beschreiben den Ort einer Datei relativ zum aktuellen Working Directory.
-    -   Vorteil: Sie sind kürzer und funktionieren auf jedem Rechner, solange die Projektstruktur gleich bleibt.\
+
+-   **Relative Pfade** beschreiben den Ort einer Datei relativ zum *aktuellen Arbeitsverzeichnis*.
+
+    🟢 Vorteil: Sie sind kürzer und funktionieren auf jedem Rechner, solange die Projektstruktur gleich bleibt.\
 
     -   Beispiel:
 
-        -   Projektordner = *Grinschgl2020*\
-        -   Datei liegt in *data/raw/Beispieldatei.csv*\
-        -   relativer Pfad:\
+        -   Projektordner = *Grinschgl2020*
+        -   Datei liegt in *data/raw/Beispieldatei.csv*
+        -   relativer Pfad:
 
         ```         
         data/raw/Beispieldatei.csv
         ```
+
+**❓Beantworte für dich selbst:**
+
+Um ein Skript reproduzierbar zu gestalten – was eignet sich besser: relative Pfade oder absolute Pfade? Aus welchen Gründen?
 
 # Daten importieren und exportieren
 
@@ -74,180 +80,238 @@ Im Ordner *grinschgl2020* liegt bereits eine `.Rproj`-Datei. Öffne sie und übe
 
 👉 [Kapitel 3.2](https://methodenlehre.github.io/einfuehrung-in-R/chapters/03-data_frames.html#daten-importieren)
 
+[Cheatsheat Datenimport](https://rstudio.github.io/cheatsheets/html/data-import.html) mit `readr`
+
 ### Einlesen via Oberfläche
 
--   Stelle sicher, dass du das Metapaket **tidyverse** geladen hast (siehe Hands-On 1).\
+-   Stelle sicher, dass du das Metapaket **tidyverse** geladen hast (`library(tidyverse)`) (siehe Hands-On 1).\
     Wir verwenden Funktionen aus den Packages **readr** und **readxl**, die Teil des Tidyverse sind.
 
--   Importiere die Datei `"data_mmq.csv"` über die Point-Click-Oberfläche von RStudio.
+In diesem Seminar arbeiten wir mit csv und xslx Dateien. Wie werden uns meherer Arten und Weisen anschauen wie man diese einlesen kann.
 
-    -   Tipp: Klicke auf **Environment** → **Import Dataset** → wähle `"readr"`-Funktion.
+Beim Einlesen von Daten ist ein wichtiger Faktor, mich welchem Trennzeichen (Delimiter) die Werte von einander getrennt werden.
+
+Auszug aus Cheatsheet: Die Funktionen read_delim und read_csv:
+
+![](images/Hands%20on%202/cheatsheet_auszug.png)
+
+`read_csv()` ist eine Spezialisierung von `read_delim()`, die automatisch Komma als Trennzeichen verwendet, während man bei `read_delim()` das gewünschte Trennzeichen selbst angeben muss.
+
+-   Importiere die Datei `"data_mmq.csv"` über die Point & Klick-Oberfläche von RStudio. Verwende dafür "From Text (readr)
+
+    ![](images/Hands%20on%202/Import_Data.png)
+
+    -   Tipp: Klicke auf **Environment** → **Import Dataset** → wähle die `"readr"`-Funktion.
     -   Schaue dir den Datensatz an: Mit welchem Trennzeichen sind die Daten getrennt?
+    -   ![](images/clipboard-4280669528.png)
         -   Stelle in der Oberfläche `"Delimiter"` auf das passende Trennzeichen. Was verändert sich?
     -   Betrachte den Code, den die Oberfläche generiert. Versuche den Pfad im Kontext von Projekten zu verstehen.
-    -   Schaue dir die eingelesenen Daten mit `view(data_mmq)` an.
+        -   Wenn du im Projekt gearbeitet hast, sollte bei dir der Code etwa so aussehen: `data_mmq <- read_delim("data/raw/data_mmq.csv", delim = ";", escape_double = FALSE, trim_ws = TRUE)`
+        -   Wenn du nicht im Projekt gearbeite hättest, wie würde dann der Dateipfad aussehen?
+    -   Wenn du den Code via Klick-Oberfläche eingelesen hast, wirst du den ausgeführten Code in der Konsole sehen. Kopiere diesen in dein Skript, so dass du ihn in Zukunft wiederverwenden und anpassen kannst.
+    -   Schaue dir die eingelesenen Daten mit `View(data_mmq)` an. Wenn du alles richtig gemacht hast, ist in jeder Zelle nur ein Wert.
 
 ### Einlesen via Code
 
-XXXXX Namen updaten.
+#### .CSV Dateien
 
--   Versuche, weitere CSV-Datensätze einzulesen: `cbt_prop`, `cvstm_prop`, `data_pct`, `vp_prop`.\
+-   Versuche, weitere CSV-Datensätze einzulesen: `data_cb`, `data_cvstm`, `data_pct`, `data_vp`.\
     Suche dafür eine geeignete Funktion zum Einlesen von `.csv`.
 
--   XXXXX Korrigiere diesen Code.
+    -   Verwende den von R-Studio generierten Code, und passe ihn an um einen weiteren Datensatz einzulesen (z.B. indem du den Filenamen veränderst).
 
--   Korrigiere diesen Code und lies damit die Datei `vp_prop` ein:
+-   Korrigiere diesen Code und lies damit die Datei `data_vp` ein (überprüfe den Pfad und den Delimiter)
+
+```{r, eval=FALSE, echo=TRUE}
+data_vp <- read_delim("/raw/data_vp.csv", 
+    delim = ",")
+```
+
+#### .XSLX Dateien
 
 -   Einige Dateien liegen im `.xlsx`-Format.
 
-    -   Verwende dafür das Paket **readxl** und die Funktion `read_excel()`.
-    -   Nutze die Hilfefunktion (`?read_excel`) für Infos.
+    -   Verwende dafür das Paket **readxl** und die Funktion `read_excel()`. Tipp: Installiere und lade das Paket zunächst.
+    -   Nutze die Hilfefunktion (`?read_excel`) für Infos zur Funktion oder schaue dir das [Cheatsheet](https://rstudio.github.io/cheatsheets/html/data-import.html) an
     -   Versuche, die Datensätze `data_ratings` und `data_strategies` einzulesen.
 
--   Am Ende solltest du **7 verschiedene Datensätze** in deinem Environment sehen.
+-   Am Ende solltest du die **7 verschiedene Datensätze** in deinem Environment sehen.
 
-## Datensätze inspizieren
-
-Verschaffe dir eine Übersicht über die Datensätze, verwende dabei die verschiedenen Funktionen die wir dafür bereits im Hands-on 1 kenengelernt haben:
-
--   `head()`
-
--   `glimpse()`
-
--   `str()`
-
--   `data_cbt`
-
--   `summary()`
-
-![](images/clipboard-558025012.png)
-
-# Datenstrukturen: Vektoren, Listen, Matrizen und Data Frames
-
-XXXX @Sandra gibt es hier ein gutes Kapitel das all das schön zusammenfasst?
-
-Bevor wir mit den Übungen starten, ein Überblick über die Unterschiede:
-
-| Struktur | Eigenschaften | Beispiel-Inhalt |
-|------------------------|------------------------|------------------------|
-| **Vektor** | \- Enthält Elemente **eines** Datentyps<br>- Grundbaustein in R | `c(1, 2, 3)` oder `c("Anna", "Ben")` |
-| **Liste** | \- Kann verschiedene Datentypen enthalten<br>- Elemente können unterschiedlich lang sein | Zahlenvektor, Textvektor, logischer Vektor in einer Liste |
-| **Matrix** | \- Enthält nur **einen** Datentyp<br>- Hat feste Dimensionen (Zeilen, Spalten) | 3x3-Matrix mit Zahlen 1–9 |
-| **Data Frame** | \- Tabellarisch aufgebaut<br>- Spalten können unterschiedliche Datentypen enthalten<br>- Jede Spalte gleich lang | Tabelle mit Name (Char), Alter (Numeric), Studiert (Logical) |
-
-👉 Merksatz:\
-- **Vektor** = einfachste Struktur, ein Datentyp\
-- **Liste** = flexibel, verschiedene Datentypen\
-- **Matrix** = „Zahlenrechteck“, ein Datentyp\
-- **Data Frame** = Tabelle, Spalten können unterschiedliche Datentypen haben
-
-Wir haben in der Hands on Übungen einige einfache Vektoren erstellt und damit operiert. NUn schauen wir uns weitere formate an.
-
-## Listen
-
-Eine **Liste** kann verschiedene Datentypen enthalten (z. B. Zahlen, Zeichenketten, logische Werte).
-
-👉 \[Listen, Kapitel
-
--   **Erstelle eine Liste mit drei Elementen:**
-
-    -   einem Vektor mit den Zahlen 1 bis 5
-
-    -   einem Character-Vektor mit den Namen deiner Kommiliton:innen
-
-    -   einem logischen Vektor (TRUE, FALSE)
-
--   Greife auf das zweite Element der Liste zu.
-
--   Greife auf den dritten Wert des ersten Elements der Liste zu.
-
--   Füge der Liste ein weiteres Element hinzu (z. B. den Mittelwert der Zahlen).
-
-## Matrizen
-
-Eine **Matrix** besteht nur aus einem Datentyp (z. B. nur Zahlen).
-
--   Erstelle eine 3x3-Matrix mit den Zahlen 1 bis 9.
-
--   Wandle einen Vektor 1:12 in eine 3x4-Matrix um.
-
--   Greife auf das Element in der 2. Zeile, 3. Spalte zu.
-
--   Berechne die Spaltensummen und Zeilensummen.
-
-# Data Frames
-
-Ein **Data Frame** ist eine tabellarische Struktur mit Spalten, die verschiedene Datentypen enthalten können.
-
--   Erstelle einen Data Frame mit drei Spalten:
-
--   name (Character)
-
--   alter (Numeric)
-
--   studiert (Logical: TRUE/FALSE)
-
--   Greife auf die Spalte "alter" zu
-
--   Filtere alle Zeilen, in denen studiert == TRUE.
-
--   Füge eine neue Spalte hinzu, die alter + 10 berechnet.
-
-# Funktionen
-
-Wir haben in diesen Übungen bereits einige Funktionen verwendet (z.b `sum()` oder `sort()` ) Funktionen bestehen aus einem Namen und Argumenten. In diesem Beispiel wird die Funktion "`sort()` " aufgerufen, die Argumente die dafür benötigt werden sind `first_vector` & `decreasing = TRUE` . Die meisten Funktionen haben "defaults" also argumente die eine voreinstellung haben. Wenn man diese nicht verändern möchte müssen diese auch nicht definiert werden. `sort()` hat als default `sdecreasing = FALSE` , deswegen müssen wir um die höchsten Werte des Vektors zu bestimmen diesen Default umstellen.
-
-Die Defaults der Funktionen lassen sich via Hilfefunktion nachschauen. Diese Kann entweder auf dem "Help" Tab geöffnet werden oder direkt via Konsole `?Funktionsname`
-
-```{r}
-first_vector <- c(22342,4,5,6,7,23234, 342, 342)
-
-highest_values_1 <- sort(first_vector)[1:2]
-
-highest_values <- sort(first_vector, decreasing =TRUE)[1:2]
-```
-
-Suche mit der Hilfefunktion nach dem default von `?sum()` . Korrigiere den folgenden code so dass die Summe des Vektors berechet wird.
-
-```{r}
-vector_with_nas <- c(1 ,2,3,5,6,NA, 14, 21, NA, 12)
-sum(vector_with_nas)
-```
+::: {.callout-note collapse="true" title="Vertiefung"}
+👉Für das Einlesen anderer Arten von Datensätzen (z.B. SPSS Dateien), siehe [Kapitel 3.2](https://methodenlehre.github.io/einfuehrung-in-R/chapters/03-data_frames.html#daten-importieren)
+:::
 
 # Daten mergen
 
-**Mögliche Funktionen:** z.B. `cbind()` aus Base R oder `full_join()` aus dem Tidyverse.
+***Wird in EH4 noch genauer erklärt!***
 
-Aufgaben:
+Nun haben wir 7 verschiedene Datensätze in unserem Enviornment. Da wir jedoch mit dem kompletten Datensatz arbeiten wollen, ist es sinnvoll diese Datensätze zu einem zu verbinden. Jedoch müssen dafür mehrere Dinge beachtet werden: Sind die Daten in der gleichen Reihenfolge (z.B. geordnet nach Identifier (z.B. `code` in `data_mmq`).
 
-a)  Füge alle 7 Datensätze mit `cbind()` zusammen und schaue dir das Ergebnis an.
+**Mögliche Funktionen:** z. B. `cbind()` aus Base R oder `full_join()` aus dem Tidyverse.
 
-    -   Was fällt dir auf?\
-    -   Hinweis: Die Datensätze werden einfach nebeneinander „geklebt“, ohne inhaltlich abgeglichen zu werden.
-    -   Reflektiere: Macht das Sinn? Was sind die Gefahren von dieser Art daten zu mergen?
+## Aufgaben
 
-b)  Versuche es nun mit `full_join()`.
+### a) Füge alle 7 Datensätze mit `cbind()` zusammen und schaue dir das Ergebnis an.
 
-    -   Lege eine gemeinsame Variable als Schlüssel fest, hier: `by = "code"`.\
-    -   Achtung: `full_join()` funktioniert immer nur mit 2 Datensätzen gleichzeitig → du musst es also mehrfach anwenden, um alle 7 Datensätze zusammenzuführen.\
+-   Was fällt dir auf?\
+-   Hinweis: Die Datensätze werden einfach nebeneinander „geklebt“, ohne inhaltlich abgeglichen zu werden.\
+-   Reflektiere: Macht das Sinn? Was sind die Gefahren, Daten auf diese Art zu mergen?
+
+------------------------------------------------------------------------
+
+### b) Versuche es nun mit `full_join()`.
+
+Full_join verbindet zwei Datensätze anhand einer Schlüsselvariable, so dass alle Zeilen aus beiden Datensätzen erhalten bleiben. Die Schlüsselvariable ist essentiell dafür dass die Datensätze richtig verbunden werden (Anordnung der Variablen), und grenzt sich dadurch von Funktionen wie `cbind()` ab.
+
+![](images/Hands%20on%202/full-join.gif){width="307"}
+
+-   Lege eine gemeinsame Variable als Schlüssel fest, hier: `by = "code"`.
+
+-   Füge nun alle 7 Datensätze zu einem zusammen, nenne diesen `dat_full`
+
+    -   **Achtung:** `full_join()` funktioniert immer nur mit 2 Datensätzen gleichzeitig 👉 du musst es also mehrfach anwenden, um alle 7 Datensätze zusammenzuführen.
+
     -   Hinweis: Im Datensatz `data_pct` heißt die Code-Variable leicht anders. Verwende deshalb `by = c("code_all" = "code")`.
 
-c)  Der neu erstellte Datensatz soll **`dat_full`** heißen.
+------------------------------------------------------------------------
 
-d)  Speichere `dat_full` in deinem Ordner `"data"` als CSV-Datei ab:
+### c) Inspiziere deinen zusammengefügten Datensatz "dat_full"
 
-\`\`\`r write.csv(dat_full, "data/dat_full.csv")
+-   🔍Überprüfe: Wie viele Zeilen und Spalten hat dein Datensatz? Verwende: `ncol()` , `nrow()`, `dim()`
+    -   Stimmt die Anzahl der Zeilen mit der Anzahl der Versuchspersonen aus dem Paper überein?
+    -   Lasse dir die variablenamen ausgeben mit `names()`
+-   👀Verschaffe dir eine Überblick über deinen Datensatz:
+    -   `head()`
+    -   `glimpse()`
+    -   `str()`
+    -   `dat_full`
+    -   `summary()`
+-   Gibt es redundante oder doppelte Variablen?
 
-*xxx Weitere Möglichkeiten für Übungen (ggf ist das aber auch zu viel):*
+**Auf einzelne Werte zugreiffen:**
 
-Umgang mit Vektoren (z.b. bestimmte Elemente anzeigen lassen; runden (siehe Folien EH 3/4/5)
+-   Greife auf den **ersten Wert der ersten Spalte** zu: Verwende eckige Klammern. Der erste Wert in der Klammer steht für die Zeile, der zweite für die Spalte.
 
-Umgang mit Matrizen
+-   Greife auf die Werte der **Spalten 1–15 in der ersten Zeile** zu. Verwende wieder eckige Klammern und den Bereichsoperator `1:15`.
 
-**ggf irgendwas zu "calling functions": 2.4** <https://r4ds.hadley.nz/workflow-basics.html> & 2.3 <https://methodenlehre.github.io/einfuehrung-in-R/chapters/02-R-language.html>
+-   Lasse dir alle Werte der Variable `"mean_rl_all"` ausgeben. Auf Variablen greifst du mit `$` zu.
 
-**vl auch: warum funktioniert dieser Code nicht?** (mit einfachen Fehlern wie Typos)
+-   Greife auf die **ersten 10 Werte der Variable `"question1"`** zu. Verwende dazu den `$`-Operator in Kombination mit dem Bereichsoperator `1:10`.
 
-**Tab completions: 1.4.5** <https://methodenlehre.github.io/einfuehrung-in-R/chapters/01-workflow.html>
+------------------------------------------------------------------------
 
--Listen und Matrizen
+# Daten speichern
+
+### a) Speichere `dat_full` in deinem Ordner `"data"` als CSV-Datei ab
+
+Verwende dafür die Funktion `write.csv()`. Du musst zwei Argumente angeben: Welcher Datensatz aus deinem Environment gespeichert werden soll und unter welchem Pfad (inklusive Dateiname) er abgelegt wird. Bei Unklarheiten schaue dir das Cheatsheet oder die Hilfefunktion an. Überprüfe nach dem speichern, ob dein Datensatz im richtigen Ordner zu finden ist.
+
+👉 Für diesen Datensatz sollt ihr anschließend das **Codebook** erstellen.
+
+------------------------------------------------------------------------
+
+# Coding Basics: Funktionen
+
+👉[Kapitel 2.4: Calling Functions](https://r4ds.hadley.nz/workflow-basics.html)
+
+👉[Kapitel 2.3: Funktionen aufrufen](https://methodenlehre.github.io/einfuehrung-in-R/chapters/02-R-language.html#funktionen-aufrufen)
+
+Wir haben in diesen Übungen bereits einige Funktionen verwendet (z. B. `sum()` oder `sort()`). Funktionen bestehen aus einem Namen und Argumenten. In diesem Beispiel wird die Funktion `sort()` aufgerufen. Die Argumente, die dafür benötigt werden, sind `first_vector` und `decreasing = TRUE`. Die meisten Funktionen haben *Defaults*, also Argumente mit einer Voreinstellung. Wenn man diese nicht verändern möchte, müssen sie nicht explizit angegeben werden. `sort()` hat als Default `decreasing = FALSE`. Deswegen müssen wir, um die höchsten Werte des Vektors zu bestimmen, diesen Default umstellen. Argumente ohne Defaults müssen zwingend angegben werden).
+
+Die Defaults von Funktionen lassen sich über die Hilfefunktion nachschauen. Diese kann entweder im Tab *Help* geöffnet werden oder direkt über die Konsole mit `?Funktionsname`.
+
+```{r}
+first_vector <- c(22342, 4, 5, 6, 7, 23234, 342, 342)
+highest_values_1 <- sort(first_vector)[1:2]
+highest_values <- sort(first_vector, decreasing = TRUE)[1:2]
+```
+
+Bei vielen Funktionen werden die **Namen der Argumente** weggelassen.
+
+Welche Argumente werden hier übergeben? Schreibe die Funktion mit den vollständigen Argumentnamen aus:
+
+```{r}
+ seq(-4, 11, 3)
+```
+
+Wenn die Argumente nicht explizit benannt werden, ist die Reihenfolge entscheidend. Wenn du die Argumente explizit angibst, kannst du die Reihenfolge frei wählen.
+
+-   Korrigiere diesen Code: Ergänze die Argumentnamen, sodass eine Sequenz von 3 bis 12 in 2er-Schritten erstellt wird. Belasse dabei die Reihenfolge der Zahlen.
+
+```{r, eval=FALSE, echo=TRUE}
+seq(2, 12, 3)
+```
+
+ℹ️Manche Funktionen sind in mehreren Paketen beinhaltet, sowie wie z.B. die Funktion `filter()`. Um die Funktion definitiv aus einem bestimmten Paket zu verwenden, muss man das Paket dazu schreiben: `dyplr::filter()`
+
+## Tab Completion:
+
+Eine nützliche Funktion von RStudio ist die **Tab Completion**. Wenn du eine Funktion aufrufst und die Tabulator-Taste drückst, erscheint ein Menü mit den möglichen Argumenten, die du angeben kannst. Probiere es mit der Funktion `mean()`. Das funktioniert auch für Funktionen aus Packages, wenn du diese mit `::` auswählst, zum Beispiel: `readr::`.
+
+## Weitere Tasten und Tastenkürzel:
+
+👉[Kapitel 1.4.6](https://methodenlehre.github.io/einfuehrung-in-R/chapters/01-workflow.html#tasten)
+
+In RStudio benötigen wir häufig Zeichen, die wir im Alltag kaum verwenden. Da wir nicht alle mit dem gleichen Betriebssystem (Mac/Windows) und auch nicht mit identischen Tastaturen arbeiten, können wir keine einheitlichen Angaben machen, wo sich diese Zeichen genau befinden. Versuche daher, die folgenden Zeichen auf deiner eigenen Tastatur zu finden:
+
+-   `[ ]` Square brackets (eckige Klammern)
+
+-   `{ }` Curly brackets (geschweifte Klammern)
+
+-   `$` Dollar sign (Dollarzeichen – wird für das Auswählen von Variablen benötigt)
+
+-   `#` Hash (Rautezeichen – für Kommentare in R-Skripten)
+
+-   `~` Tilde (für Modellnotationen in R)
+
+-   `|` Vertical bar (senkrechter Strich – als logischer Operator, siehe nächstes Kapitel)
+
+-   `` ` `` Backtick (Gravis – vor allem für Code Chunks, selten manuell einzugeben)
+
+## Verschachtelte Funktionen:
+
+ℹ️Es ist zwar möglich, mehrere Funktionen ineinander zu verschachteln. Dies kann jedoch schnell zu Verwirrung führen und den Code unnötig unübersichtlich machen. Verschachtelte Funktionen werden von innen nach aussen ausgeführt.
+
+❓Stelle dir hier die Frage: Was wird genau gerundet? Die einzelnen Elemente des Vektors oder der errechnet Durchschnitt?
+
+```{r}
+print(mean(round(first_vector)))
+```
+
+❗Aufgabe: Zerlege die Verschatelte Funktion in ihre Teilschritte.
+
+# Style Conventions
+
+Korrigiere diesen Code so dass er
+
+-   Läuft
+
+-   Leserlicher ist: Beachte dafür
+
+    -   Naming Conventions
+
+    -   Weitere Style Vorgaben (z.B. Leerzeichen)
+
+```{r, eval=FALSE, echo=TRUE}
+
+Französischschul_NotenSemesester -<(4,5, 6,5,4,  3)
+mean <-mean(Französichschul_NotenSemsester
+print  ( mittelwert)
+
+```
+
+-   Installiere das Package `styler` mit `install.packages()` und lade es. `styler` hat eine sogenannte "Wrapper-Funktion", die du unter "Addins" aufrufen kannst. Verwende den Default-Style (tidyverse).
+
+    ![](images/clipboard-3096355115.png){width="256"}
+
+-   Versuche mit der `Styler` funktion diesen Code zu leserlicher zu machen (Style selection). Du musst diesen ggplot Code nicht verstehen - wir kommen dazu in einer späteren Einheit noch.
+
+```{r, eval=FALSE}
+library(ggplot2)
+library(palmerpenguins)
+
+ggplot(penguins,aes(x=flipper_length_mm,y=body_mass_g,color=species))+geom_point()+labs(x="flipper",Y="MASS")+theme_minimal()
+
+```
+
+# Am Ende deiner Übungen - vergiss nicht dein Skript abzuspeichern! :-)

@@ -1,0 +1,15 @@
+{
+  "hash": "f91befaf5487b9de0f61d376af243c6b",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"Probleme beim Rendern\"\neditor: visual\n---\n\n::: {.cell}\n\n:::\n\n\n\n## Problem\n\nBeim Rendern von Quarto-Files treten Probleme auf, die auf der Auswertung von Filepaths zurückzuführen sind.\n\nWährend Code beim einfachen Ausführen in RStudio relativ zum Projektordner interpretiert wird, erfolgt die Pfadauswertung beim Rendern relativ zum Skript selbst. Dies kann zu Render-Fehlern wie dem folgenden führen.\n\n![](images/EH_14/Fehlermeldung_path.png){fig-align=\"center\"}\n\n## Lösung mit `here`\n\nUm dieses Problem zu beheben, kann das **here**-Package verwendet werden.\\\n**here** evaluiert Pfade konsistent relativ zum Projektordner und verhindert dadurch solche Render-Probleme.\n\nDurch die Verwendung von **here** ändern sich die Angaben des Filepfades beim Einlesen und Schreiben von Dateien leicht. Die einzige Veränderung ist dass wir den Filepfad in die `here` Funktion übergeben (in Klammern). Siehe dafür das Beispiel unten.\n\nDazu muss das Package **here** zunächst installiert werden:\n\n\n\n::: {.cell}\n\n```{.r .cell-code}\ninstall.packages(\"here\")\nlibrary(here)\n```\n:::\n\n\n\nUnd aus diesem Code der zu Problemen führen kann\n\n\n\n::: {.cell}\n\n```{.r .cell-code}\ndata_cb <- read_csv(\"data/raw/data_cb.csv\") #Kann zu Problemen beim Rendern führen. \n```\n:::\n\n\n\n**wird**:\n\n\n\n::: {.cell}\n\n```{.r .cell-code}\ndata_cb <- read_csv(here(\"data/raw/data_cb.csv\")) # Sichere Variante\n```\n:::\n\n\n\nDas gleiche gilt für das schreiben von daten mit `write.csv`\n\n\n\n::: {.cell}\n\n```{.r .cell-code}\n# Kann zu Problemen führen\nwrite.csv(dat_full, \"data/processed/dat_full.csv\")\n\n# Sicherer: Pfad wird immer relativ zum Projekt-Root aufgelöst\nwrite.csv(dat_full, here(\"data/processed/dat_full.csv\"))\n```\n:::\n\n\n\n**Das sollte die Probleme lösen!**\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

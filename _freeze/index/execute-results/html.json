@@ -1,0 +1,15 @@
+{
+  "hash": "2f1caefab3368919c28b386a7431e67a",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"Einleitung\"\nauthor:\n  - name: \"Dr. Sandra Grinschgl\"\n  - name: \"MSc. Aaron Friedli\"\n  - name: \"Bsc. Lars Schilling\"\ndate: today\n---\n\n\n\nIn diesem E-Book findest du alle wichtigen Informationen zum Methodenseminar \"R u Ready\". Du kannst hier u. a. die wöchentlichen Folien, Hands-On R Übungen, den Leistungsnachweis, und Frequently Asked Questions einsehen. Du kannst über die Unterkapitel (links) zu den entsprechenden Inhalten navigieren, oder auch die Suchfunktion oben links verwenden, um nach einem bestimmten Begriff zu suchen.\n\n# Hinweisboxen\n\nHier einen Überblick über die auf den Seiten enthaltenen Hinweisboxen:\n\n::: callout-note\n**Vertiefung:** Hier geht es in die Tiefe.\n:::\n\n::: callout-important\n**Wichtig:** Dies ist eine wichtige Information.\n:::\n\n::: callout-warning\n**Achtung:** Hier ist Vorsicht geboten.\n:::\n\n::: callout-caution\n**Vorsicht:** Diese Information ist noch in Bearbeitung.\n:::\n\n# Syllabus\n\n::: callout-caution\n**Vorsicht:** Der Syllabus dient als grobe Richtlinie und kann angepasst werden, falls wir in einzelnen Einheiten mehr oder weniger Zeit benötigen.\n:::\n\n<iframe src=\"PDFs/Syllabus.pdf\" width=\"100%\" height=\"600px\">\n\n</iframe>\n\n\n\n::: {.cell}\n\n:::\n\n\n\nLetztes Update Januar 21, 2026 at 12:01\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

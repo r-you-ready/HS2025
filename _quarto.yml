@@ -1,12 +1,16 @@
 project:
   type: website
+  output-dir: _site
 
 website:
-  title: "R u Ready"
+  title: "R You Ready - Copy"
   site-url: https://r-you-ready.github.io/HS2025/
   sidebar:
     style: floating
     search: true
+    collapse-level: 1
+    logo: images/ryouready_logo.png
+    active-link: true
     contents:
       - href: front_page.qmd
         text: "Einleitung"
@@ -17,41 +21,102 @@ website:
             text: "Einheit 1 - 17.09.2025"
           - href: EH_2.qmd
             text: "Einheit 2 - 24.09.2025"
+          - href: EH_3.qmd
+            text: "Einheit 3 - 01.10.2025"
+          - href: EH_4.qmd
+            text: "Einheit 4 - 08.10.2025"
+          - href: EH_5.qmd 
+            text: "Einheit 5 - 15.10.2025"
+          - href: EH_6.qmd
+            text: "Einheit 6 - 22.10.2025"
+          - href: EH_7.qmd
+            text: "Einheit 7 - 29.10.2025"
+          - href: EH_8.qmd
+            text: "Einheit 8 - 05.11.2025"
+          - href: EH_9.qmd
+            text: "Einheit 9 - 12.11.2025"
+          - href: EH_10.qmd 
+            text: "Einheit 10 - 19.11.2025"
+          - href: EH_11.qmd
+            text: "Einheit 11 - 26.11.2025"
+          - href: EH_12.qmd
+            text: "Einheit 12 - 03.12.2025"
+          - href: EH_13.qmd
+            text: "Einheit 13 - 10.12.2025"
+          - href: EH_14.qmd
+            text: "Einheit 14 - 17.12.2025"
       - href: Übungen.qmd
         text: "Übungen zu den Einheiten"
         contents: 
-          - href: hands_on_1.qmd
-            text: "Hands on - Block 1"
+          - href: loesung_1.qmd
+            text: "Hands on - Block 1 (Woche 1 - 2)"
+          - href: loesung_2.qmd
+            text: "Hands on - Block 2 (Woche 3 - 4)"
+          - href: loesung_3.qmd
+            text: "Hands on - Block 3 (Woche 5 - 6)"
+          - href: loesung_4.qmd
+            text: "Hands on - Block 4 (Woche 7- 8)"
+          - href: loesung_5.qmd
+            text: "Hands on - Block 5 (Woche 9 - 10)"
+          - href: loesung_6.qmd
+            text: "Hands on - Block 6 (Woche 11 - 12)"
+          - href: loesung_7.qmd
+            text: "Hands on - Block 7 (Woche 13)"
+      - href: hausuebungen.qmd
+        text: "Hausübungen"
+        contents:
+          - href: hausuebung_loesung_1.qmd
+            text: "Hausübung 1 - Mit Lösungen"
+          - href: hausuebung_loesung_2.qmd
+            text: "Hausübung 2 - Mit Lösungen"
+          - href: hausuebung_loesung_3.qmd
+            text: "Hausübung 3 - Mit Lösungen"
+      - href: muddiest_points_2.qmd
+        text: "Muddiest Points"
+        contents:
+          - href: muddiest_points_2.qmd
+            text: "Muddiest Points 2"
+          - href: muddiest_points_3.qmd
+            text: "Muddiest Points 3"
       - href: faq.qmd
         text: "FAQ"
         contents:
           - href: rstudio.qmd
-            text: "1  RStudio"
+            text: "1 RStudio"
+            contents:
+              - href: fehlermeldungen.qmd
+                text: "1.1 Fehlermeldungen"
           - href: codebook.qmd
-            text: "2  Codebook"
+            text: "2 Codebook"
           - href: datenanalyseplan.qmd
-            text: "3  Datenanalyseplan"
+            text: "3 Datenanalyseplan"
           - href: statistic.qmd
-            text: "4  Statistik"
+            text: "4 Statistik"
           - href: endabgabe.qmd
-            text: "5  Abschlussprojekt"
+            text: "5 Abschlussprojekt"
+      - href: links_und_ressourcen.qmd
+        text: "Links und Ressourcen"
+        contents:
+          - href: ChatGPT.qmd
+            text: "ChatGPT in RStudio"
       - href: leistungsnachweis.qmd
         text: "Leistungsnachweis"
+        contents:
+          - href: checkliste_abschlussarbeit.qmd
+            text: "Checkliste Abschlussarbeit"
+          - href: here.qmd
+            text: "Probleme beim Rendern"
+      - href: individuelle_lösungen.qmd
+        text: "Individuelle Musterlösungen"
+      - href: LearnR.qmd
+        text: "LearnR - Shinyapp"
       - href: about.qmd
         text: "About"
 
-  page-navigation: true
-  page-footer: |
-    Der Inhalt dieser Website ist lizenziert unter  
-    <a href="https://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1">CC BY-SA 4.0</a> © 2025
-
 format:
   html:
-    theme: cosmo
     toc: true
-    toc-location: right
-    toc-title: "Inhaltsverzeichnis"
-    number-sections: true
-    css: styles/website_styles.css
+    toc-expand: false
 
-editor: visual
+execute:
+  freeze: auto

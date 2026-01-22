@@ -1,0 +1,77 @@
+---
+title: "Hands_On_3"
+editor: visual
+---
+
+# Datenstrukturen: Vektoren, Listen, Matrizen und Data Frames *ggf nach mergen?*
+
+XXXX @Sandra *gibt es hier ein gutes Kapitel, das all das schön zusammenfasst? –\> 2.4 Boris, irgendwann auch factors erklären (EH 5??) –\> oder das alles in EH 5 verschieben?*
+
+*vl hier lieber Factors und Rest zu EH 5*
+
+Bevor wir mit den Übungen starten, ein Überblick über die Unterschiede:
+
+| Struktur | Eigenschaften | Beispiel-Inhalt |
+|------------------------|------------------------|------------------------|
+| **Vektor** | \- Enthält Elemente **eines** Datentyps<br>- Grundbaustein in R | `c(1, 2, 3)` oder `c("Anna", "Ben")` |
+| **Liste** | \- Kann verschiedene Datentypen enthalten<br>- Elemente können unterschiedlich lang sein | Zahlenvektor, Textvektor, logischer Vektor in einer Liste |
+| **Matrix** | \- Enthält nur **einen** Datentyp<br>- Hat feste Dimensionen (Zeilen, Spalten) | 3x3-Matrix mit Zahlen 1–9 |
+| **Data Frame** | \- Tabellarisch aufgebaut<br>- Spalten können unterschiedliche Datentypen enthalten<br>- Jede Spalte gleich lang | Tabelle mit Name (Character), Alter (Numeric), Studiert (Logical) |
+
+👉 Merksatz:\
+- **Vektor** = einfachste Struktur, ein Datentyp\
+- **Liste** = flexibel, verschiedene Datentypen\
+- **Matrix** = „Zahlenrechteck“, ein Datentyp\
+- **Data Frame** = Tabelle, Spalten können unterschiedliche Datentypen haben
+
+Wir haben in den Hands-On-Übungen einige einfache Vektoren erstellt und damit operiert. Nun schauen wir uns weitere Formate an.
+
+## Matrizen
+
+Eine **Matrix** besteht nur aus einem Datentyp (z. B. nur Zahlen).
+
+-   Erstelle eine 3x3-Matrix mit den Zahlen 1 bis 9.
+
+-   Wandle einen Vektor 1:12 in eine 3x4-Matrix um.
+
+-   Greife auf das Element in der 2. Zeile, 3. Spalte zu.
+
+-   Berechne die Spaltensummen und Zeilensummen.
+
+## Listen @Aaron *zuerst Matrizen, ich glaube das einige der Übungen ohne weitere Erklärungen zu schwer sind, siehe EH5*
+
+Eine **Liste** kann verschiedene Datentypen enthalten (z. B. Zahlen, Zeichenketten, logische Werte).
+
+👉 \[Listen, Kapitel\]
+
+-   **Erstelle eine Liste mit drei Elementen und der Funktion** `list()`**:**
+
+    -   einem Vektor mit den Zahlen 1 bis 5
+
+    -   einem Character-Vektor mit den Namen deiner Kommiliton:innen
+
+    -   einem logischen Vektor (TRUE, FALSE)
+
+-   Greife auf das zweite Element der Liste zu.
+
+-   Greife auf den dritten Wert des ersten Elements der Liste zu.
+
+-   Füge der Liste ein weiteres Element hinzu (z. B. den Mittelwert der Zahlen).
+
+# Data Frames
+
+Ein **Data Frame** ist eine tabellarische Struktur mit Spalten, die verschiedene Datentypen enthalten können.
+
+-   Erstelle einen Data Frame mit drei Spalten:
+
+-   name (Character)
+
+-   alter (Numeric)
+
+-   studiert (Logical: TRUE/FALSE)
+
+-   Greife auf die Spalte "alter" zu.
+
+-   Filtere alle Zeilen, in denen studiert == TRUE.
+
+-   Füge eine neue Spalte hinzu, die alter + 10 berechnet.
