@@ -279,63 +279,98 @@
     "href": "recap_methodenberatung_ryouready.html#methodenberatung",
     "title": "Recap: Methodenberatung & R u Ready? HS2025",
     "section": "Methodenberatung",
-    "text": "Methodenberatung\n\n27 consultations since September\nPredominantly Master’s students – providing thesis support\nSpread through WhatsApp, lecturers, and word of mouth\n\nFeedback:"
+    "text": "Methodenberatung\n\n29 consultations since September\nPredominantly Master’s students – providing thesis support\nSpread through WhatsApp, lecturers, and word of mouth\nSign up through Website with a Booking Tool\nPreparation time between 15 min - 4-5 Hours\n\nFeedback: Positive!"
   },
   {
     "objectID": "recap_methodenberatung_ryouready.html#request-spectrum",
     "href": "recap_methodenberatung_ryouready.html#request-spectrum",
     "title": "Recap: Methodenberatung & R u Ready? HS2025",
     "section": "Request Spectrum",
-    "text": "Request Spectrum\n\n“I need help with the R GUI to open a new script”\n“I need help with analysis XYZ”\nStudents often have existing code!\n\nNeed help organizing it\nWant someone to double-check\nGeneral insecurity about whether they are “doing it right”"
+    "text": "Request Spectrum\n\n“I need help with the R GUI to open a new script”\n“I need help with analysis XYZ” ranging from simple to very complex\nStudents often have existing code!\n\nNeed help organizing it\nWant someone to double-check\nGeneral insecurity about whether they are “doing it right”"
   },
   {
     "objectID": "recap_methodenberatung_ryouready.html#what-worked-well",
     "href": "recap_methodenberatung_ryouready.html#what-worked-well",
     "title": "Recap: Methodenberatung & R u Ready? HS2025",
     "section": "What worked well",
-    "text": "What worked well\n\nCleaning and organizing data together\nTechnical support for R (or Jamovi) issues\nConceptual help at the start of the thesis (e.g., “How do I approach this?”)"
+    "text": "What worked well\n\nData Management & Initial Processing (“Where do i get started”)\nTechnical Troubleshooting\nBriding the gap between concept and code\nEarly-Stage Conceptual Guidance (e.g., “How do I approach this?”)\n\n➡️Early Stage Help often proved to be productive!"
   },
   {
-    "objectID": "recap_methodenberatung_ryouready.html#what-didnt-work-well",
-    "href": "recap_methodenberatung_ryouready.html#what-didnt-work-well",
+    "objectID": "recap_methodenberatung_ryouready.html#challenges",
+    "href": "recap_methodenberatung_ryouready.html#challenges",
     "title": "Recap: Methodenberatung & R u Ready? HS2025",
-    "section": "What didn’t work well",
-    "text": "What didn’t work well\n\nRequests from students deep in their analysis:\n\nMassive amounts of code – rarely reproducible\n“Vibecoding” to the max\nIdentifying the actual issue is very time-consuming\nDouble-checking (“I need someone more experienced to look over my code”)\nNonsensical analyses\nModerations and mediations everywhere\nP-hacking!\nLack of pre-registration"
+    "section": "Challenges",
+    "text": "Challenges\n\nLate Stage Support Bottlenecks\n\nOften hard to figure out what the Problem is in the first place\nUnderspecified Requests + Ghosting when asked\n\nReproducibility!\n\nLots and Lots of Code\nRarely Reproducible, Unstructured, Vibecoded\nHowever: R YOU READY seems to help!"
+  },
+  {
+    "objectID": "recap_methodenberatung_ryouready.html#challenges-2",
+    "href": "recap_methodenberatung_ryouready.html#challenges-2",
+    "title": "Recap: Methodenberatung & R u Ready? HS2025",
+    "section": "Challenges (2)",
+    "text": "Challenges (2)\n\nResearch Integrity Risks\n\nQRPS!\nNo preregistration ever\n\nTime consuming validation\n\nHigh demand for code reviews\nVery time consuming\n\nMethodological Overcomplexity\n\nUnjustified analyses, excessive use of moderations and mediations\nVibe analytics - “ChatGPT - how do i analyse this data”."
   },
   {
     "objectID": "recap_methodenberatung_ryouready.html#institutional-issues",
     "href": "recap_methodenberatung_ryouready.html#institutional-issues",
     "title": "Recap: Methodenberatung & R u Ready? HS2025",
     "section": "Institutional Issues",
-    "text": "Institutional Issues\n\nSupervision often appears insufficient or non-existent\nStudents reported:\n\nSupervisors who only care about data collection\nSupervisors being unreachable or holding unproductive meetings\nSupervisors actively recommending QRPs (Questionable Research Practices)\nSupervisors being unclear about expectations\nSupervisors obviously not caring\n\nHomogeneity in what entails a thesis"
+    "text": "Institutional Issues\n\nSupervision often appears insufficient or non-existent.\nExamples\n\nSupervisors who only care about data collection.\nSupervisors being unreachable\nSupervisors quit and no adequate replacement is provided\nSupervisors actively recommending QRPs.\nStudents who are clearly neither motivated nor interested in doing research and see it as a “necessary evil.”\nAttempting to answer a RQ does not seem required - Doing something for the sake of doing it seems sufficient"
   },
   {
     "objectID": "recap_methodenberatung_ryouready.html#my-personal-takeaways",
     "href": "recap_methodenberatung_ryouready.html#my-personal-takeaways",
     "title": "Recap: Methodenberatung & R u Ready? HS2025",
     "section": "My Personal Takeaways",
-    "text": "My Personal Takeaways\n\nFocusing on low-level support is the most beneficial and time-efficient\n\nHelping with cleaning and organizing data\n“How should I get started?”\n\nDecline requests for complicated analyses that require extensive preparation"
+    "text": "My Personal Takeaways\n\nFocusing on low-level support is the most productive and time-efficient\nDecline more requests that require too much preparation!\nVery Basic Method Skills go a long way\n\nTherefore…"
   },
   {
     "objectID": "recap_methodenberatung_ryouready.html#changes-in-hs2025",
     "href": "recap_methodenberatung_ryouready.html#changes-in-hs2025",
     "title": "Recap: Methodenberatung & R u Ready? HS2025",
     "section": "Changes in HS2025",
-    "text": "Changes in HS2025\n\nShift to a modular Quarto website\n\nIntegration of Slides, PDFs, Data, Code ect.\n\nIndividual simulated data\n\nPartly simulated with truffle (Thanks Ian!)\n\nShiny app for individual solutions\n\nIntegrates into Website"
+    "text": "Changes in HS2025\n\nIntegration of pre-existing Resources & Structure\n\n\n\nShift to a modular Quarto website\n\nImproved Structure\nIntegration of Slides, PDFs, Data, Code ect.\n\nIndividual simulated data\n\nPartly simulated with truffle (Thanks Ian!)\n\nShiny app for individual solutions\n\nIntegrates into Website"
+  },
+  {
+    "objectID": "recap_methodenberatung_ryouready.html#slides-made-with-quarto",
+    "href": "recap_methodenberatung_ryouready.html#slides-made-with-quarto",
+    "title": "Recap: Methodenberatung & R u Ready? HS2025",
+    "section": "Slides made with Quarto!",
+    "text": "Slides made with Quarto!\n\nAre annoying to use at first but offer a lot of benefits in the long run!\nIntegrate very nicely into the Website and the general workflow!\n\n\nlibrary(ggplot2)\nggplot(airquality, aes(Temp, Ozone)) + \n  geom_point() + \n  geom_smooth(method = \"loess\")\n\n\n\nLearn more: Slide Backgrounds"
+  },
+  {
+    "objectID": "recap_methodenberatung_ryouready.html#slides-made-with-quarto-output",
+    "href": "recap_methodenberatung_ryouready.html#slides-made-with-quarto-output",
+    "title": "Recap: Methodenberatung & R u Ready? HS2025",
+    "section": "Slides made with Quarto!",
+    "text": "Slides made with Quarto!"
+  },
+  {
+    "objectID": "recap_methodenberatung_ryouready.html#tabsets",
+    "href": "recap_methodenberatung_ryouready.html#tabsets",
+    "title": "Recap: Methodenberatung & R u Ready? HS2025",
+    "section": "Tabsets",
+    "text": "Tabsets\n\nPlotData\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nmpg\ncyl\ndisp\nhp\ndrat\nwt\nqsec\nvs\nam\ngear\ncarb\n\n\n\n\nMazda RX4\n21.0\n6\n160.0\n110\n3.90\n2.620\n16.46\n0\n1\n4\n4\n\n\nMazda RX4 Wag\n21.0\n6\n160.0\n110\n3.90\n2.875\n17.02\n0\n1\n4\n4\n\n\nDatsun 710\n22.8\n4\n108.0\n93\n3.85\n2.320\n18.61\n1\n1\n4\n1\n\n\nHornet 4 Drive\n21.4\n6\n258.0\n110\n3.08\n3.215\n19.44\n1\n0\n3\n1\n\n\nHornet Sportabout\n18.7\n8\n360.0\n175\n3.15\n3.440\n17.02\n0\n0\n3\n2\n\n\nValiant\n18.1\n6\n225.0\n105\n2.76\n3.460\n20.22\n1\n0\n3\n1\n\n\nDuster 360\n14.3\n8\n360.0\n245\n3.21\n3.570\n15.84\n0\n0\n3\n4\n\n\nMerc 240D\n24.4\n4\n146.7\n62\n3.69\n3.190\n20.00\n1\n0\n4\n2\n\n\nMerc 230\n22.8\n4\n140.8\n95\n3.92\n3.150\n22.90\n1\n0\n4\n2\n\n\nMerc 280\n19.2\n6\n167.6\n123\n3.92\n3.440\n18.30\n1\n0\n4\n4\n\n\nMerc 280C\n17.8\n6\n167.6\n123\n3.92\n3.440\n18.90\n1\n0\n4\n4\n\n\nMerc 450SE\n16.4\n8\n275.8\n180\n3.07\n4.070\n17.40\n0\n0\n3\n3\n\n\nMerc 450SL\n17.3\n8\n275.8\n180\n3.07\n3.730\n17.60\n0\n0\n3\n3\n\n\nMerc 450SLC\n15.2\n8\n275.8\n180\n3.07\n3.780\n18.00\n0\n0\n3\n3\n\n\nCadillac Fleetwood\n10.4\n8\n472.0\n205\n2.93\n5.250\n17.98\n0\n0\n3\n4\n\n\nLincoln Continental\n10.4\n8\n460.0\n215\n3.00\n5.424\n17.82\n0\n0\n3\n4\n\n\nChrysler Imperial\n14.7\n8\n440.0\n230\n3.23\n5.345\n17.42\n0\n0\n3\n4\n\n\nFiat 128\n32.4\n4\n78.7\n66\n4.08\n2.200\n19.47\n1\n1\n4\n1\n\n\nHonda Civic\n30.4\n4\n75.7\n52\n4.93\n1.615\n18.52\n1\n1\n4\n2\n\n\nToyota Corolla\n33.9\n4\n71.1\n65\n4.22\n1.835\n19.90\n1\n1\n4\n1\n\n\nToyota Corona\n21.5\n4\n120.1\n97\n3.70\n2.465\n20.01\n1\n0\n3\n1\n\n\nDodge Challenger\n15.5\n8\n318.0\n150\n2.76\n3.520\n16.87\n0\n0\n3\n2\n\n\nAMC Javelin\n15.2\n8\n304.0\n150\n3.15\n3.435\n17.30\n0\n0\n3\n2\n\n\nCamaro Z28\n13.3\n8\n350.0\n245\n3.73\n3.840\n15.41\n0\n0\n3\n4\n\n\nPontiac Firebird\n19.2\n8\n400.0\n175\n3.08\n3.845\n17.05\n0\n0\n3\n2\n\n\nFiat X1-9\n27.3\n4\n79.0\n66\n4.08\n1.935\n18.90\n1\n1\n4\n1\n\n\nPorsche 914-2\n26.0\n4\n120.3\n91\n4.43\n2.140\n16.70\n0\n1\n5\n2\n\n\nLotus Europa\n30.4\n4\n95.1\n113\n3.77\n1.513\n16.90\n1\n1\n5\n2\n\n\nFord Pantera L\n15.8\n8\n351.0\n264\n4.22\n3.170\n14.50\n0\n1\n5\n4\n\n\nFerrari Dino\n19.7\n6\n145.0\n175\n3.62\n2.770\n15.50\n0\n1\n5\n6\n\n\nMaserati Bora\n15.0\n8\n301.0\n335\n3.54\n3.570\n14.60\n0\n1\n5\n8\n\n\nVolvo 142E\n21.4\n4\n121.0\n109\n4.11\n2.780\n18.60\n1\n1\n4\n2\n\n\n\n\n\n\n\n\n\nLearn more: Tabsets"
   },
   {
     "objectID": "recap_methodenberatung_ryouready.html#feedback",
     "href": "recap_methodenberatung_ryouready.html#feedback",
     "title": "Recap: Methodenberatung & R u Ready? HS2025",
     "section": "Feedback:",
-    "text": "Feedback:\n\nVery Positive!\n\n\n\n\nWebsite was generally appreciated, but clarity and Structure can be improoved\nIndividual Dataset & Simulation; Proof of concept that needs fine tuning"
+    "text": "Feedback:\n\nVery Positive! (Stickers helped).\n\n \n\nWebsite was generally appreciated, but clarity and Structure can be improved\nIndividual Data set & Simulation; Proof of concept that needs fine tuning"
   },
   {
     "objectID": "recap_methodenberatung_ryouready.html#future-opportunities",
     "href": "recap_methodenberatung_ryouready.html#future-opportunities",
     "title": "Recap: Methodenberatung & R u Ready? HS2025",
     "section": "Future Opportunities",
-    "text": "Future Opportunities\n\nIntegrating More Shinyapps like learnR\nChanging the Logo to the Spongebob Pirate"
+    "text": "Future Opportunities\n\nIntegrating More Shinyapps like learnR\nExpanding the Simulated Datasets\nAutomated Feedback?"
+  },
+  {
+    "objectID": "recap_methodenberatung_ryouready.html#future-opportunities-1",
+    "href": "recap_methodenberatung_ryouready.html#future-opportunities-1",
+    "title": "Recap: Methodenberatung & R u Ready? HS2025",
+    "section": "Future Opportunities",
+    "text": "Future Opportunities\n\nChanging the Logo to the Spongebob Pirate"
   },
   {
     "objectID": "muddiest_points_2.html",
@@ -5483,7 +5518,7 @@
     "href": "LearnR.html",
     "title": "LearnR Shinyapp",
     "section": "",
-    "text": "Hier kannst du deine individuellen Lösungen basierend auf deinem Datensatz abrufen.\n\n\n\n\n\n\n\n\nProbleme mit der Anzeige?\n\n\n\nFalls die App nicht richtig lädt, kannst du sie auch direkt hier öffnen: R You Ready App",
+    "text": "Hier kannst du Übungen zu R Lösen!\n\n\n\n\n\n\n\n\nProbleme mit der Anzeige?\n\n\n\nFalls die App nicht richtig lädt, kannst du sie auch direkt hier öffnen: R You Ready App",
     "crumbs": [
       "LearnR - Shinyapp"
     ]
